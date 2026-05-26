@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>AI 资讯雷达 · AI Engineer Radar</title>
+  <meta name="description" content="X 高信号 AI 资讯聚合 · Latent.Space 风格今日综述" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%236366f1'/%3E%3Cstop offset='100%25' stop-color='%2322d3ee'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='32' cy='32' r='28' fill='url(%23g)'/%3E%3Ccircle cx='32' cy='32' r='6' fill='%23fff'/%3E%3Ccircle cx='32' cy='32' r='14' fill='none' stroke='%23fff' stroke-opacity='.6' stroke-width='2'/%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%23fff' stroke-opacity='.3' stroke-width='2'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <div class="bg-orb bg-orb-1"></div>
+  <div class="bg-orb bg-orb-2"></div>
+  <div class="bg-orb bg-orb-3"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">
+        <svg viewBox="0 0 64 64" width="32" height="32" aria-hidden="true">
+          <defs>
+            <linearGradient id="brand-g" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#6366f1"/>
+              <stop offset="100%" stop-color="#22d3ee"/>
+            </linearGradient>
+          </defs>
+          <circle cx="32" cy="32" r="28" fill="url(#brand-g)"/>
+          <circle cx="32" cy="32" r="6" fill="#fff"/>
+          <circle cx="32" cy="32" r="14" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="2"/>
+          <circle cx="32" cy="32" r="22" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="2"/>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <div class="brand-title">AI 资讯雷达</div>
+        <div class="brand-sub">AI Engineer Radar · X 高信号聚合</div>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <div class="meta-pill" id="lastUpdate">未抓取</div>
+      <button id="refreshBtn" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="23 4 23 10 17 10"></polyline>
+          <polyline points="1 20 1 14 7 14"></polyline>
+          <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+        </svg>
+        <span class="btn-label">刷新资讯</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar" id="sidebar" data-view="feed">
+      <nav class="nav">
+        <button class="nav-item active" data-view="feed">
+          <span class="nav-icon">📡</span><span>资讯</span>
+          <span class="nav-badge" id="feedCount">0</span>
+        </button>
+        <button class="nav-item" data-view="favorites">
+          <span class="nav-icon">⭐</span><span>收藏</span>
+          <span class="nav-badge" id="favCount">0</span>
+        </button>
+        <button class="nav-item" data-view="digest">
+          <span class="nav-icon">📰</span><span>今日综述</span>
+        </button>
+        <button class="nav-item" data-view="dashboard">
+          <span class="nav-icon">📊</span><span>数据看板</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-filters">
+        <div class="sidebar-section">
+          <div class="sidebar-title">主题</div>
+          <div class="chip-row" id="topicChips"></div>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-title">来源（S 级）</div>
+          <div class="source-list" id="sourceListS"></div>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-title">来源（A 级）</div>
+          <div class="source-list" id="sourceListA"></div>
+        </div>
+      </div>
+    </aside>
+
+    <section class="content">
+      <div class="view" data-view="feed">
+        <div class="search-row">
+          <div class="search-box">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input id="searchInput" type="search" placeholder="搜索内容、账号、主题…" autocomplete="off" />
+          </div>
+          <div class="result-count" id="resultCount">0 条</div>
+        </div>
+        <div class="filter-row">
+          <button class="chip mini active" data-tier="all">全部</button>
+          <button class="chip mini" data-tier="S">S 级</button>
+          <button class="chip mini" data-tier="A">A 级</button>
+        </div>
+        <div class="news-grid" id="newsGrid"></div>
+        <div class="empty" id="emptyState" hidden>
+          <div class="empty-icon">📡</div>
+          <div class="empty-title">还没有 X 资讯</div>
+          <div class="empty-sub">点击右上角「刷新资讯」开始抓取 S/A 级账号近 48 小时高信号帖子</div>
+        </div>
+      </div>
+
+      <div class="view" data-view="favorites" hidden>
+        <div class="view-header">
+          <h2>收藏</h2>
+          <p class="view-sub">本地浏览器存储，仅你自己可见</p>
+        </div>
+        <div class="news-grid" id="favGrid"></div>
+        <div class="empty" id="favEmpty" hidden>
+          <div class="empty-icon">⭐</div>
+          <div class="empty-title">还没有收藏</div>
+          <div class="empty-sub">在卡片点击星标即可收藏</div>
+        </div>
+      </div>
+
+      <div class="view" data-view="digest" hidden>
+        <div class="digest-hero">
+          <h2 class="digest-hero-title">AI 新闻：每日综述</h2>
+          <p class="digest-hero-sub">参考 Latent.Space AINews 风格，按日聚合 X 高信号讨论。点击任意一天展开全文。</p>
+        </div>
+        <div class="day-list" id="dayList"></div>
+        <div class="empty" id="digestEmpty" hidden>
+          <div class="empty-icon">📰</div>
+          <div class="empty-title">还没有归档</div>
+          <div class="empty-sub">点击右上角「刷新资讯」生成今日综述，后续每天都会自动归档</div>
+        </div>
+      </div>
+
+      <div class="view" data-view="dashboard" hidden>
+        <div class="view-header">
+          <h2>数据看板</h2>
+          <p class="view-sub">X 抓取统计 + 批次健康度</p>
+        </div>
+        <div class="stat-grid" id="statGrid"></div>
+        <div class="dash-card">
+          <div class="dash-card-title">抓取批次</div>
+          <div class="batch-table" id="batchTable"></div>
+        </div>
+        <div class="dash-card">
+          <div class="dash-card-title">最活跃账号</div>
+          <div class="top-accounts" id="topAccounts"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="/app.js" type="module"></script>
+</body>
+</html>

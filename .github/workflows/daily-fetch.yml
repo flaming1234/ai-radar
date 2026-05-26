@@ -1,0 +1,53 @@
+name: AI Radar Daily Fetch
+
+on:
+  # 北京时间每天 9:00 = UTC 1:00
+  # 如需加晚 21:00 一档，复制下一行并改为 "0 13 * * *"
+  schedule:
+    - cron: '0 1 * * *'
+  # 允许在 GitHub UI 上手动触发（Actions 标签 → Run workflow）
+  workflow_dispatch:
+
+permissions:
+  contents: write  # 需要写权限把生成的 news.json / archive/* commit 回仓库
+
+concurrency:
+  group: ai-radar-fetch
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 1
+
+      - name: Setup Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Run X feed fetch + roundup
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_X_MODEL: x-ai/grok-4.3:online
+          OPENROUTER_ROUNDUP_MODEL: x-ai/grok-4.3
+          TZ: Asia/Shanghai
+        run: node scripts/fetch-news.mjs
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add public/news.json public/news-data.js public/archive-index.json public/archive/ 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "no changes to commit"
+            exit 0
+          fi
+          DATE_BJ=$(TZ=Asia/Shanghai date '+%Y-%m-%d %H:%M %Z')
+          git commit -m "daily fetch ${DATE_BJ}"
+          git push

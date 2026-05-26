@@ -1,0 +1,15 @@
+{
+  "name": "ai-radar",
+  "version": "1.0.0",
+  "description": "AI 资讯雷达 — 海内外 AI 新闻聚合",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "serve": "node scripts/serve.mjs",
+    "fetch": "node scripts/fetch-news.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

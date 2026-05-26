@@ -1,0 +1,20 @@
+{
+  "archive": [
+    {
+      "date": "2026-05-26",
+      "generatedAt": "2026-05-26T04:40:59.047Z",
+      "title": "Gemini 3.5 Flash Debuts as Codex Expands",
+      "subtitle": "Gemini 3.5 Flash 发布，Codex 远程控制与数学突破并行",
+      "mainTheme": "model_race",
+      "itemCount": 36,
+      "stats": {
+        "total": 36,
+        "withUrl": 36,
+        "sTier": 16,
+        "aTier": 20,
+        "okBatches": 5,
+        "failedBatches": 0
+      }
+    }
+  ]
+}

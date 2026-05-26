@@ -1,0 +1,6 @@
+node_modules
+.env
+.DS_Store
+*.log
+# 不忽略 public/news.json / public/news-data.js / public/archive/*
+# 这些由 GitHub Actions 每日生成并 commit
