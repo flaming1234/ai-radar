@@ -113,22 +113,26 @@ export function normalizeHandle(h) {
   return s.startsWith('@') ? s : ('@' + s.replace(/^@/, ''));
 }
 
-// 抓取批次：S 拆 2 批 (23+23)、A 拆 3 批 (30+30+31)、B 不参与
-// 总计 5 个 :online 调用，每次 refresh 成本约 $0.25-0.30
+// 抓取批次：S 拆 2 批 / A 拆 3 批 / B 拆 7 批，全套参与
+// 总计 12 个 :online 调用，每次 refresh 成本约 $0.50
 export function getFetchBatches() {
   const chunks = (arr, size) => {
     const out = [];
     for (let i = 0; i < arr.length; i += size) out.push(arr.slice(i, i + size));
     return out;
   };
-  const sParts = chunks(X_S_TIER, Math.ceil(X_S_TIER.length / 2));
-  const aParts = chunks(X_A_TIER, Math.ceil(X_A_TIER.length / 3));
+  const sParts = chunks(X_S_TIER, Math.ceil(X_S_TIER.length / 2));   // 46 → 2×23
+  const aParts = chunks(X_A_TIER, Math.ceil(X_A_TIER.length / 3));   // 91 → 31/31/29
+  const bParts = chunks(X_B_TIER, Math.ceil(X_B_TIER.length / 7));   // 216 → 7×31
   const batches = [];
   sParts.forEach((accounts, i) => {
     batches.push({ tier: 'S', label: `S-${i + 1}（高频核心）`, accounts });
   });
   aParts.forEach((accounts, i) => {
     batches.push({ tier: 'A', label: `A-${i + 1}（稳定补充）`, accounts });
+  });
+  bParts.forEach((accounts, i) => {
+    batches.push({ tier: 'B', label: `B-${i + 1}（长尾观察）`, accounts });
   });
   return batches;
 }

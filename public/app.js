@@ -584,6 +584,18 @@ function renderSidebar() {
   const sources = state.data?.sources || [];
   const sList = sources.filter((s) => s.tier === 'S');
   const aList = sources.filter((s) => s.tier === 'A');
+  const bList = sources.filter((s) => s.tier === 'B');
+  const eventList = sources.filter((s) => s.tier === 'event');
+
+  // Header 显示「池子总数 / 今日活跃数」
+  const pool = state.data?.pool || {};
+  const sub = (n) => `<span style="color:var(--text-mute);font-weight:500;text-transform:none;letter-spacing:0">${n}</span>`;
+  $('sourceTitleS').innerHTML = `来源 · S 级 ${sub(`${sList.length}/${pool.sTotal || 0} 活跃`)}`;
+  $('sourceTitleA').innerHTML = `来源 · A 级 ${sub(`${aList.length}/${pool.aTotal || 0} 活跃`)}`;
+  $('sourceTitleB').innerHTML = `来源 · B 级 ${sub(`${bList.length}/${pool.bTotal || 0} 活跃`)}`;
+  $('sourceTitleEvent').innerHTML = `来源 · Event 动态 ${sub(`${eventList.length} 个`)}`;
+  // Event 区只在有内容时显示
+  $('sourceSectionEvent').hidden = eventList.length === 0;
 
   const renderList = (list) => {
     if (list.length === 0) return '<div style="padding:8px 10px;font-size:12px;color:var(--text-mute)">暂无数据</div>';
@@ -597,7 +609,7 @@ function renderSidebar() {
     `).join('');
   };
 
-  // "全部" at top of S list (use S list container)
+  // "全部" at top of S list
   const allItem = `
     <div class="source-item source-all-item ${state.source === 'all' ? 'active' : ''}" data-source="all">
       <span class="source-tier-dot S"></span>
@@ -607,16 +619,24 @@ function renderSidebar() {
   `;
   $('sourceListS').innerHTML = allItem + renderList(sList);
   $('sourceListA').innerHTML = renderList(aList);
+  $('sourceListB').innerHTML = renderList(bList);
+  $('sourceListEvent').innerHTML = renderList(eventList);
 }
 
 // ============ Dashboard ============
 function renderDashboard() {
   const st = state.data?.stats || {};
   const r = state.data?.roundup || {};
+  const pool = state.data?.pool || {};
   $('statGrid').innerHTML = `
     <div class="stat-card"><div class="stat-value">${st.total ?? 0}</div><div class="stat-label">X 信号总数</div></div>
-    <div class="stat-card"><div class="stat-value">${st.sTier ?? 0}</div><div class="stat-label">S 级帖子</div></div>
-    <div class="stat-card"><div class="stat-value">${st.aTier ?? 0}</div><div class="stat-label">A 级帖子</div></div>
+    <div class="stat-card"><div class="stat-value">${pool.sTotal ?? 0}</div><div class="stat-label">S 级账号池</div></div>
+    <div class="stat-card"><div class="stat-value">${pool.aTotal ?? 0}</div><div class="stat-label">A 级账号池</div></div>
+    <div class="stat-card"><div class="stat-value">${pool.bTotal ?? 0}</div><div class="stat-label">B 级备用池</div></div>
+    <div class="stat-card"><div class="stat-value">${st.sTier ?? 0}</div><div class="stat-label">S 帖子（活跃）</div></div>
+    <div class="stat-card"><div class="stat-value">${st.aTier ?? 0}</div><div class="stat-label">A 帖子（活跃）</div></div>
+    <div class="stat-card"><div class="stat-value">${st.bTier ?? 0}</div><div class="stat-label">B 帖子（活跃）</div></div>
+    <div class="stat-card"><div class="stat-value">${st.eventTier ?? 0}</div><div class="stat-label">Event 帖子（动态）</div></div>
     <div class="stat-card"><div class="stat-value">${st.withUrl ?? 0}</div><div class="stat-label">含原文链接</div></div>
     <div class="stat-card"><div class="stat-value">${st.okBatches ?? 0}/${(st.okBatches ?? 0) + (st.failedBatches ?? 0)}</div><div class="stat-label">批次成功率</div></div>
     <div class="stat-card"><div class="stat-value" style="font-size:18px">${r.status || '-'}</div><div class="stat-label">综述状态</div></div>

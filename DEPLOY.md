@@ -57,19 +57,7 @@ GitHub Actions 已经配置好北京时间每天 9:00 自动抓取并 commit。
 
 之后每天北京时间 9:00（GitHub 的 cron 是尽力调度，可能延迟 0-30 分钟）会自动触发一次。
 
-## 五、想加晚上 9 点也抓一次
-
-编辑 `.github/workflows/daily-fetch.yml` 里的 cron：
-
-```yaml
-schedule:
-  - cron: '0 1 * * *'   # 北京时间 09:00
-  - cron: '0 13 * * *'  # 北京时间 21:00
-```
-
-commit + push 后生效。
-
-## 六、本地开发还能用吗
+## 五、本地开发还能用吗
 
 完全可以。改完代码后：
 

@@ -1,7 +1,7 @@
 // X 数据抓取 — 通过 OpenRouter Grok 调取近 48h 高信号帖子
 // SPRD §13 一期 X-only 数据源
 
-import { getFetchBatches, tierOf, canonicalHandle } from './x-accounts.mjs';
+import { getFetchBatches, tierOf, canonicalHandle, normalizeHandle } from './x-accounts.mjs';
 import { inferTopic, isValidTopic } from './sources.mjs';
 
 const OPENROUTER_URL = 'https://openrouter.ai/api/v1/chat/completions';
@@ -98,7 +98,7 @@ function buildBatchPrompt(batch) {
     user: `账号清单（${batch.tier} 级 · ${batch.label}，共 ${batch.accounts.length} 个）：
 ${accountList}
 
-请用 web 搜索逐一查这些账号的近期 X 帖子，挑选 6-10 条最重要的输出 JSON。如果某账号近一周内没有合格内容，跳过它。`,
+请用 web 搜索逐一查这些账号的近期 X 帖子，挑选 3-10 条最重要的输出 JSON。宁缺勿滥：如果该批次账号近一周没有合格内容，可以只返回 1-2 条甚至空数组，不要为凑数引入弱信号。`,
   };
 }
 
@@ -222,13 +222,67 @@ function postedAtScore(s) {
   return 0;
 }
 
+// Event 级动态扩展：从已抓帖子文本里提取 @xxx 提及
+// 过滤：不在 S/A/B 池里 + 被 ≥2 个不同账号引用
+function extractEventMentions(items) {
+  const mentions = new Map();
+  // 匹配 @handle，X handle 规则：字母数字下划线，1-15 字符
+  const handleRe = /(?:^|[^a-zA-Z0-9_/])@([a-zA-Z0-9_]{2,15})\b/g;
+  for (const it of items) {
+    const seen = new Set();
+    let m;
+    while ((m = handleRe.exec(it.text)) !== null) {
+      const h = canonicalHandle('@' + m[1]);
+      if (seen.has(h.toLowerCase())) continue;
+      seen.add(h.toLowerCase());
+      // 不算自引
+      if (h.toLowerCase() === it.author.toLowerCase()) continue;
+      if (!mentions.has(h)) mentions.set(h, { count: 0, citedBy: new Set() });
+      const entry = mentions.get(h);
+      entry.count += 1;
+      entry.citedBy.add(it.author);
+    }
+    handleRe.lastIndex = 0;
+  }
+  const out = [];
+  for (const [h, info] of mentions.entries()) {
+    if (tierOf(h)) continue; // 已在 S/A/B 池
+    if (info.citedBy.size < 2) continue; // 至少 2 个不同账号引用
+    out.push({ handle: h, count: info.count, citedBy: [...info.citedBy] });
+  }
+  return out
+    .sort((a, b) => (b.citedBy.length - a.citedBy.length) || (b.count - a.count))
+    .slice(0, 8);
+}
+
 export async function fetchXFeed() {
   const batches = getFetchBatches();
-  // S 级三批并行，A 级两批并行（共 5 个并行请求）— OpenRouter 一般可承受
-  const results = await Promise.all(batches.map((b) => fetchBatch(b)));
+  // 12 个批次，每轮最多 6 个 :online 并发，避免 OpenRouter 限流
+  const CONCURRENCY = 6;
+  const baseResults = [];
+  for (let i = 0; i < batches.length; i += CONCURRENCY) {
+    const chunk = batches.slice(i, i + CONCURRENCY);
+    const round = await Promise.all(chunk.map((b) => fetchBatch(b)));
+    baseResults.push(...round);
+  }
 
-  const allPosts = [];
-  for (const r of results) allPosts.push(...r.posts);
+  // Event 级：基于主池帖子的 @ 提及，挑出非池内但被多人引用的临时账号
+  const baseItems = baseResults.flatMap((r) => r.posts);
+  const eventMentions = extractEventMentions(baseItems);
+  let eventResult = null;
+  if (eventMentions.length >= 3) {
+    console.log('[radar] event candidates:', eventMentions.map((e) => `${e.handle}(x${e.citedBy.length})`).join(', '));
+    eventResult = await fetchBatch({
+      tier: 'event',
+      label: 'Event 动态加入',
+      accounts: eventMentions.map((e) => e.handle),
+    });
+  } else {
+    console.log('[radar] event candidates: 0 (no cross-cited non-pool handles)');
+  }
+
+  const results = eventResult ? [...baseResults, eventResult] : baseResults;
+  const allPosts = results.flatMap((r) => r.posts);
 
   // 去重 + 排序（按 posted_at 时间倒序，无时间的放后面）
   const items = dedupe(allPosts.map(postToItem))
@@ -259,11 +313,14 @@ export async function fetchXFeed() {
     items,
     sources,
     batches: batchReports,
+    eventMentions: eventMentions.map((e) => ({ handle: e.handle, citedBy: e.citedBy, count: e.count })),
     stats: {
       total: items.length,
       withUrl: items.filter((it) => it.hasValidUrl).length,
       sTier: items.filter((it) => it.tier === 'S').length,
       aTier: items.filter((it) => it.tier === 'A').length,
+      bTier: items.filter((it) => it.tier === 'B').length,
+      eventTier: items.filter((it) => it.tier === 'event').length,
       okBatches: batchReports.filter((b) => b.ok).length,
       failedBatches: batchReports.filter((b) => !b.ok).length,
     },

@@ -7,6 +7,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 
 import { fetchXFeed } from '../src/x-fetcher.mjs';
 import { generateRoundup } from '../src/summarizer.mjs';
+import { X_S_TIER, X_A_TIER, X_B_TIER } from '../src/x-accounts.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
@@ -71,8 +72,16 @@ export async function runFetch({ withRoundup = true } = {}) {
     items: feed.items,
     sources: feed.sources,
     batches: feed.batches,
+    eventMentions: feed.eventMentions || [],
     errors: feed.batches.filter((b) => !b.ok).map((b) => ({ batch: b.label, error: b.error })),
     stats: feed.stats,
+    pool: {
+      sTotal: X_S_TIER.length,
+      aTotal: X_A_TIER.length,
+      bTotal: X_B_TIER.length,
+      sList: X_S_TIER,
+      aList: X_A_TIER,
+    },
     roundup,
   };
 

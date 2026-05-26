@@ -139,7 +139,17 @@ export async function generateRoundup(items) {
 - 不编造数字、价格、benchmark 名次、链接、人名
 - 媒体号（@TheDecoder/@TechCrunch/@venturebeat/@TheRundownAI 等）只作发现线索，不单独支撑事实
 - url 候选里有就填，没有留空字符串
-- quote 字段：如能直引推文中包含数字/价格/版本的英文短句最佳，否则留空字符串（不要硬塞中文 paraphrase 到 quote 里）
+
+【quote 字段硬性要求 ★】对 deep_dives[].facts[].quote 和 recap[].bullets[].quote 都适用：
+只要候选帖子的 t 字段（推文原文）出现以下**任一**信号，对应 quote **必须**填入包含该信号的英文原句（截断到 180 字符内），**严禁** paraphrase / 翻译 / 二次加工：
+1. 数字（百分比、价格、token 数、参数数、context 长度、推理速度、加速倍数等，例如 "$1.50 / 1M input"、"76.2%"、"218B MoE / 25B active"、"4x faster"、"1M token context"）
+2. 版本号（GPT-5.5 / Claude 4.7 / V4 Pro / Gemini 3.5 Flash / Composer 2.5 等）
+3. benchmark / leaderboard 名（MMLU / GPQA / Arena / Terminal-Bench / LiveBench / SWE-bench 等）
+4. 具体产品 / feature / API 名（Antigravity / Plan Mode / Composer 2.5 / Live Search 等）
+
+只有当推文里**完全没有**上述任何一类信号（纯观点/情绪/感想），quote 才能留空字符串。
+
+其他字段规则：
 - specs：必须是可量化的 key-value，不要写主观判断
 - reactions 必须区分立场，不要把"很厉害"和"质疑"混在一组
 

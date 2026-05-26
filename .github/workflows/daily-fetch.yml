@@ -1,8 +1,7 @@
 name: AI Radar Daily Fetch
 
 on:
-  # 北京时间每天 9:00 = UTC 1:00
-  # 如需加晚 21:00 一档，复制下一行并改为 "0 13 * * *"
+  # 北京时间每天 9:00 抓取一次（UTC 1:00）
   schedule:
     - cron: '0 1 * * *'
   # 允许在 GitHub UI 上手动触发（Actions 标签 → Run workflow）

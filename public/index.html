@@ -76,13 +76,23 @@
         </div>
 
         <div class="sidebar-section">
-          <div class="sidebar-title">来源（S 级）</div>
+          <div class="sidebar-title" id="sourceTitleS">来源（S 级）</div>
           <div class="source-list" id="sourceListS"></div>
         </div>
 
         <div class="sidebar-section">
-          <div class="sidebar-title">来源（A 级）</div>
+          <div class="sidebar-title" id="sourceTitleA">来源（A 级）</div>
           <div class="source-list" id="sourceListA"></div>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-title" id="sourceTitleB">来源（B 级）</div>
+          <div class="source-list" id="sourceListB"></div>
+        </div>
+
+        <div class="sidebar-section" id="sourceSectionEvent" hidden>
+          <div class="sidebar-title" id="sourceTitleEvent">来源（Event 动态）</div>
+          <div class="source-list" id="sourceListEvent"></div>
         </div>
       </div>
     </aside>
@@ -103,6 +113,8 @@
           <button class="chip mini active" data-tier="all">全部</button>
           <button class="chip mini" data-tier="S">S 级</button>
           <button class="chip mini" data-tier="A">A 级</button>
+          <button class="chip mini" data-tier="B">B 级</button>
+          <button class="chip mini" data-tier="event">Event</button>
         </div>
         <div class="news-grid" id="newsGrid"></div>
         <div class="empty" id="emptyState" hidden>
