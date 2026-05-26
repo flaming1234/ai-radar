@@ -2,17 +2,19 @@
   "archive": [
     {
       "date": "2026-05-26",
-      "generatedAt": "2026-05-26T04:40:59.047Z",
-      "title": "Gemini 3.5 Flash Debuts as Codex Expands",
-      "subtitle": "Gemini 3.5 Flash 发布，Codex 远程控制与数学突破并行",
-      "mainTheme": "model_race",
-      "itemCount": 36,
+      "generatedAt": "2026-05-26T05:46:01.032Z",
+      "title": "Google I/O 2026: Gemini 3.5 Flash, Agent Mode",
+      "subtitle": "Gemini 3.5 Flash 登顶多项 agent benchmark，OpenAI Codex 同步更新 Goal mode",
+      "mainTheme": "google_io",
+      "itemCount": 53,
       "stats": {
-        "total": 36,
-        "withUrl": 36,
-        "sTier": 16,
-        "aTier": 20,
-        "okBatches": 5,
+        "total": 53,
+        "withUrl": 53,
+        "sTier": 8,
+        "aTier": 11,
+        "bTier": 34,
+        "eventTier": 0,
+        "okBatches": 12,
         "failedBatches": 0
       }
     }
