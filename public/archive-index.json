@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-05-28",
+      "generatedAt": "2026-05-28T05:12:30.854Z",
+      "title": "Qwen3.7-Max Hits Code Arena #4 as Stacks Speed Up",
+      "subtitle": "Qwen3.7-Max 登顶 Code Arena，推理与解析全面提速",
+      "mainTheme": "model_race",
+      "itemCount": 66,
+      "stats": {
+        "total": 66,
+        "withUrl": 66,
+        "sTier": 15,
+        "aTier": 14,
+        "bTier": 37,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-05-27",
       "generatedAt": "2026-05-27T05:20:51.461Z",
       "title": "Agent Harnesses & Vertical Infra Take Center Stage",
