@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-05-29",
+      "generatedAt": "2026-05-29T05:17:03.858Z",
+      "title": "Claude Opus 4.8 Launches as Anthropic Raises $65B",
+      "subtitle": "Opus 4.8 发布与 Anthropic 965B 估值融资",
+      "mainTheme": "model_race",
+      "itemCount": 51,
+      "stats": {
+        "total": 51,
+        "withUrl": 51,
+        "sTier": 13,
+        "aTier": 10,
+        "bTier": 25,
+        "eventTier": 3,
+        "okBatches": 13,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-05-28",
       "generatedAt": "2026-05-28T05:12:30.854Z",
       "title": "Qwen3.7-Max Hits Code Arena #4 as Stacks Speed Up",
