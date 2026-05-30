@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-05-30",
+      "generatedAt": "2026-05-30T04:56:17.523Z",
+      "title": "Anthropic Hits $965B, Drops Opus 4.8",
+      "subtitle": "Claude Opus 4.8 登场，Anthropic 估值逼近万亿",
+      "mainTheme": "model_race",
+      "itemCount": 64,
+      "stats": {
+        "total": 64,
+        "withUrl": 64,
+        "sTier": 7,
+        "aTier": 15,
+        "bTier": 42,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-05-29",
       "generatedAt": "2026-05-29T05:17:03.858Z",
       "title": "Claude Opus 4.8 Launches as Anthropic Raises $65B",
