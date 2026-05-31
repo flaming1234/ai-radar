@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-05-31",
+      "generatedAt": "2026-05-31T05:22:09.524Z",
+      "title": "Claude Opus 4.8 Tops DeepSWE at 58%",
+      "subtitle": "Claude Opus 4.8 发布，DeepSWE 58% Pass@1 登顶；Grok 视频模型新王",
+      "mainTheme": "model_race",
+      "itemCount": 53,
+      "stats": {
+        "total": 53,
+        "withUrl": 53,
+        "sTier": 15,
+        "aTier": 5,
+        "bTier": 33,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-05-30",
       "generatedAt": "2026-05-30T04:56:17.523Z",
       "title": "Anthropic Hits $965B, Drops Opus 4.8",
