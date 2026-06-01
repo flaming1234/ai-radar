@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-06-01",
+      "generatedAt": "2026-06-01T06:07:46.525Z",
+      "title": "MiniMax M3 & Opus 4.8 Drive New Model Wave",
+      "subtitle": "MiniMax M3 开源 1M 上下文模型发布，Claude Opus 4.8 同步上线",
+      "mainTheme": "model_race",
+      "itemCount": 58,
+      "stats": {
+        "total": 58,
+        "withUrl": 58,
+        "sTier": 11,
+        "aTier": 12,
+        "bTier": 35,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-05-31",
       "generatedAt": "2026-05-31T05:22:09.524Z",
       "title": "Claude Opus 4.8 Tops DeepSWE at 58%",
