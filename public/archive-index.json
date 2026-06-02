@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-06-02",
+      "generatedAt": "2026-06-02T05:53:05.313Z",
+      "title": "Anthropic Files S-1 as Opus 4.8 Ships",
+      "subtitle": "Anthropic 965B 估值+IPO 准备，Claude 4.8 与 OpenAI 上 AWS 同日落地",
+      "mainTheme": "model_race",
+      "itemCount": 59,
+      "stats": {
+        "total": 59,
+        "withUrl": 59,
+        "sTier": 13,
+        "aTier": 20,
+        "bTier": 26,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-06-01",
       "generatedAt": "2026-06-01T06:07:46.525Z",
       "title": "MiniMax M3 & Opus 4.8 Drive New Model Wave",
