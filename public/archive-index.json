@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-06-03",
+      "generatedAt": "2026-06-03T06:07:56.971Z",
+      "title": "Agent SDKs, Local Runtimes & 1M-Context Models Lead",
+      "subtitle": "Copilot SDK GA、MiniMax M3 与 NVIDIA OpenShell 集中发布",
+      "mainTheme": "agent_labs",
+      "itemCount": 70,
+      "stats": {
+        "total": 70,
+        "withUrl": 70,
+        "sTier": 13,
+        "aTier": 19,
+        "bTier": 38,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-06-02",
       "generatedAt": "2026-06-02T05:53:05.313Z",
       "title": "Anthropic Files S-1 as Opus 4.8 Ships",
