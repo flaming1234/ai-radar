@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-06-04",
+      "generatedAt": "2026-06-04T05:59:30.759Z",
+      "title": "Gemma 4 12B Drops: Edge Multimodal Open Model",
+      "subtitle": "Gemma 4 12B 多模态开源模型发布，支持本地笔记本运行",
+      "mainTheme": "model_race",
+      "itemCount": 65,
+      "stats": {
+        "total": 65,
+        "withUrl": 65,
+        "sTier": 13,
+        "aTier": 19,
+        "bTier": 33,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-06-03",
       "generatedAt": "2026-06-03T06:07:56.971Z",
       "title": "Agent SDKs, Local Runtimes & 1M-Context Models Lead",
