@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-06-05",
+      "generatedAt": "2026-06-05T05:22:33.792Z",
+      "title": "Nemotron 3 Ultra & Gemma 4 12B Lead Open Model Wave",
+      "subtitle": "开源550B MoE与12B多模态模型同步落地，Agent推理栈全面升级",
+      "mainTheme": "model_race",
+      "itemCount": 61,
+      "stats": {
+        "total": 61,
+        "withUrl": 61,
+        "sTier": 13,
+        "aTier": 10,
+        "bTier": 38,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-06-04",
       "generatedAt": "2026-06-04T05:59:30.759Z",
       "title": "Gemma 4 12B Drops: Edge Multimodal Open Model",
