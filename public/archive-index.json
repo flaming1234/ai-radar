@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-06-06",
+      "generatedAt": "2026-06-06T04:56:44.845Z",
+      "title": "Gemma 4 QAT Lands, Agent Stacks Mature",
+      "subtitle": "Gemma 4 QAT 发布，Agent 框架与记忆层集体升级",
+      "mainTheme": "agent_labs",
+      "itemCount": 58,
+      "stats": {
+        "total": 58,
+        "withUrl": 58,
+        "sTier": 7,
+        "aTier": 21,
+        "bTier": 30,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-06-05",
       "generatedAt": "2026-06-05T05:22:33.792Z",
       "title": "Nemotron 3 Ultra & Gemma 4 12B Lead Open Model Wave",
