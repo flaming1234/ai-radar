@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-06-07",
+      "generatedAt": "2026-06-07T05:25:47.491Z",
+      "title": "Gemma 4 QAT & Nemotron 3 Ultra Land",
+      "subtitle": "Gemma 4 QAT 与 Nemotron 3 Ultra 同步发布",
+      "mainTheme": "model_race",
+      "itemCount": 77,
+      "stats": {
+        "total": 77,
+        "withUrl": 77,
+        "sTier": 14,
+        "aTier": 21,
+        "bTier": 42,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-06-06",
       "generatedAt": "2026-06-06T04:56:44.845Z",
       "title": "Gemma 4 QAT Lands, Agent Stacks Mature",
