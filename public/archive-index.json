@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-06-08",
+      "generatedAt": "2026-06-08T05:54:37.446Z",
+      "title": "Agent Labs Go Recursive: Sakana RSI & Claude 80%",
+      "subtitle": "Sakana成立RSI Lab，Anthropic Claude已写80%代码",
+      "mainTheme": "agent_labs",
+      "itemCount": 75,
+      "stats": {
+        "total": 75,
+        "withUrl": 75,
+        "sTier": 12,
+        "aTier": 21,
+        "bTier": 42,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-06-07",
       "generatedAt": "2026-06-07T05:25:47.491Z",
       "title": "Gemma 4 QAT & Nemotron 3 Ultra Land",
