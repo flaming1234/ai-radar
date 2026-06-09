@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-06-09",
+      "generatedAt": "2026-06-09T05:10:35.579Z",
+      "title": "FrontierCode Sets New Bar for Maintainable Agent Code",
+      "subtitle": "新 coding eval 曝光 slop 问题，vLLM-Omni 与 Agent 框架同步升级",
+      "mainTheme": "agent_labs",
+      "itemCount": 57,
+      "stats": {
+        "total": 57,
+        "withUrl": 57,
+        "sTier": 13,
+        "aTier": 16,
+        "bTier": 28,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-06-08",
       "generatedAt": "2026-06-08T05:54:37.446Z",
       "title": "Agent Labs Go Recursive: Sakana RSI & Claude 80%",
