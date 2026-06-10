@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-06-10",
+      "generatedAt": "2026-06-10T05:23:49.998Z",
+      "title": "Claude Fable 5 Tops Every Major Coding Benchmark",
+      "subtitle": "Mythos 系列首发，CursorBench 72.9% 刷新 SOTA，Gemini 与 Gemma 同日更新",
+      "mainTheme": "model_race",
+      "itemCount": 65,
+      "stats": {
+        "total": 65,
+        "withUrl": 65,
+        "sTier": 12,
+        "aTier": 12,
+        "bTier": 41,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-06-09",
       "generatedAt": "2026-06-09T05:10:35.579Z",
       "title": "FrontierCode Sets New Bar for Maintainable Agent Code",
