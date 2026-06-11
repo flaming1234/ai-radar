@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-06-11",
+      "generatedAt": "2026-06-11T05:53:11.068Z",
+      "title": "Claude Fable 5 & DiffusionGemma Shake Model Race",
+      "subtitle": "Fable 5 登顶多项基准，Google 发布 26B 扩散模型",
+      "mainTheme": "model_race",
+      "itemCount": 69,
+      "stats": {
+        "total": 69,
+        "withUrl": 69,
+        "sTier": 12,
+        "aTier": 18,
+        "bTier": 39,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-06-10",
       "generatedAt": "2026-06-10T05:23:49.998Z",
       "title": "Claude Fable 5 Tops Every Major Coding Benchmark",
