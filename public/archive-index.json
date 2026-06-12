@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-06-12",
+      "generatedAt": "2026-06-12T05:52:10.398Z",
+      "title": "Agent Labs Double Down on Secure Deployment",
+      "subtitle": "Cloudflare Mastercard支付集成、OpenAI收购Ona、Cursor审查升级",
+      "mainTheme": "agent_labs",
+      "itemCount": 67,
+      "stats": {
+        "total": 67,
+        "withUrl": 67,
+        "sTier": 13,
+        "aTier": 17,
+        "bTier": 37,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-06-11",
       "generatedAt": "2026-06-11T05:53:11.068Z",
       "title": "Claude Fable 5 & DiffusionGemma Shake Model Race",
