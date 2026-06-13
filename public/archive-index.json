@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-06-13",
+      "generatedAt": "2026-06-13T05:23:28.559Z",
+      "title": "Claude Fable 5 Suspended, MiniMax M3 Drops",
+      "subtitle": "出口管制暂停Fable 5，MiniMax开源428B多模态模型",
+      "mainTheme": "model_race",
+      "itemCount": 64,
+      "stats": {
+        "total": 64,
+        "withUrl": 64,
+        "sTier": 13,
+        "aTier": 16,
+        "bTier": 35,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-06-12",
       "generatedAt": "2026-06-12T05:52:10.398Z",
       "title": "Agent Labs Double Down on Secure Deployment",
