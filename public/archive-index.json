@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-06-14",
+      "generatedAt": "2026-06-14T05:53:21.857Z",
+      "title": "US Bans Foreign Access to Anthropic Fable 5",
+      "subtitle": "美国政府以国家安全为由暂停 Fable 5 全球访问",
+      "mainTheme": "export_controls",
+      "itemCount": 59,
+      "stats": {
+        "total": 59,
+        "withUrl": 59,
+        "sTier": 12,
+        "aTier": 15,
+        "bTier": 32,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-06-13",
       "generatedAt": "2026-06-13T05:23:28.559Z",
       "title": "Claude Fable 5 Suspended, MiniMax M3 Drops",
