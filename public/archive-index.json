@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-06-15",
+      "generatedAt": "2026-06-15T06:30:07.581Z",
+      "title": "Export Controls Freeze Fable 5, Sakana Marlin Ships",
+      "subtitle": "出口管制暂停Fable 5，Sakana发布首个商用研究Agent",
+      "mainTheme": "model_race",
+      "itemCount": 64,
+      "stats": {
+        "total": 64,
+        "withUrl": 64,
+        "sTier": 13,
+        "aTier": 15,
+        "bTier": 36,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-06-14",
       "generatedAt": "2026-06-14T05:53:21.857Z",
       "title": "US Bans Foreign Access to Anthropic Fable 5",
