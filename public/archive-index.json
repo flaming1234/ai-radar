@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-06-16",
+      "generatedAt": "2026-06-16T06:36:03.312Z",
+      "title": "Claude Fable 5 Tops Index Amid Export Controls",
+      "subtitle": "Anthropic新模型登顶基准，Google同步发布Gemini 3.5系列",
+      "mainTheme": "model_race",
+      "itemCount": 61,
+      "stats": {
+        "total": 61,
+        "withUrl": 61,
+        "sTier": 14,
+        "aTier": 11,
+        "bTier": 36,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-06-15",
       "generatedAt": "2026-06-15T06:30:07.581Z",
       "title": "Export Controls Freeze Fable 5, Sakana Marlin Ships",
