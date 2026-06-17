@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-06-17",
+      "generatedAt": "2026-06-17T06:18:22.343Z",
+      "title": "GLM-5.2 Launches 1M Context Open Weights Model",
+      "subtitle": "GLM-5.2 开源权重发布，1M 上下文强化 coding 与 agentic 能力",
+      "mainTheme": "model_race",
+      "itemCount": 55,
+      "stats": {
+        "total": 55,
+        "withUrl": 55,
+        "sTier": 10,
+        "aTier": 15,
+        "bTier": 30,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-06-16",
       "generatedAt": "2026-06-16T06:36:03.312Z",
       "title": "Claude Fable 5 Tops Index Amid Export Controls",
