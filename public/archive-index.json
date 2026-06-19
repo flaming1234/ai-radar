@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-06-19",
+      "generatedAt": "2026-06-19T06:24:02.737Z",
+      "title": "Agent Harnesses & Open Model Releases Lead the Day",
+      "subtitle": "Omnigent 0.2、Cursor /automate 与 GLM-5.2 本地量化成焦点",
+      "mainTheme": "agent_labs",
+      "itemCount": 64,
+      "stats": {
+        "total": 64,
+        "withUrl": 64,
+        "sTier": 12,
+        "aTier": 16,
+        "bTier": 36,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-06-18",
       "generatedAt": "2026-06-18T05:58:24.034Z",
       "title": "Noam Joins OpenAI as GLM-5.2 & Fable 5 Drop",
