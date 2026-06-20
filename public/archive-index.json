@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-06-20",
+      "generatedAt": "2026-06-20T05:19:04.031Z",
+      "title": "GLM-5.2 Tops Open Benchmarks, Agent Harnesses Mature",
+      "subtitle": "开源模型性能拉近差距，Agent 工具链与本地部署成焦点",
+      "mainTheme": "model_race",
+      "itemCount": 62,
+      "stats": {
+        "total": 62,
+        "withUrl": 62,
+        "sTier": 10,
+        "aTier": 19,
+        "bTier": 33,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-06-19",
       "generatedAt": "2026-06-19T06:24:02.737Z",
       "title": "Agent Harnesses & Open Model Releases Lead the Day",
