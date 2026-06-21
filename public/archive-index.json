@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-06-21",
+      "generatedAt": "2026-06-21T06:07:01.650Z",
+      "title": "GLM-5.2 Lands Locally as Agent Harnesses Mature",
+      "subtitle": "开源模型本地化与编码代理工具集体升级",
+      "mainTheme": "agent_labs",
+      "itemCount": 67,
+      "stats": {
+        "total": 67,
+        "withUrl": 67,
+        "sTier": 13,
+        "aTier": 18,
+        "bTier": 36,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-06-20",
       "generatedAt": "2026-06-20T05:19:04.031Z",
       "title": "GLM-5.2 Tops Open Benchmarks, Agent Harnesses Mature",
