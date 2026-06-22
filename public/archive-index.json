@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-06-22",
+      "generatedAt": "2026-06-22T06:32:22.574Z",
+      "title": "Sakana Fugu & GLM-5.2 Lead Agent Labs Wave",
+      "subtitle": "多代理编排系统与开源前沿模型集中发布",
+      "mainTheme": "agent_labs",
+      "itemCount": 61,
+      "stats": {
+        "total": 61,
+        "withUrl": 61,
+        "sTier": 10,
+        "aTier": 16,
+        "bTier": 35,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-06-21",
       "generatedAt": "2026-06-21T06:07:01.650Z",
       "title": "GLM-5.2 Lands Locally as Agent Harnesses Mature",
