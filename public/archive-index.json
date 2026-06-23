@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-06-23",
+      "generatedAt": "2026-06-23T05:06:03.134Z",
+      "title": "Google Agents GA, OpenAI Ships GPT-5.5-Cyber",
+      "subtitle": "Interactions API 正式可用，网络安全模型与 Agent 工具链同步落地",
+      "mainTheme": "agent_labs",
+      "itemCount": 61,
+      "stats": {
+        "total": 61,
+        "withUrl": 61,
+        "sTier": 13,
+        "aTier": 13,
+        "bTier": 35,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-06-22",
       "generatedAt": "2026-06-22T06:32:22.574Z",
       "title": "Sakana Fugu & GLM-5.2 Lead Agent Labs Wave",
