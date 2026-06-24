@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-06-24",
+      "generatedAt": "2026-06-24T05:05:04.726Z",
+      "title": "Claude Tag & Gemini Spark: Agent Teams Go Multiplayer",
+      "subtitle": "Claude Tag 团队协作上线，Agent 生态全面爆发",
+      "mainTheme": "agent_labs",
+      "itemCount": 62,
+      "stats": {
+        "total": 62,
+        "withUrl": 62,
+        "sTier": 12,
+        "aTier": 16,
+        "bTier": 34,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-06-23",
       "generatedAt": "2026-06-23T05:06:03.134Z",
       "title": "Google Agents GA, OpenAI Ships GPT-5.5-Cyber",

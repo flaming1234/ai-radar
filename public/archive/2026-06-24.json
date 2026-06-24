@@ -1,0 +1,1293 @@
+{
+  "date": "2026-06-24",
+  "generatedAt": "2026-06-24T05:05:04.726Z",
+  "roundup": {
+    "generatedAt": "2026-06-24T05:05:04.726Z",
+    "status": "ready",
+    "model": "x-ai/grok-4.3",
+    "message": "",
+    "date": "2026-06-24",
+    "title": "Claude Tag & Gemini Spark: Agent Teams Go Multiplayer",
+    "subtitle": "Claude Tag 团队协作上线，Agent 生态全面爆发",
+    "mainTheme": "agent_labs",
+    "headline": [
+      "@claudeai 与 @ClaudeDevs 正式推出 Claude Tag，让 Claude 以团队成员身份加入 Slack，支持异步任务委派与多代理协作。@karpathy 指出这是 LLM UIUX 的第三次重大重构，@alexalbert__ 称其彻底改变了与 Claude 的工作方式。",
+      "@GeminiApp 同步发布 Gemini Spark Beta，面向 Google AI Ultra 用户提供 24/7 个人代理能力，@googleaidevs 的 Interactions API 也已 GA，支持单一端点驱动模型推理与自主代理。",
+      "@LangChain 强调多数团队已有 traces 但缺乏持续改进闭环，@cursor_ai 则上线团队级插件与 MCP 一键部署功能，共同推动 agent 开发从单点工具走向组织级 lifecycle。",
+      "@vllm_project 借 DFlash speculative decoding 在 Blackwell Ultra 上实现 5.8x 吞吐提升，@togethercompute 开源新 GEMM kernel 进一步降低推理延迟，infra 层为 agent 规模化提供支撑。"
+    ],
+    "deepDives": [
+      {
+        "title": "Claude Tag 正式发布",
+        "topic": "agents",
+        "summary": "Anthropic 推出 Claude Tag，让 Claude 以团队成员身份加入 Slack，实现多代理异步协作。",
+        "facts": [
+          {
+            "text": "Claude Tag 支持在 Slack 中为 Claude 分配频道与工具权限",
+            "quote": "",
+            "sources": [
+              "@claudeai"
+            ]
+          },
+          {
+            "text": "Claude Code 转向多人、异步、主动式团队协作",
+            "quote": "Claude Tag is Claude Code made multiplayer, async, and proactive across your whole team.",
+            "sources": [
+              "@ClaudeDevs"
+            ]
+          }
+        ],
+        "specs": [],
+        "reactions": {
+          "bullish": [
+            {
+              "text": "This is a new paradigm for interacting with Claude",
+              "source": "@karpathy"
+            },
+            {
+              "text": "It feels less like using a tool and more like managing a team",
+              "source": "@alexalbert__"
+            }
+          ],
+          "skeptical": [],
+          "neutral": []
+        }
+      }
+    ],
+    "recap": [
+      {
+        "title": "Model Performance & Cost Curves",
+        "topic": "models",
+        "bullets": [
+          {
+            "text": "GLM 5.2 在 Vibe Code Bench v1.1 达到 64%，领先其他开源权重模型",
+            "quote": "GLM 5.2 is the only open-weight model to break 60% on Vibe Code Bench v1.1... It scores 64%",
+            "sources": [
+              "@ValsAI"
+            ]
+          },
+          {
+            "text": "OpenRouter 上 GLM 5.2 最高可达 125+ TPS 推理速度",
+            "quote": "Including one serving at over 125 TPS",
+            "sources": [
+              "@OpenRouter"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Infra / Runtime Tooling",
+        "topic": "infra",
+        "bullets": [
+          {
+            "text": "vLLM DFlash 在单张 Blackwell Ultra 上吞吐提升最高 5.8x",
+            "quote": "up to 5.8x higher throughput at the same concurrency",
+            "sources": [
+              "@vllm_project"
+            ]
+          },
+          {
+            "text": "Together Compute 新 GEMM kernel 延迟降至 87.9µs",
+            "quote": "One GEMM + All-Gather kernel hit 87.9µs vs 320.6µs for NCCL",
+            "sources": [
+              "@togethercompute"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Coding Agents / Harnesses",
+        "topic": "coding",
+        "bullets": [
+          {
+            "text": "Cursor 新增团队插件与 MCP 一键部署排行榜",
+            "quote": "Cursor now shows you a leaderboard of the most popular plugins, skills, and MCPs across your team",
+            "sources": [
+              "@cursor_ai"
+            ]
+          },
+          {
+            "text": "GitHub Copilot 支持自带密钥、本地模型与多模型切换",
+            "quote": "Bring your own provider key, use local models or use models already part of your subscription",
+            "sources": [
+              "@github"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Evals & Benchmarks",
+        "topic": "evals",
+        "bullets": [
+          {
+            "text": "Vals AI 上线 Legal Research Bench，评估前沿模型法律研究能力",
+            "quote": "",
+            "sources": [
+              "@ValsAI"
+            ]
+          },
+          {
+            "text": "SkillsBench 显示注入可复用技能后编码代理平均提升 17 分",
+            "quote": "",
+            "sources": [
+              "@ValsAI"
+            ]
+          }
+        ]
+      }
+    ],
+    "talentMoves": [
+      {
+        "text": "Transformer 与 MoE 核心作者 Noam Shazeer 加入 OpenAI 担任架构研究负责人",
+        "source": "@markchen90",
+        "url": ""
+      }
+    ],
+    "topTweets": [
+      {
+        "author": "@claudeai",
+        "text": "Claude Tag 让 Claude 以团队成员身份加入 Slack",
+        "url": "https://x.com/claudeai/status/2069468693017268244",
+        "whyItMatters": "Agent 从单用户工具升级为组织级协作实体",
+        "tags": [
+          "agents"
+        ]
+      },
+      {
+        "author": "@vllm_project",
+        "text": "DFlash speculative decoding 实现 5.8x 吞吐提升",
+        "url": "https://x.com/vllm_project/status/2069494027431649404",
+        "whyItMatters": "Blackwell 上单卡推理性能大幅跃升",
+        "tags": [
+          "infra"
+        ]
+      },
+      {
+        "author": "@karpathy",
+        "text": "Claude Tag 是 LLM UIUX 第三次重大重构",
+        "url": "https://x.com/karpathy/status/2069547676849557725",
+        "whyItMatters": "定义了团队级持久异步 Agent 新范式",
+        "tags": [
+          "agents"
+        ]
+      },
+      {
+        "author": "@ValsAI",
+        "text": "GLM 5.2 在 Vibe Code Bench 达到 64%",
+        "url": "https://x.com/ValsAI/status/2069579465748091272",
+        "whyItMatters": "开源权重模型代码能力新高",
+        "tags": [
+          "models"
+        ]
+      },
+      {
+        "author": "@cursor_ai",
+        "text": "Cursor 推出团队插件与 MCP 一键部署",
+        "url": "https://x.com/cursor_ai/status/2069512593887092811",
+        "whyItMatters": "加速组织级 Agent 工具分发",
+        "tags": [
+          "coding"
+        ]
+      }
+    ],
+    "takeaways": [
+      "Agent 开发重点正从单点 traces 转向 build-test-deploy-monitor 完整闭环。",
+      "Claude Tag 与 Gemini Spark 标志着 Agent 已进入团队级 Slack/Workspace 集成阶段。",
+      "vLLM DFlash 与新 kernel 开源让单卡高吞吐推理成为 agent 规模化的现实选项。",
+      "GLM 5.2 在多个 coding benchmark 的领先表现，加速开源权重模型在企业落地。",
+      "开发者可立即关注 Cursor 团队 MCP 排行榜与 LangChain DeepAgents harness。"
+    ]
+  },
+  "stats": {
+    "total": 62,
+    "withUrl": 62,
+    "sTier": 12,
+    "aTier": 16,
+    "bTier": 34,
+    "eventTier": 0,
+    "okBatches": 12,
+    "failedBatches": 0
+  },
+  "itemCount": 62,
+  "sources": [
+    {
+      "author": "@ValsAI",
+      "tier": "B",
+      "group": "B 级",
+      "count": 3,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@SakanaAILabs",
+      "tier": "A",
+      "group": "A 级",
+      "count": 2,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@ID_AA_Carmack",
+      "tier": "B",
+      "group": "B 级",
+      "count": 2,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@nvidia",
+      "tier": "B",
+      "group": "B 级",
+      "count": 2,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@GoogleDeepMind",
+      "tier": "S",
+      "group": "S 级",
+      "count": 2,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@GeminiApp",
+      "tier": "A",
+      "group": "A 级",
+      "count": 2,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@fal",
+      "tier": "B",
+      "group": "B 级",
+      "count": 2,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@AndrewYNg",
+      "tier": "A",
+      "group": "A 级",
+      "count": 2,
+      "latestAt": "5d ago"
+    },
+    {
+      "author": "@LangChain_OSS",
+      "tier": "B",
+      "group": "B 级",
+      "count": 2,
+      "latestAt": "5d ago"
+    },
+    {
+      "author": "@poolsideai",
+      "tier": "B",
+      "group": "B 级",
+      "count": 2,
+      "latestAt": "6d ago"
+    },
+    {
+      "author": "@LangChain",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@cursor_ai",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@vllm_project",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@OpenAI",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@karpathy",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@alexalbert__",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@ClaudeDevs",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@togethercompute",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@github",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@OpenRouter",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@HamelHusain",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@emollick",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@danielhanchen",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@GergelyOrosz",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@runwayml",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@PrimeIntellect",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@wandb",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@AssemblyAI",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@garrytan",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@MistralAI",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@kimmonismus",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@claudeai",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@googleaidevs",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@matei_zaharia",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@art_zucker",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "3d ago"
+    },
+    {
+      "author": "@johnschulman2",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "4d ago"
+    },
+    {
+      "author": "@OpenAINewsroom",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "5d ago"
+    },
+    {
+      "author": "@Wauplin",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "5d ago"
+    },
+    {
+      "author": "@AnthropicAI",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "6d ago"
+    },
+    {
+      "author": "@perplexity_ai",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "6d ago"
+    },
+    {
+      "author": "@UnslothAI",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "6d ago"
+    },
+    {
+      "author": "@cohere",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "6d ago"
+    },
+    {
+      "author": "@RedHat_AI",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "6d ago"
+    },
+    {
+      "author": "@StasBekman",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "6d ago"
+    },
+    {
+      "author": "@turbopuffer",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "6d ago"
+    },
+    {
+      "author": "@markchen90",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "6d ago"
+    },
+    {
+      "author": "@jeffboudier",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "6d ago"
+    },
+    {
+      "author": "@xenovacom",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "6d ago"
+    },
+    {
+      "author": "@weaviate_io",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "7d ago"
+    },
+    {
+      "author": "@cartesia",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "7d ago"
+    },
+    {
+      "author": "@lmstudio",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "7d ago"
+    }
+  ],
+  "items": [
+    {
+      "id": "da02f1cf",
+      "author": "@LangChain",
+      "text": "Most teams building today have traces, what they don't have is a system for continuously improving their agents. The teams that do use an agent development lifecycle: build, test, deploy, and monitor.",
+      "url": "https://x.com/LangChain/status/2069535988272009272",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "agents",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "LangSmith Engine 实现 agent 持续自动改进闭环"
+    },
+    {
+      "id": "5c093c67",
+      "author": "@cursor_ai",
+      "text": "Cursor now shows you a leaderboard of the most popular plugins, skills, and MCPs across your team. Add any to your setup with one click from the new Customize page.",
+      "url": "https://x.com/cursor_ai/status/2069512593887092811",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "coding",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "Cursor 团队级插件/MCP 发现与一键部署"
+    },
+    {
+      "id": "acb23e99",
+      "author": "@vllm_project",
+      "text": "With DFlash speculative decoding... On Gemma-4 31B on a single Blackwell Ultra GPU, this delivers up to 5.8x higher throughput at the same concurrency over autoregressive decoding.",
+      "url": "https://x.com/vllm_project/status/2069494027431649404",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "infra",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "vLLM 原生支持 DFlash，推理吞吐最高提升 5.8x"
+    },
+    {
+      "id": "dca3fb7b",
+      "author": "@OpenAI",
+      "text": "OpenAI DevDay 2026 applications are now open! Our biggest developer event gets even bigger. 📍 San Francisco 📅 September 29 Apply by July 10",
+      "url": "https://x.com/OpenAI/status/2069483224158646739",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "products",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "OpenAI 年度开发者大会 2026 开放报名"
+    },
+    {
+      "id": "277181be",
+      "author": "@karpathy",
+      "text": "This is a new paradigm for interacting with Claude... the 3rd major redesign of LLM UIUX... self-contained, persistent, asynchronous entity with org-wide tools and context, working alongside teams of humans.",
+      "url": "https://x.com/karpathy/status/2069547676849557725",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "agents",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "Karpathy 解读 Claude Tag 的团队协作意义"
+    },
+    {
+      "id": "fea42ba",
+      "author": "@alexalbert__",
+      "text": "This has completely changed how I work with Claude. It feels less like using a tool and more like managing a team.",
+      "url": "https://x.com/alexalbert__/status/2069470389391241314",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "agents",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "Claude Tag 实现团队级异步 Agent 协作"
+    },
+    {
+      "id": "62570339",
+      "author": "@SakanaAILabs",
+      "text": "Use Case 5: Rubik’s Cube Solver... Fugu Ultra... 19.72 moves vs Model A’s 19.76... Models B and C... 0/300.",
+      "url": "https://x.com/SakanaAILabs/status/2069264211822403772",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "coding",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "Fugu Ultra 多 Agent 代码生成显著优于单模型"
+    },
+    {
+      "id": "83469b86",
+      "author": "@ClaudeDevs",
+      "text": "Claude Code is still the fastest way to do solo, synchronous work. Claude Tag is Claude Code made multiplayer, async, and proactive across your whole team.",
+      "url": "https://x.com/ClaudeDevs/status/2069468913264644419",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "agents",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "Claude Tag 正式发布，企业团队 Agent 协作新方式"
+    },
+    {
+      "id": "602fdafb",
+      "author": "@togethercompute",
+      "text": "Single-shot generation still surfaces net-new kernels... One GEMM + All-Gather kernel hit 87.9µs vs 320.6µs for NCCL. PKB is open.",
+      "url": "https://x.com/togethercompute/status/2069515317823549732",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "infra",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "开源新 kernel 显著提升推理性能"
+    },
+    {
+      "id": "c69a1203",
+      "author": "@github",
+      "text": "You can now use an expanded set of models in the GitHub Copilot app. 🔑 Bring your own provider key, use local models or use models already part of your subscription.",
+      "url": "https://x.com/github/status/2069518766157738106",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "coding",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "GitHub Copilot 支持 BYOK、本地模型及多模型切换"
+    },
+    {
+      "id": "be57a05a",
+      "author": "@OpenRouter",
+      "text": "Access all the providers for GLM 5.2 in one spot. Including one serving at over 125 TPS: https://openrouter.ai/z-ai/glm-5.2",
+      "url": "https://x.com/OpenRouter/status/2069540714686341544",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "models",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "GLM 5.2 多提供商聚合，最高 125+ TPS 推理速度"
+    },
+    {
+      "id": "9b5cdbe1",
+      "author": "@HamelHusain",
+      "text": "Tomorrow @sh_reya and I kick off this free AI product engineering mini-course. Topics covered over 12 talks: 1. Design/UX & Evals 2. Retrieval 3. When & how to use open models effectively.",
+      "url": "https://x.com/HamelHusain/status/2069465758472814602",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "coding",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "免费迷你课程覆盖evals、检索与开源模型实用技巧"
+    },
+    {
+      "id": "a5a6fbf",
+      "author": "@emollick",
+      "text": "A case study in why organizations should both incentivized their employees to explore AI uses that help them & have a Lab of dedicated AI builders. Here, Cornell's finance & AI teams created a /treasury Claude skill that recovered $100k in back payments.",
+      "url": "https://x.com/emollick/status/2069486790075908261",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "products",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "真实案例展示AI lab如何为企业回收10万美元"
+    },
+    {
+      "id": "4d2e80a7",
+      "author": "@danielhanchen",
+      "text": "Come join Thursday 8AM PST! I'll talk about GGUFs, quantization, GLM 5.2 quants, llama.cpp / llama-server & much more! Also ask any questions in the AMA / Q&A!",
+      "url": "https://x.com/danielhanchen/status/2069435332848955623",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "open_source",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "直播讨论GLM 5.2量化与开源推理工具"
+    },
+    {
+      "id": "9c174e07",
+      "author": "@ID_AA_Carmack",
+      "text": "If you are asking “Why push back against anti-datacenter efforts?” I consider it a tragedy that anti-nuclear efforts largely strangled nuclear power... We are in the midst of a transition more vibrant than the industrial revolution.",
+      "url": "https://x.com/ID_AA_Carmack/status/2069486595917402117",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "infra",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "AI需求驱动数据中心建设，公共舆论对算力扩张的影响"
+    },
+    {
+      "id": "12abf1c5",
+      "author": "@GergelyOrosz",
+      "text": "Interesting to observe Anthropic going from the moat being the best model to building a tooling ecosystem with right integrations to common dev + non-dev workflows.",
+      "url": "https://x.com/GergelyOrosz/status/2069553577882783884",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "agents",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Claude Slack集成展示AI从模型向工作流工具演进"
+    },
+    {
+      "id": "a0034b92",
+      "author": "@runwayml",
+      "text": "Seedance 4K. Seedance Mini. Kling 3.0 Turbo. Available now. The world’s best models, in one place.",
+      "url": "https://x.com/runwayml/status/2069535148450705517",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "products",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "多顶级视频模型统一平台上线，含 4K 支持"
+    },
+    {
+      "id": "3b7c5365",
+      "author": "@PrimeIntellect",
+      "text": "prime-rl is fully open source, and we're hiring systems engineers to take it further. Read the full prime-rl performance deep dive: https://www.primeintellect.ai/blog/rl-at-1t-scale",
+      "url": "https://x.com/PrimeIntellect/status/2069243050124312734",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "open_source",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "1T scale RL 训练全开源，含 3D 并行与路由优化"
+    },
+    {
+      "id": "47f22ec5",
+      "author": "@wandb",
+      "text": "It's all open source in ART.\n\nIf you're running GRPO-style RL with a heavy shared prompt, the speedup is right there.\n\nGive it a try.\n\nBlog: https://wandb.ai/wandb_fc/product-announcements-fc/reports/ART-Optimized-Megatron-AOM-12x-higher-training-throughput--VmlldzoxNzMxNzY1MA",
+      "url": "https://x.com/wandb/status/2069509959516389481",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "research",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "开源RL训练优化，吞吐提升12x，加速AI模型训练迭代。"
+    },
+    {
+      "id": "7a7e7c9d",
+      "author": "@AssemblyAI",
+      "text": "➡️ Read the full launch blog: https://www.assemblyai.com/blog/universal-3-5-pro-realtime\n\n➡️ Watch the demo: https://www.assemblyai.com/blog/universal-3-5-pro-realtime",
+      "url": "https://x.com/AssemblyAI/status/2069464744034173173",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "models",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "新 Universal-3.5 Pro Realtime 语音模型发布，支持 Context Carryover"
+    },
+    {
+      "id": "db5cdddf",
+      "author": "@garrytan",
+      "text": "Linzumi is Codex but actually multiplayer. It’s magical for teams. Also Sean Grove was on the team at OpenAI that greatly reduced sycophancy in ChatGPT before he left to start this YC startup!",
+      "url": "https://x.com/garrytan/status/2069474420113146355",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "coding",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "YC 投资 Linzumi：多用户 AI 编码代理协作平台"
+    },
+    {
+      "id": "645bb34",
+      "author": "@MistralAI",
+      "text": "Introducing Mistral OCR 4. It creates structure with bounding boxes, block classification, and inline confidence scores in 170 languages. 🧵👇",
+      "url": "https://x.com/MistralAI/status/2069420263825895917",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "models",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "新OCR模型，支持170语言，基准领先，结构化输出利RAG"
+    },
+    {
+      "id": "67ad3731",
+      "author": "@nvidia",
+      "text": "The latest supercomputing rankings are in - NVIDIA is powering 81% of the TOP500 and 89% of all new systems...",
+      "url": "https://x.com/nvidia/status/2069480608749817922",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "infra",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "NVIDIA占TOP500 81%，AI训练/推理性能领先"
+    },
+    {
+      "id": "38bf8b65",
+      "author": "@nvidia",
+      "text": "Specialized AI agents help enterprises turn AI into systems built for their own workflows. NVIDIA Agent Toolkit...",
+      "url": "https://x.com/nvidia/status/2069450408737517660",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "agents",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "NVIDIA发布Agent Toolkit，支持领域特定agent构建"
+    },
+    {
+      "id": "b7fa287c",
+      "author": "@ValsAI",
+      "text": "The verdict is in! Frontier models can pass the bar, yet they struggle on comprehensive legal research\n\nToday we're releasing Legal Research Bench, a benchmark that measures models’ ability to solve realistic legal research tasks across eight areas of U.S. law",
+      "url": "https://x.com/ValsAI/status/2069573876351406510",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "evals",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "新基准严格评估法律研究能力，暴露前沿模型差距"
+    },
+    {
+      "id": "aec114d1",
+      "author": "@ValsAI",
+      "text": "GLM 5.2 is the only open-weight model to break 60% on Vibe Code Bench v1.1... It scores 64%, and no other open-weight model on the board reaches even 50%.",
+      "url": "https://x.com/ValsAI/status/2069579465748091272",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "models",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "GLM 5.2在代码构建基准领先开源模型14分"
+    },
+    {
+      "id": "129da544",
+      "author": "@kimmonismus",
+      "text": "Recursive self-improvement: Anthropic co-founder Jack Clark says it could arrive by 2028. AI systems could help invent their own successors - with Claude 10 building Claude 11, and so on - potentially “without any researchers involved.”",
+      "url": "https://x.com/kimmonismus/status/2069508699123548504",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "research",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "前沿实验室对递归自改进时间线的最新判断"
+    },
+    {
+      "id": "958d536d",
+      "author": "@claudeai",
+      "text": "Introducing Claude Tag, a new way for teams to work with Claude. In Slack, Claude joins as a team member with access to the channels and tools you choose. Tag Claude in and delegate tasks to it while you focus on other work.",
+      "url": "https://x.com/claudeai/status/2069468693017268244",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "agents",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "Claude 加入团队 Slack，实现多代理协作新范式"
+    },
+    {
+      "id": "ef441682",
+      "author": "@GoogleDeepMind",
+      "text": "Google DeepMind 🤝 @A24 We’re launching a research partnership with A24 to ensure the tools of the future are shaped by the creators who use them.",
+      "url": "https://x.com/GoogleDeepMind/status/2069066675895337405",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "products",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "DeepMind 与 A24 合作，AI 工具由创作者驱动"
+    },
+    {
+      "id": "84c4854e",
+      "author": "@GeminiApp",
+      "text": "Gemini Spark is available in Beta for Google AI Ultra subscribers, starting in the U.S.",
+      "url": "https://x.com/GeminiApp/status/2069143100736565745",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "agents",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "Gemini Spark Agent Beta 面向 Ultra 用户开放"
+    },
+    {
+      "id": "159ebff9",
+      "author": "@SakanaAILabs",
+      "text": "Use Case 4: Computer Aided Design of Mechanical Iris... Fugu Ultra generated a highly functional design... Models A, B, and C failed the physical logic.",
+      "url": "https://x.com/SakanaAILabs/status/2069089571208679469",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "models",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "展示 Fugu 在精密空间推理任务上的优势"
+    },
+    {
+      "id": "71ed297d",
+      "author": "@GeminiApp",
+      "text": "Gemini Spark is your 24/7 personal AI agent, handling the heavy lifting from start to finish under your direction. Here are some ways our team has been using Gemini Spark to make their lives easier and more productive. 🧵",
+      "url": "https://x.com/GeminiApp/status/2069143097586700794",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "agents",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "Gemini 新个人 AI Agent Beta 上线，展示多场景自动化"
+    },
+    {
+      "id": "14de88a2",
+      "author": "@fal",
+      "text": "Krea 2 Open-Source is now available on fal. The most aesthetic open-source image model, released with open weights. Turbo delivers fast, polished text-to-image at low step counts. RAW serves as the malleable base checkpoint for LoRA training.",
+      "url": "https://x.com/fal/status/2069436126364864887",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "open_source",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "开源图像模型发布，支持LoRA训练与快速推理"
+    },
+    {
+      "id": "4d48c680",
+      "author": "@fal",
+      "text": "The code and weights are open with the full writeup to match. The technical report covers the architecture, training approach and the RAW-to-Turbo design. GitHub & technical report linked.",
+      "url": "https://x.com/fal/status/2069436127753154956",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "models",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "开放权重+技术报告，AI工程师可直接复现与微调"
+    },
+    {
+      "id": "1beebeac",
+      "author": "@ID_AA_Carmack",
+      "text": "Anti-data center yard signs are popping up in my area. I am entertaining the idea of paying for a billboard with something like “Data centers are awesome, Texas should lead!”",
+      "url": "https://x.com/ID_AA_Carmack/status/2069051000418095447",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "infra",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "AI数据中心扩张面临公众阻力，行业基础设施辩论"
+    },
+    {
+      "id": "84699d25",
+      "author": "@googleaidevs",
+      "text": "The Interactions API is now GA. Featuring a stable schema and new capabilities via a single /interactions endpoint, it is now our standard interface for both model inference and autonomous agents.",
+      "url": "https://x.com/googleaidevs/status/2069109636603544046",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "agents",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Gemini Interactions API 正式 GA，支持 Managed Agents 与单端点推理"
+    },
+    {
+      "id": "c9f344d4",
+      "author": "@matei_zaharia",
+      "text": "Nice summary of learnings on self-distillation in the run-up to our Learning Fast & Slow paper! The preprint is here: https://arxiv.org/abs/2605.12484",
+      "url": "https://x.com/matei_zaharia/status/2069087123081449816",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "research",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "自蒸馏新方法论文，加速 LLM 训练与推理优化"
+    },
+    {
+      "id": "c7afc174",
+      "author": "@ValsAI",
+      "text": "SkillsBench by @xdotli is now live on Vals AI!\n\nThis benchmark asks one focused question: Do coding agents get better when you hand them reusable, task-specific skills?",
+      "url": "https://x.com/ValsAI/status/2069206754488193413",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "evals",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "技能注入让编码代理平均提升17分，实用工作流优化"
+    },
+    {
+      "id": "41f73b07",
+      "author": "@art_zucker",
+      "text": "For anyone still hesitating to leave claude code: Hermes agent is fucking lit with glm5.2🔥",
+      "url": "https://x.com/art_zucker/status/2068616549271839228",
+      "hasValidUrl": true,
+      "publishedAt": "3d ago",
+      "topic": "agents",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "新Agent框架Hermes与glm5.2结合，Claude Code替代潜力。"
+    },
+    {
+      "id": "d50e9c81",
+      "author": "@johnschulman2",
+      "text": "PPO had a second wave in the LLM era for reasons unanticipated by the original paper - the importance-ratio objective fixes biases from numeric error, async training, and forward pass noise - the clipping objective affects entropy through a mechanism that we didn't know about at the time of publication (DAPO,",
+      "url": "https://x.com/johnschulman2/status/2067410492008841643",
+      "hasValidUrl": true,
+      "publishedAt": "4d ago",
+      "topic": "research",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "PPO 机制在 LLM 时代意外复兴，揭示 scaling 训练中的关键 bias 修复"
+    },
+    {
+      "id": "8a2fd094",
+      "author": "@AndrewYNg",
+      "text": "Over the last two weeks, both the U.S. Government and Anthropic took significant actions that demonstrated their power to control access to AI by restricting what others can do with frontier models. ... A silver lining of the events of these past two weeks is now that everyone better realizes key points of instability ",
+      "url": "https://x.com/AndrewYNg/status/2068039709126017356",
+      "hasValidUrl": true,
+      "publishedAt": "5d ago",
+      "topic": "business",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "分析Anthropic与美政府出口管制对AI主权与开源的影响"
+    },
+    {
+      "id": "b11438f1",
+      "author": "@LangChain_OSS",
+      "text": "Getting started with deepagents code is super easy! https://docs.langchain.com/oss/python/deepagents/code/overview",
+      "url": "https://x.com/LangChain_OSS/status/2067947575991243039",
+      "hasValidUrl": true,
+      "publishedAt": "5d ago",
+      "topic": "agents",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "开源 coding agent harness，支持新模型快速测试"
+    },
+    {
+      "id": "b7f58cee",
+      "author": "@OpenAINewsroom",
+      "text": "For families facing rare genetic diseases... experts used o3 Deep Research to help diagnose rare genetic diseases affecting children.",
+      "url": "https://x.com/OpenAINewsroom/status/2068008435548037553",
+      "hasValidUrl": true,
+      "publishedAt": "5d ago",
+      "topic": "research",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "o3 Deep Research用于罕见病诊断，NEJM AI论文"
+    },
+    {
+      "id": "382de51",
+      "author": "@Wauplin",
+      "text": "`hf upload` got a full rewrite!\n\nSingle-pass hashing, multi commits, resumable uploads. Same CLI, way faster, way cleaner.\n\nAvailable in hf latest release (1.20.0).",
+      "url": "https://x.com/Wauplin/status/2067615507897888954",
+      "hasValidUrl": true,
+      "publishedAt": "5d ago",
+      "topic": "open_source",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Hugging Face Hub上传大幅提速，1.20.0发布"
+    },
+    {
+      "id": "34617215",
+      "author": "@AnthropicAI",
+      "text": "New Frontier Red Team blog: Phase 2 of Project Fetch, where we test how well Claude can program a robodog. Opus 4.7, on its own, was ~20x faster than last year's best human team aided by Opus 4.1.",
+      "url": "https://x.com/AnthropicAI/status/2067651699486200091",
+      "hasValidUrl": true,
+      "publishedAt": "6d ago",
+      "topic": "research",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "Claude 编程机器人能力 20x 人类团队提升实测"
+    },
+    {
+      "id": "7dc0074a",
+      "author": "@perplexity_ai",
+      "text": "Introducing Brain in Computer. Brain is a continuously learning memory system. Every task on Computer plugs into a context graph built by Brain. It makes Computer more stateful with every run.",
+      "url": "https://x.com/perplexity_ai/status/2067642139014742348",
+      "hasValidUrl": true,
+      "publishedAt": "6d ago",
+      "topic": "agents",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "Perplexity 推出自学习记忆系统 Brain，提升代理连续性"
+    },
+    {
+      "id": "e5b71b99",
+      "author": "@UnslothAI",
+      "text": "GLM-5.2 can now be run locally! The 2-bit model retains ~82% accuracy after we shrunk it from 1.51TB to 238GB (-84% size). Run on a 256GB Mac or RAM/VRAM setups. GLM-5.2 is the strongest open model to date.",
+      "url": "https://x.com/UnslothAI/status/2067588262156501497",
+      "hasValidUrl": true,
+      "publishedAt": "6d ago",
+      "topic": "open_source",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "GLM-5.2 极致量化本地运行，开放权重最强模型"
+    },
+    {
+      "id": "196a8b56",
+      "author": "@GoogleDeepMind",
+      "text": "Our AI Control Roadmap: a framework for building and managing the advanced AI we deploy within Google. There is a narrow window to embed structural security protocols before multi-agent systems scale globally.",
+      "url": "https://x.com/GoogleDeepMind/status/2067594863785173257",
+      "hasValidUrl": true,
+      "publishedAt": "6d ago",
+      "topic": "research",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "DeepMind 发布 AI Control Roadmap，聚焦多代理安全"
+    },
+    {
+      "id": "b9260856",
+      "author": "@cohere",
+      "text": "The 4-bit quant is now available, making our first open-source agentic coding model small enough to be run on a Mac. Get the weights here: https://huggingface.co/CohereLabs/North-Mini-Code-1.0-w4a16",
+      "url": "https://x.com/cohere/status/2067671126176563330",
+      "hasValidUrl": true,
+      "publishedAt": "6d ago",
+      "topic": "coding",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "Cohere 开源 agentic coding 模型，支持本地 Mac 运行"
+    },
+    {
+      "id": "87b6b87e",
+      "author": "@AndrewYNg",
+      "text": "New course: Add voice to your AI agents and applications, built with @VocalBridge ... Join and add voice to your agents without overhauling your architecture.",
+      "url": "https://x.com/AndrewYNg/status/2067653578945359898",
+      "hasValidUrl": true,
+      "publishedAt": "6d ago",
+      "topic": "agents",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "新课程教AI代理添加可靠语音功能，实用技能"
+    },
+    {
+      "id": "bace9de5",
+      "author": "@LangChain_OSS",
+      "text": "New integration just dropped! Give your agent an inbox with langchain-agentmail!",
+      "url": "https://x.com/LangChain_OSS/status/2067678830580355205",
+      "hasValidUrl": true,
+      "publishedAt": "6d ago",
+      "topic": "agents",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "LangChain agents 集成真实邮箱，提升 workflow 实用性"
+    },
+    {
+      "id": "5d581a78",
+      "author": "@RedHat_AI",
+      "text": "Model-as-a-Service flips this. Your platform team runs one internal AI API. ... Now GA in Red Hat OpenShift AI 3.4. vLLM under the hood.",
+      "url": "https://x.com/RedHat_AI/status/2067649540703007166",
+      "hasValidUrl": true,
+      "publishedAt": "6d ago",
+      "topic": "infra",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "企业内 AI API 自服务上线，vLLM 驱动，6 行 YAML 部署"
+    },
+    {
+      "id": "93ac396c",
+      "author": "@StasBekman",
+      "text": "Added 2 sections on Python and Pytorch profilers: ... I have been using those massively as of recent to optimize the RL workloads",
+      "url": "https://x.com/StasBekman/status/2067362656575717707",
+      "hasValidUrl": true,
+      "publishedAt": "6d ago",
+      "topic": "research",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "RL 训练优化必备 Python/PyTorch profiler 指南更新"
+    },
+    {
+      "id": "af0d92b",
+      "author": "@turbopuffer",
+      "text": "new: i8 vectors\n\nf32: 4 bytes/dim\ni8: 1 byte/dim\n\n4x fewer bytes → 75% lower storage and query costs + faster queries\n\nwhen embedded with a quantization-aware model (e.g. voyage-4-large) trained on i8 vectors, recall loss can be ~0!\n\ndocs: https://turbopuffer.com/docs/performance",
+      "url": "https://x.com/turbopuffer/status/2067701891451273615",
+      "hasValidUrl": true,
+      "publishedAt": "6d ago",
+      "topic": "infra",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "向量数据库重大优化，存储/查询成本降75%，支持大规模AI应用。"
+    },
+    {
+      "id": "bef7d8b5",
+      "author": "@markchen90",
+      "text": "Very excited to welcome @NoamShazeer to OpenAI as our new lead for architecture research! His work on transformers, MoE, and efficient decoding have shaped modern AI. He’s extremely AGI-pilled and is super thoughtful about making it all go well. Welcome, Noam!",
+      "url": "https://x.com/markchen90/status/2067402457500758375",
+      "hasValidUrl": true,
+      "publishedAt": "6d ago",
+      "topic": "business",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Transformer/MoE 核心作者加入 OpenAI，架构研究领导力升级"
+    },
+    {
+      "id": "23c81471",
+      "author": "@jeffboudier",
+      "text": "🔥 LLMs like GPT-OSS are now 50% faster out of the box with transformers on @AMD GPUs! AITER's FA3, RoPE, and MegaBlocks kernels are now on the 🤗 Hub and integrated into Transformers. No model code changes required.",
+      "url": "https://x.com/jeffboudier/status/2067655469091651684",
+      "hasValidUrl": true,
+      "publishedAt": "6d ago",
+      "topic": "infra",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "AMD GPU 上 Transformers 推理 50% 加速，开箱即用 kernel 集成"
+    },
+    {
+      "id": "b56c3a80",
+      "author": "@poolsideai",
+      "text": "someone asked if they could try getting Laguna M.1 running on a Mac. we said yes. they came back with a 3-bit MLX build running locally on Apple Silicon: ~26 tok/s...",
+      "url": "https://x.com/poolsideai/status/2067711022115471532",
+      "hasValidUrl": true,
+      "publishedAt": "6d ago",
+      "topic": "coding",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Laguna M.1支持Mac本地运行，MLX量化优化"
+    },
+    {
+      "id": "98a17b10",
+      "author": "@poolsideai",
+      "text": "IYMI: the best way to try Laguna M.1 is to jump in the pool. pool is our agent harness... https://github.com/poolsideai/pool",
+      "url": "https://x.com/poolsideai/status/2067632957616017658",
+      "hasValidUrl": true,
+      "publishedAt": "6d ago",
+      "topic": "agents",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "开源agent harness，支持coding agent开发"
+    },
+    {
+      "id": "ac1c5014",
+      "author": "@xenovacom",
+      "text": "Before Fable 5 was shut down, it pushed Gemma 4 to 255 tok/s on WebGPU. ... Today we're releasing the demo and kernels it wrote for you to see yourself. Run it locally in your browser.\n\nAgentic kernel optimization is the future of on-device inference",
+      "url": "https://x.com/xenovacom/status/2067289897111638484",
+      "hasValidUrl": true,
+      "publishedAt": "6d ago",
+      "topic": "infra",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "浏览器本地Gemma 4达255 tok/s，展示agentic内核优化潜力"
+    },
+    {
+      "id": "af05ec09",
+      "author": "@weaviate_io",
+      "text": "The most requested feature from our community is finally here: Weaviate Cloud access, free 𝘧𝘰𝘳𝘦𝘷𝘦𝘳. No trial period. No ticking clock. Just full access to Weaviate's vector database, query agent, and memory capabilities, no credit card required.",
+      "url": "https://x.com/weaviate_io/status/2067276258786848826",
+      "hasValidUrl": true,
+      "publishedAt": "7d ago",
+      "topic": "products",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "Weaviate Cloud 永久免费，含 Query Agent 等功能"
+    }
+  ]
+}
