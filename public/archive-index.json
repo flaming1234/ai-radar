@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-06-25",
+      "generatedAt": "2026-06-25T05:08:43.642Z",
+      "title": "Qwen-AgentWorld & GPT-5.5 Instant Redefine Agent Frontier",
+      "subtitle": "开源Agent世界模型与GPT-5.5升级并行，Agent生态全面提速",
+      "mainTheme": "model_race",
+      "itemCount": 60,
+      "stats": {
+        "total": 60,
+        "withUrl": 60,
+        "sTier": 12,
+        "aTier": 18,
+        "bTier": 30,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-06-24",
       "generatedAt": "2026-06-24T05:05:04.726Z",
       "title": "Claude Tag & Gemini Spark: Agent Teams Go Multiplayer",
