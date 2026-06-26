@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-06-26",
+      "generatedAt": "2026-06-26T05:12:12.307Z",
+      "title": "GLM-5.2 Floods Endpoints & Agent Harnesses",
+      "subtitle": "GLM-5.2 多平台推理落地，Gemini 与 Claude Agent 工具同步更新",
+      "mainTheme": "model_race",
+      "itemCount": 67,
+      "stats": {
+        "total": 67,
+        "withUrl": 67,
+        "sTier": 12,
+        "aTier": 20,
+        "bTier": 35,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-06-25",
       "generatedAt": "2026-06-25T05:08:43.642Z",
       "title": "Qwen-AgentWorld & GPT-5.5 Instant Redefine Agent Frontier",
