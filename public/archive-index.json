@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-06-27",
+      "generatedAt": "2026-06-27T04:56:33.915Z",
+      "title": "OpenAI Ships GPT-5.6 Sol Family with Terminal-Bench SOTA",
+      "subtitle": "GPT-5.6 Sol/ Terra/ Luna 发布，Agent 基准与部署并行升级",
+      "mainTheme": "model_race",
+      "itemCount": 55,
+      "stats": {
+        "total": 55,
+        "withUrl": 55,
+        "sTier": 13,
+        "aTier": 13,
+        "bTier": 29,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-06-26",
       "generatedAt": "2026-06-26T05:12:12.307Z",
       "title": "GLM-5.2 Floods Endpoints & Agent Harnesses",
