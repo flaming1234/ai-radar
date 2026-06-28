@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-06-28",
+      "generatedAt": "2026-06-28T05:20:29.410Z",
+      "title": "Agentic Models Launch: GPT-5.6 Sol, Gemini 3.5 & Claude Tag",
+      "subtitle": "Agent原生模型与工具密集发布，生产落地信号强劲",
+      "mainTheme": "agent_labs",
+      "itemCount": 50,
+      "stats": {
+        "total": 50,
+        "withUrl": 50,
+        "sTier": 14,
+        "aTier": 17,
+        "bTier": 19,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-06-27",
       "generatedAt": "2026-06-27T04:56:33.915Z",
       "title": "OpenAI Ships GPT-5.6 Sol Family with Terminal-Bench SOTA",
