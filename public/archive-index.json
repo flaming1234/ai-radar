@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-06-29",
+      "generatedAt": "2026-06-29T05:53:57.893Z",
+      "title": "GPT-5.6 Sol Leads New Model & Agent Wave",
+      "subtitle": "多款前沿模型与原生Agent能力同步落地",
+      "mainTheme": "model_race",
+      "itemCount": 61,
+      "stats": {
+        "total": 61,
+        "withUrl": 61,
+        "sTier": 11,
+        "aTier": 15,
+        "bTier": 35,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-06-28",
       "generatedAt": "2026-06-28T05:20:29.410Z",
       "title": "Agentic Models Launch: GPT-5.6 Sol, Gemini 3.5 & Claude Tag",
