@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-06-30",
+      "generatedAt": "2026-06-30T05:08:19.362Z",
+      "title": "Cursor iOS Agents & GPT-5.6 Sol Launch",
+      "subtitle": "移动端Agent落地与OpenAI新旗舰模型发布",
+      "mainTheme": "agent_labs",
+      "itemCount": 50,
+      "stats": {
+        "total": 50,
+        "withUrl": 50,
+        "sTier": 11,
+        "aTier": 13,
+        "bTier": 26,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-06-29",
       "generatedAt": "2026-06-29T05:53:57.893Z",
       "title": "GPT-5.6 Sol Leads New Model & Agent Wave",
