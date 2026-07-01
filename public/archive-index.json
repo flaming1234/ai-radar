@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-07-01",
+      "generatedAt": "2026-07-01T05:25:26.390Z",
+      "title": "Claude Sonnet 5 & Gemini Omni Flash Launch",
+      "subtitle": "Sonnet 5 多平台上线，Gemini 新模型降低图像视频生成成本",
+      "mainTheme": "model_race",
+      "itemCount": 62,
+      "stats": {
+        "total": 62,
+        "withUrl": 62,
+        "sTier": 13,
+        "aTier": 17,
+        "bTier": 32,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-06-30",
       "generatedAt": "2026-06-30T05:08:19.362Z",
       "title": "Cursor iOS Agents & GPT-5.6 Sol Launch",
