@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-07-02",
+      "generatedAt": "2026-07-02T05:01:25.969Z",
+      "title": "Fable 5 Returns, Tops CursorBench & RLI",
+      "subtitle": "Claude Fable 5 重返全球，CursorBench 与 RLI 双料领先",
+      "mainTheme": "model_race",
+      "itemCount": 61,
+      "stats": {
+        "total": 61,
+        "withUrl": 61,
+        "sTier": 12,
+        "aTier": 15,
+        "bTier": 34,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-07-01",
       "generatedAt": "2026-07-01T05:25:26.390Z",
       "title": "Claude Sonnet 5 & Gemini Omni Flash Launch",
