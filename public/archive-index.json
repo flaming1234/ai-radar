@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-07-04",
+      "generatedAt": "2026-07-04T04:39:00.628Z",
+      "title": "Agent Harnesses Mature as Gemini & Sonnet 5 Ship",
+      "subtitle": "Claude Code 生态扩张，Gemini 新模型与 coding agent 基准集体更新",
+      "mainTheme": "agent_labs",
+      "itemCount": 66,
+      "stats": {
+        "total": 66,
+        "withUrl": 66,
+        "sTier": 13,
+        "aTier": 18,
+        "bTier": 35,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-07-03",
       "generatedAt": "2026-07-03T04:45:51.550Z",
       "title": "Google Ships Nano Banana 2 Lite & Omni Flash",
