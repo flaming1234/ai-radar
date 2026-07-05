@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-07-05",
+      "generatedAt": "2026-07-05T05:00:29.384Z",
+      "title": "Fable 5 Returns, Gemini Omni Flash Ships",
+      "subtitle": "Claude Fable 5 回归，Gemini 新图像视频模型发布",
+      "mainTheme": "model_race",
+      "itemCount": 61,
+      "stats": {
+        "total": 61,
+        "withUrl": 61,
+        "sTier": 13,
+        "aTier": 15,
+        "bTier": 33,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-07-04",
       "generatedAt": "2026-07-04T04:39:00.628Z",
       "title": "Agent Harnesses Mature as Gemini & Sonnet 5 Ship",
