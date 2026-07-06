@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-07-06",
+      "generatedAt": "2026-07-06T05:15:19.662Z",
+      "title": "Google Drops Nano Banana 2 Lite & Gemini Omni Flash",
+      "subtitle": "Google发布图像视频新模型，Mistral Leanstral 1.5登场",
+      "mainTheme": "model_race",
+      "itemCount": 58,
+      "stats": {
+        "total": 58,
+        "withUrl": 58,
+        "sTier": 12,
+        "aTier": 12,
+        "bTier": 34,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-07-05",
       "generatedAt": "2026-07-05T05:00:29.384Z",
       "title": "Fable 5 Returns, Gemini Omni Flash Ships",
