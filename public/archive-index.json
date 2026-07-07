@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-07-07",
+      "generatedAt": "2026-07-07T04:56:08.947Z",
+      "title": "Hy3, DeepSeek V4 & Fable 5 Drop in One Day",
+      "subtitle": "295B MoE、1M上下文与世界模型实时对战同日亮相",
+      "mainTheme": "model_race",
+      "itemCount": 65,
+      "stats": {
+        "total": 65,
+        "withUrl": 65,
+        "sTier": 14,
+        "aTier": 15,
+        "bTier": 36,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-07-06",
       "generatedAt": "2026-07-06T05:15:19.662Z",
       "title": "Google Drops Nano Banana 2 Lite & Gemini Omni Flash",
