@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-07-08",
+      "generatedAt": "2026-07-08T04:17:29.276Z",
+      "title": "GPT-5.6 Sol Launches Thursday, Meta Muse Debuts",
+      "subtitle": "GPT-5.6 Sol 周四公开发布，Meta Muse 系列登场",
+      "mainTheme": "model_race",
+      "itemCount": 63,
+      "stats": {
+        "total": 63,
+        "withUrl": 63,
+        "sTier": 13,
+        "aTier": 18,
+        "bTier": 32,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-07-07",
       "generatedAt": "2026-07-07T04:56:08.947Z",
       "title": "Hy3, DeepSeek V4 & Fable 5 Drop in One Day",
