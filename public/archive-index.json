@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-07-09",
+      "generatedAt": "2026-07-09T05:02:48.225Z",
+      "title": "Grok 4.5 & SWE-1.7 Drive Agent Model Surge",
+      "subtitle": "Grok 4.5 上线 Cursor 与 OpenRouter，SWE-1.7 与 Nemotron 3 Ultra 推动开源 Agent 落地",
+      "mainTheme": "agent_labs",
+      "itemCount": 68,
+      "stats": {
+        "total": 68,
+        "withUrl": 68,
+        "sTier": 12,
+        "aTier": 18,
+        "bTier": 38,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-07-08",
       "generatedAt": "2026-07-08T04:17:29.276Z",
       "title": "GPT-5.6 Sol Launches Thursday, Meta Muse Debuts",
