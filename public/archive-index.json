@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-07-10",
+      "generatedAt": "2026-07-10T04:55:58.047Z",
+      "title": "GPT-5.6 Sol, Terra, Luna Launch Across Dev Tools",
+      "subtitle": "OpenAI 新模型系列登陆 Cursor、VS Code 与 ChatGPT Work",
+      "mainTheme": "model_race",
+      "itemCount": 68,
+      "stats": {
+        "total": 68,
+        "withUrl": 68,
+        "sTier": 12,
+        "aTier": 18,
+        "bTier": 38,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-07-09",
       "generatedAt": "2026-07-09T05:02:48.225Z",
       "title": "Grok 4.5 & SWE-1.7 Drive Agent Model Surge",
