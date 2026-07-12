@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-07-12",
+      "generatedAt": "2026-07-12T04:27:22.847Z",
+      "title": "GPT-5.6 Rolls Out Across IDEs & Platforms",
+      "subtitle": "GPT-5.6 三变体登陆 VS Code 与多平台，成本大幅下降",
+      "mainTheme": "model_race",
+      "itemCount": 67,
+      "stats": {
+        "total": 67,
+        "withUrl": 67,
+        "sTier": 12,
+        "aTier": 17,
+        "bTier": 38,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-07-11",
       "generatedAt": "2026-07-11T04:16:15.322Z",
       "title": "GPT-5.6 Drops: 25x Cheaper, Open Models Accelerate",
