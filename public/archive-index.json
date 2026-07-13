@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-07-13",
+      "generatedAt": "2026-07-13T04:33:11.362Z",
+      "title": "GPT-5.6 Sol Ships to VS Code as Agent Coding Surges",
+      "subtitle": "GPT-5.6 Sol 登陆 VS Code，Agent Coding 基准与工具集体升级",
+      "mainTheme": "coding_agents",
+      "itemCount": 59,
+      "stats": {
+        "total": 59,
+        "withUrl": 59,
+        "sTier": 11,
+        "aTier": 15,
+        "bTier": 33,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-07-12",
       "generatedAt": "2026-07-12T04:27:22.847Z",
       "title": "GPT-5.6 Rolls Out Across IDEs & Platforms",
