@@ -1,0 +1,1276 @@
+{
+  "date": "2026-07-15",
+  "generatedAt": "2026-07-15T04:08:42.164Z",
+  "roundup": {
+    "generatedAt": "2026-07-15T04:08:42.164Z",
+    "status": "ready",
+    "model": "x-ai/grok-4.3",
+    "message": "",
+    "date": "2026-07-15",
+    "title": "Grok 4.5 Hits #2 on FrontierSWE, Codex Surges",
+    "subtitle": "Grok 4.5 登顶编码基准，OpenAI 硬件与量化优化并行",
+    "mainTheme": "model_race",
+    "headline": [
+      "@elonmusk 宣布 Grok 4.5 在 FrontierSWE 排行榜登上第 2 名，超越 Claude Opus 4.8 与 GPT-5.5，兼具速度与低成本优势。@mntruell 确认其已成为团队日常主力模型。",
+      "@OpenAIDevs 披露 Codex 周活用户突破 700 万，过去两月发布 150+ 更新，GPT-5.6 与 Ultra Parallel 功能直接影响编码工作流。@danshipper 指出早期用户已验证 Codex Desktop 的爆发潜力。",
+      "@vllm_project 与 @MiniMax_AI 展示解耦预填充/解码后，GLM-5.1-FP8 在 8×B200 上达到 618 tok/s 单用户解码，峰值接近 800 tok/s。@nvidia 同步公布 GB300 NVL72 在 Kimi K2.6 上实现 10× 性能功耗比提升。",
+      "@UnslothAI 发布 Gemma 4 与 Qwen3.6 NVFP4 量化版本，分别实现 1.5× 与 2.5× GPU 加速，26B-A4B 在 B200 上达到 13K tok/s。@TencentHunyuan 同步推出 295B Hy3 的 1-bit/4-bit 版本，支持单 GPU 运行。"
+    ],
+    "deepDives": [
+      {
+        "title": "Grok 4.5 与 Codex 编码模型双突破",
+        "topic": "models",
+        "summary": "Grok 4.5 在 FrontierSWE 取得第 2 名，Codex 周活用户破 700 万，GPT-5.6 功能同步上线，编码 Agent 赛道持续升温。",
+        "facts": [
+          {
+            "text": "Grok 4.5 在 FrontierSWE 排行榜排名第 2，超越 Claude Opus 4.8 和 GPT-5.5。",
+            "quote": "Grok 4.5 just ranked #2 on the FrontierSWE leaderboard, outperforming Claude Opus 4.8 and GPT-5.5.",
+            "sources": [
+              "@elonmusk"
+            ]
+          },
+          {
+            "text": "Codex 周活用户超过 700 万，过去两月发布 150+ 更新，引入 GPT-5.6。",
+            "quote": "7M+ weekly Codex users. 150+ updates in two months... GPT‑5.6 and Ultra Parallel work with /goal",
+            "sources": [
+              "@OpenAIDevs"
+            ]
+          }
+        ],
+        "specs": [
+          {
+            "key": "FrontierSWE Rank",
+            "value": "#2"
+          }
+        ],
+        "reactions": {
+          "bullish": [
+            {
+              "text": "Grok 4.5 性价比突出，已进入 Pareto frontier",
+              "source": "@rasbt"
+            }
+          ],
+          "skeptical": [],
+          "neutral": []
+        }
+      }
+    ],
+    "recap": [
+      {
+        "title": "Infra & Serving Optimizations",
+        "topic": "infra",
+        "bullets": [
+          {
+            "text": "vLLM 解耦预填充与解码后，GLM-5.1-FP8 单用户解码达 618 tok/s。",
+            "quote": "TileRT reports around 618 tok/s single-user decode on GLM-5.1-FP8 (8× B200) with MTP",
+            "sources": [
+              "@vllm_project"
+            ]
+          },
+          {
+            "text": "GB300 NVL72 在 Kimi K2.6 上性能功耗比提升 10×，GLM 5.1 上达 20×。",
+            "quote": "On Kimi K2.6, NVIDIA GB300 NVL72 systems deliver up to 10× higher performance per watt than NVIDIA Hopper. On GLM 5.1, up to 20×.",
+            "sources": [
+              "@nvidia"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Quantization & Open Models",
+        "topic": "open_source",
+        "bullets": [
+          {
+            "text": "Gemma 4 NVFP4 量化实现 1.5× 加速，26B-A4B 在 B200 上达 13K tok/s。",
+            "quote": "Gemma 4 NVFP4 quants that run 1.5× faster... 26B-A4B hits 13K tok/s (B200)",
+            "sources": [
+              "@UnslothAI"
+            ]
+          },
+          {
+            "text": "295B Hy3 推出 1-bit/4-bit 版本，支持单 GPU 运行并兼容 llama.cpp。",
+            "quote": "the 1-bit & 4-bit version of Hy3, a flagship-scale 295B model that can be served on a single GPU",
+            "sources": [
+              "@TencentHunyuan"
+            ]
+          }
+        ]
+      }
+    ],
+    "talentMoves": [],
+    "topTweets": [
+      {
+        "author": "@elonmusk",
+        "text": "Grok 4.5 在 FrontierSWE 排行第 2，速度与成本优势显著。",
+        "url": "https://x.com/elonmusk/status/2077219839626641676",
+        "whyItMatters": "直接给出前沿编码基准排名与竞品对比",
+        "tags": [
+          "models",
+          "coding"
+        ]
+      },
+      {
+        "author": "@vllm_project",
+        "text": "解耦后 GLM-5.1-FP8 解码速度达 618 tok/s，峰值近 800。",
+        "url": "https://x.com/vllm_project/status/2077216367372353851",
+        "whyItMatters": "实测高吞吐 serving 数据，指导 infra 选型",
+        "tags": [
+          "infra"
+        ]
+      },
+      {
+        "author": "@OpenAIDevs",
+        "text": "Codex 周活 700 万+，GPT-5.6 与并行功能上线。",
+        "url": "https://x.com/OpenAIDevs/status/2077166520392970529",
+        "whyItMatters": "用户规模与新版本直接影响编码工作流",
+        "tags": [
+          "coding",
+          "products"
+        ]
+      },
+      {
+        "author": "@UnslothAI",
+        "text": "Gemma 4 NVFP4 量化 1.5× 加速，B200 上 13K tok/s。",
+        "url": "https://x.com/UnslothAI/status/2077070408948584617",
+        "whyItMatters": "低显存高吞吐量化方案落地",
+        "tags": [
+          "open_source",
+          "infra"
+        ]
+      }
+    ],
+    "takeaways": [
+      "Grok 4.5 与 GPT-5.6 同时进入编码基准前列，建议优先在 SWE-bench 类任务上做 harness 对比。",
+      "vLLM 解耦与 Blackwell 优化已将单用户解码推至 600+ tok/s，部署时可直接参考 618 tok/s 实测数据。",
+      "1-bit/4-bit 量化让 295B 模型单 GPU 可跑，评估本地部署时需重点关注 llama.cpp 兼容性。",
+      "Codex 700 万周活显示 Agent 编码产品已进入规模化阶段，关注其 /goal 与并行模式集成。"
+    ]
+  },
+  "stats": {
+    "total": 64,
+    "withUrl": 64,
+    "sTier": 10,
+    "aTier": 16,
+    "bTier": 38,
+    "eventTier": 0,
+    "okBatches": 12,
+    "failedBatches": 0
+  },
+  "itemCount": 64,
+  "sources": [
+    {
+      "author": "@UnslothAI",
+      "tier": "S",
+      "group": "S 级",
+      "count": 2,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@TheRundownAI",
+      "tier": "A",
+      "group": "A 级",
+      "count": 2,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@AIatMeta",
+      "tier": "B",
+      "group": "B 级",
+      "count": 2,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@RekaAILabs",
+      "tier": "B",
+      "group": "B 级",
+      "count": 2,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@victorialslocum",
+      "tier": "B",
+      "group": "B 级",
+      "count": 2,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@RedHat_AI",
+      "tier": "B",
+      "group": "B 级",
+      "count": 2,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@ScaleAILabs",
+      "tier": "B",
+      "group": "B 级",
+      "count": 2,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@matei_zaharia",
+      "tier": "B",
+      "group": "B 级",
+      "count": 2,
+      "latestAt": "4d ago"
+    },
+    {
+      "author": "@elonmusk",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "3h ago"
+    },
+    {
+      "author": "@ollama",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "12h ago"
+    },
+    {
+      "author": "@danshipper",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "12h ago"
+    },
+    {
+      "author": "@vllm_project",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@claudeai",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@perplexity_ai",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@SakanaAILabs",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@NVIDIAAI",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@OpenRouter",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@SemiAnalysis_",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@MiniMax_AI",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@cloneofsimo",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@fal",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@__tinygrad__",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@AssemblyAI",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@googleaidevs",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@felixrieseberg",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@nvidia",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@TencentHunyuan",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@xenovacom",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@testingcatalog",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@OpenAIDevs",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@ArtificialAnlys",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@LangChain",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@GoogleDeepMind",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@ClaudeDevs",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@allen_ai",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@runwayml",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@PrimeIntellect",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@turbopuffer",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@wandb",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@rasbt",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "4d ago"
+    },
+    {
+      "author": "@poolsideai",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "4d ago"
+    },
+    {
+      "author": "@GoogleAIStudio",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "5d ago"
+    },
+    {
+      "author": "@GoogleAI",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "5d ago"
+    },
+    {
+      "author": "@lvwerra",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "5d ago"
+    },
+    {
+      "author": "@johnschulman2",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "5d ago"
+    },
+    {
+      "author": "@ValsAI",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "5d ago"
+    },
+    {
+      "author": "@GeminiApp",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "6d ago"
+    },
+    {
+      "author": "@AndrewYNg",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "6d ago"
+    },
+    {
+      "author": "@cartesia",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "6d ago"
+    },
+    {
+      "author": "@MistralAI",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "6d ago"
+    },
+    {
+      "author": "@mntruell",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "6d ago"
+    },
+    {
+      "author": "@maximelabonne",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "6d ago"
+    },
+    {
+      "author": "@Wauplin",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "6d ago"
+    },
+    {
+      "author": "@JeffDean",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "7d ago"
+    },
+    {
+      "author": "@jeffboudier",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "7d ago"
+    },
+    {
+      "author": "@markchen90",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "7d ago"
+    }
+  ],
+  "items": [
+    {
+      "id": "c140a8ec",
+      "author": "@elonmusk",
+      "text": "Grok 4.5 just ranked #2 on the FrontierSWE leaderboard, outperforming Claude Opus 4.8 and GPT-5.5. It delivers top-tier coding performance with exceptional speed, strong token efficiency and a much lower cost than many competing frontier models. Grok 4.5 is already one of the best coding models available today, sitting",
+      "url": "https://x.com/elonmusk/status/2077219839626641676",
+      "hasValidUrl": true,
+      "publishedAt": "3h ago",
+      "topic": "models",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "Grok 4.5 在 FrontierSWE 编码基准 #2，速度与成本优势显著"
+    },
+    {
+      "id": "1e6c4de0",
+      "author": "@ollama",
+      "text": "You can use OpenCode Desktop with Ollama! Try it with the top open models!",
+      "url": "https://x.com/ollama/status/2077189833454502192",
+      "hasValidUrl": true,
+      "publishedAt": "12h ago",
+      "topic": "coding",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "Ollama与开源编码Agent桌面集成"
+    },
+    {
+      "id": "732956ed",
+      "author": "@danshipper",
+      "text": "if you are reading @every, you knew codex was about to take off 6 months ago :) ... receipts, from our Codex Desktop app launch vibe check",
+      "url": "https://x.com/danshipper/status/2077196636971815135",
+      "hasValidUrl": true,
+      "publishedAt": "12h ago",
+      "topic": "coding",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Codex Desktop App 上线，早期覆盖者已验证其爆发轨迹"
+    },
+    {
+      "id": "2d2c6165",
+      "author": "@vllm_project",
+      "text": "Once prefill and decode are disaggregated... TileRT reports around 618 tok/s single-user decode on GLM-5.1-FP8 (8× B200) with MTP, roughly 2× its no-MTP baseline. At peak acceptance, up to nearly 800 tok/s.",
+      "url": "https://x.com/vllm_project/status/2077216367372353851",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "infra",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "vLLM V1 解耦预填充/解码，支持 TileRT 低延迟引擎，实测 618 tok/s"
+    },
+    {
+      "id": "10777dcd",
+      "author": "@claudeai",
+      "text": "We're introducing Claude for Teachers: free access to premium Claude capabilities for verified K-12 educators in the US, with a library of teaching skills and a direct connection to evidence-based curricula, mapped to academic standards in all 50 states.",
+      "url": "https://x.com/claudeai/status/2077047278078931243",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "products",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "K-12教育免费Claude接入，产品落地教育场景"
+    },
+    {
+      "id": "3b0733a0",
+      "author": "@UnslothAI",
+      "text": "We’re releasing Gemma 4 NVFP4 quants that run 1.5× faster on your GPU. Gemma-4-12B NVFP4 works on 11GB VRAM. 26B-A4B hits 13K tok/s (B200).",
+      "url": "https://x.com/UnslothAI/status/2077070408948584617",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "open_source",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "Gemma 4新量化，Blackwell推理优化"
+    },
+    {
+      "id": "9558b609",
+      "author": "@perplexity_ai",
+      "text": "WANDR is constructed from de-identified production use cases covering people’s day-to-day research tasks like competitive research, due diligence, literature review, market analysis, product comparison, talent sourcing, and more.",
+      "url": "https://x.com/perplexity_ai/status/2077099568446181579",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "evals",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "真实生产研究任务新benchmark，支持时变事实"
+    },
+    {
+      "id": "d5e6f759",
+      "author": "@SakanaAILabs",
+      "text": "We are pleased to share our latest research, now published in Nature Communications: “Smart Cellular Bricks: Physical Modules That Recognize Their Own Shape and Repair Themselves.”",
+      "url": "https://x.com/SakanaAILabs/status/2076951818089721969",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "research",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "Sakana 物理集合智能研究登 Nature Communications，探索去中心化自修复模块"
+    },
+    {
+      "id": "b0e0b0b4",
+      "author": "@TheRundownAI",
+      "text": "NEW: Bloomberg reporting that OpenAI's first hardware device will be a \"mobile, screen-free smart speaker\".",
+      "url": "https://x.com/TheRundownAI/status/2077135739054149814",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "products",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "OpenAI 首款硬件曝光：无屏 AI 伴侣音箱，瞄准家庭 AI 计算"
+    },
+    {
+      "id": "7e290ba5",
+      "author": "@TheRundownAI",
+      "text": "A Stanford lab affiliated with the Arc Institute just released Proto, an open-source framework that finally lets researchers combine AI biology models instead of running them in isolation.",
+      "url": "https://x.com/TheRundownAI/status/2077093465532338594",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "open_source",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "Proto 开源框架统一 AI 生物模型接口，加速蛋白/DNA 设计工作流"
+    },
+    {
+      "id": "2d327291",
+      "author": "@NVIDIAAI",
+      "text": "🚦 The zero-shot model misses a visible traffic signal. After post-training Cosmos 3 Nano with LoRA, it correctly identifies the intersection, and overall WTS validation accuracy increases from 54.41% to 87.14%. 📈 With NVIDIA TAO AutoML, accuracy reaches 93.35%. All in under a day.",
+      "url": "https://x.com/NVIDIAAI/status/2077075674339176570",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "research",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "Cosmos 3 后训练一天内 accuracy 大幅提升，展示 LoRA+AutoML 实用价值"
+    },
+    {
+      "id": "a6d31017",
+      "author": "@OpenRouter",
+      "text": "Model search got sharper: filter by output price, model age, intelligence and coding scores, tool-calling success rate. Sort by Design Arena ELO. Daily rankings now slice by use case, modality, and context length.",
+      "url": "https://x.com/OpenRouter/status/2077131738988544177",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "evals",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "OpenRouter 模型搜索新增多维度过滤与 Arena ELO 排序，助力选型"
+    },
+    {
+      "id": "ee76aaac",
+      "author": "@SemiAnalysis_",
+      "text": "Overall, with the reduction in layers, Amazon is claiming up to 45% cost saving compared to fat trees on a similar oversubscription ratio. As of now, RNG is the first network based on random graphs concept deployed at scale.",
+      "url": "https://x.com/SemiAnalysis_/status/2077136305411002461",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "infra",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "Amazon RNG 网络部署，宣称 45% 成本节省，对 AI 数据中心架构有参考"
+    },
+    {
+      "id": "1aa79b21",
+      "author": "@MiniMax_AI",
+      "text": "at RAISE, @SambaNovaAI paired H200s for compute-heavy prefill with SN50 RDUs for memory-bound decode, reaching 850 t/s on short context and 450+ t/s on long context with MiniMax M2.7.",
+      "url": "https://x.com/MiniMax_AI/status/2076840763225469132",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "infra",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "MiniMax M2.7 推理达 850 t/s，展示开放模型高性能部署"
+    },
+    {
+      "id": "7aa1eb84",
+      "author": "@cloneofsimo",
+      "text": "GPT 5.6 Sol made complete mujoco-like physics engine from scratch: gym-like api, c++ implemented, native headless render, web render, python native DSL to define environments instead of annoying XML",
+      "url": "https://x.com/cloneofsimo/status/2077028437261459805",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "coding",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "GPT-5.6 从零构建合法物理引擎，展示前沿模型 coding 能力"
+    },
+    {
+      "id": "af7c4c3a",
+      "author": "@AIatMeta",
+      "text": "To demonstrate Meta AI's advanced reasoning and multimodal capabilities, we submitted a model to participate in the Asian Physics Olympiad’s theoretical exam. We’re happy to share that our model achieved a perfect score of 30/30, tying with the top 3 student contestants.",
+      "url": "https://x.com/AIatMeta/status/2077138553210028042",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "evals",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Meta 模型在物理奥赛获满分，展示推理与多模态能力"
+    },
+    {
+      "id": "914f1ddd",
+      "author": "@fal",
+      "text": "⚡️ Reve 2.1 is now available on fal. Generate native 4K images with better control over dense, complex scenes. Stronger layout planning and prompt understanding. More accurate spatial relationships. Improved fine-text and multilingual text rendering.",
+      "url": "https://x.com/fal/status/2077087993706188897",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "models",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Reve 2.1 上线 fal，支持 4K 图像生成与更好控制"
+    },
+    {
+      "id": "6456245c",
+      "author": "@RekaAILabs",
+      "text": "🤔What does it take to train an omni world model from scratch? 📽️Petabytes of video. 6⃣pipeline stages. And every improvement in data quality pays off twice when you're training a model that both generates and understands video.",
+      "url": "https://x.com/RekaAILabs/status/2077043205854707813",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "research",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "世界模型训练 pipeline 与数据质量洞见"
+    },
+    {
+      "id": "54eab56b",
+      "author": "@__tinygrad__",
+      "text": "tinybox green v2 blackwell ships with a monster 4xSN8100 RAID array so you don't sit around while models are loading.",
+      "url": "https://x.com/__tinygrad__/status/2076852655314645190",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "infra",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Blackwell tinybox 硬件升级，加速本地模型加载"
+    },
+    {
+      "id": "1b4504c0",
+      "author": "@victorialslocum",
+      "text": "We wrote a guide on the least hyped part of working with vector databases: getting the data in. ... Use server-side batching ... Failures should be a queue ... Your retries should rewrite, not duplicate",
+      "url": "https://x.com/victorialslocum/status/2076985236735377598",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "infra",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "向量数据库生产级数据导入最佳实践"
+    },
+    {
+      "id": "ce45c0b3",
+      "author": "@AssemblyAI",
+      "text": "Sync is the tier where dictation lives. ... ~134ms ... It's also a natural fit for voice agents. ... no minimums",
+      "url": "https://x.com/AssemblyAI/status/2077062947374006692",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "infra",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "发布 Sync 低延迟语音转写层，适合 voice agents 与短语音场景，无最低计费"
+    },
+    {
+      "id": "c39f7b76",
+      "author": "@googleaidevs",
+      "text": "Rather than translating text step-by-step, Gemini 3.5 Live Translate processes raw audio in real time. ... Bring your entire repo into the context window ... direct GitHub imports.",
+      "url": "https://x.com/googleaidevs/status/2077050450117865490",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "models",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Gemini 3.5 实时音频翻译 + GitHub 仓库直导入，开发者构建多语言 App 更高效"
+    },
+    {
+      "id": "3e52cacb",
+      "author": "@felixrieseberg",
+      "text": "Something I’m excited about: Free premium Claude and Cowork for K-12 educators and teachers in the US, together with a library of teaching skills.",
+      "url": "https://x.com/felixrieseberg/status/2077176563444154700",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "products",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Anthropic 为美国 K-12 教师免费开放 Claude 高级版及教学技能库"
+    },
+    {
+      "id": "bbaf2cb3",
+      "author": "@nvidia",
+      "text": "On Kimi K2.6, NVIDIA GB300 NVL72 systems deliver up to 10× higher performance per watt than NVIDIA Hopper. On GLM 5.1, up to 20×.",
+      "url": "https://x.com/nvidia/status/2077060581253648482",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "infra",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "GB300 NVL72推理性能/功耗大幅提升"
+    },
+    {
+      "id": "dbaf5648",
+      "author": "@TencentHunyuan",
+      "text": "We’ve just released the 1-bit & 4-bit version of Hy3, a flagship-scale 295B model that can be served on a single GPU... Run Hy3 with llama.cpp",
+      "url": "https://x.com/TencentHunyuan/status/2076953120765280284",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "models",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "295B Hy3 1-bit/4-bit 量化，单 GPU 运行，Apache 2.0"
+    },
+    {
+      "id": "a733a233",
+      "author": "@xenovacom",
+      "text": "Bonsai 27B just changed the local LLM game forever. 1-bit quantization shrinks it from 54GB to just 3.8GB (-93%)... runs locally in your browser!",
+      "url": "https://x.com/xenovacom/status/2077087411079700782",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "open_source",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "27B 模型 1-bit 量化至 3.8GB，浏览器 WebGPU 本地运行"
+    },
+    {
+      "id": "63cfc978",
+      "author": "@testingcatalog",
+      "text": "OPENAI 🔥: The first device from OpenAI will be a screenless smart speaker... mobile, screen-free smart speaker to serve as a humanlike AI companion",
+      "url": "https://x.com/testingcatalog/status/2077153737328451989",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "products",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "OpenAI 首款硬件：无屏 AI 伴侣音箱，支持智能家居"
+    },
+    {
+      "id": "127d70b0",
+      "author": "@OpenAIDevs",
+      "text": "7M+ weekly Codex users. 150+ updates in two months. @romainhuet catches you up on what’s new in Codex: GPT‑5.6 and Ultra Parallel work with /goal Faster computer use AppShots Inline edits Sites Codex mobile and SSH workflows PRs from review to merge",
+      "url": "https://x.com/OpenAIDevs/status/2077166520392970529",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "coding",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "Codex 用户量破 700 万周活，GPT-5.6 等新功能直接影响 AI 编码工作流"
+    },
+    {
+      "id": "a35b6d35",
+      "author": "@ArtificialAnlys",
+      "text": "See the top models on the Artificial Analysis Speech leaderboard... Qwen-Audio-3.0-TTS-Plus generates characters 16 characters per second, below other leading models Simba 3.2 (30.2), Gemini 3.1 Flash TTS (27), and Sonic 3.5 (120).",
+      "url": "https://x.com/ArtificialAnlys/status/2077140167337652412",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "evals",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "语音模型基准更新，Qwen-Audio-3.0-TTS-Plus 速度数据可直接对比"
+    },
+    {
+      "id": "593e4e36",
+      "author": "@LangChain",
+      "text": "The most searched questions about agents, answered by the LangChain team.",
+      "url": "https://x.com/LangChain/status/2077136051605262776",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "agents",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "LangChain 团队解答高频 Agent 问题，实用开发参考"
+    },
+    {
+      "id": "2acc3e41",
+      "author": "@GoogleDeepMind",
+      "text": "Here’s how we used the Predicting the Past Skill in Google @Antigravity to track down a Roman ring thief, map an ancient cult across Europe, and reconstruct the networks of people visiting a Greek oracle.",
+      "url": "https://x.com/GoogleDeepMind/status/2076686114631340046",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "research",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "AI历史研究新Skill，无代码复杂工作流"
+    },
+    {
+      "id": "46652d15",
+      "author": "@ClaudeDevs",
+      "text": "Artifacts now support public sharing and multiplayer editing in Claude Code, and can be created with Claude Tag.",
+      "url": "https://x.com/ClaudeDevs/status/2076789349145092230",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "products",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "Claude Artifacts 支持多人协作与公开分享，提升团队开发效率"
+    },
+    {
+      "id": "66eabc32",
+      "author": "@allen_ai",
+      "text": "Custom evals test each Shippy build for accuracy & safety. Experts write scenarios with weighted criteria: data accuracy, boundary handling, and source attribution. Each runs in a real session against live data; an LLM judge scores it.",
+      "url": "https://x.com/allen_ai/status/2076740652096762279",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "evals",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "Ai2 Shippy 自定义 evals 结合真实会话与 LLM judge，保障 agent 质量"
+    },
+    {
+      "id": "5d1af8e6",
+      "author": "@runwayml",
+      "text": "Everyone. Every object. Everything has a story to tell. With Runway, you can share yours... FLICKER is a short film about a lamp with a past... Make your own story come to life at",
+      "url": "https://x.com/runwayml/status/2076679161070891218",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "products",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Runway 新短片工具 FLICKER 上线"
+    },
+    {
+      "id": "244a6b06",
+      "author": "@PrimeIntellect",
+      "text": "verifiers v1 plugs straight into prime-rl for training. We have been using v1 internally for all our production runs. In this run, we train GLM-4.5-Air on ScaleSWE tasks with under-4-minute steps and 35-turn rollouts, completing 1K steps in 2 days on just 6 H200 nodes.",
+      "url": "https://x.com/PrimeIntellect/status/2076447257533325567",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "agents",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "长时程 agent 训练 verifier 优化，6 H200 节点 2 天 1K steps"
+    },
+    {
+      "id": "46474c57",
+      "author": "@RedHat_AI",
+      "text": "~5 minutes on what's new in @vllm_project v0.24 from core maintainer @mgoin_, including Blackwell RTX SparseMLA for DeepSeek V4 and GLM 5.2, dynamic speculative decoding, streaming parser engine...",
+      "url": "https://x.com/RedHat_AI/status/2076738031415943557",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "infra",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "vLLM v0.24 新特性：Blackwell 支持、投机解码"
+    },
+    {
+      "id": "dd6b354b",
+      "author": "@RedHat_AI",
+      "text": "Serving a 700B+ param model (GLM-5.2) on H200s: llm-d's Wide EP + prefix-cache routing hits 90%+ cache reuse and sub-3s TTFT, at ~$2/M output tokens vs $4.40 on hosted APIs.",
+      "url": "https://x.com/RedHat_AI/status/2076725768034398513",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "infra",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "700B+ 模型 serving 成本与延迟优化实测"
+    },
+    {
+      "id": "a657688c",
+      "author": "@turbopuffer",
+      "text": "now in beta: native embeddings in tpuf\n\nembedding is the most painful part of puffing. we want to make it easy\n\nyou can now convert chunks to vectors as you read and write to turbopuffer, without extra calls to an embedding model provider API",
+      "url": "https://x.com/turbopuffer/status/2077050819120365707",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "infra",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "原生嵌入集成，简化向量数据库工作流"
+    },
+    {
+      "id": "1a844ed4",
+      "author": "@wandb",
+      "text": "Best part of @aiDotEngineer was not the talks. It was the people at the booth who stuck around to talk agents. @CoreWeave ARIA, our AI research and iteration agent, came up in almost every one of those chats.",
+      "url": "https://x.com/wandb/status/2076713991536316757",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "agents",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "W&B 展示 ARIA 迭代代理工具"
+    },
+    {
+      "id": "9bdd613",
+      "author": "@ScaleAILabs",
+      "text": "We're back from Seoul! Great sharing our research on agent training, self-optimization, and evaluation... Next stop: @NeurIPSConf",
+      "url": "https://x.com/ScaleAILabs/status/2076723411468828707",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "agents",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "ICML 分享 Agent 训练与评估研究，NeurIPS 即将亮相"
+    },
+    {
+      "id": "50db42df",
+      "author": "@rasbt",
+      "text": "Upon request, here's an updated version with Grok 4.5 and Meta's Muse Spark 1.1. Grok 4.5 seems to sit at the Pareto frontier. Good bang for the buck. (Also added harness info).",
+      "url": "https://x.com/rasbt/status/2075982283509571666",
+      "hasValidUrl": true,
+      "publishedAt": "4d ago",
+      "topic": "evals",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "更新 Coding Agent 基准对比，Grok 4.5 性价比突出，含 harness 细节"
+    },
+    {
+      "id": "9cae9271",
+      "author": "@matei_zaharia",
+      "text": "Omnigent 0.5 is out including a native iOS app that’s more convenient for coding on mobile! You can connect it to your own Omnigent server and reach the same agents.",
+      "url": "https://x.com/matei_zaharia/status/2075735604118298969",
+      "hasValidUrl": true,
+      "publishedAt": "4d ago",
+      "topic": "agents",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "开源 Agent harness 新版本，支持 iOS 与 Kubernetes"
+    },
+    {
+      "id": "abb8af5b",
+      "author": "@matei_zaharia",
+      "text": "Very interesting, this is why you really need to benchmark agents, especially with reasoning models that use variable # of tokens. ... It will surely depend by task though!",
+      "url": "https://x.com/matei_zaharia/status/2075993350826758368",
+      "hasValidUrl": true,
+      "publishedAt": "4d ago",
+      "topic": "evals",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "强调 Agent benchmark 需考虑可变 token 消耗"
+    },
+    {
+      "id": "eb56241d",
+      "author": "@poolsideai",
+      "text": "Laguna XS 2.1 now hits 296 tok/s on a single RTX 3090 and holds 152 tok/s at 256K context... KVFlash paging and ring caching",
+      "url": "https://x.com/poolsideai/status/2075953145574723946",
+      "hasValidUrl": true,
+      "publishedAt": "4d ago",
+      "topic": "coding",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "本地长上下文coding模型推理速度突破"
+    },
+    {
+      "id": "50b45a70",
+      "author": "@UnslothAI",
+      "text": "We’re releasing new Qwen3.6 quants that run 2.5× faster on your GPU. Qwen3.6-27B NVFP4 runs on 24GB VRAM. 35B-A3B can hit 17,561 tok/s (B200).",
+      "url": "https://x.com/UnslothAI/status/2075566124687892597",
+      "hasValidUrl": true,
+      "publishedAt": "5d ago",
+      "topic": "open_source",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "Qwen3.6新量化，2.5x加速+低显存，实用部署"
+    },
+    {
+      "id": "d23b20a8",
+      "author": "@GoogleAIStudio",
+      "text": "introducing custom URLs: give your deployed apps a permanent, personalized home with a clean, memorable ai studio domain because your apps deserve an identity",
+      "url": "https://x.com/GoogleAIStudio/status/2075595994327077095",
+      "hasValidUrl": true,
+      "publishedAt": "5d ago",
+      "topic": "products",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "AI Studio 应用支持自定义永久 URL，便于生产部署与分享"
+    },
+    {
+      "id": "e53abdcf",
+      "author": "@AIatMeta",
+      "text": "We gave a few leaders early access to Muse Spark 1.1, here's what they had to say:",
+      "url": "https://x.com/AIatMeta/status/2075307298432676259",
+      "hasValidUrl": true,
+      "publishedAt": "5d ago",
+      "topic": "products",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Muse Spark 1.1 早期反馈，产品迭代信号"
+    },
+    {
+      "id": "bbac1e32",
+      "author": "@GoogleAI",
+      "text": "Step into the map with the Street View grounding feature in Project Genie from @GoogleDeepmind and @GoogleLabs. Announced at I/O, this research prototype uses locations from @GoogleMaps Street View as a foundation, letting you generate and explore interactive, 360-degree virtual environments from just a text prompt or ",
+      "url": "https://x.com/GoogleAI/status/2075609303029776872",
+      "hasValidUrl": true,
+      "publishedAt": "5d ago",
+      "topic": "products",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Project Genie Street View  grounding，交互式 3D 世界生成"
+    },
+    {
+      "id": "f5435848",
+      "author": "@RekaAILabs",
+      "text": "Today Roberto and Marianna walk through PhysicalRealismBench-U — how the benchmark works, how they built it, and what VLMs still get wrong about basic physics. 🔗 https://physical-realism.labs.reka.ai/#home",
+      "url": "https://x.com/RekaAILabs/status/2074904219325489442",
+      "hasValidUrl": true,
+      "publishedAt": "5d ago",
+      "topic": "evals",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "VLM 物理理解基准，揭示当前模型短板"
+    },
+    {
+      "id": "5d3ffea6",
+      "author": "@lvwerra",
+      "text": "First demonstration of successful collaboration of 100+ agents and humans? We should tackle even more ambitious problems with 10x more agents and humans!",
+      "url": "https://x.com/lvwerra/status/2075640921190723814",
+      "hasValidUrl": true,
+      "publishedAt": "5d ago",
+      "topic": "agents",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "100+ agents+人类协作加速 Gemma 推理 5x"
+    },
+    {
+      "id": "da598732",
+      "author": "@victorialslocum",
+      "text": "Your agentic RAG pipeline isn't failing because of bad prompts. It's failing because of bad context. That problem has a name: context engineering.",
+      "url": "https://x.com/victorialslocum/status/2075510055034638716",
+      "hasValidUrl": true,
+      "publishedAt": "5d ago",
+      "topic": "agents",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "系统拆解 agentic RAG 的上下文工程"
+    },
+    {
+      "id": "29300c63",
+      "author": "@johnschulman2",
+      "text": "We started Thinking Machines a year and a half ago with a couple of instincts: that people should have much more ability to customize models and do research on them, and that even as AI becomes more autonomous, there's a lot more to build to make humans and AIs work well together. ... This is where we landed after a lo",
+      "url": "https://x.com/johnschulman2/status/2075630236348330046",
+      "hasValidUrl": true,
+      "publishedAt": "5d ago",
+      "topic": "agents",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "创始人更新公司对模型定制与人机协作的最新观点"
+    },
+    {
+      "id": "34b6fdfc",
+      "author": "@ScaleAILabs",
+      "text": "We appreciate the community's feedback on SWE-Bench Pro. Much of it maps to changes already underway in v1.1... SWE-Bench Pro Verified coming soon. 👀",
+      "url": "https://x.com/ScaleAILabs/status/2075375253732409723",
+      "hasValidUrl": true,
+      "publishedAt": "5d ago",
+      "topic": "evals",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "SWE-Bench Pro v1.1 更新，保持前沿模型评测领先"
+    },
+    {
+      "id": "4737a626",
+      "author": "@ValsAI",
+      "text": "In case you missed it, this was a big week for model releases. Grok 4.5, GPT-5.6 Sol, and Muse Spark 1.1 all landed... cracked the top 10 on the Vals Index.",
+      "url": "https://x.com/ValsAI/status/2075706871047131210",
+      "hasValidUrl": true,
+      "publishedAt": "5d ago",
+      "topic": "evals",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "多模型同期发布并进入 Vals Index 前十，进度惊人"
+    },
+    {
+      "id": "d2ea911f",
+      "author": "@GeminiApp",
+      "text": "Plan & visualize your next project in realtime with Nano Banana & connected apps in Gemini Live. Generate images based on what you show with your camera, find local shops on @GoogleMaps & more just by talking it out.",
+      "url": "https://x.com/GeminiApp/status/2075350935396872278",
+      "hasValidUrl": true,
+      "publishedAt": "6d ago",
+      "topic": "products",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "Gemini Live 新增 Nano Banana 实时视觉与地图集成，提升多模态交互"
+    },
+    {
+      "id": "c03c2a7",
+      "author": "@AndrewYNg",
+      "text": "Adam Thierer had written the landmark book on \"Permissionless Innovation.\" We get the best ideas when we don't have to ask the government in advance for permission to invent. Protecting open source AI is now a critical part of ensuring this.",
+      "url": "https://x.com/AndrewYNg/status/2075271586400403567",
+      "hasValidUrl": true,
+      "publishedAt": "6d ago",
+      "topic": "open_source",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "强调保护开源 AI 对 permissionless innovation 的关键作用"
+    },
+    {
+      "id": "c875c1bf",
+      "author": "@cartesia",
+      "text": "For voice agents, STT has to nail three things - accuracy, turn detection, and latency. ... We built Ink-2 to lead on all three. Here’s how it stacks up against other providers.",
+      "url": "https://x.com/cartesia/status/2075269633956053215",
+      "hasValidUrl": true,
+      "publishedAt": "6d ago",
+      "topic": "models",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "新 STT 模型 Ink-2 在语音 Agent 三大关键指标领先，附 benchmark 数据"
+    },
+    {
+      "id": "8e609a19",
+      "author": "@MistralAI",
+      "text": "No LiDAR. No depth sensors. No camera rig. ... 76.6% success on R2R-CE validation unseen (79.4% on validation seen)... beats the best single-camera approach by 9.7 points",
+      "url": "https://x.com/MistralAI/status/2074856311091503237",
+      "hasValidUrl": true,
+      "publishedAt": "6d ago",
+      "topic": "research",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "单目RGB实现高性能机器人导航基准"
+    },
+    {
+      "id": "772618cc",
+      "author": "@mntruell",
+      "text": "Excited to release Grok 4.5 with @SpaceXAI. It's an Opus-class model that's fast and low cost... daily driver for many on our team.",
+      "url": "https://x.com/mntruell/status/2074916251743457787",
+      "hasValidUrl": true,
+      "publishedAt": "6d ago",
+      "topic": "models",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Cursor发布Grok 4.5 Opus级coding模型"
+    },
+    {
+      "id": "b8565049",
+      "author": "@maximelabonne",
+      "text": "We're celebrating an exciting milestone in our partnership with @Shopify : our LFMs have now processed 1 billion requests on Shopify’s platform!",
+      "url": "https://x.com/maximelabonne/status/2075157939262783539",
+      "hasValidUrl": true,
+      "publishedAt": "6d ago",
+      "topic": "products",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Liquid AI LFM在Shopify处理10亿请求"
+    }
+  ]
+}

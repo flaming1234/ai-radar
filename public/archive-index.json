@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-07-15",
+      "generatedAt": "2026-07-15T04:08:42.164Z",
+      "title": "Grok 4.5 Hits #2 on FrontierSWE, Codex Surges",
+      "subtitle": "Grok 4.5 登顶编码基准，OpenAI 硬件与量化优化并行",
+      "mainTheme": "model_race",
+      "itemCount": 64,
+      "stats": {
+        "total": 64,
+        "withUrl": 64,
+        "sTier": 10,
+        "aTier": 16,
+        "bTier": 38,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-07-14",
       "generatedAt": "2026-07-14T04:06:50.276Z",
       "title": "GPT-5.6 & Grok 4.5 Drive New Model Wave",
