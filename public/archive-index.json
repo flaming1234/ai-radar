@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-07-16",
+      "generatedAt": "2026-07-16T04:12:33.736Z",
+      "title": "Thinking Machines Ships 1T Inkling Open Model",
+      "subtitle": "975B开源多模态模型落地，vLLM与1-bit量化同步支持",
+      "mainTheme": "model_race",
+      "itemCount": 61,
+      "stats": {
+        "total": 61,
+        "withUrl": 61,
+        "sTier": 14,
+        "aTier": 16,
+        "bTier": 31,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-07-15",
       "generatedAt": "2026-07-15T04:08:42.164Z",
       "title": "Grok 4.5 Hits #2 on FrontierSWE, Codex Surges",
