@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-07-17",
+      "generatedAt": "2026-07-17T04:10:56.582Z",
+      "title": "Kimi K3 Tops Evals at Sonnet Pricing",
+      "subtitle": "Kimi K3 开源权重登顶多项基准，性能直逼 GPT-5.6",
+      "mainTheme": "model_race",
+      "itemCount": 64,
+      "stats": {
+        "total": 64,
+        "withUrl": 64,
+        "sTier": 13,
+        "aTier": 14,
+        "bTier": 37,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-07-16",
       "generatedAt": "2026-07-16T04:12:33.736Z",
       "title": "Thinking Machines Ships 1T Inkling Open Model",

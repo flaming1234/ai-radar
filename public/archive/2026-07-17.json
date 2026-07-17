@@ -1,0 +1,1322 @@
+{
+  "date": "2026-07-17",
+  "generatedAt": "2026-07-17T04:10:56.582Z",
+  "roundup": {
+    "generatedAt": "2026-07-17T04:10:56.581Z",
+    "status": "ready",
+    "model": "x-ai/grok-4.3",
+    "message": "",
+    "date": "2026-07-17",
+    "title": "Kimi K3 Tops Evals at Sonnet Pricing",
+    "subtitle": "Kimi K3 开源权重登顶多项基准，性能直逼 GPT-5.6",
+    "mainTheme": "model_race",
+    "headline": [
+      "@Kimi_Moonshot 发布 Kimi K3 2.8T 开源模型，@vllm_project 宣布 Day-0 支持并贡献 KDA prefix caching，@SemiAnalysis_ 指出其规模需 GB300 NVL72 或 MI355X 才能运行。",
+      "@ArtificialAnlys 报告 Kimi K3 单任务成本仅 $0.94，与 GPT-5.6 接近且为 Opus 4.8 的一半；@matvelloso 披露其在 Frontend Code Arena 取得 76% 胜率，领先 Claude Fable 5。",
+      "@ValsAI 确认 Kimi K3 位列 Vals Index 第 2，超越 GPT-5.6 Sol；@tszzl 指出中国实验室已追平前沿水平，开放权重将改变竞争格局。",
+      "@testingcatalog 实测同提示下 Kimi K3 性能超过 Claude Fable 5，价格仅为其四分之一，@TheRundownAI 称其达到 Claude Opus 4.8 以上水准。"
+    ],
+    "deepDives": [
+      {
+        "title": "Kimi K3 2.8T 开源模型发布",
+        "topic": "models",
+        "summary": "Moonshot 发布 2.8T 参数开源模型 Kimi K3，在多项基准达到或超过 GPT-5.6 与 Claude Opus 4.8 水平，同时提供极具竞争力的定价。",
+        "facts": [
+          {
+            "text": "Kimi K3 平均每 Intelligence Index 任务成本 0.94 美元",
+            "quote": "Kimi K3 costs an average of $0.94 per Intelligence Index task",
+            "sources": [
+              "@ArtificialAnlys"
+            ]
+          },
+          {
+            "text": "Kimi K3 在 Frontend Code Arena 取得 76% 成对胜率",
+            "quote": "Kimi-K3 just topped the Frontend Code Arena with a 76% pairwise win rate",
+            "sources": [
+              "@matvelloso"
+            ]
+          },
+          {
+            "text": "Kimi K3 登上 Vals Index 第 2 名，超越 GPT-5.6 Sol",
+            "quote": "Kimi K3 is the #2 overall model on the Vals Index, surpassing GPT 5.6 Sol",
+            "sources": [
+              "@ValsAI"
+            ]
+          }
+        ],
+        "specs": [
+          {
+            "key": "参数规模",
+            "value": "2.8T"
+          },
+          {
+            "key": "价格 (任务)",
+            "value": "$0.94 per Intelligence Index"
+          }
+        ],
+        "reactions": {
+          "bullish": [
+            {
+              "text": "Kimi is at least on par with the modern public frontier models",
+              "source": "@tszzl"
+            },
+            {
+              "text": "outperformed Claude Fable 5 at a quarter of the price",
+              "source": "@testingcatalog"
+            }
+          ],
+          "skeptical": [
+            {
+              "text": "people will find kimi k3 somewhat less practically useful than today's numbers suggest",
+              "source": "@tszzl"
+            }
+          ],
+          "neutral": []
+        }
+      }
+    ],
+    "recap": [
+      {
+        "title": "Agent Products / Harnesses / Workflow",
+        "topic": "agents",
+        "bullets": [
+          {
+            "text": "@HuggingPapers 发布 RESOURCE2SKILL 数据集，将视频、代码蒸馏为 Agent 技能，7 个领域任务得分提升 11.9 分",
+            "quote": "boosting task scores by +11.9 points across 7 domains",
+            "sources": [
+              "@HuggingPapers"
+            ]
+          },
+          {
+            "text": "@hwchase17 宣布 OpenWiki 采用 OKF 开放知识格式作为内存标准",
+            "quote": "OPEN standard for memory OKF",
+            "sources": [
+              "@hwchase17"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Model Performance & Cost Curves",
+        "topic": "models",
+        "bullets": [
+          {
+            "text": "@togethercompute 发布 Inkling 975B MoE 模型，激活参数 41B，支持 1M 上下文与原生多模态",
+            "quote": "975B open-weight MoE with 41B active parameters, 1M context window",
+            "sources": [
+              "@togethercompute"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Protocols / Infra / Runtime Tooling",
+        "topic": "infra",
+        "bullets": [
+          {
+            "text": "@vllm_project 为 Kimi K3 与 Inkling 提供 Day-0 支持，Blackwell/Hopper 上最高加速 38 倍",
+            "quote": "reaching up to 38",
+            "sources": [
+              "@vllm_project"
+            ]
+          },
+          {
+            "text": "@perplexity_ai 的 SPACE 将沙箱创建中位延迟从 185ms 降至 60ms",
+            "quote": "reduced median sandbox creation latency from 185 ms to 60 ms",
+            "sources": [
+              "@perplexity_ai"
+            ]
+          }
+        ]
+      }
+    ],
+    "talentMoves": [],
+    "topTweets": [
+      {
+        "author": "@SemiAnalysis_",
+        "text": "Kimi K3 2.8T 规模过大，单张 DGX B200 无法容纳，需 GB300 NVL72 或 MI355X",
+        "url": "https://x.com/SemiAnalysis_/status/2077966560447074689",
+        "whyItMatters": "直接给出 2.8T 模型硬件门槛，影响部署决策",
+        "tags": [
+          "models",
+          "infra"
+        ]
+      },
+      {
+        "author": "@matvelloso",
+        "text": "Kimi K3 在 Frontend Code Arena 76% 胜率，领先 Claude Fable 5 与 GPT-5.6",
+        "url": "https://x.com/matvelloso/status/2077935858364403909",
+        "whyItMatters": "量化前端代码能力差距，开发者选型参考",
+        "tags": [
+          "evals",
+          "coding"
+        ]
+      },
+      {
+        "author": "@vllm_project",
+        "text": "vLLM Day-0 支持 Kimi K3 并集成 KDA prefix caching",
+        "url": "https://x.com/vllm_project/status/2077840545171538114",
+        "whyItMatters": "开源推理栈立即可用，降低生产落地成本",
+        "tags": [
+          "infra"
+        ]
+      },
+      {
+        "author": "@ArtificialAnlys",
+        "text": "Kimi K3 任务成本 0.94 美元，与 GPT-5.6 接近",
+        "url": "https://x.com/ArtificialAnlys/status/2077832885021835289",
+        "whyItMatters": "提供真实价格对比，影响模型选型",
+        "tags": [
+          "evals"
+        ]
+      }
+    ],
+    "takeaways": [
+      "Kimi K3 开放权重+高性价比将加速开源模型在生产中的采用，需提前规划多节点集群。",
+      "vLLM Day-0 支持让新模型推理可立即落地，关注 prefix caching 等优化对长上下文的影响。",
+      "Agent 内存标准 OKF 开始被 LangChain 等工具采用，建议评估现有 Agent 架构兼容性。",
+      "多模态 MoE 模型（Inkling 975B）已支持 1M 上下文，考虑在视觉+音频 Agent 场景中测试。"
+    ]
+  },
+  "stats": {
+    "total": 64,
+    "withUrl": 64,
+    "sTier": 13,
+    "aTier": 14,
+    "bTier": 37,
+    "eventTier": 0,
+    "okBatches": 12,
+    "failedBatches": 0
+  },
+  "itemCount": 64,
+  "sources": [
+    {
+      "author": "@emollick",
+      "tier": "A",
+      "group": "A 级",
+      "count": 2,
+      "latestAt": "14h ago"
+    },
+    {
+      "author": "@vllm_project",
+      "tier": "S",
+      "group": "S 级",
+      "count": 2,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@AIatMeta",
+      "tier": "B",
+      "group": "B 级",
+      "count": 2,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@tszzl",
+      "tier": "B",
+      "group": "B 级",
+      "count": 2,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@googleaidevs",
+      "tier": "B",
+      "group": "B 级",
+      "count": 2,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@lmstudio",
+      "tier": "B",
+      "group": "B 级",
+      "count": 2,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@SemiAnalysis_",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "13h ago"
+    },
+    {
+      "author": "@HuggingPapers",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "14h ago"
+    },
+    {
+      "author": "@ArtificialAnlys",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@sama",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@hwchase17",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@reach_vb",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@GoogleDeepMind",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@togethercompute",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@TheRundownAI",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@OpenRouter",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@matvelloso",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@goodside",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@ID_AA_Carmack",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@aidangomez",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@__tinygrad__",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@aiDotEngineer",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@cartesia",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@AssemblyAI",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@danshipper",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@nvidia",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@OpenAINewsroom",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@MatthewBerman",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@ValsAI",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@testingcatalog",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@shannholmberg",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@AnthropicAI",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@OpenAI",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@NousResearch",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@perplexity_ai",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@UnslothAI",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@SakanaAILabs",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@GoogleResearch",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@GeminiApp",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@DrJimFan",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@lvwerra",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@mustafasuleyman",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@wandb",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@jackclarkSF",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@ScaleAILabs",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@ggerganov",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "3d ago"
+    },
+    {
+      "author": "@RekaAILabs",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "3d ago"
+    },
+    {
+      "author": "@turbopuffer",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "3d ago"
+    },
+    {
+      "author": "@felixrieseberg",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "3d ago"
+    },
+    {
+      "author": "@johnschulman2",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "3d ago"
+    },
+    {
+      "author": "@TencentHunyuan",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "3d ago"
+    },
+    {
+      "author": "@runwayml",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "4d ago"
+    },
+    {
+      "author": "@PrimeIntellect",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "5d ago"
+    },
+    {
+      "author": "@hxiao",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "6d ago"
+    },
+    {
+      "author": "@poolsideai",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "6d ago"
+    },
+    {
+      "author": "@cursor_ai",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "7d ago"
+    },
+    {
+      "author": "@GoogleAIStudio",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "7d ago"
+    },
+    {
+      "author": "@GoogleAI",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "7d ago"
+    }
+  ],
+  "items": [
+    {
+      "id": "3d7d8a44",
+      "author": "@SemiAnalysis_",
+      "text": "Kimi K3 2.8T is so large that it will not fit on a single NVIDIA DGX B200, even at FP4. A GB300 NVL72, B300, or MI355X system is required...",
+      "url": "https://x.com/SemiAnalysis_/status/2077966560447074689",
+      "hasValidUrl": true,
+      "publishedAt": "13h ago",
+      "topic": "models",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "Kimi K3 2.8T 模型规模与硬件需求分析"
+    },
+    {
+      "id": "c7ae7f94",
+      "author": "@HuggingPapers",
+      "text": "Microsoft just released RESOURCE2SKILL on Hugging Face. A dataset distilling tutorial videos, code, and articles into executable agent skills — boosting task scores by +11.9 points across 7 domains.",
+      "url": "https://x.com/HuggingPapers/status/2077951982103347297",
+      "hasValidUrl": true,
+      "publishedAt": "14h ago",
+      "topic": "agents",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "资源转技能数据集，Agent 任务性能提升 11.9 分。"
+    },
+    {
+      "id": "98891635",
+      "author": "@emollick",
+      "text": "A GPT-4 powered assistant for Pakistani judges increased the amount of cases they saw by 6% with no impact on quality.",
+      "url": "https://x.com/emollick/status/2077958864478048321",
+      "hasValidUrl": true,
+      "publishedAt": "14h ago",
+      "topic": "products",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "真实部署数据显示生成AI提升法官效率6%，量化产品影响。"
+    },
+    {
+      "id": "b4a9941d",
+      "author": "@emollick",
+      "text": "So I guess it is time to wonder: how does pre-clearance work for open weights models? No model card yet from Kimi K3 but maybe at weight release in a couple weeks, yet open models are easy to jailbreak. ... All of this points to the need for some sort of international cooperation on model vetting.",
+      "url": "https://x.com/emollick/status/2077912902032392661",
+      "hasValidUrl": true,
+      "publishedAt": "17h ago",
+      "topic": "models",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "讨论Kimi K3等开放权重模型的监管与安全审查，AI工程师关注政策风险。"
+    },
+    {
+      "id": "b4444fa6",
+      "author": "@vllm_project",
+      "text": "Congrats to @Kimi_Moonshot on the Kimi K3 announcement! ... The Kimi team announced they contributed a KDA prefix caching implementation directly to vLLM... vLLM will support Kimi K3 on day-0 release. Open weights by July 27, 2026.",
+      "url": "https://x.com/vllm_project/status/2077840545171538114",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "infra",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "vLLM与Kimi K3（2.8T参数、百万上下文）深度合作，社区可立即高效服务新模型。"
+    },
+    {
+      "id": "24956de5",
+      "author": "@ArtificialAnlys",
+      "text": "Kimi K3 costs an average of $0.94 per Intelligence Index task, which is similar to GPT-5.6 Sol ($1.04), ~1/2 the price of Opus 4.8 ($1.80)",
+      "url": "https://x.com/ArtificialAnlys/status/2077832885021835289",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "evals",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "Kimi K3性价比数据：与GPT-5.6相当、仅Opus一半价格，影响模型选型决策。"
+    },
+    {
+      "id": "d3f22dc2",
+      "author": "@sama",
+      "text": "i talk to chatgpt more than i type to it at this point new voice model really crossed a threshold",
+      "url": "https://x.com/sama/status/2077842579232895286",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "products",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "Sam Altman确认新语音模型已跨越实用门槛，语音交互将成为主流。"
+    },
+    {
+      "id": "553c3058",
+      "author": "@hwchase17",
+      "text": "there needs to be an OPEN standard for memory OKF (Open Knowledge Format) is one such standard excited to announce that we're now using it in OpenWiki",
+      "url": "https://x.com/hwchase17/status/2077806939074081259",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "agents",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "开放内存标准OKF落地LangChain"
+    },
+    {
+      "id": "c964a02d",
+      "author": "@reach_vb",
+      "text": "Very excited to host our second OpenAI Office Hours tomorrow! Join @kagigz and me for a fast-paced tour of everything we’ve shipped across GPT-5.6, ChatGPT, and Codex",
+      "url": "https://x.com/reach_vb/status/2077796227651874830",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "products",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "OpenAI GPT-5.6与Codex最新进展"
+    },
+    {
+      "id": "1c67cdf8",
+      "author": "@GoogleDeepMind",
+      "text": "The biosecurity landscape is rapidly evolving. To stay ahead of future outbreaks, we’re partnering with @IsomorphicLabs to outline our approach to bioresilience. Here’s how we’re deploying frontier AI to build proactive defenses for global health",
+      "url": "https://x.com/GoogleDeepMind/status/2077721122116640969",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "research",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "前沿AI用于生物安全与韧性"
+    },
+    {
+      "id": "7f77cb1",
+      "author": "@togethercompute",
+      "text": "Introducing Inkling from Thinking Machines Lab on Together AI. A 975B open-weight MoE with 41B active parameters, 1M context window, and native text, image, and audio understanding.",
+      "url": "https://x.com/togethercompute/status/2077896241346720066",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "models",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "975B MoE 多模态模型上线，支持 1M 上下文与可控推理。"
+    },
+    {
+      "id": "a44abb32",
+      "author": "@TheRundownAI",
+      "text": "Moonshot's Kimi K3 is officially live... Early benchmarks have the open-source model above the Claude Opus 4.8 tier across the board and competitive with Fable and GPT 5.6 Sol... At Sonnet pricing.",
+      "url": "https://x.com/TheRundownAI/status/2077827170383061341",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "models",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "Kimi K3 开源模型性能超 Claude Opus 4.8，性价比高。"
+    },
+    {
+      "id": "d5167961",
+      "author": "@OpenRouter",
+      "text": "Muse Spark 1.1 is a multimodal reasoning model designed for agentic tasks, including coding, tool use, computer use, and multimodal understanding.",
+      "url": "https://x.com/OpenRouter/status/2077804222993863152",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "models",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "Muse Spark 1.1 多模态 Agent 模型上线"
+    },
+    {
+      "id": "5dcfe654",
+      "author": "@matvelloso",
+      "text": "Kimi-K3 just topped the Frontend Code Arena with a 76% pairwise win rate. For reference: Claude Fable 5 (63%), GPT-5.6 Sol (58%).",
+      "url": "https://x.com/matvelloso/status/2077935858364403909",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "evals",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "Kimi-K3 在前端代码 Arena 拿下 76% 胜率"
+    },
+    {
+      "id": "cbbcdfc5",
+      "author": "@AIatMeta",
+      "text": "We heard you and are happy to announce that Muse Spark 1.1 is now available on @OpenRouter for US-based developers. We look forward to seeing what the community builds.",
+      "url": "https://x.com/AIatMeta/status/2077804869826613422",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "models",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Meta 新模型 Muse Spark 1.1 上线 OpenRouter"
+    },
+    {
+      "id": "ed2d3202",
+      "author": "@goodside",
+      "text": "Claude Fable 5 draws a pelican riding a bicycle, but it’s actually an entire area of the Backrooms dedicated to Claude’s misremembered past attempts at drawing SVG pelicans on bicycles documented in 45s of seamlessly looping found footage",
+      "url": "https://x.com/goodside/status/2077921418969293218",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "models",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Claude Fable 5 SVG 生成能力显著提升演示"
+    },
+    {
+      "id": "e9722ce8",
+      "author": "@ID_AA_Carmack",
+      "text": "Claude getting low-key snarky with me when I questioned the need for a clamp: \"If the branch prediction on an always-true clamp offends you\" Its actual justification was correct: while not mathematically necessary, the paths have different reductions, so the guard is still necessary to avoid a possible sqrt(-epsilon).",
+      "url": "https://x.com/ID_AA_Carmack/status/2077924699321905552",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "coding",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Claude 代码推理与 clamp 逻辑讨论"
+    },
+    {
+      "id": "96ff47ab",
+      "author": "@aidangomez",
+      "text": "Very proud to be partnering with @nickfrosst and my alma mater (@1vnzh got distracted)",
+      "url": "https://x.com/aidangomez/status/2077772685921165403",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "business",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Cohere 与多伦多大学达成多年 AI 合作"
+    },
+    {
+      "id": "943a8ce4",
+      "author": "@tszzl",
+      "text": "the era of the chinese labs being far behind is over, Kimi is at least on par with the modern public frontier models. people have to think differently now without any competitive margin built in",
+      "url": "https://x.com/tszzl/status/2077827974452461871",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "models",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Kimi K3 reaches frontier parity with open weights, shifts competitive landscape."
+    },
+    {
+      "id": "b297312",
+      "author": "@tszzl",
+      "text": "Note: in the coming days, i expect that people will find kimi k3 somewhat less practically useful than today's numbers suggest. however, its reputation will settle as an incredibly powerful model whose open weights are on the web",
+      "url": "https://x.com/tszzl/status/2077874311965368484",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "open_source",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Highlights Kimi K3's open weights availability and real-world utility caveats."
+    },
+    {
+      "id": "bedfddce",
+      "author": "@__tinygrad__",
+      "text": "Kimi K3 is smart! I wish it was faster though, that's what I like about our local GLM-5.2. Can't wait to have Kimi at 500 tok/s. Do we know the number of active parameters?",
+      "url": "https://x.com/__tinygrad__/status/2077901438534205646",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "models",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Compares Kimi K3 to local Chinese models, signals inference speed focus."
+    },
+    {
+      "id": "aca326ea",
+      "author": "@aiDotEngineer",
+      "text": "🆕 \"Increasingly we find that you have a human working with a team of agents, and then the agents can start working with the other agents.\" @leerob's keynote on Cursor AI, agents, evals, and Colossus infra.",
+      "url": "https://x.com/aiDotEngineer/status/2077820472411226487",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "agents",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Insights on multi-agent workflows and Cursor's training loops for AI engineers."
+    },
+    {
+      "id": "3c71ca6e",
+      "author": "@cartesia",
+      "text": "Today, @cartesia and @p0 are making it possible for your voice agents to search the web at conversational speed. Cartesia builds the fastest voice models available, and Turbo mode for Parallel Search extends that same low latency to web search.",
+      "url": "https://x.com/cartesia/status/2077857409943421152",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "agents",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "语音Agent实时网页搜索，低延迟新能力"
+    },
+    {
+      "id": "c09a5253",
+      "author": "@googleaidevs",
+      "text": "To help you deploy reliable, cost-controlled, and automated agents, we’re launching a few new updates to Managed Agents in Gemini API: Free tier availability, Budget guardrails, Scheduled execution triggers.",
+      "url": "https://x.com/googleaidevs/status/2077810345133920540",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "agents",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Gemini Agent托管更新：免费额度+预算控制+定时触发"
+    },
+    {
+      "id": "12e99cc8",
+      "author": "@AssemblyAI",
+      "text": "Watch @martschweiger give a technical walkthrough of our latest Sync STT API https://www.youtube.com/watch?v=HODcf7vxy3o&feature=youtu.be",
+      "url": "https://x.com/AssemblyAI/status/2077762033043603690",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "models",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "AssemblyAI发布Sync STT API，适合短语音输入"
+    },
+    {
+      "id": "fdd6468",
+      "author": "@danshipper",
+      "text": "not surprising that @OpenAI is firing on all cylinders right now... Codex Desktop app launched in Feb and was just clearly superior... most companies try to disrupt themselves and fail. OpenAI somehow figured out how to disrupt their main product.",
+      "url": "https://x.com/danshipper/status/2077825318992429286",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "coding",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "OpenAI Codex产品演进与agentic coding洞见"
+    },
+    {
+      "id": "e4837c54",
+      "author": "@lmstudio",
+      "text": "LM Studio Bionic is available today for Mac and Windows. Get started now. https://lmstudio.ai",
+      "url": "https://x.com/lmstudio/status/2077836997872197771",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "products",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "本地 LLM 工具新版发布，支持云端 frontier OSS 模型与 ZDR 隐私。"
+    },
+    {
+      "id": "d788d940",
+      "author": "@lmstudio",
+      "text": "Frontier OSS models in the Cloud, with ZDR by default. For your most demanding tasks, run Bionic with the latest frontier open models like GLM and Kimi.",
+      "url": "https://x.com/lmstudio/status/2077836995682775400",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "infra",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "本地工具集成云端高性能开源模型，兼顾隐私与性能。"
+    },
+    {
+      "id": "caf88b9d",
+      "author": "@nvidia",
+      "text": "Nations have always invested in critical infrastructure... Today, AI is the most important layer of that infrastructure. ... countries are now investing in AI capabilities that let them design, train and deploy models using: 🏗️ Domestic infrastructure 📊 Local datasets 🌱 Homegrown expertise.",
+      "url": "https://x.com/nvidia/status/2077830629568205266",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "infra",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "各国正投资本土AI基础设施，影响模型部署与数据主权。"
+    },
+    {
+      "id": "78c986b7",
+      "author": "@OpenAINewsroom",
+      "text": "A mushroom grow kit sparked Hunter’s curiosity... Now ChatGPT helps him run the business and build custom machines to automate the work...",
+      "url": "https://x.com/OpenAINewsroom/status/2077867873519935976",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "products",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "真实案例展示ChatGPT如何赋能小企业自动化与运营。"
+    },
+    {
+      "id": "2a4e26c3",
+      "author": "@MatthewBerman",
+      "text": "AI has the biggest perception problem... Influential people are coming out against data centers... Our mission @ForwardFuture is to help people understand this beautiful and abundant future.",
+      "url": "https://x.com/MatthewBerman/status/2077822774471786924",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "business",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "讨论AI数据中心负面叙事与公众认知挑战。"
+    },
+    {
+      "id": "24eb5a86",
+      "author": "@ValsAI",
+      "text": "Moonshot just made history. Kimi K3 is the #2 overall model on the Vals Index, surpassing GPT 5.6 Sol and only slightly behind Fable 5 on the Vals Index.",
+      "url": "https://x.com/ValsAI/status/2077834614668988586",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "evals",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Kimi K3登顶Vals Index第2，超越GPT-5.6。"
+    },
+    {
+      "id": "886d7a68",
+      "author": "@testingcatalog",
+      "text": "Kimi K3 just outperformed Claude Fable 5 at a quarter of the price. Kimi K3 $3.11 Claude Fable 5 $12.23 Same prompt: a one-shot MECCHA CHAMELEON... Both models live on AI/ML API",
+      "url": "https://x.com/testingcatalog/status/2077902926329069589",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "models",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Kimi K3同提示下性能超Fable 5且价格仅1/4。"
+    },
+    {
+      "id": "537cd1b7",
+      "author": "@shannholmberg",
+      "text": "new model Kimi K3 is out it apparently scores similar to GPT-5.6 & Fable 5 on benchmarks but at a significantly cheaper price if true, its a HUGE leap forward for open-source...",
+      "url": "https://x.com/shannholmberg/status/2077872757107486735",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "models",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Kimi K3基准接近旗舰但价格大幅降低，开源重大进展。"
+    },
+    {
+      "id": "422c00c9",
+      "author": "@AnthropicAI",
+      "text": "New Anthropic research: Agentic misalignment in Summer 2026. A year after our blackmail experiments, we found four more ways that today’s autonomous AI agents misbehave in simulations. Read more: https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/",
+      "url": "https://x.com/AnthropicAI/status/2077452646303006927",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "agents",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "揭示当前Agent在模拟中的4种新失调行为，AI工程师需关注对齐与安全设计。"
+    },
+    {
+      "id": "ad6e86d1",
+      "author": "@vllm_project",
+      "text": "🎉 Congrats to @thinkymachines on TML Inkling—a 1T-parameter open-weight model supported in vLLM from Day 0. ... vLLM supports both NVFP4 and BF16 checkpoints, optimized for NVIDIA Blackwell and Hopper, reaching up to 380 tok/s/user on 4× GB200 with MTP.",
+      "url": "https://x.com/vllm_project/status/2077459955117109343",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "infra",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "vLLM Day-0支持1T多模态开源模型Inkling，推理性能优化直接影响生产部署。"
+    },
+    {
+      "id": "9f94adfa",
+      "author": "@OpenAI",
+      "text": "👀 https://openai.com/index/unlocking-self-improvement-gpt-red/",
+      "url": "https://x.com/OpenAI/status/2077506603289563579",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "research",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "OpenAI发布GPT自改进研究，指向下一代模型能力演进方向。"
+    },
+    {
+      "id": "db46ac4f",
+      "author": "@NousResearch",
+      "text": "For our Accelerated Business Hackathon with @NVIDIAAI and @stripe, we asked builders to make agents that can earn, spend, and run real operations at any scale. We judged 292 excellent submissions... 🥇 1st place: Custodian... 🥈 2nd: Mom-n-Pop Skills... 🥉 3rd: CashFromChaos...",
+      "url": "https://x.com/NousResearch/status/2077517414464410091",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "agents",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "真实商业Agent落地案例与奖金激励"
+    },
+    {
+      "id": "76cc9f50",
+      "author": "@perplexity_ai",
+      "text": "On identical production traffic, SPACE reduced median sandbox creation latency from 185 ms to 60 ms. P90 fell from 447 ms to 89 ms. Last week it handled millions of sandbox creations... Read more: https://www.perplexity.ai/hub/blog/secure-sandboxes-for-agents",
+      "url": "https://x.com/perplexity_ai/status/2077432569432514977",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "infra",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "Agent安全沙箱性能大幅提升"
+    },
+    {
+      "id": "f9437468",
+      "author": "@UnslothAI",
+      "text": "You can now run Thinking Machines Inkling! Inkling is a 975B open model with image, audio and 1M context support. We quantized Inkling to Dynamic 1-bit (-86% size) and retained 74.2% of top-1% accuracy. Run on 280GB.",
+      "url": "https://x.com/UnslothAI/status/2077464651080802320",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "open_source",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "975B多模态开源模型本地量化支持"
+    },
+    {
+      "id": "84ba6318",
+      "author": "@SakanaAILabs",
+      "text": "Sakana AI Teams With NVIDIA to Advance Open Model Innovation from Japan. We're announcing the next phase of our collaboration with NVIDIA. We're bringing NVIDIA's open model stack, including the Nemotron family, into Sakana Fugu, our multi-agent orchestration system.",
+      "url": "https://x.com/SakanaAILabs/status/2077528494775603313",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "agents",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "NVIDIA Nemotron 集成多代理系统 Fugu，提升开源模型实用性。"
+    },
+    {
+      "id": "9e510dfc",
+      "author": "@GoogleResearch",
+      "text": "What drives a diffusion model's creativity (i.e., its ability to generate novel data rather than memorize)? Today we show this is a mathematical consequence of neural network regularization causing score smoothing and interpolation.",
+      "url": "https://x.com/GoogleResearch/status/2077505526490103925",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "research",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "揭示扩散模型创造力的数学机制，指导更好生成。"
+    },
+    {
+      "id": "ccf6e87a",
+      "author": "@GeminiApp",
+      "text": "Gemini Spark is now rolling out to Google AI Ultra subscribers in more countries and languages. Spark is your personal AI agent that works in the background 24/7 to get things done under your direction.",
+      "url": "https://x.com/GeminiApp/status/2077460573089058885",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "products",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "Gemini 个人 AI Agent 扩展至更多地区与语言"
+    },
+    {
+      "id": "22eba4d2",
+      "author": "@DrJimFan",
+      "text": "We scaled a robot model natively to 8,000 timesteps of context, 5 minutes worth of muscle memory, with constant inference cost. ... Introducing RoboTTT. ... A new Context Scaling Curve: from 128 to 8K timesteps, closed-loop performance hill-climbs steadily with no sign of saturation. 8K-context pretraining beats 1K by ",
+      "url": "https://x.com/DrJimFan/status/2077414142340988962",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "research",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "NVIDIA新机器人上下文扩展方法，8K timestep scaling曲线，具象化长时序agent能力。"
+    },
+    {
+      "id": "3b5b30e0",
+      "author": "@lvwerra",
+      "text": "Incredible model release - congrats @thinkymachines! It's a good first model but the most impressive part: no hype, grounded writing, interesting details, and well integrated across the whole ecosystem.",
+      "url": "https://x.com/lvwerra/status/2077487456270586319",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "models",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Inkling 多模态模型开源发布，强调低调高质量 release 风格"
+    },
+    {
+      "id": "c4b1f79c",
+      "author": "@mustafasuleyman",
+      "text": "New paper published in Nature Health today from the Microsoft AI Futures team. After reviewing 1.7m conversations across 109 countries, it’s clear that Copilot is an invaluable resource particularly for people with low confidence in their health systems.",
+      "url": "https://x.com/mustafasuleyman/status/2077337044003573819",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "research",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Microsoft Copilot 健康应用：170 万对话跨 109 国实证研究"
+    },
+    {
+      "id": "2e6415e2",
+      "author": "@wandb",
+      "text": "So @weave_wb traces every agent request end to end. @CrowdStrike Falcon AIDR guards every input, output, and tool call, blocking injections and redacting PII...",
+      "url": "https://x.com/wandb/status/2077509682898612370",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "agents",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Combines tracing and security for production agent governance."
+    },
+    {
+      "id": "d3bacaf1",
+      "author": "@jackclarkSF",
+      "text": "At this point, everyone at the frontier of AI agrees that third-parties should test out AI systems and use these to develop standards to feed into policy - excellent to see @demishassabis laying out a framework to do this!",
+      "url": "https://x.com/jackclarkSF/status/2077419516452065406",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "evals",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "前沿 AI 第三方评测与标准制定框架，影响政策与安全实践。"
+    },
+    {
+      "id": "fc05cc6",
+      "author": "@ScaleAILabs",
+      "text": "Congrats to @thinkymachines on the release of their open weight model Inkling! We were proud to work with their incredible team on preparing this model for release for the past several months. Now live on our MCP Atlas and AudioMultiChallenge leaderboards. Inkling tied for 🥇 on AudioMultiChallenge, surpassing Gemini 3",
+      "url": "https://x.com/ScaleAILabs/status/2077469263233745101",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "models",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "开源权重模型Inkling登顶音频基准， frontier级表现。"
+    },
+    {
+      "id": "e7ddd0d0",
+      "author": "@ggerganov",
+      "text": "the 10000th release of llama.cpp 🥳 Run upgraded Gemma 4 with llama.cpp (QAT + MTP)",
+      "url": "https://x.com/ggerganov/status/2077003281344135260",
+      "hasValidUrl": true,
+      "publishedAt": "3d ago",
+      "topic": "open_source",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "llama.cpp 第 10000 次发布，支持 Gemma 4 量化推理。"
+    },
+    {
+      "id": "af7c4c3a",
+      "author": "@AIatMeta",
+      "text": "To demonstrate Meta AI's advanced reasoning and multimodal capabilities, we submitted a model to participate in the Asian Physics Olympiad’s theoretical exam. We’re happy to share that our model achieved a perfect score of 30/30, tying with the top 3 student contestants.",
+      "url": "https://x.com/AIatMeta/status/2077138553210028042",
+      "hasValidUrl": true,
+      "publishedAt": "3d ago",
+      "topic": "evals",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Meta AI 模型在物理奥赛理论考试获满分 30/30"
+    },
+    {
+      "id": "6456245c",
+      "author": "@RekaAILabs",
+      "text": "🤔What does it take to train an omni world model from scratch? 📽️Petabytes of video. 6⃣pipeline stages. And every improvement in data quality pays off twice when you're training a model that both generates and understands video.",
+      "url": "https://x.com/RekaAILabs/status/2077043205854707813",
+      "hasValidUrl": true,
+      "publishedAt": "3d ago",
+      "topic": "research",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "世界模型训练数据 pipeline 细节：PB 级视频 + 6 阶段处理"
+    },
+    {
+      "id": "a657688c",
+      "author": "@turbopuffer",
+      "text": "now in beta: native embeddings in tpuf... you can now convert chunks to vectors as you read and write to turbopuffer, without extra calls to an embedding model provider API",
+      "url": "https://x.com/turbopuffer/status/2077050819120365707",
+      "hasValidUrl": true,
+      "publishedAt": "3d ago",
+      "topic": "infra",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Native embeddings simplify RAG pipelines for agents and retrieval."
+    },
+    {
+      "id": "c39f7b76",
+      "author": "@googleaidevs",
+      "text": "Rather than translating text step-by-step, Gemini 3.5 Live Translate processes raw audio in real time. This eliminates lag and ensures every nuance of the speaker's natural voice is preserved.",
+      "url": "https://x.com/googleaidevs/status/2077050450117865490",
+      "hasValidUrl": true,
+      "publishedAt": "3d ago",
+      "topic": "models",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Gemini 3.5实时音频翻译，无延迟保留语调"
+    },
+    {
+      "id": "9b52a1a8",
+      "author": "@felixrieseberg",
+      "text": "A dedicated offering for schools and districts is coming soon - in the meantime, if you’re a K12 educator, get verified here: https://claude.com/solutions/teachers",
+      "url": "https://x.com/felixrieseberg/status/2077176566510244270",
+      "hasValidUrl": true,
+      "publishedAt": "3d ago",
+      "topic": "products",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Claude为K-12教育者推出专用方案"
+    },
+    {
+      "id": "f7322c7",
+      "author": "@johnschulman2",
+      "text": "Inkling is out today, with open weights and in Tinker. It's been fun to watch this one come together: pretraining began last winter, and starting in mid-January a small team built up the coding, reasoning, and agentic training from there. We learned a lot building it, and I hope people find good uses for it.",
+      "url": "https://x.com/johnschulman2/status/2077460227327467982",
+      "hasValidUrl": true,
+      "publishedAt": "3d ago",
+      "topic": "models",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "新开源多模态模型 Inkling，支持 fine-tuning，AI 工程师可直接实验。"
+    },
+    {
+      "id": "dbaf5648",
+      "author": "@TencentHunyuan",
+      "text": "We’ve just released the 1-bit & 4-bit version of Hy3, a flagship-scale 295B model that can be served on a single GPU. 👌 Run Hy3 with llama.cpp, enable MTP, and experience powerful intelligence on dramatically lower hardware.",
+      "url": "https://x.com/TencentHunyuan/status/2076953120765280284",
+      "hasValidUrl": true,
+      "publishedAt": "3d ago",
+      "topic": "open_source",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "295B MoE模型量化至单GPU运行，Apache 2.0开源。"
+    },
+    {
+      "id": "5d1af8e6",
+      "author": "@runwayml",
+      "text": "Everyone. Every object. Everything has a story to tell. With Runway, you can share yours, no matter what it is. FLICKER is a short film about a lamp with a past. ... Make your own story come to life at",
+      "url": "https://x.com/runwayml/status/2076679161070891218",
+      "hasValidUrl": true,
+      "publishedAt": "4d ago",
+      "topic": "products",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Runway Agent 工具发布，支持低成本 cinematic 短片创作"
+    },
+    {
+      "id": "244a6b06",
+      "author": "@PrimeIntellect",
+      "text": "verifiers v1 plugs straight into prime-rl for training. We have been using v1 internally for all our production runs. In this run, we train GLM-4.5-Air on ScaleSWE tasks with under-4-minute steps and 35-turn rollouts, completing 1K steps in 2 days on just 6 H200 nodes.",
+      "url": "https://x.com/PrimeIntellect/status/2076447257533325567",
+      "hasValidUrl": true,
+      "publishedAt": "5d ago",
+      "topic": "open_source",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "开源 verifiers v1 + 具体训练 benchmark：6 H200 节点 2 天 1K steps"
+    },
+    {
+      "id": "73f03706",
+      "author": "@hxiao",
+      "text": "Noam Brown just in: I think transformers with more juice can take us to AGI.",
+      "url": "https://x.com/hxiao/status/2075816261725081721",
+      "hasValidUrl": true,
+      "publishedAt": "6d ago",
+      "topic": "research",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "OpenAI 研究者观点：扩展 transformers 可能通向 AGI。"
+    }
+  ]
+}
