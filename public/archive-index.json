@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-07-18",
+      "generatedAt": "2026-07-18T03:57:42.783Z",
+      "title": "Kimi K3 Tops Frontend Arena, Open Weights July 27",
+      "subtitle": "Kimi K3 登顶前端编码竞技场，权重 7 月 27 日开源",
+      "mainTheme": "model_race",
+      "itemCount": 65,
+      "stats": {
+        "total": 65,
+        "withUrl": 65,
+        "sTier": 11,
+        "aTier": 16,
+        "bTier": 38,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-07-17",
       "generatedAt": "2026-07-17T04:10:56.582Z",
       "title": "Kimi K3 Tops Evals at Sonnet Pricing",
