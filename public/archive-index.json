@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-07-19",
+      "generatedAt": "2026-07-19T04:23:50.536Z",
+      "title": "Kimi K3 Tops Frontend Arena; Inkling 1T Ships",
+      "subtitle": "开源模型 Kimi K3、Inkling 持续挑战闭源前沿",
+      "mainTheme": "model_race",
+      "itemCount": 58,
+      "stats": {
+        "total": 58,
+        "withUrl": 58,
+        "sTier": 13,
+        "aTier": 16,
+        "bTier": 29,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-07-18",
       "generatedAt": "2026-07-18T03:57:42.783Z",
       "title": "Kimi K3 Tops Frontend Arena, Open Weights July 27",
