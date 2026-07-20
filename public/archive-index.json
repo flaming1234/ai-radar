@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-07-20",
+      "generatedAt": "2026-07-20T04:38:45.320Z",
+      "title": "Kimi K3 & Inkling 975B Lead Open Model Wave",
+      "subtitle": "开源模型密集发布，性价比与多模态能力并进",
+      "mainTheme": "model_race",
+      "itemCount": 65,
+      "stats": {
+        "total": 65,
+        "withUrl": 65,
+        "sTier": 11,
+        "aTier": 17,
+        "bTier": 37,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-07-19",
       "generatedAt": "2026-07-19T04:23:50.536Z",
       "title": "Kimi K3 Tops Frontend Arena; Inkling 1T Ships",
