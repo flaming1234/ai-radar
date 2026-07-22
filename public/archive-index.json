@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-07-22",
+      "generatedAt": "2026-07-22T04:20:59.351Z",
+      "title": "Gemini 3.6 Flash & Laguna S 2.1 Land for Agents",
+      "subtitle": "Google 与 Poolside 发布新模型，Agent 编码与安全基准提升",
+      "mainTheme": "model_race",
+      "itemCount": 67,
+      "stats": {
+        "total": 67,
+        "withUrl": 67,
+        "sTier": 13,
+        "aTier": 18,
+        "bTier": 36,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-07-21",
       "generatedAt": "2026-07-21T04:17:49.944Z",
       "title": "Agent Labs Scale Security & Research Agents",
