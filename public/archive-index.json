@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-07-23",
+      "generatedAt": "2026-07-23T04:18:13.942Z",
+      "title": "Gemini 3.6 Flash & 3.5 Flash-Lite Ship to Copilot",
+      "subtitle": "Google 新模型登陆 GitHub Copilot，Cursor 路由器与 Agent Eval 工具同步更新",
+      "mainTheme": "model_race",
+      "itemCount": 56,
+      "stats": {
+        "total": 56,
+        "withUrl": 56,
+        "sTier": 12,
+        "aTier": 15,
+        "bTier": 29,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-07-22",
       "generatedAt": "2026-07-22T04:20:59.351Z",
       "title": "Gemini 3.6 Flash & Laguna S 2.1 Land for Agents",
