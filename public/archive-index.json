@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-07-24",
+      "generatedAt": "2026-07-24T04:19:25.085Z",
+      "title": "Voice Agents Land on Desktop as Labs Ship Flash Models",
+      "subtitle": "OpenAI Voice 多 Agent 控制落地，Gemini 3.6 Flash 与 Claude Voice 同步升级",
+      "mainTheme": "agent_products",
+      "itemCount": 61,
+      "stats": {
+        "total": 61,
+        "withUrl": 61,
+        "sTier": 13,
+        "aTier": 12,
+        "bTier": 36,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-07-23",
       "generatedAt": "2026-07-23T04:18:13.942Z",
       "title": "Gemini 3.6 Flash & 3.5 Flash-Lite Ship to Copilot",
