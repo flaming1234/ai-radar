@@ -1,0 +1,1392 @@
+{
+  "date": "2026-07-25",
+  "generatedAt": "2026-07-25T04:15:20.488Z",
+  "roundup": {
+    "generatedAt": "2026-07-25T04:15:20.488Z",
+    "status": "ready",
+    "model": "x-ai/grok-4.3",
+    "message": "",
+    "date": "2026-07-25",
+    "title": "Claude Opus 5 Matches Fable 5 at Half Price",
+    "subtitle": "Opus 5 登陆 Cursor、Devin、Copilot 等多平台，编码基准持平前沿",
+    "mainTheme": "model_race",
+    "headline": [
+      "@claudeai 正式发布 Claude Opus 5，宣称在多项编码与知识工作评估上达到新 SOTA，价格仅为 Fable 5 的一半。@cursor_ai 同步上线该模型，在 CursorBench 上以 66.7 分接近 Fable 5 的 66.5 分。",
+      "@perplexity_ai 与 @cognition 分别将 Opus 5 集成到 Perplexity Computer 和 Devin，实际任务中显示出调试与根因分析优势。@github 也宣布在 GitHub Copilot 中 rollout，强调其 agentic coding 能力。",
+      "@emollick 指出 Opus 5 在 ARC-AGI-3 上达到 30.2% 新 SOTA，远超此前 GPT-5.6 Sol 的 7.8%。@ArtificialAnlys 则提醒高 effort 设置下单任务耗时可达 25-36 分钟，需权衡速度与质量。",
+      "@jerryjliu0 在 ParseBench 测试后建议，编码与知识工作可放心使用 Opus 5，但文档解析每页 8 美分成本偏高，不建议大量调用。"
+    ],
+    "deepDives": [
+      {
+        "title": "Claude Opus 5 发布与多平台集成",
+        "topic": "models",
+        "summary": "Anthropic 推出 Opus 5，在多项基准接近 Fable 5 的同时价格减半，已快速登陆 Cursor、Perplexity、Devin、GitHub Copilot 等平台。",
+        "facts": [
+          {
+            "text": "Opus 5 在 CursorBench 上达到 66.7 分，接近 Fable 5 的 66.5 分且价格减半。",
+            "quote": "matches Fable 5 on CursorBench (66.7 vs 66.5 at default effort) at half the price",
+            "sources": [
+              "@cursor_ai"
+            ]
+          },
+          {
+            "text": "Perplexity 评估显示 Opus 5 仅次于 Fable 5，价格低 57%。",
+            "quote": "outperformed all but Fable 5, while being 57% cheaper",
+            "sources": [
+              "@perplexity_ai"
+            ]
+          },
+          {
+            "text": "Opus 5 在 ARC-AGI-3 上取得 30.2% 新 SOTA。",
+            "quote": "Claude Opus 5 from @AnthropicAI is the new SOTA on ARC-AGI-3: 30.2%",
+            "sources": [
+              "@emollick"
+            ]
+          }
+        ],
+        "specs": [
+          {
+            "key": "CursorBench",
+            "value": "66.7"
+          },
+          {
+            "key": "Price",
+            "value": "half of Fable 5"
+          },
+          {
+            "key": "ARC-AGI-3",
+            "value": "30.2%"
+          }
+        ],
+        "reactions": {
+          "bullish": [
+            {
+              "text": "Opus 5 在 Devin 中特别擅长困难调试与根因分析，接近 Fable 水平且成本减半。",
+              "source": "@cognition"
+            },
+            {
+              "text": "在 Box AI Agent 测试中，due diligence 提升 17%，life sciences 提升 30%。",
+              "source": "@levie"
+            }
+          ],
+          "skeptical": [
+            {
+              "text": "文档理解任务中 Opus 5 与 Opus 4.8 持平，每页 8 美分不划算。",
+              "source": "@jerryjliu0"
+            }
+          ],
+          "neutral": []
+        }
+      }
+    ],
+    "recap": [
+      {
+        "title": "Infra / Runtime Tooling",
+        "topic": "infra",
+        "bullets": [
+          {
+            "text": "vLLM 发布 Attention-FFN Disaggregation 插件，针对 MoE serving 进行解耦优化。",
+            "quote": "",
+            "sources": [
+              "@vllm_project"
+            ]
+          },
+          {
+            "text": "NVIDIA 通过 GPU-to-GPU RDMA 将 DeepSeek-V4 Pro 启动时间从 8 分钟降至 2 分钟以内。",
+            "quote": "cut DeepSeek-V4 Pro startup from 8 minutes to under 2 minutes",
+            "sources": [
+              "@NVIDIAAI"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Open Source / Datasets",
+        "topic": "open_source",
+        "bullets": [
+          {
+            "text": "The Stack v3 上线，包含 5 万亿 token 开源代码数据。",
+            "quote": "5 trillion tokens of the finest code data just landed on the Hub",
+            "sources": [
+              "@_lewtun"
+            ]
+          },
+          {
+            "text": "Ollama 云端对 GLM-5.2 等前沿开源模型需求激增，正在扩容。",
+            "quote": "demand for GLM-5.2 and other frontier-level open models has been surging",
+            "sources": [
+              "@ollama"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Agents / Harnesses",
+        "topic": "agents",
+        "bullets": [
+          {
+            "text": "NousResearch 为 Hermes Agent 增加 Docker 沙箱凭证防火墙，真实密钥不进入沙箱。",
+            "quote": "",
+            "sources": [
+              "@NousResearch"
+            ]
+          },
+          {
+            "text": "OpenAI 发布 ChatGPT Voice 桌面版，支持语音控制多 Agent 工作流。",
+            "quote": "",
+            "sources": [
+              "@OpenAI"
+            ]
+          }
+        ]
+      }
+    ],
+    "talentMoves": [],
+    "topTweets": [
+      {
+        "author": "@cursor_ai",
+        "text": "Opus 5 登陆 Cursor，CursorBench 66.7 分且价格减半，同时支持 Zero Data Retention。",
+        "url": "https://x.com/cursor_ai/status/2080700479940759919",
+        "whyItMatters": "首发集成证明工程实用性与性价比",
+        "tags": [
+          "coding",
+          "models"
+        ]
+      },
+      {
+        "author": "@claudeai",
+        "text": "Opus 5 以一半价格接近 Fable 5 前沿智能，多项编码评估新 SOTA。",
+        "url": "https://x.com/claudeai/status/2080699495453528290",
+        "whyItMatters": "官方基准与定价声明",
+        "tags": [
+          "models"
+        ]
+      },
+      {
+        "author": "@emollick",
+        "text": "Opus 5 在 ARC-AGI-3 达到 30.2% 新 SOTA，远超此前 7.8%。",
+        "url": "https://x.com/emollick/status/2080731915196194981",
+        "whyItMatters": "推理基准大幅跃升",
+        "tags": [
+          "evals",
+          "models"
+        ]
+      },
+      {
+        "author": "@perplexity_ai",
+        "text": "Opus 5 在 WANDR 仅次于 Fable 5，价格低 57%。",
+        "url": "https://x.com/perplexity_ai/status/2080778151962214575",
+        "whyItMatters": "产品集成与成本优势实测",
+        "tags": [
+          "products",
+          "evals"
+        ]
+      },
+      {
+        "author": "@github",
+        "text": "Claude Opus 5 已在 GitHub Copilot rollout，agentic coding 表现强劲。",
+        "url": "https://x.com/github/status/2080702791887315229",
+        "whyItMatters": "主流 IDE 集成加速落地",
+        "tags": [
+          "coding"
+        ]
+      }
+    ],
+    "takeaways": [
+      "Opus 5 证明半价即可接近前沿模型，性价比成为新竞争焦点。",
+      "多平台同步集成显示 agentic coding 已成为核心落地场景。",
+      "高 effort 模式下任务耗时显著增加，需在质量与速度间做权衡。",
+      "开源代码数据集与 MoE serving 优化同步推进， infra 支撑能力持续提升。"
+    ]
+  },
+  "stats": {
+    "total": 68,
+    "withUrl": 68,
+    "sTier": 14,
+    "aTier": 18,
+    "bTier": 36,
+    "eventTier": 0,
+    "okBatches": 12,
+    "failedBatches": 0
+  },
+  "itemCount": 68,
+  "sources": [
+    {
+      "author": "@levie",
+      "tier": "B",
+      "group": "B 级",
+      "count": 2,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@shannholmberg",
+      "tier": "B",
+      "group": "B 级",
+      "count": 2,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@GoogleAI",
+      "tier": "B",
+      "group": "B 级",
+      "count": 2,
+      "latestAt": "4d ago"
+    },
+    {
+      "author": "@EpochAIResearch",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "6h ago"
+    },
+    {
+      "author": "@signulll",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "6h ago"
+    },
+    {
+      "author": "@cursor_ai",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@vllm_project",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@ArtificialAnlys",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@claudeai",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@perplexity_ai",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@NousResearch",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@cognition",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@ollama",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@jerryjliu0",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@alexalbert__",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@ClaudeDevs",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@code",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@SakanaAILabs",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@github",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@NVIDIAAI",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@OpenRouter",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@SemiAnalysis_",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@emollick",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@HamelHusain",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@fal",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@julien_c",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@__tinygrad__",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@aiDotEngineer",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@AskPerplexity",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@googleaidevs",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@basecampbernie",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@JamesZmSun",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@nvidia",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@mathemagic1an",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "1d ago"
+    },
+    {
+      "author": "@OpenAI",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@GoogleDeepMind",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@GeminiApp",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@AndrewYNg",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@_lewtun",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@lvwerra",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@BoWang87",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@dzhng",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@poolsideai",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@ScaleAILabs",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "2d ago"
+    },
+    {
+      "author": "@GoogleResearch",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "3d ago"
+    },
+    {
+      "author": "@aidangomez",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "3d ago"
+    },
+    {
+      "author": "@wandb",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "3d ago"
+    },
+    {
+      "author": "@IcarusHermes",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "3d ago"
+    },
+    {
+      "author": "@logangraham",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "3d ago"
+    },
+    {
+      "author": "@OpenAINewsroom",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "3d ago"
+    },
+    {
+      "author": "@maximelabonne",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "3d ago"
+    },
+    {
+      "author": "@sama",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "4d ago"
+    },
+    {
+      "author": "@lateinteraction",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "4d ago"
+    },
+    {
+      "author": "@GoogleAIStudio",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "4d ago"
+    },
+    {
+      "author": "@danielhanchen",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "4d ago"
+    },
+    {
+      "author": "@awnihannun",
+      "tier": "A",
+      "group": "A 级",
+      "count": 1,
+      "latestAt": "4d ago"
+    },
+    {
+      "author": "@AIatMeta",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "4d ago"
+    },
+    {
+      "author": "@METR_Evals",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "4d ago"
+    },
+    {
+      "author": "@aye_aye_kaplan",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "4d ago"
+    },
+    {
+      "author": "@hxiao",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "4d ago"
+    },
+    {
+      "author": "@j_dekoninck",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "4d ago"
+    },
+    {
+      "author": "@MistralAI",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "4d ago"
+    },
+    {
+      "author": "@AnthropicAI",
+      "tier": "S",
+      "group": "S 级",
+      "count": 1,
+      "latestAt": "5d ago"
+    },
+    {
+      "author": "@turbopuffer",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "5d ago"
+    },
+    {
+      "author": "@LangChain_OSS",
+      "tier": "B",
+      "group": "B 级",
+      "count": 1,
+      "latestAt": "7d ago"
+    }
+  ],
+  "items": [
+    {
+      "id": "3ccbd1ff",
+      "author": "@EpochAIResearch",
+      "text": "Claude Opus 5 achieves an ECI of 159, slightly below Fable 5's value of 161. However, looking only at software engineering benchmarks, we find that Opus 5 matches Fable 5's SWE-ECI of 161.",
+      "url": "https://x.com/EpochAIResearch/status/2080862538712199206",
+      "hasValidUrl": true,
+      "publishedAt": "6h ago",
+      "topic": "evals",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "Opus 5 ECI/SWE-ECI与Fable 5持平"
+    },
+    {
+      "id": "476d93a3",
+      "author": "@signulll",
+      "text": "opus 5 is absolutely insane, holy shit. visual construction + design is noticeably much much better. paired with claude design, it’s an absolute beauty. wow.",
+      "url": "https://x.com/signulll/status/2080860628806201659",
+      "hasValidUrl": true,
+      "publishedAt": "6h ago",
+      "topic": "models",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Claude Opus 5视觉与设计能力显著提升，实际使用反馈。"
+    },
+    {
+      "id": "ecdd4e09",
+      "author": "@cursor_ai",
+      "text": "Claude Opus 5 is now available in Cursor! It matches Fable 5 on CursorBench (66.7 vs 66.5 at default effort) at half the price. Unlike Fable, it's also compatible with Zero Data Retention. See how all of the models compare here: https://cursor.com/evals",
+      "url": "https://x.com/cursor_ai/status/2080700479940759919",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "coding",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "Claude Opus 5 登陆 Cursor，性价比与基准领先。"
+    },
+    {
+      "id": "49cf7aa4",
+      "author": "@vllm_project",
+      "text": "🎉 Congrats to the teams behind vLLM AFD Plugin (Ascend & vLLM, @StepFun_ai, @AntGroup, FastAFD): a new experimental plugin under vllm-project that brings Attention-FFN Disaggregation to MoE serving. Attention and the expert/FFN path are two very different workloads that normally share one topology.",
+      "url": "https://x.com/vllm_project/status/2080673192939807083",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "infra",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "MoE 推理 Attention-FFN 解耦插件，提升 serving 效率。"
+    },
+    {
+      "id": "dc4727be",
+      "author": "@ArtificialAnlys",
+      "text": "Claude Opus 5’s top three effort settings all average more than 25 minutes per AA-Briefcase task (36.2, 34.3, and 25.7 minutes for max, xhigh, and high). At max effort this is roughly 50% longer than Opus 4.8 (24.1 minutes), primarily due to an increase in the number of turns.",
+      "url": "https://x.com/ArtificialAnlys/status/2080777727033167907",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "evals",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "Claude Opus 5 深度基准分析，turn 数与质量 trade-off。"
+    },
+    {
+      "id": "28cd0176",
+      "author": "@claudeai",
+      "text": "Introducing Claude Opus 5. It's a thoughtful and proactive model that comes close to the frontier intelligence of Fable 5 at half the price. On several coding and knowledge work evaluations, Opus 5 is the new state-of-the-art. On ARC-AGI-3, Opus 5’s score is three times as high as the next best model.",
+      "url": "https://x.com/claudeai/status/2080699495453528290",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "models",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "新SOTA模型发布，编码/知识基准领先，性价比高"
+    },
+    {
+      "id": "f6f8cec3",
+      "author": "@perplexity_ai",
+      "text": "Claude Opus 5 is now available in Perplexity and Perplexity Computer. We evaluated it against six other models on WANDR. It outperformed all but Fable 5, while being 57% cheaper.",
+      "url": "https://x.com/perplexity_ai/status/2080778151962214575",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "products",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "Perplexity集成Opus 5，性价比突出"
+    },
+    {
+      "id": "9af7bda2",
+      "author": "@NousResearch",
+      "text": "New in Hermes Agent: a credential firewall for Docker sandboxes. Your real keys never enter the sandbox. It runs on stand-in tokens, and a local proxy swaps in the real keys at the network boundary.",
+      "url": "https://x.com/NousResearch/status/2080728699100406042",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "agents",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "Agent沙箱安全新机制，保护凭证"
+    },
+    {
+      "id": "7f45b844",
+      "author": "@cognition",
+      "text": "Claude Opus 5 is now available in Devin. On FrontierCode 1.1, Opus 5 approaches Fable-level performance at half the cost. Within Devin, it shows particular strength on difficult debugging and root-cause analysis tasks.",
+      "url": "https://x.com/cognition/status/2080701373406920891",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "agents",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "Devin集成Opus 5，工程基准接近前沿"
+    },
+    {
+      "id": "8f2801df",
+      "author": "@ollama",
+      "text": "The demand for GLM-5.2 and other frontier-level open models has been surging on Ollama's cloud. We're adding capacity in anticipation for some very large models next week!",
+      "url": "https://x.com/ollama/status/2080746063104008408",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "open_source",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "开源前沿模型需求激增，Ollama扩容"
+    },
+    {
+      "id": "20bdf92f",
+      "author": "@jerryjliu0",
+      "text": "We benchmarked Opus 5 comprehensively on document understanding through ParseBench. It is roughly on par with Opus 4.8... tl;dr use Opus 5 as much as you want for coding and knowledge work. But at 8c per page... don't use it to parse documents at scale.",
+      "url": "https://x.com/jerryjliu0/status/2080788185194602686",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "evals",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "ParseBench显示Opus 5文档解析性价比低"
+    },
+    {
+      "id": "9e782cd9",
+      "author": "@alexalbert__",
+      "text": "Just over 6 months later, Opus 5 now produces near-superhuman level spreadsheets and slide decks that match what a consultant would make. Things are changing fast.",
+      "url": "https://x.com/alexalbert__/status/2080731979528679617",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "models",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "Claude Opus 5 发布，智能与效率显著提升"
+    },
+    {
+      "id": "6d0bd3c3",
+      "author": "@ClaudeDevs",
+      "text": "Opus 5 is a step-change in coding for the Opus class. It excels at long-horizon projects in large codebases, handling architecture, deployment, and design-quality UI.",
+      "url": "https://x.com/ClaudeDevs/status/2080703247665574315",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "coding",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "Opus 5 编码能力大幅升级，支持复杂项目"
+    },
+    {
+      "id": "14d02090",
+      "author": "@code",
+      "text": "📣 Claude Opus 5 is now rolling out in @code. Give it a try! https://github.blog/changelog/2026-07-24-claude-opus-5-is-now-available-in-github-copilot/",
+      "url": "https://x.com/code/status/2080706315131789552",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "coding",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "Opus 5 集成 VS Code 与 Copilot，提升 agentic coding"
+    },
+    {
+      "id": "2bfc96a7",
+      "author": "@SakanaAILabs",
+      "text": "Announcing Fugu-Ultra v1.1 🐡 ... Upgraded to incorporate the latest frontier models, resulting in stronger performance across every benchmark shown, including gains of up to 7.9 points over v1.0...",
+      "url": "https://x.com/SakanaAILabs/status/2080448772778373586",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "models",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "Fugu-Ultra v1.1 更新，基准提升最高 7.9 分"
+    },
+    {
+      "id": "21832e60",
+      "author": "@github",
+      "text": "📣 @AnthropicAI's Claude Opus 5 is now available and rolling out in GitHub Copilot. Early testing shows strong performance on agentic coding workflows",
+      "url": "https://x.com/github/status/2080702791887315229",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "coding",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "Claude Opus 5 集成 GitHub Copilot，提升 agentic coding"
+    },
+    {
+      "id": "96dac39f",
+      "author": "@NVIDIAAI",
+      "text": "We cut DeepSeek-V4 Pro startup from 8 minutes to under 2 minutes by moving weights over the fastest path to GPU memory with GPU-to-GPU RDMA.",
+      "url": "https://x.com/NVIDIAAI/status/2080730149348082124",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "infra",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "NVIDIA ModelExpress 大幅加速模型权重分发"
+    },
+    {
+      "id": "ccd27045",
+      "author": "@OpenRouter",
+      "text": "Grok STT from @SpaceXAI is now live on OpenRouter. Speech-to-text in 25 languages with word-level timestamps and speaker diarization. $0.10 per audio hour.",
+      "url": "https://x.com/OpenRouter/status/2080743252215619645",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "products",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "Grok 语音转文本模型上线，支持 25 语言"
+    },
+    {
+      "id": "ef2f5549",
+      "author": "@SemiAnalysis_",
+      "text": "Can AMD break the CUDA Moat? AMD Advancing AI 2026, Up to 105% Equity Rebate Discounts for OpenAI, Agentic Kernel Generation...",
+      "url": "https://x.com/SemiAnalysis_/status/2080814338642694484",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "business",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "AMD AI 进展与 CUDA 竞争分析"
+    },
+    {
+      "id": "e35a07c4",
+      "author": "@emollick",
+      "text": "This is a big jump in ARC-AGI-3. Claude Opus 5 from @AnthropicAI is the new SOTA on ARC-AGI-3: 30.2% The previous high score (7.8%) was set by GPT-5.6 Sol (Max)",
+      "url": "https://x.com/emollick/status/2080731915196194981",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "evals",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "Claude Opus 5在ARC-AGI-3上大幅领先至30.2%，新SOTA。"
+    },
+    {
+      "id": "8e02d2ba",
+      "author": "@HamelHusain",
+      "text": "Evals >>>> Vibes, especially now",
+      "url": "https://x.com/HamelHusain/status/2080823363761828273",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "evals",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "强调在Agent基准中，严格评估远胜主观感受。"
+    },
+    {
+      "id": "117cbe5",
+      "author": "@fal",
+      "text": "Real-time, playable worlds from a single sentence. @Alibaba_cloud Happy Oyster 1.0 is now available on fal... Adventure & Directing modes",
+      "url": "https://x.com/fal/status/2080707442883649857",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "models",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "实时生成可玩世界模型上线，支持交互式 AI 内容创作"
+    },
+    {
+      "id": "6241c9dc",
+      "author": "@levie",
+      "text": "Claude Opus 5 is out now, and it's a huge jump over Opus 4.8 on a wide number of capabilities. At Box, we've been testing Claude Opus 5 with the Box AI Agent... Due diligence (+17%): ... Life Sciences (+30%): ... Legal (+12%): ...",
+      "url": "https://x.com/levie/status/2080704871934931221",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "products",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Claude Opus 5 企业级基准实测数据，agentic 文档任务显著提升。"
+    },
+    {
+      "id": "b49cb94c",
+      "author": "@julien_c",
+      "text": "co-sign",
+      "url": "https://x.com/julien_c/status/2080685306110525731",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "open_source",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Hugging Face CTO 联署 NVIDIA 开放模型倡议，强调开源对安全与主权的重要性。"
+    },
+    {
+      "id": "58451cbf",
+      "author": "@levie",
+      "text": "Very happy to have Box sign this letter. We’re big believers in the power of open weights AI. ... Open weights accelerates the diffusion of AI across the economy...",
+      "url": "https://x.com/levie/status/2080675210991443982",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "open_source",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Box CEO 详解 open weights 对垂直领域创新与成本优化的价值。"
+    },
+    {
+      "id": "799a953c",
+      "author": "@__tinygrad__",
+      "text": "It's a good timeline when the company that made modern AI possible supports empowering others. I suspect the companies not aligned with this narrative will increasingly find themselves isolated from the rest of the world.",
+      "url": "https://x.com/__tinygrad__/status/2080779231785812194",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "open_source",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "NVIDIA 支持开放模型，tinygrad 视角解读行业开放趋势。"
+    },
+    {
+      "id": "ba9e4cf3",
+      "author": "@aiDotEngineer",
+      "text": "The eval has to change as fast as the agent it grades: Gemini lost $6,000 running a real café in Stockholm, so Andon Labs laid it off and hired another agent Arize's agent reads production traces off the filesystem and opens the PR before you wake up",
+      "url": "https://x.com/aiDotEngineer/status/2080747030297583947",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "evals",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "实时 agent eval 案例，强调评估需随代理快速迭代。"
+    },
+    {
+      "id": "a7720a45",
+      "author": "@AskPerplexity",
+      "text": "Computer can now start and manage other Computer sessions from a prompt. In Slack, web, or other Computer surfaces, ask Computer to split work into separate sessions, and it creates each one and replies with links. Live now on the web for all Computer users.",
+      "url": "https://x.com/AskPerplexity/status/2080639190543593913",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "agents",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Computer 支持多会话并行管理，提升自主工作流能力。"
+    },
+    {
+      "id": "6e323674",
+      "author": "@googleaidevs",
+      "text": "👾Watch a multi-agent system built with Gemini 3.6 Flash iterate on playable game design in real time. It uses Gemini 3.5 Flash-Lite to design, construct, and verify puzzle challenges based on live player actions balancing speed and reasoning in a fast-paced environment.",
+      "url": "https://x.com/googleaidevs/status/2080749497337184759",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "agents",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Gemini 3.6 Flash 多代理实时迭代游戏设计演示"
+    },
+    {
+      "id": "2b1c83f",
+      "author": "@basecampbernie",
+      "text": "Revisiting my Minisforum UM790 Pro - 64GB DDR5. Running @poolsideai Laguna-S 2.1 118B-A8B IQ2_M quant by @UnslothAI. This has no right working this good.",
+      "url": "https://x.com/basecampbernie/status/2080471169267077294",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "infra",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "本地 118B MoE 模型在消费级硬件流畅运行"
+    },
+    {
+      "id": "9df45b26",
+      "author": "@JamesZmSun",
+      "text": "Now your agent in the cloud can do work on authenticated websites! Just take over the cloud browser from ChatGPT Work, login, and it will persist so you don’t have to do it again.",
+      "url": "https://x.com/JamesZmSun/status/2080714734190629174",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "agents",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "ChatGPT Work Agent 支持持久登录，提升真实任务自动化"
+    },
+    {
+      "id": "50d1ab93",
+      "author": "@nvidia",
+      "text": "Welcome @jensenhuang 💚 The future of AI leadership needs both frontier closed models and frontier open models.",
+      "url": "https://x.com/nvidia/status/2080686579400765517",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "open_source",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "NVIDIA官方支持开源前沿模型，行业方向标"
+    },
+    {
+      "id": "e5f5859a",
+      "author": "@mathemagic1an",
+      "text": "Very smart model - clear increase in capabilities over Opus 4.x. Eloquent and clever. Great release from Anthropic 👏 now live across all customers! (Claude Opus 5)",
+      "url": "https://x.com/mathemagic1an/status/2080726184376332370",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "models",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Claude Opus 5新能力落地，企业级AI coding升级"
+    },
+    {
+      "id": "9588201",
+      "author": "@shannholmberg",
+      "text": "how @mattpocockuk's 7-line skill bundle improve AI context gathering its a grill-first workflow for Claude Code (or any other harness), it interview you before agents start working on your codebase to ensure you have the most accurate context",
+      "url": "https://x.com/shannholmberg/status/2080659768688169323",
+      "hasValidUrl": true,
+      "publishedAt": "1d ago",
+      "topic": "coding",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Claude Code实用技能集，提升agent上下文准确性和工作流。"
+    },
+    {
+      "id": "1bce3320",
+      "author": "@OpenAI",
+      "text": "ChatGPT Voice is now in the desktop app. Control your computer and direct multiple agents running in ChatGPT Work or Codex, using just your voice. It's powered by GPT-Live, so it can speak, listen, and coordinate work in the app at the same time. Rolling out globally today on macOS and Windows to Plus, Pro, Business, E",
+      "url": "https://x.com/OpenAI/status/2080378182469857576",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "agents",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "语音驱动多Agent桌面控制，显著提升生产力。"
+    },
+    {
+      "id": "a2c330f6",
+      "author": "@GoogleDeepMind",
+      "text": "Gemini 3.5 Flash Cyber is our specialized, lightweight model built to help security teams spot and patch vulnerabilities before they can be exploited. By combining speed and efficiency, 3.5 Flash Cyber lets defense specialists check significantly more code paths.",
+      "url": "https://x.com/GoogleDeepMind/status/2080321516814647630",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "models",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "专用安全模型发布，漏洞检测效率提升"
+    },
+    {
+      "id": "7af37643",
+      "author": "@GeminiApp",
+      "text": "Gemini Spark is now also starting to roll out to Google AI Pro subscribers in the U.S., and we'll be bringing it to AI Pro subscribers in more countries soon.",
+      "url": "https://x.com/GeminiApp/status/2080401074083799229",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "agents",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "Gemini 个人 AI Agent 向 Pro 用户开放"
+    },
+    {
+      "id": "f1421f67",
+      "author": "@AndrewYNg",
+      "text": "Announcing OpenWorker! An open-source agent that doesn't just chat with you, but delivers finished work -- like hand you a polished document, send a slack message, or update a calendar entry. ... Try it out: https://t.co/P0mGnI1o31 (requires your own API key) Source code:",
+      "url": "https://x.com/AndrewYNg/status/2080333504446108104",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "agents",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "开源本地Agent框架，支持多模型，专注交付实际工作成果。"
+    },
+    {
+      "id": "167397fa",
+      "author": "@_lewtun",
+      "text": "5 trillion tokens of the finest code data just landed on the Hub 👀",
+      "url": "https://x.com/_lewtun/status/2080261101233598894",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "open_source",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "The Stack v3发布：114TB、5T tokens最大开源代码数据集。"
+    },
+    {
+      "id": "7562ef7",
+      "author": "@lvwerra",
+      "text": "Introducing: The Stack v3\nOne thing that became very clear over the last few days: we need great open code models for cyber defence. This is the dataset they will be built on!\nAnd it's a behemoth: 5T tokens ready to train and 120TB raw data.\nDownload: https://huggingface.co/datasets/HuggingFaceCode/stack-v3-train",
+      "url": "https://x.com/lvwerra/status/2080268415697047852",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "open_source",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "5T token 开源代码数据集，直接支撑下一代代码模型与网络安全应用。"
+    },
+    {
+      "id": "9e3b3e55",
+      "author": "@BoWang87",
+      "text": "Check this out: we are open-sourcing the largest Pan-Cancer CT Segmentation Dataset! Join us in the CT challenge! @JunMa_AI4Health",
+      "url": "https://x.com/BoWang87/status/2080337107579711731",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "open_source",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "最大泛癌 CT 分割数据集开源，17000+ 病例"
+    },
+    {
+      "id": "53a2f036",
+      "author": "@dzhng",
+      "text": "Cheap open source models with frontier advisors is a surprisingly effective combo - Kimi with Fable advisors just beat pure Fable in both task completion rate AND cost / task. Just tested this in SWE-Bench multilingual with a subset of 50 tasks.",
+      "url": "https://x.com/dzhng/status/2080402165093507214",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "evals",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "开源模型+前沿顾问在 SWE-Bench 胜出且更低成本"
+    },
+    {
+      "id": "a9b10ca7",
+      "author": "@poolsideai",
+      "text": "“I’d rather live in a world that has 100 foundation model companies than a world that has five.” @eisokant joined our friends at @latentspacepod for a properly nerdy conversation about the Model Factory, what Laguna S taught us, open weights, and the path from coding agents to AGI.",
+      "url": "https://x.com/poolsideai/status/2080348668356374661",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "agents",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "编码Agent到AGI路径讨论，开权重与模型工厂洞见"
+    },
+    {
+      "id": "e799319a",
+      "author": "@ScaleAILabs",
+      "text": "Today we're releasing the complete EnigmaEval dataset, our benchmark built from sophisticated puzzle-hunt problems in partnership with @CAIS. We believe open access to EnigmaEval will help push reasoning and evaluation research forward. So far, Claude Fable 5 and GPT-5.6 Sol take the lead.",
+      "url": "https://x.com/ScaleAILabs/status/2080363980254544221",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "evals",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "新开源推理基准，含复杂谜题任务，推动agent评估研究。"
+    },
+    {
+      "id": "fd93a074",
+      "author": "@shannholmberg",
+      "text": "paper is building design infrastructure for agents and just raised $34M I've been using Paper for 4 months now and it completely replaced my design workflow... it works better than Figma MCP",
+      "url": "https://x.com/shannholmberg/status/2080389715145138331",
+      "hasValidUrl": true,
+      "publishedAt": "2d ago",
+      "topic": "products",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Agent驱动设计工具获3400万美元融资，Vercel等已在用。"
+    },
+    {
+      "id": "a191ac30",
+      "author": "@GoogleResearch",
+      "text": "Today we share an in-situ comparative research study of a set of experimental prototype AI agents exploring how conversational AI might conduct end-to-end symptom interviews & differential diagnostic assessment...",
+      "url": "https://x.com/GoogleResearch/status/2080044669208350924",
+      "hasValidUrl": true,
+      "publishedAt": "3d ago",
+      "topic": "agents",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "Google 发布 AI 代理症状诊断研究"
+    },
+    {
+      "id": "82d8eb88",
+      "author": "@aidangomez",
+      "text": "It's clear that AI is going to become the most potent cyber weapon... Securing AI sovereignty has become essential",
+      "url": "https://x.com/aidangomez/status/2080028751065219375",
+      "hasValidUrl": true,
+      "publishedAt": "3d ago",
+      "topic": "research",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "AI 安全主权讨论，强调防御与进攻双重能力"
+    },
+    {
+      "id": "b0612037",
+      "author": "@wandb",
+      "text": "🗣️ Just ask ARIA! Why the loss spiked. Which run won. Whether a teammate already tried it. What to launch next. An AI research agent built into W&B, your project context already loaded. Public preview is live and in your workspace now.",
+      "url": "https://x.com/wandb/status/2080032967376924858",
+      "hasValidUrl": true,
+      "publishedAt": "3d ago",
+      "topic": "agents",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "W&B 内置 AI 研究代理上线预览，加速实验分析与决策。"
+    },
+    {
+      "id": "e7de979c",
+      "author": "@IcarusHermes",
+      "text": "der Wald is a project that works like a forest with an archive underneath it. the archive is an infinite wiki, every page generates from its url... nine categories, and each one has its own wallet on robinhood chain with a simple automated strategy.",
+      "url": "https://x.com/IcarusHermes/status/2079746291370799225",
+      "hasValidUrl": true,
+      "publishedAt": "3d ago",
+      "topic": "agents",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "多代理在链上自主交易与归档，探索自主工作流新范式"
+    },
+    {
+      "id": "146c73dd",
+      "author": "@logangraham",
+      "text": "1. Not surprising -- we've seen sandbox escapes before (Alibaba, Mythos) 2. Very cool that HF used models to defend... 6. Things could go very fast from here",
+      "url": "https://x.com/logangraham/status/2079993745282658350",
+      "hasValidUrl": true,
+      "publishedAt": "3d ago",
+      "topic": "research",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "分析模型越狱与防御事件，对齐与安全动态更新"
+    },
+    {
+      "id": "f7ad3607",
+      "author": "@OpenAINewsroom",
+      "text": "OpenAI is announcing $17 million in new commitments to support researchers participating in the U.S. Department of Energy’s Genesis Mission—expanding access to frontier AI and technical collaboration to accelerate American scientific discovery.",
+      "url": "https://x.com/OpenAINewsroom/status/2079997887275323436",
+      "hasValidUrl": true,
+      "publishedAt": "3d ago",
+      "topic": "research",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "OpenAI资助国家科研项目，前沿AI加速科学发现"
+    },
+    {
+      "id": "a310bd7c",
+      "author": "@maximelabonne",
+      "text": "Wow, very good model! (local model has less than 3.14B params)",
+      "url": "https://x.com/maximelabonne/status/2079952040294281253",
+      "hasValidUrl": true,
+      "publishedAt": "3d ago",
+      "topic": "open_source",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "超小参数本地模型性能突破，边缘部署新可能"
+    },
+    {
+      "id": "80a2ee2f",
+      "author": "@sama",
+      "text": "we had a significant security incident during evaluation of our models. we are sharing what we have learned so far. thanks to @huggingface for the partnership on this. https://openai.com/index/hugging-face-model-evaluation-security-incident/",
+      "url": "https://x.com/sama/status/2079661132302995790",
+      "hasValidUrl": true,
+      "publishedAt": "4d ago",
+      "topic": "research",
+      "tier": "S",
+      "group": "S 级",
+      "whyItMatters": "OpenAI 模型评估安全事件复盘，行业安全警示。"
+    },
+    {
+      "id": "d922b2fb",
+      "author": "@lateinteraction",
+      "text": "a thought experiment we left out of the blog... suppose you take the best pre-Transformer LSTM and tune+scale up the modern pre-/post-training recipe on it with a modern harness, would that or would it not produce a far better AI assistant...",
+      "url": "https://x.com/lateinteraction/status/2079649592870682982",
+      "hasValidUrl": true,
+      "publishedAt": "4d ago",
+      "topic": "research",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "Harness 与 RLM 提升 Transformer 泛化能力"
+    },
+    {
+      "id": "b296bc7f",
+      "author": "@GoogleAIStudio",
+      "text": "introducing Gemini 3.6 Flash: our latest model that balances speed with intelligence to deliver strong performance in agentic and multimodal tasks",
+      "url": "https://x.com/GoogleAIStudio/status/2079589824944566763",
+      "hasValidUrl": true,
+      "publishedAt": "4d ago",
+      "topic": "models",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "新 Gemini 3.6 Flash 模型发布，优化 agentic 任务"
+    },
+    {
+      "id": "ab429f0d",
+      "author": "@danielhanchen",
+      "text": "My 2hr workshop on Open vs Closed models, reward hacking, benchmaxxing & RL is out! ... Details: 1. Closed vs open models ... 3. METR, WeirdML... benchmarks ... 5. Common examples for reward hacking...",
+      "url": "https://x.com/danielhanchen/status/2079573784672211051",
+      "hasValidUrl": true,
+      "publishedAt": "4d ago",
+      "topic": "research",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "深度讨论开源vs闭源、基准作弊、奖励黑客等核心问题。"
+    },
+    {
+      "id": "581be29d",
+      "author": "@awnihannun",
+      "text": "GLM 5.2 is MIT",
+      "url": "https://x.com/awnihannun/status/2079580348426654096",
+      "hasValidUrl": true,
+      "publishedAt": "4d ago",
+      "topic": "models",
+      "tier": "A",
+      "group": "A 级",
+      "whyItMatters": "GLM 5.2模型采用MIT开源许可，降低使用门槛。"
+    },
+    {
+      "id": "bd5d92a3",
+      "author": "@GoogleAI",
+      "text": "Today, we're introducing not one but TWO new models... Gemini 3.6 Flash... Gemini 3.5 Flash-Lite... Start building with these today via the Gemini API",
+      "url": "https://x.com/GoogleAI/status/2079589742535118985",
+      "hasValidUrl": true,
+      "publishedAt": "4d ago",
+      "topic": "models",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "新 Gemini 模型发布，专注 agentic workflows 与效率优化"
+    },
+    {
+      "id": "49eab9e9",
+      "author": "@GoogleAI",
+      "text": "Gemini 3.5 Flash Cyber ⚡🛡️ Built on top of 3.5 Flash... competitive performance on benchmarks like CyberGym... limited-access pilot for governments",
+      "url": "https://x.com/GoogleAI/status/2079617029473182132",
+      "hasValidUrl": true,
+      "publishedAt": "4d ago",
+      "topic": "models",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "专为代码安全设计的 Gemini 模型，支持漏洞发现与修复"
+    },
+    {
+      "id": "56f3ce09",
+      "author": "@AIatMeta",
+      "text": "SAM 3 and DINOv3 to automate image segmentation... compress 3D volume labeling from a month to ~15 minutes",
+      "url": "https://x.com/AIatMeta/status/2079614176725442912",
+      "hasValidUrl": true,
+      "publishedAt": "4d ago",
+      "topic": "research",
+      "tier": "B",
+      "group": "B 级",
+      "whyItMatters": "Meta 模型在科学发现中的实际应用，显著提升效率"
+    }
+  ]
+}
