@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-07-26",
+      "generatedAt": "2026-07-26T04:29:52.415Z",
+      "title": "Claude Opus 5 Leads Open-Weights Push",
+      "subtitle": "Opus 5 发布与开放权重联盟双线并进",
+      "mainTheme": "model_race",
+      "itemCount": 65,
+      "stats": {
+        "total": 65,
+        "withUrl": 65,
+        "sTier": 13,
+        "aTier": 17,
+        "bTier": 35,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-07-25",
       "generatedAt": "2026-07-25T04:15:20.488Z",
       "title": "Claude Opus 5 Matches Fable 5 at Half Price",
