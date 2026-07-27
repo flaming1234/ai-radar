@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-07-27",
+      "generatedAt": "2026-07-27T04:40:13.638Z",
+      "title": "Claude Opus 5 & Gemini 3.6 Flash Drop",
+      "subtitle": "新模型密集发布，agentic coding 与基准性能全面提升",
+      "mainTheme": "model_race",
+      "itemCount": 67,
+      "stats": {
+        "total": 67,
+        "withUrl": 67,
+        "sTier": 14,
+        "aTier": 17,
+        "bTier": 36,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-07-26",
       "generatedAt": "2026-07-26T04:29:52.415Z",
       "title": "Claude Opus 5 Leads Open-Weights Push",
