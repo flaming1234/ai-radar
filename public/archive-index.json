@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-07-28",
+      "generatedAt": "2026-07-28T04:14:32.345Z",
+      "title": "Kimi K3 & Claude Opus 5: Open Weights Close Gap",
+      "subtitle": "Kimi K3 2.8T MoE 开源权重发布，多工具集成落地",
+      "mainTheme": "model_race",
+      "itemCount": 69,
+      "stats": {
+        "total": 69,
+        "withUrl": 69,
+        "sTier": 13,
+        "aTier": 18,
+        "bTier": 38,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-07-27",
       "generatedAt": "2026-07-27T04:40:13.638Z",
       "title": "Claude Opus 5 & Gemini 3.6 Flash Drop",
