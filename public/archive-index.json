@@ -1,6 +1,24 @@
 {
   "archive": [
     {
+      "date": "2026-07-29",
+      "generatedAt": "2026-07-29T04:15:24.518Z",
+      "title": "Kimi K3 Open Weights & Claude Opus 5 Launch",
+      "subtitle": "Kimi K3开源权重+Opus 5发布主导AI工程动态",
+      "mainTheme": "model_race",
+      "itemCount": 65,
+      "stats": {
+        "total": 65,
+        "withUrl": 65,
+        "sTier": 13,
+        "aTier": 20,
+        "bTier": 32,
+        "eventTier": 0,
+        "okBatches": 12,
+        "failedBatches": 0
+      }
+    },
+    {
       "date": "2026-07-28",
       "generatedAt": "2026-07-28T04:14:32.345Z",
       "title": "Kimi K3 & Claude Opus 5: Open Weights Close Gap",
