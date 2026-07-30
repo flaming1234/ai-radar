@@ -572,5 +572,598 @@
       "relations": 8,
       "storylines": 4
     }
+  },
+  {
+    "type": "日报",
+    "topic": "AI",
+    "src": "现场自动聚合 · 未核实",
+    "ic": "i-doc",
+    "h": 8,
+    "auto": true,
+    "unverified": true,
+    "format": "storyline",
+    "aggregatedAt": "2026-07-29",
+    "title": "AI 每日雷达 · 2026-07-29",
+    "time": "今天",
+    "sub": "开源Agent技能框架（ECC、superpowers）和知识转化工具（book-to-skill）成为GitHub热点，反映社区从‘用Agent’转向‘定义Agent工作方法论’。",
+    "summary": "今日AI领域最值得深挖的角度是：开源Agent工具链正在从单点技能走向系统化方法论，而企业级AI治理与安全风险成为社区讨论的焦点。GitHub上多个高星项目（ECC、superpowers、book-to-skill）代表了Agent工程从‘写脚本’到‘定义框架’的范式转变；与此同时，企业数据泄露、Agent支付权限、运行时治理等话题在Reddit上引发大量讨论，表明行业落地已进入‘踩坑与补课’阶段。对做Hyle/Company OS/金融AI的人而言，这意味着需要同时关注Agent技能编排的标准化趋势和合规安全的基础设施建设。",
+    "bullets": [
+      "开源Agent技能框架（ECC、superpowers）和知识转化工具（book-to-skill）成为GitHub热点，反映社区从‘用Agent’转向‘定义Agent工作方法论’。",
+      "企业AI治理讨论升温：数据泄露、员工培训‘Don't Do Dumb Stuff with AI’、Agent支付权限等话题表明，AI落地已进入安全与合规的深水区。",
+      "OpenAI发布Codex Security CLI/SDK，以及GPT-5.6 Sol用量优化，显示模型厂商在主动回应企业安全与成本痛点。",
+      "DeepMind解散AlphaFold团队转向Gemini和Agent，引发对‘研究优先’实验室未来的讨论，折射行业资源向Agent应用倾斜。"
+    ],
+    "storylines": [
+      {
+        "id": "open-source-agent-framework-method",
+        "title": "开源Agent技能框架崛起：从工具到方法论的范式转变",
+        "isNew": true,
+        "categories": [
+          "tech_trend",
+          "gh_trending"
+        ],
+        "chain": [
+          {
+            "title": "ECC（Agent harness performance optimization system）登顶GitHub趋势，235k stars",
+            "kind": "oss",
+            "entity": "ECC",
+            "by": "affaan-m",
+            "relPrev": null,
+            "sources": [
+              "https://github.com/affaan-m/ECC"
+            ]
+          },
+          {
+            "title": "superpowers（An agentic skills framework & software development methodology）获262k stars",
+            "kind": "oss",
+            "entity": "superpowers",
+            "by": "obra",
+            "relPrev": "same_day",
+            "sources": [
+              "https://github.com/obra/superpowers"
+            ]
+          },
+          {
+            "title": "book-to-skill（将技术书PDF转为Claude Code skill）日增1428 stars",
+            "kind": "oss",
+            "entity": "book-to-skill",
+            "by": "virgiliojr94",
+            "relPrev": "same_day",
+            "sources": [
+              "https://github.com/virgiliojr94/book-to-skill"
+            ]
+          },
+          {
+            "title": "Matt Pocock的Agentic Coding教程被社区称为‘金矿’，强调codebase-architecture等技能",
+            "kind": "debate",
+            "entity": "",
+            "by": "Matt Pocock",
+            "relPrev": "echoes",
+            "sources": [
+              "https://www.reddit.com/r/claudecode/comments/1v90akt/matt_pocock_tutorials_on_agentic_codingai_are_a"
+            ]
+          }
+        ],
+        "narrative": "本周GitHub趋势清晰地指向一个方向：社区不再满足于单个Agent工具，而是开始构建系统化的技能框架和方法论。ECC定位为‘Agent harness性能优化系统’，覆盖Claude Code、Codex、Cursor等主流平台；superpowers则直接宣称是一种‘软件开发方法论’。book-to-skill将技术书籍转化为可复用的Claude Code技能，进一步降低了知识到Agent工作流的门槛。Matt Pocock的教程系列被Reddit用户称为‘金矿’，其强调的codebase-architecture和grill-with-docs等技能，与上述框架形成呼应——Agent工程正在从‘写提示词’走向‘定义可组合的技能单元’。",
+        "carryOver": null
+      },
+      {
+        "id": "enterprise-ai-governance-security",
+        "title": "企业AI治理进入深水区：数据泄露、员工培训与Agent权限成焦点",
+        "isNew": true,
+        "categories": [
+          "ai_enterprise_os",
+          "ai_finance"
+        ],
+        "chain": [
+          {
+            "title": "Reddit热议‘公司数据泄露到AI工具’，讨论DLP策略与员工行为管理",
+            "kind": "debate",
+            "entity": "",
+            "relPrev": null,
+            "sources": [
+              "https://www.reddit.com/r/msp/comments/1v8o6o2/company_data_leaking_into_ai_tools"
+            ]
+          },
+          {
+            "title": "新员工培训‘Don't Do Dumb Stuff with AI’引发sysadmin社区讨论",
+            "kind": "debate",
+            "entity": "",
+            "relPrev": "echoes",
+            "sources": [
+              "https://www.reddit.com/r/sysadmin/comments/1v9rzov/new_training_from_employer_dont_do_dumb_stuff"
+            ]
+          },
+          {
+            "title": "AI Agent需要自己的支付权限——Reddit讨论Mastercard Agent Pay与Agentic Token",
+            "kind": "debate",
+            "entity": "",
+            "relPrev": "echoes",
+            "sources": [
+              "https://www.reddit.com/r/ai_agents/comments/1v93jj5/ai_agents_are_going_to_need_their_own_payment",
+              "https://www.reddit.com/r/fintech/comments/1v8ek23/has_anyone_actually_handled_a_chargeback_from_an"
+            ]
+          },
+          {
+            "title": "Show HN: Tilde Pay——给AI Agent一个银行账户来支付",
+            "kind": "release",
+            "entity": "Tilde Pay",
+            "relPrev": "same_day",
+            "sources": [
+              "https://my.tildepay.ai/"
+            ]
+          },
+          {
+            "title": "缺失的运行时安全与治理层：AI Agent需要与人类员工同等的管控",
+            "kind": "debate",
+            "entity": "",
+            "relPrev": "echoes",
+            "sources": [
+              "https://www.reddit.com/r/ai_agents/comments/1v7simt/missing_runtime_security_and_governance_layer_for"
+            ]
+          }
+        ],
+        "narrative": "企业AI落地正从‘能不能用’转向‘怎么安全地用’。Reddit上多个高讨论度帖子指向同一个痛点：员工为节省时间随意使用AI工具导致数据泄露，而企业层面的DLP和培训往往滞后。sysadmin社区对‘Don't Do Dumb Stuff with AI’培训的讽刺性讨论，反映出治理手段的粗放。与此同时，Agent自主支付权限成为新议题——从Mastercard的Agent Pay到Tilde Pay的Show HN，行业正在探索Agent作为经济主体的身份与权限边界。这些讨论共同指向一个结论：企业AI治理需要从‘禁止’走向‘精细化管控’，包括运行时安全、数据标签、支付权限等基础设施。",
+        "carryOver": null
+      },
+      {
+        "id": "openai-codex-security-and-sol-optimization",
+        "title": "OpenAI回应企业安全与成本痛点：发布Codex Security SDK并优化Sol用量",
+        "isNew": true,
+        "categories": [
+          "model_dev",
+          "ai_enterprise_os"
+        ],
+        "chain": [
+          {
+            "title": "OpenAI发布Codex Security CLI和TypeScript SDK，用于发现、验证和修复代码漏洞",
+            "kind": "release",
+            "entity": "Codex Security",
+            "by": "OpenAI",
+            "relPrev": null,
+            "sources": [
+              "https://x.com/thsottiaux/status/2082241164850364555"
+            ]
+          },
+          {
+            "title": "GPT-5.6 Sol用量限制重置，预计使用时长延长约18%",
+            "kind": "update",
+            "entity": "GPT-5.6 Sol",
+            "by": "OpenAI",
+            "relPrev": "same_day",
+            "sources": [
+              "https://x.com/thsottiaux/status/2082317452755751098"
+            ]
+          },
+          {
+            "title": "OpenAI宣布Project Camellia在佐治亚州建设AI基础设施",
+            "kind": "update",
+            "entity": "Project Camellia",
+            "by": "OpenAI",
+            "relPrev": "same_day",
+            "sources": [
+              "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community"
+            ]
+          }
+        ],
+        "narrative": "OpenAI在同一天内密集发布多项更新，核心围绕企业级安全与成本控制。Codex Security SDK直接回应了企业代码安全审计的需求，允许在CI中运行安全检查。同时，GPT-5.6 Sol的用量优化（预计延长18%）是对用户‘用量过快’反馈的直接修复，@thsottiaux在X上明确表示‘没有减少任何订阅计划的用量’。Project Camellia则展示了OpenAI在基础设施层面的长期投入。这些动作表明，OpenAI正在积极修复企业用户的信任与体验问题。",
+        "carryOver": null
+      },
+      {
+        "id": "deepmind-alphafold-dismantle-research-shift",
+        "title": "DeepMind解散AlphaFold团队：研究优先实验室的终结？",
+        "isNew": true,
+        "categories": [
+          "new_thought"
+        ],
+        "chain": [
+          {
+            "title": "Google DeepMind解散Nobel奖级AlphaFold团队，人才流向Gemini和Agent项目",
+            "kind": "update",
+            "entity": "Google DeepMind",
+            "relPrev": null,
+            "sources": [
+              "https://www.reddit.com/r/singularity/comments/1v9mq82/google_deepmind_dismantles_nobelwinning_alphafold"
+            ]
+          },
+          {
+            "title": "Reddit讨论：DeepMind是否还能保持研究优先实验室的身份",
+            "kind": "debate",
+            "entity": "",
+            "relPrev": "echoes",
+            "sources": [
+              "https://www.reddit.com/r/singularity/comments/1v9mq82/google_deepmind_dismantles_nobelwinning_alphafold"
+            ]
+          }
+        ],
+        "narrative": "Google DeepMind解散AlphaFold团队的消息在Reddit引发激烈讨论。AlphaFold作为Nobel奖级成果，其团队被拆解并转向Gemini和AI Agent，被社区视为‘研究优先’文化向产品化妥协的标志性事件。评论中既有对DeepMind未来定位的担忧，也有‘资源向应用倾斜是必然’的现实主义声音。这一事件与OpenAI、Meta等公司的人才流动趋势形成共振，暗示整个行业正在经历从‘探索性研究’到‘工程化落地’的资源配置转变。",
+        "carryOver": null
+      }
+    ],
+    "scattered": [
+      {
+        "note": "Kimi K3登顶Arena前端代码排行榜，社区讨论其是否蒸馏自Fable，Reddit用户反驳称时间线不成立",
+        "category": "model_dev",
+        "sources": [
+          "https://www.reddit.com/r/localllama/comments/1v4moxy/the_llm_distillation_process_simplified_for",
+          "https://www.youtube.com/watch?v=oCKJsPJan38"
+        ]
+      },
+      {
+        "note": "DeepSeek V4 Flash在AMD Ryzen AI MAX+ 395上达到32 tok/s，但8k上下文限制引发讨论",
+        "category": "model_dev",
+        "sources": [
+          "https://www.reddit.com/r/localllama/comments/1v9100b/deepseek_v4_flash_up_to_32_toks_on_amd_ryzen_ai"
+        ]
+      },
+      {
+        "note": "NeurIPS 2026审稿人发现AI生成的 rebuttal 和论文，引发学术诚信讨论",
+        "category": "papers",
+        "sources": [
+          "https://www.reddit.com/r/machinelearning/comments/1v90r9r/neurips_2026_reviewer_aigenerated_rebuttals_and"
+        ]
+      },
+      {
+        "note": "开源AI阵营 vs 闭源AI的争论持续，Reddit帖子‘反开源AI游说团体已远远落后’获高赞",
+        "category": "new_thought",
+        "sources": [
+          "https://www.reddit.com/r/localllama/comments/1v5g4tl/it_appears_that_the_anti_opensource_ai_lobby_is"
+        ]
+      },
+      {
+        "note": "@swyx 指出AI人才市场出现极端分化：AI-native个人贡献者牛市，管理层熊市",
+        "category": "tech_trend",
+        "sources": [
+          "https://x.com/swyx/status/2082199414656127010"
+        ]
+      },
+      {
+        "note": "arXiv新论文Kernel Forge：用Agent harness自动生成和优化CUDA内核",
+        "category": "papers",
+        "sources": [
+          "https://arxiv.org/abs/2607.24762"
+        ]
+      },
+      {
+        "note": "arXiv新论文FinAbstain：不确定性校准的多模态RAG用于选择性金融预测",
+        "category": "ai_finance",
+        "sources": [
+          "https://arxiv.org/abs/2607.24875"
+        ]
+      },
+      {
+        "note": "arXiv新论文GAUGE：无黄金答案的Agent构建金融模型评分框架",
+        "category": "ai_finance",
+        "sources": [
+          "https://arxiv.org/abs/2607.24889"
+        ]
+      },
+      {
+        "note": "微软开源VibeVoice：前沿语音AI，获51k stars",
+        "category": "gh_trending",
+        "sources": [
+          "https://github.com/microsoft/VibeVoice"
+        ]
+      },
+      {
+        "note": "阿里巴巴开源open-code-review：混合架构代码审查工具，日增918 stars",
+        "category": "gh_trending",
+        "sources": [
+          "https://github.com/alibaba/open-code-review"
+        ]
+      },
+      {
+        "note": "Hugging Face开源speech-to-speech：用开源模型构建本地语音Agent",
+        "category": "gh_trending",
+        "sources": [
+          "https://github.com/huggingface/speech-to-speech"
+        ]
+      },
+      {
+        "note": "MoonshotAI开源FlashKDA：高性能Kimi Delta Attention CUDA内核",
+        "category": "gh_trending",
+        "sources": [
+          "https://github.com/MoonshotAI/FlashKDA"
+        ]
+      },
+      {
+        "note": "OpenAI的‘流氓AI Agent’入侵Hugging Face事件引发安全讨论",
+        "category": "ai_enterprise_os",
+        "sources": [
+          "https://www.reddit.com/r/openai/comments/1v9gdw0/openais_rogue_ai_agent_hacked_more_than_just"
+        ]
+      },
+      {
+        "note": "世界最佳数学家获奖后宣布离开学术界加入OpenAI，社区反应复杂",
+        "category": "new_thought",
+        "sources": [
+          "https://www.reddit.com/r/artificial/comments/1v8aeto/the_worlds_best_mathematician_won_his_prize_this"
+        ]
+      },
+      {
+        "note": "Zuckerberg发文‘AI未来属于每个人’，Reddit社区讨论其开源立场",
+        "category": "new_thought",
+        "sources": [
+          "https://x.com/levie/status/2082168124733116537",
+          "https://www.reddit.com/r/localllama/comments/1v9fetk/zucks_opinion_the_ai_future_is_for_everyone"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "h": "主线 1 · 开源Agent技能框架崛起：从工具到方法论的范式转变",
+        "bullets": [
+          "ECC（Agent harness performance optimization system）登顶GitHub趋势，235k stars → superpowers（An agentic skills framework & software development methodology）获262k stars → book-to-skill（将技术书PDF转为Claude Code skill）日增1428 stars → Matt Pocock的Agentic Coding教程被社区称为‘金矿’，强调codebase-architecture等技能",
+          "本周GitHub趋势清晰地指向一个方向：社区不再满足于单个Agent工具，而是开始构建系统化的技能框架和方法论。ECC定位为‘Agent harness性能优化系统’，覆盖Claude Code、Codex、Cursor等主流平台；superpowers则直接宣称是一种‘软件开发方法论’。book-to-skill将技术书籍转化为可复用的Claude Code技能，进一步降低了知识到Agent工作流的门槛。Matt Pocock的教程系列被Reddit用户称为‘金矿’，其强调的codebase-architecture和grill-with-docs等技能，与上述框架形成呼应——Agent工程正在从‘写提示词’走向‘定义可组合的技能单元’。"
+        ]
+      },
+      {
+        "h": "主线 2 · 企业AI治理进入深水区：数据泄露、员工培训与Agent权限成焦点",
+        "bullets": [
+          "Reddit热议‘公司数据泄露到AI工具’，讨论DLP策略与员工行为管理 → 新员工培训‘Don't Do Dumb Stuff with AI’引发sysadmin社区讨论 → AI Agent需要自己的支付权限——Reddit讨论Mastercard Agent Pay与Agentic Token → Show HN: Tilde Pay——给AI Agent一个银行账户来支付 → 缺失的运行时安全与治理层：AI Agent需要与人类员工同等的管控",
+          "企业AI落地正从‘能不能用’转向‘怎么安全地用’。Reddit上多个高讨论度帖子指向同一个痛点：员工为节省时间随意使用AI工具导致数据泄露，而企业层面的DLP和培训往往滞后。sysadmin社区对‘Don't Do Dumb Stuff with AI’培训的讽刺性讨论，反映出治理手段的粗放。与此同时，Agent自主支付权限成为新议题——从Mastercard的Agent Pay到Tilde Pay的Show HN，行业正在探索Agent作为经济主体的身份与权限边界。这些讨论共同指向一个结论：企业AI治理需要从‘禁止’走向‘精细化管控’，包括运行时安全、数据标签、支付权限等基础设施。"
+        ]
+      },
+      {
+        "h": "主线 3 · OpenAI回应企业安全与成本痛点：发布Codex Security SDK并优化Sol用量",
+        "bullets": [
+          "OpenAI发布Codex Security CLI和TypeScript SDK，用于发现、验证和修复代码漏洞 → GPT-5.6 Sol用量限制重置，预计使用时长延长约18% → OpenAI宣布Project Camellia在佐治亚州建设AI基础设施",
+          "OpenAI在同一天内密集发布多项更新，核心围绕企业级安全与成本控制。Codex Security SDK直接回应了企业代码安全审计的需求，允许在CI中运行安全检查。同时，GPT-5.6 Sol的用量优化（预计延长18%）是对用户‘用量过快’反馈的直接修复，@thsottiaux在X上明确表示‘没有减少任何订阅计划的用量’。Project Camellia则展示了OpenAI在基础设施层面的长期投入。这些动作表明，OpenAI正在积极修复企业用户的信任与体验问题。"
+        ]
+      },
+      {
+        "h": "主线 4 · DeepMind解散AlphaFold团队：研究优先实验室的终结？",
+        "bullets": [
+          "Google DeepMind解散Nobel奖级AlphaFold团队，人才流向Gemini和Agent项目 → Reddit讨论：DeepMind是否还能保持研究优先实验室的身份",
+          "Google DeepMind解散AlphaFold团队的消息在Reddit引发激烈讨论。AlphaFold作为Nobel奖级成果，其团队被拆解并转向Gemini和AI Agent，被社区视为‘研究优先’文化向产品化妥协的标志性事件。评论中既有对DeepMind未来定位的担忧，也有‘资源向应用倾斜是必然’的现实主义声音。这一事件与OpenAI、Meta等公司的人才流动趋势形成共振，暗示整个行业正在经历从‘探索性研究’到‘工程化落地’的资源配置转变。"
+        ]
+      },
+      {
+        "h": "零散信号",
+        "bullets": [
+          "Kimi K3登顶Arena前端代码排行榜，社区讨论其是否蒸馏自Fable，Reddit用户反驳称时间线不成立（模型脉络）",
+          "DeepSeek V4 Flash在AMD Ryzen AI MAX+ 395上达到32 tok/s，但8k上下文限制引发讨论（模型脉络）",
+          "NeurIPS 2026审稿人发现AI生成的 rebuttal 和论文，引发学术诚信讨论（新论文热点）",
+          "开源AI阵营 vs 闭源AI的争论持续，Reddit帖子‘反开源AI游说团体已远远落后’获高赞（新思潮）",
+          "@swyx 指出AI人才市场出现极端分化：AI-native个人贡献者牛市，管理层熊市（技术趋势）",
+          "arXiv新论文Kernel Forge：用Agent harness自动生成和优化CUDA内核（新论文热点）",
+          "arXiv新论文FinAbstain：不确定性校准的多模态RAG用于选择性金融预测（金融 AI）",
+          "arXiv新论文GAUGE：无黄金答案的Agent构建金融模型评分框架（金融 AI）",
+          "微软开源VibeVoice：前沿语音AI，获51k stars（GitHub trending）",
+          "阿里巴巴开源open-code-review：混合架构代码审查工具，日增918 stars（GitHub trending）",
+          "Hugging Face开源speech-to-speech：用开源模型构建本地语音Agent（GitHub trending）",
+          "MoonshotAI开源FlashKDA：高性能Kimi Delta Attention CUDA内核（GitHub trending）",
+          "OpenAI的‘流氓AI Agent’入侵Hugging Face事件引发安全讨论（Company OS）",
+          "世界最佳数学家获奖后宣布离开学术界加入OpenAI，社区反应复杂（新思潮）",
+          "Zuckerberg发文‘AI未来属于每个人’，Reddit社区讨论其开源立场（新思潮）"
+        ]
+      }
+    ],
+    "ev": [
+      {
+        "who": "web",
+        "en": "GitHub trending：affaan-m/ECC",
+        "zh": "GitHub trending：affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "pt": "未核实线索"
+      },
+      {
+        "who": "web",
+        "en": "GitHub trending：obra/superpowers",
+        "zh": "GitHub trending：obra/superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "pt": "未核实线索"
+      },
+      {
+        "who": "web",
+        "en": "GitHub trending：virgiliojr94/book-to-skill",
+        "zh": "GitHub trending：virgiliojr94/book-to-skill",
+        "url": "https://github.com/virgiliojr94/book-to-skill",
+        "pt": "未核实线索"
+      },
+      {
+        "who": "reddit",
+        "en": "Matt Pocock Tutorials On Agentic Coding/AI are A GOLDMINE",
+        "zh": "Matt Pocock Tutorials On Agentic Coding/AI are A GOLDMINE",
+        "url": "https://www.reddit.com/r/claudecode/comments/1v90akt/matt_pocock_tutorials_on_agentic_codingai_are_a",
+        "pt": "未核实线索"
+      },
+      {
+        "who": "reddit",
+        "en": "Company data leaking into AI tools",
+        "zh": "Company data leaking into AI tools",
+        "url": "https://www.reddit.com/r/msp/comments/1v8o6o2/company_data_leaking_into_ai_tools",
+        "pt": "未核实线索"
+      },
+      {
+        "who": "reddit",
+        "en": "New training from employer: \"Don't Do Dumb Stuff with AI\"",
+        "zh": "New training from employer: \"Don't Do Dumb Stuff with AI\"",
+        "url": "https://www.reddit.com/r/sysadmin/comments/1v9rzov/new_training_from_employer_dont_do_dumb_stuff",
+        "pt": "未核实线索"
+      },
+      {
+        "who": "reddit",
+        "en": "AI agents are going to need their own payment permissions",
+        "zh": "AI agents are going to need their own payment permissions",
+        "url": "https://www.reddit.com/r/ai_agents/comments/1v93jj5/ai_agents_are_going_to_need_their_own_payment",
+        "pt": "未核实线索"
+      },
+      {
+        "who": "reddit",
+        "en": "Has anyone actually handled a chargeback from an AI agent purchase yet?",
+        "zh": "Has anyone actually handled a chargeback from an AI agent purchase yet?",
+        "url": "https://www.reddit.com/r/fintech/comments/1v8ek23/has_anyone_actually_handled_a_chargeback_from_an",
+        "pt": "未核实线索"
+      },
+      {
+        "who": "web",
+        "en": "Show HN: Tilde Pay – Give your AI agent a bank account to pay for things",
+        "zh": "Show HN: Tilde Pay – Give your AI agent a bank account to pay for things",
+        "url": "https://my.tildepay.ai/",
+        "pt": "未核实线索"
+      },
+      {
+        "who": "reddit",
+        "en": "Missing runtime security and governance layer for autonomous AI agents.",
+        "zh": "Missing runtime security and governance layer for autonomous AI agents.",
+        "url": "https://www.reddit.com/r/ai_agents/comments/1v7simt/missing_runtime_security_and_governance_layer_for",
+        "pt": "未核实线索"
+      },
+      {
+        "who": "x",
+        "en": "@thsottiaux：More opensource goodness. We have just released a CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities in your code. Scan repositories, review changes, track",
+        "zh": "@thsottiaux：More opensource goodness. We have just released a CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities in your code. Scan repositories, review changes, track",
+        "url": "https://x.com/thsottiaux/status/2082241164850364555",
+        "pt": "未核实线索"
+      },
+      {
+        "who": "x",
+        "en": "@thsottiaux：Hello people of Sol! I've reset usage limits for all ChatGPT Work and Codex users. Together with that, a quick update on GPT-5.6 Sol usage limits. Over the past few weeks, many of you have",
+        "zh": "@thsottiaux：Hello people of Sol! I've reset usage limits for all ChatGPT Work and Codex users. Together with that, a quick update on GPT-5.6 Sol usage limits. Over the past few weeks, many of you have",
+        "url": "https://x.com/thsottiaux/status/2082317452755751098",
+        "pt": "未核实线索"
+      },
+      {
+        "who": "web",
+        "en": "OpenAI News：Building AI infrastructure with the Effingham County community",
+        "zh": "OpenAI News：Building AI infrastructure with the Effingham County community",
+        "url": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community",
+        "pt": "未核实线索"
+      },
+      {
+        "who": "reddit",
+        "en": "Google DeepMind dismantles Nobel-winning AlphaFold team, loses top talent in major shift toward Gemini and AI Agents. Will it remain research-first lab?",
+        "zh": "Google DeepMind dismantles Nobel-winning AlphaFold team, loses top talent in major shift toward Gemini and AI Agents. Will it remain research-first lab?",
+        "url": "https://www.reddit.com/r/singularity/comments/1v9mq82/google_deepmind_dismantles_nobelwinning_alphafold",
+        "pt": "未核实线索"
+      },
+      {
+        "who": "reddit",
+        "en": "The LLM distillation process simplified for politicians:",
+        "zh": "The LLM distillation process simplified for politicians:",
+        "url": "https://www.reddit.com/r/localllama/comments/1v4moxy/the_llm_distillation_process_simplified_for",
+        "pt": "未核实线索"
+      },
+      {
+        "who": "youtube",
+        "en": "Kimi K3 | China's Free AI Models Are Getting INSANELY Good",
+        "zh": "Kimi K3 | China's Free AI Models Are Getting INSANELY Good",
+        "url": "https://www.youtube.com/watch?v=oCKJsPJan38",
+        "pt": "未核实线索"
+      },
+      {
+        "who": "reddit",
+        "en": "DeepSeek V4 Flash, up to 32 tok/s on AMD Ryzen AI MAX+ 395",
+        "zh": "DeepSeek V4 Flash, up to 32 tok/s on AMD Ryzen AI MAX+ 395",
+        "url": "https://www.reddit.com/r/localllama/comments/1v9100b/deepseek_v4_flash_up_to_32_toks_on_amd_ryzen_ai",
+        "pt": "未核实线索"
+      },
+      {
+        "who": "reddit",
+        "en": "NeurIPS 2026 Reviewer: AI-Generated Rebuttals (and Paper) [D]",
+        "zh": "NeurIPS 2026 Reviewer: AI-Generated Rebuttals (and Paper) [D]",
+        "url": "https://www.reddit.com/r/machinelearning/comments/1v90r9r/neurips_2026_reviewer_aigenerated_rebuttals_and",
+        "pt": "未核实线索"
+      },
+      {
+        "who": "reddit",
+        "en": "It appears that the anti opensource AI lobby is far outgunned already",
+        "zh": "It appears that the anti opensource AI lobby is far outgunned already",
+        "url": "https://www.reddit.com/r/localllama/comments/1v5g4tl/it_appears_that_the_anti_opensource_ai_lobby_is",
+        "pt": "未核实线索"
+      },
+      {
+        "who": "x",
+        "en": "@swyx：re: hiring right now it's a huge bull market for AI-native IC's/player-coaches it's a huge bear market for \"heads of X\" managers never seen such furious bifurcation. to oversimplify: 1 year expe",
+        "zh": "@swyx：re: hiring right now it's a huge bull market for AI-native IC's/player-coaches it's a huge bear market for \"heads of X\" managers never seen such furious bifurcation. to oversimplify: 1 year expe",
+        "url": "https://x.com/swyx/status/2082199414656127010",
+        "pt": "未核实线索"
+      },
+      {
+        "who": "web",
+        "en": "Kernel Forge: An Agent Harness for LLM-based Generation and Optimization of CUDA Kernels",
+        "zh": "Kernel Forge: An Agent Harness for LLM-based Generation and Optimization of CUDA Kernels",
+        "url": "https://arxiv.org/abs/2607.24762",
+        "pt": "未核实线索"
+      },
+      {
+        "who": "web",
+        "en": "FinAbstain: Uncertainty-Calibrated Multimodal RAG for Selective Financial Forecasting",
+        "zh": "FinAbstain: Uncertainty-Calibrated Multimodal RAG for Selective Financial Forecasting",
+        "url": "https://arxiv.org/abs/2607.24875",
+        "pt": "未核实线索"
+      },
+      {
+        "who": "web",
+        "en": "GAUGE: Grading Agent-Built Financial Models Without a Golden Answer",
+        "zh": "GAUGE: Grading Agent-Built Financial Models Without a Golden Answer",
+        "url": "https://arxiv.org/abs/2607.24889",
+        "pt": "未核实线索"
+      },
+      {
+        "who": "web",
+        "en": "GitHub trending：microsoft/VibeVoice",
+        "zh": "GitHub trending：microsoft/VibeVoice",
+        "url": "https://github.com/microsoft/VibeVoice",
+        "pt": "未核实线索"
+      },
+      {
+        "who": "web",
+        "en": "GitHub trending：alibaba/open-code-review",
+        "zh": "GitHub trending：alibaba/open-code-review",
+        "url": "https://github.com/alibaba/open-code-review",
+        "pt": "未核实线索"
+      },
+      {
+        "who": "web",
+        "en": "GitHub trending：huggingface/speech-to-speech",
+        "zh": "GitHub trending：huggingface/speech-to-speech",
+        "url": "https://github.com/huggingface/speech-to-speech",
+        "pt": "未核实线索"
+      },
+      {
+        "who": "web",
+        "en": "GitHub trending：MoonshotAI/FlashKDA",
+        "zh": "GitHub trending：MoonshotAI/FlashKDA",
+        "url": "https://github.com/MoonshotAI/FlashKDA",
+        "pt": "未核实线索"
+      },
+      {
+        "who": "reddit",
+        "en": "OpenAI’s Rogue AI Agent Hacked More Than Just Hugging Face",
+        "zh": "OpenAI’s Rogue AI Agent Hacked More Than Just Hugging Face",
+        "url": "https://www.reddit.com/r/openai/comments/1v9gdw0/openais_rogue_ai_agent_hacked_more_than_just",
+        "pt": "未核实线索"
+      },
+      {
+        "who": "reddit",
+        "en": "The world's best mathematician won his prize this week and immediately announced he's leaving academia for OpenAI. That landed differently than I expected.",
+        "zh": "The world's best mathematician won his prize this week and immediately announced he's leaving academia for OpenAI. That landed differently than I expected.",
+        "url": "https://www.reddit.com/r/artificial/comments/1v8aeto/the_worlds_best_mathematician_won_his_prize_this",
+        "pt": "未核实线索"
+      },
+      {
+        "who": "x",
+        "en": "@levie：Great piece and vision for AI from Zuckerberg https://t.co/kO0oQbx3CC https://t.co/XjwKwvBZIu",
+        "zh": "@levie：Great piece and vision for AI from Zuckerberg https://t.co/kO0oQbx3CC https://t.co/XjwKwvBZIu",
+        "url": "https://x.com/levie/status/2082168124733116537",
+        "pt": "未核实线索"
+      },
+      {
+        "who": "reddit",
+        "en": "Zuck's opinion: The AI Future Is for Everyone",
+        "zh": "Zuck's opinion: The AI Future Is for Everyone",
+        "url": "https://www.reddit.com/r/localllama/comments/1v9fetk/zucks_opinion_the_ai_future_is_for_everyone",
+        "pt": "未核实线索"
+      }
+    ],
+    "qualityNote": "第 2 稿过检",
+    "graphDelta": {
+      "entities": 16,
+      "events": 14,
+      "relations": 3,
+      "storylines": 4
+    }
   }
 ]

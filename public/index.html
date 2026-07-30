@@ -377,6 +377,12 @@
   .catsec-row .t2{flex:1;min-width:200px;line-height:1.55}
   .catsec-row a{font-family:var(--f-mono);font-size:9px;color:var(--secondary);text-decoration:none;border-bottom:1px solid var(--line-2)}
   .catsec-empty{grid-column:1/-1;font-family:var(--f-mono);font-size:9.5px;color:var(--muted);padding:9px 2px}
+  /* C：分类页顶部专属小图谱 */
+  .catgraph{position:relative;height:300px;margin-bottom:16px;border:1px solid var(--line);border-radius:var(--r-md);background:var(--glass);overflow:hidden}
+  .catgraph[hidden]{display:none}
+  .catgraph svg{width:100%;height:100%;display:block}
+  .catgraph .cg-title{position:absolute;top:10px;left:14px;font-family:var(--f-mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--secondary);pointer-events:none}
+  .catgraph .kg-node text{font-size:10px}
   @media(max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}.rwrap{grid-template-columns:1fr}.livebar{align-items:flex-start;flex-wrap:wrap;gap:7px 16px}.live-health{order:3;flex-basis:100%}.candidate-facts{grid-template-columns:1fr}.ep-cols{grid-template-columns:1fr}.kg-legend{margin-left:0}}
   @media(max-width:680px){
     .topbar{height:50px;padding:0 12px;gap:9px}
@@ -488,7 +494,11 @@
       </div>
       <div class="categorybar" id="categorybar" hidden></div>
       <div class="livebar" id="livebar" hidden></div>
-      <div class="scrollwrap"><div class="grid" id="grid"></div></div>
+      <div class="scrollwrap">
+        <!-- C：分类专属小图谱（只画该分类知识内容；无数据时整块隐藏） -->
+        <div class="catgraph" id="catGraph" hidden></div>
+        <div class="grid" id="grid"></div>
+      </div>
       <!-- P2：知识图谱整屏视图（与卡片流二选一切换） -->
       <div class="graphview" id="graphview">
         <div class="kg-topbar">
@@ -839,45 +849,18 @@ function render(){
   syncRadarHeader();
   syncLivebarVisibility();
   renderCategoryBar();
+  renderCatGraph(); // C：分类专属小图谱（不在 #grid 内，不受卡片重渲染影响）
   $('#cnt').textContent=t('count',rows.length);
   grid.className='grid'+(state.gridview==='list'?' list':'');
-  // ⑧ 口径（2026-07-30 三修）：分类页以候选卡片流为主；仅当该分类候选为 0 且日报/知识库有内容时，
-  // 空态改为直接列出这些内容（这样侧栏三层计数与页面内容一致）。
+  // A(2026-07-30)：分类页只显示候选卡片流。原"该分类内容来自日报与知识库"空态回填列表已整体删除——
+  // new_thought 等分类由采集层兜底规则保证有候选（server 读时重打标签）。
   if(!rows.length){
-    if(state.view==='radar'&&state.type==='现场'&&state.cat8!=='ai'){
-      const fallback=buildCatFallbackList();
-      if(fallback){grid.innerHTML=fallback;updatePublicAgentContext();return;}
-    }
     let empty=state.view==='mine'?(state.mineTab==='收藏'?t('noSaved'):t('noLiked')):t('noMatch');
     if(state.type==='现场')empty=state.cat8!=='ai'?(state.lang==='en'?'No live candidates in this category':'该分类暂无现场候选'):t('emptyAi');
     grid.className='';grid.innerHTML='<div class="emptywrap">'+esc(empty)+'</div>';updatePublicAgentContext();return;
   }
   grid.innerHTML=rows.map(cardHTML).join('');
   updatePublicAgentContext();
-}
-/* ⑧ 分类空态回填：候选为 0 时列出该分类在日报/知识库里的内容（一行一条，可跳转）。没有内容返回 '' */
-function buildCatFallbackList(){
-  const cat=state.cat8;
-  const rows=[];
-  DATA.forEach(d=>{
-    if(d.format!=='storyline')return;
-    (d.storylines||[]).forEach(s=>{if((s.categories||[]).includes(cat))rows.push(`<div class="catsec-row" data-open="${d.id}"><span class="d">${esc(d.aggregatedAt||'')}</span><span class="kind-chip">${state.lang==='en'?'Storyline':'主线'}</span><span class="t2">${esc(s.title)}</span></div>`);});
-    (d.scattered||[]).forEach(x=>{if(x.category===cat)rows.push(`<div class="catsec-row" data-open="${d.id}"><span class="d">${esc(d.aggregatedAt||'')}</span><span class="kind-chip">${state.lang==='en'?'Scattered':'零散'}</span><span class="t2">${esc(x.note)}</span></div>`);});
-  });
-  if(KG.index){
-    (KG.index.entities||[]).forEach(e=>(e.events||[]).forEach(ev=>{
-      if(ev.category!==cat)return;
-      rows.push(`<div class="catsec-row"><span class="d">${esc(ev.date)}</span><span class="kind-chip">${esc(KIND_LABEL[ev.kind]||ev.kind)}</span><span class="ent-link" data-entity-name="${esc(e.id)}">${esc(e.name)}</span><span class="t2">${esc(ev.title)}</span>${ev.source?`<a href="${esc(ev.source)}" target="_blank" rel="noreferrer">${state.lang==='en'?'source':'来源'} ↗</a>`:''}</div>`);
-    }));
-  }else if(!KG.error){
-    // 知识库未载入：先渲染日报层，载入后补齐
-    loadKG().then(()=>{if(state.cat8===cat&&state.mode==='cards'&&state.view==='radar')render();}).catch(()=>{});
-  }
-  if(!rows.length)return '';
-  const note=state.lang==='en'
-    ?'Content in this category comes from dailies and the knowledge base (the collection layer does not emit it directly).'
-    :'该分类的内容来自日报与知识库（采集层不直接产生此分类）。';
-  return `<div class="catsec"><div class="catsec-empty">${esc(note)}</div>${rows.join('')}</div>`;
 }
 /* 分类下钻折叠区："出自日报与知识库（N 条）"，默认收起；openByDefault=true（该分类候选为 0）时默认展开。
    展开后内含两小节：来自日报的主线 / 知识库事件（知识库未载入时异步补渲染）。 */
@@ -1400,6 +1383,51 @@ function renderStorylineWeekly(d){
   ensureKGThenRerender(d,renderStorylineWeekly);
 }
 
+/* ===== C：分类页顶部专属小图谱（复用图谱视觉，按 events[].category 过滤） ===== */
+let catSim=null;
+function renderCatGraph(){
+  const box=$('#catGraph');
+  const active=state.view==='radar'&&state.mode==='cards'&&state.type==='现场'&&state.cat8!=='ai';
+  if(!active){if(catSim){catSim.stop();catSim=null;}box.hidden=true;box.innerHTML='';return;}
+  if(!KG.loaded&&!KG.error){
+    // 知识库未载入：先隐藏，载入后重渲染（loadKG 有缓存，不会重复请求）
+    box.hidden=true;
+    loadKG().then(()=>{if(state.cat8!=='ai'&&state.mode==='cards')renderCatGraph();}).catch(()=>{});
+    return;
+  }
+  const cat=state.cat8;
+  const nodes=KG.index?(KG.index.entities||[]).filter(e=>(e.events||[]).some(ev=>ev.category===cat)).map(e=>({...e})):[];
+  if(!nodes.length||!window.d3){if(catSim){catSim.stop();catSim=null;}box.hidden=true;box.innerHTML='';return;} // 无知识数据/无 D3 → 整块不显示
+  if(catSim){catSim.stop();catSim=null;}
+  const idset=new Set(nodes.map(n=>n.id));
+  const semLinks=(KG.index.relations||[]).filter(r=>idset.has(r.from)&&idset.has(r.to)).map(r=>({...r,source:r.from,target:r.to}));
+  const coLinks=kgCooccurEdges().filter(e=>idset.has(e.from)&&idset.has(e.to)).map(e=>({...e,source:e.from,target:e.to}));
+  const links=[...semLinks,...coLinks];
+  box.hidden=false;
+  box.innerHTML=`<div class="cg-title">${esc(cat8Label(cat))} · ${state.lang==='en'?'knowledge graph':'知识图谱'}（${nodes.length}）</div>`;
+  const w=box.clientWidth||900,h=300;
+  const svg=d3.select(box).append('svg').attr('viewBox',`0 0 ${w} ${h}`);
+  const g=svg.append('g');
+  const link=g.append('g').selectAll('line').data(links).join('line').attr('class',d=>'kg-link'+(d.co?' co':''));
+  link.filter(d=>d.co).append('title').text(d=>`${state.lang==='en'?'Same storyline: ':'同主线：'}${d.storylines.join(' / ')}`);
+  const linkLabel=g.append('g').selectAll('text').data(semLinks).join('text').attr('class','kg-link-label').attr('text-anchor','middle').text(d=>REL_LABEL[d.kind]||d.kind);
+  const node=g.append('g').selectAll('g').data(nodes).join('g').attr('class','kg-node');
+  node.append('circle').attr('r',9).attr('fill',d=>KG_TYPE_COLOR[d.type]||'#888780').attr('fill-opacity',.88);
+  node.append('text').attr('text-anchor','middle').attr('dy',20).text(d=>d.name);
+  node.on('click',(ev,d)=>{ev.stopPropagation();location.hash='#/entity/'+d.id;}); // 点节点进实体页
+  catSim=d3.forceSimulation(nodes)
+    .force('link',d3.forceLink(links).id(d=>d.id).distance(d=>d.co?100:75).strength(d=>d.co?0.25:0.6))
+    .force('charge',d3.forceManyBody().strength(-160))
+    .force('center',d3.forceCenter(w/2,h/2+6))
+    .force('collide',d3.forceCollide().radius(26))
+    .force('y',d3.forceY(h/2).strength(0.08)) // 300px 矮容器：轻微向中线聚拢防出界
+    .on('tick',()=>{
+      link.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y).attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);
+      linkLabel.attr('x',d=>(d.source.x+d.target.x)/2).attr('y',d=>(d.source.y+d.target.y)/2-4);
+      node.attr('transform',d=>`translate(${Math.max(24,Math.min(w-24,d.x))},${Math.max(30,Math.min(h-26,d.y))})`);
+    });
+}
+
 /* ===== hash 路由：#/entity/<id> ===== */
 function handleHashRoute(){
   const m=location.hash.match(/^#\/entity\/([A-Za-z0-9_-]+)$/);
@@ -1670,25 +1698,15 @@ const TYPE_ICON={全部:'i-all',现场:'i-agent',消息:'i-chip',日报:'i-list'
 function renderSideNav(){
   // 视图组：知识图谱入口
   $('#viewlist').innerHTML=`<div class="fitem ${state.mode==='graph'?'on':''}" data-viewmode="graph"><span class="ic"><svg class="ico sm"><use href="#i-graph"/></svg></span>${state.lang==='en'?'Knowledge graph':'知识图谱'}</div>`;
-  // 八分类计数口径 = 现场候选 + 日报主线/零散信号 + 知识库事件（三层合计，同一事件可能重复计，tooltip 注明）。
-  // 只数候选会把 new_thought 这类"只由合成层打标"的分类永远数成 0。
+  // A(2026-07-30)：八分类计数口径 = 现场候选数（与分类页展示的卡片流同口径；
+  // new_thought 由采集层兜底规则保证有候选，不再做三层聚合计数）。
   const candidates=DATA.filter(d=>d._candidate);
   const counts={};
-  const add=c=>{if(c)counts[c]=(counts[c]||0)+1;};
-  candidates.forEach(d=>(d.categories||[]).forEach(add));
-  DATA.forEach(d=>{
-    if(d.format!=='storyline')return;
-    (d.storylines||[]).forEach(s=>(s.categories||[]).forEach(add));
-    (d.scattered||[]).forEach(x=>add(x.category));
-  });
-  if(KG.index)(KG.index.entities||[]).forEach(e=>(e.events||[]).forEach(ev=>add(ev.category)));
-  const scopeTip=state.lang==='en'
-    ?'Count = live candidates + daily storylines/scattered + knowledge events (layers may overlap)'
-    :'计数口径：现场候选 + 日报主线/零散信号 + 知识库事件（三层合计，可能有重叠）';
+  candidates.forEach(d=>(d.categories||[]).forEach(c=>{if(c)counts[c]=(counts[c]||0)+1;}));
   $('#catlist').innerHTML=CAT8.map(c=>{
     const n=c.slug==='ai'?candidates.length:(counts[c.slug]||0);
     const on=state.mode!=='graph'&&state.cat8===c.slug;
-    return `<div class="fitem ${on?'on':''}" data-cat8="${c.slug}" title="${esc(c.slug==='ai'?(state.lang==='en'?'All live candidates':'现场候选总数'):scopeTip)}"><span class="ic"><svg class="ico sm"><use href="#${c.ic}"/></svg></span>${esc(cat8Label(c.slug))}<span class="ct">${n}</span></div>`;
+    return `<div class="fitem ${on?'on':''}" data-cat8="${c.slug}"><span class="ic"><svg class="ico sm"><use href="#${c.ic}"/></svg></span>${esc(cat8Label(c.slug))}<span class="ct">${n}</span></div>`;
   }).join('');
 }
 function initSidebar(){
