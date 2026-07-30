@@ -346,6 +346,8 @@ if(!window.d3){
   .sl-block .bh{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
   .sl-block .bh h3{font-family:var(--f-head);font-weight:600;font-size:17px;color:var(--display);margin:0}
   .sl-new{font-family:var(--f-mono);font-size:8px;letter-spacing:.1em;padding:2px 7px;border:1px solid var(--accent-text);border-radius:var(--r-pill);color:var(--accent-text)}
+  .sl-cont{font-family:var(--f-mono);font-size:8px;letter-spacing:.08em;padding:2px 7px;border:1px solid var(--line-2);border-radius:var(--r-pill);color:var(--secondary)} /* J：延续主线徽章 */
+  .sl-today{font-size:12.5px;color:var(--secondary);line-height:1.55;margin:-4px 0 12px} /* J：延续主线"今日"副题 */
   .chainflow{display:flex;align-items:stretch;gap:8px;flex-wrap:wrap;margin-bottom:14px}
   .chain-node{display:flex;flex-direction:column;gap:5px;max-width:250px;padding:10px 13px;background:var(--glass);border-radius:var(--r-md)}
   .chain-node .top{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
@@ -1359,12 +1361,18 @@ function renderStorylineDaily(d){
     ${d.qualityNote?`<div class="sl-quality">⚠ ${esc(d.qualityNote)}</div>`:''}
     <div class="sl-summary"><div class="h">${state.lang==='en'?'Today at a glance':'今日总结'}</div>${d.summary?`<p>${esc(d.summary)}</p>`:''}${(d.bullets||[]).length?`<ol>${d.bullets.map(b=>`<li>${esc(b)}</li>`).join('')}</ol>`:''}</div>
     <div class="sl-minigraph" id="slMiniGraph" hidden><div class="h">${state.lang==='en'?'Today in the graph':'今日图谱'}</div><div class="mg-body"></div></div>
-    ${(d.storylines||[]).map((s,i)=>`<div class="sl-block" data-sl-id="${esc(s.id||String(i))}">
-      <div class="bh"><h3>${state.lang==='en'?'Storyline':'主线'} ${i+1} · ${esc(s.title)}</h3>${s.isNew?`<span class="sl-new">${state.lang==='en'?'NEW':'新开线'}</span>`:''}${catChips(s.categories)}</div>
-      <div class="chainflow">${chainHtml(s.chain||[])}</div>
+    ${(d.storylines||[]).map((s,i)=>{
+      // J(2026-07-30)：延续主线（isNew=false）标题区分——徽章"今日 N 条新事件" + 副题"—— 今日：首个链节点"
+      const chain=s.chain||[];
+      const contBadge=!s.isNew&&chain.length?`<span class="sl-cont">${state.lang==='en'?`+${chain.length} today`:`今日 ${chain.length} 条新事件`}</span>`:'';
+      const contSub=!s.isNew&&chain[0]?`<div class="sl-today">—— ${state.lang==='en'?'Today: ':'今日：'}${esc(chain[0].title)}</div>`:'';
+      return `<div class="sl-block" data-sl-id="${esc(s.id||String(i))}">
+      <div class="bh"><h3>${state.lang==='en'?'Storyline':'主线'} ${i+1} · ${esc(s.title)}</h3>${s.isNew?`<span class="sl-new">${state.lang==='en'?'NEW':'新开线'}</span>`:contBadge}${catChips(s.categories)}</div>
+      ${contSub}
+      <div class="chainflow">${chainHtml(chain)}</div>
       ${s.narrative?`<p class="sl-narrative">${esc(s.narrative)}</p>`:''}
       ${s.carryOver?`<div class="sl-carry">${state.lang==='en'?'Previously':'承前'}：${esc(s.carryOver)}</div>`:''}
-    </div>`).join('')}
+    </div>`;}).join('')}
     ${(d.columns||[]).map(col=>{
       const colTitles={ai_finance:{zh:'金融 AI 今日',en:'Finance AI today'},gh_trending:{zh:'GitHub trending 今日',en:'GitHub trending today'},papers:{zh:'论文趋势',en:'Paper trends'}};
       const fallback=colTitles[col.key];
