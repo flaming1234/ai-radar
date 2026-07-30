@@ -743,7 +743,10 @@ function candidateCardHTML(d){
 }
 function cardHTML(d){
   if(d._candidate)return candidateCardHTML(d);
-  const isRep=d.type!=='消息', lk=d.likes+(liked[d.id]?1:0);
+  const isRep=d.type!=='消息';
+  // 自动生成的日报/周报没有 likes 字段：缺失或非数字就不显示点赞角标（避免 ▲ NaN）
+  const rawLikes=Number(d.likes);
+  const lk=Number.isFinite(rawLikes)?rawLikes+(liked[d.id]?1:0):null;
   const displayTitle=state.lang==='en'?(d.titleEn||d.enTitle||d.title):(d.titleZh||d.title);
   const originalBadge=state.lang==='en'&&!d.titleEn&&!d.enTitle?'<span class="unverified">Original Chinese</span>':'';
   return `<div class="scard" data-id="${d.id}">
@@ -754,7 +757,7 @@ function cardHTML(d){
       ${d.type==='消息'?`<span class="deep">${state.lang==='en'?'→ Read the daily brief':'→ 看深版（日报）'} <svg class="ico sm"><use href="#i-chev-r"/></svg></span>`:''}
     </div>
     <div class="foot">
-      <span class="like ${liked[d.id]?'on':''}" data-like="${d.id}"><span class="tri">▲</span>${fmt(lk)}</span>
+      ${lk===null?'':`<span class="like ${liked[d.id]?'on':''}" data-like="${d.id}"><span class="tri">▲</span>${fmt(lk)}</span>`}
       <span class="meta">${d.time}</span>
       <button class="bm ${marked[d.id]?'on':''}" data-bm="${d.id}"><svg class="ico sm"><use href="#i-bm"/></svg></button>
     </div>
