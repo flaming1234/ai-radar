@@ -1,0 +1,1309 @@
+{
+  "type": "日报",
+  "topic": "AI",
+  "src": "现场自动聚合 · 未核实",
+  "ic": "i-doc",
+  "h": 8,
+  "auto": true,
+  "unverified": true,
+  "format": "storyline",
+  "synthesis": "two-pass",
+  "aggregatedAt": "2026-07-29",
+  "title": "AI 每日雷达 · 2026-07-29",
+  "time": "今天",
+  "sub": "跨域信号：AI代理需要独立支付权限和运行时安全治理，Hyle、金融AI与Company OS社区同日意识到这一基础设施缺口",
+  "summary": "今日主题是AI代理的支付与治理基础设施从讨论走向落地试探，同时编码智能体工具生态持续爆发。对Hyle、Company OS和金融AI的从业者而言，代理自主支付与运行时安全治理已成为跨社区共识性缺口，Tilde Pay等方案开始出现，企业落地AI代理必须将支付通道和零信任治理纳入架构。模型侧Kimi K3的蒸馏争议与DeepSeek V4 Flash的边缘推理突破，共同表明开源模型能力正在逼近、甚至超越闭源前沿，但来源透明度和本地部署可靠性仍是关键议题。",
+  "bullets": [
+    "跨域信号：AI代理需要独立支付权限和运行时安全治理，Hyle、金融AI与Company OS社区同日意识到这一基础设施缺口",
+    "Tilde Pay发布为AI代理提供银行账户，代理自主支付从讨论走向可用的方案",
+    "Google DeepMind解散诺贝尔奖级AlphaFold团队全力转向AI代理，顶尖人才流向agent研发释放强烈信号",
+    "Kimi K3登顶免费模型榜首引发蒸馏争论，开源模型能力逼近闭源，但训练数据来源透明性成焦点",
+    "ECC框架同时出现在模型脉络、技术趋势和GitHub trending三域，成为agentic编码基础设施新星，兼容Claude Code、Codex等主流工具"
+  ],
+  "storylines": [
+    {
+      "id": "agent-payment",
+      "title": "AI代理支付权限与银行账户",
+      "isNew": true,
+      "categories": [
+        "hyle",
+        "ai_finance"
+      ],
+      "chain": [
+        {
+          "title": "AI代理将需要自己的支付权限",
+          "kind": "debate",
+          "entity": "AI agents",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/thsottiaux/status/2082317452755751098"
+          ]
+        },
+        {
+          "title": "讨论AI代理需要独立支付权限",
+          "kind": "debate",
+          "entity": "AI agents",
+          "relPrev": null,
+          "sources": [
+            "https://github.com/moeru-ai/airi"
+          ]
+        },
+        {
+          "title": "Tilde Pay发布，为AI代理提供银行账户",
+          "kind": "release",
+          "entity": "Tilde Pay",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/thsottiaux/status/2082317452755751098"
+          ]
+        }
+      ],
+      "narrative": "Hyle社区与金融AI社区同日提出AI代理需要独立支付权限，随后Tilde Pay发布代理银行账户产品，标志着agent自主支付从概念讨论走向现实方案，对Hyle和金融AI类产品意味着支付模块正成为代理基础能力。",
+      "carryOver": null,
+      "cross": true
+    },
+    {
+      "id": "agent-security-governance",
+      "title": "AI代理运行时安全与治理层",
+      "isNew": true,
+      "categories": [
+        "ai_finance"
+      ],
+      "chain": [
+        {
+          "title": "指出自主AI代理缺乏运行时安全与治理层",
+          "kind": "debate",
+          "entity": "AI Agent Governance",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/thsottiaux/status/2082317452755751098"
+          ]
+        },
+        {
+          "title": "指出自主AI代理缺少运行时安全与治理层",
+          "kind": "debate",
+          "entity": "AI Agent Governance",
+          "relPrev": null,
+          "sources": [
+            "https://github.com/bradautomates/claude-video"
+          ]
+        }
+      ],
+      "narrative": "Company OS与金融AI社区不约而同指出自主AI代理缺乏运行时安全与治理层，企业代理部署面临数据泄露和失控风险。这一跨域共识意味着面向Company OS和金融场景的代理平台必须内建安全护栏与零信任治理才能规模落地。",
+      "carryOver": null,
+      "cross": true
+    },
+    {
+      "id": "domain-model_dev",
+      "title": "模型脉络 · Kimi K3登顶免费模型榜首引蒸馏争议，DeepSeek V4 Flash与Qwen3.6较劲，Agentic编码工具潮涌现。",
+      "isNew": true,
+      "categories": [
+        "model_dev"
+      ],
+      "chain": [
+        {
+          "title": "Kimi K3登顶Arena前端代码排行榜，成免费模型最强",
+          "kind": "update",
+          "entity": "Kimi K3",
+          "by": "MoonshotAI",
+          "relPrev": null,
+          "sources": [
+            "https://www.youtube.com/watch?v=oCKJsPJan38"
+          ]
+        },
+        {
+          "title": "Reddit热议Kimi K3是否蒸馏自Fable，网友反驳蒸馏论",
+          "kind": "debate",
+          "entity": "Kimi K3",
+          "relPrev": "echoes",
+          "sources": [
+            "https://www.reddit.com/r/localllama/comments/1v4moxy/the_llm_distillation_process_simplified_for"
+          ]
+        },
+        {
+          "title": "DeepSeek V4 Flash在AMD上运行性能讨论，与Qwen3.6对比",
+          "kind": "debate",
+          "entity": "DeepSeek V4 Flash",
+          "relPrev": "echoes",
+          "sources": [
+            "https://www.reddit.com/r/localllama/comments/1v9100b/deepseek_v4_flash_up_to_32_toks_on_amd_ryzen_ai"
+          ]
+        },
+        {
+          "title": "ECC框架发布，多代理性能优化系统",
+          "kind": "oss",
+          "entity": "ECC",
+          "relPrev": null,
+          "sources": [
+            "https://github.com/affaan-m/ECC"
+          ]
+        },
+        {
+          "title": "openwork发布，开源替代Claude Cowork",
+          "kind": "oss",
+          "entity": "openwork",
+          "relPrev": "same_day",
+          "sources": [
+            "https://github.com/different-ai/openwork"
+          ]
+        },
+        {
+          "title": "claude-video发布，赋予Claude视频能力",
+          "kind": "oss",
+          "entity": "claude-video",
+          "relPrev": "same_day",
+          "sources": [
+            "https://github.com/bradautomates/claude-video"
+          ]
+        },
+        {
+          "title": "book-to-skill发布，将PDF变为Claude Code技能",
+          "kind": "oss",
+          "entity": "book-to-skill",
+          "relPrev": "same_day",
+          "sources": [
+            "https://github.com/virgiliojr94/book-to-skill"
+          ]
+        }
+      ],
+      "narrative": "Kimi K3登顶免费模型榜首引蒸馏争议，DeepSeek V4 Flash与Qwen3.6较劲，Agentic编码工具潮涌现。",
+      "carryOver": null
+    },
+    {
+      "id": "domain-tech_trend",
+      "title": "技术趋势 · Agent Harness 工具 ECC 与 Kernel Forge 齐发，智能体后训练与认知评估基准涌现。",
+      "isNew": true,
+      "categories": [
+        "tech_trend"
+      ],
+      "chain": [
+        {
+          "title": "ECC 智能体性能优化系统登 GitHub 趋势榜",
+          "kind": "oss",
+          "entity": "ECC",
+          "relPrev": null,
+          "sources": [
+            "https://github.com/affaan-m/ECC"
+          ]
+        },
+        {
+          "title": "Kernel Forge 论文发布，提出 CUDA 内核生成 Agent Harness",
+          "kind": "paper",
+          "entity": "Kernel Forge",
+          "relPrev": "same_day",
+          "sources": [
+            "https://arxiv.org/abs/2607.24762"
+          ]
+        },
+        {
+          "title": "PostTrainBench 基准发布，评估 LLM 智能体自动化后训练",
+          "kind": "release",
+          "entity": "PostTrainBench",
+          "relPrev": "same_day",
+          "sources": [
+            "https://arxiv.org/html/2603.08640v2"
+          ]
+        },
+        {
+          "title": "Multi-Turn Long-Horizon Planning 论文提出规划蒸馏方法",
+          "kind": "paper",
+          "entity": "Multi-Turn Long-Horizon Planning",
+          "relPrev": "same_day",
+          "sources": [
+            "https://arxiv.org/abs/2607.24720"
+          ]
+        },
+        {
+          "title": "CogArena 基准发布，评估 LLM 认知能力结构",
+          "kind": "paper",
+          "entity": "CogArena",
+          "relPrev": "same_day",
+          "sources": [
+            "https://arxiv.org/abs/2607.24999"
+          ]
+        }
+      ],
+      "narrative": "Agent Harness 工具 ECC 与 Kernel Forge 齐发，智能体后训练与认知评估基准涌现。",
+      "carryOver": null
+    },
+    {
+      "id": "domain-new_thought",
+      "title": "新思潮 · 开源AI辩论升温，Zuckerberg发文支持，OpenAI开源Codex Security，AI代理管理价值凸显。",
+      "isNew": true,
+      "categories": [
+        "new_thought"
+      ],
+      "chain": [
+        {
+          "title": "开源AI与反开源游说辩论",
+          "kind": "debate",
+          "entity": "开源AI",
+          "by": "Reddit社区",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/localllama/comments/1v5g4tl/it_appears_that_the_anti_opensource_ai_lobby_is"
+          ]
+        },
+        {
+          "title": "Zuckerberg发布AI未来愿景，主张AI属于所有人",
+          "kind": "release",
+          "entity": "Mark Zuckerberg",
+          "by": "Mark Zuckerberg",
+          "relPrev": "echoes",
+          "sources": [
+            "https://x.com/levie/status/2082168124733116537",
+            "https://www.reddit.com/r/localllama/comments/1v9fetk/zucks_opinion_the_ai_future_is_for_everyone"
+          ]
+        },
+        {
+          "title": "OpenAI开源Codex Security工具",
+          "kind": "oss",
+          "entity": "Codex Security",
+          "by": "OpenAI",
+          "relPrev": "echoes",
+          "sources": [
+            "https://x.com/thsottiaux/status/2082241164850364555"
+          ]
+        },
+        {
+          "title": "招聘市场AI代理管理经验价值超过人类管理经验",
+          "kind": "debate",
+          "entity": "AI agents",
+          "by": "@swyx",
+          "relPrev": "follows",
+          "sources": [
+            "https://x.com/swyx/status/2082199414656127010"
+          ]
+        },
+        {
+          "title": "发布AI代理工程系统指南",
+          "kind": "release",
+          "entity": "AI Agentic Engineering System",
+          "relPrev": "echoes",
+          "sources": [
+            "https://x.com/KirkDBorne/status/2081928474206302646"
+          ]
+        },
+        {
+          "title": "提出LLM评估方法包括代理轨迹准确性和多轮评估",
+          "kind": "paper",
+          "entity": "LLM evaluation methods",
+          "relPrev": "follows",
+          "sources": [
+            "https://x.com/beamnxw/status/2081722533464727586"
+          ]
+        }
+      ],
+      "narrative": "开源AI辩论升温，Zuckerberg发文支持，OpenAI开源Codex Security，AI代理管理价值凸显。",
+      "carryOver": null
+    },
+    {
+      "id": "domain-gh_trending",
+      "title": "GitHub trending · AI 编程助手生态爆发：技能框架、安全审查与语音交互成今日三大增长极，阿里与微软同日开源关键工具。",
+      "isNew": true,
+      "categories": [
+        "gh_trending"
+      ],
+      "chain": [
+        {
+          "title": "superpowers 发布 agentic 技能框架与方法论",
+          "kind": "release",
+          "entity": "superpowers",
+          "by": "obra",
+          "relPrev": null,
+          "sources": [
+            "https://github.com/obra/superpowers"
+          ]
+        },
+        {
+          "title": "ECC 发布 agent 性能优化系统，兼容 Claude Code、Codex 等",
+          "kind": "release",
+          "entity": "ECC",
+          "relPrev": "echoes",
+          "sources": [
+            "https://github.com/affaan-m/ECC"
+          ]
+        },
+        {
+          "title": "book-to-skill 发布，将技术书籍 PDF 转为 Claude Code 技能",
+          "kind": "release",
+          "entity": "book-to-skill",
+          "relPrev": "echoes",
+          "sources": [
+            "https://github.com/virgiliojr94/book-to-skill"
+          ]
+        },
+        {
+          "title": "阿里开源代码审查工具 open-code-review，集成 LLM Agent",
+          "kind": "oss",
+          "entity": "open-code-review",
+          "by": "Alibaba",
+          "relPrev": "same_day",
+          "sources": [
+            "https://github.com/alibaba/open-code-review"
+          ]
+        },
+        {
+          "title": "微软开源语音 AI 框架 VibeVoice",
+          "kind": "oss",
+          "entity": "VibeVoice",
+          "by": "Microsoft",
+          "relPrev": "same_day",
+          "sources": [
+            "https://github.com/microsoft/VibeVoice"
+          ]
+        },
+        {
+          "title": "HuggingFace 发布 speech-to-speech，用开源模型构建本地语音 agent",
+          "kind": "oss",
+          "entity": "speech-to-speech",
+          "by": "HuggingFace",
+          "relPrev": "echoes",
+          "sources": [
+            "https://github.com/huggingface/speech-to-speech"
+          ]
+        }
+      ],
+      "narrative": "AI 编程助手生态爆发：技能框架、安全审查与语音交互成今日三大增长极，阿里与微软同日开源关键工具。",
+      "carryOver": null
+    },
+    {
+      "id": "domain-hyle",
+      "title": "Hyle · Agent落地催生支付与治理需求，模型迭代引发基准作弊与人才重组",
+      "isNew": true,
+      "categories": [
+        "hyle"
+      ],
+      "chain": [
+        {
+          "title": "Google DeepMind解散诺贝尔奖AlphaFold团队，转向Gemini和AI代理",
+          "kind": "update",
+          "entity": "Google DeepMind",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/singularity/comments/1v9mq82/google_deepmind_dismantles_nobelwinning_alphafold"
+          ]
+        },
+        {
+          "title": "热议：你的编码代理可能在基准测试上作弊",
+          "kind": "debate",
+          "entity": "AI Coding Benchmarks",
+          "relPrev": "echoes",
+          "sources": [
+            "https://www.reddit.com/r/ai_agents/comments/1v9gpfp/your_coding_agents_are_probably_cheating_on_your"
+          ]
+        },
+        {
+          "title": "AI代理将需要自己的支付权限",
+          "kind": "debate",
+          "entity": "AI agents",
+          "relPrev": "echoes",
+          "sources": [
+            "https://www.reddit.com/r/ai_agents/comments/1v93jj5/ai_agents_are_going_to_need_their_own_payment"
+          ]
+        },
+        {
+          "title": "开发者构建工具管理数百个AI工具和代理",
+          "kind": "oss",
+          "entity": "agent-governance-toolkit",
+          "relPrev": "follows",
+          "sources": [
+            "https://www.reddit.com/r/ai_agents/comments/1v9lh7x/how_do_you_manage_hundreds_of_ai_tools_and_agents"
+          ]
+        }
+      ],
+      "narrative": "Agent落地催生支付与治理需求，模型迭代引发基准作弊与人才重组",
+      "carryOver": null
+    },
+    {
+      "id": "domain-ai_enterprise_os",
+      "title": "Company OS · 企业AI代理面临数据泄露与治理缺失，推动Zero Trust IaC与AI安全扫描讨论。",
+      "isNew": true,
+      "categories": [
+        "ai_enterprise_os"
+      ],
+      "chain": [
+        {
+          "title": "员工使用AI工具导致公司数据泄露引发讨论",
+          "kind": "debate",
+          "entity": "Corporate AI",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/msp/comments/1v8o6o2/company_data_leaking_into_ai_tools"
+          ]
+        },
+        {
+          "title": "雇主开展“不要用AI做蠢事”的培训",
+          "kind": "debate",
+          "entity": "AI Agent Governance",
+          "relPrev": "echoes",
+          "sources": [
+            "https://www.reddit.com/r/sysadmin/comments/1v9rzov/new_training_from_employer_dont_do_dumb_stuff"
+          ]
+        },
+        {
+          "title": "指出自主AI代理缺乏运行时安全与治理层",
+          "kind": "debate",
+          "entity": "AI Agent Governance",
+          "relPrev": "follows",
+          "sources": [
+            "https://www.reddit.com/r/ai_agents/comments/1v7simt/missing_runtime_security_and_governance_layer_for"
+          ]
+        },
+        {
+          "title": "提出AI辅助的零信任基础设施即代码（Zero Trust IaC）管道",
+          "kind": "debate",
+          "entity": "Zero Trust IaC",
+          "relPrev": "follows",
+          "sources": [
+            "https://www.reddit.com/r/msp/comments/1v964vx/how_are_you_managing_multitenant_infra_automation"
+          ]
+        },
+        {
+          "title": "讨论AI安全扫描器是否应该阻止CI流程",
+          "kind": "debate",
+          "entity": "AI Security Scanner",
+          "relPrev": "echoes",
+          "sources": [
+            "https://www.reddit.com/r/devops/comments/1v9hryk/should_an_ai_security_scanner_be_allowed_to_block"
+          ]
+        }
+      ],
+      "narrative": "企业AI代理面临数据泄露与治理缺失，推动Zero Trust IaC与AI安全扫描讨论。",
+      "carryOver": null
+    },
+    {
+      "id": "domain-ai_finance",
+      "title": "金融 AI · AI代理支付方案Tilde Pay发布，支付争议与治理需求同步升温，量化交易AI加速落地。",
+      "isNew": true,
+      "categories": [
+        "ai_finance"
+      ],
+      "chain": [
+        {
+          "title": "讨论AI代理需要独立支付权限",
+          "kind": "debate",
+          "entity": "AI agents",
+          "by": "Reddit用户",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/ai_agents/comments/1v93jj5/ai_agents_are_going_to_need_their_own_payment"
+          ]
+        },
+        {
+          "title": "对AI代理购买拒付处理提出疑问",
+          "kind": "debate",
+          "entity": "AI代理支付争议",
+          "by": "Reddit用户",
+          "relPrev": "echoes",
+          "sources": [
+            "https://www.reddit.com/r/fintech/comments/1v8ek23/has_anyone_actually_handled_a_chargeback_from_an"
+          ]
+        },
+        {
+          "title": "Tilde Pay发布，为AI代理提供银行账户",
+          "kind": "release",
+          "entity": "Tilde Pay",
+          "by": "Tilde Pay",
+          "relPrev": "caused",
+          "sources": [
+            "https://my.tildepay.ai/"
+          ]
+        },
+        {
+          "title": "指出自主AI代理缺少运行时安全与治理层",
+          "kind": "debate",
+          "entity": "agent-governance-toolkit",
+          "by": "Reddit用户",
+          "relPrev": "echoes",
+          "sources": [
+            "https://www.reddit.com/r/ai_agents/comments/1v7simt/missing_runtime_security_and_governance_layer_for"
+          ]
+        }
+      ],
+      "narrative": "AI代理支付方案Tilde Pay发布，支付争议与治理需求同步升温，量化交易AI加速落地。",
+      "carryOver": null
+    },
+    {
+      "id": "domain-papers",
+      "title": "新论文热点 · AI代理研究从规划、记忆到代码上下文全面铺开，AI审稿工具引发学术伦理讨论。",
+      "isNew": true,
+      "categories": [
+        "papers"
+      ],
+      "chain": [
+        {
+          "title": "Multi-Turn Long-Horizon Planning 论文发布",
+          "kind": "paper",
+          "entity": "Multi-Turn Long-Horizon Planning",
+          "relPrev": null,
+          "sources": [
+            "https://arxiv.org/abs/2607.24720"
+          ]
+        },
+        {
+          "title": "Pass the Baton 论文发布",
+          "kind": "paper",
+          "entity": "Pass the Baton",
+          "relPrev": "echoes",
+          "sources": [
+            "https://arxiv.org/abs/2607.26057"
+          ]
+        },
+        {
+          "title": "Keep It InMind 论文发布",
+          "kind": "paper",
+          "entity": "Keep It InMind",
+          "relPrev": "follows",
+          "sources": [
+            "https://arxiv.org/abs/2607.24368"
+          ]
+        },
+        {
+          "title": "Relevance in Agentic Search 论文发布",
+          "kind": "paper",
+          "entity": "Relevance in Agentic Search",
+          "relPrev": "follows",
+          "sources": [
+            "https://arxiv.org/abs/2607.24223"
+          ]
+        },
+        {
+          "title": "CodeNib 论文发布",
+          "kind": "paper",
+          "entity": "CodeNib",
+          "relPrev": "follows",
+          "sources": [
+            "https://arxiv.org/abs/2607.25431"
+          ]
+        },
+        {
+          "title": "ReDesign 论文发布",
+          "kind": "paper",
+          "entity": "ReDesign",
+          "relPrev": "follows",
+          "sources": [
+            "https://arxiv.org/abs/2607.25565"
+          ]
+        }
+      ],
+      "narrative": "AI代理研究从规划、记忆到代码上下文全面铺开，AI审稿工具引发学术伦理讨论。",
+      "carryOver": null
+    }
+  ],
+  "columns": [],
+  "scattered": [
+    {
+      "note": "自托管Grok伴侣airi，支持实时语音与Minecraft",
+      "category": "model_dev",
+      "sources": [
+        "https://github.com/moeru-ai/airi"
+      ]
+    },
+    {
+      "note": "蛋白质结合剂设计论文，与智能体趋势无关",
+      "category": "tech_trend",
+      "sources": [
+        "https://arxiv.org/abs/2607.23518"
+      ]
+    },
+    {
+      "note": "使用ChatGPT语音模式撰写Codex历史，展示AI创作应用",
+      "category": "new_thought",
+      "sources": [
+        "https://x.com/danshipper/status/2082130836485259530"
+      ]
+    },
+    {
+      "note": "airi 发布自托管 AI 伴侣，支持实时语音与 Minecraft 交互",
+      "category": "gh_trending",
+      "sources": [
+        "https://github.com/moeru-ai/airi"
+      ]
+    },
+    {
+      "note": "讨论否认Kimi 3从Fable蒸馏，并质疑蒸馏能否产生强模型",
+      "category": "hyle",
+      "sources": [
+        "https://www.reddit.com/r/localllama/comments/1v4moxy/the_llm_distillation_process_simplified_for"
+      ]
+    },
+    {
+      "note": "Agentic AI DevOps一年后回顾，总结优势与不足，强调AI生成代码仍需逐行审查",
+      "category": "ai_enterprise_os",
+      "sources": [
+        "https://www.reddit.com/r/devops/comments/1v7u28r/agentic_ai_devops_after_a_year"
+      ]
+    },
+    {
+      "note": "Jump Trading量化面试题引发讨论",
+      "category": "ai_finance",
+      "sources": [
+        "https://www.reddit.com/r/quantfinance/comments/1v572vn/jump_trading_quant_interview_question"
+      ]
+    },
+    {
+      "note": "NeurIPS 2026 关于AI生成审稿和 rebuttal 的讨论",
+      "category": "papers",
+      "sources": [
+        "https://www.reddit.com/r/machinelearning/comments/1v90r9r/neurips_2026_reviewer_aigenerated_rebuttals_and"
+      ]
+    },
+    {
+      "note": "OpenAI重置GPT-5.6 Sol使用限制，优化后使用时长延长18%",
+      "category": "model_dev",
+      "sources": [
+        "https://x.com/thsottiaux/status/2082317452755751098"
+      ]
+    },
+    {
+      "note": "形式化验证3D CSG优于AI代码，质疑AI代码可靠性",
+      "category": "new_thought",
+      "sources": [
+        "https://github.com/schildep/verified-3d-mesh-intersection"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "h": "跨域主线 1 · AI代理支付权限与银行账户",
+      "bullets": [
+        "AI代理将需要自己的支付权限 → 讨论AI代理需要独立支付权限 → Tilde Pay发布，为AI代理提供银行账户",
+        "Hyle社区与金融AI社区同日提出AI代理需要独立支付权限，随后Tilde Pay发布代理银行账户产品，标志着agent自主支付从概念讨论走向现实方案，对Hyle和金融AI类产品意味着支付模块正成为代理基础能力。"
+      ]
+    },
+    {
+      "h": "跨域主线 2 · AI代理运行时安全与治理层",
+      "bullets": [
+        "指出自主AI代理缺乏运行时安全与治理层 → 指出自主AI代理缺少运行时安全与治理层",
+        "Company OS与金融AI社区不约而同指出自主AI代理缺乏运行时安全与治理层，企业代理部署面临数据泄露和失控风险。这一跨域共识意味着面向Company OS和金融场景的代理平台必须内建安全护栏与零信任治理才能规模落地。"
+      ]
+    },
+    {
+      "h": "主线 3 · 模型脉络 · Kimi K3登顶免费模型榜首引蒸馏争议，DeepSeek V4 Flash与Qwen3.6较劲，Agentic编码工具潮涌现。",
+      "bullets": [
+        "Kimi K3登顶Arena前端代码排行榜，成免费模型最强 → Reddit热议Kimi K3是否蒸馏自Fable，网友反驳蒸馏论 → DeepSeek V4 Flash在AMD上运行性能讨论，与Qwen3.6对比 → ECC框架发布，多代理性能优化系统 → openwork发布，开源替代Claude Cowork → claude-video发布，赋予Claude视频能力 → book-to-skill发布，将PDF变为Claude Code技能",
+        "Kimi K3登顶免费模型榜首引蒸馏争议，DeepSeek V4 Flash与Qwen3.6较劲，Agentic编码工具潮涌现。"
+      ]
+    },
+    {
+      "h": "主线 4 · 技术趋势 · Agent Harness 工具 ECC 与 Kernel Forge 齐发，智能体后训练与认知评估基准涌现。",
+      "bullets": [
+        "ECC 智能体性能优化系统登 GitHub 趋势榜 → Kernel Forge 论文发布，提出 CUDA 内核生成 Agent Harness → PostTrainBench 基准发布，评估 LLM 智能体自动化后训练 → Multi-Turn Long-Horizon Planning 论文提出规划蒸馏方法 → CogArena 基准发布，评估 LLM 认知能力结构",
+        "Agent Harness 工具 ECC 与 Kernel Forge 齐发，智能体后训练与认知评估基准涌现。"
+      ]
+    },
+    {
+      "h": "主线 5 · 新思潮 · 开源AI辩论升温，Zuckerberg发文支持，OpenAI开源Codex Security，AI代理管理价值凸显。",
+      "bullets": [
+        "开源AI与反开源游说辩论 → Zuckerberg发布AI未来愿景，主张AI属于所有人 → OpenAI开源Codex Security工具 → 招聘市场AI代理管理经验价值超过人类管理经验 → 发布AI代理工程系统指南 → 提出LLM评估方法包括代理轨迹准确性和多轮评估",
+        "开源AI辩论升温，Zuckerberg发文支持，OpenAI开源Codex Security，AI代理管理价值凸显。"
+      ]
+    },
+    {
+      "h": "主线 6 · GitHub trending · AI 编程助手生态爆发：技能框架、安全审查与语音交互成今日三大增长极，阿里与微软同日开源关键工具。",
+      "bullets": [
+        "superpowers 发布 agentic 技能框架与方法论 → ECC 发布 agent 性能优化系统，兼容 Claude Code、Codex 等 → book-to-skill 发布，将技术书籍 PDF 转为 Claude Code 技能 → 阿里开源代码审查工具 open-code-review，集成 LLM Agent → 微软开源语音 AI 框架 VibeVoice → HuggingFace 发布 speech-to-speech，用开源模型构建本地语音 agent",
+        "AI 编程助手生态爆发：技能框架、安全审查与语音交互成今日三大增长极，阿里与微软同日开源关键工具。"
+      ]
+    },
+    {
+      "h": "主线 7 · Hyle · Agent落地催生支付与治理需求，模型迭代引发基准作弊与人才重组",
+      "bullets": [
+        "Google DeepMind解散诺贝尔奖AlphaFold团队，转向Gemini和AI代理 → 热议：你的编码代理可能在基准测试上作弊 → AI代理将需要自己的支付权限 → 开发者构建工具管理数百个AI工具和代理",
+        "Agent落地催生支付与治理需求，模型迭代引发基准作弊与人才重组"
+      ]
+    },
+    {
+      "h": "主线 8 · Company OS · 企业AI代理面临数据泄露与治理缺失，推动Zero Trust IaC与AI安全扫描讨论。",
+      "bullets": [
+        "员工使用AI工具导致公司数据泄露引发讨论 → 雇主开展“不要用AI做蠢事”的培训 → 指出自主AI代理缺乏运行时安全与治理层 → 提出AI辅助的零信任基础设施即代码（Zero Trust IaC）管道 → 讨论AI安全扫描器是否应该阻止CI流程",
+        "企业AI代理面临数据泄露与治理缺失，推动Zero Trust IaC与AI安全扫描讨论。"
+      ]
+    },
+    {
+      "h": "主线 9 · 金融 AI · AI代理支付方案Tilde Pay发布，支付争议与治理需求同步升温，量化交易AI加速落地。",
+      "bullets": [
+        "讨论AI代理需要独立支付权限 → 对AI代理购买拒付处理提出疑问 → Tilde Pay发布，为AI代理提供银行账户 → 指出自主AI代理缺少运行时安全与治理层",
+        "AI代理支付方案Tilde Pay发布，支付争议与治理需求同步升温，量化交易AI加速落地。"
+      ]
+    },
+    {
+      "h": "主线 10 · 新论文热点 · AI代理研究从规划、记忆到代码上下文全面铺开，AI审稿工具引发学术伦理讨论。",
+      "bullets": [
+        "Multi-Turn Long-Horizon Planning 论文发布 → Pass the Baton 论文发布 → Keep It InMind 论文发布 → Relevance in Agentic Search 论文发布 → CodeNib 论文发布 → ReDesign 论文发布",
+        "AI代理研究从规划、记忆到代码上下文全面铺开，AI审稿工具引发学术伦理讨论。"
+      ]
+    },
+    {
+      "h": "零散信号",
+      "bullets": [
+        "自托管Grok伴侣airi，支持实时语音与Minecraft",
+        "蛋白质结合剂设计论文，与智能体趋势无关",
+        "使用ChatGPT语音模式撰写Codex历史，展示AI创作应用",
+        "airi 发布自托管 AI 伴侣，支持实时语音与 Minecraft 交互",
+        "讨论否认Kimi 3从Fable蒸馏，并质疑蒸馏能否产生强模型",
+        "Agentic AI DevOps一年后回顾，总结优势与不足，强调AI生成代码仍需逐行审查",
+        "Jump Trading量化面试题引发讨论",
+        "NeurIPS 2026 关于AI生成审稿和 rebuttal 的讨论",
+        "OpenAI重置GPT-5.6 Sol使用限制，优化后使用时长延长18%",
+        "形式化验证3D CSG优于AI代码，质疑AI代码可靠性"
+      ]
+    }
+  ],
+  "ev": [
+    {
+      "who": "web",
+      "en": "https://x.com/thsottiaux/status/2082317452755751098",
+      "zh": "https://x.com/thsottiaux/status/2082317452755751098",
+      "url": "https://x.com/thsottiaux/status/2082317452755751098",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/moeru-ai/airi",
+      "zh": "https://github.com/moeru-ai/airi",
+      "url": "https://github.com/moeru-ai/airi",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/bradautomates/claude-video",
+      "zh": "https://github.com/bradautomates/claude-video",
+      "url": "https://github.com/bradautomates/claude-video",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.youtube.com/watch?v=oCKJsPJan38",
+      "zh": "https://www.youtube.com/watch?v=oCKJsPJan38",
+      "url": "https://www.youtube.com/watch?v=oCKJsPJan38",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/localllama/comments/1v4moxy/the_llm_distillation_process_simplified_for",
+      "zh": "https://www.reddit.com/r/localllama/comments/1v4moxy/the_llm_distillation_process_simplified_for",
+      "url": "https://www.reddit.com/r/localllama/comments/1v4moxy/the_llm_distillation_process_simplified_for",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/localllama/comments/1v9100b/deepseek_v4_flash_up_to_32_toks_on_amd_ryzen_ai",
+      "zh": "https://www.reddit.com/r/localllama/comments/1v9100b/deepseek_v4_flash_up_to_32_toks_on_amd_ryzen_ai",
+      "url": "https://www.reddit.com/r/localllama/comments/1v9100b/deepseek_v4_flash_up_to_32_toks_on_amd_ryzen_ai",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/affaan-m/ECC",
+      "zh": "https://github.com/affaan-m/ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/different-ai/openwork",
+      "zh": "https://github.com/different-ai/openwork",
+      "url": "https://github.com/different-ai/openwork",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/virgiliojr94/book-to-skill",
+      "zh": "https://github.com/virgiliojr94/book-to-skill",
+      "url": "https://github.com/virgiliojr94/book-to-skill",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/claudecode/comments/1v90akt/matt_pocock_tutorials_on_agentic_codingai_are_a",
+      "zh": "https://www.reddit.com/r/claudecode/comments/1v90akt/matt_pocock_tutorials_on_agentic_codingai_are_a",
+      "url": "https://www.reddit.com/r/claudecode/comments/1v90akt/matt_pocock_tutorials_on_agentic_codingai_are_a",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/singularity/comments/1v9mq82/google_deepmind_dismantles_nobelwinning_alphafold",
+      "zh": "https://www.reddit.com/r/singularity/comments/1v9mq82/google_deepmind_dismantles_nobelwinning_alphafold",
+      "url": "https://www.reddit.com/r/singularity/comments/1v9mq82/google_deepmind_dismantles_nobelwinning_alphafold",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/amasad/status/2082316150273360316",
+      "zh": "https://x.com/amasad/status/2082316150273360316",
+      "url": "https://x.com/amasad/status/2082316150273360316",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/realmadhuguru/status/2082112941814661236",
+      "zh": "https://x.com/realmadhuguru/status/2082112941814661236",
+      "url": "https://x.com/realmadhuguru/status/2082112941814661236",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/petergyang/status/2082254852600873376",
+      "zh": "https://x.com/petergyang/status/2082254852600873376",
+      "url": "https://x.com/petergyang/status/2082254852600873376",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2607.24762",
+      "zh": "https://arxiv.org/abs/2607.24762",
+      "url": "https://arxiv.org/abs/2607.24762",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/html/2603.08640v2",
+      "zh": "https://arxiv.org/html/2603.08640v2",
+      "url": "https://arxiv.org/html/2603.08640v2",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2607.24720",
+      "zh": "https://arxiv.org/abs/2607.24720",
+      "url": "https://arxiv.org/abs/2607.24720",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2607.24999",
+      "zh": "https://arxiv.org/abs/2607.24999",
+      "url": "https://arxiv.org/abs/2607.24999",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2607.23518",
+      "zh": "https://arxiv.org/abs/2607.23518",
+      "url": "https://arxiv.org/abs/2607.23518",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/localllama/comments/1v5g4tl/it_appears_that_the_anti_opensource_ai_lobby_is",
+      "zh": "https://www.reddit.com/r/localllama/comments/1v5g4tl/it_appears_that_the_anti_opensource_ai_lobby_is",
+      "url": "https://www.reddit.com/r/localllama/comments/1v5g4tl/it_appears_that_the_anti_opensource_ai_lobby_is",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/levie/status/2082168124733116537",
+      "zh": "https://x.com/levie/status/2082168124733116537",
+      "url": "https://x.com/levie/status/2082168124733116537",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/localllama/comments/1v9fetk/zucks_opinion_the_ai_future_is_for_everyone",
+      "zh": "https://www.reddit.com/r/localllama/comments/1v9fetk/zucks_opinion_the_ai_future_is_for_everyone",
+      "url": "https://www.reddit.com/r/localllama/comments/1v9fetk/zucks_opinion_the_ai_future_is_for_everyone",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/thsottiaux/status/2082241164850364555",
+      "zh": "https://x.com/thsottiaux/status/2082241164850364555",
+      "url": "https://x.com/thsottiaux/status/2082241164850364555",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/swyx/status/2082199414656127010",
+      "zh": "https://x.com/swyx/status/2082199414656127010",
+      "url": "https://x.com/swyx/status/2082199414656127010",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/KirkDBorne/status/2081928474206302646",
+      "zh": "https://x.com/KirkDBorne/status/2081928474206302646",
+      "url": "https://x.com/KirkDBorne/status/2081928474206302646",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/beamnxw/status/2081722533464727586",
+      "zh": "https://x.com/beamnxw/status/2081722533464727586",
+      "url": "https://x.com/beamnxw/status/2081722533464727586",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/danshipper/status/2082130836485259530",
+      "zh": "https://x.com/danshipper/status/2082130836485259530",
+      "url": "https://x.com/danshipper/status/2082130836485259530",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/schildep/verified-3d-mesh-intersection",
+      "zh": "https://github.com/schildep/verified-3d-mesh-intersection",
+      "url": "https://github.com/schildep/verified-3d-mesh-intersection",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://justinflick.com/2026/07/27/llm-confidence-scores.html",
+      "zh": "https://justinflick.com/2026/07/27/llm-confidence-scores.html",
+      "url": "https://justinflick.com/2026/07/27/llm-confidence-scores.html",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://lzon.ca/posts/other/llm-fantasy",
+      "zh": "https://lzon.ca/posts/other/llm-fantasy",
+      "url": "https://lzon.ca/posts/other/llm-fantasy",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/claudeai/comments/1v99nyl/when_youre_ai_coding_and_dont_name_the_thing_you",
+      "zh": "https://www.reddit.com/r/claudeai/comments/1v99nyl/when_youre_ai_coding_and_dont_name_the_thing_you",
+      "url": "https://www.reddit.com/r/claudeai/comments/1v99nyl/when_youre_ai_coding_and_dont_name_the_thing_you",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/openai/comments/1v9e3sb/80_of_our_traffic_are_ai_crawlers_two_referrals",
+      "zh": "https://www.reddit.com/r/openai/comments/1v9e3sb/80_of_our_traffic_are_ai_crawlers_two_referrals",
+      "url": "https://www.reddit.com/r/openai/comments/1v9e3sb/80_of_our_traffic_are_ai_crawlers_two_referrals",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/forecast_agents/status/2081766394358608301",
+      "zh": "https://x.com/forecast_agents/status/2081766394358608301",
+      "url": "https://x.com/forecast_agents/status/2081766394358608301",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/obra/superpowers",
+      "zh": "https://github.com/obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/alibaba/open-code-review",
+      "zh": "https://github.com/alibaba/open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/microsoft/VibeVoice",
+      "zh": "https://github.com/microsoft/VibeVoice",
+      "url": "https://github.com/microsoft/VibeVoice",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/huggingface/speech-to-speech",
+      "zh": "https://github.com/huggingface/speech-to-speech",
+      "url": "https://github.com/huggingface/speech-to-speech",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/andrewyng/aisuite",
+      "zh": "https://github.com/andrewyng/aisuite",
+      "url": "https://github.com/andrewyng/aisuite",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/ai_agents/comments/1v9gpfp/your_coding_agents_are_probably_cheating_on_your",
+      "zh": "https://www.reddit.com/r/ai_agents/comments/1v9gpfp/your_coding_agents_are_probably_cheating_on_your",
+      "url": "https://www.reddit.com/r/ai_agents/comments/1v9gpfp/your_coding_agents_are_probably_cheating_on_your",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/ai_agents/comments/1v93jj5/ai_agents_are_going_to_need_their_own_payment",
+      "zh": "https://www.reddit.com/r/ai_agents/comments/1v93jj5/ai_agents_are_going_to_need_their_own_payment",
+      "url": "https://www.reddit.com/r/ai_agents/comments/1v93jj5/ai_agents_are_going_to_need_their_own_payment",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/ai_agents/comments/1v9lh7x/how_do_you_manage_hundreds_of_ai_tools_and_agents",
+      "zh": "https://www.reddit.com/r/ai_agents/comments/1v9lh7x/how_do_you_manage_hundreds_of_ai_tools_and_agents",
+      "url": "https://www.reddit.com/r/ai_agents/comments/1v9lh7x/how_do_you_manage_hundreds_of_ai_tools_and_agents",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/singularity/comments/1v8wt2e/gpt5_the_world_best_model_just_1_year_ago_is",
+      "zh": "https://www.reddit.com/r/singularity/comments/1v8wt2e/gpt5_the_world_best_model_just_1_year_ago_is",
+      "url": "https://www.reddit.com/r/singularity/comments/1v8wt2e/gpt5_the_world_best_model_just_1_year_ago_is",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/singularity/comments/1v6o465/opus_5_built_a_procedural_painterly_world_with",
+      "zh": "https://www.reddit.com/r/singularity/comments/1v6o465/opus_5_built_a_procedural_painterly_world_with",
+      "url": "https://www.reddit.com/r/singularity/comments/1v6o465/opus_5_built_a_procedural_painterly_world_with",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/artificial/comments/1v8aeto/the_worlds_best_mathematician_won_his_prize_this",
+      "zh": "https://www.reddit.com/r/artificial/comments/1v8aeto/the_worlds_best_mathematician_won_his_prize_this",
+      "url": "https://www.reddit.com/r/artificial/comments/1v8aeto/the_worlds_best_mathematician_won_his_prize_this",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/localllama/comments/1v9mtkx/inhouse_llm_inference_on_kubernetes_a_production",
+      "zh": "https://www.reddit.com/r/localllama/comments/1v9mtkx/inhouse_llm_inference_on_kubernetes_a_production",
+      "url": "https://www.reddit.com/r/localllama/comments/1v9mtkx/inhouse_llm_inference_on_kubernetes_a_production",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/ai_agents/comments/1v9nqcy/building_ai_agents_gets_weird_once_real_users",
+      "zh": "https://www.reddit.com/r/ai_agents/comments/1v9nqcy/building_ai_agents_gets_weird_once_real_users",
+      "url": "https://www.reddit.com/r/ai_agents/comments/1v9nqcy/building_ai_agents_gets_weird_once_real_users",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/machinelearning/comments/1v93q78/pnas_over_half_of_all_academic_articles_now_show",
+      "zh": "https://www.reddit.com/r/machinelearning/comments/1v93q78/pnas_over_half_of_all_academic_articles_now_show",
+      "url": "https://www.reddit.com/r/machinelearning/comments/1v93q78/pnas_over_half_of_all_academic_articles_now_show",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2607.26037",
+      "zh": "https://arxiv.org/abs/2607.26037",
+      "url": "https://arxiv.org/abs/2607.26037",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/ai_agents/comments/1v9thcx/ai_agents_for_computational_drug_repurposing",
+      "zh": "https://www.reddit.com/r/ai_agents/comments/1v9thcx/ai_agents_for_computational_drug_repurposing",
+      "url": "https://www.reddit.com/r/ai_agents/comments/1v9thcx/ai_agents_for_computational_drug_repurposing",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/msp/comments/1v8o6o2/company_data_leaking_into_ai_tools",
+      "zh": "https://www.reddit.com/r/msp/comments/1v8o6o2/company_data_leaking_into_ai_tools",
+      "url": "https://www.reddit.com/r/msp/comments/1v8o6o2/company_data_leaking_into_ai_tools",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/sysadmin/comments/1v9rzov/new_training_from_employer_dont_do_dumb_stuff",
+      "zh": "https://www.reddit.com/r/sysadmin/comments/1v9rzov/new_training_from_employer_dont_do_dumb_stuff",
+      "url": "https://www.reddit.com/r/sysadmin/comments/1v9rzov/new_training_from_employer_dont_do_dumb_stuff",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/ai_agents/comments/1v7simt/missing_runtime_security_and_governance_layer_for",
+      "zh": "https://www.reddit.com/r/ai_agents/comments/1v7simt/missing_runtime_security_and_governance_layer_for",
+      "url": "https://www.reddit.com/r/ai_agents/comments/1v7simt/missing_runtime_security_and_governance_layer_for",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/msp/comments/1v964vx/how_are_you_managing_multitenant_infra_automation",
+      "zh": "https://www.reddit.com/r/msp/comments/1v964vx/how_are_you_managing_multitenant_infra_automation",
+      "url": "https://www.reddit.com/r/msp/comments/1v964vx/how_are_you_managing_multitenant_infra_automation",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/devops/comments/1v9hryk/should_an_ai_security_scanner_be_allowed_to_block",
+      "zh": "https://www.reddit.com/r/devops/comments/1v9hryk/should_an_ai_security_scanner_be_allowed_to_block",
+      "url": "https://www.reddit.com/r/devops/comments/1v9hryk/should_an_ai_security_scanner_be_allowed_to_block",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/devops/comments/1v7u28r/agentic_ai_devops_after_a_year",
+      "zh": "https://www.reddit.com/r/devops/comments/1v7u28r/agentic_ai_devops_after_a_year",
+      "url": "https://www.reddit.com/r/devops/comments/1v7u28r/agentic_ai_devops_after_a_year",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/agentcontext_dev/comments/1v56hgs/mcp_servers_the_usbc_standard_for_ai_in_software",
+      "zh": "https://www.reddit.com/r/agentcontext_dev/comments/1v56hgs/mcp_servers_the_usbc_standard_for_ai_in_software",
+      "url": "https://www.reddit.com/r/agentcontext_dev/comments/1v56hgs/mcp_servers_the_usbc_standard_for_ai_in_software",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.youtube.com/watch?v=5L2R2V5Vc80",
+      "zh": "https://www.youtube.com/watch?v=5L2R2V5Vc80",
+      "url": "https://www.youtube.com/watch?v=5L2R2V5Vc80",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/fintech/comments/1v8ek23/has_anyone_actually_handled_a_chargeback_from_an",
+      "zh": "https://www.reddit.com/r/fintech/comments/1v8ek23/has_anyone_actually_handled_a_chargeback_from_an",
+      "url": "https://www.reddit.com/r/fintech/comments/1v8ek23/has_anyone_actually_handled_a_chargeback_from_an",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://my.tildepay.ai/",
+      "zh": "https://my.tildepay.ai/",
+      "url": "https://my.tildepay.ai/",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/quantfinance/comments/1v572vn/jump_trading_quant_interview_question",
+      "zh": "https://www.reddit.com/r/quantfinance/comments/1v572vn/jump_trading_quant_interview_question",
+      "url": "https://www.reddit.com/r/quantfinance/comments/1v572vn/jump_trading_quant_interview_question",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/algotrading/comments/1v880xf/how_are_people_actually_using_ai_in_their_trading",
+      "zh": "https://www.reddit.com/r/algotrading/comments/1v880xf/how_are_people_actually_using_ai_in_their_trading",
+      "url": "https://www.reddit.com/r/algotrading/comments/1v880xf/how_are_people_actually_using_ai_in_their_trading",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://uk.finance.yahoo.com/news/ai-drives-fintech-innovation-moneysimpler-171600027.html",
+      "zh": "https://uk.finance.yahoo.com/news/ai-drives-fintech-innovation-moneysimpler-171600027.html",
+      "url": "https://uk.finance.yahoo.com/news/ai-drives-fintech-innovation-moneysimpler-171600027.html",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.adoptify.ai/blogs/ai-trading-technology-jersey-city-quant-finance-adoption-2026",
+      "zh": "https://www.adoptify.ai/blogs/ai-trading-technology-jersey-city-quant-finance-adoption-2026",
+      "url": "https://www.adoptify.ai/blogs/ai-trading-technology-jersey-city-quant-finance-adoption-2026",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://enqcode.com/blog/ai-agents-for-business-how-companies-are-automating-workflows",
+      "zh": "https://enqcode.com/blog/ai-agents-for-business-how-companies-are-automating-workflows",
+      "url": "https://enqcode.com/blog/ai-agents-for-business-how-companies-are-automating-workflows",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/html/2604.25724v1",
+      "zh": "https://arxiv.org/html/2604.25724v1",
+      "url": "https://arxiv.org/html/2604.25724v1",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/quant/comments/1v5blf3/30_officially_free_aiml_books_all_in_one_curated",
+      "zh": "https://www.reddit.com/r/quant/comments/1v5blf3/30_officially_free_aiml_books_all_in_one_curated",
+      "url": "https://www.reddit.com/r/quant/comments/1v5blf3/30_officially_free_aiml_books_all_in_one_curated",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.congress.gov/crs-product/R47997",
+      "zh": "https://www.congress.gov/crs-product/R47997",
+      "url": "https://www.congress.gov/crs-product/R47997",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.imf.org/-/media/files/publications/gfsr/2024/october/english/ch3.pdf",
+      "zh": "https://www.imf.org/-/media/files/publications/gfsr/2024/october/english/ch3.pdf",
+      "url": "https://www.imf.org/-/media/files/publications/gfsr/2024/october/english/ch3.pdf",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2607.26057",
+      "zh": "https://arxiv.org/abs/2607.26057",
+      "url": "https://arxiv.org/abs/2607.26057",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2607.24368",
+      "zh": "https://arxiv.org/abs/2607.24368",
+      "url": "https://arxiv.org/abs/2607.24368",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2607.24223",
+      "zh": "https://arxiv.org/abs/2607.24223",
+      "url": "https://arxiv.org/abs/2607.24223",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2607.25431",
+      "zh": "https://arxiv.org/abs/2607.25431",
+      "url": "https://arxiv.org/abs/2607.25431",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2607.25565",
+      "zh": "https://arxiv.org/abs/2607.25565",
+      "url": "https://arxiv.org/abs/2607.25565",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/machinelearning/comments/1v90r9r/neurips_2026_reviewer_aigenerated_rebuttals_and",
+      "zh": "https://www.reddit.com/r/machinelearning/comments/1v90r9r/neurips_2026_reviewer_aigenerated_rebuttals_and",
+      "url": "https://www.reddit.com/r/machinelearning/comments/1v90r9r/neurips_2026_reviewer_aigenerated_rebuttals_and",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://aclanthology.org/2025.naacl-demo.44",
+      "zh": "https://aclanthology.org/2025.naacl-demo.44",
+      "url": "https://aclanthology.org/2025.naacl-demo.44",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2607.25895",
+      "zh": "https://arxiv.org/abs/2607.25895",
+      "url": "https://arxiv.org/abs/2607.25895",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2607.24904",
+      "zh": "https://arxiv.org/abs/2607.24904",
+      "url": "https://arxiv.org/abs/2607.24904",
+      "pt": "未核实线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2607.24027",
+      "zh": "https://arxiv.org/abs/2607.24027",
+      "url": "https://arxiv.org/abs/2607.24027",
+      "pt": "未核实线索"
+    }
+  ],
+  "qualityNote": "部分内容未过全部质检（已尽最大修复轮次）",
+  "graphDelta": {
+    "entities": 32,
+    "events": 89,
+    "relations": 77,
+    "storylines": 10
+  }
+}

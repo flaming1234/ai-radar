@@ -348,6 +348,24 @@ if(!window.d3){
   .sl-block .bh h3{font-family:var(--f-head);font-weight:600;font-size:17px;color:var(--display);margin:0}
   .sl-new{font-family:var(--f-mono);font-size:8px;letter-spacing:.1em;padding:2px 7px;border:1px solid var(--accent-text);border-radius:var(--r-pill);color:var(--accent-text)}
   .sl-cont{font-family:var(--f-mono);font-size:8px;letter-spacing:.08em;padding:2px 7px;border:1px solid var(--line-2);border-radius:var(--r-pill);color:var(--secondary)} /* J：延续主线徽章 */
+  /* P5③：链节点来源支撑度角标 */
+  .chain-node .src-one{font-family:var(--f-mono);font-size:8px;letter-spacing:.04em;color:var(--muted)}
+  .chain-node .src-multi{font-family:var(--f-mono);font-size:8px;letter-spacing:.04em;color:var(--success)}
+  /* P5②：域模块折叠 */
+  .sl-domfold summary{list-style:none;cursor:pointer}
+  .sl-domfold summary::-webkit-details-marker{display:none}
+  .sl-domfold summary .bh{margin-bottom:0}
+  .sl-domfold[open] summary .bh{margin-bottom:14px}
+  .sl-domfold summary h3::before{content:'▸ ';color:var(--muted);font-size:13px}
+  .sl-domfold[open] summary h3::before{content:'▾ '}
+  .sl-dombar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:28px 0 12px;font-family:var(--f-mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--display)}
+  .sl-dombar button{padding:3px 11px;border:1px solid var(--line-2);border-radius:var(--r-pill);background:none;color:var(--secondary);font-family:var(--f-mono);font-size:9px;cursor:pointer}
+  .sl-dombar button:hover{color:var(--display);border-color:var(--display)}
+  .sl-dombar .hint{color:var(--muted);text-transform:none;letter-spacing:.03em}
+  /* P5⑤：归档页 */
+  .archlink{font-family:var(--f-mono);font-size:10px;letter-spacing:.06em;color:var(--secondary);cursor:pointer;border-bottom:1px solid var(--line-2)}
+  .archlink:hover{color:var(--display)}
+  .arch-month{margin-bottom:26px}
   .sl-today{font-size:12.5px;color:var(--secondary);line-height:1.55;margin:-4px 0 12px} /* J：延续主线"今日"副题 */
   .chainflow{display:flex;align-items:stretch;gap:8px;flex-wrap:wrap;margin-bottom:14px}
   .chain-node{display:flex;flex-direction:column;gap:5px;max-width:250px;padding:10px 13px;background:var(--glass);border-radius:var(--r-md)}
@@ -497,7 +515,7 @@ if(!window.d3){
     </aside>
 
     <div class="content">
-      <div class="chead"><h1><span id="ctitle">今天 · AI 思潮</span> <span class="cnt" id="cnt">共 13 条</span></h1></div>
+      <div class="chead"><h1><span id="ctitle">今天 · AI 思潮</span> <span class="cnt" id="cnt">共 13 条</span> <span class="archlink" id="archlink" hidden>归档 →</span></h1></div>
       <div class="sortbar">
         <div class="tabs" id="sorttabs"><span class="on" data-sort="最新">最新</span><span data-sort="点赞">点赞</span></div>
         <div class="right">
@@ -614,8 +632,8 @@ let DATA = [], TODAY_INBOX = null;
   }catch(e){/* 隐私模式等取不到 localStorage 时跳过 */}
 })();
 const I18N={
-  zh:{brandSub:'海外一手 · 中文 · AI 辅助',radar:'雷达',mine:'我的',search:'搜索…',loggedOut:'未登录',loggedIn:'已登录',login:'登录',logout:'退出',subscribe:'订阅',type:'类型',topic:'主题',source:'来源',all:'全部',live:'现场',news:'消息',daily:'日报',weekly:'周报',latest:'最新',likes:'点赞',crossPlatform:'跨平台',saved:'收藏',past24:'过去 24 小时',past7:'过去 7 天',past30:'过去 30 天',allTime:'全部时间',todayRadar:'今天 · AI 思潮',rollingTitle:'过去 168 小时',count:n=>`共 ${n} 条`,aiGame:'AI 游戏',aiFinance:'AI 金融',aiEnterpriseOs:'AI 企业OS',siteHot:'全站最热',siteHotNote:'热点发现池 · 非 X / Reddit / YouTube 官方全站热榜',liveLead:'滚动 168 小时',windowRange:({from,to})=>`${from} → ${to} · 严格滚动窗口 · 未核实`,timeUnknown:'时间未知',justNow:'刚刚',minutesAgo:n=>`${n} 分钟前`,hoursAgo:n=>`${n} 小时前`,daysAgo:n=>`${n} 天前`,collected:'收录 ',likeMetric:'喜欢',retweetMetric:'转发',replyMetric:'回复',scoreMetric:'分数',upvoteMetric:'赞同',commentMetric:'评论',viewMetric:'观看',unverified:'未核实线索',noEngagement:'互动量暂无',originalPost:'原帖 ↗',translated:'中文译文',original:'原文',warnings:n=>`${n} 条采集提示 ▾`,noMatch:'没有匹配的内容',noSaved:'还没有收藏 —— 在卡片上点书签',noLiked:'还没有点赞',emptyHot:'本轮没有达到展示门槛的热点线索。当前仅扫描 Reddit r/all；Web 未配置，X 未纳入，YouTube 只作补证。这不代表三站没有热点。',emptyGame:'过去 168 小时还没有捕获到 AI 游戏线索；该分类会继续独立扫描。',emptyFinance:'过去 168 小时还没有捕获到 AI 金融线索；该分类会继续独立扫描。',emptyEnterprise:'过去 168 小时还没有捕获到 AI 企业OS线索；该分类会继续独立扫描。',emptyAi:'过去 168 小时还没有捕获到 AI 线索，请查看上方来源状态。',noSecondary:'当前类型没有二级筛选',back:'返回',unknown:'未知',rollingDetail:'过去 168 小时现场',leadNotice:'直接来自滚动 168 小时采集结果，尚未经过审稿或事实核验。它适合发现正在形成的讨论，不应直接当成已证实结论。',internalMode:'内部即时模式：已跳过审稿台。涉及数字、归因、开源状态或引用关系时，请先打开原帖核实。',collectionSummary:'采集摘要',noSummary:'暂无摘要，请直接打开原帖查看。',platform:'平台',category:'类别',publishedAt:'发布时间',collectedAt:'采集时间',appearedInWindow:'窗口内出现',sourceStatus:'来源状态',engagementClue:'互动量线索',collector:'采集器',openSource:p=>`打开 ${p} 原帖 ↗`,analyze:'用 Agent 分析这条',agentLeadNote:'Agent 会把它当作 lead_only，而不是事实。',unknownPublished:'未知（按收录时间展示）',thisCollection:'本次收录',askAgent:'问雷达 Agent',agentTitle:'雷达 Agent',agentReading:'正在读取当前雷达',continueAsk:'继续追问',agentPlaceholder:'问当前详情，或当前筛选结果',send:'发送',agentHint:'Enter 发送，Shift+Enter 换行',discussing:'今天在讨论什么？',openSourceOpportunity:'找开源机会',consensus:'三平台共识 / 分歧',agentChecking:'正在核对当前雷达',agentNoAnswer:'没有生成回答',agentUnavailable:'分析 Agent 暂时不可用，请稍后再试',thisRoundSources:'本轮来源',originalFallback:'暂无中文译文，显示原文',health_ok:'实时',health_observed:'已获取',health_partial:'部分',health_cached_ok:'同日缓存',health_cached_no_results:'缓存无结果',health_no_results:'无结果',health_fixture_not_run:'测试未运行',health_historical_not_run:'历史不运行',health_not_configured:'未接入',health_failed:'失败',health_unknown:'未知',footer:'AI 辅助翻译与归类 · 过去 168 小时现场为未核实线索 · 原始来源可查 · 正式内容另行核验'},
-  en:{brandSub:'Primary overseas sources · AI-assisted',radar:'Radar',mine:'My items',search:'Search…',loggedOut:'Signed out',loggedIn:'Signed in',login:'Sign in',logout:'Sign out',subscribe:'Subscribe',type:'TYPE',topic:'TOPIC',source:'SOURCE',all:'All',live:'Live',news:'Signals',daily:'Daily',weekly:'Weekly',latest:'Latest',likes:'Likes',crossPlatform:'Balanced',saved:'Saved',past24:'Past 24 hours',past7:'Past 7 days',past30:'Past 30 days',allTime:'All time',todayRadar:'Today · AI ideas',rollingTitle:'Past 168 hours',count:n=>`${n} items`,aiGame:'AI Games',aiFinance:'AI Finance',aiEnterpriseOs:'AI Enterprise OS',siteHot:'Site-wide Hot',siteHotNote:'Hot-lead pool · not the official X / Reddit / YouTube trending charts',liveLead:'ROLLING 168 HOURS',windowRange:({from,to})=>`${from} → ${to} · strict rolling window · unverified`,timeUnknown:'Time unknown',justNow:'Just now',minutesAgo:n=>`${n}m ago`,hoursAgo:n=>`${n}h ago`,daysAgo:n=>`${n}d ago`,collected:'Collected ',likeMetric:'Likes',retweetMetric:'Reposts',replyMetric:'Replies',scoreMetric:'Score',upvoteMetric:'Upvotes',commentMetric:'Comments',viewMetric:'Views',unverified:'Unverified lead',noEngagement:'No engagement data',originalPost:'Original ↗',translated:'Chinese translation',original:'Original',warnings:n=>`${n} collection notes ▾`,noMatch:'No matching items',noSaved:'No saved items yet',noLiked:'No liked items yet',emptyHot:'No hot lead cleared the display threshold. Only Reddit r/all is currently scanned; Web is not configured, X is not included, and YouTube is enrichment only. This does not mean the platforms have no hot topics.',emptyGame:'No AI-game lead was captured in the past 168 hours; this lane will keep scanning.',emptyFinance:'No AI-finance lead was captured in the past 168 hours; this lane will keep scanning.',emptyEnterprise:'No AI-enterprise lead was captured in the past 168 hours; this lane will keep scanning.',emptyAi:'No AI lead was captured in the past 168 hours. Check source health above.',noSecondary:'No secondary filter for this type',back:'Back',unknown:'Unknown',rollingDetail:'Past 168 hours',leadNotice:'This item comes directly from the rolling 168-hour collection and has not been reviewed or fact-checked. Use it to discover emerging discussion, not as a verified conclusion.',internalMode:'Internal instant mode: review was skipped. Verify numbers, attribution, open-source status, and quote relationships in the original post.',collectionSummary:'Collection summary',noSummary:'No summary. Open the original post for details.',platform:'Platform',category:'Category',publishedAt:'Published',collectedAt:'Collected',appearedInWindow:'Seen in window',sourceStatus:'Source health',engagementClue:'Engagement clues',collector:'Collector',openSource:p=>`Open original on ${p} ↗`,analyze:'Analyze with Agent',agentLeadNote:'The Agent treats this as lead_only, not a fact.',unknownPublished:'Unknown (shown by collection time)',thisCollection:'This collection',askAgent:'Ask Radar Agent',agentTitle:'Radar Agent',agentReading:'Reading the current radar',continueAsk:'Follow up',agentPlaceholder:'Ask about this detail or the current filtered list',send:'Send',agentHint:'Enter to send · Shift+Enter for a new line',discussing:'What is being discussed?',openSourceOpportunity:'Find open-source opportunities',consensus:'Cross-platform consensus / gaps',agentChecking:'Checking the current radar',agentNoAnswer:'No answer was generated',agentUnavailable:'Radar Agent is temporarily unavailable. Try again later.',thisRoundSources:'Sources in this answer',originalFallback:'No translation available; showing original',health_ok:'Live',health_observed:'Observed',health_partial:'Partial',health_cached_ok:'Same-day cache',health_cached_no_results:'Cached empty',health_no_results:'No results',health_fixture_not_run:'Fixture skipped',health_historical_not_run:'History skipped',health_not_configured:'Not connected',health_failed:'Failed',health_unknown:'Unknown',footer:'AI-assisted translation and classification · rolling 168-hour leads are unverified · original sources remain available'}
+  zh:{brandSub:'海外一手 · 中文 · AI 辅助',radar:'雷达',mine:'我的',search:'搜索…',loggedOut:'未登录',loggedIn:'已登录',login:'登录',logout:'退出',subscribe:'订阅',type:'类型',topic:'主题',source:'来源',all:'全部',live:'现场',news:'消息',daily:'日报',weekly:'周报',latest:'最新',likes:'点赞',crossPlatform:'跨平台',saved:'收藏',past24:'过去 24 小时',past7:'过去 7 天',past30:'过去 30 天',allTime:'全部时间',todayRadar:'今天 · AI 思潮',rollingTitle:'过去 168 小时',count:n=>`共 ${n} 条`,aiGame:'AI 游戏',aiFinance:'AI 金融',aiEnterpriseOs:'AI 企业OS',siteHot:'全站最热',siteHotNote:'热点发现池 · 非 X / Reddit / YouTube 官方全站热榜',liveLead:'滚动 168 小时',windowRange:({from,to})=>`${from} → ${to} · 严格滚动窗口`,timeUnknown:'时间未知',justNow:'刚刚',minutesAgo:n=>`${n} 分钟前`,hoursAgo:n=>`${n} 小时前`,daysAgo:n=>`${n} 天前`,collected:'收录 ',likeMetric:'喜欢',retweetMetric:'转发',replyMetric:'回复',scoreMetric:'分数',upvoteMetric:'赞同',commentMetric:'评论',viewMetric:'观看',unverified:'自动聚合线索',noEngagement:'互动量暂无',originalPost:'原帖 ↗',translated:'中文译文',original:'原文',warnings:n=>`${n} 条采集提示 ▾`,noMatch:'没有匹配的内容',noSaved:'还没有收藏 —— 在卡片上点书签',noLiked:'还没有点赞',emptyHot:'本轮没有达到展示门槛的热点线索。当前仅扫描 Reddit r/all；Web 未配置，X 未纳入，YouTube 只作补证。这不代表三站没有热点。',emptyGame:'过去 168 小时还没有捕获到 AI 游戏线索；该分类会继续独立扫描。',emptyFinance:'过去 168 小时还没有捕获到 AI 金融线索；该分类会继续独立扫描。',emptyEnterprise:'过去 168 小时还没有捕获到 AI 企业OS线索；该分类会继续独立扫描。',emptyAi:'过去 168 小时还没有捕获到 AI 线索，请查看上方来源状态。',noSecondary:'当前类型没有二级筛选',back:'返回',unknown:'未知',rollingDetail:'过去 168 小时现场',leadNotice:'直接来自滚动 168 小时采集结果，尚未经过审稿或事实核验。它适合发现正在形成的讨论，不应直接当成已证实结论。',internalMode:'内部即时模式：已跳过审稿台。涉及数字、归因、开源状态或引用关系时，请先打开原帖核实。',collectionSummary:'采集摘要',noSummary:'暂无摘要，请直接打开原帖查看。',platform:'平台',category:'类别',publishedAt:'发布时间',collectedAt:'采集时间',appearedInWindow:'窗口内出现',sourceStatus:'来源状态',engagementClue:'互动量线索',collector:'采集器',openSource:p=>`打开 ${p} 原帖 ↗`,analyze:'用 Agent 分析这条',agentLeadNote:'Agent 会把它当作 lead_only，而不是事实。',unknownPublished:'未知（按收录时间展示）',thisCollection:'本次收录',askAgent:'问雷达 Agent',agentTitle:'雷达 Agent',agentReading:'正在读取当前雷达',continueAsk:'继续追问',agentPlaceholder:'问当前详情，或当前筛选结果',send:'发送',agentHint:'Enter 发送，Shift+Enter 换行',discussing:'今天在讨论什么？',openSourceOpportunity:'找开源机会',consensus:'三平台共识 / 分歧',agentChecking:'正在核对当前雷达',agentNoAnswer:'没有生成回答',agentUnavailable:'分析 Agent 暂时不可用，请稍后再试',thisRoundSources:'本轮来源',originalFallback:'暂无中文译文，显示原文',health_ok:'实时',health_observed:'已获取',health_partial:'部分',health_cached_ok:'同日缓存',health_cached_no_results:'缓存无结果',health_no_results:'无结果',health_fixture_not_run:'测试未运行',health_historical_not_run:'历史不运行',health_not_configured:'未接入',health_failed:'失败',health_unknown:'未知',footer:'AI 辅助翻译与归类 · 现场内容为自动聚合线索，引用前请核对原文 · 原始来源可查'},
+  en:{brandSub:'Primary overseas sources · AI-assisted',radar:'Radar',mine:'My items',search:'Search…',loggedOut:'Signed out',loggedIn:'Signed in',login:'Sign in',logout:'Sign out',subscribe:'Subscribe',type:'TYPE',topic:'TOPIC',source:'SOURCE',all:'All',live:'Live',news:'Signals',daily:'Daily',weekly:'Weekly',latest:'Latest',likes:'Likes',crossPlatform:'Balanced',saved:'Saved',past24:'Past 24 hours',past7:'Past 7 days',past30:'Past 30 days',allTime:'All time',todayRadar:'Today · AI ideas',rollingTitle:'Past 168 hours',count:n=>`${n} items`,aiGame:'AI Games',aiFinance:'AI Finance',aiEnterpriseOs:'AI Enterprise OS',siteHot:'Site-wide Hot',siteHotNote:'Hot-lead pool · not the official X / Reddit / YouTube trending charts',liveLead:'ROLLING 168 HOURS',windowRange:({from,to})=>`${from} → ${to} · strict rolling window · unverified`,timeUnknown:'Time unknown',justNow:'Just now',minutesAgo:n=>`${n}m ago`,hoursAgo:n=>`${n}h ago`,daysAgo:n=>`${n}d ago`,collected:'Collected ',likeMetric:'Likes',retweetMetric:'Reposts',replyMetric:'Replies',scoreMetric:'Score',upvoteMetric:'Upvotes',commentMetric:'Comments',viewMetric:'Views',unverified:'Auto-aggregated lead',noEngagement:'No engagement data',originalPost:'Original ↗',translated:'Chinese translation',original:'Original',warnings:n=>`${n} collection notes ▾`,noMatch:'No matching items',noSaved:'No saved items yet',noLiked:'No liked items yet',emptyHot:'No hot lead cleared the display threshold. Only Reddit r/all is currently scanned; Web is not configured, X is not included, and YouTube is enrichment only. This does not mean the platforms have no hot topics.',emptyGame:'No AI-game lead was captured in the past 168 hours; this lane will keep scanning.',emptyFinance:'No AI-finance lead was captured in the past 168 hours; this lane will keep scanning.',emptyEnterprise:'No AI-enterprise lead was captured in the past 168 hours; this lane will keep scanning.',emptyAi:'No AI lead was captured in the past 168 hours. Check source health above.',noSecondary:'No secondary filter for this type',back:'Back',unknown:'Unknown',rollingDetail:'Past 168 hours',leadNotice:'This item comes directly from the rolling 168-hour collection and has not been reviewed or fact-checked. Use it to discover emerging discussion, not as a verified conclusion.',internalMode:'Internal instant mode: review was skipped. Verify numbers, attribution, open-source status, and quote relationships in the original post.',collectionSummary:'Collection summary',noSummary:'No summary. Open the original post for details.',platform:'Platform',category:'Category',publishedAt:'Published',collectedAt:'Collected',appearedInWindow:'Seen in window',sourceStatus:'Source health',engagementClue:'Engagement clues',collector:'Collector',openSource:p=>`Open original on ${p} ↗`,analyze:'Analyze with Agent',agentLeadNote:'The Agent treats this as lead_only, not a fact.',unknownPublished:'Unknown (shown by collection time)',thisCollection:'This collection',askAgent:'Ask Radar Agent',agentTitle:'Radar Agent',agentReading:'Reading the current radar',continueAsk:'Follow up',agentPlaceholder:'Ask about this detail or the current filtered list',send:'Send',agentHint:'Enter to send · Shift+Enter for a new line',discussing:'What is being discussed?',openSourceOpportunity:'Find open-source opportunities',consensus:'Cross-platform consensus / gaps',agentChecking:'Checking the current radar',agentNoAnswer:'No answer was generated',agentUnavailable:'Radar Agent is temporarily unavailable. Try again later.',thisRoundSources:'Sources in this answer',originalFallback:'No translation available; showing original',health_ok:'Live',health_observed:'Observed',health_partial:'Partial',health_cached_ok:'Same-day cache',health_cached_no_results:'Cached empty',health_no_results:'No results',health_fixture_not_run:'Fixture skipped',health_historical_not_run:'History skipped',health_not_configured:'Not connected',health_failed:'Failed',health_unknown:'Unknown',footer:'AI-assisted translation and classification · live items are auto-aggregated leads, verify against originals before citing · original sources remain available'}
 };
 const savedLanguage=localStorage.getItem('radar.language');
 /* mode:'cards'|'graph' 主区二选一；cat8 = 八分类筛选（'ai' 即全部）；detailKind 区分卡片详情与实体页 */
@@ -748,7 +766,7 @@ function candidateCardHTML(d){
   const metrics=candidateMetricParts(d);
   const categoryChips=(d.categories||[]).map(category=>`<span class="category-chip ${esc(category)}">${esc(categoryLabel(category))}</span>`).join('');
   return `<div class="scard is-live" data-id="${d.id}">
-    <div class="live-card-tags"><span class="typ live">${esc(t('live'))}</span>${categoryChips}<span class="unverified">${esc(t('unverified'))}</span>${d.translationFallback?`<span class="unverified">${esc(t('original'))}</span>`:''}</div>
+    <div class="live-card-tags"><span class="typ live">${esc(t('live'))}</span>${categoryChips}${d.translationFallback?`<span class="unverified">${esc(t('original'))}</span>`:''}</div>
     <div class="mid">
       <div class="src"><span class="dot"><svg class="ico" style="width:9px;height:9px"><use href="#${d.ic}"/></svg></span>${esc(d.src)} · ${esc(d.time)}</div>
       <div class="ttl">${esc(d.title)}</div>
@@ -821,6 +839,9 @@ function syncRadarHeader(){
   if(state.view!=='radar')return;
   const liveSuffix=[state.cat8!=='ai'?cat8Label(state.cat8):'',state.sourceFilter?sourceGroupLabel(state.sourceFilter):''].filter(Boolean).join(' · ');
   $('#ctitle').textContent=state.type==='现场'?`${t('rollingTitle')}${liveSuffix?` · ${liveSuffix}`:''}`:t('todayRadar');
+  // P5⑤：日报/周报视图露出归档入口
+  const archlink=$('#archlink');
+  if(archlink){archlink.hidden=!(state.mode==='cards'&&(state.type==='日报'||state.type==='周报'));archlink.textContent=state.lang==='en'?'Archive →':'归档 →';}
 }
 function syncLivebarVisibility(){
   $('#livebar').hidden=true; // ⑦ 状态条已删除，永久隐藏
@@ -941,7 +962,7 @@ function openDetail(id){
 function closeDetail(){
   navStack.length=0; // 关闭覆盖层即清空来路栈
   state.detailId=null;state.detailKind=null;entityPage.id=null;
-  if(/^#\/entity\//.test(location.hash))history.replaceState(null,'',location.pathname+location.search);
+  if(/^#\/(entity|archive)/.test(location.hash))history.replaceState(null,'',location.pathname+location.search);
   $('#detail').classList.remove('on');updatePublicAgentContext();
 }
 function readableDateTime(value){
@@ -1252,8 +1273,12 @@ function navBack(){
   if(!prev){closeDetail();return;}
   suppressNavPush=true;
   if(prev.kind==='item'){
-    if(/^#\/entity\//.test(location.hash))history.replaceState(null,'',location.pathname+location.search);
+    if(/^#\/(entity|archive)/.test(location.hash))history.replaceState(null,'',location.pathname+location.search);
     openDetail(prev.id);
+  }else if(prev.kind==='archive'){ // P5⑤：从存档条目/实体页退回归档列表
+    suppressNavPush=false;
+    if(location.hash==='#/archive')openArchivePage();
+    else location.hash='#/archive';
   }else{
     location.hash='#/entity/'+prev.id; // hashchange → openEntityPage（suppressNavPush 挡住重复入栈）
   }
@@ -1266,6 +1291,7 @@ function openEntityPage(id){
   if(!suppressNavPush){
     if(state.detailKind==='item'&&state.detailId!==null)navStack.push({kind:'item',id:state.detailId});
     else if(state.detailKind==='entity'&&entityPage.id&&entityPage.id!==id)navStack.push({kind:'entity',id:entityPage.id});
+    else if(state.detailKind==='archive'||state.detailKind==='archived')navStack.push({kind:'archive'}); // 从归档进实体页可退回
     if(navStack.length>20)navStack.shift();
   }
   suppressNavPush=false;
@@ -1355,28 +1381,40 @@ function renderStorylineDaily(d){
   const catChips=cats=>(cats||[]).map(c=>`<span class="category-chip">${esc(cat8Label(c))}</span>`).join('');
   const chainHtml=chain=>chain.map((node,i)=>{
     const arrow=i?`<span class="chain-arrow"><span class="ar">→</span>${esc(RELPREV_LABEL[node.relPrev]||node.relPrev||'')}</span>`:'';
-    return `${arrow}<span class="chain-node"><span class="top"><span class="kind-chip">${esc(KIND_LABEL[node.kind]||node.kind)}</span>${node.entity?entityLinkHtml(node.entity):''}${node.by?`<span class="by">by ${esc(node.by)}</span>`:''}</span><span class="ct2">${esc(node.title)}</span>${(node.sources||[]).length?`<span class="srcs">${slSourceLinks(node.sources)}</span>`:''}</span>`;
+    // P5③：来源支撑度角标——单源灰字提示，≥2 源绿字"N源印证"
+    const srcN=(node.sources||[]).length;
+    const srcBadge=srcN>=2?`<span class="src-multi">${srcN} ${state.lang==='en'?'sources':'源印证'}</span>`:(srcN===1?`<span class="src-one">${state.lang==='en'?'single source':'单源'}</span>`:'');
+    return `${arrow}<span class="chain-node"><span class="top"><span class="kind-chip">${esc(KIND_LABEL[node.kind]||node.kind)}</span>${srcBadge}${node.entity?entityLinkHtml(node.entity):''}${node.by?`<span class="by">by ${esc(node.by)}</span>`:''}</span><span class="ct2">${esc(node.title)}</span>${(node.sources||[]).length?`<span class="srcs">${slSourceLinks(node.sources)}</span>`:''}</span>`;
   }).join('');
   const gd=d.graphDelta;
   $('#dbody').innerHTML=`<div class="rwrap" style="grid-template-columns:1fr"><div class="rmain">
-    <div class="rmeta">${esc(d.src||'')} · ${esc(d.aggregatedAt||d.time||'')}${d.unverified?` · <span style="color:var(--warning)">${state.lang==='en'?'auto digest · unverified':'自动聚合 · 未核实'}</span>`:''}</div>
+    <div class="rmeta">${esc(String(d.src||'').replace(/\s*·?\s*未核实/g,''))} · ${esc(d.aggregatedAt||d.time||'')}</div>
     <div class="judg">${esc(d.title||'')}</div>
     ${d.sub?`<div class="rsub">${esc(d.sub)}</div>`:''}
-    ${d.qualityNote?`<div class="sl-quality">⚠ ${esc(d.qualityNote)}</div>`:''}
     <div class="sl-summary"><div class="h">${state.lang==='en'?'Today at a glance':'今日总结'}</div>${d.summary?`<p>${esc(d.summary)}</p>`:''}${(d.bullets||[]).length?`<ol>${d.bullets.map(b=>`<li>${esc(b)}</li>`).join('')}</ol>`:''}</div>
     <div class="sl-minigraph" id="slMiniGraph" hidden><div class="h">${state.lang==='en'?'Today in the graph':'今日图谱'}</div><div class="mg-body"></div></div>
-    ${(d.storylines||[]).map((s,i)=>{
-      // J(2026-07-30)：延续主线（isNew=false）标题区分——徽章"今日 N 条新事件" + 副题"—— 今日：首个链节点"
-      const chain=s.chain||[];
-      const contBadge=!s.isNew&&chain.length?`<span class="sl-cont">${state.lang==='en'?`+${chain.length} today`:`今日 ${chain.length} 条新事件`}</span>`:'';
-      const contSub=!s.isNew&&chain[0]?`<div class="sl-today">—— ${state.lang==='en'?'Today: ':'今日：'}${esc(chain[0].title)}</div>`:'';
-      return `<div class="sl-block" data-sl-id="${esc(s.id||String(i))}">
-      <div class="bh"><h3>${state.lang==='en'?'Storyline':'主线'} ${i+1} · ${esc(s.title)}</h3>${s.isNew?`<span class="sl-new">${state.lang==='en'?'NEW':'新开线'}</span>`:contBadge}${catChips(s.categories)}</div>
-      ${contSub}
+    ${(()=>{
+      // P5②：域模块（id 以 domain- 开头的主线）渲染成可折叠 details；默认全部展开，
+      // 折叠状态记 localStorage('radar.domainOpen')；首个域模块前插一条"全部展开/收起"控制条
+      const domainPrefs=(()=>{try{return JSON.parse(localStorage.getItem('radar.domainOpen')||'{}')}catch{return {}}})();
+      let domainBarDone=false;
+      return (d.storylines||[]).map((s,i)=>{
+        // J：延续主线（isNew=false）标题区分——徽章"今日 N 条新事件" + 副题"—— 今日：首个链节点"
+        const chain=s.chain||[];
+        const contBadge=!s.isNew&&chain.length?`<span class="sl-cont">${state.lang==='en'?`+${chain.length} today`:`今日 ${chain.length} 条新事件`}</span>`:'';
+        const contSub=!s.isNew&&chain[0]?`<div class="sl-today">—— ${state.lang==='en'?'Today: ':'今日：'}${esc(chain[0].title)}</div>`:'';
+        const header=`<div class="bh"><h3>${state.lang==='en'?'Storyline':'主线'} ${i+1} · ${esc(s.title)}</h3>${s.isNew?`<span class="sl-new">${state.lang==='en'?'NEW':'新开线'}</span>`:contBadge}${catChips(s.categories)}</div>`;
+        const body=`${contSub}
       <div class="chainflow">${chainHtml(chain)}</div>
       ${s.narrative?`<p class="sl-narrative">${esc(s.narrative)}</p>`:''}
-      ${s.carryOver?`<div class="sl-carry">${state.lang==='en'?'Previously':'承前'}：${esc(s.carryOver)}</div>`:''}
-    </div>`;}).join('')}
+      ${s.carryOver?`<div class="sl-carry">${state.lang==='en'?'Previously':'承前'}：${esc(s.carryOver)}</div>`:''}`;
+        const isDomain=/^domain-/.test(String(s.id||''));
+        if(!isDomain)return `<div class="sl-block" data-sl-id="${esc(s.id||String(i))}">${header}${body}</div>`;
+        const open=domainPrefs[s.id]!==false; // 默认全开
+        const bar=domainBarDone?'':(domainBarDone=true,`<div class="sl-dombar"><span>${state.lang==='en'?'Domain modules':'域模块'}</span><button type="button" data-dom-all="open">${state.lang==='en'?'Expand all':'全部展开'}</button><button type="button" data-dom-all="close">${state.lang==='en'?'Collapse all':'全部收起'}</button><span class="hint">${state.lang==='en'?'fold state is remembered':'折叠状态会记住'}</span></div>`);
+        return `${bar}<details class="sl-block sl-domfold" data-sl-id="${esc(s.id)}" data-domain="${esc(s.id)}"${open?' open':''}><summary>${header}</summary>${body}</details>`;
+      }).join('');
+    })()}
     ${(d.columns||[]).map(col=>{
       const colTitles={ai_finance:{zh:'金融 AI 今日',en:'Finance AI today'},gh_trending:{zh:'GitHub trending 今日',en:'GitHub trending today'},papers:{zh:'论文趋势',en:'Paper trends'}};
       const fallback=colTitles[col.key];
@@ -1445,7 +1483,7 @@ function renderStorylineWeekly(d){
   const wk=d.weekly||{};
   const trendMark={'加速':'↑ 加速','平稳':'→ 平稳','降温':'↓ 降温'};
   $('#dbody').innerHTML=`<div class="rwrap" style="grid-template-columns:1fr"><div class="rmain">
-    <div class="rmeta">${esc(d.src||'')} · ${esc(d.aggregatedAt||d.time||'')}${d.unverified?` · <span style="color:var(--warning)">${state.lang==='en'?'auto digest · unverified':'自动聚合 · 未核实'}</span>`:''}</div>
+    <div class="rmeta">${esc(String(d.src||'').replace(/\s*·?\s*未核实/g,''))} · ${esc(d.aggregatedAt||d.time||'')}</div>
     <div class="judg">${esc(d.title||'')}</div>
     ${d.summary?`<div class="sl-summary"><div class="h">${state.lang==='en'?'This week in one line':'本周一句话'}</div><p style="margin:0">${esc(d.summary)}</p></div>`:''}
     ${(wk.lines||[]).map(line=>`<div class="wk-line">
@@ -1520,11 +1558,59 @@ function renderCatGraph(){
     });
 }
 
-/* ===== hash 路由：#/entity/<id> ===== */
+/* ===== P5⑤：日报归档页（#/archive） ===== */
+let archiveCache=null;
+function openArchivePage(){
+  state.detailKind='archive';state.detailId=null;
+  $('#dbody').innerHTML=`<div class="emptywrap">${state.lang==='en'?'Loading archive…':'正在读取归档…'}</div>`;
+  $('#detail').classList.add('on');$('#detail').scrollTop=0;
+  const render=items=>{if(state.detailKind==='archive')renderArchiveList(items);};
+  if(archiveCache){render(archiveCache);updatePublicAgentContext();return;}
+  fetch('content/archive/index.json',{cache:'no-store'})
+    .then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json();})
+    .then(data=>{archiveCache=Array.isArray(data.items)?data.items:[];render(archiveCache);})
+    .catch(()=>{
+      // 归档索引缺失（如首次未发布）：退回 daily.json 内存条目
+      archiveCache=DATA.filter(x=>!x._candidate&&(x.type==='日报'||x.type==='周报'))
+        .map(x=>({file:'',date:x.aggregatedAt||'',type:x.type,format:x.format||'',title:x.title||'',sub:x.sub||''}));
+      render(archiveCache);
+    });
+  updatePublicAgentContext();
+}
+function renderArchiveList(items){
+  const groups=new Map();
+  items.forEach(item=>{const month=String(item.date||'').slice(0,7)||(state.lang==='en'?'Other':'其他');if(!groups.has(month))groups.set(month,[]);groups.get(month).push(item);});
+  $('#dbody').innerHTML=`<div class="epage">
+    <div class="ep-crumb"><span data-nav="home">${esc(t('radar'))}</span> / <b>${state.lang==='en'?'Report archive':'日报归档'}</b></div>
+    <div class="ep-head"><div class="row1"><h2>${state.lang==='en'?'Report archive':'日报归档'}</h2></div><div class="ep-stats">${state.lang==='en'?'TOTAL':'共'} ${items.length} ${state.lang==='en'?'issues':'期'} · ${state.lang==='en'?'grouped by month':'按月分组'}</div></div>
+    ${[...groups.entries()].map(([month,list])=>`<div class="arch-month"><div class="evh">${esc(month)}（${list.length}）</div>
+      ${list.map(item=>`<div class="ep-repgrp arch-row" data-arch-date="${esc(item.date)}" data-arch-type="${esc(item.type)}" data-arch-file="${esc(item.file||'')}" style="cursor:pointer"><span class="d">${esc(item.date)}</span><span class="kind-chip">${esc(item.type)}</span><span style="flex:1;line-height:1.55">${esc(item.sub||item.title)}</span></div>`).join('')}
+    </div>`).join('')||`<div class="emptywrap">${state.lang==='en'?'No reports yet':'还没有日报'}</div>`}
+  </div>`;
+}
+function openArchiveItem(dataset){
+  // 优先用线上 DATA 里的同期条目（走完整 openDetail 流程）；不在线上的才拉存档文件
+  const live=DATA.find(x=>!x._candidate&&x.type===dataset.archType&&x.aggregatedAt===dataset.archDate);
+  navStack.push({kind:'archive'});
+  if(navStack.length>20)navStack.shift();
+  if(live){suppressNavPush=true;openDetail(live.id);return;}
+  if(!dataset.archFile){navStack.pop();toast(state.lang==='en'?'Archive file unavailable':'该期存档不可用');return;}
+  fetch('content/archive/'+dataset.archFile,{cache:'no-store'})
+    .then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json();})
+    .then(item=>{
+      state.detailKind='archived';state.detailId=null;
+      renderReport(item);
+      $('#detail').scrollTop=0;
+    })
+    .catch(()=>{navStack.pop();toast(state.lang==='en'?'Failed to load archive':'存档读取失败');});
+}
+
+/* ===== hash 路由：#/entity/<id> 与 #/archive ===== */
 function handleHashRoute(){
+  if(location.hash==='#/archive'){openArchivePage();return;}
   const m=location.hash.match(/^#\/entity\/([A-Za-z0-9_-]+)$/);
   if(m){openEntityPage(m[1]);return;}
-  if(state.detailKind==='entity')closeDetail();
+  if(state.detailKind==='entity'||state.detailKind==='archive'||state.detailKind==='archived')closeDetail();
 }
 window.addEventListener('hashchange',handleHashRoute);
 
@@ -1758,8 +1844,32 @@ $('#dbody').addEventListener('click',e=>{const r=e.target.closest('[data-report]
   const en=e.target.closest('[data-entity-name]');
   if(en){gotoEntityByName(en.dataset.entityName);return;}
   const jump=e.target.closest('[data-sl-jump]');
-  if(jump){const block=$('#dbody').querySelector(`.sl-block[data-sl-id="${CSS.escape(jump.dataset.slJump)}"]`);if(block)block.scrollIntoView({behavior:'smooth',block:'start'});return;}
+  if(jump){const block=$('#dbody').querySelector(`.sl-block[data-sl-id="${CSS.escape(jump.dataset.slJump)}"]`);if(block){if(block.tagName==='DETAILS')block.open=true;block.scrollIntoView({behavior:'smooth',block:'start'});}return;}
+  /* P5⑤：归档行点击 */
+  const arch=e.target.closest('[data-arch-date]');
+  if(arch){openArchiveItem(arch.dataset);return;}
+  /* P5②：域模块全部展开/收起 */
+  const domAll=e.target.closest('[data-dom-all]');
+  if(domAll){
+    const open=domAll.dataset.domAll==='open';
+    const prefs=(()=>{try{return JSON.parse(localStorage.getItem('radar.domainOpen')||'{}')}catch{return {}}})();
+    document.querySelectorAll('#dbody details[data-domain]').forEach(det=>{det.open=open;prefs[det.dataset.domain]=open;});
+    try{localStorage.setItem('radar.domainOpen',JSON.stringify(prefs));}catch(err){}
+    return;
+  }
 });
+/* P5②：域模块折叠状态持久化（toggle 不冒泡，用捕获监听） */
+$('#dbody').addEventListener('toggle',e=>{
+  const det=e.target;
+  if(!det||!det.dataset||!det.dataset.domain)return;
+  try{
+    const prefs=JSON.parse(localStorage.getItem('radar.domainOpen')||'{}');
+    prefs[det.dataset.domain]=det.open;
+    localStorage.setItem('radar.domainOpen',JSON.stringify(prefs));
+  }catch(err){/* 隐私模式忽略 */}
+},true);
+/* P5⑤：归档入口 */
+$('#archlink').addEventListener('click',()=>{location.hash='#/archive';});
 $('#brand').addEventListener('click',()=>{closeDetail();setView('radar');});
 document.querySelector('.topnav').addEventListener('click',e=>{const a=e.target.closest('a[data-view]');if(a){closeDetail();setView(a.dataset.view);}});
 /* login / sub */
@@ -1839,6 +1949,6 @@ renderPublicAgent();
 setGraphMode(true); // 默认视图：知识图谱（点分类/类型才切卡片流）
 handleHashRoute(); // 首次载入带 #/entity/<id> 时直接进实体页
 </script>
-<footer id="pageFooter" style="text-align:center;padding:22px 16px 30px;font-family:var(--f-mono);font-size:9px;letter-spacing:.05em;color:var(--secondary);border-top:1px solid var(--line);margin-top:30px">AI 辅助翻译与归类 · 过去 168 小时现场为未核实线索 · 原始来源可查 · 正式内容另行核验</footer>
+<footer id="pageFooter" style="text-align:center;padding:22px 16px 30px;font-family:var(--f-mono);font-size:9px;letter-spacing:.05em;color:var(--secondary);border-top:1px solid var(--line);margin-top:30px">AI 辅助翻译与归类 · 现场内容为自动聚合线索，引用前请核对原文 · 原始来源可查</footer>
 </body>
 </html>
