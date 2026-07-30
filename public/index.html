@@ -5,8 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI 思潮雷达 · 原型</title>
 <link rel="stylesheet" href="css/nothing-ui.css">
-<!-- P2 知识图谱：D3 force 由 CDN 引入；断网加载失败时前端检测 window.d3 缺失，自动降级为实体列表 -->
-<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js" defer></script>
+<!-- F(2026-07-30)：D3 本地化——国内访问 CDN 不稳定导致生产图谱降级。先加载打包在站内的 vendor 文件，
+     失败（文件缺失等极端情况）再回退 CDN；两路都失败才走实体列表降级 -->
+<script src="vendor/d3.v7.min.js"></script>
+<script>
+if(!window.d3){
+  var d3cdn=document.createElement('script');
+  d3cdn.src='https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js';
+  document.head.appendChild(d3cdn);
+}
+</script>
 <style>
   html,body{height:100%}
   body{margin:0;overflow:hidden}
@@ -379,6 +387,8 @@
   .catsec-empty{grid-column:1/-1;font-family:var(--f-mono);font-size:9.5px;color:var(--muted);padding:9px 2px}
   /* C：分类页顶部专属小图谱 */
   .catgraph{position:relative;height:300px;margin-bottom:16px;border:1px solid var(--line);border-radius:var(--r-md);background:var(--glass);overflow:hidden}
+  .catgraph.slim{height:auto;background:transparent} /* G：空态占位只占一行 */
+  .catgraph .cg-empty{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.04em;color:var(--muted);padding:9px 14px;line-height:1.5}
   .catgraph[hidden]{display:none}
   .catgraph svg{width:100%;height:100%;display:block}
   .catgraph .cg-title{position:absolute;top:10px;left:14px;font-family:var(--f-mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--secondary);pointer-events:none}
@@ -908,6 +918,9 @@ function setView(v){
 function openDetail(id){
   const d=DATA[id];
   if(!d)return;
+  // E：从实体页点"看当天日报"等进详情时，把实体页压入来路栈
+  if(!suppressNavPush&&state.detailKind==='entity'&&entityPage.id)navStack.push({kind:'entity',id:entityPage.id});
+  suppressNavPush=false;
   if(/^#\/entity\//.test(location.hash))history.replaceState(null,'',location.pathname+location.search); // 从实体页跳卡片详情时清 hash
   state.detailId=id;state.detailKind='item';
   if(d._candidate)renderCandidate(d);
@@ -917,6 +930,7 @@ function openDetail(id){
   updatePublicAgentContext();
 }
 function closeDetail(){
+  navStack.length=0; // 关闭覆盖层即清空来路栈
   state.detailId=null;state.detailKind=null;entityPage.id=null;
   if(/^#\/entity\//.test(location.hash))history.replaceState(null,'',location.pathname+location.search);
   $('#detail').classList.remove('on');updatePublicAgentContext();
@@ -1045,6 +1059,8 @@ function kgRecentCount(e,days){
   return (e.events||[]).filter(ev=>String(ev.date||'')>=cut).length;
 }
 const kgRadius=e=>7+Math.min(18,Math.sqrt(kgRecentCount(e))*5); // 节点半径 ∝ 近30天事件数
+// D(2026-07-30) 防重叠：碰撞半径把节点下方的名字标签宽度也算进去（中英混排按 ~3.6px/字符估半宽）
+const kgCollideR=e=>Math.max(kgRadius(e)+18,String(e.name||'').length*3.6+12);
 /* ⑪ 共现边：同一主线里出现过的实体两两连虚线（纯前端推导，不写入 relations.jsonl）。
    已有语义关系边的实体对不再画共现边。 */
 function kgCooccurEdges(){
@@ -1136,7 +1152,7 @@ function renderGraphView(){
     .force('link',d3.forceLink(links).id(d=>d.id).distance(d=>d.co?140:95).strength(d=>d.co?0.25:0.6))
     .force('charge',d3.forceManyBody().strength(-240))
     .force('center',d3.forceCenter(w/2,h/2))
-    .force('collide',d3.forceCollide().radius(d=>kgRadius(d)+18))
+    .force('collide',d3.forceCollide().radius(kgCollideR)) // D：含标签宽度，防节点名互相压字
     .on('tick',()=>{
       link.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y).attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);
       linkLabel.attr('x',d=>(d.source.x+d.target.x)/2).attr('y',d=>(d.source.y+d.target.y)/2-4);
@@ -1203,10 +1219,32 @@ $('#kgSearch').addEventListener('input',()=>applyKgHighlight());
 
 /* ===== 实体页（hash 路由 #/entity/<id>，渲染进详情覆盖层） ===== */
 const entityPage={id:null,kind:'all'};
+/* E(2026-07-30) 返回来路：详情页 ⇄ 实体页之间跳转时记录来路栈，
+   返回键先逐级回退（日报详情→实体页→返回=回日报详情），栈空才关闭覆盖层回主区 */
+const navStack=[];
+let suppressNavPush=false; // navBack 触发的跳转不再入栈，防止来回循环
+function navBack(){
+  const prev=navStack.pop();
+  if(!prev){closeDetail();return;}
+  suppressNavPush=true;
+  if(prev.kind==='item'){
+    if(/^#\/entity\//.test(location.hash))history.replaceState(null,'',location.pathname+location.search);
+    openDetail(prev.id);
+  }else{
+    location.hash='#/entity/'+prev.id; // hashchange → openEntityPage（suppressNavPush 挡住重复入栈）
+  }
+}
 function reportItemByDate(date){
   return DATA.find(x=>!x._candidate&&x.type==='日报'&&x.aggregatedAt===date)||null;
 }
 function openEntityPage(id){
+  // E：记录来路（从日报/消息详情或另一实体页进来）
+  if(!suppressNavPush){
+    if(state.detailKind==='item'&&state.detailId!==null)navStack.push({kind:'item',id:state.detailId});
+    else if(state.detailKind==='entity'&&entityPage.id&&entityPage.id!==id)navStack.push({kind:'entity',id:entityPage.id});
+    if(navStack.length>20)navStack.shift();
+  }
+  suppressNavPush=false;
   state.detailKind='entity';state.detailId=null;
   $('#dbody').innerHTML=`<div class="emptywrap">${state.lang==='en'?'Loading knowledge base…':'正在读取知识库…'}</div>`;
   $('#detail').classList.add('on');$('#detail').scrollTop=0;
@@ -1400,7 +1438,20 @@ function renderCatGraph(){
   }
   const cat=state.cat8;
   const nodes=KG.index?(KG.index.entities||[]).filter(e=>(e.events||[]).some(ev=>ev.category===cat)).map(e=>({...e})):[];
-  if(!nodes.length||!window.d3){if(catSim){catSim.stop();catSim=null;}box.hidden=true;box.innerHTML='';return;} // 无知识数据/无 D3 → 整块不显示
+  // G(2026-07-30)：无知识数据不再静默隐藏，显示一行占位，让用户能区分"没数据"和"坏了"
+  if(!nodes.length){
+    if(catSim){catSim.stop();catSim=null;}
+    box.hidden=false;box.classList.add('slim');
+    box.innerHTML=`<div class="cg-empty">${state.lang==='en'?'Knowledge graph pending — it appears automatically once dailies produce knowledge for this category.':'知识图谱待积累——日报产出该分类知识后自动出现'}</div>`;
+    return;
+  }
+  if(!window.d3){
+    if(catSim){catSim.stop();catSim=null;}
+    box.hidden=false;box.classList.add('slim');
+    box.innerHTML=`<div class="cg-empty">${state.lang==='en'?'Graph library failed to load (D3 unavailable).':'图谱组件未加载（D3 加载失败）'}</div>`;
+    return;
+  }
+  box.classList.remove('slim');
   if(catSim){catSim.stop();catSim=null;}
   const idset=new Set(nodes.map(n=>n.id));
   const semLinks=(KG.index.relations||[]).filter(r=>idset.has(r.from)&&idset.has(r.to)).map(r=>({...r,source:r.from,target:r.to}));
@@ -1422,7 +1473,7 @@ function renderCatGraph(){
     .force('link',d3.forceLink(links).id(d=>d.id).distance(d=>d.co?100:75).strength(d=>d.co?0.25:0.6))
     .force('charge',d3.forceManyBody().strength(-160))
     .force('center',d3.forceCenter(w/2,h/2+6))
-    .force('collide',d3.forceCollide().radius(26))
+    .force('collide',d3.forceCollide().radius(d=>Math.max(26,String(d.name||'').length*3.4+8))) // D：防标签重叠
     .force('y',d3.forceY(h/2).strength(0.08)) // 300px 矮容器：轻微向中线聚拢防出界
     .on('tick',()=>{
       link.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y).attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);
@@ -1654,7 +1705,7 @@ grid.addEventListener('click',e=>{
   const card=e.target.closest('.scard');if(card)openDetail(+card.dataset.id);
 });
 /* detail nav */
-$('#backbtn').addEventListener('click',closeDetail);
+$('#backbtn').addEventListener('click',navBack); // E：先回来路，栈空才关闭
 $('#dbody').addEventListener('click',e=>{const r=e.target.closest('[data-report]'),o=e.target.closest('[data-open]'),a=e.target.closest('[data-analyze-candidate]');
   if(r){const rep=DATA.find(x=>x.type==='日报');if(rep)openDetail(rep.id);return;}
   if(o){openDetail(+o.dataset.open);return;}
