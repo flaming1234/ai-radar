@@ -1,14 +1,9 @@
 {
   "name": "ai-radar",
-  "version": "1.0.0",
-  "description": "AI 资讯雷达 — 海内外 AI 新闻聚合",
+  "version": "2.0.0",
+  "description": "AI 每日雷达 — 主线式日报 + 知识图谱（静态站 + serverless Agent）",
   "type": "module",
   "private": true,
-  "scripts": {
-    "start": "node scripts/serve.mjs",
-    "serve": "node scripts/serve.mjs",
-    "fetch": "node scripts/fetch-news.mjs"
-  },
   "engines": {
     "node": ">=18"
   }

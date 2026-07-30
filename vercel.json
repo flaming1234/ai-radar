@@ -4,17 +4,15 @@
   "installCommand": null,
   "outputDirectory": "public",
   "framework": null,
+  "rewrites": [
+    { "source": "/api/knowledge/graph", "destination": "/content/graph-index.json" },
+    { "source": "/api/today-candidates", "destination": "/content/today-candidates.json" }
+  ],
   "headers": [
     {
-      "source": "/(news\\.json|archive-index\\.json|news-data\\.js)",
+      "source": "/content/(.+)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=0, s-maxage=60, stale-while-revalidate=300" }
-      ]
-    },
-    {
-      "source": "/archive/(.+)",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=300, s-maxage=86400, immutable" }
       ]
     }
   ]

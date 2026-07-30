@@ -1,175 +1,1734 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="dark">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>AI 资讯雷达 · AI Engineer Radar</title>
-  <meta name="description" content="X 高信号 AI 资讯聚合 · Latent.Space 风格今日综述" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/styles.css" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%236366f1'/%3E%3Cstop offset='100%25' stop-color='%2322d3ee'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='32' cy='32' r='28' fill='url(%23g)'/%3E%3Ccircle cx='32' cy='32' r='6' fill='%23fff'/%3E%3Ccircle cx='32' cy='32' r='14' fill='none' stroke='%23fff' stroke-opacity='.6' stroke-width='2'/%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%23fff' stroke-opacity='.3' stroke-width='2'/%3E%3C/svg%3E" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 思潮雷达 · 原型</title>
+<link rel="stylesheet" href="css/nothing-ui.css">
+<!-- P2 知识图谱：D3 force 由 CDN 引入；断网加载失败时前端检测 window.d3 缺失，自动降级为实体列表 -->
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js" defer></script>
+<style>
+  html,body{height:100%}
+  body{margin:0;overflow:hidden}
+  .app{display:flex;flex-direction:column;height:100vh}
+  .topbar{height:52px;flex:0 0 auto;display:flex;align-items:center;gap:14px;padding:0 22px;border-bottom:1px solid var(--line)}
+  .brand{display:flex;align-items:baseline;gap:9px;cursor:pointer}
+  .brand .wm{font-family:var(--f-display);font-variation-settings:'ROND' 100;font-weight:500;font-size:16px;letter-spacing:.06em;color:var(--display)}
+  .brand .s{font-family:var(--f-mono);font-size:8.5px;letter-spacing:.14em;color:var(--muted)}
+  .topnav{display:flex;gap:18px;margin-left:18px}
+  .topnav a{font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--secondary);cursor:pointer}
+  .topnav a.on{color:var(--display)}
+  .topsearch{margin-left:auto;width:260px}
+  .login-st{font-family:var(--f-mono);font-size:9px;letter-spacing:.08em;color:var(--muted);margin-right:2px}
+  .langswitch{display:inline-flex;align-items:center;padding:2px;border:1px solid var(--line-2);border-radius:var(--r-pill);background:transparent}
+  .langswitch button{min-width:30px;height:24px;padding:0 7px;border:0;border-radius:var(--r-pill);background:transparent;color:var(--muted);font-family:var(--f-mono);font-size:8.5px;letter-spacing:.04em;cursor:pointer}
+  .langswitch button.on{background:var(--display);color:var(--bg)}
+  .main{flex:1;display:flex;min-height:0}
+  .side{flex:0 0 210px;border-right:1px solid var(--line);overflow-y:auto;padding:20px 16px}
+  .side .grp{font-family:var(--f-mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 8px;padding-left:6px}
+  .side .grp:not(:first-child){margin-top:24px}
+  .fitem{display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:var(--r-sm);cursor:pointer;color:var(--secondary);font-family:var(--f-ui);font-size:13px;transition:opacity .15s ease-in-out}
+  .fitem:hover{opacity:.8}
+  .fitem .ic{width:14px;height:14px;display:grid;place-items:center;color:var(--muted)}
+  .fitem .ct{margin-left:auto;font-family:var(--f-display);font-variation-settings:'ROND' 100;font-size:12px;color:var(--muted)}
+  .fitem.on{background:var(--display);color:var(--bg)}
+  .fitem.on .ic,.fitem.on .ct{color:var(--bg)}
+  /* P2：旧"主题"筛选已被"视图 + 八分类"两组替换（见 #viewlist / #catlist） */
+  .content{flex:1;display:flex;flex-direction:column;min-height:0}
+  .chead{padding:20px 26px 0}
+  .chead h1{font-family:var(--f-head);font-weight:600;font-size:26px;color:var(--display);margin:0;display:flex;align-items:baseline;gap:14px}
+  .chead h1 .cnt{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;color:var(--muted)}
+  .sortbar{display:flex;align-items:center;gap:0;padding:14px 26px 12px;border-bottom:1px solid var(--line)}
+  .sortbar .tabs span{font-size:13px}
+  .sortbar .right{margin-left:auto;display:flex;align-items:center;gap:14px;position:relative}
+  .timesel{font-family:var(--f-mono);font-size:10px;letter-spacing:.06em;color:var(--secondary);display:flex;align-items:center;gap:5px;cursor:pointer;user-select:none}
+  .timemenu{position:absolute;top:30px;right:46px;background:var(--surface);border:1px solid var(--line-2);border-radius:var(--r-sm);padding:5px;z-index:30;min-width:120px}
+  .timemenu[hidden]{display:none}
+  .timemenu div{font-family:var(--f-mono);font-size:10px;letter-spacing:.04em;color:var(--secondary);padding:7px 10px;border-radius:var(--r-sm);cursor:pointer}
+  .timemenu div:hover{background:var(--raised)}
+  .timemenu div.on{background:var(--display);color:var(--bg)}
+  .viewtog{display:flex;gap:2px}
+  .viewtog button{width:30px;height:28px;border:1px solid var(--line-2);background:none;border-radius:var(--r-sm);color:var(--secondary);display:grid;place-items:center;cursor:pointer}
+  .viewtog button.on{background:var(--display);color:var(--bg);border-color:var(--display)}
+  .categorybar{display:flex;align-items:center;gap:8px;padding:10px 26px;border-bottom:1px solid var(--line);background:rgba(10,10,10,.82);overflow-x:auto;scrollbar-width:none}
+  .categorybar::-webkit-scrollbar{display:none}
+  .categorybar[hidden]{display:none}
+  .category-tab{display:inline-flex;align-items:center;gap:8px;min-height:32px;padding:6px 11px;border:1px solid var(--line-2);border-radius:var(--r-pill);background:transparent;color:var(--secondary);font-family:var(--f-mono);font-size:9px;white-space:nowrap;cursor:pointer}
+  .category-tab b{font-weight:500;color:inherit}
+  .category-tab .category-count{color:var(--muted)}
+  .category-tab.on{border-color:var(--display);background:var(--display);color:var(--bg)}
+  .category-tab.on .category-count{color:color-mix(in srgb,var(--bg) 70%,transparent)}
+  .category-tab.zero:not(.on){opacity:.38}
+  .category-note{margin-left:auto;font-family:var(--f-mono);font-size:8.5px;line-height:1.45;color:var(--muted);white-space:nowrap}
+  .livebar{display:flex;align-items:center;gap:18px;min-height:48px;padding:9px 26px;border-bottom:1px solid var(--line);background:rgba(12,12,12,.74)}
+  .livebar[hidden]{display:none}
+  .livebar-lead{display:flex;align-items:center;gap:8px;white-space:nowrap}
+  .livebar-kicker{font-family:var(--f-mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--display)}
+  .livebar-date{font-family:var(--f-mono);font-size:9px;color:var(--muted)}
+  .live-health{display:flex;align-items:center;gap:16px;min-width:0;flex:1;overflow-x:auto;scrollbar-width:none}
+  .live-health::-webkit-scrollbar{display:none}
+  .health-item{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;font-family:var(--f-mono);font-size:9px;color:var(--secondary)}
+  .health-item b{font-weight:500;color:var(--primary)}
+  .health-dot{width:6px;height:6px;border-radius:50%;background:var(--muted);box-shadow:0 0 0 3px color-mix(in srgb,var(--muted) 12%,transparent)}
+  .health-item.is-ok .health-dot{background:var(--success);box-shadow:0 0 0 3px color-mix(in srgb,var(--success) 12%,transparent)}
+  .health-item.is-cache .health-dot{background:var(--warning);box-shadow:0 0 0 3px color-mix(in srgb,var(--warning) 12%,transparent)}
+  .health-item.is-bad .health-dot{background:var(--error);box-shadow:0 0 0 3px color-mix(in srgb,var(--error) 12%,transparent)}
+  .live-warnings{position:relative;flex:0 0 auto}
+  .live-warnings summary{list-style:none;cursor:pointer;font-family:var(--f-mono);font-size:9px;color:var(--warning);white-space:nowrap}
+  .live-warnings summary::-webkit-details-marker{display:none}
+  .live-warning-pop{position:absolute;right:0;top:26px;z-index:35;width:min(520px,76vw);max-height:300px;overflow:auto;padding:14px 16px;background:var(--surface);border:1px solid var(--line-2);border-radius:var(--r-md);box-shadow:0 18px 44px rgba(0,0,0,.38)}
+  .live-warning-pop p{margin:0;padding:8px 0;border-bottom:1px solid var(--line);font-family:var(--f-ui);font-size:11px;line-height:1.55;color:var(--secondary)}
+  .live-warning-pop p:last-child{border-bottom:0}
+  .scrollwrap{flex:1;overflow-y:auto;padding:18px 26px 60px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .grid.list{grid-template-columns:1fr}
+  .scard{background:var(--glass);backdrop-filter:blur(14px);border-radius:var(--r-md);padding:16px 18px;display:flex;flex-direction:column;cursor:pointer;transition:transform .15s ease-in-out}
+  .scard:hover{transform:translateY(-2px)}
+  .scard .typ{align-self:flex-start;font-family:var(--f-mono);font-size:8px;letter-spacing:.12em;text-transform:uppercase;padding:2px 7px;border:1px solid var(--line-2);border-radius:var(--r-pill);color:var(--secondary);margin-bottom:10px}
+  .scard .typ.rep{background:var(--display);color:var(--bg);border-color:var(--display)}
+  .scard .src{display:flex;align-items:center;gap:7px;font-family:var(--f-mono);font-size:9px;letter-spacing:.06em;text-transform:uppercase;color:var(--secondary);margin-bottom:8px}
+  .scard .src .dot{width:14px;height:14px;border-radius:50%;background:var(--raised);display:grid;place-items:center;font-size:8px;color:var(--primary)}
+  .scard .ttl{font-family:var(--f-ui);font-size:14.5px;line-height:1.45;color:var(--primary);flex:1}
+  .scard.is-live{border:1px solid var(--line);background:rgba(13,13,13,.94)}
+  .scard.is-live:hover{border-color:var(--line-2)}
+  .scard .typ.live{border-color:color-mix(in srgb,var(--accent-text) 55%,var(--line-2));color:var(--accent-text)}
+  .live-card-tags{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-bottom:10px}
+  .live-card-tags .typ{margin:0}
+  .category-chip{display:inline-flex;align-items:center;padding:2px 7px;border:1px solid var(--line-2);border-radius:var(--r-pill);font-family:var(--f-mono);font-size:8px;letter-spacing:.04em;color:var(--secondary)}
+  .category-chip.ai_game{border-color:color-mix(in srgb,var(--accent-text) 42%,var(--line-2));color:var(--accent-text)}
+  .category-chip.site_hot{border-color:color-mix(in srgb,var(--warning) 42%,var(--line-2));color:var(--warning)}
+  .unverified{font-family:var(--f-mono);font-size:8px;letter-spacing:.08em;color:var(--warning)}
+  .leadline{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;margin-top:9px;font-family:var(--f-ui);font-size:11.5px;line-height:1.55;color:var(--secondary)}
+  .live-metrics{display:inline-flex;gap:9px;min-width:0;overflow:hidden;font-family:var(--f-mono);font-size:8.5px;color:var(--muted);white-space:nowrap}
+  .live-source-link{margin-left:auto;display:inline-flex;align-items:center;gap:4px;color:var(--secondary);font-family:var(--f-mono);font-size:9px;text-decoration:none;white-space:nowrap}
+  .live-source-link:hover{color:var(--display)}
+  .scard .deep{font-family:var(--f-mono);font-size:9px;letter-spacing:.06em;color:var(--secondary);margin-top:10px;display:inline-flex;align-items:center;gap:4px}
+  .scard .foot{display:flex;align-items:center;gap:6px;margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
+  .scard .meta{font-family:var(--f-mono);font-size:9px;color:var(--muted);letter-spacing:.04em}
+  .like{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--line-2);border-radius:var(--r-sm);cursor:pointer;color:var(--secondary);font-family:var(--f-display);font-variation-settings:'ROND' 100;font-size:12px}
+  .like:hover{opacity:.8}
+  .like.on{background:var(--display);color:var(--bg);border-color:var(--display)}
+  .like .tri{font-family:var(--f-ui);font-size:9px}
+  .bm{margin-left:auto;width:30px;height:28px;border:1px solid var(--line-2);background:none;border-radius:var(--r-sm);color:var(--secondary);display:grid;place-items:center;cursor:pointer}
+  .bm:hover{opacity:.8}
+  .bm.on{background:var(--display);color:var(--bg);border-color:var(--display)}
+  .grid.list .scard{flex-direction:row;align-items:center;gap:16px}
+  .grid.list .scard .typ{margin:0;flex:0 0 auto}
+  .grid.list .scard .mid{flex:1;display:flex;flex-direction:column}
+  .grid.list .scard .foot{margin:0;padding:0;border:0;flex:0 0 auto}
+  .emptywrap{padding:80px 0;text-align:center;color:var(--muted);font-family:var(--f-mono);font-size:11px;letter-spacing:.08em}
+  /* ===== DETAIL ===== */
+  .detailview{position:fixed;inset:0;background:var(--bg);z-index:40;overflow-y:auto;display:none}
+  .detailview.on{display:block}
+  .dtop{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);height:52px;display:flex;align-items:center;gap:12px;padding:0 26px;z-index:5}
+  .backbtn{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:10px;letter-spacing:.06em;color:var(--secondary);cursor:pointer}
+  .backbtn:hover{color:var(--display)}
+  .dwrap{max-width:1080px;margin:0 auto;padding:30px 26px 80px}
+  /* report (日报/周报) */
+  .rwrap{display:grid;grid-template-columns:1fr 280px;gap:34px;align-items:start}
+  .rmain .judg{font-family:var(--f-head);font-weight:600;font-size:30px;line-height:1.3;color:var(--display);text-align:center;margin:10px 0 22px}
+  .rmeta{display:flex;gap:12px;align-items:center;justify-content:center;font-family:var(--f-mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:22px;flex-wrap:wrap}
+  .summbox{background:var(--glass);backdrop-filter:blur(14px);border-radius:var(--r-md);padding:18px 20px;margin-bottom:26px}
+  .summbox .h{font-family:var(--f-mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--secondary);margin-bottom:10px}
+  .summbox ul{margin:0;padding-left:18px;color:var(--primary);font-size:13px;line-height:1.7}
+  .rsec{margin-bottom:24px}
+  .rsec h3{font-family:var(--f-head);font-weight:600;font-size:17px;color:var(--display);margin:0 0 10px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+  .rsec p{font-size:13.5px;line-height:1.7;color:var(--primary);margin:0 0 10px}
+  .rsec .vp{font-size:13px;line-height:1.6;color:var(--secondary);padding:8px 0;border-bottom:1px solid var(--line)}
+  .rsec .vp b{color:var(--display)}
+  .rsec .bul{margin:0 0 6px;padding-left:16px;font-size:13px;line-height:1.7;color:var(--primary)}
+  .rsec .bul li{margin-bottom:7px}
+  .rsec .bul .en{color:var(--secondary);font-size:11.5px}
+  .rsec .bul .src{font-family:var(--f-mono);font-size:9px;color:var(--muted);letter-spacing:.03em}
+  .rsec .red{padding:11px 0;border-bottom:1px solid var(--line)}
+  .rsec .red:last-child{border-bottom:0}
+  .rsec .red .rt{font-size:13.5px;color:var(--display);font-weight:600;line-height:1.4;margin-bottom:3px}
+  .rsec .red .act{font-family:var(--f-mono);font-size:9px;color:var(--accent-text);letter-spacing:.04em;font-weight:400}
+  .rsec .red .rs{font-size:12.5px;line-height:1.6;color:var(--secondary);margin-top:5px}
+  .rsec .red .rc{font-size:12px;line-height:1.55;color:var(--muted);margin-top:5px;padding-left:11px;border-left:2px solid var(--line)}
+  .rsec .red .src-link{display:inline-flex;align-items:center;gap:5px;font-family:var(--f-mono);font-size:9px;letter-spacing:.04em;color:var(--secondary);margin-top:9px;border:1px solid var(--line-2);border-radius:var(--r-sm);padding:5px 11px;text-decoration:none}
+  .rsec .red .src-link:hover{color:var(--display)}
+  .rsub{text-align:center;font-style:italic;color:var(--secondary);font-size:14px;line-height:1.55;max-width:640px;margin:-8px auto 18px}
+  .rgroup{font-family:var(--f-mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--display);margin:38px 0 16px;padding-top:20px;border-top:1px solid var(--line-2)}
+  .rgroup:first-child{margin-top:8px;padding-top:0;border-top:0}
+  .rlead{font-size:14px;line-height:1.75;color:var(--secondary);margin:0 0 26px}
+  .fv3{display:flex;flex-direction:column;gap:11px}
+  .fv3 .fvrow{display:flex;gap:11px;align-items:flex-start;font-size:13px;line-height:1.7;color:var(--primary)}
+  .fv3 .ft{flex:0 0 auto;font-family:var(--f-mono);font-size:10px;padding:2px 9px;border:1px solid var(--line-2);border-radius:var(--r-pill);color:var(--secondary);white-space:nowrap}
+  .toptw{margin:0;padding-left:20px;font-size:13px;line-height:1.95;color:var(--primary)}
+  .rsec .toptw a,.rsec .bul a,.rsec p a,.rsec .vp a,.rsec .rs a{color:var(--display);text-decoration:none;border-bottom:1px solid var(--line-2)}
+  .rside .sh{font-family:var(--f-mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--secondary);margin-bottom:12px;display:flex;justify-content:space-between}
+  .rside .sh .num{font-family:var(--f-display);font-variation-settings:'ROND' 100;color:var(--accent-text)}
+  .rside .si{display:flex;gap:10px;padding:11px 0;border-bottom:1px solid var(--line);cursor:pointer}
+  .rside .si:hover{opacity:.8}
+  .rside .si .n{font-family:var(--f-display);font-variation-settings:'ROND' 100;font-size:14px;color:var(--muted);flex:0 0 16px}
+  .rside .si .t{font-size:12px;line-height:1.45;color:var(--primary)}
+  /* message detail (证据链) */
+  .mwrap{max-width:760px;margin:0 auto}
+  .mwrap .mtag{display:flex;gap:8px;align-items:center;font-family:var(--f-mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--secondary);margin-bottom:12px}
+  .mwrap h2{font-family:var(--f-head);font-weight:600;font-size:24px;line-height:1.35;color:var(--display);margin:0 0 12px}
+  .mwrap .lead{font-size:14px;color:var(--secondary);line-height:1.6;margin:0 0 26px}
+  .evh{font-family:var(--f-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--secondary);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+  .evh::after{content:"";flex:1;height:1px;background:var(--line)}
+  .ev{display:flex;gap:14px;padding:0 0 18px}
+  .ev .line{flex:0 0 auto;display:flex;flex-direction:column;align-items:center}
+  .ev .node{width:9px;height:9px;border-radius:50%;background:var(--display);margin-top:5px}
+  .ev .bar{flex:1;width:1px;background:var(--line);margin-top:4px}
+  .ev:last-child .bar{display:none}
+  .ev .body{flex:1;padding-bottom:4px}
+  .ev .who{display:flex;align-items:center;gap:8px;font-family:var(--f-mono);font-size:9.5px;letter-spacing:.04em;color:var(--secondary);margin-bottom:7px}
+  .ev .who .pt{padding:1px 6px;border:1px solid var(--line-2);border-radius:var(--r-pill);font-size:8px}
+  .ev .en{font-size:11.5px;color:var(--secondary);line-height:1.5;font-style:italic;margin-bottom:6px}
+  .ev .zh{font-size:13.5px;line-height:1.6;color:var(--primary);background:var(--glass);backdrop-filter:blur(14px);border-radius:var(--r-md);padding:13px 16px}
+  .ev .src-link{display:inline-flex;align-items:center;gap:5px;font-family:var(--f-mono);font-size:9px;letter-spacing:.04em;color:var(--secondary);margin-top:10px;cursor:pointer;border:1px solid var(--line-2);border-radius:var(--r-sm);padding:5px 11px;text-decoration:none}
+  .ev .src-link:hover{color:var(--display)}
+  .gotoreport{margin-top:14px;display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:10px;letter-spacing:.06em;color:var(--bg);background:var(--display);padding:9px 16px;border-radius:var(--r-sm);cursor:pointer}
+  .candidate-alert{margin:0 0 22px;padding:11px 14px;border-left:2px solid var(--warning);background:color-mix(in srgb,var(--warning) 7%,transparent);font-family:var(--f-ui);font-size:12px;line-height:1.6;color:var(--secondary)}
+  .candidate-copy{margin:0 0 24px;padding:17px 19px;background:var(--glass);border-radius:var(--r-md);font-family:var(--f-ui);font-size:13.5px;line-height:1.75;color:var(--primary);white-space:pre-wrap;overflow-wrap:anywhere}
+  .candidate-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin:0 0 24px;background:var(--line)}
+  .candidate-fact{min-width:0;padding:13px 15px;background:var(--bg)}
+  .candidate-fact .k{display:block;margin-bottom:6px;font-family:var(--f-mono);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .candidate-fact .v{display:block;font-family:var(--f-ui);font-size:12px;line-height:1.45;color:var(--primary);overflow-wrap:anywhere}
+  .candidate-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .candidate-open{display:inline-flex;align-items:center;gap:7px;padding:9px 14px;border-radius:var(--r-sm);background:var(--display);color:var(--bg);font-family:var(--f-mono);font-size:10px;text-decoration:none}
+  .candidate-agent-action{min-height:38px;display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border:1px solid var(--line-2);border-radius:var(--r-sm);background:transparent;color:var(--primary);font-family:var(--f-mono);font-size:10px;cursor:pointer}
+  .candidate-agent-action:hover{border-color:var(--display);color:var(--display)}
+  .candidate-note{font-family:var(--f-mono);font-size:9px;color:var(--muted)}
+  .toast-x{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);opacity:0;background:var(--surface);border:1px solid var(--line-2);border-radius:var(--r-pill);padding:9px 18px;font-family:var(--f-mono);font-size:10px;letter-spacing:.06em;color:var(--primary);transition:all .2s ease-in-out;pointer-events:none;z-index:90}
+  .toast-x.show{opacity:1;transform:translateX(-50%) translateY(0)}
+  .overlay{position:fixed;inset:0;background:rgba(0,0,0,.62);backdrop-filter:blur(4px);display:grid;place-items:center;z-index:70}
+  .overlay[hidden]{display:none}
+  .overlay .modal{width:380px}
+  .modal .mb p{font-size:12px;color:var(--secondary);line-height:1.55;margin:0 0 14px}
+  /* ===== PUBLIC RADAR AGENT ===== */
+  .radar-agent-launch{position:fixed;right:24px;bottom:24px;z-index:55;display:inline-flex;align-items:center;gap:8px;height:42px;padding:0 17px;border:1px solid var(--display);border-radius:var(--r-pill);background:var(--display);color:var(--bg);font-family:var(--f-mono);font-size:10px;letter-spacing:.06em;cursor:pointer;box-shadow:0 12px 34px rgba(0,0,0,.28);transition:transform .16s ease-in-out,opacity .16s ease-in-out}
+  .radar-agent-launch:hover{transform:translateY(-2px)}
+  .radar-agent-launch:focus-visible,.radar-agent-close:focus-visible,.radar-agent-quick button:focus-visible,.radar-agent-send:focus-visible,#publicAgentInput:focus-visible{outline:2px solid var(--display);outline-offset:3px}
+  .radar-agent-backdrop{position:fixed;inset:0;z-index:60;background:rgba(0,0,0,.54);backdrop-filter:blur(3px);opacity:0;pointer-events:none;transition:opacity .18s ease-in-out}
+  .radar-agent-backdrop.is-open{opacity:1;pointer-events:auto}
+  .radar-agent-drawer{position:fixed;top:0;right:0;bottom:0;z-index:61;width:min(420px,100vw);display:flex;flex-direction:column;background:var(--surface);border-left:1px solid var(--line-2);box-shadow:-18px 0 48px rgba(0,0,0,.34);transform:translateX(100%);visibility:hidden;transition:transform .2s ease-in-out,visibility 0s linear .2s}
+  .radar-agent-drawer.is-open{transform:translateX(0);visibility:visible;transition-delay:0s}
+  .radar-agent-head{display:flex;align-items:flex-start;gap:11px;padding:18px 18px 16px;border-bottom:1px solid var(--line)}
+  .radar-agent-mark{width:32px;height:32px;flex:0 0 auto;display:grid;place-items:center;border-radius:50%;background:var(--display);color:var(--bg)}
+  .radar-agent-heading{min-width:0;flex:1}
+  .radar-agent-title{font-family:var(--f-head);font-weight:600;font-size:16px;line-height:1.25;color:var(--display)}
+  .radar-agent-context{margin-top:5px;font-family:var(--f-mono);font-size:9px;line-height:1.45;letter-spacing:.04em;color:var(--secondary)}
+  .radar-agent-close{width:32px;height:32px;flex:0 0 auto;display:grid;place-items:center;border:1px solid var(--line-2);border-radius:var(--r-sm);background:none;color:var(--secondary);cursor:pointer}
+  .radar-agent-quick{display:flex;gap:7px;padding:12px 18px;border-bottom:1px solid var(--line);overflow-x:auto}
+  .radar-agent-quick button{flex:0 0 auto;border:1px solid var(--line-2);border-radius:var(--r-pill);background:transparent;color:var(--secondary);padding:6px 10px;font-family:var(--f-mono);font-size:9px;letter-spacing:.02em;cursor:pointer}
+  .radar-agent-quick button:hover{color:var(--display);border-color:var(--display)}
+  .radar-agent-quick button:disabled{opacity:.4;cursor:not-allowed}
+  .radar-agent-log{flex:1;min-height:0;overflow-y:auto;padding:18px;overscroll-behavior:contain}
+  .radar-agent-empty{display:grid;place-items:center;min-height:100%;text-align:center;padding:30px;color:var(--secondary);font-size:12px;line-height:1.65}
+  .radar-agent-empty strong{display:block;margin-bottom:8px;font-family:var(--f-head);font-size:18px;font-weight:600;color:var(--display)}
+  .radar-agent-msg{margin:0 0 18px}
+  .radar-agent-msg.is-user{display:flex;justify-content:flex-end}
+  .radar-agent-msg.is-user .radar-agent-bubble{max-width:82%;background:var(--display);color:var(--bg);border-color:var(--display)}
+  .radar-agent-bubble{border:1px solid var(--line-2);border-radius:var(--r-md);padding:11px 13px;color:var(--primary);font-size:12.5px;line-height:1.65;overflow-wrap:anywhere}
+  .radar-agent-msg.is-error .radar-agent-bubble{border-color:var(--accent-text);color:var(--accent-text)}
+  .radar-agent-label{margin:0 0 7px;font-family:var(--f-mono);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .radar-agent-answer{white-space:normal}
+  .radar-agent-cite{display:inline-flex;align-items:center;padding:0 4px;border:1px solid var(--line-2);border-radius:3px;color:var(--display);font-family:var(--f-mono);font-size:9px;line-height:1.5;text-decoration:none;vertical-align:baseline}
+  .radar-agent-cite:hover{border-color:var(--display)}
+  .radar-agent-sources{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}
+  .radar-agent-sources .sh{margin-bottom:7px;font-family:var(--f-mono);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .radar-agent-source{display:flex;align-items:flex-start;gap:7px;padding:5px 0;color:var(--secondary);font-size:10px;line-height:1.45;text-decoration:none}
+  .radar-agent-source:hover{color:var(--display)}
+  .radar-agent-source .sid{flex:0 0 auto;font-family:var(--f-mono);color:var(--display)}
+  .radar-agent-loading{display:flex;align-items:center;gap:5px;padding:9px 2px;color:var(--secondary);font-family:var(--f-mono);font-size:9px;letter-spacing:.04em}
+  .radar-agent-loading i{width:5px;height:5px;border-radius:50%;background:currentColor;animation:agentPulse 1s ease-in-out infinite}
+  .radar-agent-loading i:nth-child(2){animation-delay:.15s}.radar-agent-loading i:nth-child(3){animation-delay:.3s}
+  @keyframes agentPulse{0%,100%{opacity:.25;transform:translateY(0)}50%{opacity:1;transform:translateY(-3px)}}
+  .radar-agent-compose{padding:13px 18px 16px;border-top:1px solid var(--line);background:var(--surface)}
+  .radar-agent-compose label{display:block;margin-bottom:7px;font-family:var(--f-mono);font-size:9px;letter-spacing:.08em;color:var(--secondary)}
+  .radar-agent-inputrow{display:flex;align-items:flex-end;gap:8px}
+  #publicAgentInput{min-width:0;flex:1;min-height:42px;max-height:120px;resize:vertical;border:1px solid var(--line-2);border-radius:var(--r-sm);background:var(--bg);color:var(--primary);padding:10px 11px;font:12.5px/1.5 var(--f-ui)}
+  #publicAgentInput::placeholder{color:var(--muted)}
+  .radar-agent-modelrow{display:flex;align-items:center;gap:7px;margin-top:7px}
+  .radar-agent-modelrow label{font-family:var(--f-mono);font-size:9px;letter-spacing:.06em;color:var(--muted);flex:none}
+  #publicAgentModel{flex:1;min-width:0;border:1px solid var(--line-2);border-radius:var(--r-sm);background:var(--bg);color:var(--secondary);padding:5px 9px;font:11px/1.4 var(--f-mono)}
+  #publicAgentModel::placeholder{color:var(--muted)}
+  .radar-agent-send{height:42px;flex:0 0 auto;border:1px solid var(--display);border-radius:var(--r-sm);background:var(--display);color:var(--bg);padding:0 14px;font-family:var(--f-mono);font-size:10px;cursor:pointer}
+  .radar-agent-send:disabled,#publicAgentInput:disabled{opacity:.45;cursor:not-allowed}
+  .radar-agent-hint{margin-top:7px;font-family:var(--f-mono);font-size:8px;letter-spacing:.03em;color:var(--muted)}
+  /* ===== P2：知识图谱视图 ===== */
+  .content.graph-on .chead,.content.graph-on .sortbar,.content.graph-on .categorybar,.content.graph-on .livebar,.content.graph-on .scrollwrap{display:none!important}
+  .graphview{flex:1;min-height:0;display:none;flex-direction:column}
+  .content.graph-on .graphview{display:flex}
+  .kg-topbar{display:flex;align-items:center;gap:12px;padding:12px 26px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+  .kg-title{font-family:var(--f-head);font-weight:600;font-size:16px;color:var(--display)}
+  .kg-stats{font-family:var(--f-mono);font-size:9px;color:var(--muted);letter-spacing:.04em}
+  .kg-modes{display:inline-flex;padding:2px;border:1px solid var(--line-2);border-radius:var(--r-pill)}
+  .kg-modes button{height:24px;padding:0 11px;border:0;border-radius:var(--r-pill);background:transparent;color:var(--muted);font-family:var(--f-mono);font-size:9px;letter-spacing:.04em;cursor:pointer}
+  .kg-modes button.on{background:var(--display);color:var(--bg)}
+  .kg-search{width:170px}
+  .kg-legend{display:flex;gap:6px;flex-wrap:wrap;margin-left:auto}
+  .kg-chip{display:inline-flex;align-items:center;gap:6px;padding:3px 9px;border:1px solid var(--line-2);border-radius:var(--r-pill);font-family:var(--f-mono);font-size:8.5px;color:var(--secondary);cursor:pointer;user-select:none}
+  .kg-chip i{width:8px;height:8px;border-radius:50%;flex:0 0 auto}
+  .kg-chip.off{opacity:.3}
+  .kg-body{flex:1;min-height:0;position:relative;overflow:hidden}
+  .kg-canvas{position:absolute;inset:0}
+  .kg-canvas svg{width:100%;height:100%;display:block;cursor:grab}
+  .kg-node{cursor:pointer}
+  .kg-node text{font-family:var(--f-ui);font-size:10.5px;fill:var(--secondary);pointer-events:none}
+  .kg-node.dim{opacity:.13}
+  .kg-node.hit circle{stroke:var(--display);stroke-width:2.5px}
+  .kg-link{stroke:var(--line-2);stroke-width:1.4}
+  .kg-link.co{stroke-dasharray:4 5;stroke-width:1;stroke-opacity:.45} /* 共现虚线：细、淡、无箭头无标签 */
+  .kg-link.dim,.kg-link-label.dim{opacity:.1}
+  .kg-link-label{font-family:var(--f-mono);font-size:8px;fill:var(--muted)}
+  .kg-empty{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:var(--muted);font-family:var(--f-mono);font-size:11px;line-height:2;letter-spacing:.06em;padding:30px}
+  .kg-fallback{position:absolute;inset:0;overflow-y:auto;padding:18px 26px}
+  .kg-fallback .fbnote{font-family:var(--f-mono);font-size:9px;color:var(--warning);margin-bottom:12px}
+  .kg-fbrow{display:flex;align-items:center;gap:10px;padding:9px 4px;border-bottom:1px solid var(--line);cursor:pointer;font-size:13px;color:var(--primary)}
+  .kg-fbrow:hover{opacity:.8}
+  .kg-fbrow .tdot{width:9px;height:9px;border-radius:50%;flex:0 0 auto}
+  .kg-fbrow .m{margin-left:auto;font-family:var(--f-mono);font-size:9px;color:var(--muted)}
+  .kg-drawer{position:absolute;top:0;right:0;bottom:0;width:min(330px,90%);background:var(--surface);border-left:1px solid var(--line-2);transform:translateX(100%);transition:transform .18s ease-in-out;display:flex;flex-direction:column;z-index:6;overflow:hidden}
+  .kg-drawer.on{transform:translateX(0)}
+  .kg-dhead{display:flex;align-items:flex-start;gap:10px;padding:16px;border-bottom:1px solid var(--line)}
+  .kg-dhead h3{font-family:var(--f-head);font-weight:600;font-size:17px;color:var(--display);margin:0;flex:1;line-height:1.3}
+  .kg-dbody{flex:1;overflow-y:auto;padding:14px 16px}
+  .kg-dclose{width:28px;height:28px;flex:0 0 auto;display:grid;place-items:center;border:1px solid var(--line-2);border-radius:var(--r-sm);background:none;color:var(--secondary);cursor:pointer}
+  .type-badge{display:inline-flex;align-items:center;gap:5px;padding:2px 8px;border-radius:var(--r-pill);font-family:var(--f-mono);font-size:8.5px;color:#fff;letter-spacing:.06em}
+  .kg-dmeta{font-family:var(--f-ui);font-size:12px;line-height:1.6;color:var(--secondary);margin:8px 0}
+  .kg-dmeta b{color:var(--primary);font-weight:500}
+  .kg-devents .ev .zh{padding:9px 12px;font-size:12px}
+  .kg-dactions{display:flex;gap:8px;padding:12px 16px;border-top:1px solid var(--line)}
+  .kg-dactions button{flex:1;min-height:36px;border:1px solid var(--line-2);border-radius:var(--r-sm);background:transparent;color:var(--primary);font-family:var(--f-mono);font-size:10px;cursor:pointer}
+  .kg-dactions button.pri{background:var(--display);color:var(--bg);border-color:var(--display)}
+  .kg-dactions button:hover{opacity:.85}
+  /* ===== P2：实体页 ===== */
+  .ep-crumb{font-family:var(--f-mono);font-size:10px;letter-spacing:.06em;color:var(--muted);margin-bottom:18px}
+  .ep-crumb span[data-nav]{cursor:pointer;color:var(--secondary)}
+  .ep-crumb span[data-nav]:hover{color:var(--display)}
+  .ep-crumb b{color:var(--display);font-weight:500}
+  .ep-head{margin-bottom:26px}
+  .ep-head .row1{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+  .ep-head h2{font-family:var(--f-head);font-weight:600;font-size:26px;color:var(--display);margin:0}
+  .ep-alias,.ep-note{font-size:12.5px;line-height:1.6;color:var(--secondary)}
+  .ep-stats{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.05em;color:var(--muted);margin-top:8px}
+  .ep-cols{display:grid;grid-template-columns:1fr 320px;gap:32px;align-items:start}
+  .ep-kinds{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+  .ep-kinds .kchip{padding:3px 10px;border:1px solid var(--line-2);border-radius:var(--r-pill);font-family:var(--f-mono);font-size:9px;color:var(--secondary);cursor:pointer}
+  .ep-kinds .kchip.on{background:var(--display);color:var(--bg);border-color:var(--display)}
+  .ep-ev .who .date{font-family:var(--f-mono);color:var(--display)}
+  .ep-ev .zh{padding:10px 13px;font-size:12.5px}
+  .ep-ev .rep{font-family:var(--f-mono);font-size:8.5px;color:var(--muted);margin-top:6px}
+  .ep-ev .rep [data-open]{color:var(--secondary);cursor:pointer;border-bottom:1px solid var(--line-2)}
+  .ep-rel svg{width:100%;height:auto;display:block;background:var(--glass);border-radius:var(--r-md)}
+  .ep-rel .hint{font-family:var(--f-mono);font-size:8.5px;color:var(--muted);margin-top:8px;line-height:1.5}
+  .ep-reports{margin-top:34px}
+  .ep-repgrp{display:flex;gap:12px;align-items:baseline;padding:10px 0;border-bottom:1px solid var(--line);font-size:12.5px;color:var(--secondary)}
+  .ep-repgrp .d{font-family:var(--f-mono);font-size:10px;color:var(--display);flex:0 0 auto}
+  .ep-repgrp .lnk{cursor:pointer;color:var(--secondary);border-bottom:1px solid var(--line-2)}
+  .ep-repgrp .lnk:hover{color:var(--display)}
+  .kind-chip{display:inline-flex;padding:1px 7px;border:1px solid var(--line-2);border-radius:var(--r-pill);font-family:var(--f-mono);font-size:8px;letter-spacing:.06em;color:var(--secondary);white-space:nowrap}
+  /* ===== P2：主线式日报 / 周报 ===== */
+  .ent-link{color:var(--display);text-decoration:none;border-bottom:1px solid var(--line-2);cursor:pointer}
+  .ent-link:hover{border-bottom-color:var(--display)}
+  .sl-summary{background:var(--glass);backdrop-filter:blur(14px);border-radius:var(--r-md);padding:20px 22px;margin:0 0 26px}
+  .sl-summary .h{font-family:var(--f-mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--secondary);margin-bottom:10px}
+  .sl-summary p{font-size:14px;line-height:1.75;color:var(--primary);margin:0 0 12px}
+  .sl-summary ol{margin:0;padding-left:20px;font-size:13px;line-height:1.8;color:var(--primary)}
+  .sl-block{margin-bottom:30px;padding:18px 20px;border:1px solid var(--line);border-radius:var(--r-md)}
+  .sl-block .bh{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+  .sl-block .bh h3{font-family:var(--f-head);font-weight:600;font-size:17px;color:var(--display);margin:0}
+  .sl-new{font-family:var(--f-mono);font-size:8px;letter-spacing:.1em;padding:2px 7px;border:1px solid var(--accent-text);border-radius:var(--r-pill);color:var(--accent-text)}
+  .chainflow{display:flex;align-items:stretch;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+  .chain-node{display:flex;flex-direction:column;gap:5px;max-width:250px;padding:10px 13px;background:var(--glass);border-radius:var(--r-md)}
+  .chain-node .top{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+  .chain-node .ct2{font-size:12.5px;line-height:1.5;color:var(--primary)}
+  .chain-node .by{font-family:var(--f-mono);font-size:8.5px;color:var(--muted)}
+  .chain-node .srcs{display:flex;gap:6px}
+  .chain-node .srcs a{font-family:var(--f-mono);font-size:8.5px;color:var(--secondary);text-decoration:none;border-bottom:1px solid var(--line-2)}
+  .chain-arrow{align-self:center;display:flex;flex-direction:column;align-items:center;font-family:var(--f-mono);font-size:8.5px;color:var(--accent-text);white-space:nowrap}
+  .chain-arrow .ar{font-size:13px;color:var(--secondary)}
+  .sl-narrative{font-size:13px;line-height:1.7;color:var(--primary);margin:0 0 8px}
+  .sl-carry{font-size:12px;line-height:1.6;color:var(--muted);padding-left:11px;border-left:2px solid var(--line)}
+  .sl-scattered .row{display:flex;gap:10px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--line);font-size:12.5px;line-height:1.6;color:var(--primary)}
+  .sl-scattered .row:last-child{border-bottom:0}
+  .sl-scattered .row a{font-family:var(--f-mono);font-size:9px;color:var(--secondary)}
+  .sl-delta{font-family:var(--f-mono);font-size:9px;letter-spacing:.06em;color:var(--muted);margin-top:26px;padding-top:14px;border-top:1px solid var(--line)}
+  .sl-quality{margin:0 0 20px;padding:10px 14px;border-left:2px solid var(--warning);background:color-mix(in srgb,var(--warning) 7%,transparent);font-size:12px;line-height:1.6;color:var(--secondary)}
+  .sl-minigraph{margin:0 0 26px}
+  .sl-minigraph .h{font-family:var(--f-mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--secondary);margin-bottom:10px}
+  .sl-minigraph svg{width:100%;height:auto;display:block;background:var(--glass);border-radius:var(--r-md)}
+  .wk-line{margin-bottom:26px;padding:16px 18px;border:1px solid var(--line);border-radius:var(--r-md)}
+  .wk-line .bh{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+  .wk-line .bh h3{font-family:var(--f-head);font-weight:600;font-size:16px;color:var(--display);margin:0}
+  .wk-trend{font-family:var(--f-mono);font-size:9px;padding:2px 8px;border:1px solid var(--line-2);border-radius:var(--r-pill);color:var(--secondary)}
+  .wk-axis{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+  .wk-evt{padding:8px 11px;background:var(--glass);border-radius:var(--r-md);max-width:230px}
+  .wk-evt .d{font-family:var(--f-mono);font-size:8.5px;color:var(--display);margin-bottom:3px}
+  .wk-evt .t{font-size:12px;line-height:1.5;color:var(--primary)}
+  .wk-judg{font-size:12.5px;line-height:1.65;color:var(--primary);margin:0 0 6px}
+  .wk-total{font-family:var(--f-mono);font-size:8.5px;color:var(--muted)}
+  .wk-rows .row{display:flex;gap:10px;align-items:baseline;padding:8px 0;border-bottom:1px solid var(--line);font-size:12.5px;color:var(--primary)}
+  .wk-rows .row:last-child{border-bottom:0}
+  .wk-rows .row .m{margin-left:auto;font-family:var(--f-mono);font-size:9px;color:var(--muted);white-space:nowrap}
+  /* 分类下钻分区（主区卡片流上方："来自日报的主线 / 知识库事件 / 现场候选"） */
+  .catsec{grid-column:1/-1}
+  .catsec-h{grid-column:1/-1;font-family:var(--f-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--display);padding:12px 0 7px;border-bottom:1px solid var(--line);margin-bottom:4px}
+  .catsec-row{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;padding:9px 2px;border-bottom:1px solid var(--line);font-size:12.5px;color:var(--primary)}
+  .catsec-row[data-open]{cursor:pointer}
+  .catsec-row[data-open]:hover{opacity:.8}
+  .catsec-row .d{font-family:var(--f-mono);font-size:9px;color:var(--display);flex:0 0 auto}
+  .catsec-row .t2{flex:1;min-width:200px;line-height:1.55}
+  .catsec-row a{font-family:var(--f-mono);font-size:9px;color:var(--secondary);text-decoration:none;border-bottom:1px solid var(--line-2)}
+  .catsec-empty{grid-column:1/-1;font-family:var(--f-mono);font-size:9.5px;color:var(--muted);padding:9px 2px}
+  @media(max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}.rwrap{grid-template-columns:1fr}.livebar{align-items:flex-start;flex-wrap:wrap;gap:7px 16px}.live-health{order:3;flex-basis:100%}.candidate-facts{grid-template-columns:1fr}.ep-cols{grid-template-columns:1fr}.kg-legend{margin-left:0}}
+  @media(max-width:680px){
+    .topbar{height:50px;padding:0 12px;gap:9px}
+    .brand .s,.topnav,.login-st,#loginbtn,#subbtn{display:none}
+    .brand .wm{font-size:13px}
+    .topsearch{width:auto;min-width:0;flex:1;margin-left:4px}
+    .main{flex-direction:column}
+    .side{width:100%;flex:0 0 auto;display:flex;align-items:center;gap:7px;padding:8px 12px;border-right:0;border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:none}
+    .side::-webkit-scrollbar{display:none}
+    .side .grp{display:none!important}
+    #typelist,#viewlist,#catlist{display:flex;flex:0 0 auto;gap:5px}
+    #viewlist,#catlist{padding-left:7px;border-left:1px solid var(--line-2)}
+    .fitem{min-height:36px;padding:7px 10px;white-space:nowrap}
+    .fitem .ic{display:none}
+    .chead{padding:15px 16px 0}
+    .chead h1{font-size:22px}
+    .sortbar{padding:11px 16px 10px}
+    .sortbar .right{gap:8px}
+    .timesel{display:none}
+    .timemenu{right:0}
+    .livebar{padding:9px 16px}
+    .categorybar{padding:9px 16px}
+    .category-note{display:none}
+    .scrollwrap{padding:14px 16px calc(96px + env(safe-area-inset-bottom))}
+    .grid,.grid.list{grid-template-columns:1fr}
+    .grid.list .scard{flex-direction:column;align-items:stretch;gap:0}
+    .grid.list .scard .typ{margin-bottom:10px;align-self:flex-start}
+    .grid.list .scard .foot{margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
+    .dtop{padding:0 16px}
+    .dwrap{padding:24px 16px 90px}
+    .candidate-open,.candidate-agent-action{min-height:44px}
+    .radar-agent-launch{right:14px;bottom:14px}
+    .radar-agent-drawer{top:14vh;left:0;right:0;bottom:0;width:100%;border-left:0;border-top:1px solid var(--line-2);border-radius:16px 16px 0 0;transform:translateY(100%);box-shadow:0 -18px 48px rgba(0,0,0,.38)}
+    .radar-agent-drawer.is-open{transform:translateY(0)}
+    .radar-agent-head{padding-top:15px}
+    .radar-agent-log{padding:15px}
+    .radar-agent-compose{padding:12px 15px max(14px,env(safe-area-inset-bottom))}
+  }
+  @media(prefers-reduced-motion:reduce){.radar-agent-launch,.radar-agent-backdrop,.radar-agent-drawer{transition:none}.radar-agent-loading i{animation:none}}
+</style>
 </head>
 <body>
-  <div class="bg-orb bg-orb-1"></div>
-  <div class="bg-orb bg-orb-2"></div>
-  <div class="bg-orb bg-orb-3"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></symbol>
+<symbol id="i-bm" viewBox="0 0 24 24"><path d="M6 4h12v16l-6-4-6 4z"/></symbol>
+<symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></symbol>
+<symbol id="i-list" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+<symbol id="i-chev-r" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+<symbol id="i-chev-l" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+<symbol id="i-chev-d" viewBox="0 0 24 24"><path d="M5 9l7 7 7-7"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+<symbol id="i-link" viewBox="0 0 24 24"><path d="M9 15l6-6M10 7l1-1a4 4 0 0 1 6 6l-1 1M14 17l-1 1a4 4 0 0 1-6-6l1-1"/></symbol>
+<symbol id="i-agent" viewBox="0 0 24 24"><rect x="5" y="8" width="14" height="11" rx="2"/><path d="M12 3v3M9 13h.01M15 13h.01"/></symbol>
+<symbol id="i-chip" viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="1"/><path d="M10 3v2M14 3v2M10 19v2M14 19v2M3 10h2M3 14h2M19 10h2M19 14h2"/></symbol>
+<symbol id="i-audio" viewBox="0 0 24 24"><path d="M3 12v0M7 8v8M11 5v14M15 9v6M19 11v2"/></symbol>
+<symbol id="i-open" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v8M8 12h8"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+<symbol id="i-bench" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></symbol>
+<symbol id="i-biz" viewBox="0 0 24 24"><path d="M4 20V8l8-4 8 4v12M4 20h16M9 20v-5h6v5"/></symbol>
+<symbol id="i-gov" viewBox="0 0 24 24"><path d="M3 21h18M5 21V10M19 21V10M3 10l9-6 9 6M9 21v-6h6v6"/></symbol>
+<symbol id="i-all" viewBox="0 0 24 24"><path d="M12 2l2.5 6.5L21 9l-5 4.5L17.5 21 12 17l-5.5 4L8 13.5 3 9l6.5-.5z"/></symbol>
+<symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h9l5 5v13H6zM14 3v6h6M9 13h6M9 17h6"/></symbol>
+<symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></symbol>
+<symbol id="i-graph" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="8" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7l7.5 1M7 8l4 8M16.5 10l-3.5 6"/></symbol>
+</defs></svg>
 
-  <header class="topbar">
-    <div class="brand">
-      <div class="brand-mark">
-        <svg viewBox="0 0 64 64" width="32" height="32" aria-hidden="true">
-          <defs>
-            <linearGradient id="brand-g" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#6366f1"/>
-              <stop offset="100%" stop-color="#22d3ee"/>
-            </linearGradient>
-          </defs>
-          <circle cx="32" cy="32" r="28" fill="url(#brand-g)"/>
-          <circle cx="32" cy="32" r="6" fill="#fff"/>
-          <circle cx="32" cy="32" r="14" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="2"/>
-          <circle cx="32" cy="32" r="22" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="2"/>
-        </svg>
+<div class="app">
+  <div class="topbar">
+    <div class="brand" id="brand"><span class="wm">AI 思潮雷达</span><span class="s">海外一手 · 中文 · AI 辅助</span></div>
+    <div class="topnav"><a class="on" data-view="radar">雷达</a><a data-view="mine" id="navmine" style="display:none">我的</a></div>
+    <div class="topsearch"><div class="withicon"><svg class="ico sm"><use href="#i-search"/></svg><input class="inp" id="q" placeholder="搜索…"></div></div>
+    <span class="langswitch" id="langswitch" role="group" aria-label="语言 / Language"><button type="button" data-lang="zh" class="on">中</button><button type="button" data-lang="en">EN</button></span>
+    <span class="login-st" id="loginst">未登录</span>
+    <button class="btn btn-outline" id="loginbtn">登录</button>
+    <button class="btn btn-primary" id="subbtn"><svg class="ico sm"><use href="#i-mail"/></svg>订阅</button>
+  </div>
+
+  <div class="main">
+    <aside class="side" id="side">
+      <div class="grp">类型</div>
+      <div id="typelist">
+        <div class="fitem on" data-type="现场"><span class="ic"><svg class="ico sm"><use href="#i-agent"/></svg></span>现场<span class="ct">0</span></div>
+        <div class="fitem" data-type="日报"><span class="ic"><svg class="ico sm"><use href="#i-list"/></svg></span>日报<span class="ct">0</span></div>
+        <div class="fitem" data-type="周报"><span class="ic"><svg class="ico sm"><use href="#i-bench"/></svg></span>周报<span class="ct">0</span></div>
       </div>
-      <div class="brand-text">
-        <div class="brand-title">AI 资讯雷达</div>
-        <div class="brand-sub">AI Engineer Radar · X 高信号聚合</div>
+      <div class="grp" id="viewLabel">视图</div>
+      <div id="viewlist">
+        <div class="fitem" data-viewmode="graph"><span class="ic"><svg class="ico sm"><use href="#i-graph"/></svg></span>知识图谱</div>
       </div>
-    </div>
-    <div class="topbar-actions">
-      <div class="meta-pill" id="lastUpdate">未抓取</div>
-      <button id="refreshBtn" class="btn btn-primary">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="23 4 23 10 17 10"></polyline>
-          <polyline points="1 20 1 14 7 14"></polyline>
-          <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
-        </svg>
-        <span class="btn-label">刷新资讯</span>
-      </button>
-    </div>
-  </header>
-
-  <main class="layout">
-    <aside class="sidebar" id="sidebar" data-view="feed">
-      <nav class="nav">
-        <button class="nav-item active" data-view="feed">
-          <span class="nav-icon">📡</span><span>资讯</span>
-          <span class="nav-badge" id="feedCount">0</span>
-        </button>
-        <button class="nav-item" data-view="favorites">
-          <span class="nav-icon">⭐</span><span>收藏</span>
-          <span class="nav-badge" id="favCount">0</span>
-        </button>
-        <button class="nav-item" data-view="digest">
-          <span class="nav-icon">📰</span><span>今日综述</span>
-        </button>
-        <button class="nav-item" data-view="dashboard">
-          <span class="nav-icon">📊</span><span>数据看板</span>
-        </button>
-      </nav>
-
-      <div class="sidebar-filters">
-        <div class="sidebar-section">
-          <div class="sidebar-title">主题</div>
-          <div class="chip-row" id="topicChips"></div>
-        </div>
-
-        <div class="sidebar-section">
-          <div class="sidebar-title" id="sourceTitleS">来源（S 级）</div>
-          <div class="source-list" id="sourceListS"></div>
-        </div>
-
-        <div class="sidebar-section">
-          <div class="sidebar-title" id="sourceTitleA">来源（A 级）</div>
-          <div class="source-list" id="sourceListA"></div>
-        </div>
-
-        <div class="sidebar-section">
-          <div class="sidebar-title" id="sourceTitleB">来源（B 级）</div>
-          <div class="source-list" id="sourceListB"></div>
-        </div>
-
-        <div class="sidebar-section" id="sourceSectionEvent" hidden>
-          <div class="sidebar-title" id="sourceTitleEvent">来源（Event 动态）</div>
-          <div class="source-list" id="sourceListEvent"></div>
-        </div>
-      </div>
+      <div class="grp" id="catLabel">八分类</div>
+      <div id="catlist"></div>
     </aside>
 
-    <section class="content">
-      <div class="view" data-view="feed">
-        <div class="search-row">
-          <div class="search-box">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="11" cy="11" r="8"></circle>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
-            <input id="searchInput" type="search" placeholder="搜索内容、账号、主题…" autocomplete="off" />
+    <div class="content">
+      <div class="chead"><h1><span id="ctitle">今天 · AI 思潮</span> <span class="cnt" id="cnt">共 13 条</span></h1></div>
+      <div class="sortbar">
+        <div class="tabs" id="sorttabs"><span class="on" data-sort="最新">最新</span><span data-sort="点赞">点赞</span></div>
+        <div class="right">
+          <span class="timesel" id="timesel"><span id="timelabel">过去 7 天</span> <svg class="ico sm"><use href="#i-chev-d"/></svg></span>
+          <div class="timemenu" id="timemenu" hidden>
+            <div data-tw="24">过去 24 小时</div>
+            <div data-tw="168" class="on">过去 7 天</div>
+            <div data-tw="720">过去 30 天</div>
+            <div data-tw="0">全部时间</div>
           </div>
-          <div class="result-count" id="resultCount">0 条</div>
-        </div>
-        <div class="filter-row">
-          <button class="chip mini active" data-tier="all">全部</button>
-          <button class="chip mini" data-tier="S">S 级</button>
-          <button class="chip mini" data-tier="A">A 级</button>
-          <button class="chip mini" data-tier="B">B 级</button>
-          <button class="chip mini" data-tier="event">Event</button>
-        </div>
-        <div class="news-grid" id="newsGrid"></div>
-        <div class="empty" id="emptyState" hidden>
-          <div class="empty-icon">📡</div>
-          <div class="empty-title">还没有 X 资讯</div>
-          <div class="empty-sub">点击右上角「刷新资讯」开始抓取 S/A 级账号近 48 小时高信号帖子</div>
+          <div class="viewtog" id="viewtog"><button data-v="grid" class="on"><svg class="ico sm"><use href="#i-grid"/></svg></button><button data-v="list"><svg class="ico sm"><use href="#i-list"/></svg></button></div>
         </div>
       </div>
-
-      <div class="view" data-view="favorites" hidden>
-        <div class="view-header">
-          <h2>收藏</h2>
-          <p class="view-sub">本地浏览器存储，仅你自己可见</p>
+      <div class="categorybar" id="categorybar" hidden></div>
+      <div class="livebar" id="livebar" hidden></div>
+      <div class="scrollwrap"><div class="grid" id="grid"></div></div>
+      <!-- P2：知识图谱整屏视图（与卡片流二选一切换） -->
+      <div class="graphview" id="graphview">
+        <div class="kg-topbar">
+          <span class="kg-title" id="kgTitle">知识图谱</span>
+          <span class="kg-stats" id="kgStats"></span>
+          <span class="kg-modes" id="kgModes"><button data-kgmode="active" class="on">活跃</button><button data-kgmode="all">全部</button></span>
+          <div class="withicon kg-search"><svg class="ico sm"><use href="#i-search"/></svg><input class="inp" id="kgSearch" placeholder="定位实体…"></div>
+          <div class="kg-legend" id="kgLegend"></div>
         </div>
-        <div class="news-grid" id="favGrid"></div>
-        <div class="empty" id="favEmpty" hidden>
-          <div class="empty-icon">⭐</div>
-          <div class="empty-title">还没有收藏</div>
-          <div class="empty-sub">在卡片点击星标即可收藏</div>
-        </div>
-      </div>
-
-      <div class="view" data-view="digest" hidden>
-        <div class="digest-hero">
-          <h2 class="digest-hero-title">AI 新闻：每日综述</h2>
-          <p class="digest-hero-sub">参考 Latent.Space AINews 风格，按日聚合 X 高信号讨论。点击任意一天展开全文。</p>
-        </div>
-        <div class="day-list" id="dayList"></div>
-        <div class="empty" id="digestEmpty" hidden>
-          <div class="empty-icon">📰</div>
-          <div class="empty-title">还没有归档</div>
-          <div class="empty-sub">点击右上角「刷新资讯」生成今日综述，后续每天都会自动归档</div>
+        <div class="kg-body">
+          <div class="kg-canvas" id="kgCanvas"></div>
+          <div class="kg-drawer" id="kgDrawer"></div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
 
-      <div class="view" data-view="dashboard" hidden>
-        <div class="view-header">
-          <h2>数据看板</h2>
-          <p class="view-sub">X 抓取统计 + 批次健康度</p>
-        </div>
-        <div class="stat-grid" id="statGrid"></div>
-        <div class="dash-card">
-          <div class="dash-card-title">抓取批次</div>
-          <div class="batch-table" id="batchTable"></div>
-        </div>
-        <div class="dash-card">
-          <div class="dash-card-title">最活跃账号</div>
-          <div class="top-accounts" id="topAccounts"></div>
-        </div>
+<!-- DETAIL -->
+<div class="detailview" id="detail">
+  <div class="dtop"><span class="backbtn" id="backbtn"><svg class="ico sm"><use href="#i-chev-l"/></svg> 返回</span></div>
+  <div class="dwrap" id="dbody"></div>
+</div>
+
+<!-- 登录 -->
+<div class="overlay" id="loginModal" hidden>
+  <div class="modal">
+    <div class="mh"><span class="t">登录 / 注册</span><svg class="ico sm close" data-close><use href="#i-x"/></svg></div>
+    <div class="mb"><div class="field"><span class="label">邮箱</span><input class="inp" placeholder="you@email.com"></div>
+      <p style="margin-top:12px">没有账号会自动注册。登录后可点赞、收藏、订阅。</p></div>
+    <div class="mf"><button class="btn btn-text" data-close>取消</button><button class="btn btn-primary" id="doLogin">登录</button></div>
+  </div>
+</div>
+<!-- 订阅 -->
+<div class="overlay" id="subModal" hidden>
+  <div class="modal">
+    <div class="mh"><span class="t">订阅 · AI 思潮日报</span><svg class="ico sm close" data-close><use href="#i-x"/></svg></div>
+    <div class="mb"><p>每天把海外一手 AI 思潮（X / 播客 / Reddit），端到你邮箱。</p>
+      <div class="field"><span class="label">邮箱</span><input class="inp" placeholder="you@email.com"></div></div>
+    <div class="mf"><button class="btn btn-text" data-close>取消</button><button class="btn btn-primary" id="doSub">订阅</button></div>
+  </div>
+</div>
+<div class="toast-x" id="toast"></div>
+
+<!-- PUBLIC RADAR AGENT -->
+<button class="radar-agent-launch" id="publicAgentLaunch" type="button" aria-controls="publicAgentDrawer" aria-expanded="false">
+  <svg class="ico sm" aria-hidden="true"><use href="#i-agent"/></svg>问雷达 Agent
+</button>
+<div class="radar-agent-backdrop" id="publicAgentBackdrop" aria-hidden="true"></div>
+<aside class="radar-agent-drawer" id="publicAgentDrawer" role="dialog" aria-modal="true" aria-labelledby="publicAgentTitle" aria-hidden="true">
+  <div class="radar-agent-head">
+    <span class="radar-agent-mark"><svg class="ico sm" aria-hidden="true"><use href="#i-agent"/></svg></span>
+    <div class="radar-agent-heading">
+      <div class="radar-agent-title" id="publicAgentTitle">雷达 Agent</div>
+      <div class="radar-agent-context" id="publicAgentContext">正在读取当前雷达</div>
+    </div>
+    <button class="radar-agent-close" id="publicAgentClose" type="button" aria-label="关闭 Agent"><svg class="ico sm" aria-hidden="true"><use href="#i-x"/></svg></button>
+  </div>
+  <div class="radar-agent-quick" aria-label="快捷问题">
+    <button type="button" data-public-agent-prompt="今天大家在讨论什么？">今天在讨论什么？</button>
+    <button type="button" data-public-agent-prompt="从今天这些讨论里，哪些值得继续做成 AI 开源方向？请说明依据和待核实点。">找开源机会</button>
+    <button type="button" data-public-agent-prompt="X、Reddit、YouTube 今天有哪些共识与分歧？如果某个平台缺数据，请明确说明。">三平台共识 / 分歧</button>
+  </div>
+  <div class="radar-agent-log" id="publicAgentLog" role="log" aria-live="polite" aria-relevant="additions"></div>
+  <form class="radar-agent-compose" id="publicAgentForm">
+    <label for="publicAgentInput">继续追问</label>
+    <div class="radar-agent-inputrow">
+      <textarea id="publicAgentInput" rows="2" maxlength="1600" placeholder="问当前详情，或当前筛选结果"></textarea>
+      <button class="radar-agent-send" id="publicAgentSend" type="submit">发送</button>
+    </div>
+    <div class="radar-agent-modelrow">
+      <label for="publicAgentModel">模型</label>
+      <select id="publicAgentModel"></select>
+    </div>
+    <div class="radar-agent-hint">Enter 发送，Shift+Enter 换行</div>
+  </form>
+</aside>
+
+<script>
+let DATA = [], TODAY_INBOX = null;
+/* 一次性数据迁移：清掉旧版本残留的点赞/收藏/已读等本地数据；radarStorageV2 为已迁移标记。
+   语言与 Agent 模型偏好保留。 */
+(function(){
+  try{
+    if(localStorage.getItem('radarStorageV2'))return;
+    const keep=new Set(['radar.language','radar.agentModel','radarStorageV2']);
+    const stale=[];
+    for(let i=0;i<localStorage.length;i+=1){
+      const key=localStorage.key(i);
+      if(key&&/^radar[._-]/i.test(key)&&!keep.has(key))stale.push(key);
+    }
+    stale.forEach(key=>localStorage.removeItem(key));
+    localStorage.setItem('radarStorageV2','1');
+  }catch(e){/* 隐私模式等取不到 localStorage 时跳过 */}
+})();
+const I18N={
+  zh:{brandSub:'海外一手 · 中文 · AI 辅助',radar:'雷达',mine:'我的',search:'搜索…',loggedOut:'未登录',loggedIn:'已登录',login:'登录',logout:'退出',subscribe:'订阅',type:'类型',topic:'主题',source:'来源',all:'全部',live:'现场',news:'消息',daily:'日报',weekly:'周报',latest:'最新',likes:'点赞',crossPlatform:'跨平台',saved:'收藏',past24:'过去 24 小时',past7:'过去 7 天',past30:'过去 30 天',allTime:'全部时间',todayRadar:'今天 · AI 思潮',rollingTitle:'过去 168 小时',count:n=>`共 ${n} 条`,aiGame:'AI 游戏',aiFinance:'AI 金融',aiEnterpriseOs:'AI 企业OS',siteHot:'全站最热',siteHotNote:'热点发现池 · 非 X / Reddit / YouTube 官方全站热榜',liveLead:'滚动 168 小时',windowRange:({from,to})=>`${from} → ${to} · 严格滚动窗口 · 未核实`,timeUnknown:'时间未知',justNow:'刚刚',minutesAgo:n=>`${n} 分钟前`,hoursAgo:n=>`${n} 小时前`,daysAgo:n=>`${n} 天前`,collected:'收录 ',likeMetric:'喜欢',retweetMetric:'转发',replyMetric:'回复',scoreMetric:'分数',upvoteMetric:'赞同',commentMetric:'评论',viewMetric:'观看',unverified:'未核实线索',noEngagement:'互动量暂无',originalPost:'原帖 ↗',translated:'中文译文',original:'原文',warnings:n=>`${n} 条采集提示 ▾`,noMatch:'没有匹配的内容',noSaved:'还没有收藏 —— 在卡片上点书签',noLiked:'还没有点赞',emptyHot:'本轮没有达到展示门槛的热点线索。当前仅扫描 Reddit r/all；Web 未配置，X 未纳入，YouTube 只作补证。这不代表三站没有热点。',emptyGame:'过去 168 小时还没有捕获到 AI 游戏线索；该分类会继续独立扫描。',emptyFinance:'过去 168 小时还没有捕获到 AI 金融线索；该分类会继续独立扫描。',emptyEnterprise:'过去 168 小时还没有捕获到 AI 企业OS线索；该分类会继续独立扫描。',emptyAi:'过去 168 小时还没有捕获到 AI 线索，请查看上方来源状态。',noSecondary:'当前类型没有二级筛选',back:'返回',unknown:'未知',rollingDetail:'过去 168 小时现场',leadNotice:'直接来自滚动 168 小时采集结果，尚未经过审稿或事实核验。它适合发现正在形成的讨论，不应直接当成已证实结论。',internalMode:'内部即时模式：已跳过审稿台。涉及数字、归因、开源状态或引用关系时，请先打开原帖核实。',collectionSummary:'采集摘要',noSummary:'暂无摘要，请直接打开原帖查看。',platform:'平台',category:'类别',publishedAt:'发布时间',collectedAt:'采集时间',appearedInWindow:'窗口内出现',sourceStatus:'来源状态',engagementClue:'互动量线索',collector:'采集器',openSource:p=>`打开 ${p} 原帖 ↗`,analyze:'用 Agent 分析这条',agentLeadNote:'Agent 会把它当作 lead_only，而不是事实。',unknownPublished:'未知（按收录时间展示）',thisCollection:'本次收录',askAgent:'问雷达 Agent',agentTitle:'雷达 Agent',agentReading:'正在读取当前雷达',continueAsk:'继续追问',agentPlaceholder:'问当前详情，或当前筛选结果',send:'发送',agentHint:'Enter 发送，Shift+Enter 换行',discussing:'今天在讨论什么？',openSourceOpportunity:'找开源机会',consensus:'三平台共识 / 分歧',agentChecking:'正在核对当前雷达',agentNoAnswer:'没有生成回答',agentUnavailable:'分析 Agent 暂时不可用，请稍后再试',thisRoundSources:'本轮来源',originalFallback:'暂无中文译文，显示原文',health_ok:'实时',health_observed:'已获取',health_partial:'部分',health_cached_ok:'同日缓存',health_cached_no_results:'缓存无结果',health_no_results:'无结果',health_fixture_not_run:'测试未运行',health_historical_not_run:'历史不运行',health_not_configured:'未接入',health_failed:'失败',health_unknown:'未知',footer:'AI 辅助翻译与归类 · 过去 168 小时现场为未核实线索 · 原始来源可查 · 正式内容另行核验'},
+  en:{brandSub:'Primary overseas sources · AI-assisted',radar:'Radar',mine:'My items',search:'Search…',loggedOut:'Signed out',loggedIn:'Signed in',login:'Sign in',logout:'Sign out',subscribe:'Subscribe',type:'TYPE',topic:'TOPIC',source:'SOURCE',all:'All',live:'Live',news:'Signals',daily:'Daily',weekly:'Weekly',latest:'Latest',likes:'Likes',crossPlatform:'Balanced',saved:'Saved',past24:'Past 24 hours',past7:'Past 7 days',past30:'Past 30 days',allTime:'All time',todayRadar:'Today · AI ideas',rollingTitle:'Past 168 hours',count:n=>`${n} items`,aiGame:'AI Games',aiFinance:'AI Finance',aiEnterpriseOs:'AI Enterprise OS',siteHot:'Site-wide Hot',siteHotNote:'Hot-lead pool · not the official X / Reddit / YouTube trending charts',liveLead:'ROLLING 168 HOURS',windowRange:({from,to})=>`${from} → ${to} · strict rolling window · unverified`,timeUnknown:'Time unknown',justNow:'Just now',minutesAgo:n=>`${n}m ago`,hoursAgo:n=>`${n}h ago`,daysAgo:n=>`${n}d ago`,collected:'Collected ',likeMetric:'Likes',retweetMetric:'Reposts',replyMetric:'Replies',scoreMetric:'Score',upvoteMetric:'Upvotes',commentMetric:'Comments',viewMetric:'Views',unverified:'Unverified lead',noEngagement:'No engagement data',originalPost:'Original ↗',translated:'Chinese translation',original:'Original',warnings:n=>`${n} collection notes ▾`,noMatch:'No matching items',noSaved:'No saved items yet',noLiked:'No liked items yet',emptyHot:'No hot lead cleared the display threshold. Only Reddit r/all is currently scanned; Web is not configured, X is not included, and YouTube is enrichment only. This does not mean the platforms have no hot topics.',emptyGame:'No AI-game lead was captured in the past 168 hours; this lane will keep scanning.',emptyFinance:'No AI-finance lead was captured in the past 168 hours; this lane will keep scanning.',emptyEnterprise:'No AI-enterprise lead was captured in the past 168 hours; this lane will keep scanning.',emptyAi:'No AI lead was captured in the past 168 hours. Check source health above.',noSecondary:'No secondary filter for this type',back:'Back',unknown:'Unknown',rollingDetail:'Past 168 hours',leadNotice:'This item comes directly from the rolling 168-hour collection and has not been reviewed or fact-checked. Use it to discover emerging discussion, not as a verified conclusion.',internalMode:'Internal instant mode: review was skipped. Verify numbers, attribution, open-source status, and quote relationships in the original post.',collectionSummary:'Collection summary',noSummary:'No summary. Open the original post for details.',platform:'Platform',category:'Category',publishedAt:'Published',collectedAt:'Collected',appearedInWindow:'Seen in window',sourceStatus:'Source health',engagementClue:'Engagement clues',collector:'Collector',openSource:p=>`Open original on ${p} ↗`,analyze:'Analyze with Agent',agentLeadNote:'The Agent treats this as lead_only, not a fact.',unknownPublished:'Unknown (shown by collection time)',thisCollection:'This collection',askAgent:'Ask Radar Agent',agentTitle:'Radar Agent',agentReading:'Reading the current radar',continueAsk:'Follow up',agentPlaceholder:'Ask about this detail or the current filtered list',send:'Send',agentHint:'Enter to send · Shift+Enter for a new line',discussing:'What is being discussed?',openSourceOpportunity:'Find open-source opportunities',consensus:'Cross-platform consensus / gaps',agentChecking:'Checking the current radar',agentNoAnswer:'No answer was generated',agentUnavailable:'Radar Agent is temporarily unavailable. Try again later.',thisRoundSources:'Sources in this answer',originalFallback:'No translation available; showing original',health_ok:'Live',health_observed:'Observed',health_partial:'Partial',health_cached_ok:'Same-day cache',health_cached_no_results:'Cached empty',health_no_results:'No results',health_fixture_not_run:'Fixture skipped',health_historical_not_run:'History skipped',health_not_configured:'Not connected',health_failed:'Failed',health_unknown:'Unknown',footer:'AI-assisted translation and classification · rolling 168-hour leads are unverified · original sources remain available'}
+};
+const savedLanguage=localStorage.getItem('radar.language');
+/* mode:'cards'|'graph' 主区二选一；cat8 = 八分类筛选（'ai' 即全部）；detailKind 区分卡片详情与实体页 */
+const state = {view:'radar', type:'现场', cat8:'ai', mode:'cards', sourceFilter:'', sort:'最新', mineTab:'收藏', q:'', gridview:'grid', tw:168, loggedIn:false, detailId:null, detailKind:null, lang:savedLanguage==='en'?'en':'zh'};
+const publicAgent = {messages:[], busy:false, open:false, contextKey:''};
+const liked = {}, marked = {};
+const $ = s=>document.querySelector(s), grid = $('#grid'), side = $('#side');
+const fmt = n=>n.toLocaleString('en-US');
+const esc = s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const t=(key,arg)=>{const value=I18N[state.lang][key]??I18N.zh[key]??key;return typeof value==='function'?value(arg):value;};
+const typeLabel=type=>({全部:t('all'),现场:t('live'),消息:t('news'),日报:t('daily'),周报:t('weekly')})[type]||type;
+const topicLabel=topic=>topic==='全部'?t('all'):topic;
+const PLATFORM_META={x:{label:'X',icon:'i-x'},reddit:{label:'Reddit',icon:'i-agent'},youtube:{label:'YouTube',icon:'i-audio'},web:{label:'Web',icon:'i-link'}};
+/* ===== P2：八分类（侧栏筛选维度；候选/主线的 categories 数组用这些 slug，'ai' 作全部） ===== */
+const CAT8=[
+  {slug:'ai',zh:'全部',en:'All',ic:'i-all'},
+  {slug:'model_dev',zh:'模型脉络',en:'Model dev',ic:'i-chip'},
+  {slug:'tech_trend',zh:'技术趋势',en:'Tech trends',ic:'i-bench'},
+  {slug:'new_thought',zh:'新思潮',en:'New thought',ic:'i-open'},
+  {slug:'gh_trending',zh:'GitHub trending',en:'GitHub trending',ic:'i-link'},
+  {slug:'hyle',zh:'Hyle',en:'Hyle',ic:'i-agent'},
+  {slug:'ai_enterprise_os',zh:'Company OS',en:'Company OS',ic:'i-biz'},
+  {slug:'ai_finance',zh:'金融 AI',en:'Finance AI',ic:'i-gov'},
+  {slug:'papers',zh:'新论文热点',en:'Papers',ic:'i-doc'},
+];
+const cat8Label=slug=>{const c=CAT8.find(x=>x.slug===slug);return c?(state.lang==='en'?c.en:c.zh):slug;};
+/* ===== 现场信源分组：按候选 discoveredBy[].provider 判定真实来源 ===== */
+const SOURCE_GROUPS=[
+  {key:'x',zh:'X',en:'X'},
+  {key:'reddit',zh:'Reddit',en:'Reddit'},
+  {key:'youtube',zh:'YouTube',en:'YouTube'},
+  {key:'hn',zh:'Hacker News',en:'Hacker News'},
+  {key:'digg',zh:'Digg',en:'Digg'},
+  {key:'polymarket',zh:'Polymarket',en:'Polymarket'},
+  {key:'github',zh:'GitHub',en:'GitHub'},
+  {key:'papers',zh:'论文',en:'Papers'},
+  {key:'blog',zh:'博客',en:'Blogs'},
+  {key:'web',zh:'网页',en:'Web'},
+];
+const sourceGroupLabel=key=>{if(!key)return t('all');const g=SOURCE_GROUPS.find(x=>x.key===key);return g?(state.lang==='en'?g.en:g.zh):key;};
+function sourceGroupOf(candidate){
+  const platform=String(candidate.platform||'').toLowerCase();
+  if(platform==='x'||platform==='reddit'||platform==='youtube')return platform; // 平台即信源
+  const discos=Array.isArray(candidate.discoveredBy)?candidate.discoveredBy:[];
+  const providers=discos.map(d=>String(d&&d.provider||''));
+  const has=prefix=>providers.some(p=>p.startsWith(prefix));
+  if(has('github-trending'))return 'github';
+  if(has('hf-daily-papers')||has('arxiv-rss'))return 'papers';
+  if(has('rss-feeds'))return 'blog';
+  if(has('last30days-deploy')){
+    // 部署包引擎的 web 候选按引擎内部源（discoveredBy[].providerSource）细分成独立 chip
+    const deploy=discos.find(d=>String(d&&d.provider||'').startsWith('last30days-deploy'));
+    const providerSource=String((deploy&&deploy.providerSource)||'hackernews');
+    if(providerSource==='hackernews')return 'hn';
+    if(providerSource==='digg')return 'digg';
+    if(providerSource==='polymarket')return 'polymarket';
+  }
+  return 'web'; // tavily 及其他兜底
+}
+/* 一行内容参与八分类筛选的 slug 集合：候选取自身 categories；主线式日报取各主线 categories 并集 */
+function rowCats(d){
+  if(d._candidate)return d.categories||[];
+  if(d.format==='storyline')return [...new Set((d.storylines||[]).flatMap(s=>s.categories||[]))];
+  return [];
+}
+const CATEGORY_META={ai:{label:()=> 'AI'},ai_game:{label:()=>t('aiGame')},ai_finance:{label:()=>t('aiFinance')},ai_enterprise_os:{label:()=>t('aiEnterpriseOs')},site_hot:{label:()=>t('siteHot')}};
+const categoryLabel=category=>CATEGORY_META[category]?.label()||cat8Label(category);
+const HEALTH_CLASS={ok:'is-ok',observed:'is-ok',partial:'is-cache',cached_ok:'is-cache','cached_no-results':'is-cache','no-results':'is-cache',no_results:'is-cache',fixture_not_run:'is-cache',historical_not_run:'is-cache',not_configured:'is-bad',failed:'is-bad',unknown:''};
+const healthMeta=value=>({label:t(`health_${String(value||'unknown').replace(/-/g,'_')}`),cls:HEALTH_CLASS[value]||''});
+function toast(t){const el=$('#toast');el.textContent=t;el.classList.add('show');clearTimeout(el._t);el._t=setTimeout(()=>el.classList.remove('show'),1800);}
+function openModal(id){document.getElementById(id).hidden=false;}
+function closeModals(){document.querySelectorAll('.overlay').forEach(o=>o.hidden=true);}
+
+function relativeTime(value){
+  if(!value)return t('timeUnknown');
+  const timestamp=new Date(value).getTime();
+  if(!Number.isFinite(timestamp))return t('timeUnknown');
+  const ms=Date.now()-timestamp;
+  if(ms<0)return t('justNow');
+  const minutes=Math.floor(ms/60000);
+  if(minutes<1)return t('justNow');
+  if(minutes<60)return t('minutesAgo',minutes);
+  const hours=Math.floor(minutes/60);
+  if(hours<24)return t('hoursAgo',hours);
+  return t('daysAgo',Math.floor(hours/24));
+}
+function candidateEngagement(candidate){
+  const result={};
+  (candidate.discoveredBy||[]).forEach(discovery=>Object.entries(discovery.providerEngagement||{}).forEach(([key,value])=>{
+    if(typeof value==='number'&&Number.isFinite(value))result[key]=Math.max(result[key]||0,value);
+  }));
+  return result;
+}
+function candidateMetricParts(d){
+  const order=d.platform==='x'?['likes','retweets','replies']:d.platform==='reddit'?['score','upvotes','comments']:d.platform==='youtube'?['views','likes','comments']:Object.keys(d.engagement||{});
+  const labels={likes:t('likeMetric'),retweets:t('retweetMetric'),replies:t('replyMetric'),score:t('scoreMetric'),upvotes:t('upvoteMetric'),comments:t('commentMetric'),views:t('viewMetric')};
+  return [...new Set(order)].filter(key=>Number.isFinite(d.engagement&&d.engagement[key])).slice(0,3).map(key=>`${labels[key]||key} ${fmt(d.engagement[key])}`);
+}
+function localizeCandidateRow(row){
+  if(!row?._candidate)return row;
+  const translation=state.lang==='zh'?row.translations?.zh:row.translations?.en;
+  row.title=translation?.title||row.originalTitle;
+  row.summary=String(translation?.summary||row.originalSummary||'').replace(/^\[(?:第三方聚合[，,]\s*未核实|third-party aggregation[,:]?\s*unverified)\]\s*/i,'').trim();
+  row.translationFallback=!translation&&row.sourceLanguage!==state.lang;
+  const effectiveValue=row.effectiveValue;
+  row.time=(row.timeUncertain?t('collected'):'')+relativeTime(effectiveValue);
+  return row;
+}
+function mapCandidate(candidate,inbox){
+  const platform=String(candidate.platform||'web').toLowerCase(),meta=PLATFORM_META[platform]||PLATFORM_META.web;
+  const effectiveValue=candidate.effectiveAt||candidate.publishedAt||candidate.lastSeenAt||candidate.retrievedAt;
+  const effectiveTime=new Date(effectiveValue||'').getTime();
+  const age=Number.isFinite(effectiveTime)?Math.max(0,(Date.now()-effectiveTime)/36e5):Infinity;
+  const summary=String(candidate.summary||'').replace(/^\[第三方聚合，未核实\]\s*/,'').trim();
+  const categories=Array.isArray(candidate.categories)&&candidate.categories.length?candidate.categories:['ai'];
+  const row={
+    _candidate:true,
+    candidateId:candidate.id,
+    rawCandidate:candidate,
+    type:'现场',topic:meta.label,src:meta.label,platform,ic:meta.icon,sourceGroup:sourceGroupOf(candidate),
+    h:age,originalTitle:candidate.title||candidate.url||t('unknown'),originalSummary:summary,translations:candidate.translations||{},sourceLanguage:candidate.sourceLanguage||'unknown',categories,
+    title:'',summary:'',time:'',effectiveValue,likes:0,url:candidate.url||'',
+    publishedAt:candidate.publishedAt,retrievedAt:candidate.retrievedAt,firstSeenAt:candidate.firstSeenAt,lastSeenAt:candidate.lastSeenAt,seenDates:candidate.seenDates||[],dateStatus:candidate.dateStatus,timeUncertain:Boolean(candidate.timeUncertain),
+    providers:candidate.providers||[],engagement:candidateEngagement(candidate),
+    sourceHealth:inbox&&inbox.sourceHealth?inbox.sourceHealth[platform]:'unknown'
+  };
+  return localizeCandidateRow(row);
+}
+function candidateCardHTML(d){
+  const metrics=candidateMetricParts(d);
+  const categoryChips=(d.categories||[]).map(category=>`<span class="category-chip ${esc(category)}">${esc(categoryLabel(category))}</span>`).join('');
+  return `<div class="scard is-live" data-id="${d.id}">
+    <div class="live-card-tags"><span class="typ live">${esc(t('live'))}</span>${categoryChips}<span class="unverified">${esc(t('unverified'))}</span>${d.translationFallback?`<span class="unverified">${esc(t('original'))}</span>`:''}</div>
+    <div class="mid">
+      <div class="src"><span class="dot"><svg class="ico" style="width:9px;height:9px"><use href="#${d.ic}"/></svg></span>${esc(d.src)} · ${esc(d.time)}</div>
+      <div class="ttl">${esc(d.title)}</div>
+      ${d.summary?`<div class="leadline">${esc(d.summary)}</div>`:''}
+    </div>
+    <div class="foot">
+      ${metrics.length?`<span class="live-metrics">${metrics.map(esc).join(' · ')}</span>`:`<span class="meta">${esc(t('noEngagement'))}</span>`}
+      ${d.url?`<a class="live-source-link" href="${esc(d.url)}" target="_blank" rel="noreferrer">${esc(t('originalPost'))}</a>`:''}
+    </div>
+  </div>`;
+}
+function cardHTML(d){
+  if(d._candidate)return candidateCardHTML(d);
+  const isRep=d.type!=='消息', lk=d.likes+(liked[d.id]?1:0);
+  const displayTitle=state.lang==='en'?(d.titleEn||d.enTitle||d.title):(d.titleZh||d.title);
+  const originalBadge=state.lang==='en'&&!d.titleEn&&!d.enTitle?'<span class="unverified">Original Chinese</span>':'';
+  return `<div class="scard" data-id="${d.id}">
+    <div class="live-card-tags"><span class="typ ${isRep?'rep':''}">${esc(typeLabel(d.type))}</span>${originalBadge}</div>
+    <div class="mid">
+      <div class="src"><span class="dot"><svg class="ico" style="width:9px;height:9px"><use href="#${d.ic}"/></svg></span>${d.src}${d.topic?' · '+d.topic:''}</div>
+      <div class="ttl">${esc(displayTitle)}</div>
+      ${d.type==='消息'?`<span class="deep">${state.lang==='en'?'→ Read the daily brief':'→ 看深版（日报）'} <svg class="ico sm"><use href="#i-chev-r"/></svg></span>`:''}
+    </div>
+    <div class="foot">
+      <span class="like ${liked[d.id]?'on':''}" data-like="${d.id}"><span class="tri">▲</span>${fmt(lk)}</span>
+      <span class="meta">${d.time}</span>
+      <button class="bm ${marked[d.id]?'on':''}" data-bm="${d.id}"><svg class="ico sm"><use href="#i-bm"/></svg></button>
+    </div>
+  </div>`;
+}
+function renderCategoryBar(){
+  // 现场横条 = 真实信源筛选（按 discoveredBy[].provider 分组），首位"全部"默认选中
+  // 计数与八分类联动：只数当前分类筛选下的候选（"全部"chip = 当前分类总数）
+  const el=$('#categorybar');
+  if(!TODAY_INBOX||!TODAY_INBOX.exists){el.hidden=true;el.innerHTML='';return;}
+  const candidates=DATA.filter(row=>row._candidate&&(state.cat8==='ai'||rowCats(row).includes(state.cat8)));
+  const chips=[{key:'',label:t('all'),count:candidates.length},
+    ...SOURCE_GROUPS.map(g=>({key:g.key,label:state.lang==='en'?g.en:g.zh,count:candidates.filter(row=>row.sourceGroup===g.key).length}))];
+  // 0 计数的 chip 也显示（置灰）：让用户看到全部信源覆盖面
+  el.innerHTML=chips.map(c=>`<button type="button" class="category-tab ${state.sourceFilter===c.key?'on':''} ${c.count===0?'zero':''}" data-sgroup="${c.key}"><b>${esc(c.label)}</b><span class="category-count">${c.count}</span></button>`).join('');
+  el.hidden=!(state.view==='radar'&&state.type==='现场');
+}
+function renderLivebar(){
+  // ⑦ 2026-07-30 用户裁定：现场状态条（滚动窗口说明 + 源健康点 + 采集提示弹层）整行删除。
+  // 下方渲染逻辑保留备查，函数入口直接短路隐藏。
+  const el=$('#livebar');
+  el.hidden=true;el.innerHTML='';
+  if(true)return;
+  if(!TODAY_INBOX||!TODAY_INBOX.exists){el.hidden=true;el.innerHTML='';return;}
+  const health=['x','reddit','youtube','web'].map(platform=>{
+    const meta=PLATFORM_META[platform]||PLATFORM_META.web;
+    const stateName=TODAY_INBOX.sourceHealth&&TODAY_INBOX.sourceHealth[platform]||'unknown';
+    const health=healthMeta(stateName);
+    const count=Number(TODAY_INBOX.byPlatform&&TODAY_INBOX.byPlatform[platform]||0);
+    return `<span class="health-item ${health.cls}"><span class="health-dot"></span><b>${meta.label}</b> ${count} · ${esc(health.label)}</span>`;
+  }).join('');
+  const warnings=TODAY_INBOX.warnings||[];
+  const warningBlock=warnings.length?`<details class="live-warnings"><summary>${esc(t('warnings',warnings.length))}</summary><div class="live-warning-pop">${warnings.map(item=>`<p>${esc(item)}</p>`).join('')}</div></details>`:'';
+  const window=TODAY_INBOX.window||{};
+  const format=value=>{const date=new Date(value||'');return Number.isNaN(date.getTime())?String(value||''):new Intl.DateTimeFormat(state.lang==='en'?'en-GB':'zh-CN',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}).format(date);};
+  const from=format(window.fromAt||window.from),to=format(window.toAt||window.to);
+  const range=t('windowRange',{from,to});
+  el.innerHTML=`<div class="livebar-lead"><span class="livebar-kicker">${esc(t('liveLead'))}</span><span class="livebar-date">${esc(range)}</span></div><div class="live-health">${health}</div>${warningBlock}`;
+  el.hidden=false;
+}
+function syncRadarHeader(){
+  if(state.view!=='radar')return;
+  const liveSuffix=[state.cat8!=='ai'?cat8Label(state.cat8):'',state.sourceFilter?sourceGroupLabel(state.sourceFilter):''].filter(Boolean).join(' · ');
+  $('#ctitle').textContent=state.type==='现场'?`${t('rollingTitle')}${liveSuffix?` · ${liveSuffix}`:''}`:t('todayRadar');
+}
+function syncLivebarVisibility(){
+  $('#livebar').hidden=true; // ⑦ 状态条已删除，永久隐藏
+  $('#categorybar').hidden=!(TODAY_INBOX&&TODAY_INBOX.exists&&state.view==='radar'&&state.type==='现场');
+}
+function syncSortTabs(){
+  if(state.view!=='radar')return;
+  if(state.type==='现场'){
+    if(state.sort!=='跨平台'&&state.sort!=='最新')state.sort='跨平台';
+    $('#sorttabs').innerHTML=`<span class="${state.sort==='跨平台'?'on':''}" data-sort="跨平台">${esc(t('crossPlatform'))}</span><span class="${state.sort==='最新'?'on':''}" data-sort="最新">${esc(t('latest'))}</span>`;
+  }else{
+    $('#sorttabs').innerHTML=`<span class="${state.sort==='最新'?'on':''}" data-sort="最新">${esc(t('latest'))}</span><span class="${state.sort==='点赞'?'on':''}" data-sort="点赞">${esc(t('likes'))}</span>`;
+  }
+}
+function balancePlatforms(rows){
+  const groups=new Map();
+  rows.forEach(row=>{const key=row.platform||'web';if(!groups.has(key))groups.set(key,[]);groups.get(key).push(row);});
+  groups.forEach(group=>group.sort((a,b)=>a.h-b.h));
+  const order=['x','reddit','youtube','web',...[...groups.keys()].filter(key=>!['x','reddit','youtube','web'].includes(key))].filter(key=>groups.has(key));
+  const offsets=Object.fromEntries(order.map(key=>[key,0])),result=[];
+  while(result.length<rows.length){
+    let added=false;
+    order.forEach(key=>{const group=groups.get(key),index=offsets[key];if(index<group.length){result.push(group[index]);offsets[key]+=1;added=true;}});
+    if(!added)break;
+  }
+  return result;
+}
+function render(){
+  let rows;
+  if(state.view==='mine'){
+    rows = DATA.filter(d=> state.mineTab==='收藏' ? marked[d.id] : liked[d.id]);
+  } else {
+    rows = DATA.filter(d=>{
+      if(state.type!=='全部' && d.type!==state.type) return false;
+      // 八分类只作用于"现场"候选流；日报/周报等不受分类筛选影响
+      if(state.cat8!=='ai' && d._candidate && !rowCats(d).includes(state.cat8)) return false;
+      // 现场信源筛选（顶部横条，按真实信源分组，"全部"= 不筛）
+      if(state.type==='现场' && d._candidate && state.sourceFilter && d.sourceGroup!==state.sourceFilter) return false;
+      if(state.tw>0 && d.h>state.tw) return false;
+      const query=state.q.toLowerCase();
+      const translations=d._candidate?Object.values(d.translations||{}).flatMap(value=>[value?.title||'',value?.summary||'']).join(' '):'';
+      if(query && !`${d.title||''} ${d.src||''} ${d.summary||''} ${d.originalTitle||''} ${d.originalSummary||''} ${translations}`.toLowerCase().includes(query)) return false;
+      return true;
+    });
+    if(state.type==='现场')rows=state.sort==='跨平台'?balancePlatforms(rows):rows.slice().sort((a,b)=>a.h-b.h);
+    else if(state.sort==='点赞')rows=rows.slice().sort((a,b)=>(b.likes+(liked[b.id]?1:0))-(a.likes+(liked[a.id]?1:0)));
+  }
+  syncRadarHeader();
+  syncLivebarVisibility();
+  renderCategoryBar();
+  $('#cnt').textContent=t('count',rows.length);
+  grid.className='grid'+(state.gridview==='list'?' list':'');
+  // ⑧ 口径（2026-07-30 三修）：分类页以候选卡片流为主；仅当该分类候选为 0 且日报/知识库有内容时，
+  // 空态改为直接列出这些内容（这样侧栏三层计数与页面内容一致）。
+  if(!rows.length){
+    if(state.view==='radar'&&state.type==='现场'&&state.cat8!=='ai'){
+      const fallback=buildCatFallbackList();
+      if(fallback){grid.innerHTML=fallback;updatePublicAgentContext();return;}
+    }
+    let empty=state.view==='mine'?(state.mineTab==='收藏'?t('noSaved'):t('noLiked')):t('noMatch');
+    if(state.type==='现场')empty=state.cat8!=='ai'?(state.lang==='en'?'No live candidates in this category':'该分类暂无现场候选'):t('emptyAi');
+    grid.className='';grid.innerHTML='<div class="emptywrap">'+esc(empty)+'</div>';updatePublicAgentContext();return;
+  }
+  grid.innerHTML=rows.map(cardHTML).join('');
+  updatePublicAgentContext();
+}
+/* ⑧ 分类空态回填：候选为 0 时列出该分类在日报/知识库里的内容（一行一条，可跳转）。没有内容返回 '' */
+function buildCatFallbackList(){
+  const cat=state.cat8;
+  const rows=[];
+  DATA.forEach(d=>{
+    if(d.format!=='storyline')return;
+    (d.storylines||[]).forEach(s=>{if((s.categories||[]).includes(cat))rows.push(`<div class="catsec-row" data-open="${d.id}"><span class="d">${esc(d.aggregatedAt||'')}</span><span class="kind-chip">${state.lang==='en'?'Storyline':'主线'}</span><span class="t2">${esc(s.title)}</span></div>`);});
+    (d.scattered||[]).forEach(x=>{if(x.category===cat)rows.push(`<div class="catsec-row" data-open="${d.id}"><span class="d">${esc(d.aggregatedAt||'')}</span><span class="kind-chip">${state.lang==='en'?'Scattered':'零散'}</span><span class="t2">${esc(x.note)}</span></div>`);});
+  });
+  if(KG.index){
+    (KG.index.entities||[]).forEach(e=>(e.events||[]).forEach(ev=>{
+      if(ev.category!==cat)return;
+      rows.push(`<div class="catsec-row"><span class="d">${esc(ev.date)}</span><span class="kind-chip">${esc(KIND_LABEL[ev.kind]||ev.kind)}</span><span class="ent-link" data-entity-name="${esc(e.id)}">${esc(e.name)}</span><span class="t2">${esc(ev.title)}</span>${ev.source?`<a href="${esc(ev.source)}" target="_blank" rel="noreferrer">${state.lang==='en'?'source':'来源'} ↗</a>`:''}</div>`);
+    }));
+  }else if(!KG.error){
+    // 知识库未载入：先渲染日报层，载入后补齐
+    loadKG().then(()=>{if(state.cat8===cat&&state.mode==='cards'&&state.view==='radar')render();}).catch(()=>{});
+  }
+  if(!rows.length)return '';
+  const note=state.lang==='en'
+    ?'Content in this category comes from dailies and the knowledge base (the collection layer does not emit it directly).'
+    :'该分类的内容来自日报与知识库（采集层不直接产生此分类）。';
+  return `<div class="catsec"><div class="catsec-empty">${esc(note)}</div>${rows.join('')}</div>`;
+}
+/* 分类下钻折叠区："出自日报与知识库（N 条）"，默认收起；openByDefault=true（该分类候选为 0）时默认展开。
+   展开后内含两小节：来自日报的主线 / 知识库事件（知识库未载入时异步补渲染）。 */
+function buildCatSections(openByDefault){
+  const cat=state.cat8;
+  const dailyRows=[];
+  DATA.forEach(d=>{
+    if(d.format!=='storyline')return;
+    (d.storylines||[]).forEach((s,i)=>{if((s.categories||[]).includes(cat))dailyRows.push({date:d.aggregatedAt||'',label:`${state.lang==='en'?'Storyline':'主线'} ${i+1}`,title:s.title,openId:d.id});});
+    (d.scattered||[]).forEach(x=>{if(x.category===cat)dailyRows.push({date:d.aggregatedAt||'',label:state.lang==='en'?'Scattered':'零散',title:x.note,openId:d.id});});
+  });
+  let inner=`<div class="catsec-h">${state.lang==='en'?'From dailies':'来自日报的主线'}（${dailyRows.length}）</div>`
+    +(dailyRows.length?dailyRows.map(r=>`<div class="catsec-row" data-open="${r.openId}"><span class="d">${esc(r.date)}</span><span class="kind-chip">${esc(r.label)}</span><span class="t2">${esc(r.title)}</span></div>`).join('')
+      :`<div class="catsec-empty">${state.lang==='en'?'None yet':'暂无'}</div>`);
+  let kgCount=0,kgPending=false;
+  if(KG.index){
+    const events=(KG.index.entities||[]).flatMap(e=>(e.events||[]).map(ev=>({...ev,entityName:e.name,entityId:e.id})))
+      .filter(ev=>ev.category===cat).sort((a,b)=>String(b.date).localeCompare(String(a.date))).slice(0,30);
+    kgCount=events.length;
+    inner+=`<div class="catsec-h">${state.lang==='en'?'Knowledge events':'知识库事件'}（${events.length}）</div>`
+      +(events.length?events.map(ev=>`<div class="catsec-row"><span class="d">${esc(ev.date)}</span><span class="kind-chip">${esc(KIND_LABEL[ev.kind]||ev.kind)}</span><span class="ent-link" data-entity-name="${esc(ev.entityId)}">${esc(ev.entityName)}</span><span class="t2">${esc(ev.title)}</span>${ev.source?`<a href="${esc(ev.source)}" target="_blank" rel="noreferrer">${state.lang==='en'?'source':'来源'} ↗</a>`:''}</div>`).join('')
+        :`<div class="catsec-empty">${state.lang==='en'?'None yet':'暂无'}</div>`);
+  }else if(!KG.error){
+    kgPending=true;
+    inner+=`<div class="catsec-h">${state.lang==='en'?'Knowledge events':'知识库事件'}</div><div class="catsec-empty">${state.lang==='en'?'Loading…':'知识库读取中…'}</div>`;
+    loadKG().then(()=>{if(state.cat8===cat&&state.mode==='cards'&&state.view==='radar')render();}).catch(()=>{});
+  }
+  const total=dailyRows.length+kgCount;
+  const summary=`${state.lang==='en'?'From dailies & knowledge base':'出自日报与知识库'}（${total}${kgPending?'+':''} ${state.lang==='en'?'items':'条'}）`;
+  return `<details class="catsec catfold"${openByDefault?' open':''}><summary>${esc(summary)}</summary>${inner}</details>`;
+}
+function setView(v){
+  state.view=v;
+  setGraphMode(false); // 切视图先回卡片流；进图谱由侧栏"知识图谱"入口再触发
+  document.querySelectorAll('.topnav a').forEach(a=>a.classList.toggle('on',a.dataset.view===v));
+  if(v==='mine'){side.style.display='none';$('#ctitle').textContent=t('mine');$('#timesel').style.visibility='hidden';$('#sorttabs').innerHTML=`<span class="on" data-mine="收藏">${esc(t('saved'))}</span><span data-mine="点赞">${esc(t('likes'))}</span>`;state.mineTab='收藏';}
+  else {side.style.display='';$('#timesel').style.visibility='visible';state.sort=state.type==='现场'?'跨平台':'最新';syncRadarHeader();syncSortTabs();}
+  render();
+}
+
+/* ===== detail ===== */
+function openDetail(id){
+  const d=DATA[id];
+  if(!d)return;
+  if(/^#\/entity\//.test(location.hash))history.replaceState(null,'',location.pathname+location.search); // 从实体页跳卡片详情时清 hash
+  state.detailId=id;state.detailKind='item';
+  if(d._candidate)renderCandidate(d);
+  else if(d.type==='消息')renderMsg(d);
+  else renderReport(d);
+  $('#detail').classList.add('on');$('#detail').scrollTop=0;
+  updatePublicAgentContext();
+}
+function closeDetail(){
+  state.detailId=null;state.detailKind=null;entityPage.id=null;
+  if(/^#\/entity\//.test(location.hash))history.replaceState(null,'',location.pathname+location.search);
+  $('#detail').classList.remove('on');updatePublicAgentContext();
+}
+function readableDateTime(value){
+  if(!value)return t('unknown');
+  const date=new Date(value);
+  return Number.isNaN(date.getTime())?t('unknown'):new Intl.DateTimeFormat(state.lang==='en'?'en-GB':'zh-CN',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}).format(date);
+}
+function renderCandidate(d){
+  const health=healthMeta(d.sourceHealth);
+  const metrics=candidateMetricParts(d);
+  const provider=(d.providers||[]).join(' / ')||t('unknown');
+  const categories=(d.categories||[]).map(category=>categoryLabel(category)).join(' / ');
+  const seenRange=(d.seenDates||[]).length?(d.seenDates.length===1?d.seenDates[0]:`${d.seenDates[0]} → ${d.seenDates.at(-1)}`):t('thisCollection');
+  $('#dbody').innerHTML=`<div class="mwrap">
+    <div class="mtag"><span class="typ" style="border:1px solid var(--accent-text);color:var(--accent-text);padding:2px 7px;border-radius:var(--r-pill)">${esc(t('rollingDetail'))}</span>${esc(d.src)} · ${esc(d.time)} · ${esc(health.label)}</div>
+    <h2>${esc(d.title)}</h2>
+    ${d.translationFallback?`<div class="candidate-alert">${esc(t('originalFallback'))}</div>`:''}
+    <p class="lead">${esc(t('leadNotice'))}</p>
+    <div class="candidate-alert">${esc(t('internalMode'))}</div>
+    <div class="evh">${esc(t('collectionSummary'))}</div>
+    <div class="candidate-copy">${esc(d.summary||t('noSummary'))}</div>
+    <div class="candidate-facts">
+      <div class="candidate-fact"><span class="k">${esc(t('platform'))}</span><span class="v">${esc(d.src)}</span></div>
+      <div class="candidate-fact"><span class="k">${esc(t('category'))}</span><span class="v">${esc(categories)}</span></div>
+      <div class="candidate-fact"><span class="k">${esc(t('publishedAt'))}</span><span class="v">${esc(d.timeUncertain?t('unknownPublished'):readableDateTime(d.publishedAt))}</span></div>
+      <div class="candidate-fact"><span class="k">${esc(t('collectedAt'))}</span><span class="v">${esc(readableDateTime(d.retrievedAt))}</span></div>
+      <div class="candidate-fact"><span class="k">${esc(t('appearedInWindow'))}</span><span class="v">${esc(seenRange)}</span></div>
+      <div class="candidate-fact"><span class="k">${esc(t('sourceStatus'))}</span><span class="v">${esc(health.label)}</span></div>
+      <div class="candidate-fact"><span class="k">${esc(t('engagementClue'))}</span><span class="v">${metrics.length?metrics.map(esc).join(' · '):esc(t('noEngagement'))}</span></div>
+      <div class="candidate-fact"><span class="k">${esc(t('collector'))}</span><span class="v">${esc(provider)}</span></div>
+    </div>
+    <div class="candidate-actions">${d.url?`<a class="candidate-open" href="${esc(d.url)}" target="_blank" rel="noreferrer"><svg class="ico sm"><use href="#i-link"/></svg>${esc(t('openSource',d.src))}</a>`:''}<button class="candidate-agent-action" type="button" data-analyze-candidate><svg class="ico sm"><use href="#i-agent"/></svg>${esc(t('analyze'))}</button><span class="candidate-note">${esc(t('agentLeadNote'))}</span></div>
+  </div>`;
+}
+function renderMsg(d){
+  const ev=d.ev||[{who:d.src,pt:'一手',zh:'（AI 自动聚合的一手讨论将显示在这里，含中文翻译 + 原文链接）'}];
+  const cta=p=>state.lang==='en'?(/Reddit/.test(p)?'Open Reddit discussion':/播客|Podcast/i.test(p)?'Open podcast segment':/论文|arXiv|paper/i.test(p)?'Open paper':/Repo|GitHub/.test(p)?'Open GitHub repo':'Open original on X'):(/Reddit/.test(p)?'看 Reddit 讨论':/播客/.test(p)?'听播客原段落':/论文|arXiv/.test(p)?'看论文':/Repo|GitHub/.test(p)?'看 GitHub Repo':'看 X 原帖');
+  const displayTitle=state.lang==='en'?(d.titleEn||d.enTitle||d.title):(d.titleZh||d.title);
+  $('#dbody').innerHTML=`<div class="mwrap">
+    <div class="mtag"><span class="typ" style="border:1px solid var(--line-2);padding:2px 7px;border-radius:var(--r-pill)">${esc(t('news'))}</span>${d.topic||''} · ${d.time} · ${state.lang==='en'?`viewpoint map · ${ev.length} grouped sources`:`观点地图 · ${ev.length} 个来源归组`}</div>
+    <h2>${esc(displayTitle)}</h2>
+    ${state.lang==='en'&&!d.titleEn&&!d.enTitle?'<div class="candidate-alert">This published headline is currently available only in the original Chinese edition.</div>':''}
+    <p class="lead">${state.lang==='en'?`This signal groups ${ev.length} primary-source discussions. Each source can be opened for verification.`:`这条思潮由下面 ${ev.length} 条海外一手讨论归组而成 —— 已翻成中文，每条可一键跳原站核对（不在站内走丢）。`}</p>
+    <div class="evh">${state.lang==='en'?`Viewpoint map · Source pack (${ev.length})`:`观点地图 · 来源包（${ev.length}）`}</div>
+    <p style="font-family:var(--f-mono);font-size:9px;letter-spacing:.04em;color:var(--secondary);margin:2px 0 12px">${state.lang==='en'?'AI-assisted grouping; this does not imply a real repost or reply chain.':'AI 关联归组，不代表真实转发 / 回复链。'}</p>
+    ${ev.map(e=>`<div class="ev">
+      <div class="line"><div class="node"></div><div class="bar"></div></div>
+      <div class="body">
+        <div class="who">${e.who}<span class="pt">${e.pt.split('·')[0]}</span></div>
+        <div class="${state.lang==='en'?'en':'zh'}">${esc((state.lang==='en'?(e.en||e.zh):(e.zh||e.en))||'')}</div>
+        <a class="src-link" href="${e.url||'#'}" target="_blank" rel="noreferrer"><svg class="ico sm"><use href="#i-link"/></svg> ${cta(e.pt)} ↗</a>
+      </div></div>`).join('')}
+    <span class="gotoreport" data-report>→ 看深版：进 6/27 日报</span>
+  </div>`;
+}
+function renderReport(d){
+  if(d.format==='storyline')return renderStorylineDaily(d);      // P2 主线式日报
+  if(d.format==='storyline-weekly')return renderStorylineWeekly(d); // P2 主线式周报
+  const r=d.report||{}, heads=DATA.filter(x=>x.type==='消息').slice(0,5);
+  const displayTitle=state.lang==='en'?(d.titleEn||d.enTitle||d.title):(d.titleZh||d.title);
+  const lk=s=>String(s).replace(/@([A-Za-z0-9_]+)/g,'<a href="https://x.com/$1" target="_blank" rel="noreferrer">@$1</a>');
+  const blk=b=>{
+    if(b.group) return `<div class="rgroup">${b.group}</div>`;
+    let body='';
+    if(b.p) body=`<p>${lk(b.p)}</p>`;
+    else if(b.bullets) body=`<ul class="bul">${b.bullets.map(x=>`<li>${lk(x)}</li>`).join('')}</ul>`;
+    else if(b.fv) body=`<div class="fv3"><div class="fvrow"><span class="ft">✅ 有据</span><span>${lk(b.fv.facts)}</span></div>`+(b.fv.marketing?`<div class="fvrow"><span class="ft">🟡 半营销</span><span>${lk(b.fv.marketing)}</span></div>`:'')+`<div class="fvrow"><span class="ft">💭 观点</span><span>${lk(b.fv.opinions)}</span></div></div>`;
+    else if(b.views) body=b.views.map((v,i)=>`<div class="vp"><b>${i+1}. ${v.b}</b>：${lk(v.t)}</div>`).join('');
+    else if(b.top) body=`<ol class="toptw">${b.top.map(x=>`<li>${lk(x)}</li>`).join('')}</ol>`;
+    else if(b.reddit) body=b.reddit.map(x=>`<div class="red"><div class="rt">${x.title}</div><div class="rs">${lk(x.zh)}</div>${x.url?`<a class="src-link" href="${x.url}" target="_blank" rel="noreferrer"><svg class="ico sm"><use href="#i-link"/></svg> 看 Reddit 讨论 ↗</a>`:''}</div>`).join('');
+    return `<div class="rsec"><h3>${b.h}</h3>${body}</div>`;
+  };
+  $('#dbody').innerHTML=`<div class="rwrap">
+    <div class="rmain">
+      <div class="rmeta">${d.src} · ${r.meta||d.time}</div>
+      <div class="judg">${esc(displayTitle)}</div>
+      ${state.lang==='en'&&!d.titleEn&&!d.enTitle?'<div class="candidate-alert">This report is currently available only in the original Chinese edition.</div>':''}
+      ${r.sub?`<div class="rsub">${r.sub}</div>`:''}
+      ${r.lead?`<p class="rlead">${lk(r.lead)}</p>`:''}
+      ${(r.blocks||[]).map(blk).join('')}
+    </div>
+    <div class="rside">
+      <div class="sh">头条新闻 <span><span class="num">${heads.length}</span></span></div>
+      ${heads.map((t,i)=>`<div class="si" data-open="${t.id}"><span class="n">${i+1}</span><span class="t">${t.title}</span></div>`).join('')}
+    </div>
+  </div>`;
+}
+
+/* ===================================================================
+   P2：知识雷达前端 —— 知识库数据层 / 图谱视图 / 实体页 / 主线式报告
+   数据只来自 /api/knowledge/graph（graph-index.json 只读索引，loopback-only）
+   =================================================================== */
+const KG={index:null,byId:new Map(),nameToId:new Map(),promise:null,error:null,loaded:false,
+  visibleTypes:new Set(['model','framework','company','concept','paper','person']),mode:'active',expandedId:null};
+const KG_TYPE_COLOR={model:'#7F77DD',framework:'#1D9E75',company:'#D85A30',concept:'#D4537E',paper:'#378ADD',person:'#888780'};
+const KG_TYPE_LABEL={model:'模型',framework:'框架',company:'公司',concept:'概念',paper:'论文',person:'人物'};
+const KIND_LABEL={release:'发布',update:'迭代',price:'价格',funding:'融资',debate:'争论',paper:'论文',oss:'开源'};
+const REL_LABEL={based_on:'基于',competes:'竞争',replaces:'替代',proposes:'提出',made_by:'出品',supports:'支持'};
+const RELPREV_LABEL={caused:'引发',echoes:'呼应',follows:'承接',same_day:'同日'};
+function loadKG(){
+  if(KG.promise)return KG.promise;
+  KG.promise=fetch('/api/knowledge/graph',{cache:'no-store'})
+    .then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json();})
+    .then(data=>{
+      KG.error=null;KG.loaded=true;
+      if(!data||data.exists===false){KG.index=null;return KG;} // 知识库还没生成
+      KG.index=data;
+      KG.byId=new Map((data.entities||[]).map(e=>[e.id,e]));
+      KG.nameToId=new Map();
+      (data.entities||[]).forEach(e=>{
+        KG.nameToId.set(e.id,e.id);
+        KG.nameToId.set(String(e.name||'').trim().toLowerCase(),e.id);
+        (e.aliases||[]).forEach(a=>KG.nameToId.set(String(a).trim().toLowerCase(),e.id));
+      });
+      return KG;
+    })
+    .catch(err=>{KG.promise=null;KG.error=err;throw err;});
+  return KG.promise;
+}
+/* 名字/别名/id → 实体 id（storyline 链上的 entity 字段可能是任意一种写法） */
+const kgResolve=name=>name?(KG.nameToId.get(String(name).trim().toLowerCase())||null):null;
+function kgRecentCount(e,days){
+  const cut=new Date(Date.now()-(days||30)*864e5).toISOString().slice(0,10);
+  return (e.events||[]).filter(ev=>String(ev.date||'')>=cut).length;
+}
+const kgRadius=e=>7+Math.min(18,Math.sqrt(kgRecentCount(e))*5); // 节点半径 ∝ 近30天事件数
+/* ⑪ 共现边：同一主线里出现过的实体两两连虚线（纯前端推导，不写入 relations.jsonl）。
+   已有语义关系边的实体对不再画共现边。 */
+function kgCooccurEdges(){
+  if(!KG.index)return [];
+  const semantic=new Set((KG.index.relations||[]).map(r=>[r.from,r.to].sort().join('|')));
+  const pairs=new Map();
+  (KG.index.storylines||[]).forEach(s=>{
+    const ids=[...new Set((s.events||[]).map(ev=>ev.entity).filter(Boolean))];
+    for(let i=0;i<ids.length;i+=1)for(let j=i+1;j<ids.length;j+=1){
+      const key=[ids[i],ids[j]].sort().join('|');
+      if(semantic.has(key))continue; // 语义边优先
+      if(!pairs.has(key))pairs.set(key,{from:ids[i],to:ids[j],co:true,storylines:[]});
+      if(!pairs.get(key).storylines.includes(s.title))pairs.get(key).storylines.push(s.title);
+    }
+  });
+  return [...pairs.values()];
+}
+const typeBadge=type=>`<span class="type-badge" style="background:${KG_TYPE_COLOR[type]||'#888780'}">${esc(KG_TYPE_LABEL[type]||type)}</span>`;
+function entityNameOf(id){const e=KG.byId.get(id);return e?e.name:id;}
+const entityLinkHtml=name=>name?`<span class="ent-link" data-entity-name="${esc(name)}">${esc(name)}</span>`:'';
+function gotoEntityByName(name){
+  loadKG().then(()=>{
+    const id=kgResolve(name);
+    if(id)location.hash='#/entity/'+id;
+    else toast(state.lang==='en'?'Not in knowledge base yet':'知识库里还没有这个实体');
+  }).catch(()=>toast(state.lang==='en'?'Knowledge base unavailable':'知识库接口不可用'));
+}
+
+/* ===== 主区视图切换：卡片流 ⇄ 知识图谱整屏 ===== */
+let kgSim=null,kgSel=null;
+function setGraphMode(on){
+  const next=on?'graph':'cards';
+  const changed=state.mode!==next;
+  state.mode=next;
+  document.querySelector('.content').classList.toggle('graph-on',next==='graph');
+  renderSideNav();
+  if(next==='graph'&&changed)openGraphView();
+  if(next==='cards'&&kgSim){kgSim.stop();kgSim=null;kgSel=null;}
+}
+function openGraphView(){
+  closeKgDrawer();
+  $('#kgCanvas').innerHTML=`<div class="kg-empty">${state.lang==='en'?'Loading knowledge base…':'正在读取知识库…'}</div>`;
+  loadKG().then(()=>renderGraphView())
+    .catch(err=>{$('#kgCanvas').innerHTML=`<div class="kg-empty">${esc((state.lang==='en'?'Knowledge base API unavailable: ':'知识库接口不可用：')+(err.message||err))}</div>`;});
+}
+function renderKgLegend(){
+  $('#kgLegend').innerHTML=Object.keys(KG_TYPE_COLOR).map(type=>`<span class="kg-chip ${KG.visibleTypes.has(type)?'':'off'}" data-kgtype="${type}"><i style="background:${KG_TYPE_COLOR[type]}"></i>${esc(KG_TYPE_LABEL[type])}</span>`).join('');
+}
+function renderKgStats(){
+  const s=KG.index&&KG.index.stats||{};
+  $('#kgTitle').textContent=state.lang==='en'?'Knowledge graph':'知识图谱';
+  $('#kgStats').textContent=KG.index?`${state.lang==='en'?'entities':'实体'} ${s.entities||0} · ${state.lang==='en'?'events':'事件'} ${s.events||0} · ${state.lang==='en'?'relations':'关系'} ${s.relations||0} · ${state.lang==='en'?'storylines':'主线'} ${s.storylines||0}`:'';
+}
+function kgVisibleEntities(){
+  if(!KG.index)return [];
+  return (KG.index.entities||[]).filter(e=>KG.visibleTypes.has(e.type)&&(KG.mode==='all'||kgRecentCount(e)>0));
+}
+function renderGraphView(){
+  renderKgLegend();renderKgStats();
+  const canvas=$('#kgCanvas');
+  if(kgSim){kgSim.stop();kgSim=null;}
+  kgSel=null;
+  if(!KG.index){canvas.innerHTML=`<div class="kg-empty">${state.lang==='en'?'Knowledge base is empty.<br>The graph appears automatically after the first daily is generated.':'知识库为空，第一期日报生成后自动出现'}</div>`;return;}
+  const nodes=kgVisibleEntities().map(e=>({...e}));
+  if(!nodes.length){canvas.innerHTML=`<div class="kg-empty">${state.lang==='en'?'No entities under current filters — try "All" or enable more types.':'当前筛选没有实体——试试「全部」模式或打开更多类型'}</div>`;return;}
+  if(!window.d3){renderKgFallback(canvas,nodes);return;} // CDN 加载失败 → 降级实体列表
+  const idset=new Set(nodes.map(n=>n.id));
+  const semLinks=(KG.index.relations||[]).filter(r=>idset.has(r.from)&&idset.has(r.to)).map(r=>({...r,source:r.from,target:r.to}));
+  const coLinks=kgCooccurEdges().filter(e=>idset.has(e.from)&&idset.has(e.to)).map(e=>({...e,source:e.from,target:e.to}));
+  const links=[...semLinks,...coLinks]; // 语义实线 + 共现虚线一起进力导向
+  const w=canvas.clientWidth||900,h=canvas.clientHeight||540;
+  canvas.innerHTML='';
+  const svg=d3.select(canvas).append('svg').attr('viewBox',`0 0 ${w} ${h}`);
+  const zoomG=svg.append('g');
+  svg.call(d3.zoom().scaleExtent([.25,4]).on('zoom',ev=>zoomG.attr('transform',ev.transform)));
+  svg.on('click',()=>{KG.expandedId=null;applyKgHighlight();});
+  const link=zoomG.append('g').selectAll('line').data(links).join('line').attr('class',d=>'kg-link'+(d.co?' co':''));
+  link.filter(d=>d.co).append('title').text(d=>`${state.lang==='en'?'Same storyline: ':'同主线：'}${d.storylines.join(' / ')}`);
+  const linkLabel=zoomG.append('g').selectAll('text').data(semLinks).join('text').attr('class','kg-link-label').attr('text-anchor','middle').text(d=>REL_LABEL[d.kind]||d.kind);
+  const node=zoomG.append('g').selectAll('g').data(nodes).join('g').attr('class','kg-node');
+  node.append('circle').attr('r',d=>kgRadius(d)).attr('fill',d=>KG_TYPE_COLOR[d.type]||'#888780').attr('fill-opacity',.88);
+  node.append('text').attr('text-anchor','middle').attr('dy',d=>kgRadius(d)+12).text(d=>d.name);
+  node.on('click',(ev,d)=>{ev.stopPropagation();openKgDrawer(d.id);});
+  node.call(d3.drag()
+    .on('start',(ev,d)=>{if(!ev.active)kgSim.alphaTarget(.25).restart();d.fx=d.x;d.fy=d.y;})
+    .on('drag',(ev,d)=>{d.fx=ev.x;d.fy=ev.y;})
+    .on('end',(ev,d)=>{if(!ev.active)kgSim.alphaTarget(0);d.fx=null;d.fy=null;}));
+  kgSim=d3.forceSimulation(nodes)
+    .force('link',d3.forceLink(links).id(d=>d.id).distance(d=>d.co?140:95).strength(d=>d.co?0.25:0.6))
+    .force('charge',d3.forceManyBody().strength(-240))
+    .force('center',d3.forceCenter(w/2,h/2))
+    .force('collide',d3.forceCollide().radius(d=>kgRadius(d)+18))
+    .on('tick',()=>{
+      link.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y).attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);
+      linkLabel.attr('x',d=>(d.source.x+d.target.x)/2).attr('y',d=>(d.source.y+d.target.y)/2-4);
+      node.attr('transform',d=>`translate(${d.x},${d.y})`);
+    });
+  kgSel={node,link,linkLabel};
+  applyKgHighlight();
+}
+/* 搜索定位高亮 + "展开关系"一跳邻居高亮（其余压暗） */
+function applyKgHighlight(){
+  if(!kgSel)return;
+  const q=($('#kgSearch').value||'').trim().toLowerCase();
+  const hit=d=>Boolean(q)&&(String(d.name).toLowerCase().includes(q)||(d.aliases||[]).some(a=>String(a).toLowerCase().includes(q)));
+  let dimNode=()=>false,dimLink=()=>false;
+  if(KG.expandedId){
+    const keep=new Set([KG.expandedId]);
+    (KG.index.relations||[]).forEach(r=>{if(r.from===KG.expandedId)keep.add(r.to);if(r.to===KG.expandedId)keep.add(r.from);});
+    dimNode=d=>!keep.has(d.id);
+    dimLink=d=>d.from!==KG.expandedId&&d.to!==KG.expandedId;
+  }
+  kgSel.node.classed('hit',hit).classed('dim',d=>dimNode(d)&&!hit(d));
+  kgSel.link.classed('dim',dimLink);
+  kgSel.linkLabel.classed('dim',dimLink);
+}
+function renderKgFallback(canvas,nodes){
+  canvas.innerHTML=`<div class="kg-fallback"><div class="fbnote">${state.lang==='en'?'D3 failed to load from the CDN — showing the entity list instead.':'D3 未能从 CDN 加载（可能断网）——降级为实体列表，点击仍可查看实体。'}</div>${nodes.map(e=>`<div class="kg-fbrow" data-kgopen="${esc(e.id)}"><span class="tdot" style="background:${KG_TYPE_COLOR[e.type]||'#888780'}"></span>${esc(e.name)}<span class="kind-chip">${esc(KG_TYPE_LABEL[e.type]||e.type)}</span><span class="m">${state.lang==='en'?'events':'事件'} ${e.eventCount||0} · ${esc(e.lastEventDate||'-')}</span></div>`).join('')}</div>`;
+}
+/* 节点抽屉：实体资料 + 最近 5 条事件 + 进入实体页 / 展开关系 */
+function openKgDrawer(id){
+  const e=KG.byId.get(id);
+  if(!e)return;
+  const recent=(e.events||[]).slice(0,5);
+  $('#kgDrawer').innerHTML=`
+    <div class="kg-dhead">${typeBadge(e.type)}<h3>${esc(e.name)}</h3><button class="kg-dclose" type="button" data-kgclose><svg class="ico sm"><use href="#i-x"/></svg></button></div>
+    <div class="kg-dbody">
+      ${(e.aliases||[]).length?`<div class="kg-dmeta">${state.lang==='en'?'Aliases':'别名'}：<b>${esc(e.aliases.join(' / '))}</b></div>`:''}
+      ${e.note?`<div class="kg-dmeta">${esc(e.note)}</div>`:''}
+      <div class="kg-dmeta">${state.lang==='en'?'Events':'事件'} <b>${e.eventCount||0}</b> · ${state.lang==='en'?'Relations':'关系'} <b>${e.relationCount||0}</b> · ${state.lang==='en'?'First seen':'首见'} <b>${esc(e.first_seen||'-')}</b></div>
+      <div class="evh">${state.lang==='en'?'Recent events':'最近事件'}</div>
+      <div class="kg-devents">${recent.length?recent.map(ev=>`<div class="ev"><div class="line"><div class="node"></div><div class="bar"></div></div><div class="body"><div class="who"><span style="font-family:var(--f-mono);color:var(--display)">${esc(ev.date)}</span><span class="pt">${esc(KIND_LABEL[ev.kind]||ev.kind)}</span></div><div class="zh">${esc(ev.title)}</div></div></div>`).join(''):`<div class="kg-dmeta">${state.lang==='en'?'No events yet':'还没有事件'}</div>`}</div>
+    </div>
+    <div class="kg-dactions">
+      <button type="button" class="pri" data-kgentity="${esc(e.id)}">${state.lang==='en'?'Open entity page':'进入实体页'}</button>
+      ${kgSel?`<button type="button" data-kgexpand="${esc(e.id)}">${state.lang==='en'?'Expand relations':'展开关系'}</button>`:''}
+    </div>`;
+  $('#kgDrawer').classList.add('on');
+}
+function closeKgDrawer(){$('#kgDrawer').classList.remove('on');}
+/* 图谱视图内的交互统一走事件委托 */
+$('#graphview').addEventListener('click',e=>{
+  const chip=e.target.closest('[data-kgtype]');
+  if(chip){const type=chip.dataset.kgtype;if(KG.visibleTypes.has(type))KG.visibleTypes.delete(type);else KG.visibleTypes.add(type);renderGraphView();return;}
+  const mode=e.target.closest('[data-kgmode]');
+  if(mode){KG.mode=mode.dataset.kgmode;document.querySelectorAll('#kgModes button').forEach(b=>b.classList.toggle('on',b.dataset.kgmode===KG.mode));renderGraphView();return;}
+  const fb=e.target.closest('[data-kgopen]');
+  if(fb){openKgDrawer(fb.dataset.kgopen);return;}
+  if(e.target.closest('[data-kgclose]')){closeKgDrawer();return;}
+  const ent=e.target.closest('[data-kgentity]');
+  if(ent){location.hash='#/entity/'+ent.dataset.kgentity;return;}
+  const ex=e.target.closest('[data-kgexpand]');
+  if(ex){KG.expandedId=KG.expandedId===ex.dataset.kgexpand?null:ex.dataset.kgexpand;applyKgHighlight();return;}
+});
+$('#kgSearch').addEventListener('input',()=>applyKgHighlight());
+
+/* ===== 实体页（hash 路由 #/entity/<id>，渲染进详情覆盖层） ===== */
+const entityPage={id:null,kind:'all'};
+function reportItemByDate(date){
+  return DATA.find(x=>!x._candidate&&x.type==='日报'&&x.aggregatedAt===date)||null;
+}
+function openEntityPage(id){
+  state.detailKind='entity';state.detailId=null;
+  $('#dbody').innerHTML=`<div class="emptywrap">${state.lang==='en'?'Loading knowledge base…':'正在读取知识库…'}</div>`;
+  $('#detail').classList.add('on');$('#detail').scrollTop=0;
+  loadKG().then(()=>{
+    if(entityPage.id!==id)entityPage.kind='all';
+    entityPage.id=id;
+    renderEntityPage(id);
+  }).catch(err=>{$('#dbody').innerHTML=`<div class="emptywrap">${esc((state.lang==='en'?'Knowledge base API unavailable: ':'知识库接口不可用：')+(err.message||err))}</div>`;});
+  updatePublicAgentContext();
+}
+/* 局部关系图：以当前实体为中心 1 跳，SVG 手绘（不依赖 D3），边标关系中文；⑪ 含同主线共现虚线 */
+function epRelationSvg(center,relRows,coRows=[]){
+  const nbs=[
+    ...relRows.map(r=>({id:r.from===center.id?r.to:r.from,kind:r.kind,dir:r.from===center.id?'out':'in',co:false})),
+    ...coRows.map(r=>({id:r.from===center.id?r.to:r.from,kind:'co',dir:null,co:true,storylines:r.storylines||[]})),
+  ];
+  const W=320,H=Math.max(230,120+nbs.length*26),cx=W/2,cy=H/2,R=Math.min(cx,cy)-56;
+  const pos=nbs.map((nb,i)=>{const a=-Math.PI/2+i*2*Math.PI/Math.max(nbs.length,1);return {...nb,x:cx+R*Math.cos(a),y:cy+R*Math.sin(a)};});
+  return `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
+    ${pos.map(p=>p.co
+      ?`<g><line x1="${cx}" y1="${cy}" x2="${p.x}" y2="${p.y}" stroke="var(--line-2)" stroke-dasharray="4 5" stroke-opacity=".5"/><text x="${(cx+p.x)/2}" y="${(cy+p.y)/2-5}" text-anchor="middle" style="font:8.5px var(--f-mono);fill:var(--muted);opacity:.7">${state.lang==='en'?'same storyline':'同主线'}</text><title>${esc((state.lang==='en'?'Same storyline: ':'同主线：')+p.storylines.join(' / '))}</title></g>`
+      :`<line x1="${cx}" y1="${cy}" x2="${p.x}" y2="${p.y}" stroke="var(--line-2)"/><text x="${(cx+p.x)/2}" y="${(cy+p.y)/2-5}" text-anchor="middle" style="font:8.5px var(--f-mono);fill:var(--muted)">${esc(REL_LABEL[p.kind]||p.kind)}${p.dir==='in'?' ←':' →'}</text>`).join('')}
+    ${pos.map(p=>{const ent=KG.byId.get(p.id);const color=KG_TYPE_COLOR[ent&&ent.type]||'#888780';
+      return `<g data-entity-id="${esc(p.id)}" style="cursor:pointer"><circle cx="${p.x}" cy="${p.y}" r="13" fill="${color}" fill-opacity=".88"/><text x="${p.x}" y="${p.y+26}" text-anchor="middle" style="font:10px var(--f-ui);fill:var(--secondary)">${esc(ent?ent.name:p.id)}</text></g>`;}).join('')}
+    <circle cx="${cx}" cy="${cy}" r="17" fill="${KG_TYPE_COLOR[center.type]||'#888780'}"/>
+    <text x="${cx}" y="${cy+32}" text-anchor="middle" style="font:600 11px var(--f-ui);fill:var(--display)">${esc(center.name)}</text>
+  </svg>`;
+}
+function renderEntityPage(id){
+  const e=KG.byId.get(id);
+  if(!e){$('#dbody').innerHTML=`<div class="emptywrap">${state.lang==='en'?'Entity not found in knowledge base':'知识库里没有这个实体（可能还没入库）'}</div>`;return;}
+  const events=e.events||[];
+  const kinds=[...new Set(events.map(ev=>ev.kind))];
+  const shown=entityPage.kind==='all'?events:events.filter(ev=>ev.kind===entityPage.kind);
+  const relRows=(KG.index.relations||[]).filter(r=>r.from===id||r.to===id);
+  const coRows=kgCooccurEdges().filter(r=>r.from===id||r.to===id); // ⑪ 同主线共现（前端推导）
+  const byReport=new Map();
+  events.forEach(ev=>{const rd=ev.report_date||ev.date;if(!byReport.has(rd))byReport.set(rd,[]);byReport.get(rd).push(ev);});
+  const reportRows=[...byReport.entries()].sort((a,b)=>String(b[0]).localeCompare(String(a[0])));
+  $('#dbody').innerHTML=`<div class="epage">
+    <div class="ep-crumb"><span data-nav="home">${esc(t('radar'))}</span> / <span data-nav="graph">${state.lang==='en'?'Knowledge graph':'知识图谱'}</span> / <b>${esc(e.name)}</b></div>
+    <div class="ep-head">
+      <div class="row1"><h2>${esc(e.name)}</h2>${typeBadge(e.type)}</div>
+      ${(e.aliases||[]).length?`<div class="ep-alias">${state.lang==='en'?'Aliases':'别名'}：${esc(e.aliases.join(' / '))}</div>`:''}
+      ${e.note?`<div class="ep-note">${esc(e.note)}</div>`:''}
+      <div class="ep-stats">${state.lang==='en'?'EVENTS':'事件'} ${e.eventCount||0} · ${state.lang==='en'?'RELATIONS':'关系'} ${e.relationCount||0} · ${state.lang==='en'?'LAST':'最近动态'} ${esc(e.lastEventDate||'-')} · ${state.lang==='en'?'FIRST SEEN':'首见'} ${esc(e.first_seen||'-')}</div>
+    </div>
+    <div class="ep-cols">
+      <div class="ep-timeline">
+        <div class="evh">${state.lang==='en'?'Event timeline':'事件时间线'}（${shown.length}）</div>
+        <div class="ep-kinds"><span class="kchip ${entityPage.kind==='all'?'on':''}" data-epkind="all">${esc(t('all'))}</span>${kinds.map(k=>`<span class="kchip ${entityPage.kind===k?'on':''}" data-epkind="${esc(k)}">${esc(KIND_LABEL[k]||k)}</span>`).join('')}</div>
+        ${shown.length?shown.map(ev=>{
+          const rep=reportItemByDate(ev.report_date||ev.date);
+          return `<div class="ev ep-ev"><div class="line"><div class="node"></div><div class="bar"></div></div><div class="body">
+            <div class="who"><span class="date">${esc(ev.date)}</span><span class="pt">${esc(KIND_LABEL[ev.kind]||ev.kind)}</span>${ev.category?`<span class="pt">${esc(cat8Label(ev.category))}</span>`:''}${ev.by?`<span>${esc(ev.by)}</span>`:''}</div>
+            <div class="zh">${esc(ev.title)}</div>
+            <div class="rep">${ev.source?`<a class="src-link" style="margin:0 8px 0 0;padding:3px 8px" href="${esc(ev.source)}" target="_blank" rel="noreferrer"><svg class="ico sm"><use href="#i-link"/></svg> ${state.lang==='en'?'Source':'来源'} ↗</a>`:''}${state.lang==='en'?'from daily ':'出自 '}${rep?`<span data-open="${rep.id}">${esc(ev.report_date||ev.date)} ${state.lang==='en'?'':'日报'}</span>`:esc(String(ev.report_date||ev.date)+(state.lang==='en'?'':' 日报'))}</div>
+          </div></div>`;}).join(''):`<div class="emptywrap" style="padding:30px 0">${state.lang==='en'?'No events under this filter':'该筛选下没有事件'}</div>`}
       </div>
-    </section>
-  </main>
+      <div class="ep-rel">
+        <div class="evh">${state.lang==='en'?'Local relations':'局部关系图'}（${relRows.length+coRows.length}）</div>
+        ${(relRows.length||coRows.length)?epRelationSvg(e,relRows,coRows):`<div class="kg-dmeta">${state.lang==='en'?'No relations yet':'还没有关系记录'}</div>`}
+        ${(relRows.length||coRows.length)?`<div class="hint">${state.lang==='en'?'Solid = semantic relation, dashed = same-storyline co-occurrence. Click a neighbor to open its page.':'实线=语义关系，虚线=同主线共现。点相邻节点跳到对方实体页。'}</div>`:''}
+      </div>
+    </div>
+    <div class="ep-reports">
+      <div class="evh">${state.lang==='en'?'Appears in dailies':'相关日报条目'}（${reportRows.length}）</div>
+      ${reportRows.length?reportRows.map(([date,list])=>{
+        const rep=reportItemByDate(date);
+        return `<div class="ep-repgrp"><span class="d">${esc(date)}</span><span style="flex:1">${list.map(ev=>esc(ev.title)).join('；')}</span>${rep?`<span class="lnk" data-open="${rep.id}" style="white-space:nowrap">${state.lang==='en'?'Open daily →':'看当天日报 →'}</span>`:''}</div>`;
+      }).join(''):`<div class="kg-dmeta">${state.lang==='en'?'None yet':'还没有回链的日报'}</div>`}
+    </div>
+  </div>`;
+}
 
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+/* ===== 主线式日报 / 周报渲染 ===== */
+function ensureKGThenRerender(d,renderer){
+  // 实体名解析依赖知识库；首次渲染时异步补载，载入后原地重渲染一次
+  if(KG.index||KG.error)return;
+  loadKG().then(()=>{if(KG.index&&state.detailKind==='item'&&DATA[state.detailId]===d)renderer(d);}).catch(()=>{});
+}
+const slSourceLinks=urls=>(urls||[]).slice(0,3).map((u,i)=>`<a href="${esc(u)}" target="_blank" rel="noreferrer">${state.lang==='en'?'src':'来源'}${i+1} ↗</a>`).join('');
+function renderStorylineDaily(d){
+  const catChips=cats=>(cats||[]).map(c=>`<span class="category-chip">${esc(cat8Label(c))}</span>`).join('');
+  const chainHtml=chain=>chain.map((node,i)=>{
+    const arrow=i?`<span class="chain-arrow"><span class="ar">→</span>${esc(RELPREV_LABEL[node.relPrev]||node.relPrev||'')}</span>`:'';
+    return `${arrow}<span class="chain-node"><span class="top"><span class="kind-chip">${esc(KIND_LABEL[node.kind]||node.kind)}</span>${node.entity?entityLinkHtml(node.entity):''}${node.by?`<span class="by">by ${esc(node.by)}</span>`:''}</span><span class="ct2">${esc(node.title)}</span>${(node.sources||[]).length?`<span class="srcs">${slSourceLinks(node.sources)}</span>`:''}</span>`;
+  }).join('');
+  const gd=d.graphDelta;
+  $('#dbody').innerHTML=`<div class="rwrap" style="grid-template-columns:1fr"><div class="rmain">
+    <div class="rmeta">${esc(d.src||'')} · ${esc(d.aggregatedAt||d.time||'')}${d.unverified?` · <span style="color:var(--warning)">${state.lang==='en'?'auto digest · unverified':'自动聚合 · 未核实'}</span>`:''}</div>
+    <div class="judg">${esc(d.title||'')}</div>
+    ${d.sub?`<div class="rsub">${esc(d.sub)}</div>`:''}
+    ${d.qualityNote?`<div class="sl-quality">⚠ ${esc(d.qualityNote)}</div>`:''}
+    <div class="sl-summary"><div class="h">${state.lang==='en'?'Today at a glance':'今日总结'}</div>${d.summary?`<p>${esc(d.summary)}</p>`:''}${(d.bullets||[]).length?`<ol>${d.bullets.map(b=>`<li>${esc(b)}</li>`).join('')}</ol>`:''}</div>
+    <div class="sl-minigraph" id="slMiniGraph" hidden><div class="h">${state.lang==='en'?'Today in the graph':'今日图谱'}</div><div class="mg-body"></div></div>
+    ${(d.storylines||[]).map((s,i)=>`<div class="sl-block" data-sl-id="${esc(s.id||String(i))}">
+      <div class="bh"><h3>${state.lang==='en'?'Storyline':'主线'} ${i+1} · ${esc(s.title)}</h3>${s.isNew?`<span class="sl-new">${state.lang==='en'?'NEW':'新开线'}</span>`:''}${catChips(s.categories)}</div>
+      <div class="chainflow">${chainHtml(s.chain||[])}</div>
+      ${s.narrative?`<p class="sl-narrative">${esc(s.narrative)}</p>`:''}
+      ${s.carryOver?`<div class="sl-carry">${state.lang==='en'?'Previously':'承前'}：${esc(s.carryOver)}</div>`:''}
+    </div>`).join('')}
+    ${(d.columns||[]).map(col=>{
+      const colTitles={ai_finance:{zh:'金融 AI 今日',en:'Finance AI today'},gh_trending:{zh:'GitHub trending 今日',en:'GitHub trending today'},papers:{zh:'论文趋势',en:'Paper trends'}};
+      const fallback=colTitles[col.key];
+      const title=col.title||(fallback?(state.lang==='en'?fallback.en:fallback.zh):col.key);
+      const entries=Array.isArray(col.entries)?col.entries:[];
+      return `<div class="rsec sl-scattered"><h3>${esc(title)}</h3>${entries.length?entries.map(x=>`<div class="row">${x.entity?entityLinkHtml(x.entity):''}<span style="flex:1">${esc(x.note)}</span>${slSourceLinks(x.sources)}</div>`).join(''):`<div class="catsec-empty">${state.lang==='en'?'No valid material in this lane today':'今日该域无有效素材'}</div>`}</div>`;
+    }).join('')}
+    ${(d.scattered||[]).length?`<div class="rsec sl-scattered"><h3>${state.lang==='en'?'Scattered signals':'零散信号'}</h3>${d.scattered.map(x=>`<div class="row"><span class="category-chip">${esc(cat8Label(x.category))}</span><span style="flex:1">${esc(x.note)}</span>${slSourceLinks(x.sources)}</div>`).join('')}</div>`:''}
+    ${gd?`<div class="sl-delta">${state.lang==='en'?'Added to knowledge base today':'本日入库'}：${state.lang==='en'?'entities':'实体'} +${gd.entities||0} · ${state.lang==='en'?'events':'事件'} +${gd.events||0} · ${state.lang==='en'?'relations':'关系'} +${gd.relations||0} · ${state.lang==='en'?'storylines':'主线'} +${gd.storylines||0}</div>`:''}
+  </div></div>`;
+  renderDailyMiniGraph(d);
+  ensureKGThenRerender(d,renderStorylineDaily);
+}
+/* 今日图谱小节：当天有事件的实体按主线聚簇的简版 SVG；数据不足（<2 实体）就整节跳过 */
+function renderDailyMiniGraph(d){
+  const date=d.aggregatedAt;
+  if(!date)return;
+  loadKG().then(()=>{
+    const box=$('#slMiniGraph');
+    if(!box||!KG.index||state.detailKind!=='item'||DATA[state.detailId]!==d)return;
+    const todays=(KG.index.entities||[]).filter(e=>(e.events||[]).some(ev=>ev.date===date));
+    if(todays.length<2)return;
+    const clusters=new Map();
+    todays.forEach(e=>{
+      const ev=(e.events||[]).find(ev=>ev.date===date&&ev.storyline);
+      const key=ev?ev.storyline:'_scatter';
+      if(!clusters.has(key))clusters.set(key,[]);
+      clusters.get(key).push(e);
+    });
+    const keys=[...clusters.keys()];
+    const W=Math.max(360,keys.length*230),H=210;
+    const posById=new Map();
+    let svgNodes='',svgTitles='';
+    keys.forEach((key,ci)=>{
+      const group=clusters.get(key);
+      const cx=(ci+.5)*W/keys.length,cy=H/2+8,R=group.length>1?46:0;
+      const sl=(KG.index.storylines||[]).find(s=>s.id===key);
+      const label=key==='_scatter'?(state.lang==='en'?'Scattered':'零散信号'):(sl?sl.title:key);
+      svgTitles+=`<text x="${cx}" y="22" text-anchor="middle" data-sl-jump="${esc(key)}" style="font:9px var(--f-mono);fill:var(--secondary);cursor:pointer">${esc(label)}</text>`;
+      group.forEach((e,i)=>{
+        const a=-Math.PI/2+i*2*Math.PI/Math.max(group.length,1);
+        const x=cx+R*Math.cos(a),y=cy+R*Math.sin(a);
+        posById.set(e.id,{x,y});
+        const isNew=e.first_seen===date;
+        svgNodes+=`<g data-entity-id="${esc(e.id)}" style="cursor:pointer"><circle cx="${x}" cy="${y}" r="11" fill="${KG_TYPE_COLOR[e.type]||'#888780'}" fill-opacity=".88"/><text x="${x}" y="${y+24}" text-anchor="middle" style="font:9.5px var(--f-ui);fill:var(--secondary)">${esc(e.name)}</text>${isNew?`<text x="${x+13}" y="${y-9}" style="font:8px var(--f-mono);fill:var(--accent-text)">${state.lang==='en'?'NEW':'新'}</text>`:''}</g>`;
+      });
+    });
+    let svgEdges='';
+    (KG.index.relations||[]).filter(r=>r.date===date&&posById.has(r.from)&&posById.has(r.to)).forEach(r=>{
+      const a=posById.get(r.from),b=posById.get(r.to);
+      svgEdges+=`<line x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}" stroke="var(--line-2)"/><text x="${(a.x+b.x)/2}" y="${(a.y+b.y)/2-4}" text-anchor="middle" style="font:8px var(--f-mono);fill:var(--muted)">${esc(REL_LABEL[r.kind]||r.kind)}</text>`;
+    });
+    box.querySelector('.mg-body').innerHTML=`<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">${svgEdges}${svgNodes}${svgTitles}</svg>`;
+    box.hidden=false;
+  }).catch(()=>{});
+}
+function renderStorylineWeekly(d){
+  const wk=d.weekly||{};
+  const trendMark={'加速':'↑ 加速','平稳':'→ 平稳','降温':'↓ 降温'};
+  $('#dbody').innerHTML=`<div class="rwrap" style="grid-template-columns:1fr"><div class="rmain">
+    <div class="rmeta">${esc(d.src||'')} · ${esc(d.aggregatedAt||d.time||'')}${d.unverified?` · <span style="color:var(--warning)">${state.lang==='en'?'auto digest · unverified':'自动聚合 · 未核实'}</span>`:''}</div>
+    <div class="judg">${esc(d.title||'')}</div>
+    ${d.summary?`<div class="sl-summary"><div class="h">${state.lang==='en'?'This week in one line':'本周一句话'}</div><p style="margin:0">${esc(d.summary)}</p></div>`:''}
+    ${(wk.lines||[]).map(line=>`<div class="wk-line">
+      <div class="bh"><h3>${esc(line.title)}</h3>${line.trend?`<span class="wk-trend">${esc(trendMark[line.trend]||line.trend)}</span>`:''}</div>
+      <div class="wk-axis">${(line.weekEvents||[]).map(ev=>`<div class="wk-evt"><div class="d">${esc(String(ev.date||'').slice(5))} · ${esc(KIND_LABEL[ev.kind]||ev.kind)}${ev.entity?` · ${entityLinkHtml(entityNameOf(ev.entity))}`:''}</div><div class="t">${esc(ev.title)}</div></div>`).join('')}</div>
+      ${line.judgment?`<p class="wk-judg">${esc(line.judgment)}</p>`:''}
+      <span class="wk-total">${state.lang==='en'?'total events on this line':'本线累计'} ${line.totalEvents||0}</span>
+    </div>`).join('')}
+    ${(wk.silentLines||[]).length?`<div class="rsec wk-rows"><h3>${state.lang==='en'?'Silent storylines':'本周静默主线'}</h3>${wk.silentLines.map(l=>`<div class="row">${esc(l.title)}<span class="m">⏸ ${state.lang==='en'?'no new evidence this week':'本周无新证据'}</span></div>`).join('')}</div>`:''}
+    ${(wk.trendLines||[]).length?`<div class="rsec wk-rows"><h3>${state.lang==='en'?'Trend watermarks':'趋势线水位'}</h3>${wk.trendLines.map(l=>`<div class="row">${entityLinkHtml(entityNameOf(l.entity))}<span class="m">${state.lang==='en'?'this week':'本周'} +${l.weekCount||0} · ${state.lang==='en'?'streak':'连续'} ${l.streakWeeks||0} ${state.lang==='en'?'wks':'周'}</span></div>`).join('')}</div>`:''}
+    ${(wk.topEntities||[]).length?`<div class="rsec wk-rows"><h3>${state.lang==='en'?'Top entities this week':'实体动态榜'}（Top ${wk.topEntities.length}）</h3>${wk.topEntities.map((te,i)=>`<div class="row"><span style="font-family:var(--f-mono);color:var(--muted)">${i+1}</span>${entityLinkHtml(te.name)}<span class="kind-chip">${esc(KG_TYPE_LABEL[te.type]||te.type)}</span><span class="m">${te.count||0} ${state.lang==='en'?'events':'事件'}（${esc((te.kinds||[]).map(k=>KIND_LABEL[k]||k).join('/'))}）</span></div>`).join('')}</div>`:''}
+    ${wk.stats?`<div class="sl-delta">${state.lang==='en'?'Events logged this week':'本周入库事件'}：${wk.stats.weekEvents||0}</div>`:''}
+  </div></div>`;
+  ensureKGThenRerender(d,renderStorylineWeekly);
+}
 
-  <script src="/app.js" type="module"></script>
+/* ===== hash 路由：#/entity/<id> ===== */
+function handleHashRoute(){
+  const m=location.hash.match(/^#\/entity\/([A-Za-z0-9_-]+)$/);
+  if(m){openEntityPage(m[1]);return;}
+  if(state.detailKind==='entity')closeDetail();
+}
+window.addEventListener('hashchange',handleHashRoute);
+
+/* ===== public Agent ===== */
+function publicAgentContextIds(){
+  if(state.detailId!==null && DATA[state.detailId])return [state.detailId];
+  return [...document.querySelectorAll('#grid .scard')].map(card=>Number(card.dataset.id)).filter(Number.isInteger);
+}
+function publicAgentSelection(){
+  const ids=publicAgentContextIds(),rows=ids.map(id=>DATA[id]).filter(Boolean);
+  return {
+    ids,
+    candidateIds:rows.filter(row=>row._candidate&&row.candidateId).map(row=>row.candidateId),
+    liveIds:rows.filter(row=>!row._candidate&&Number.isInteger(row._liveId)).map(row=>row._liveId)
+  };
+}
+function updatePublicAgentContext(){
+  // ⑫ Agent 上下文改为全站三层（候选全量 + 日报周报 + 知识库），不再跟随页面筛选；对话也不因切筛选清空
+  const detail=state.detailId!==null&&DATA[state.detailId];
+  publicAgent.contextKey='site';
+  const candidateCount=TODAY_INBOX&&TODAY_INBOX.exists?TODAY_INBOX.count:DATA.filter(d=>d._candidate).length;
+  const reportCount=DATA.filter(d=>!d._candidate&&(d.type==='日报'||d.type==='周报')).length;
+  const entityCount=KG.loaded?(KG.index&&KG.index.stats?Number(KG.index.stats.entities||0):0):null;
+  if(entityCount===null&&!KG.error)loadKG().then(()=>updatePublicAgentContext()).catch(()=>{});
+  const base=state.lang==='en'
+    ?`Site-wide context: ${candidateCount} candidates · ${reportCount} reports · ${entityCount===null?'…':entityCount} entities`
+    :`全站上下文：候选 ${candidateCount} 条 · 日报/周报 ${reportCount} 期 · 知识库实体 ${entityCount===null?'…':entityCount} 个`;
+  $('#publicAgentContext').textContent=detail?`${base}${state.lang==='en'?` · Focus: ${detail.title}`:` · 重点：${detail.title}`}`:base;
+  const disabled=publicAgent.busy||(candidateCount+reportCount===0&&!KG.index);
+  $('#publicAgentInput').disabled=disabled;
+  $('#publicAgentSend').disabled=disabled;
+  document.querySelectorAll('[data-public-agent-prompt]').forEach(button=>button.disabled=disabled);
+  if(!publicAgent.messages.length&&!publicAgent.busy)$('#publicAgentLog').innerHTML=publicAgentEmptyHtml();
+}
+function publicAgentUrl(source){
+  if(!source||!source.url)return '';
+  try{const url=new URL(source.url,location.href);return /^https?:$/.test(url.protocol)?url.href:'';}catch{return '';}
+}
+function publicAgentAnswerHtml(text,sources){
+  const sourceMap=new Map((sources||[]).map(source=>[source.id,source]));
+  return esc(String(text||'').replace(/[—–]/g,'-')).replace(/\[S(\d+)\]/g,(match,n)=>{
+    const id='S'+n,source=sourceMap.get(id),url=publicAgentUrl(source);
+    return url?`<a class="radar-agent-cite" href="${esc(url)}" target="_blank" rel="noreferrer" title="${esc(source.title)}">${id}</a>`:`<span class="radar-agent-cite">${id}</span>`;
+  }).replace(/\n/g,'<br>');
+}
+function publicAgentSourcesHtml(sources){
+  const rows=(sources||[]).filter(source=>publicAgentUrl(source));
+  if(!rows.length)return '';
+  return `<div class="radar-agent-sources"><div class="sh">${esc(t('thisRoundSources'))}</div>${rows.map(source=>`<a class="radar-agent-source" href="${esc(publicAgentUrl(source))}" target="_blank" rel="noreferrer"><span class="sid">${esc(source.id)}</span><span>${esc(source.title)}</span></a>`).join('')}</div>`;
+}
+function publicAgentEmptyHtml(){
+  // ⑫ 全站上下文：不再区分"当前页面"，直接说明覆盖范围
+  if(state.lang==='en')return '<div class="radar-agent-empty"><div><strong>Ask about the whole radar</strong>I can see all live candidates, published dailies/weeklies, and the knowledge base — not just the current filter. Answers cite original sources.</div></div>';
+  return '<div class="radar-agent-empty"><div><strong>问整站雷达</strong>我掌握全部现场候选、已发布日报/周报和知识库，不受你当前筛选限制；回答会标回原始来源。</div></div>';
+}
+function renderPublicAgent(){
+  const log=$('#publicAgentLog');
+  if(!publicAgent.messages.length&&!publicAgent.busy){
+    log.innerHTML=publicAgentEmptyHtml();
+  }else{
+    log.innerHTML=publicAgent.messages.map(message=>{
+      if(message.role==='user')return `<div class="radar-agent-msg is-user"><div class="radar-agent-bubble">${esc(message.content).replace(/\n/g,'<br>')}</div></div>`;
+      if(message.role==='error')return `<div class="radar-agent-msg is-error"><div class="radar-agent-label">${state.lang==='en'?'No answer yet':'暂时没有答上来'}</div><div class="radar-agent-bubble">${esc(message.content)}</div></div>`;
+      return `<div class="radar-agent-msg is-assistant"><div class="radar-agent-label">${esc(t('agentTitle'))}${message.model?` · ${esc(message.model)}`:''}</div><div class="radar-agent-bubble"><div class="radar-agent-answer">${publicAgentAnswerHtml(message.content,message.sources)}</div>${publicAgentSourcesHtml(message.sources)}</div></div>`;
+    }).join('')+(publicAgent.busy?`<div class="radar-agent-loading" aria-label="Agent"><i></i><i></i><i></i><span>${esc(t('agentChecking'))}</span></div>`:'');
+  }
+  requestAnimationFrame(()=>{log.scrollTop=log.scrollHeight;});
+  updatePublicAgentContext();
+}
+function setPublicAgentOpen(open){
+  publicAgent.open=open;
+  $('#publicAgentDrawer').classList.toggle('is-open',open);
+  $('#publicAgentBackdrop').classList.toggle('is-open',open);
+  $('#publicAgentDrawer').setAttribute('aria-hidden',String(!open));
+  $('#publicAgentLaunch').setAttribute('aria-expanded',String(open));
+  if(open){updatePublicAgentContext();loadAgentModels();setTimeout(()=>$('#publicAgentInput').focus(),0);}
+  else $('#publicAgentLaunch').focus();
+}
+const AGENT_MODEL_KEY='radar.agentModel';
+let agentModelsLoaded=false;
+function setAgentModelOptions(ids){
+  const select=$('#publicAgentModel');
+  if(!select)return;
+  const saved=localStorage.getItem(AGENT_MODEL_KEY)||'';
+  const unique=[...new Set(ids.filter(Boolean))].sort();
+  if(saved&&!unique.includes(saved))unique.unshift(saved);
+  select.innerHTML=`<option value="">${state.lang==='en'?'Default':'默认'} · deepseek/deepseek-v4-pro</option>`+unique.map(id=>`<option value="${esc(id)}">${esc(id)}</option>`).join('');
+  select.value=saved&&unique.includes(saved)?saved:'';
+}
+async function loadAgentModels(){
+  if(agentModelsLoaded)return;
+  agentModelsLoaded=true;
+  try{
+    const response=await fetch('https://openrouter.ai/api/v1/models');
+    const data=await response.json();
+    setAgentModelOptions((data.data||[]).map(m=>m.id));
+  }catch(e){agentModelsLoaded=false;/* 拉取失败，下次打开面板重试 */}
+}
+function initAgentModelInput(){
+  const select=$('#publicAgentModel');
+  if(!select)return;
+  setAgentModelOptions([]);
+  select.addEventListener('change',()=>localStorage.setItem(AGENT_MODEL_KEY,select.value.trim()));
+}
+initAgentModelInput();
+async function sendPublicAgent(question){
+  const content=String(question||'').trim(),selection=publicAgentSelection();
+  if(!content||publicAgent.busy)return;
+  publicAgent.messages.push({role:'user',content});
+  publicAgent.busy=true;
+  $('#publicAgentInput').value='';
+  renderPublicAgent();
+  try{
+    const messages=publicAgent.messages.filter(message=>message.role==='user'||message.role==='assistant').slice(-8).map(({role,content})=>({role,content}));
+    const agentModel=(($('#publicAgentModel')||{}).value||'').trim();
+    // ⑫ 首选全站上下文接口（本机 loopback）；当前页面正看的候选作为"重点层"传 focusCandidateIds
+    const payload={scope:'site',focusCandidateIds:selection.candidateIds,messages,language:state.lang};
+    if(agentModel)payload.model=agentModel;
+    let response=await fetch('/api/today-agent',{method:'POST',headers:{'Content-Type':'application/json','X-Radar-Local':'1'},body:JSON.stringify(payload)});
+    if(response.status===404){
+      // 远程部署没有本机接口：回退线上已发布内容问答
+      const fallbackPayload={itemIds:selection.liveIds,messages,language:state.lang};
+      if(agentModel)fallbackPayload.model=agentModel;
+      response=await fetch('/api/public-agent',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(fallbackPayload)});
+    }
+    const result=await response.json().catch(()=>({}));
+    if(!response.ok)throw new Error(result.error||`请求失败 (${response.status})`);
+    publicAgent.messages.push({role:'assistant',content:result.answer||t('agentNoAnswer'),sources:result.sources||[],model:result.model||''});
+  }catch(error){
+    publicAgent.messages.push({role:'error',content:error.message||t('agentUnavailable')});
+  }finally{
+    publicAgent.busy=false;
+    renderPublicAgent();
+    $('#publicAgentInput').focus();
+  }
+}
+
+function applyStaticLanguage(){
+  document.documentElement.lang=state.lang==='en'?'en':'zh-CN';
+  document.title=state.lang==='en'?'AI Ideas Radar · Prototype':'AI 思潮雷达 · 原型';
+  document.querySelector('.brand .s').textContent=t('brandSub');
+  document.querySelector('[data-view="radar"]').textContent=t('radar');
+  $('#navmine').textContent=t('mine');
+  $('#q').placeholder=t('search');
+  $('#loginst').textContent=state.loggedIn?t('loggedIn'):t('loggedOut');
+  $('#loginbtn').textContent=state.loggedIn?t('logout'):t('login');
+  $('#subbtn').innerHTML=`<svg class="ico sm"><use href="#i-mail"/></svg>${esc(t('subscribe'))}`;
+  document.querySelector('.side .grp').textContent=t('type');
+  $('#viewLabel').textContent=state.lang==='en'?'Views':'视图';
+  $('#catLabel').textContent=state.lang==='en'?'Categories':'八分类';
+  const timeLabels={24:t('past24'),168:t('past7'),720:t('past30'),0:t('allTime')};
+  document.querySelectorAll('#timemenu [data-tw]').forEach(item=>{item.textContent=timeLabels[item.dataset.tw];});
+  $('#timelabel').textContent=timeLabels[state.tw]||t('past7');
+  $('#backbtn').innerHTML=`<svg class="ico sm"><use href="#i-chev-l"/></svg> ${esc(t('back'))}`;
+  $('#publicAgentLaunch').innerHTML=`<svg class="ico sm" aria-hidden="true"><use href="#i-agent"/></svg>${esc(t('askAgent'))}`;
+  $('#publicAgentTitle').textContent=t('agentTitle');
+  $('#publicAgentClose').setAttribute('aria-label',state.lang==='en'?'Close Agent':'关闭 Agent');
+  const quick=[
+    {text:t('discussing'),prompt:state.lang==='en'?'What is everyone discussing in the current window?':'今天大家在讨论什么？'},
+    {text:t('openSourceOpportunity'),prompt:state.lang==='en'?'Which discussions point to worthwhile AI open-source directions? Explain the evidence and what still needs verification.':'从今天这些讨论里，哪些值得继续做成 AI 开源方向？请说明依据和待核实点。'},
+    {text:t('consensus'),prompt:state.lang==='en'?'What consensus or disagreement appears across X, Reddit, and YouTube? State clearly when a platform has no data.':'X、Reddit、YouTube 今天有哪些共识与分歧？如果某个平台缺数据，请明确说明。'},
+  ];
+  document.querySelectorAll('[data-public-agent-prompt]').forEach((button,index)=>{if(quick[index]){button.textContent=quick[index].text;button.dataset.publicAgentPrompt=quick[index].prompt;}});
+  document.querySelector('.radar-agent-compose label').textContent=t('continueAsk');
+  $('#publicAgentInput').placeholder=t('agentPlaceholder');
+  $('#publicAgentSend').textContent=t('send');
+  document.querySelector('.radar-agent-hint').textContent=t('agentHint');
+  const footer=$('#pageFooter');if(footer)footer.textContent=t('footer');
+  document.querySelectorAll('#langswitch [data-lang]').forEach(button=>button.classList.toggle('on',button.dataset.lang===state.lang));
+}
+function setLanguage(language){
+  if(!['zh','en'].includes(language))return;
+  state.lang=language;
+  localStorage.setItem('radar.language',language);
+  DATA.filter(row=>row._candidate).forEach(localizeCandidateRow);
+  publicAgent.messages=[];
+  publicAgent.contextKey='';
+  applyStaticLanguage();
+  if(DATA.length){initSidebar();renderLivebar();renderCategoryBar();syncSortTabs();render();}
+  if(state.detailId!==null&&DATA[state.detailId])openDetail(state.detailId);
+  renderPublicAgent();
+}
+
+/* events */
+$('#langswitch').addEventListener('click',event=>{const button=event.target.closest('[data-lang]');if(button)setLanguage(button.dataset.lang);});
+$('#typelist').addEventListener('click',e=>{const it=e.target.closest('.fitem');if(!it)return;
+  document.querySelectorAll('#typelist .fitem').forEach(x=>x.classList.remove('on'));it.classList.add('on');state.type=it.dataset.type;state.sort=state.type==='现场'?'跨平台':'最新';
+  setGraphMode(false);syncSortTabs();render();});
+/* 视图组：进知识图谱整屏视图；八分类组：回卡片流并按分类筛选 */
+$('#viewlist').addEventListener('click',e=>{const it=e.target.closest('[data-viewmode]');if(!it)return;if(state.view!=='radar')setView('radar');setGraphMode(true);});
+$('#catlist').addEventListener('click',e=>{const it=e.target.closest('[data-cat8]');if(!it)return;
+  state.cat8=it.dataset.cat8;
+  if(state.view!=='radar')setView('radar');
+  // 八分类是现场流的筛选维度：点分类回卡片流并切到"现场"（有候选时）
+  if(DATA.some(d=>d.type==='现场')&&state.type!=='现场'){state.type='现场';state.sort='跨平台';initSidebar();syncSortTabs();}
+  setGraphMode(false);render();});
+$('#categorybar').addEventListener('click',e=>{const button=e.target.closest('[data-sgroup]');if(!button)return;state.sourceFilter=button.dataset.sgroup;render();});
+$('#sorttabs').addEventListener('click',e=>{const s=e.target.closest('span');if(!s)return;s.parentNode.querySelectorAll('span').forEach(x=>x.classList.remove('on'));s.classList.add('on');if(s.dataset.sort)state.sort=s.dataset.sort;if(s.dataset.mine)state.mineTab=s.dataset.mine;render();});
+$('#q').addEventListener('input',e=>{state.q=e.target.value.trim();if(state.view!=='radar')setView('radar');else{setGraphMode(false);render();}});
+$('#viewtog').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;document.querySelectorAll('#viewtog button').forEach(x=>x.classList.remove('on'));b.classList.add('on');state.gridview=b.dataset.v;render();});
+/* time menu */
+$('#timesel').addEventListener('click',()=>{$('#timemenu').hidden=!$('#timemenu').hidden;});
+$('#timemenu').addEventListener('click',e=>{const it=e.target.closest('div[data-tw]');if(!it)return;
+  document.querySelectorAll('#timemenu div').forEach(x=>x.classList.remove('on'));it.classList.add('on');
+  state.tw=+it.dataset.tw;$('#timelabel').textContent=it.textContent;$('#timemenu').hidden=true;render();});
+document.addEventListener('click',e=>{if(!e.target.closest('#timesel')&&!e.target.closest('#timemenu'))$('#timemenu').hidden=true;});
+/* grid: like / bookmark / open detail */
+grid.addEventListener('click',e=>{
+  const lk=e.target.closest('[data-like]'), bm=e.target.closest('[data-bm]');
+  if(lk){if(!state.loggedIn){openModal('loginModal');return;}const k=lk.dataset.like;liked[k]=!liked[k];toast(liked[k]?'已点赞':'已取消点赞');render();return;}
+  if(bm){if(!state.loggedIn){openModal('loginModal');return;}const k=bm.dataset.bm;marked[k]=!marked[k];toast(marked[k]?'已收藏 · 去"我的"看':'已取消收藏');render();return;}
+  if(e.target.closest('a[href]'))return;
+  /* 分类下钻分区里的交互：日报回链 / 实体链接 */
+  const en=e.target.closest('[data-entity-name]');if(en){gotoEntityByName(en.dataset.entityName);return;}
+  const op=e.target.closest('[data-open]');if(op){openDetail(+op.dataset.open);return;}
+  const card=e.target.closest('.scard');if(card)openDetail(+card.dataset.id);
+});
+/* detail nav */
+$('#backbtn').addEventListener('click',closeDetail);
+$('#dbody').addEventListener('click',e=>{const r=e.target.closest('[data-report]'),o=e.target.closest('[data-open]'),a=e.target.closest('[data-analyze-candidate]');
+  if(r){const rep=DATA.find(x=>x.type==='日报');if(rep)openDetail(rep.id);return;}
+  if(o){openDetail(+o.dataset.open);return;}
+  if(a){setPublicAgentOpen(true);return;}
+  /* P2：实体页 / 主线式报告里的交互 */
+  const nav=e.target.closest('[data-nav]');
+  if(nav){const target=nav.dataset.nav;closeDetail();setView('radar');if(target==='graph')setGraphMode(true);return;}
+  const kind=e.target.closest('[data-epkind]');
+  if(kind&&entityPage.id){entityPage.kind=kind.dataset.epkind;renderEntityPage(entityPage.id);return;}
+  const nb=e.target.closest('[data-entity-id]');
+  if(nb){location.hash='#/entity/'+nb.dataset.entityId;return;}
+  const en=e.target.closest('[data-entity-name]');
+  if(en){gotoEntityByName(en.dataset.entityName);return;}
+  const jump=e.target.closest('[data-sl-jump]');
+  if(jump){const block=$('#dbody').querySelector(`.sl-block[data-sl-id="${CSS.escape(jump.dataset.slJump)}"]`);if(block)block.scrollIntoView({behavior:'smooth',block:'start'});return;}
+});
+$('#brand').addEventListener('click',()=>{closeDetail();setView('radar');});
+document.querySelector('.topnav').addEventListener('click',e=>{const a=e.target.closest('a[data-view]');if(a){closeDetail();setView(a.dataset.view);}});
+/* login / sub */
+$('#loginbtn').addEventListener('click',()=>{if(state.loggedIn){state.loggedIn=false;$('#loginbtn').textContent=t('login');$('#loginst').textContent=t('loggedOut');$('#navmine').style.display='none';if(state.view==='mine')setView('radar');toast(state.lang==='en'?'Signed out':'已退出');}else openModal('loginModal');});
+$('#subbtn').addEventListener('click',()=>openModal('subModal'));
+$('#doLogin').addEventListener('click',()=>{state.loggedIn=true;$('#loginbtn').textContent=t('logout');$('#loginst').textContent=t('loggedIn');$('#navmine').style.display='';closeModals();toast(state.lang==='en'?'Signed in (demo)':'已登录（演示）· 现在能点赞 / 收藏了');});
+$('#doSub').addEventListener('click',()=>{closeModals();toast(state.lang==='en'?'Subscribed (demo)':'订阅成功（演示）· 每天给你发日报');});
+document.querySelectorAll('.overlay').forEach(o=>o.addEventListener('click',e=>{if(e.target===o||e.target.closest('[data-close]'))closeModals();}));
+$('#publicAgentLaunch').addEventListener('click',()=>setPublicAgentOpen(true));
+$('#publicAgentClose').addEventListener('click',()=>setPublicAgentOpen(false));
+$('#publicAgentBackdrop').addEventListener('click',()=>setPublicAgentOpen(false));
+$('#publicAgentForm').addEventListener('submit',e=>{e.preventDefault();sendPublicAgent($('#publicAgentInput').value);});
+$('#publicAgentInput').addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendPublicAgent(e.currentTarget.value);}});
+document.querySelectorAll('[data-public-agent-prompt]').forEach(button=>button.addEventListener('click',()=>sendPublicAgent(button.dataset.publicAgentPrompt)));
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'&&publicAgent.open){e.preventDefault();setPublicAgentOpen(false);return;}
+  if(e.key==='Tab'&&publicAgent.open){
+    const focusable=[...$('#publicAgentDrawer').querySelectorAll('button:not([disabled]),textarea:not([disabled]),a[href]')];
+    if(!focusable.length)return;
+    const first=focusable[0],last=focusable[focusable.length-1];
+    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+  }
+});
+
+/* 动态计数 + 侧栏两组（视图 / 八分类）——P2 起旧"主题"筛选废弃 */
+const TYPE_ICON={全部:'i-all',现场:'i-agent',消息:'i-chip',日报:'i-list',周报:'i-bench'};
+function renderSideNav(){
+  // 视图组：知识图谱入口
+  $('#viewlist').innerHTML=`<div class="fitem ${state.mode==='graph'?'on':''}" data-viewmode="graph"><span class="ic"><svg class="ico sm"><use href="#i-graph"/></svg></span>${state.lang==='en'?'Knowledge graph':'知识图谱'}</div>`;
+  // 八分类计数口径 = 现场候选 + 日报主线/零散信号 + 知识库事件（三层合计，同一事件可能重复计，tooltip 注明）。
+  // 只数候选会把 new_thought 这类"只由合成层打标"的分类永远数成 0。
+  const candidates=DATA.filter(d=>d._candidate);
+  const counts={};
+  const add=c=>{if(c)counts[c]=(counts[c]||0)+1;};
+  candidates.forEach(d=>(d.categories||[]).forEach(add));
+  DATA.forEach(d=>{
+    if(d.format!=='storyline')return;
+    (d.storylines||[]).forEach(s=>(s.categories||[]).forEach(add));
+    (d.scattered||[]).forEach(x=>add(x.category));
+  });
+  if(KG.index)(KG.index.entities||[]).forEach(e=>(e.events||[]).forEach(ev=>add(ev.category)));
+  const scopeTip=state.lang==='en'
+    ?'Count = live candidates + daily storylines/scattered + knowledge events (layers may overlap)'
+    :'计数口径：现场候选 + 日报主线/零散信号 + 知识库事件（三层合计，可能有重叠）';
+  $('#catlist').innerHTML=CAT8.map(c=>{
+    const n=c.slug==='ai'?candidates.length:(counts[c.slug]||0);
+    const on=state.mode!=='graph'&&state.cat8===c.slug;
+    return `<div class="fitem ${on?'on':''}" data-cat8="${c.slug}" title="${esc(c.slug==='ai'?(state.lang==='en'?'All live candidates':'现场候选总数'):scopeTip)}"><span class="ic"><svg class="ico sm"><use href="#${c.ic}"/></svg></span>${esc(cat8Label(c.slug))}<span class="ct">${n}</span></div>`;
+  }).join('');
+}
+function initSidebar(){
+  // 类型组只留三项（"全部/消息"导航入口去掉；消息类渲染代码路径保留，旧存档仍可打开）
+  const order=['现场','日报','周报'];
+  const counts=Object.fromEntries(order.map(type=>[type,DATA.filter(d=>d.type===type).length]));
+  if(!counts[state.type])state.type=order.find(type=>counts[type]>0)||'现场';
+  $('#typelist').innerHTML=order.map(type=>`<div class="fitem ${state.type===type?'on':''}" data-type="${type}"><span class="ic"><svg class="ico sm"><use href="#${TYPE_ICON[type]}"/></svg></span>${esc(typeLabel(type))}<span class="ct">${counts[type]}</span></div>`).join('');
+  renderSideNav();
+}
+async function loadRadarData(){
+  let liveError=null;
+  const [live,today]=await Promise.all([
+    fetch('content/daily.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json();}).catch(error=>{liveError=error;return [];}),
+    fetch('/api/today-candidates',{cache:'no-store',headers:{'X-Radar-Local':'1'}}).then(async response=>{
+      if(response.ok)return response.json();
+      if(response.status!==404)console.warn('近七天现场接口不可用',response.status);
+      return null;
+    }).catch(()=>null)
+  ]);
+  TODAY_INBOX=today&&today.exists?today:null;
+  const liveRows=(Array.isArray(live)?live:[]).map((item,index)=>({...item,_liveId:index}));
+  const candidateRows=(TODAY_INBOX&&Array.isArray(TODAY_INBOX.candidates)?TODAY_INBOX.candidates:[])
+    .slice().sort((a,b)=>new Date(b.effectiveAt||b.publishedAt||b.lastSeenAt||b.retrievedAt||0)-new Date(a.effectiveAt||a.publishedAt||a.lastSeenAt||a.retrievedAt||0))
+    .map(candidate=>mapCandidate(candidate,TODAY_INBOX));
+  DATA=[...candidateRows,...liveRows];
+  DATA.forEach((item,index)=>item.id=index);
+  if(candidateRows.length){state.type='现场';state.sort='跨平台';state.tw=168;}
+  applyStaticLanguage();
+  initSidebar();renderLivebar();renderCategoryBar();syncSortTabs();render();renderPublicAgent();
+  loadKG().then(()=>renderSideNav()).catch(()=>{}); // 知识库载入后刷新八分类三层计数
+  if(liveError)console.error('正式内容加载失败',liveError);
+  if(!DATA.length&&liveError)throw liveError;
+}
+applyStaticLanguage();
+loadRadarData().catch(error=>{console.error('内容加载失败',error);grid.innerHTML='<div class="emptywrap">'+(state.lang==='en'?'Failed to load content: ':'内容加载失败：')+esc(error.message)+'</div>';updatePublicAgentContext();});
+renderPublicAgent();
+setGraphMode(true); // 默认视图：知识图谱（点分类/类型才切卡片流）
+handleHashRoute(); // 首次载入带 #/entity/<id> 时直接进实体页
+</script>
+<footer id="pageFooter" style="text-align:center;padding:22px 16px 30px;font-family:var(--f-mono);font-size:9px;letter-spacing:.05em;color:var(--secondary);border-top:1px solid var(--line);margin-top:30px">AI 辅助翻译与归类 · 过去 168 小时现场为未核实线索 · 原始来源可查 · 正式内容另行核验</footer>
 </body>
 </html>
