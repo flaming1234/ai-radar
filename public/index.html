@@ -286,6 +286,7 @@ if(!window.d3){
   .kg-chip{display:inline-flex;align-items:center;gap:6px;padding:3px 9px;border:1px solid var(--line-2);border-radius:var(--r-pill);font-family:var(--f-mono);font-size:8.5px;color:var(--secondary);cursor:pointer;user-select:none}
   .kg-chip i{width:8px;height:8px;border-radius:50%;flex:0 0 auto}
   .kg-chip.off{opacity:.3}
+  .kg-legend-note{font-family:var(--f-mono);font-size:8.5px;color:var(--secondary);opacity:.65;align-self:center;white-space:nowrap} /* 活跃视图降噪说明小字 */
   .kg-body{flex:1;min-height:0;position:relative;overflow:hidden}
   .kg-canvas{position:absolute;inset:0}
   .kg-canvas svg{width:100%;height:100%;display:block;cursor:grab}
@@ -1109,6 +1110,9 @@ function kgRecentCount(e,days){
   const cut=new Date(Date.now()-(days||30)*864e5).toISOString().slice(0,10);
   return (e.events||[]).filter(ev=>String(ev.date||'')>=cut).length;
 }
+/* 活跃实体判定（降噪）：近30天有事件 且 (事件数≥2 或 有关系)。
+   一次性孤儿实体（1事件0关系）不进「活跃」视图，只在「全部」可见。 */
+const kgIsActive=e=>kgRecentCount(e)>0&&((e.eventCount||0)>=2||(e.relationCount||0)>=1);
 const kgRadius=e=>7+Math.min(18,Math.sqrt(kgRecentCount(e))*5); // 节点半径 ∝ 近30天事件数
 // D(2026-07-30) 防重叠：碰撞半径把节点下方的名字标签宽度也算进去（中英混排按 ~3.6px/字符估半宽）
 const kgCollideR=e=>Math.max(kgRadius(e)+18,String(e.name||'').length*3.6+12);
@@ -1158,7 +1162,8 @@ function openGraphView(){
     .catch(err=>{$('#kgCanvas').innerHTML=`<div class="kg-empty">${esc((state.lang==='en'?'Knowledge base API unavailable: ':'知识库接口不可用：')+(err.message||err))}</div>`;});
 }
 function renderKgLegend(){
-  $('#kgLegend').innerHTML=Object.keys(KG_TYPE_COLOR).map(type=>`<span class="kg-chip ${KG.visibleTypes.has(type)?'':'off'}" data-kgtype="${type}"><i style="background:${KG_TYPE_COLOR[type]}"></i>${esc(KG_TYPE_LABEL[type])}</span>`).join('');
+  $('#kgLegend').innerHTML=Object.keys(KG_TYPE_COLOR).map(type=>`<span class="kg-chip ${KG.visibleTypes.has(type)?'':'off'}" data-kgtype="${type}"><i style="background:${KG_TYPE_COLOR[type]}"></i>${esc(KG_TYPE_LABEL[type])}</span>`).join('')
+    +`<span class="kg-legend-note">${state.lang==='en'?'Active view hides one-off isolated entities':'活跃视图隐藏一次性孤立实体'}</span>`; // 降噪规则提示
 }
 function renderKgStats(){
   const s=KG.index&&KG.index.stats||{};
@@ -1167,7 +1172,7 @@ function renderKgStats(){
 }
 function kgVisibleEntities(){
   if(!KG.index)return [];
-  return (KG.index.entities||[]).filter(e=>KG.visibleTypes.has(e.type)&&(KG.mode==='all'||kgRecentCount(e)>0));
+  return (KG.index.entities||[]).filter(e=>KG.visibleTypes.has(e.type)&&(KG.mode==='all'||kgIsActive(e))); // 活跃视图额外过滤孤儿实体
 }
 function renderGraphView(){
   renderKgLegend();renderKgStats();
@@ -1534,7 +1539,8 @@ function renderCatGraph(){
     return;
   }
   const cat=state.cat8;
-  const nodes=KG.index?(KG.index.entities||[]).filter(e=>(e.events||[]).some(ev=>ev.category===cat)).map(e=>({...e})):[];
+  // 与主图谱「活跃」视图同规则降噪：一次性孤儿实体（1事件0关系/30天无动态）不进分类小图谱
+  const nodes=KG.index?(KG.index.entities||[]).filter(e=>(e.events||[]).some(ev=>ev.category===cat)&&kgIsActive(e)).map(e=>({...e})):[];
   // G(2026-07-30)：无知识数据不再静默隐藏，显示一行占位，让用户能区分"没数据"和"坏了"
   if(!nodes.length){
     if(catSim){catSim.stop();catSim=null;}
