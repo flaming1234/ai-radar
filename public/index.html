@@ -553,7 +553,8 @@ if(!window.d3){
         <div class="kg-topbar">
           <span class="kg-title" id="kgTitle">知识图谱</span>
           <span class="kg-stats" id="kgStats"></span>
-          <span class="kg-modes" id="kgModes"><button data-kgmode="active" class="on">活跃</button><button data-kgmode="all">全部</button></span>
+          <!-- 三档视图：重点(默认,每类top12) | 活跃(降噪) | 全部；选择记 localStorage('radar.kgView') -->
+          <span class="kg-modes" id="kgModes"><button data-kgmode="focus" class="on">重点</button><button data-kgmode="active">活跃</button><button data-kgmode="all">全部</button></span>
           <div class="withicon kg-search"><svg class="ico sm"><use href="#i-search"/></svg><input class="inp" id="kgSearch" placeholder="定位实体…"></div>
           <div class="kg-legend" id="kgLegend"></div>
         </div>
@@ -1077,8 +1078,11 @@ function renderReport(d){
    P2：知识雷达前端 —— 知识库数据层 / 图谱视图 / 实体页 / 主线式报告
    数据只来自 /api/knowledge/graph（graph-index.json 只读索引，loopback-only）
    =================================================================== */
+/* 图谱视图档位持久化：'focus'(重点,默认) | 'active'(活跃) | 'all'(全部)，记 localStorage('radar.kgView') */
+const KG_VIEW_KEY='radar.kgView';
+const savedKgView=(()=>{try{const v=localStorage.getItem(KG_VIEW_KEY);return ['focus','active','all'].includes(v)?v:null;}catch(e){return null;}})();
 const KG={index:null,byId:new Map(),nameToId:new Map(),promise:null,error:null,loaded:false,
-  visibleTypes:new Set(['model','framework','company','concept','paper','person']),mode:'active',expandedId:null};
+  visibleTypes:new Set(['model','framework','company','concept','paper','person']),mode:savedKgView||'focus',expandedId:null};
 const KG_TYPE_COLOR={model:'#7F77DD',framework:'#1D9E75',company:'#D85A30',concept:'#D4537E',paper:'#378ADD',person:'#888780'};
 const KG_TYPE_LABEL={model:'模型',framework:'框架',company:'公司',concept:'概念',paper:'论文',person:'人物'};
 const KIND_LABEL={release:'发布',update:'迭代',price:'价格',funding:'融资',debate:'争论',paper:'论文',oss:'开源'};
@@ -1113,6 +1117,14 @@ function kgRecentCount(e,days){
 /* 活跃实体判定（降噪）：近30天有事件 且 (事件数≥2 或 有关系)。
    一次性孤儿实体（1事件0关系）不进「活跃」视图，只在「全部」可见。 */
 const kgIsActive=e=>kgRecentCount(e)>0&&((e.eventCount||0)>=2||(e.relationCount||0)>=1);
+/* 重点视图重要度评分：事件数权重 2 + 关系数权重 1（事件多=最近有戏,关系多=图上枢纽） */
+const kgImportance=e=>(e.eventCount||0)*2+(e.relationCount||0);
+/* 用户核心关注实体（名字或别名命中,不区分大小写）：只要存在就必进「重点」视图,不受活跃/top12 门槛限制 */
+const KG_PINNED_NAMES=['hyle','company os'];
+const kgIsPinned=e=>{
+  const names=[e.name,...(e.aliases||[])].map(s=>String(s||'').trim().toLowerCase());
+  return KG_PINNED_NAMES.some(p=>names.includes(p));
+};
 const kgRadius=e=>7+Math.min(18,Math.sqrt(kgRecentCount(e))*5); // 节点半径 ∝ 近30天事件数
 // D(2026-07-30) 防重叠：碰撞半径把节点下方的名字标签宽度也算进去（中英混排按 ~3.6px/字符估半宽）
 const kgCollideR=e=>Math.max(kgRadius(e)+18,String(e.name||'').length*3.6+12);
@@ -1162,8 +1174,14 @@ function openGraphView(){
     .catch(err=>{$('#kgCanvas').innerHTML=`<div class="kg-empty">${esc((state.lang==='en'?'Knowledge base API unavailable: ':'知识库接口不可用：')+(err.message||err))}</div>`;});
 }
 function renderKgLegend(){
+  // 图例小字按档位切换：重点档说明 top12 规则,活跃档保留降噪说明,全部档不加注
+  const legendNote={
+    focus:state.lang==='en'?'Focus view: top 12 per type — switch to Active/All for more':'重点视图：每类 top12，切「活跃/全部」看更多',
+    active:state.lang==='en'?'Active view hides one-off isolated entities':'活跃视图隐藏一次性孤立实体',
+    all:''
+  }[KG.mode]||'';
   $('#kgLegend').innerHTML=Object.keys(KG_TYPE_COLOR).map(type=>`<span class="kg-chip ${KG.visibleTypes.has(type)?'':'off'}" data-kgtype="${type}"><i style="background:${KG_TYPE_COLOR[type]}"></i>${esc(KG_TYPE_LABEL[type])}</span>`).join('')
-    +`<span class="kg-legend-note">${state.lang==='en'?'Active view hides one-off isolated entities':'活跃视图隐藏一次性孤立实体'}</span>`; // 降噪规则提示
+    +(legendNote?`<span class="kg-legend-note">${legendNote}</span>`:'');
 }
 function renderKgStats(){
   const s=KG.index&&KG.index.stats||{};
@@ -1172,10 +1190,22 @@ function renderKgStats(){
 }
 function kgVisibleEntities(){
   if(!KG.index)return [];
-  return (KG.index.entities||[]).filter(e=>KG.visibleTypes.has(e.type)&&(KG.mode==='all'||kgIsActive(e))); // 活跃视图额外过滤孤儿实体
+  const pool=(KG.index.entities||[]).filter(e=>KG.visibleTypes.has(e.type)); // 类型图例开关对三档都生效
+  if(KG.mode==='all')return pool; // 全部：不降噪
+  const act=pool.filter(kgIsActive); // 活跃：过滤一次性孤儿实体（原有逻辑）
+  if(KG.mode==='active')return act;
+  // 重点（默认档）：活跃基础上按 type 分组,每组取 importance 前 12；Hyle/Company OS 命中即必进（绕过活跃与 top12 门槛）
+  const byType=new Map();
+  act.forEach(e=>{if(!byType.has(e.type))byType.set(e.type,[]);byType.get(e.type).push(e);});
+  const keep=new Set();
+  byType.forEach(list=>list.slice().sort((a,b)=>kgImportance(b)-kgImportance(a)).slice(0,12).forEach(e=>keep.add(e.id)));
+  pool.forEach(e=>{if(kgIsPinned(e))keep.add(e.id);});
+  return pool.filter(e=>keep.has(e.id));
 }
 function renderGraphView(){
   renderKgLegend();renderKgStats();
+  // 档位按钮高亮与当前档同步（首次打开时读的是 localStorage 记住的档,不能只靠点击时切 class）
+  document.querySelectorAll('#kgModes button').forEach(b=>b.classList.toggle('on',b.dataset.kgmode===KG.mode));
   const canvas=$('#kgCanvas');
   if(kgSim){kgSim.stop();kgSim=null;}
   kgSel=null;
@@ -1209,6 +1239,10 @@ function renderGraphView(){
   // 在簇外围聚成一圈而不是被推到四角。收敛后自动缩放平移，把全部节点适配进画布。
   const degree=new Map();
   links.forEach(l=>{degree.set(l.from,(degree.get(l.from)||0)+1);degree.set(l.to,(degree.get(l.to)||0)+1);});
+  // 重点档节点少（~60-80）：拉大连线距离/斥力/碰撞半径,标签字号加大,画面更疏朗可读
+  // 注意要用 inline style：CSS 里 .kg-node text{font-size:10.5px} 会盖过 SVG 属性,属性写法不生效
+  const sparse=KG.mode==='focus'&&nodes.length<=90;
+  if(sparse)node.select('text').style('font-size','12px');
   const fitView=()=>{
     const xs=nodes.map(n=>n.x),ys=nodes.map(n=>n.y);
     const pad=64;
@@ -1218,11 +1252,11 @@ function renderGraphView(){
     svg.transition().duration(420).call(kgZoom.transform,d3.zoomIdentity.translate(tx,ty).scale(scale));
   };
   kgSim=d3.forceSimulation(nodes)
-    .force('link',d3.forceLink(links).id(d=>d.id).distance(d=>d.co?110:80).strength(d=>d.co?0.3:0.7))
-    .force('charge',d3.forceManyBody().strength(d=>degree.get(d.id)?-170:-70))
+    .force('link',d3.forceLink(links).id(d=>d.id).distance(d=>(d.co?110:80)*(sparse?1.35:1)).strength(d=>d.co?0.3:0.7))
+    .force('charge',d3.forceManyBody().strength(d=>(degree.get(d.id)?-170:-70)*(sparse?1.5:1)))
     .force('x',d3.forceX(w/2).strength(d=>degree.get(d.id)?0.1:0.08))
     .force('y',d3.forceY(h/2).strength(d=>degree.get(d.id)?0.1:0.08))
-    .force('collide',d3.forceCollide().radius(kgCollideR)) // D：含标签宽度，防节点名互相压字
+    .force('collide',d3.forceCollide().radius(d=>kgCollideR(d)*(sparse?1.2:1))) // D：含标签宽度，防节点名互相压字；重点档字号 10.5→12px,碰撞半径等比放大 1.2 防压字
     .on('tick',()=>{
       link.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y).attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);
       linkLabel.attr('x',d=>(d.source.x+d.target.x)/2).attr('y',d=>(d.source.y+d.target.y)/2-4);
@@ -1277,7 +1311,7 @@ $('#graphview').addEventListener('click',e=>{
   const chip=e.target.closest('[data-kgtype]');
   if(chip){const type=chip.dataset.kgtype;if(KG.visibleTypes.has(type))KG.visibleTypes.delete(type);else KG.visibleTypes.add(type);renderGraphView();return;}
   const mode=e.target.closest('[data-kgmode]');
-  if(mode){KG.mode=mode.dataset.kgmode;document.querySelectorAll('#kgModes button').forEach(b=>b.classList.toggle('on',b.dataset.kgmode===KG.mode));renderGraphView();return;}
+  if(mode){KG.mode=mode.dataset.kgmode;try{localStorage.setItem(KG_VIEW_KEY,KG.mode);}catch(err){/* 隐私模式写不进就只在本次会话生效 */}document.querySelectorAll('#kgModes button').forEach(b=>b.classList.toggle('on',b.dataset.kgmode===KG.mode));renderGraphView();return;}
   const fb=e.target.closest('[data-kgopen]');
   if(fb){openKgDrawer(fb.dataset.kgopen);return;}
   if(e.target.closest('[data-kgclose]')){closeKgDrawer();return;}
@@ -1540,7 +1574,9 @@ function renderCatGraph(){
   }
   const cat=state.cat8;
   // 与主图谱「活跃」视图同规则降噪：一次性孤儿实体（1事件0关系/30天无动态）不进分类小图谱
-  const nodes=KG.index?(KG.index.entities||[]).filter(e=>(e.events||[]).some(ev=>ev.category===cat)&&kgIsActive(e)).map(e=>({...e})):[];
+  // 再按 kgImportance（事件*2+关系）取该分类前 10——小图谱只画重点,不足 10 全画
+  const nodes=KG.index?(KG.index.entities||[]).filter(e=>(e.events||[]).some(ev=>ev.category===cat)&&kgIsActive(e))
+    .sort((a,b)=>kgImportance(b)-kgImportance(a)).slice(0,10).map(e=>({...e})):[];
   // G(2026-07-30)：无知识数据不再静默隐藏，显示一行占位，让用户能区分"没数据"和"坏了"
   if(!nodes.length){
     if(catSim){catSim.stop();catSim=null;}
