@@ -1453,6 +1453,7 @@ function renderStorylineDaily(d){
     ${d.sub?`<div class="rsub">${esc(d.sub)}</div>`:''}
     <div class="sl-summary"><div class="h">${state.lang==='en'?'Today at a glance':'今日总结'}</div>${d.summary?`<p>${esc(d.summary)}</p>`:''}${(d.bullets||[]).length?`<ol>${d.bullets.map(b=>`<li>${esc(b)}</li>`).join('')}</ol>`:''}</div>
     <div class="sl-minigraph" id="slMiniGraph" hidden><div class="h">${state.lang==='en'?'Today in the graph':'今日图谱'}</div><div class="mg-body"></div></div>
+    ${(d.spotlight||[]).length?`<div class="rsec sl-scattered sl-spot"><h3>${state.lang==='en'?'Top signals today':'今日重点'}</h3>${d.spotlight.map(x=>`<div class="row">${x.entity?entityLinkHtml(x.entity):''}<span style="flex:1"><strong>${esc(x.quote)}</strong>${x.why?`<span class="m"> —— ${esc(x.why)}</span>`:''}</span>${slSourceLinks(x.sources)}</div>`).join('')}</div>`:''}
     ${(()=>{
       // P5②：域模块（id 以 domain- 开头的主线）渲染成可折叠 details；默认全部展开，
       // 折叠状态记 localStorage('radar.domainOpen')；首个域模块前插一条"全部展开/收起"控制条
