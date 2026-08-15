@@ -9,6 +9,1053 @@
     "unverified": true,
     "format": "storyline",
     "synthesis": "two-pass-v2",
+    "aggregatedAt": "2026-08-15",
+    "title": "AI 每日雷达 · 2026-08-15",
+    "time": "今天",
+    "sub": "DeepSeek Agent Harness开源，Vercel与Replit押注统一命令，编码代理进入harness驱动新阶段。",
+    "summary": "今日主题为“编码代理Harness爆发与代理生态多维演进”。DeepSeek Agent Harness开源引发编码工具链连锁反应，Vercel与Replit领袖齐声押注统一命令范式；代理工具生态密集开源，从工作区到端侧模型全面膨胀；真实代理运行数据暴露可靠性危机，OWASP即将公开讨论提示注入攻击；企业AI从Macro统一工作区走向Cloudera受治理推理，生产化路径逐渐清晰；金融AI在量化圈持续质疑中，通过Westworld基准与零售交易机器人寻找突破口。对做Hyle的人意味着代理安全信任危机进一步实证化，需加速运行时治理；对做Company OS的人意味着统一工作区与治理框架正成为落地标配；对做金融AI的人意味着量化辩论与产品化并行，基准和零售自动化是当前突破口。",
+    "bullets": [
+      "DeepSeek Agent Harness开源，Vercel与Replit押注统一命令，编码代理进入harness驱动新阶段。",
+      "代理工具生态密集开源，holaOS、ego-lite、端侧模型等涌现，开发者工具链快速膨胀。",
+      "真实代理运行暴露可靠性问题，OWASP即将讨论提示注入，代理安全信任危机加深。",
+      "企业AI从Macro统一工作区到Cloudera治理服务，生产化落地路径逐渐清晰。",
+      "金融AI量化圈持续质疑LLM交易能力，但Westworld基准发布与零售交易机器人采用升温。"
+    ],
+    "spotlight": [
+      {
+        "quote": "Matt Turck判断AI创业加速两极分化：要么AI原生火箭船持续高估值融资烧钱抢客，要么被市场当作已死。",
+        "why": "重要风投人对AI创业生态极化升级的方向性判断，影响创业公司战略与资本流向。",
+        "entity": "Matt Turck",
+        "sources": [
+          "https://x.com/mattturck/status/2087978386195103916"
+        ]
+      },
+      {
+        "quote": "Google通过同态加密推动私有AI实用化。",
+        "why": "隐私保护AI实用化迈出关键一步，对数据敏感场景的AI落地具有里程碑意义。",
+        "entity": "Google",
+        "sources": [
+          "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption"
+        ]
+      },
+      {
+        "quote": "Madhu Guru称Prompt debt是新tech debt。",
+        "why": "首次将提示工程负债提升到与技术债务同等高度，预示AI工程化将面临新的维护挑战。",
+        "entity": "Madhu Guru",
+        "sources": [
+          "https://x.com/realmadhuguru/status/2087916590964851172"
+        ]
+      }
+    ],
+    "storylines": [
+      {
+        "id": "terminal-coding-agents-surge",
+        "title": "编码代理Harness爆发与评估基准扩展",
+        "isNew": false,
+        "categories": [
+          "model_dev",
+          "tech_trend",
+          "papers"
+        ],
+        "chain": [
+          {
+            "title": "DeepSeek发布开源Agent Harness v0.1",
+            "kind": "release",
+            "entity": "DeepSeek",
+            "relPrev": null,
+            "sources": [
+              "https://di.gg/ai/db1hd7eh"
+            ]
+          },
+          {
+            "title": "Vercel CEO预测统一命令将成为编码AI默认方式",
+            "kind": "debate",
+            "entity": "Vercel",
+            "relPrev": null,
+            "sources": [
+              "https://x.com/rauchg/status/2088020529039180204"
+            ]
+          },
+          {
+            "title": "Replit CEO：coding harness让ARC-AGI-3几乎被解决",
+            "kind": "debate",
+            "entity": "Replit",
+            "relPrev": null,
+            "sources": [
+              "https://x.com/amasad/status/2088124774824521786"
+            ]
+          },
+          {
+            "title": "Claude Code创作者展示Claude自主维护应用实验",
+            "kind": "update",
+            "entity": "Claude Code",
+            "relPrev": null,
+            "sources": [
+              "https://x.com/bcherny/status/2088014489438621990"
+            ]
+          },
+          {
+            "title": "Grok Bot发布引发超级代理与子代理架构辩论",
+            "kind": "debate",
+            "entity": "Grok Bot",
+            "relPrev": null,
+            "sources": [
+              "https://x.com/nikunj/status/2087906119914340540"
+            ]
+          },
+          {
+            "title": "基准显示单智能体在64%任务上优于多智能体",
+            "kind": "paper",
+            "entity": "单智能体基准",
+            "relPrev": null,
+            "sources": [
+              "https://x.com/johniosifov/status/2087906833944252665"
+            ]
+          },
+          {
+            "title": "OpenRouter发布Web Search Benchmarks评测agent搜索能力",
+            "kind": "release",
+            "entity": "OpenRouter",
+            "relPrev": null,
+            "sources": [
+              "https://di.gg/ai/frcuvq6b"
+            ]
+          },
+          {
+            "title": "Matt Stallone发布SWE Odyssey Benchmark评测agent长期自主工作",
+            "kind": "release",
+            "entity": "SWE Odyssey",
+            "relPrev": null,
+            "sources": [
+              "https://di.gg/ai/4rkq00dy"
+            ]
+          }
+        ],
+        "narrative": "编码代理领域今日迎来DeepSeek Harness开源，Vercel和Replit领袖齐声押注统一命令与harness将解决复杂基准，Claude展示自主维护能力，Grok Bot引发代理架构辩论，同时新基准显示单智能体优于多智能体，搜索和长期任务评测同步发布，编码代理能力与评估体系加速成熟。",
+        "carryOver": "承前 terminal-coding-agents-surge：Prime Agent开源与Qwen 3.8 Max增强基座后，DeepSeek Harness加入编码代理战局，Vercel/Replit进一步押注harness范式。"
+      },
+      {
+        "id": "agent-tooling-ecosystem",
+        "title": "代理工具与工作区生态密集开源",
+        "isNew": false,
+        "categories": [
+          "tech_trend",
+          "gh_trending"
+        ],
+        "chain": [
+          {
+            "title": "holaOS开源全能AI agent工作区",
+            "kind": "oss",
+            "entity": "holaOS",
+            "relPrev": null,
+            "sources": [
+              "https://github.com/holaboss-ai/holaOS"
+            ]
+          },
+          {
+            "title": "ego-lite发布共享登录态的AI agent浏览器",
+            "kind": "oss",
+            "entity": "ego-lite",
+            "relPrev": null,
+            "sources": [
+              "https://github.com/citrolabs/ego-lite"
+            ]
+          },
+          {
+            "title": "diagram-design发布Claude Code图表模板",
+            "kind": "oss",
+            "entity": "diagram-design",
+            "relPrev": null,
+            "sources": [
+              "https://github.com/cathrynlavery/diagram-design"
+            ]
+          },
+          {
+            "title": "RAGFlow开源RAG+Agent上下文引擎",
+            "kind": "oss",
+            "entity": "RAGFlow",
+            "relPrev": null,
+            "sources": [
+              "https://github.com/infiniflow/ragflow"
+            ]
+          },
+          {
+            "title": "DeepSeek官方发布Agent生态聚合名单",
+            "kind": "oss",
+            "entity": "DeepSeek",
+            "relPrev": null,
+            "sources": [
+              "https://github.com/deepseek-ai/awesome-deepseek-agent"
+            ]
+          },
+          {
+            "title": "HashAgent支持agent以URL分享并在WebGPU本地运行",
+            "kind": "release",
+            "entity": "HashAgent",
+            "relPrev": null,
+            "sources": [
+              "https://hashagent.pages.dev/"
+            ]
+          },
+          {
+            "title": "基于图的GPU harness面向AI agents",
+            "kind": "oss",
+            "entity": "GPU harness",
+            "relPrev": null,
+            "sources": [
+              "https://gatewai.studio/artifex"
+            ]
+          },
+          {
+            "title": "主张训练harness而非LLM",
+            "kind": "debate",
+            "entity": "训练harness",
+            "relPrev": null,
+            "sources": [
+              "https://github.com/workofart/harness-training"
+            ]
+          },
+          {
+            "title": "多智能体终端复用器",
+            "kind": "oss",
+            "entity": "终端复用器",
+            "relPrev": null,
+            "sources": [
+              "https://muxel.sh/"
+            ]
+          },
+          {
+            "title": "Cactus发布14MB端侧基础模型Needle",
+            "kind": "release",
+            "entity": "Needle",
+            "relPrev": null,
+            "sources": [
+              "https://github.com/cactus-compute/needle"
+            ]
+          },
+          {
+            "title": "modly发布本地GPU 3D生成桌面应用",
+            "kind": "release",
+            "entity": "modly",
+            "relPrev": null,
+            "sources": [
+              "https://github.com/lightningpixel/modly"
+            ]
+          }
+        ],
+        "narrative": "开源社区围绕AI代理工具链密集发布，从全能工作区holaOS、浏览器自动化ego-lite，到Claude Code图表模板、RAG引擎、端侧模型和本地GPU应用，代理工具生态持续膨胀，并出现训练harness而非LLM的新主张。",
+        "carryOver": "承前 agent-tooling-ecosystem：agency-agents、paperclip等工具之后，今日holaOS、ego-lite等大量新工具涌现，生态进一步爆发。"
+      },
+      {
+        "id": "agent-security-trust",
+        "title": "代理安全信任危机：真实故障与OWASP安全讨论",
+        "isNew": false,
+        "categories": [
+          "hyle",
+          "new_thought"
+        ],
+        "chain": [
+          {
+            "title": "分享726次真实代理运行经验揭示可靠性问题",
+            "kind": "debate",
+            "entity": "AI代理可靠性",
+            "relPrev": null,
+            "sources": [
+              "https://www.reddit.com/r/ai_agents/comments/1vo9dxm/what_ive_learned_over_726_real_world_agent_runs"
+            ]
+          },
+          {
+            "title": "OWASP LLM Top 10联合负责人将举办AMA讨论提示注入等攻击",
+            "kind": "debate",
+            "entity": "OWASP",
+            "relPrev": null,
+            "sources": [
+              "https://www.reddit.com/r/ai_agents/comments/1voa6g9/prompt_injection_rag_poisoning_and_embedding"
+            ]
+          }
+        ],
+        "narrative": "真实代理运行数据暴露微小错误导致灾难性失败，OWASP即将公开讨论提示注入等攻击，代理安全信任危机持续加深。",
+        "carryOver": "承前 agent-security-trust：Anthropic警告隐藏指令、媒体揭示代理撒谎之后，今日真实运行数据进一步揭示可靠性问题，OWASP将公开讨论攻击手段。"
+      },
+      {
+        "id": "domain-ai-enterprise-os",
+        "title": "企业AI落地：从统一工作区到生产化治理",
+        "isNew": false,
+        "categories": [
+          "ai_enterprise_os"
+        ],
+        "chain": [
+          {
+            "title": "Macro开源统一工作区：邮件、聊天、文档、任务、agents、CRM与shared AI memory打通",
+            "kind": "oss",
+            "entity": "Macro",
+            "relPrev": null,
+            "sources": [
+              "https://github.com/macro-inc/macro"
+            ]
+          },
+          {
+            "title": "MindStudio提出企业AI工作流自动化的Build vs Buy vs Wait决策框架",
+            "kind": "debate",
+            "entity": "MindStudio",
+            "relPrev": null,
+            "sources": [
+              "https://www.mindstudio.ai/blog/ai-workflow-automation-build-buy-wait-framework"
+            ]
+          },
+          {
+            "title": "Cloudera AI Inference演示从原型到生产的受治理AI推理服务",
+            "kind": "update",
+            "entity": "Cloudera",
+            "relPrev": null,
+            "sources": [
+              "https://www.systemsdigest.com/videos/bring-ai-your-data-prototype-production-cloudera-ai-inference",
+              "https://www.youtube.com/watch?v=3cZpmRNz9Zo"
+            ]
+          },
+          {
+            "title": "Red Hat发文罗列生产级AI环境构建要点",
+            "kind": "debate",
+            "entity": "Red Hat",
+            "relPrev": null,
+            "sources": [
+              "https://www.redhat.com/en/resources/building-production-ready-ai-environment-ebook"
+            ]
+          },
+          {
+            "title": "2026年十大Agentic AI平台盘点强调人机协同与企业系统集成",
+            "kind": "update",
+            "entity": "Agentic AI平台",
+            "relPrev": null,
+            "sources": [
+              "https://www.truefoundry.com/blog/agentic-ai-platforms"
+            ]
+          }
+        ],
+        "narrative": "企业AI落地从Macro统一工作区开源，到决策框架、受治理推理服务、生产环境构建要点，再到平台盘点，显示企业正在从实验走向生产化治理。",
+        "carryOver": "承前 domain-ai-enterprise-os：Microsoft企业推理模型、IBM价值场景识别之后，今日Macro工作区与Cloudera治理服务推动企业AI落地深化。"
+      },
+      {
+        "id": "domain-ai-finance",
+        "title": "金融AI：量化圈质疑与交易机器人升温并行",
+        "isNew": false,
+        "categories": [
+          "ai_finance"
+        ],
+        "chain": [
+          {
+            "title": "量化社区讨论LLM在自动交易中不如传统ML，多用于内部工具",
+            "kind": "debate",
+            "entity": "量化社区",
+            "relPrev": null,
+            "sources": [
+              "https://www.reddit.com/r/quant/comments/1vjk17i/which_quant_companies_are_doing_mlai_research"
+            ]
+          },
+          {
+            "title": "社区质疑YC prodigy AI quant若真有效不应作为服务出售",
+            "kind": "debate",
+            "entity": "YC prodigy",
+            "relPrev": null,
+            "sources": [
+              "https://www.reddit.com/r/quant/comments/1vli0ih/yc_prodigy_ai_quant_does_it_make_any_sense"
+            ]
+          },
+          {
+            "title": "社区担忧AI取代quant岗位并质疑自我改进后的edge消失",
+            "kind": "debate",
+            "entity": "量化岗位",
+            "relPrev": null,
+            "sources": [
+              "https://www.reddit.com/r/quant/comments/1vndjle/are_you_guys_worried_about_ai_taking_quant_jobs"
+            ]
+          },
+          {
+            "title": "HalluminateAI发布88题Westworld Finance Diligence Bench评测金融AI代理",
+            "kind": "release",
+            "entity": "HalluminateAI",
+            "relPrev": null,
+            "sources": [
+              "https://di.gg/ai/mdvrj89u"
+            ]
+          },
+          {
+            "title": "AI交易机器人采用上升，零售策略自动化与毫秒级执行成趋势",
+            "kind": "update",
+            "entity": "交易机器人",
+            "relPrev": null,
+            "sources": [
+              "https://natlawreview.com/press-releases/ai-trading-bot-adoption-rises-across-global-markets-retail-investors-embrace"
+            ]
+          }
+        ],
+        "narrative": "量化圈持续质疑LLM交易能力，但金融AI代理基准发布和零售交易机器人采用升温，显示金融AI在争议中产品化提速。",
+        "carryOver": "承前 domain-ai-finance：Virtuals Protocol、bnkr支付与Delphi交易代理之后，今日量化辩论与Westworld基准发布，金融AI代理在质疑中推进。"
+      },
+      {
+        "id": "domain-model-dev",
+        "title": "模型更新：DeepSeek V4 Pro与GLM 5.3领衔，ChatGPT嵌入工作流",
+        "isNew": false,
+        "categories": [
+          "model_dev",
+          "new_thought"
+        ],
+        "chain": [
+          {
+            "title": "DeepSeek V4 Pro在Cybergym基准取得83.3分",
+            "kind": "update",
+            "entity": "DeepSeek V4 Pro",
+            "relPrev": null,
+            "sources": [
+              "https://di.gg/ai/yb1l6nt5"
+            ]
+          },
+          {
+            "title": "GLM 5.3评测称为最佳开源模型，击败Mythos",
+            "kind": "update",
+            "entity": "GLM 5.3",
+            "relPrev": null,
+            "sources": [
+              "https://www.youtube.com/watch?v=yMoUwyyTe3E"
+            ]
+          },
+          {
+            "title": "模型选择指南：同一提示测试11个模型结果各异",
+            "kind": "debate",
+            "entity": "模型选择",
+            "relPrev": null,
+            "sources": [
+              "https://www.netlify.com/blog/one-prompt-11-models-very-different-results"
+            ]
+          },
+          {
+            "title": "编码自测试基准：GPT-5.6 Sol、Qwen3.8-Max、DeepSeek V3 P生成吃豆人游戏对比",
+            "kind": "release",
+            "entity": "编码基准",
+            "relPrev": null,
+            "sources": [
+              "https://x.com/TheTechDiggest/status/2087979493004591111"
+            ]
+          },
+          {
+            "title": "unsloth工具更新，支持本地运行和训练多种最新模型",
+            "kind": "update",
+            "entity": "unsloth",
+            "relPrev": null,
+            "sources": [
+              "https://github.com/unslothai/unsloth"
+            ]
+          },
+          {
+            "title": "OpenAI Codex负责人展示ChatGPT内直接使用Google Docs/Sheets/Slides",
+            "kind": "update",
+            "entity": "ChatGPT",
+            "relPrev": null,
+            "sources": [
+              "https://x.com/thsottiaux/status/2088103609477238858"
+            ]
+          },
+          {
+            "title": "Computer History插件让ChatGPT复盘用户电脑使用行为",
+            "kind": "update",
+            "entity": "ChatGPT",
+            "relPrev": null,
+            "sources": [
+              "https://x.com/thsottiaux/status/2088133823619895712"
+            ]
+          }
+        ],
+        "narrative": "DeepSeek V4 Pro和GLM 5.3同日展现强劲性能，模型选择指南和编码基准反映竞争白热化，unsloth降低本地使用门槛，同时ChatGPT新功能深度嵌入Google Docs和用户行为复盘，模型应用边界持续扩展。",
+        "carryOver": "承前 domain-model-dev：Jevons Paradox与Muse Glimmer之后，今日DeepSeek V4 Pro与GLM 5.3领衔模型更新，ChatGPT嵌入工作流。"
+      }
+    ],
+    "columns": [],
+    "scattered": [
+      {
+        "note": "Reddit热议三大AI巨头定位：Gemini擅长非编码任务，Claude和GPT各有所长",
+        "category": "model_dev",
+        "sources": [
+          "https://www.reddit.com/r/claudeai/comments/1vnpb13/the_three_ai_giants_be_like"
+        ]
+      },
+      {
+        "note": "共享登录浏览器状态给 Codex/Claude Code 的浏览器自动化工具，呼应开发者对浏览器与编码助手摩擦的不满。",
+        "category": "tech_trend",
+        "sources": [
+          "https://github.com/citrolabs/ego-lite",
+          "https://www.reddit.com/r/chatgptcoding/comments/1vn59g9/whats_the_most_annoying_step_between_your_browser"
+        ]
+      },
+      {
+        "note": "Peter Yang发现AI最有价值的不是研究疾病，而是导航医疗系统官僚。",
+        "category": "new_thought",
+        "sources": [
+          "https://x.com/petergyang/status/2087946170274570385"
+        ]
+      },
+      {
+        "note": "Reddit 讨论 AI 时代构建 SaaS 工具的价值，质疑智能体浪潮下 SaaS 定位。",
+        "category": "ai_enterprise_os",
+        "sources": [
+          "https://www.reddit.com/r/saas/comments/1voiws3/whats_the_value_of_build_a_saas_tool_in_the_age"
+        ]
+      },
+      {
+        "note": "LoKiFormer通过局部性感知注意力与解耦知识记忆提升LLM预训练效率",
+        "category": "papers",
+        "sources": [
+          "https://arxiv.org/abs/2608.12419"
+        ]
+      },
+      {
+        "note": "Show HN：Agents on Rails LLM 基准项目。",
+        "category": "tech_trend",
+        "sources": [
+          "https://rubyonrails.org/2026/8/12/llm-benchmarking-project"
+        ]
+      },
+      {
+        "note": "Dan Shipper推广的项目平均每分钟收到2份申请，来自Citadel、OpenAI、微软、谷歌等大公司。",
+        "category": "new_thought",
+        "sources": [
+          "https://x.com/danshipper/status/2087995350745244083"
+        ]
+      },
+      {
+        "note": "前 AI PM 转型 agent 验证，寻找首批设计伙伴，反映智能体验证需求。",
+        "category": "ai_enterprise_os",
+        "sources": [
+          "https://www.reddit.com/r/saas/comments/1voei2o/expm_for_ai_now_building_agent_verification_how"
+        ]
+      },
+      {
+        "note": "MARCH通过内容路由状态锚点扩展循环记忆以解决Transformer长上下文检索的复杂度问题",
+        "category": "papers",
+        "sources": [
+          "https://arxiv.org/abs/2608.12435"
+        ]
+      },
+      {
+        "note": "一项研究将预训练语言模型改造为循环深度架构，实现迭代隐状态转移，并在Qwen2.5-0.5B-Instruct上验证",
+        "category": "papers",
+        "sources": [
+          "https://arxiv.org/abs/2608.11233"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "h": "今日重点",
+        "bullets": [
+          "Matt Turck判断AI创业加速两极分化：要么AI原生火箭船持续高估值融资烧钱抢客，要么被市场当作已死。——重要风投人对AI创业生态极化升级的方向性判断，影响创业公司战略与资本流向。",
+          "Google通过同态加密推动私有AI实用化。——隐私保护AI实用化迈出关键一步，对数据敏感场景的AI落地具有里程碑意义。",
+          "Madhu Guru称Prompt debt是新tech debt。——首次将提示工程负债提升到与技术债务同等高度，预示AI工程化将面临新的维护挑战。"
+        ]
+      },
+      {
+        "h": "主题线 1 · 编码代理Harness爆发与评估基准扩展",
+        "bullets": [
+          "DeepSeek发布开源Agent Harness v0.1 → Vercel CEO预测统一命令将成为编码AI默认方式 → Replit CEO：coding harness让ARC-AGI-3几乎被解决 → Claude Code创作者展示Claude自主维护应用实验 → Grok Bot发布引发超级代理与子代理架构辩论 → 基准显示单智能体在64%任务上优于多智能体 → OpenRouter发布Web Search Benchmarks评测agent搜索能力 → Matt Stallone发布SWE Odyssey Benchmark评测agent长期自主工作",
+          "编码代理领域今日迎来DeepSeek Harness开源，Vercel和Replit领袖齐声押注统一命令与harness将解决复杂基准，Claude展示自主维护能力，Grok Bot引发代理架构辩论，同时新基准显示单智能体优于多智能体，搜索和长期任务评测同步发布，编码代理能力与评估体系加速成熟。"
+        ]
+      },
+      {
+        "h": "主题线 2 · 代理工具与工作区生态密集开源",
+        "bullets": [
+          "holaOS开源全能AI agent工作区 → ego-lite发布共享登录态的AI agent浏览器 → diagram-design发布Claude Code图表模板 → RAGFlow开源RAG+Agent上下文引擎 → DeepSeek官方发布Agent生态聚合名单 → HashAgent支持agent以URL分享并在WebGPU本地运行 → 基于图的GPU harness面向AI agents → 主张训练harness而非LLM → 多智能体终端复用器 → Cactus发布14MB端侧基础模型Needle → modly发布本地GPU 3D生成桌面应用",
+          "开源社区围绕AI代理工具链密集发布，从全能工作区holaOS、浏览器自动化ego-lite，到Claude Code图表模板、RAG引擎、端侧模型和本地GPU应用，代理工具生态持续膨胀，并出现训练harness而非LLM的新主张。"
+        ]
+      },
+      {
+        "h": "主题线 3 · 代理安全信任危机：真实故障与OWASP安全讨论",
+        "bullets": [
+          "分享726次真实代理运行经验揭示可靠性问题 → OWASP LLM Top 10联合负责人将举办AMA讨论提示注入等攻击",
+          "真实代理运行数据暴露微小错误导致灾难性失败，OWASP即将公开讨论提示注入等攻击，代理安全信任危机持续加深。"
+        ]
+      },
+      {
+        "h": "主题线 4 · 企业AI落地：从统一工作区到生产化治理",
+        "bullets": [
+          "Macro开源统一工作区：邮件、聊天、文档、任务、agents、CRM与shared AI memory打通 → MindStudio提出企业AI工作流自动化的Build vs Buy vs Wait决策框架 → Cloudera AI Inference演示从原型到生产的受治理AI推理服务 → Red Hat发文罗列生产级AI环境构建要点 → 2026年十大Agentic AI平台盘点强调人机协同与企业系统集成",
+          "企业AI落地从Macro统一工作区开源，到决策框架、受治理推理服务、生产环境构建要点，再到平台盘点，显示企业正在从实验走向生产化治理。"
+        ]
+      },
+      {
+        "h": "主题线 5 · 金融AI：量化圈质疑与交易机器人升温并行",
+        "bullets": [
+          "量化社区讨论LLM在自动交易中不如传统ML，多用于内部工具 → 社区质疑YC prodigy AI quant若真有效不应作为服务出售 → 社区担忧AI取代quant岗位并质疑自我改进后的edge消失 → HalluminateAI发布88题Westworld Finance Diligence Bench评测金融AI代理 → AI交易机器人采用上升，零售策略自动化与毫秒级执行成趋势",
+          "量化圈持续质疑LLM交易能力，但金融AI代理基准发布和零售交易机器人采用升温，显示金融AI在争议中产品化提速。"
+        ]
+      },
+      {
+        "h": "主题线 6 · 模型更新：DeepSeek V4 Pro与GLM 5.3领衔，ChatGPT嵌入工作流",
+        "bullets": [
+          "DeepSeek V4 Pro在Cybergym基准取得83.3分 → GLM 5.3评测称为最佳开源模型，击败Mythos → 模型选择指南：同一提示测试11个模型结果各异 → 编码自测试基准：GPT-5.6 Sol、Qwen3.8-Max、DeepSeek V3 P生成吃豆人游戏对比 → unsloth工具更新，支持本地运行和训练多种最新模型 → OpenAI Codex负责人展示ChatGPT内直接使用Google Docs/Sheets/Slides → Computer History插件让ChatGPT复盘用户电脑使用行为",
+          "DeepSeek V4 Pro和GLM 5.3同日展现强劲性能，模型选择指南和编码基准反映竞争白热化，unsloth降低本地使用门槛，同时ChatGPT新功能深度嵌入Google Docs和用户行为复盘，模型应用边界持续扩展。"
+        ]
+      },
+      {
+        "h": "零散信号",
+        "bullets": [
+          "Reddit热议三大AI巨头定位：Gemini擅长非编码任务，Claude和GPT各有所长",
+          "共享登录浏览器状态给 Codex/Claude Code 的浏览器自动化工具，呼应开发者对浏览器与编码助手摩擦的不满。",
+          "Peter Yang发现AI最有价值的不是研究疾病，而是导航医疗系统官僚。",
+          "Reddit 讨论 AI 时代构建 SaaS 工具的价值，质疑智能体浪潮下 SaaS 定位。",
+          "LoKiFormer通过局部性感知注意力与解耦知识记忆提升LLM预训练效率",
+          "Show HN：Agents on Rails LLM 基准项目。",
+          "Dan Shipper推广的项目平均每分钟收到2份申请，来自Citadel、OpenAI、微软、谷歌等大公司。",
+          "前 AI PM 转型 agent 验证，寻找首批设计伙伴，反映智能体验证需求。",
+          "MARCH通过内容路由状态锚点扩展循环记忆以解决Transformer长上下文检索的复杂度问题",
+          "一项研究将预训练语言模型改造为循环深度架构，实现迭代隐状态转移，并在Qwen2.5-0.5B-Instruct上验证"
+        ]
+      }
+    ],
+    "ev": [
+      {
+        "who": "web",
+        "en": "https://di.gg/ai/db1hd7eh",
+        "zh": "https://di.gg/ai/db1hd7eh",
+        "url": "https://di.gg/ai/db1hd7eh",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/rauchg/status/2088020529039180204",
+        "zh": "https://x.com/rauchg/status/2088020529039180204",
+        "url": "https://x.com/rauchg/status/2088020529039180204",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/amasad/status/2088124774824521786",
+        "zh": "https://x.com/amasad/status/2088124774824521786",
+        "url": "https://x.com/amasad/status/2088124774824521786",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/bcherny/status/2088014489438621990",
+        "zh": "https://x.com/bcherny/status/2088014489438621990",
+        "url": "https://x.com/bcherny/status/2088014489438621990",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/nikunj/status/2087906119914340540",
+        "zh": "https://x.com/nikunj/status/2087906119914340540",
+        "url": "https://x.com/nikunj/status/2087906119914340540",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/johniosifov/status/2087906833944252665",
+        "zh": "https://x.com/johniosifov/status/2087906833944252665",
+        "url": "https://x.com/johniosifov/status/2087906833944252665",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://di.gg/ai/frcuvq6b",
+        "zh": "https://di.gg/ai/frcuvq6b",
+        "url": "https://di.gg/ai/frcuvq6b",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://di.gg/ai/4rkq00dy",
+        "zh": "https://di.gg/ai/4rkq00dy",
+        "url": "https://di.gg/ai/4rkq00dy",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://github.com/holaboss-ai/holaOS",
+        "zh": "https://github.com/holaboss-ai/holaOS",
+        "url": "https://github.com/holaboss-ai/holaOS",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://github.com/citrolabs/ego-lite",
+        "zh": "https://github.com/citrolabs/ego-lite",
+        "url": "https://github.com/citrolabs/ego-lite",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://github.com/cathrynlavery/diagram-design",
+        "zh": "https://github.com/cathrynlavery/diagram-design",
+        "url": "https://github.com/cathrynlavery/diagram-design",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://github.com/infiniflow/ragflow",
+        "zh": "https://github.com/infiniflow/ragflow",
+        "url": "https://github.com/infiniflow/ragflow",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://github.com/deepseek-ai/awesome-deepseek-agent",
+        "zh": "https://github.com/deepseek-ai/awesome-deepseek-agent",
+        "url": "https://github.com/deepseek-ai/awesome-deepseek-agent",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://hashagent.pages.dev/",
+        "zh": "https://hashagent.pages.dev/",
+        "url": "https://hashagent.pages.dev/",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://gatewai.studio/artifex",
+        "zh": "https://gatewai.studio/artifex",
+        "url": "https://gatewai.studio/artifex",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://github.com/workofart/harness-training",
+        "zh": "https://github.com/workofart/harness-training",
+        "url": "https://github.com/workofart/harness-training",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://muxel.sh/",
+        "zh": "https://muxel.sh/",
+        "url": "https://muxel.sh/",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://github.com/cactus-compute/needle",
+        "zh": "https://github.com/cactus-compute/needle",
+        "url": "https://github.com/cactus-compute/needle",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://github.com/lightningpixel/modly",
+        "zh": "https://github.com/lightningpixel/modly",
+        "url": "https://github.com/lightningpixel/modly",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.reddit.com/r/ai_agents/comments/1vo9dxm/what_ive_learned_over_726_real_world_agent_runs",
+        "zh": "https://www.reddit.com/r/ai_agents/comments/1vo9dxm/what_ive_learned_over_726_real_world_agent_runs",
+        "url": "https://www.reddit.com/r/ai_agents/comments/1vo9dxm/what_ive_learned_over_726_real_world_agent_runs",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.reddit.com/r/ai_agents/comments/1voa6g9/prompt_injection_rag_poisoning_and_embedding",
+        "zh": "https://www.reddit.com/r/ai_agents/comments/1voa6g9/prompt_injection_rag_poisoning_and_embedding",
+        "url": "https://www.reddit.com/r/ai_agents/comments/1voa6g9/prompt_injection_rag_poisoning_and_embedding",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://github.com/macro-inc/macro",
+        "zh": "https://github.com/macro-inc/macro",
+        "url": "https://github.com/macro-inc/macro",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.mindstudio.ai/blog/ai-workflow-automation-build-buy-wait-framework",
+        "zh": "https://www.mindstudio.ai/blog/ai-workflow-automation-build-buy-wait-framework",
+        "url": "https://www.mindstudio.ai/blog/ai-workflow-automation-build-buy-wait-framework",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.systemsdigest.com/videos/bring-ai-your-data-prototype-production-cloudera-ai-inference",
+        "zh": "https://www.systemsdigest.com/videos/bring-ai-your-data-prototype-production-cloudera-ai-inference",
+        "url": "https://www.systemsdigest.com/videos/bring-ai-your-data-prototype-production-cloudera-ai-inference",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.youtube.com/watch?v=3cZpmRNz9Zo",
+        "zh": "https://www.youtube.com/watch?v=3cZpmRNz9Zo",
+        "url": "https://www.youtube.com/watch?v=3cZpmRNz9Zo",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.redhat.com/en/resources/building-production-ready-ai-environment-ebook",
+        "zh": "https://www.redhat.com/en/resources/building-production-ready-ai-environment-ebook",
+        "url": "https://www.redhat.com/en/resources/building-production-ready-ai-environment-ebook",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.truefoundry.com/blog/agentic-ai-platforms",
+        "zh": "https://www.truefoundry.com/blog/agentic-ai-platforms",
+        "url": "https://www.truefoundry.com/blog/agentic-ai-platforms",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.reddit.com/r/quant/comments/1vjk17i/which_quant_companies_are_doing_mlai_research",
+        "zh": "https://www.reddit.com/r/quant/comments/1vjk17i/which_quant_companies_are_doing_mlai_research",
+        "url": "https://www.reddit.com/r/quant/comments/1vjk17i/which_quant_companies_are_doing_mlai_research",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.reddit.com/r/quant/comments/1vli0ih/yc_prodigy_ai_quant_does_it_make_any_sense",
+        "zh": "https://www.reddit.com/r/quant/comments/1vli0ih/yc_prodigy_ai_quant_does_it_make_any_sense",
+        "url": "https://www.reddit.com/r/quant/comments/1vli0ih/yc_prodigy_ai_quant_does_it_make_any_sense",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.reddit.com/r/quant/comments/1vndjle/are_you_guys_worried_about_ai_taking_quant_jobs",
+        "zh": "https://www.reddit.com/r/quant/comments/1vndjle/are_you_guys_worried_about_ai_taking_quant_jobs",
+        "url": "https://www.reddit.com/r/quant/comments/1vndjle/are_you_guys_worried_about_ai_taking_quant_jobs",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://di.gg/ai/mdvrj89u",
+        "zh": "https://di.gg/ai/mdvrj89u",
+        "url": "https://di.gg/ai/mdvrj89u",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://natlawreview.com/press-releases/ai-trading-bot-adoption-rises-across-global-markets-retail-investors-embrace",
+        "zh": "https://natlawreview.com/press-releases/ai-trading-bot-adoption-rises-across-global-markets-retail-investors-embrace",
+        "url": "https://natlawreview.com/press-releases/ai-trading-bot-adoption-rises-across-global-markets-retail-investors-embrace",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://di.gg/ai/yb1l6nt5",
+        "zh": "https://di.gg/ai/yb1l6nt5",
+        "url": "https://di.gg/ai/yb1l6nt5",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.youtube.com/watch?v=yMoUwyyTe3E",
+        "zh": "https://www.youtube.com/watch?v=yMoUwyyTe3E",
+        "url": "https://www.youtube.com/watch?v=yMoUwyyTe3E",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.netlify.com/blog/one-prompt-11-models-very-different-results",
+        "zh": "https://www.netlify.com/blog/one-prompt-11-models-very-different-results",
+        "url": "https://www.netlify.com/blog/one-prompt-11-models-very-different-results",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/TheTechDiggest/status/2087979493004591111",
+        "zh": "https://x.com/TheTechDiggest/status/2087979493004591111",
+        "url": "https://x.com/TheTechDiggest/status/2087979493004591111",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://github.com/unslothai/unsloth",
+        "zh": "https://github.com/unslothai/unsloth",
+        "url": "https://github.com/unslothai/unsloth",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/thsottiaux/status/2088103609477238858",
+        "zh": "https://x.com/thsottiaux/status/2088103609477238858",
+        "url": "https://x.com/thsottiaux/status/2088103609477238858",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/thsottiaux/status/2088133823619895712",
+        "zh": "https://x.com/thsottiaux/status/2088133823619895712",
+        "url": "https://x.com/thsottiaux/status/2088133823619895712",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/mattturck/status/2087978386195103916",
+        "zh": "https://x.com/mattturck/status/2087978386195103916",
+        "url": "https://x.com/mattturck/status/2087978386195103916",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption",
+        "zh": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption",
+        "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/realmadhuguru/status/2087916590964851172",
+        "zh": "https://x.com/realmadhuguru/status/2087916590964851172",
+        "url": "https://x.com/realmadhuguru/status/2087916590964851172",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.reddit.com/r/claudeai/comments/1vnpb13/the_three_ai_giants_be_like",
+        "zh": "https://www.reddit.com/r/claudeai/comments/1vnpb13/the_three_ai_giants_be_like",
+        "url": "https://www.reddit.com/r/claudeai/comments/1vnpb13/the_three_ai_giants_be_like",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.reddit.com/r/chatgptcoding/comments/1vn59g9/whats_the_most_annoying_step_between_your_browser",
+        "zh": "https://www.reddit.com/r/chatgptcoding/comments/1vn59g9/whats_the_most_annoying_step_between_your_browser",
+        "url": "https://www.reddit.com/r/chatgptcoding/comments/1vn59g9/whats_the_most_annoying_step_between_your_browser",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://rubyonrails.org/2026/8/12/llm-benchmarking-project",
+        "zh": "https://rubyonrails.org/2026/8/12/llm-benchmarking-project",
+        "url": "https://rubyonrails.org/2026/8/12/llm-benchmarking-project",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/petergyang/status/2087946170274570385",
+        "zh": "https://x.com/petergyang/status/2087946170274570385",
+        "url": "https://x.com/petergyang/status/2087946170274570385",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/danshipper/status/2087995350745244083",
+        "zh": "https://x.com/danshipper/status/2087995350745244083",
+        "url": "https://x.com/danshipper/status/2087995350745244083",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.reddit.com/r/saas/comments/1voiws3/whats_the_value_of_build_a_saas_tool_in_the_age",
+        "zh": "https://www.reddit.com/r/saas/comments/1voiws3/whats_the_value_of_build_a_saas_tool_in_the_age",
+        "url": "https://www.reddit.com/r/saas/comments/1voiws3/whats_the_value_of_build_a_saas_tool_in_the_age",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.reddit.com/r/saas/comments/1voei2o/expm_for_ai_now_building_agent_verification_how",
+        "zh": "https://www.reddit.com/r/saas/comments/1voei2o/expm_for_ai_now_building_agent_verification_how",
+        "url": "https://www.reddit.com/r/saas/comments/1voei2o/expm_for_ai_now_building_agent_verification_how",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2608.12419",
+        "zh": "https://arxiv.org/abs/2608.12419",
+        "url": "https://arxiv.org/abs/2608.12419",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2608.12435",
+        "zh": "https://arxiv.org/abs/2608.12435",
+        "url": "https://arxiv.org/abs/2608.12435",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2608.11233",
+        "zh": "https://arxiv.org/abs/2608.11233",
+        "url": "https://arxiv.org/abs/2608.11233",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2608.11236",
+        "zh": "https://arxiv.org/abs/2608.11236",
+        "url": "https://arxiv.org/abs/2608.11236",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2608.11242",
+        "zh": "https://arxiv.org/abs/2608.11242",
+        "url": "https://arxiv.org/abs/2608.11242",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2608.11249",
+        "zh": "https://arxiv.org/abs/2608.11249",
+        "url": "https://arxiv.org/abs/2608.11249",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2608.12447",
+        "zh": "https://arxiv.org/abs/2608.12447",
+        "url": "https://arxiv.org/abs/2608.12447",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2608.12438",
+        "zh": "https://arxiv.org/abs/2608.12438",
+        "url": "https://arxiv.org/abs/2608.12438",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2608.12436",
+        "zh": "https://arxiv.org/abs/2608.12436",
+        "url": "https://arxiv.org/abs/2608.12436",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2608.12441",
+        "zh": "https://arxiv.org/abs/2608.12441",
+        "url": "https://arxiv.org/abs/2608.12441",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2608.12446",
+        "zh": "https://arxiv.org/abs/2608.12446",
+        "url": "https://arxiv.org/abs/2608.12446",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2608.12422",
+        "zh": "https://arxiv.org/abs/2608.12422",
+        "url": "https://arxiv.org/abs/2608.12422",
+        "pt": "自动聚合线索"
+      }
+    ],
+    "graphDelta": {
+      "entities": 65,
+      "events": 98,
+      "relations": 64,
+      "storylines": 6
+    }
+  },
+  {
+    "type": "日报",
+    "topic": "AI",
+    "src": "现场自动聚合",
+    "ic": "i-doc",
+    "h": 8,
+    "auto": true,
+    "unverified": true,
+    "format": "storyline",
+    "synthesis": "two-pass-v2",
     "aggregatedAt": "2026-08-14",
     "title": "AI 每日雷达 · 2026-08-14",
     "time": "今天",
