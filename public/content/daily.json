@@ -9,6 +9,321 @@
     "unverified": true,
     "format": "storyline",
     "synthesis": "two-pass-v2",
+    "aggregatedAt": "2026-08-19",
+    "title": "AI 每日雷达 · 2026-08-19",
+    "time": "今天",
+    "sub": "Claude 零字节执行与宕机质疑、OpenAI 上报 FBI 并行，模型可靠性与监控边界成为焦点。",
+    "summary": "今日主题是 AI 信任边界与企业采用分化并行：Claude 的服务可靠性讨论、OpenAI 用户对话上报 FBI 以及社会对 AI 侵入的反弹，构成一组治理与信任压力；企业端 AI 预算则呈现中位数与头部 1% 的分化。对 Hyle 而言，Sainsbury’s 暂停面部识别、要求披露聊天机器人身份、Anthropic 推进文本水印以及 Deepfake 语音的外交风险，提供了更具体的监管与安全信号。对做 Company OS/企业 AI 的人，预算分化和中国模型替代讨论意味着成本、采购和本地选项需要重新评估。对金融 AI，用户对话被上报执法机构与预算分化信号并行，合规与成本效率应同时纳入设计。",
+    "bullets": [
+      "Claude 零字节执行与宕机质疑、OpenAI 上报 FBI 并行，模型可靠性与监控边界成为焦点。",
+      "企业 AI 预算呈中位数“午餐钱”与头部 1% 真实预算的分化，采用侧成本信号出现分层。",
+      "Sainsbury’s 因错误盗窃指控暂停 AI 面部识别，AI 侵入社会场景遭遇具体调整。",
+      "Deepfake 语音被视为外交电话风险，高敏感场景的伪造威胁值得关注。"
+    ],
+    "spotlight": [
+      {
+        "quote": "Deepfake 语音被视为外交电话的噩梦（#7）",
+        "why": "外交通话场景的深度伪造语音被作为方向性风险提出，提示伪造威胁向高敏感场景延伸。",
+        "entity": "Deepfake 语音",
+        "sources": [
+          "https://www.reddit.com/r/artificial/comments/1vr1hae/deepfake_voices_seem_like_a_nightmare_for"
+        ]
+      }
+    ],
+    "storylines": [
+      {
+        "id": "agent-security-trust",
+        "title": "AI 信任边界：模型可靠性、用户监控与披露压力",
+        "isNew": false,
+        "categories": [
+          "model_dev",
+          "hyle"
+        ],
+        "chain": [
+          {
+            "title": "Claude Opus 4.6 被报告在冻结协议下 900/900 次零字节执行",
+            "kind": "debate",
+            "entity": "Claude",
+            "relPrev": null,
+            "sources": [
+              "https://www.reddit.com/r/artificial/comments/1vs6wam/claude_opus_46_900900_zerobyte_executions_under_a"
+            ]
+          },
+          {
+            "title": "Claude 被质疑再次出现广泛宕机",
+            "kind": "debate",
+            "entity": "Claude",
+            "relPrev": null,
+            "sources": [
+              "https://www.reddit.com/r/artificial/comments/1vrzqys/is_claude_experiencing_another_widespread_outage"
+            ]
+          },
+          {
+            "title": "OpenAI 将高盛分析师的 ChatGPT 恐怖对话举报给 FBI 引发监控争议",
+            "kind": "debate",
+            "entity": "OpenAI",
+            "relPrev": null,
+            "sources": [
+              "https://www.reddit.com/r/artificial/comments/1volf3k/openai_reports_goldman_sachs_analyst_to_fbi_for"
+            ]
+          },
+          {
+            "title": "Anthropic 在 650 亿美元年化收入下推进 AI 文本水印，称 2026 年走向监管与 Agentic",
+            "kind": "update",
+            "entity": "Anthropic",
+            "relPrev": null,
+            "sources": [
+              "https://www.reddit.com/r/artificial/comments/1vrnmc4/anthropic_is_watermarking_ai_text_at_a_65b_run"
+            ]
+          }
+        ],
+        "narrative": "Claude 的零字节执行报告与宕机质疑并列，OpenAI 将用户对话上报 FBI 引发监控争议，Anthropic 同时推进文本水印并称走向监管与 Agentic。这些节点共同指向模型可靠性、用户监控和披露透明度压力上升。",
+        "carryOver": "延续 AI 信任危机与代理安全治理主线，今日从 Claude 服务可靠性、OpenAI 上报 FBI 到 Anthropic 水印推进。"
+      },
+      {
+        "id": "ai-social-backlash",
+        "title": "AI 社会反弹：误判暂停、披露呼声与就业担忧",
+        "isNew": true,
+        "categories": [
+          "hyle",
+          "new_thought"
+        ],
+        "chain": [
+          {
+            "title": "Sainsbury’s 因错误盗窃指控暂停 AI 面部识别",
+            "kind": "update",
+            "entity": "Sainsbury’s",
+            "relPrev": null,
+            "sources": [
+              "https://www.reddit.com/r/artificial/comments/1vrqj9f/sainsburys_pauses_ai_facial_recognition_after"
+            ]
+          },
+          {
+            "title": "舆论要求企业披露 AI 聊天机器人，而非编程成否认身份",
+            "kind": "debate",
+            "entity": "",
+            "relPrev": null,
+            "sources": [
+              "https://www.reddit.com/r/artificial/comments/1vrjkns/companies_should_be_required_to_disclose_they_are"
+            ]
+          },
+          {
+            "title": "美国年轻人对 AI 抢饭碗的担忧升温",
+            "kind": "debate",
+            "entity": "",
+            "relPrev": null,
+            "sources": [
+              "https://www.reddit.com/r/artificial/comments/1vs6yoh/young_adults_in_the_us_are_increasingly_wary_of"
+            ]
+          }
+        ],
+        "narrative": "零售场景因错误盗窃指控暂停面部识别，聊天机器人身份披露的舆论呼声出现，年轻人对 AI 抢饭碗的担忧升温。三者共同显示社会对 AI 侵入、欺骗性和就业影响的敏感度在提高。",
+        "carryOver": null
+      },
+      {
+        "id": "domain-ai-finance",
+        "title": "AI 支出分化与模型替代讨论",
+        "isNew": false,
+        "categories": [
+          "ai_finance",
+          "model_dev"
+        ],
+        "chain": [
+          {
+            "title": "企业 AI 支出呈中位数午餐钱与头部 1% 真实预算的分化",
+            "kind": "debate",
+            "entity": "企业 AI 支出",
+            "relPrev": null,
+            "sources": [
+              "https://www.reddit.com/r/artificial/comments/1vpxa46/the_median_company_is_spending_lunch_money_on_ai"
+            ]
+          },
+          {
+            "title": "中国 AI 模型已好到能替代实际付费工具，引发用户换用讨论",
+            "kind": "debate",
+            "entity": "中国 AI 模型",
+            "relPrev": null,
+            "sources": [
+              "https://www.reddit.com/r/artificial/comments/1vrhy7t/chinese_ai_models_are_getting_good_enough_to"
+            ]
+          }
+        ],
+        "narrative": "企业 AI 支出呈现中位数与头部 1% 的分化，同时中国模型被认为可替代部分付费工具。两条信号共同补充了 AI 经济性讨论中的采用侧变化。",
+        "carryOver": "延续 AI 经济学讨论，今日补充企业预算头尾分化与模型替代信号。"
+      },
+      {
+        "id": "ai-cognitive-automation-tradeoff",
+        "title": "个人认知依赖与自动化收益未明",
+        "isNew": true,
+        "categories": [
+          "new_thought",
+          "tech_trend"
+        ],
+        "chain": [
+          {
+            "title": "长期使用 LLM 是否弱化自主推理成为个人用户讨论焦点",
+            "kind": "debate",
+            "entity": "LLM",
+            "relPrev": null,
+            "sources": [
+              "https://www.reddit.com/r/artificial/comments/1vrv8z1/has_your_own_reasoning_gotten_weaker_since_you"
+            ]
+          },
+          {
+            "title": "AI 自动化何时真正省时仍是未解问题",
+            "kind": "debate",
+            "entity": "AI 自动化",
+            "relPrev": null,
+            "sources": [
+              "https://www.reddit.com/r/artificial/comments/1vs2zmc/at_what_point_does_ai_automation_actually_save"
+            ]
+          }
+        ],
+        "narrative": "个人用户开始讨论长期使用 LLM 是否会弱化自主推理，同时 AI 自动化到底何时真正省时仍无答案。反映采用后的个体认知与效率收益尚未形成共识。",
+        "carryOver": null
+      }
+    ],
+    "columns": [],
+    "scattered": [],
+    "sections": [
+      {
+        "h": "今日重点",
+        "bullets": [
+          "Deepfake 语音被视为外交电话的噩梦（#7）——外交通话场景的深度伪造语音被作为方向性风险提出，提示伪造威胁向高敏感场景延伸。"
+        ]
+      },
+      {
+        "h": "主题线 1 · AI 信任边界：模型可靠性、用户监控与披露压力",
+        "bullets": [
+          "Claude Opus 4.6 被报告在冻结协议下 900/900 次零字节执行 → Claude 被质疑再次出现广泛宕机 → OpenAI 将高盛分析师的 ChatGPT 恐怖对话举报给 FBI 引发监控争议 → Anthropic 在 650 亿美元年化收入下推进 AI 文本水印，称 2026 年走向监管与 Agentic",
+          "Claude 的零字节执行报告与宕机质疑并列，OpenAI 将用户对话上报 FBI 引发监控争议，Anthropic 同时推进文本水印并称走向监管与 Agentic。这些节点共同指向模型可靠性、用户监控和披露透明度压力上升。"
+        ]
+      },
+      {
+        "h": "主题线 2 · AI 社会反弹：误判暂停、披露呼声与就业担忧",
+        "bullets": [
+          "Sainsbury’s 因错误盗窃指控暂停 AI 面部识别 → 舆论要求企业披露 AI 聊天机器人，而非编程成否认身份 → 美国年轻人对 AI 抢饭碗的担忧升温",
+          "零售场景因错误盗窃指控暂停面部识别，聊天机器人身份披露的舆论呼声出现，年轻人对 AI 抢饭碗的担忧升温。三者共同显示社会对 AI 侵入、欺骗性和就业影响的敏感度在提高。"
+        ]
+      },
+      {
+        "h": "主题线 3 · AI 支出分化与模型替代讨论",
+        "bullets": [
+          "企业 AI 支出呈中位数午餐钱与头部 1% 真实预算的分化 → 中国 AI 模型已好到能替代实际付费工具，引发用户换用讨论",
+          "企业 AI 支出呈现中位数与头部 1% 的分化，同时中国模型被认为可替代部分付费工具。两条信号共同补充了 AI 经济性讨论中的采用侧变化。"
+        ]
+      },
+      {
+        "h": "主题线 4 · 个人认知依赖与自动化收益未明",
+        "bullets": [
+          "长期使用 LLM 是否弱化自主推理成为个人用户讨论焦点 → AI 自动化何时真正省时仍是未解问题",
+          "个人用户开始讨论长期使用 LLM 是否会弱化自主推理，同时 AI 自动化到底何时真正省时仍无答案。反映采用后的个体认知与效率收益尚未形成共识。"
+        ]
+      }
+    ],
+    "ev": [
+      {
+        "who": "web",
+        "en": "https://www.reddit.com/r/artificial/comments/1vs6wam/claude_opus_46_900900_zerobyte_executions_under_a",
+        "zh": "https://www.reddit.com/r/artificial/comments/1vs6wam/claude_opus_46_900900_zerobyte_executions_under_a",
+        "url": "https://www.reddit.com/r/artificial/comments/1vs6wam/claude_opus_46_900900_zerobyte_executions_under_a",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.reddit.com/r/artificial/comments/1vrzqys/is_claude_experiencing_another_widespread_outage",
+        "zh": "https://www.reddit.com/r/artificial/comments/1vrzqys/is_claude_experiencing_another_widespread_outage",
+        "url": "https://www.reddit.com/r/artificial/comments/1vrzqys/is_claude_experiencing_another_widespread_outage",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.reddit.com/r/artificial/comments/1volf3k/openai_reports_goldman_sachs_analyst_to_fbi_for",
+        "zh": "https://www.reddit.com/r/artificial/comments/1volf3k/openai_reports_goldman_sachs_analyst_to_fbi_for",
+        "url": "https://www.reddit.com/r/artificial/comments/1volf3k/openai_reports_goldman_sachs_analyst_to_fbi_for",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.reddit.com/r/artificial/comments/1vrnmc4/anthropic_is_watermarking_ai_text_at_a_65b_run",
+        "zh": "https://www.reddit.com/r/artificial/comments/1vrnmc4/anthropic_is_watermarking_ai_text_at_a_65b_run",
+        "url": "https://www.reddit.com/r/artificial/comments/1vrnmc4/anthropic_is_watermarking_ai_text_at_a_65b_run",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.reddit.com/r/artificial/comments/1vrqj9f/sainsburys_pauses_ai_facial_recognition_after",
+        "zh": "https://www.reddit.com/r/artificial/comments/1vrqj9f/sainsburys_pauses_ai_facial_recognition_after",
+        "url": "https://www.reddit.com/r/artificial/comments/1vrqj9f/sainsburys_pauses_ai_facial_recognition_after",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.reddit.com/r/artificial/comments/1vrjkns/companies_should_be_required_to_disclose_they_are",
+        "zh": "https://www.reddit.com/r/artificial/comments/1vrjkns/companies_should_be_required_to_disclose_they_are",
+        "url": "https://www.reddit.com/r/artificial/comments/1vrjkns/companies_should_be_required_to_disclose_they_are",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.reddit.com/r/artificial/comments/1vs6yoh/young_adults_in_the_us_are_increasingly_wary_of",
+        "zh": "https://www.reddit.com/r/artificial/comments/1vs6yoh/young_adults_in_the_us_are_increasingly_wary_of",
+        "url": "https://www.reddit.com/r/artificial/comments/1vs6yoh/young_adults_in_the_us_are_increasingly_wary_of",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.reddit.com/r/artificial/comments/1vpxa46/the_median_company_is_spending_lunch_money_on_ai",
+        "zh": "https://www.reddit.com/r/artificial/comments/1vpxa46/the_median_company_is_spending_lunch_money_on_ai",
+        "url": "https://www.reddit.com/r/artificial/comments/1vpxa46/the_median_company_is_spending_lunch_money_on_ai",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.reddit.com/r/artificial/comments/1vrhy7t/chinese_ai_models_are_getting_good_enough_to",
+        "zh": "https://www.reddit.com/r/artificial/comments/1vrhy7t/chinese_ai_models_are_getting_good_enough_to",
+        "url": "https://www.reddit.com/r/artificial/comments/1vrhy7t/chinese_ai_models_are_getting_good_enough_to",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.reddit.com/r/artificial/comments/1vrv8z1/has_your_own_reasoning_gotten_weaker_since_you",
+        "zh": "https://www.reddit.com/r/artificial/comments/1vrv8z1/has_your_own_reasoning_gotten_weaker_since_you",
+        "url": "https://www.reddit.com/r/artificial/comments/1vrv8z1/has_your_own_reasoning_gotten_weaker_since_you",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.reddit.com/r/artificial/comments/1vs2zmc/at_what_point_does_ai_automation_actually_save",
+        "zh": "https://www.reddit.com/r/artificial/comments/1vs2zmc/at_what_point_does_ai_automation_actually_save",
+        "url": "https://www.reddit.com/r/artificial/comments/1vs2zmc/at_what_point_does_ai_automation_actually_save",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.reddit.com/r/artificial/comments/1vr1hae/deepfake_voices_seem_like_a_nightmare_for",
+        "zh": "https://www.reddit.com/r/artificial/comments/1vr1hae/deepfake_voices_seem_like_a_nightmare_for",
+        "url": "https://www.reddit.com/r/artificial/comments/1vr1hae/deepfake_voices_seem_like_a_nightmare_for",
+        "pt": "自动聚合线索"
+      }
+    ],
+    "graphDelta": {
+      "entities": 8,
+      "events": 24,
+      "relations": 9,
+      "storylines": 4
+    }
+  },
+  {
+    "type": "日报",
+    "topic": "AI",
+    "src": "现场自动聚合",
+    "ic": "i-doc",
+    "h": 8,
+    "auto": true,
+    "unverified": true,
+    "format": "storyline",
+    "synthesis": "two-pass-v2",
     "aggregatedAt": "2026-08-18",
     "title": "AI 每日雷达 · 2026-08-18",
     "time": "今天",
