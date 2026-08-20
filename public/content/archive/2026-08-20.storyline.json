@@ -1,0 +1,959 @@
+{
+  "type": "日报",
+  "topic": "AI",
+  "src": "现场自动聚合",
+  "ic": "i-doc",
+  "h": 8,
+  "auto": true,
+  "unverified": true,
+  "format": "storyline",
+  "synthesis": "two-pass-v2",
+  "aggregatedAt": "2026-08-20",
+  "title": "AI 每日雷达 · 2026-08-20",
+  "time": "今天",
+  "sub": "DeepSeek V4 Pro发布后涨价，Z.ai以GLM-5.3同价卡位，开源模型竞争进入价格与能力并行阶段。",
+  "summary": "今日主题是“代理技能与训练基础设施并进，但企业价值释放仍取决于把模型接入真实工作流，同时安全治理缺口持续扩大”。DeepSeek V4 Pro与GLM-5.3同日发布，把开源模型竞争推向价格与缩放定律双线争议；Anthropic技能库与NVIDIA基准显示技能层正在工具化，但论文质疑其有效性，harness-native RL成为新路线。对做Company OS和金融AI的人而言，Box CEO与Anthropic研究员明确指向SaaS无头化、按交互收费，摩根大通LLM Suite的23万用户证明金融部署在规模化。对做Hyle的人而言，记忆短暂、多代理分工与部署实践仍是核心瓶颈，但具身基准与流体模拟显示能力侧仍在向前。安全侧Sam Altman暂停前沿RL训练、思想病毒出现、大额资金责任未解，代理治理紧迫性升级。",
+  "bullets": [
+    "DeepSeek V4 Pro发布后涨价，Z.ai以GLM-5.3同价卡位，开源模型竞争进入价格与能力并行阶段。",
+    "企业AI价值创造空间被进一步指向SaaS无头化与按交互收费，摩根大通LLM Suite的23万用户是金融部署规模化证据。",
+    "技能库从发布走向有效性争议，Agent Lightning与LEGO-RL代表harness-native RL的新训练路线。",
+    "代理安全治理缺口扩大：前沿RL训练暂停、思想病毒、大额资金责任未解。",
+    "记忆短暂与多代理分工仍是Hyle落地核心痛点，具身基准与流体模拟显示能力侧有进展。"
+  ],
+  "spotlight": [
+    {
+      "quote": "Claude Cowork上线移动和网页端，同时Claude集成Gmail和Google Drive，支持发送邮件和管理文件。",
+      "why": "Claude代理能力从聊天扩展到邮件和云存储，直接进入用户日常工作流。",
+      "entity": "Claude",
+      "sources": [
+        "https://x.com/claudeai/status/2089806039088517356",
+        "https://x.com/claudeai/status/2089756371570900999"
+      ]
+    },
+    {
+      "quote": "Z.ai创始人Jie Tang谈缩放LLM，为GLM-5.3提供背景。",
+      "why": "为同日GLM-5.3发布和社区缩放定律争议提供权威背景。",
+      "entity": "Z.ai",
+      "sources": [
+        "https://x.com/hsu_steve/status/2090050721307611414"
+      ]
+    },
+    {
+      "quote": "Guillermo Rauch 提出将所有公司上下文放入 monorepo 以供 AI 代理构建，属方向性判断。",
+      "why": "给企业级Agent开发提供统一上下文基础设施方向。",
+      "entity": "Guillermo Rauch",
+      "sources": [
+        "https://x.com/rauchg/status/2089804717337817514"
+      ]
+    }
+  ],
+  "storylines": [
+    {
+      "id": "domain-model-dev",
+      "title": "DeepSeek V4 Pro与GLM-5.3同日发布，开源模型价格与缩放定律争议升温",
+      "isNew": false,
+      "categories": [
+        "model_dev",
+        "tech_trend",
+        "ai_finance"
+      ],
+      "chain": [
+        {
+          "title": "DeepSeek V4 Pro发布并获评最佳开源模型",
+          "kind": "release",
+          "entity": "DeepSeek",
+          "relPrev": null,
+          "sources": [
+            "https://www.youtube.com/watch?v=jVM_JrGOfgM"
+          ]
+        },
+        {
+          "title": "DeepSeek涨价引发用户寻找20美元以下AI编码订阅",
+          "kind": "price",
+          "entity": "DeepSeek",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/chatgptcoding/comments/1vqsfbt/updated_best_ai_coding_subscription_under_20"
+          ]
+        },
+        {
+          "title": "Z.ai发布GLM-5.3 API，价格与GLM-5.2持平",
+          "kind": "release",
+          "entity": "Z.ai",
+          "relPrev": null,
+          "sources": [
+            "https://di.gg/ai/yznu0gct"
+          ]
+        },
+        {
+          "title": "社区讨论缩放定律，认为GLM-5.3是实验，中国模型能力受认可",
+          "kind": "debate",
+          "entity": "社区",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/localllama/comments/1vsf9eg/thoughts_about_scaling_law_zai"
+          ]
+        }
+      ],
+      "narrative": "DeepSeek V4 Pro发布后涨价，Z.ai同价发布GLM-5.3 API形成直接价格卡位，并把缩放定律讨论推到开源模型能力与成本平衡上。",
+      "carryOver": "domain-model-dev 承前：GPT-5.6、Gemini 3.7 Flash、Qwen3.8之后，开源模型发布潮继续向价格-能力双线竞争演进。"
+    },
+    {
+      "id": "domain-ai-enterprise-os",
+      "title": "企业AI价值被指向SaaS无头化与按交互收费，金融部署同步深化",
+      "isNew": false,
+      "categories": [
+        "ai_enterprise_os",
+        "ai_finance",
+        "new_thought"
+      ],
+      "chain": [
+        {
+          "title": "Aaron Levie指出AI模型与最终用户工作流之间的价值创造空间远超预期，但将AI扩散到企业仍需大量工作",
+          "kind": "debate",
+          "entity": "Box CEO Aaron Levie",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/levie/status/2089921630650925170"
+          ]
+        },
+        {
+          "title": "Anthropic研究员Tarun呼应Levie观点，提出将SaaS无头化供AI代理使用并按交互收费是未被利用的盈利机会",
+          "kind": "debate",
+          "entity": "Anthropic研究员Tarun",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/trq212/status/2089844723691479333"
+          ]
+        },
+        {
+          "title": "eZintegrations等平台已开始提供连接企业系统、驱动AI自动化工作流的工具",
+          "kind": "release",
+          "entity": "eZintegrations",
+          "relPrev": null,
+          "sources": [
+            "https://www.bizdata360.com/ai-agents-are-reshaping-enterprise-workflows",
+            "https://www.sap.com/resources/ai-agents-in-enterprise-workflows"
+          ]
+        },
+        {
+          "title": "银行测试企业语音AI",
+          "kind": "update",
+          "entity": "银行业",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/fintech/comments/1vt38rt/testing_enterprise_voice_ai_for_banking"
+          ]
+        },
+        {
+          "title": "摩根大通LLM Suite拥有23万用户",
+          "kind": "update",
+          "entity": "摩根大通",
+          "relPrev": null,
+          "sources": [
+            "https://www.facebook.com/jpmorganchase/posts/llm-suite-is-jpmorganchases-proprietary-generative-ai-platform-with-over-230000-/1173752834794400"
+          ]
+        }
+      ],
+      "narrative": "从价值判断到落地工具，企业AI的缺口被指向把SaaS改造成代理可用的无头接口，并按交互收费；金融业以语音AI和大规模LLM Suite用户数显示部署深化。",
+      "carryOver": "domain-ai-enterprise-os 承前：Cloudera AI Inference等从原型到受治理生产的迁移之后，企业AI价值空间进一步聚焦到SaaS无头化与金融部署规模化。"
+    },
+    {
+      "id": "agent-security-governance",
+      "title": "代理安全治理从训练暂停、思想病毒延伸到资金责任与欺骗检测",
+      "isNew": false,
+      "categories": [
+        "new_thought",
+        "hyle",
+        "ai_finance"
+      ],
+      "chain": [
+        {
+          "title": "Sam Altman 宣布暂停前沿 RL 训练以确保安全对齐",
+          "kind": "update",
+          "entity": "OpenAI",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/sama/status/2089787807611195475"
+          ]
+        },
+        {
+          "title": "研究者创造在AI代理间传播的思想病毒",
+          "kind": "paper",
+          "entity": "研究者",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/openai/comments/1vsm79t/researchers_created_mind_viruses_that_spread"
+          ]
+        },
+        {
+          "title": "AI代理将移动大额资金，责任归属未解",
+          "kind": "debate",
+          "entity": "AI代理",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/fintech/comments/1vrj9mk/ai_agents_are_about_to_move_serious_money_and",
+            "https://www.reddit.com/r/fintech/comments/1vptxsw/how_do_lenders_in_india_prove_what_their_ai"
+          ]
+        },
+        {
+          "title": "AI代理机器人绕过标准检测",
+          "kind": "debate",
+          "entity": "AI代理",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/fintech/comments/1vq11od/ai_agent_bots_hitting_our_platform_and_standard"
+          ]
+        }
+      ],
+      "narrative": "安全治理议题今天从模型训练层的暂停，扩展到代理间传播的思想病毒，以及金融场景中大额资金责任不清和bot检测被绕过。",
+      "carryOver": "agent-security-governance 承前：自主AI代理缺乏运行时安全与治理层的讨论，今天进一步落在训练暂停、思想病毒、资金责任与欺骗性代理上。"
+    },
+    {
+      "id": "agent-memory-long-term-evaluation-cross-domain",
+      "title": "代理记忆短暂与多代理分工仍是落地瓶颈，具身模拟与基准并行推进",
+      "isNew": false,
+      "categories": [
+        "hyle",
+        "model_dev",
+        "papers"
+      ],
+      "chain": [
+        {
+          "title": "用户抱怨AI代理记忆短暂如金鱼",
+          "kind": "debate",
+          "entity": "用户",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/ai_agents/comments/1vsgdyv/whats_the_most_annoying_problem_you_have_with_ai"
+          ]
+        },
+        {
+          "title": "讨论使用多个AI代理分工提升可靠性",
+          "kind": "debate",
+          "entity": "社区",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/ai_agents/comments/1vsofo8/using_multiple_ai_agents_instead_of_one_agent_for"
+          ]
+        },
+        {
+          "title": "讨论部署实用AI代理的实践",
+          "kind": "debate",
+          "entity": "社区",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/ai_agents/comments/1vsy2dt/deploying_practical_agents"
+          ]
+        },
+        {
+          "title": "构建具身AI开放基准测试场",
+          "kind": "release",
+          "entity": "具身AI",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/artificial/comments/1vt1dhc/an_ai_agent_just_stacked_blocks_in_a_live_physics"
+          ]
+        },
+        {
+          "title": "Qwen3.8-27B-IQ3_XXS展示流体模拟能力",
+          "kind": "release",
+          "entity": "Qwen",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/localllama/comments/1vsyj2o/fluid_simulation_qwen38_27b_iq3_xxs"
+          ]
+        }
+      ],
+      "narrative": "Hyle侧的记忆短暂问题继续驱动多代理分工与部署实践讨论，具身开放基准和Qwen量化模型的流体模拟能力显示能力层仍在向前。",
+      "carryOver": "agent-memory-long-term-evaluation-cross-domain 承前：代理记忆与可观测性挑战在08-09后继续，今天表现为记忆短暂、多代理分工和部署实践的集中讨论。"
+    },
+    {
+      "id": "agent-tooling-ecosystem",
+      "title": "代理技能库爆发后遇有效性质疑，harness-native RL成为新训练路线",
+      "isNew": false,
+      "categories": [
+        "tech_trend",
+        "gh_trending",
+        "papers"
+      ],
+      "chain": [
+        {
+          "title": "Anthropic Cybersecurity Skills 发布",
+          "kind": "release",
+          "entity": "Anthropic Cybersecurity Skills",
+          "relPrev": null,
+          "sources": [
+            "https://github.com/mukul975/Anthropic-Cybersecurity-Skills"
+          ]
+        },
+        {
+          "title": "NVIDIA AI Skill Benchmarks 显示代理增益",
+          "kind": "update",
+          "entity": "NVIDIA",
+          "relPrev": null,
+          "sources": [
+            "https://di.gg/ai/xm2ejtcn"
+          ]
+        },
+        {
+          "title": "mattpocock/skills 登上 GitHub trending",
+          "kind": "oss",
+          "entity": "mattpocock/skills",
+          "relPrev": null,
+          "sources": [
+            "https://github.com/mattpocock/skills"
+          ]
+        },
+        {
+          "title": "论文质疑 Agent Skills 有效性",
+          "kind": "paper",
+          "entity": "Agent Skills 论文",
+          "relPrev": null,
+          "sources": [
+            "https://arxiv.org/abs/2608.14036"
+          ]
+        },
+        {
+          "title": "munder-difflin 本地多代理 harness 发布",
+          "kind": "oss",
+          "entity": "munder-difflin",
+          "relPrev": null,
+          "sources": [
+            "https://github.com/chaitanyagiri/munder-difflin"
+          ]
+        },
+        {
+          "title": "Agent Lightning v1.0 提出 harness 原生 RL",
+          "kind": "paper",
+          "entity": "Agent Lightning",
+          "relPrev": null,
+          "sources": [
+            "https://arxiv.org/abs/2608.17528"
+          ]
+        },
+        {
+          "title": "LEGO-RL 提出编码代理 harness 原生 RL",
+          "kind": "paper",
+          "entity": "LEGO-RL",
+          "relPrev": null,
+          "sources": [
+            "https://arxiv.org/abs/2608.17393"
+          ]
+        }
+      ],
+      "narrative": "技能库从发布、趋势到基准显示增益，但论文质疑其有效性；同日多个本地多代理harness与Agent Lightning/LEGO-RL把重心推向harness原生RL。",
+      "carryOver": "agent-tooling-ecosystem 承前：CLI-Anything等代理工具开源后，技能库与本地训练harness成为代理工具链新焦点。"
+    }
+  ],
+  "columns": [],
+  "scattered": [
+    {
+      "note": "开源AI求职工具career-ops可在本地AI编码CLI中扫描职位、评估并定制简历",
+      "category": "model_dev",
+      "sources": [
+        "https://github.com/santifer/career-ops"
+      ]
+    },
+    {
+      "note": "Guillermo Rauch 推荐一款轻量级开源AI终端工具，称其比主流编码CLI小10-20倍，启动即时，可嵌入任何地方",
+      "category": "tech_trend",
+      "sources": [
+        "https://x.com/rauchg/status/2089831055373316274"
+      ]
+    },
+    {
+      "note": "Google CC 实验性 AI 代理扩展至澳大利亚/新西兰，并增加日历管理功能",
+      "category": "new_thought",
+      "sources": [
+        "https://x.com/googlelabs/status/2089812430885208361"
+      ]
+    },
+    {
+      "note": "AI 短视频生成工具 MoneyPrinterTurbo 登上 GitHub trending",
+      "category": "gh_trending",
+      "sources": [
+        "https://github.com/harry0703/MoneyPrinterTurbo"
+      ]
+    },
+    {
+      "note": "Reddit讨论：客户因AI开始质疑专业建议，反映AI对咨询服务信任关系的冲击",
+      "category": "ai_enterprise_os",
+      "sources": [
+        "https://www.reddit.com/r/msp/comments/1vr7q7i/are_clients_second_guessing_your_recommendation"
+      ]
+    },
+    {
+      "note": "404 Media调查显示稀有书籍被运至Amazon AI训练设施，AI训练数据来源问题发酵",
+      "category": "ai_finance",
+      "sources": [
+        "https://simonwillison.net/2026/Aug/17/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-tra/"
+      ]
+    },
+    {
+      "note": "提出边缘原生MoE推理系统FreeToken，将个人机器作为统一弹性推理平台",
+      "category": "papers",
+      "sources": [
+        "https://arxiv.org/abs/2608.16157"
+      ]
+    },
+    {
+      "note": "日本出现Claude Code学习书籍，引发开发者调侃",
+      "category": "model_dev",
+      "sources": [
+        "https://x.com/zarazhangrui/status/2089940315268645373"
+      ]
+    },
+    {
+      "note": "career-ops 开源AI求职工具发布，本地运行于AI编码CLI",
+      "category": "tech_trend",
+      "sources": [
+        "https://github.com/santifer/career-ops"
+      ]
+    },
+    {
+      "note": "swyx 开源 AI 工程师 YouTube 缩略图 A/B 测试经验",
+      "category": "new_thought",
+      "sources": [
+        "https://x.com/swyx/status/2089798658225266806"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "h": "今日重点",
+      "bullets": [
+        "Claude Cowork上线移动和网页端，同时Claude集成Gmail和Google Drive，支持发送邮件和管理文件。——Claude代理能力从聊天扩展到邮件和云存储，直接进入用户日常工作流。",
+        "Z.ai创始人Jie Tang谈缩放LLM，为GLM-5.3提供背景。——为同日GLM-5.3发布和社区缩放定律争议提供权威背景。",
+        "Guillermo Rauch 提出将所有公司上下文放入 monorepo 以供 AI 代理构建，属方向性判断。——给企业级Agent开发提供统一上下文基础设施方向。"
+      ]
+    },
+    {
+      "h": "主题线 1 · DeepSeek V4 Pro与GLM-5.3同日发布，开源模型价格与缩放定律争议升温",
+      "bullets": [
+        "DeepSeek V4 Pro发布并获评最佳开源模型 → DeepSeek涨价引发用户寻找20美元以下AI编码订阅 → Z.ai发布GLM-5.3 API，价格与GLM-5.2持平 → 社区讨论缩放定律，认为GLM-5.3是实验，中国模型能力受认可",
+        "DeepSeek V4 Pro发布后涨价，Z.ai同价发布GLM-5.3 API形成直接价格卡位，并把缩放定律讨论推到开源模型能力与成本平衡上。"
+      ]
+    },
+    {
+      "h": "主题线 2 · 企业AI价值被指向SaaS无头化与按交互收费，金融部署同步深化",
+      "bullets": [
+        "Aaron Levie指出AI模型与最终用户工作流之间的价值创造空间远超预期，但将AI扩散到企业仍需大量工作 → Anthropic研究员Tarun呼应Levie观点，提出将SaaS无头化供AI代理使用并按交互收费是未被利用的盈利机会 → eZintegrations等平台已开始提供连接企业系统、驱动AI自动化工作流的工具 → 银行测试企业语音AI → 摩根大通LLM Suite拥有23万用户",
+        "从价值判断到落地工具，企业AI的缺口被指向把SaaS改造成代理可用的无头接口，并按交互收费；金融业以语音AI和大规模LLM Suite用户数显示部署深化。"
+      ]
+    },
+    {
+      "h": "主题线 3 · 代理安全治理从训练暂停、思想病毒延伸到资金责任与欺骗检测",
+      "bullets": [
+        "Sam Altman 宣布暂停前沿 RL 训练以确保安全对齐 → 研究者创造在AI代理间传播的思想病毒 → AI代理将移动大额资金，责任归属未解 → AI代理机器人绕过标准检测",
+        "安全治理议题今天从模型训练层的暂停，扩展到代理间传播的思想病毒，以及金融场景中大额资金责任不清和bot检测被绕过。"
+      ]
+    },
+    {
+      "h": "主题线 4 · 代理记忆短暂与多代理分工仍是落地瓶颈，具身模拟与基准并行推进",
+      "bullets": [
+        "用户抱怨AI代理记忆短暂如金鱼 → 讨论使用多个AI代理分工提升可靠性 → 讨论部署实用AI代理的实践 → 构建具身AI开放基准测试场 → Qwen3.8-27B-IQ3_XXS展示流体模拟能力",
+        "Hyle侧的记忆短暂问题继续驱动多代理分工与部署实践讨论，具身开放基准和Qwen量化模型的流体模拟能力显示能力层仍在向前。"
+      ]
+    },
+    {
+      "h": "主题线 5 · 代理技能库爆发后遇有效性质疑，harness-native RL成为新训练路线",
+      "bullets": [
+        "Anthropic Cybersecurity Skills 发布 → NVIDIA AI Skill Benchmarks 显示代理增益 → mattpocock/skills 登上 GitHub trending → 论文质疑 Agent Skills 有效性 → munder-difflin 本地多代理 harness 发布 → Agent Lightning v1.0 提出 harness 原生 RL → LEGO-RL 提出编码代理 harness 原生 RL",
+        "技能库从发布、趋势到基准显示增益，但论文质疑其有效性；同日多个本地多代理harness与Agent Lightning/LEGO-RL把重心推向harness原生RL。"
+      ]
+    },
+    {
+      "h": "零散信号",
+      "bullets": [
+        "开源AI求职工具career-ops可在本地AI编码CLI中扫描职位、评估并定制简历",
+        "Guillermo Rauch 推荐一款轻量级开源AI终端工具，称其比主流编码CLI小10-20倍，启动即时，可嵌入任何地方",
+        "Google CC 实验性 AI 代理扩展至澳大利亚/新西兰，并增加日历管理功能",
+        "AI 短视频生成工具 MoneyPrinterTurbo 登上 GitHub trending",
+        "Reddit讨论：客户因AI开始质疑专业建议，反映AI对咨询服务信任关系的冲击",
+        "404 Media调查显示稀有书籍被运至Amazon AI训练设施，AI训练数据来源问题发酵",
+        "提出边缘原生MoE推理系统FreeToken，将个人机器作为统一弹性推理平台",
+        "日本出现Claude Code学习书籍，引发开发者调侃",
+        "career-ops 开源AI求职工具发布，本地运行于AI编码CLI",
+        "swyx 开源 AI 工程师 YouTube 缩略图 A/B 测试经验"
+      ]
+    }
+  ],
+  "ev": [
+    {
+      "who": "web",
+      "en": "https://www.youtube.com/watch?v=jVM_JrGOfgM",
+      "zh": "https://www.youtube.com/watch?v=jVM_JrGOfgM",
+      "url": "https://www.youtube.com/watch?v=jVM_JrGOfgM",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/chatgptcoding/comments/1vqsfbt/updated_best_ai_coding_subscription_under_20",
+      "zh": "https://www.reddit.com/r/chatgptcoding/comments/1vqsfbt/updated_best_ai_coding_subscription_under_20",
+      "url": "https://www.reddit.com/r/chatgptcoding/comments/1vqsfbt/updated_best_ai_coding_subscription_under_20",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://di.gg/ai/yznu0gct",
+      "zh": "https://di.gg/ai/yznu0gct",
+      "url": "https://di.gg/ai/yznu0gct",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/localllama/comments/1vsf9eg/thoughts_about_scaling_law_zai",
+      "zh": "https://www.reddit.com/r/localllama/comments/1vsf9eg/thoughts_about_scaling_law_zai",
+      "url": "https://www.reddit.com/r/localllama/comments/1vsf9eg/thoughts_about_scaling_law_zai",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/levie/status/2089921630650925170",
+      "zh": "https://x.com/levie/status/2089921630650925170",
+      "url": "https://x.com/levie/status/2089921630650925170",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/trq212/status/2089844723691479333",
+      "zh": "https://x.com/trq212/status/2089844723691479333",
+      "url": "https://x.com/trq212/status/2089844723691479333",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.bizdata360.com/ai-agents-are-reshaping-enterprise-workflows",
+      "zh": "https://www.bizdata360.com/ai-agents-are-reshaping-enterprise-workflows",
+      "url": "https://www.bizdata360.com/ai-agents-are-reshaping-enterprise-workflows",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.sap.com/resources/ai-agents-in-enterprise-workflows",
+      "zh": "https://www.sap.com/resources/ai-agents-in-enterprise-workflows",
+      "url": "https://www.sap.com/resources/ai-agents-in-enterprise-workflows",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/fintech/comments/1vt38rt/testing_enterprise_voice_ai_for_banking",
+      "zh": "https://www.reddit.com/r/fintech/comments/1vt38rt/testing_enterprise_voice_ai_for_banking",
+      "url": "https://www.reddit.com/r/fintech/comments/1vt38rt/testing_enterprise_voice_ai_for_banking",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.facebook.com/jpmorganchase/posts/llm-suite-is-jpmorganchases-proprietary-generative-ai-platform-with-over-230000-/1173752834794400",
+      "zh": "https://www.facebook.com/jpmorganchase/posts/llm-suite-is-jpmorganchases-proprietary-generative-ai-platform-with-over-230000-/1173752834794400",
+      "url": "https://www.facebook.com/jpmorganchase/posts/llm-suite-is-jpmorganchases-proprietary-generative-ai-platform-with-over-230000-/1173752834794400",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/sama/status/2089787807611195475",
+      "zh": "https://x.com/sama/status/2089787807611195475",
+      "url": "https://x.com/sama/status/2089787807611195475",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/openai/comments/1vsm79t/researchers_created_mind_viruses_that_spread",
+      "zh": "https://www.reddit.com/r/openai/comments/1vsm79t/researchers_created_mind_viruses_that_spread",
+      "url": "https://www.reddit.com/r/openai/comments/1vsm79t/researchers_created_mind_viruses_that_spread",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/fintech/comments/1vrj9mk/ai_agents_are_about_to_move_serious_money_and",
+      "zh": "https://www.reddit.com/r/fintech/comments/1vrj9mk/ai_agents_are_about_to_move_serious_money_and",
+      "url": "https://www.reddit.com/r/fintech/comments/1vrj9mk/ai_agents_are_about_to_move_serious_money_and",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/fintech/comments/1vptxsw/how_do_lenders_in_india_prove_what_their_ai",
+      "zh": "https://www.reddit.com/r/fintech/comments/1vptxsw/how_do_lenders_in_india_prove_what_their_ai",
+      "url": "https://www.reddit.com/r/fintech/comments/1vptxsw/how_do_lenders_in_india_prove_what_their_ai",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/fintech/comments/1vq11od/ai_agent_bots_hitting_our_platform_and_standard",
+      "zh": "https://www.reddit.com/r/fintech/comments/1vq11od/ai_agent_bots_hitting_our_platform_and_standard",
+      "url": "https://www.reddit.com/r/fintech/comments/1vq11od/ai_agent_bots_hitting_our_platform_and_standard",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/ai_agents/comments/1vsgdyv/whats_the_most_annoying_problem_you_have_with_ai",
+      "zh": "https://www.reddit.com/r/ai_agents/comments/1vsgdyv/whats_the_most_annoying_problem_you_have_with_ai",
+      "url": "https://www.reddit.com/r/ai_agents/comments/1vsgdyv/whats_the_most_annoying_problem_you_have_with_ai",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/ai_agents/comments/1vsofo8/using_multiple_ai_agents_instead_of_one_agent_for",
+      "zh": "https://www.reddit.com/r/ai_agents/comments/1vsofo8/using_multiple_ai_agents_instead_of_one_agent_for",
+      "url": "https://www.reddit.com/r/ai_agents/comments/1vsofo8/using_multiple_ai_agents_instead_of_one_agent_for",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/ai_agents/comments/1vsy2dt/deploying_practical_agents",
+      "zh": "https://www.reddit.com/r/ai_agents/comments/1vsy2dt/deploying_practical_agents",
+      "url": "https://www.reddit.com/r/ai_agents/comments/1vsy2dt/deploying_practical_agents",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/artificial/comments/1vt1dhc/an_ai_agent_just_stacked_blocks_in_a_live_physics",
+      "zh": "https://www.reddit.com/r/artificial/comments/1vt1dhc/an_ai_agent_just_stacked_blocks_in_a_live_physics",
+      "url": "https://www.reddit.com/r/artificial/comments/1vt1dhc/an_ai_agent_just_stacked_blocks_in_a_live_physics",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/localllama/comments/1vsyj2o/fluid_simulation_qwen38_27b_iq3_xxs",
+      "zh": "https://www.reddit.com/r/localllama/comments/1vsyj2o/fluid_simulation_qwen38_27b_iq3_xxs",
+      "url": "https://www.reddit.com/r/localllama/comments/1vsyj2o/fluid_simulation_qwen38_27b_iq3_xxs",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+      "zh": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+      "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://di.gg/ai/xm2ejtcn",
+      "zh": "https://di.gg/ai/xm2ejtcn",
+      "url": "https://di.gg/ai/xm2ejtcn",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/mattpocock/skills",
+      "zh": "https://github.com/mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2608.14036",
+      "zh": "https://arxiv.org/abs/2608.14036",
+      "url": "https://arxiv.org/abs/2608.14036",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/chaitanyagiri/munder-difflin",
+      "zh": "https://github.com/chaitanyagiri/munder-difflin",
+      "url": "https://github.com/chaitanyagiri/munder-difflin",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2608.17528",
+      "zh": "https://arxiv.org/abs/2608.17528",
+      "url": "https://arxiv.org/abs/2608.17528",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2608.17393",
+      "zh": "https://arxiv.org/abs/2608.17393",
+      "url": "https://arxiv.org/abs/2608.17393",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/claudeai/status/2089806039088517356",
+      "zh": "https://x.com/claudeai/status/2089806039088517356",
+      "url": "https://x.com/claudeai/status/2089806039088517356",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/claudeai/status/2089756371570900999",
+      "zh": "https://x.com/claudeai/status/2089756371570900999",
+      "url": "https://x.com/claudeai/status/2089756371570900999",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/hsu_steve/status/2090050721307611414",
+      "zh": "https://x.com/hsu_steve/status/2090050721307611414",
+      "url": "https://x.com/hsu_steve/status/2090050721307611414",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/rauchg/status/2089804717337817514",
+      "zh": "https://x.com/rauchg/status/2089804717337817514",
+      "url": "https://x.com/rauchg/status/2089804717337817514",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/santifer/career-ops",
+      "zh": "https://github.com/santifer/career-ops",
+      "url": "https://github.com/santifer/career-ops",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/zarazhangrui/status/2089940315268645373",
+      "zh": "https://x.com/zarazhangrui/status/2089940315268645373",
+      "url": "https://x.com/zarazhangrui/status/2089940315268645373",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/raczylo/status/2090132941640745145",
+      "zh": "https://x.com/raczylo/status/2090132941640745145",
+      "url": "https://x.com/raczylo/status/2090132941640745145",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://simonwillison.net/2026/Aug/19/smolmachines-untrusted-sandbox/",
+      "zh": "https://simonwillison.net/2026/Aug/19/smolmachines-untrusted-sandbox/",
+      "url": "https://simonwillison.net/2026/Aug/19/smolmachines-untrusted-sandbox/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/",
+      "zh": "https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/",
+      "url": "https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/rauchg/status/2089831055373316274",
+      "zh": "https://x.com/rauchg/status/2089831055373316274",
+      "url": "https://x.com/rauchg/status/2089831055373316274",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/realmadhuguru/status/2089918106814603728",
+      "zh": "https://x.com/realmadhuguru/status/2089918106814603728",
+      "url": "https://x.com/realmadhuguru/status/2089918106814603728",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://plugos.net/plugclaw",
+      "zh": "https://plugos.net/plugclaw",
+      "url": "https://plugos.net/plugclaw",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2608.15008",
+      "zh": "https://arxiv.org/abs/2608.15008",
+      "url": "https://arxiv.org/abs/2608.15008",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/googlelabs/status/2089812430885208361",
+      "zh": "https://x.com/googlelabs/status/2089812430885208361",
+      "url": "https://x.com/googlelabs/status/2089812430885208361",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/swyx/status/2089798658225266806",
+      "zh": "https://x.com/swyx/status/2089798658225266806",
+      "url": "https://x.com/swyx/status/2089798658225266806",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/openai/comments/1vt2glz/ai_is_my_only_friend",
+      "zh": "https://www.reddit.com/r/openai/comments/1vt2glz/ai_is_my_only_friend",
+      "url": "https://www.reddit.com/r/openai/comments/1vt2glz/ai_is_my_only_friend",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/petergyang/status/2089931839016468575",
+      "zh": "https://x.com/petergyang/status/2089931839016468575",
+      "url": "https://x.com/petergyang/status/2089931839016468575",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/chatgptcoding/comments/1vp4oux/how_do_i_start_learning_ai_maximizing_the_use_of",
+      "zh": "https://www.reddit.com/r/chatgptcoding/comments/1vp4oux/how_do_i_start_learning_ai_maximizing_the_use_of",
+      "url": "https://www.reddit.com/r/chatgptcoding/comments/1vp4oux/how_do_i_start_learning_ai_maximizing_the_use_of",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://momo5502.com/posts/2026-08-17-mw2-decompilation",
+      "zh": "https://momo5502.com/posts/2026-08-17-mw2-decompilation",
+      "url": "https://momo5502.com/posts/2026-08-17-mw2-decompilation",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/openai/comments/1vssx6l/what_do_you_think_ai_will_be_like_in_the_future",
+      "zh": "https://www.reddit.com/r/openai/comments/1vssx6l/what_do_you_think_ai_will_be_like_in_the_future",
+      "url": "https://www.reddit.com/r/openai/comments/1vssx6l/what_do_you_think_ai_will_be_like_in_the_future",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://maritime.sh/",
+      "zh": "https://maritime.sh/",
+      "url": "https://maritime.sh/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/physiclaw/PhysiClaw",
+      "zh": "https://github.com/physiclaw/PhysiClaw",
+      "url": "https://github.com/physiclaw/PhysiClaw",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/cjchanh/aaap-challenge",
+      "zh": "https://github.com/cjchanh/aaap-challenge",
+      "url": "https://github.com/cjchanh/aaap-challenge",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/CommanderTvis/writing/tree/main/rr-truffle-rewrite",
+      "zh": "https://github.com/CommanderTvis/writing/tree/main/rr-truffle-rewrite",
+      "url": "https://github.com/CommanderTvis/writing/tree/main/rr-truffle-rewrite",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/harry0703/MoneyPrinterTurbo",
+      "zh": "https://github.com/harry0703/MoneyPrinterTurbo",
+      "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/jundot/omlx",
+      "zh": "https://github.com/jundot/omlx",
+      "url": "https://github.com/jundot/omlx",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://huggingface.co/blog/amazon/strands-lerobot-streaming-data-loop",
+      "zh": "https://huggingface.co/blog/amazon/strands-lerobot-streaming-data-loop",
+      "url": "https://huggingface.co/blog/amazon/strands-lerobot-streaming-data-loop",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/msp/comments/1vr7q7i/are_clients_second_guessing_your_recommendation",
+      "zh": "https://www.reddit.com/r/msp/comments/1vr7q7i/are_clients_second_guessing_your_recommendation",
+      "url": "https://www.reddit.com/r/msp/comments/1vr7q7i/are_clients_second_guessing_your_recommendation",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/saas/comments/1vsi83m/why_arent_more_founders_building_boring_vertical",
+      "zh": "https://www.reddit.com/r/saas/comments/1vsi83m/why_arent_more_founders_building_boring_vertical",
+      "url": "https://www.reddit.com/r/saas/comments/1vsi83m/why_arent_more_founders_building_boring_vertical",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://openai.com/index/offering-zero-data-retention-for-frontier-models",
+      "zh": "https://openai.com/index/offering-zero-data-retention-for-frontier-models",
+      "url": "https://openai.com/index/offering-zero-data-retention-for-frontier-models",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://themobian.ai/",
+      "zh": "https://themobian.ai/",
+      "url": "https://themobian.ai/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/msp/comments/1vr9nbw/ai_images_in_channel_vendor_marketing",
+      "zh": "https://www.reddit.com/r/msp/comments/1vr9nbw/ai_images_in_channel_vendor_marketing",
+      "url": "https://www.reddit.com/r/msp/comments/1vr9nbw/ai_images_in_channel_vendor_marketing",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://simonwillison.net/2026/Aug/17/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-tra/",
+      "zh": "https://simonwillison.net/2026/Aug/17/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-tra/",
+      "url": "https://simonwillison.net/2026/Aug/17/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-tra/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://mcpservers.org/agent-skills",
+      "zh": "https://mcpservers.org/agent-skills",
+      "url": "https://mcpservers.org/agent-skills",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2608.16157",
+      "zh": "https://arxiv.org/abs/2608.16157",
+      "url": "https://arxiv.org/abs/2608.16157",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2608.17512",
+      "zh": "https://arxiv.org/abs/2608.17512",
+      "url": "https://arxiv.org/abs/2608.17512",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2608.18063",
+      "zh": "https://arxiv.org/abs/2608.18063",
+      "url": "https://arxiv.org/abs/2608.18063",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2608.17067",
+      "zh": "https://arxiv.org/abs/2608.17067",
+      "url": "https://arxiv.org/abs/2608.17067",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2608.17566",
+      "zh": "https://arxiv.org/abs/2608.17566",
+      "url": "https://arxiv.org/abs/2608.17566",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2608.17402",
+      "zh": "https://arxiv.org/abs/2608.17402",
+      "url": "https://arxiv.org/abs/2608.17402",
+      "pt": "自动聚合线索"
+    }
+  ],
+  "graphDelta": {
+    "entities": 51,
+    "events": 91,
+    "relations": 51,
+    "storylines": 5
+  }
+}
