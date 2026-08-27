@@ -1,0 +1,1149 @@
+{
+  "type": "日报",
+  "topic": "AI",
+  "src": "现场自动聚合",
+  "ic": "i-doc",
+  "h": 8,
+  "auto": true,
+  "unverified": true,
+  "format": "storyline",
+  "synthesis": "two-pass-v2",
+  "aggregatedAt": "2026-08-27",
+  "title": "AI 每日雷达 · 2026-08-27",
+  "time": "今天",
+  "sub": "Claude Code通过统一记忆、官方插件市场和垂直应用（求职、癌症辅助）爆发，标志着代理工具生态进入平台化阶段。",
+  "summary": "今日AI代理生态在工具平台化、企业信任缺口、金融评估体系与编程人文反思四个维度同步深化，效率争议推动本地化部署浪潮。对Hyle而言，代理token消耗与效率争议促使开发者转向多代理编排、量化小模型和本地部署，成本优化与本地化方案成为关键；对Company OS，企业部署率高但信任度低，安全失败数据集和SRE反模式警告提示必须将可观测性、安全执行与结果导向作为企业代理落地的核心；对金融AI，量化代理综述、交易基准和评估路线图集中发布，加上Instinct融资飙升，金融AI代理正进入可评估、可投资的快车道。",
+  "bullets": [
+    "Claude Code通过统一记忆、官方插件市场和垂直应用（求职、癌症辅助）爆发，标志着代理工具生态进入平台化阶段。",
+    "86%企业部署AI代理但仅34%高管信任，安全失败数据集与SRE反模式警告共同指向企业代理落地的信任与安全短板。",
+    "金融AI代理评估框架（量化综述、交易基准、评估路线图）一日内集中发布，Instinct估值5倍飙升，赛道进入资本驱动快车道。",
+    "AI编程讨论从效率转向人文反思：过度建设、编程语言必要性、评估指标失真引发行业自省。",
+    "代理token消耗5倍以上引发效率争议，量化小模型、本地代理和多代理编排成为应对方向。"
+  ],
+  "spotlight": [
+    {
+      "quote": "CommerceAgentBench开源，测试AI代理在107个真实电商任务中的实际行动能力。",
+      "why": "推动代理评估从语言能力转向真实世界行动能力，为电商自动化提供基准。",
+      "entity": "CommerceAgentBench",
+      "sources": [
+        "https://x.com/Alifkhanzxx/status/2092546712103456932"
+      ]
+    },
+    {
+      "quote": "投资人Aditya Agarwal认为公众对数据中心扩建的反感可理解，转折点在于AI能否找到治愈疾病的疗法。",
+      "why": "A级投资人指出AI社会接受度的关键转折点，直指算力扩建与公平性矛盾。",
+      "entity": "Aditya Agarwal",
+      "sources": [
+        "https://x.com/adityaag/status/2092290497826173186"
+      ]
+    },
+    {
+      "quote": "OpenAI将ChatGPT for Teachers扩展到55个美国学区，覆盖超10万教育者。",
+      "why": "AI教育应用大规模落地，显示AI在公共服务领域的渗透加速。",
+      "entity": "OpenAI",
+      "sources": [
+        "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts",
+        "https://openai.com/index/learning-never-stops"
+      ]
+    }
+  ],
+  "storylines": [
+    {
+      "id": "agent-tooling-ecosystem",
+      "title": "Claude Code工具生态平台化：统一记忆、插件市场与垂直应用爆发",
+      "isNew": false,
+      "categories": [
+        "model_dev",
+        "tech_trend",
+        "gh_trending"
+      ],
+      "chain": [
+        {
+          "title": "Claude发布跨聊天和Cowork的统一记忆功能",
+          "kind": "update",
+          "entity": "Anthropic",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/claudeai/status/2092299704864284888",
+            "https://x.com/_catwu/status/2092337156455051345",
+            "https://x.com/claudeai/status/2092299707653439497"
+          ]
+        },
+        {
+          "title": "Anthropic发布Claude Code官方及社区插件市场",
+          "kind": "release",
+          "entity": "Anthropic",
+          "relPrev": null,
+          "sources": [
+            "https://github.com/anthropics/claude-plugins-official",
+            "https://github.com/anthropics/claude-plugins-community"
+          ]
+        },
+        {
+          "title": "Anthropic研究员Tarun预告Claude Code将更可定制",
+          "kind": "update",
+          "entity": "Anthropic",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/trq212/status/2092303682616627311"
+          ]
+        },
+        {
+          "title": "基于Claude Code的AI求职框架ai-job-search走红GitHub",
+          "kind": "oss",
+          "entity": "社区",
+          "relPrev": null,
+          "sources": [
+            "https://github.com/MadsLorentzen/ai-job-search"
+          ]
+        },
+        {
+          "title": "开发者发布结合Obsidian与Claude Code的知识管理工具",
+          "kind": "oss",
+          "entity": "社区",
+          "relPrev": null,
+          "sources": [
+            "https://github.com/AgriciDaniel/claude-obsidian"
+          ]
+        },
+        {
+          "title": "Peter Yang开源癌症辅助AI技能fuck-cancer",
+          "kind": "oss",
+          "entity": "Peter Yang",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/petergyang/status/2092249012913258946"
+          ]
+        },
+        {
+          "title": "oMLX工具利用智能化KV缓存提升Mac本地运行Claude Code等长会话的性能",
+          "kind": "oss",
+          "entity": "oMLX",
+          "relPrev": null,
+          "sources": [
+            "https://www.youtube.com/watch?v=j557WxWtdZk"
+          ]
+        },
+        {
+          "title": "AI健康代理长期认知用户的愿景，强调终身记忆",
+          "kind": "debate",
+          "entity": "社区",
+          "relPrev": null,
+          "sources": [
+            "https://williamtp.substack.com/p/the-ai-health-agent-that-will-know"
+          ]
+        },
+        {
+          "title": "archify提供生成架构图等图表的AI代理技能",
+          "kind": "oss",
+          "entity": "archify",
+          "relPrev": null,
+          "sources": [
+            "https://github.com/tt-a1i/archify"
+          ]
+        }
+      ],
+      "narrative": "Claude Code在同一天内密集发布统一记忆、官方插件市场，并预告更深度的可定制性，迅速催生了求职、癌症辅助、知识管理等多个垂直应用，同时oMLX等工具在本地部署层提供性能优化，健康代理长期记忆愿景和archify技能进一步丰富生态，标志着Claude Code生态从单点工具快速进入平台化、应用化爆发阶段。",
+      "carryOver": "代理工具栈从框架向可观测、可审计的平台化跃迁，今日Claude Code官方插件市场与统一记忆发布，生态应用涌现。"
+    },
+    {
+      "id": "domain-ai-enterprise-os",
+      "title": "企业AI代理信任缺口与平台化应对：86%部署率与34%信任度的鸿沟",
+      "isNew": false,
+      "categories": [
+        "ai_enterprise_os",
+        "tech_trend"
+      ],
+      "chain": [
+        {
+          "title": "Aaron Levie称模型与企业工作流间存在巨大差距，应用AI公司将获溢价",
+          "kind": "debate",
+          "entity": "Aaron Levie",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/levie/status/2092466424694649066"
+          ]
+        },
+        {
+          "title": "Forrester/Boomi研究显示86%企业部署AI代理但仅34%高管信任决策",
+          "kind": "paper",
+          "entity": "Forrester/Boomi",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/technologynewsindia/comments/1vyqy2c/the_agentic_ai_trust_gap_86_deployment_vs_34"
+          ]
+        },
+        {
+          "title": "安全研究者发布AI代理安全失败数据集，覆盖1000起分类事件",
+          "kind": "oss",
+          "entity": "安全研究者",
+          "relPrev": null,
+          "sources": [
+            "https://huggingface.co/datasets/gemmozero/ai-agent-security-incidents"
+          ]
+        },
+        {
+          "title": "Cloudflare发布Agentic Cloud平台，构建durable AI agent与生产级工作流",
+          "kind": "release",
+          "entity": "Cloudflare",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/agentcontext_dev/comments/1vys742/cloudflares_agentic_cloud_the_complete_platform"
+          ]
+        },
+        {
+          "title": "微软将Microsoft 365 Roadmap更名为AI at Work Roadmap",
+          "kind": "update",
+          "entity": "微软",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/sysadmin/comments/1vyq2md/microsoft_365_roadmap_will_be_renamed_the_ai_at"
+          ]
+        },
+        {
+          "title": "OpenAI推出团队计划，集成ChatGPT/Codex与企业工具",
+          "kind": "release",
+          "entity": "OpenAI",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/thsottiaux/status/2092345330272780499"
+          ]
+        },
+        {
+          "title": "Vercel发布Run SDK与Vercel Connect，提供代理安全执行与连接",
+          "kind": "release",
+          "entity": "Vercel",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/rauchg/status/2092382653161107534",
+            "https://x.com/rauchg/status/2092352411839193234"
+          ]
+        },
+        {
+          "title": "SRE社区讨论认为AI代理用于toil是反模式，更适合只读诊断",
+          "kind": "debate",
+          "entity": "SRE社区",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/devops/comments/1vw1t7p/any_devops_or_sre_engineers_using_ai_agents"
+          ]
+        },
+        {
+          "title": "SaaS公司用AI代理检测销售线索，lead engagement提升20%",
+          "kind": "update",
+          "entity": "SaaS公司",
+          "relPrev": null,
+          "sources": [
+            "https://www.intellectyx.com/how-to-automate-internal-workflows-using-ai-agents"
+          ]
+        },
+        {
+          "title": "DevOps从业者称更多在制作MCP servers/skills和填充AGENTS.md",
+          "kind": "debate",
+          "entity": "DevOps社区",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/devops/comments/1vxahjd/does_devops_need_to_learn_ai_technologies_like"
+          ]
+        },
+        {
+          "title": "提出把AI coding workspace交接作为durable event，包含运行状态、仓库分支、diff、approvals、costs和可恢复检查点",
+          "kind": "debate",
+          "entity": "社区",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/saas/comments/1vzc64d/slack_for_ai_coding_workspaces"
+          ]
+        }
+      ],
+      "narrative": "Levie再次强调模型到工作流的巨大价值空间，同日Forrester报告揭示86%部署率与仅34%高管信任的鸿沟，安全失败数据集凸显信任短板；Cloudflare、微软、OpenAI、Vercel纷纷推出平台化方案，但SRE社区警告代理用于自动化toil是反模式，企业部署仍须谨慎选择场景，同时SaaS销售线索检测等成果导向应用初现。",
+      "carryOver": "企业AI价值被指向SaaS无头化与按交互收费，今日Levie再谈模型到工作流差距，Forrester报告揭示信任鸿沟，Cloudflare和微软推出平台化方案。"
+    },
+    {
+      "id": "domain-ai-finance",
+      "title": "金融AI代理评估体系初现与资本涌入：量化综述、交易基准与Instinct估值飙升",
+      "isNew": false,
+      "categories": [
+        "ai_finance",
+        "papers"
+      ],
+      "chain": [
+        {
+          "title": "学术综述提出LLM-based Quant Agent架构",
+          "kind": "paper",
+          "entity": "学术界",
+          "relPrev": null,
+          "sources": [
+            "https://arxiv.org/html/2503.21422v1"
+          ]
+        },
+        {
+          "title": "AINFT发布AI Trading Agent Benchmark",
+          "kind": "release",
+          "entity": "AINFT",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/Kelechiweb/status/2092687400900473002"
+          ]
+        },
+        {
+          "title": "Madhu Guru提出金融研究代理的评估路线图",
+          "kind": "debate",
+          "entity": "Madhu Guru",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/realmadhuguru/status/2092426017118028266"
+          ]
+        },
+        {
+          "title": "社区讨论AI数学突破是否影响量化分析师",
+          "kind": "debate",
+          "entity": "社区",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/quant/comments/1vy00b3/did_recent_breakthroughs_in_mathematics_by_ai"
+          ]
+        },
+        {
+          "title": "社区汇总AI交易相关公司/项目列表，共建生态地图",
+          "kind": "oss",
+          "entity": "社区",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/algotrading/comments/1vw2oa3/we_compiled_a_list_of_all_ai_trading_related"
+          ]
+        },
+        {
+          "title": "AI代理初创Instinct估值从5亿飙升至25亿，Benchmark和Index Ventures领投新一轮",
+          "kind": "funding",
+          "entity": "Instinct",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/RashiShrivast18/status/2092704431657586896"
+          ]
+        }
+      ],
+      "narrative": "金融AI代理评估在同一天内形成完整链条：学术综述提出量化代理架构，交易基准发布提供测试场，评估路线图给出系统化框架，社区围绕AI数学突破对量化分析师的冲击展开讨论，同时Instinct融资估值飙升显示资本对赛道的强烈信心，金融AI代理正从概念走向可评估、可落地的阶段。",
+      "carryOver": "AI支出分化与模型替代讨论，今日金融AI代理评估框架集中发布，Instinct融资估值飙升。"
+    },
+    {
+      "id": "ai-coding-humanistic-reflection",
+      "title": "AI编程人文反思：从效率工具到信任、过度建设与评估失真",
+      "isNew": true,
+      "categories": [
+        "new_thought",
+        "tech_trend"
+      ],
+      "chain": [
+        {
+          "title": "DHH播客访谈引发关于编程未来与AI代理工程的广泛讨论",
+          "kind": "debate",
+          "entity": "DHH",
+          "relPrev": null,
+          "sources": [
+            "https://www.youtube.com/watch?v=NYFGCESmikA"
+          ]
+        },
+        {
+          "title": "社区热议AI是否让编程语言变得不必要",
+          "kind": "debate",
+          "entity": "社区",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/claudecode/comments/1vz2iul/will_we_still_need_programming_languages_if_ai"
+          ]
+        },
+        {
+          "title": "开发者反思AI编程导致过度建设和提交边界意识回归",
+          "kind": "debate",
+          "entity": "开发者",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/chatgptcoding/comments/1vv1fxd/ai_coding_made_me_build_too_many_things",
+            "https://www.reddit.com/r/chatgptcoding/comments/1vzaljz/ai_made_me_care_about_commit_boundaries_again"
+          ]
+        },
+        {
+          "title": "研究者指出LLM评估指标提升但产品体验可能恶化",
+          "kind": "paper",
+          "entity": "研究者",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/DamiBenveniste/status/2092646314987168022"
+          ]
+        },
+        {
+          "title": "社区讨论为何信任Microsoft 365处理敏感文档却不信任AI",
+          "kind": "debate",
+          "entity": "社区",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/claudeai/comments/1vz8l1f/why_do_we_trust_microsoft_365_with_sensitive"
+          ]
+        },
+        {
+          "title": "新入门者寻求进入AI领域的路径",
+          "kind": "debate",
+          "entity": "社区",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/chatgptcoding/comments/1vx28qw/how_to_get_started_in_the_ai_world"
+          ]
+        },
+        {
+          "title": "开发者寻找分享用AI代理交付代码系统设计经验的人",
+          "kind": "debate",
+          "entity": "社区",
+          "relPrev": null,
+          "sources": [
+            "https://news.ycombinator.com/item?id=49444955"
+          ]
+        },
+        {
+          "title": "ponytail工具让AI代理模仿懒散高级开发者的行为模式",
+          "kind": "oss",
+          "entity": "ponytail",
+          "relPrev": null,
+          "sources": [
+            "https://github.com/DietrichGebert/ponytail"
+          ]
+        },
+        {
+          "title": "ai-engineering-from-scratch提供从零开始学习AI工程的项目",
+          "kind": "oss",
+          "entity": "社区",
+          "relPrev": null,
+          "sources": [
+            "https://github.com/rohitg00/ai-engineering-from-scratch"
+          ]
+        }
+      ],
+      "narrative": "DHH播客引发编程未来大讨论，社区从AI是否让编程语言变得不必要，深入到AI编程导致过度建设、提交边界意识回归，以及LLM评估指标与产品体验背离的问题，同时信任议题延伸至为何信任Office 365却不信任AI，新入门者寻求路径，ponytail等调侃工具出现，标志着AI编程讨论从效率工具转向对软件工程人文本质的反思。",
+      "carryOver": null
+    },
+    {
+      "id": "agent-efficiency-local-wave",
+      "title": "代理效率争议与本地化部署浪潮：token膨胀、量化小模型与多代理编排",
+      "isNew": true,
+      "categories": [
+        "hyle",
+        "tech_trend"
+      ],
+      "chain": [
+        {
+          "title": "AI代理消耗5倍以上token引发效率争议",
+          "kind": "debate",
+          "entity": "社区",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/artificial/comments/1vwkkoh/ai_agents_are_now_using_5x_more_tokens_than_humans"
+          ]
+        },
+        {
+          "title": "质疑AI代理是否优于确定性工作流",
+          "kind": "debate",
+          "entity": "社区",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/ai_agents/comments/1vy5dkh/are_ai_agents_actually_better_than_deterministic"
+          ]
+        },
+        {
+          "title": "分享6代理、1编排器、3反馈回路的软件工厂实践",
+          "kind": "oss",
+          "entity": "社区",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/ai_agents/comments/1vz8y6b/we_built_a_software_factory_with_6_scoped_agents"
+          ]
+        },
+        {
+          "title": "无需云代理，本地代理兴起",
+          "kind": "debate",
+          "entity": "社区",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/ai_agents/comments/1vzaa3d/we_dont_need_agents_in_the_cloud_we_have_agents"
+          ]
+        },
+        {
+          "title": "开发者展示从头训练量化LLM：30B tokens、60MB部署，高热度讨论",
+          "kind": "oss",
+          "entity": "开发者",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/machinelearning/comments/1vv2nkh/i_developed_my_own_quantized_llm_from_scratch"
+          ]
+        },
+        {
+          "title": "Qwen 3.8 Flash发布，本地LLM社区反响热烈",
+          "kind": "release",
+          "entity": "Qwen",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/Italianclownz/status/2092622738003222670"
+          ]
+        },
+        {
+          "title": "Perplexity与Nvidia合作推出本地AI代理",
+          "kind": "release",
+          "entity": "Perplexity/Nvidia",
+          "relPrev": null,
+          "sources": [
+            "https://venturebeat.com/infrastructure/perplexity-partners-with-nvidia-to-launch-portable-computer-a-fully-local-ai-agent-with-zero-token-costs"
+          ]
+        },
+        {
+          "title": "ClinePass提供低成本运行开源AI编码模型的方式",
+          "kind": "oss",
+          "entity": "ClinePass",
+          "relPrev": null,
+          "sources": [
+            "https://www.youtube.com/watch?v=Mgz4BbVhArc"
+          ]
+        },
+        {
+          "title": "openhuman发布个人AI超级智能，具备本地优先记忆与代理舰队编排能力",
+          "kind": "release",
+          "entity": "openhuman",
+          "relPrev": null,
+          "sources": [
+            "https://github.com/tinyhumansai/openhuman"
+          ]
+        },
+        {
+          "title": "Neoswarm展示用Neovim控制AI代理的界面",
+          "kind": "oss",
+          "entity": "Neoswarm",
+          "relPrev": null,
+          "sources": [
+            "https://neoswarm.dev/"
+          ]
+        },
+        {
+          "title": "分支改变代理使用体验，属工作流设计实践分享",
+          "kind": "debate",
+          "entity": "社区",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/ai_agents/comments/1vyxz8h/how_branching_changed_the_way_i_use_agents"
+          ]
+        },
+        {
+          "title": "在30项能力上比较CircleChat、Buzz和Duet的代理团队托管差异",
+          "kind": "debate",
+          "entity": "社区",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/ai_agents/comments/1vzamc9/where_should_a_team_of_agents_actually_live_i"
+          ]
+        }
+      ],
+      "narrative": "AI代理token消耗膨胀至5倍以上，引发社区对代理是否优于确定性工作流的质疑，开发者随即分享多代理编排、本地化部署等实践，同时从头训练量化LLM、Qwen 3.8 Flash发布、Perplexity与Nvidia合作本地代理、openhuman等工具涌现，代理效率问题正从争论走向具体的技术方案分化与本地化浪潮。",
+      "carryOver": null
+    }
+  ],
+  "columns": [],
+  "scattered": [
+    {
+      "note": "awesome-gpt-image-2 发布 GPT-Image-2 工业级提示词引擎与模板库",
+      "category": "gh_trending",
+      "sources": [
+        "https://github.com/freestylefly/awesome-gpt-image-2"
+      ]
+    },
+    {
+      "note": "BART被当作vintage LLM讨论，夹杂对Talkie 1930s的调侃，偏离代理主线",
+      "category": "hyle",
+      "sources": [
+        "https://www.reddit.com/r/machinelearning/comments/1vx94er/bart_a_vintage_llm_r"
+      ]
+    },
+    {
+      "note": "让社交和web数据更容易被AI代理访问，聚焦数据接入",
+      "category": "hyle",
+      "sources": [
+        "https://www.reddit.com/r/ai_agents/comments/1vz21mn/making_social_and_web_data_easier_for_ai_agents"
+      ]
+    },
+    {
+      "note": "构建持久世界让代理加入社会做真实研究，延续生成式代理/社会模拟脉络",
+      "category": "hyle",
+      "sources": [
+        "https://www.reddit.com/r/artificial/comments/1vz7jqo/building_a_persistent_world_where_your_agent"
+      ]
+    },
+    {
+      "note": "本地营销代理寻求AI代理与工作流自动化路线图建议，互动低",
+      "category": "ai_enterprise_os",
+      "sources": [
+        "https://www.reddit.com/r/ai_agents/comments/1vz3ego/starting_from_scratch_with_ai_agents_workflow"
+      ]
+    },
+    {
+      "note": "AI新闻汇总涵盖Waymo自研芯片、Claude蛋白质设计、35%网页合成内容，与Company OS域无直接链",
+      "category": "ai_enterprise_os",
+      "sources": [
+        "https://www.reddit.com/r/u_enoumen/comments/1vuybp8/ai_daily_news_rundown_waymo_drops_nvidia_for"
+      ]
+    },
+    {
+      "note": "IBM基础页面解释企业AI代理，无增量事件",
+      "category": "ai_enterprise_os",
+      "sources": [
+        "https://www.ibm.com/think/topics/ai-agents"
+      ]
+    },
+    {
+      "note": "企业AI基础设施指南，列出SiliconFlow等供应商",
+      "category": "ai_enterprise_os",
+      "sources": [
+        "https://www.siliconflow.com/articles/en/the-best-enterprise-AI-infrastructure"
+      ]
+    },
+    {
+      "note": "Straive企业AI部署战略框架，强调遗留系统与监管约束需要deliberate strategy",
+      "category": "ai_enterprise_os",
+      "sources": [
+        "https://www.straive.com/blogs/ai-deployment-strategy-a-step-by-step-framework-for-enterprises"
+      ]
+    },
+    {
+      "note": "企业AI推理部署云/边缘/本地比较，作者强调ROI与数字化转型框架",
+      "category": "ai_enterprise_os",
+      "sources": [
+        "https://www.techaheadcorp.com/blog/cloud-edge-on-prem-inference-compared"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "h": "今日重点",
+      "bullets": [
+        "CommerceAgentBench开源，测试AI代理在107个真实电商任务中的实际行动能力。——推动代理评估从语言能力转向真实世界行动能力，为电商自动化提供基准。",
+        "投资人Aditya Agarwal认为公众对数据中心扩建的反感可理解，转折点在于AI能否找到治愈疾病的疗法。——A级投资人指出AI社会接受度的关键转折点，直指算力扩建与公平性矛盾。",
+        "OpenAI将ChatGPT for Teachers扩展到55个美国学区，覆盖超10万教育者。——AI教育应用大规模落地，显示AI在公共服务领域的渗透加速。"
+      ]
+    },
+    {
+      "h": "主题线 1 · Claude Code工具生态平台化：统一记忆、插件市场与垂直应用爆发",
+      "bullets": [
+        "Claude发布跨聊天和Cowork的统一记忆功能 → Anthropic发布Claude Code官方及社区插件市场 → Anthropic研究员Tarun预告Claude Code将更可定制 → 基于Claude Code的AI求职框架ai-job-search走红GitHub → 开发者发布结合Obsidian与Claude Code的知识管理工具 → Peter Yang开源癌症辅助AI技能fuck-cancer → oMLX工具利用智能化KV缓存提升Mac本地运行Claude Code等长会话的性能 → AI健康代理长期认知用户的愿景，强调终身记忆 → archify提供生成架构图等图表的AI代理技能",
+        "Claude Code在同一天内密集发布统一记忆、官方插件市场，并预告更深度的可定制性，迅速催生了求职、癌症辅助、知识管理等多个垂直应用，同时oMLX等工具在本地部署层提供性能优化，健康代理长期记忆愿景和archify技能进一步丰富生态，标志着Claude Code生态从单点工具快速进入平台化、应用化爆发阶段。"
+      ]
+    },
+    {
+      "h": "主题线 2 · 企业AI代理信任缺口与平台化应对：86%部署率与34%信任度的鸿沟",
+      "bullets": [
+        "Aaron Levie称模型与企业工作流间存在巨大差距，应用AI公司将获溢价 → Forrester/Boomi研究显示86%企业部署AI代理但仅34%高管信任决策 → 安全研究者发布AI代理安全失败数据集，覆盖1000起分类事件 → Cloudflare发布Agentic Cloud平台，构建durable AI agent与生产级工作流 → 微软将Microsoft 365 Roadmap更名为AI at Work Roadmap → OpenAI推出团队计划，集成ChatGPT/Codex与企业工具 → Vercel发布Run SDK与Vercel Connect，提供代理安全执行与连接 → SRE社区讨论认为AI代理用于toil是反模式，更适合只读诊断 → SaaS公司用AI代理检测销售线索，lead engagement提升20% → DevOps从业者称更多在制作MCP servers/skills和填充AGENTS.md → 提出把AI coding workspace交接作为durable event，包含运行状态、仓库分支、diff、approvals、costs和可恢复检查点",
+        "Levie再次强调模型到工作流的巨大价值空间，同日Forrester报告揭示86%部署率与仅34%高管信任的鸿沟，安全失败数据集凸显信任短板；Cloudflare、微软、OpenAI、Vercel纷纷推出平台化方案，但SRE社区警告代理用于自动化toil是反模式，企业部署仍须谨慎选择场景，同时SaaS销售线索检测等成果导向应用初现。"
+      ]
+    },
+    {
+      "h": "主题线 3 · 金融AI代理评估体系初现与资本涌入：量化综述、交易基准与Instinct估值飙升",
+      "bullets": [
+        "学术综述提出LLM-based Quant Agent架构 → AINFT发布AI Trading Agent Benchmark → Madhu Guru提出金融研究代理的评估路线图 → 社区讨论AI数学突破是否影响量化分析师 → 社区汇总AI交易相关公司/项目列表，共建生态地图 → AI代理初创Instinct估值从5亿飙升至25亿，Benchmark和Index Ventures领投新一轮",
+        "金融AI代理评估在同一天内形成完整链条：学术综述提出量化代理架构，交易基准发布提供测试场，评估路线图给出系统化框架，社区围绕AI数学突破对量化分析师的冲击展开讨论，同时Instinct融资估值飙升显示资本对赛道的强烈信心，金融AI代理正从概念走向可评估、可落地的阶段。"
+      ]
+    },
+    {
+      "h": "主题线 4 · AI编程人文反思：从效率工具到信任、过度建设与评估失真",
+      "bullets": [
+        "DHH播客访谈引发关于编程未来与AI代理工程的广泛讨论 → 社区热议AI是否让编程语言变得不必要 → 开发者反思AI编程导致过度建设和提交边界意识回归 → 研究者指出LLM评估指标提升但产品体验可能恶化 → 社区讨论为何信任Microsoft 365处理敏感文档却不信任AI → 新入门者寻求进入AI领域的路径 → 开发者寻找分享用AI代理交付代码系统设计经验的人 → ponytail工具让AI代理模仿懒散高级开发者的行为模式 → ai-engineering-from-scratch提供从零开始学习AI工程的项目",
+        "DHH播客引发编程未来大讨论，社区从AI是否让编程语言变得不必要，深入到AI编程导致过度建设、提交边界意识回归，以及LLM评估指标与产品体验背离的问题，同时信任议题延伸至为何信任Office 365却不信任AI，新入门者寻求路径，ponytail等调侃工具出现，标志着AI编程讨论从效率工具转向对软件工程人文本质的反思。"
+      ]
+    },
+    {
+      "h": "主题线 5 · 代理效率争议与本地化部署浪潮：token膨胀、量化小模型与多代理编排",
+      "bullets": [
+        "AI代理消耗5倍以上token引发效率争议 → 质疑AI代理是否优于确定性工作流 → 分享6代理、1编排器、3反馈回路的软件工厂实践 → 无需云代理，本地代理兴起 → 开发者展示从头训练量化LLM：30B tokens、60MB部署，高热度讨论 → Qwen 3.8 Flash发布，本地LLM社区反响热烈 → Perplexity与Nvidia合作推出本地AI代理 → ClinePass提供低成本运行开源AI编码模型的方式 → openhuman发布个人AI超级智能，具备本地优先记忆与代理舰队编排能力 → Neoswarm展示用Neovim控制AI代理的界面 → 分支改变代理使用体验，属工作流设计实践分享 → 在30项能力上比较CircleChat、Buzz和Duet的代理团队托管差异",
+        "AI代理token消耗膨胀至5倍以上，引发社区对代理是否优于确定性工作流的质疑，开发者随即分享多代理编排、本地化部署等实践，同时从头训练量化LLM、Qwen 3.8 Flash发布、Perplexity与Nvidia合作本地代理、openhuman等工具涌现，代理效率问题正从争论走向具体的技术方案分化与本地化浪潮。"
+      ]
+    },
+    {
+      "h": "零散信号",
+      "bullets": [
+        "awesome-gpt-image-2 发布 GPT-Image-2 工业级提示词引擎与模板库",
+        "BART被当作vintage LLM讨论，夹杂对Talkie 1930s的调侃，偏离代理主线",
+        "让社交和web数据更容易被AI代理访问，聚焦数据接入",
+        "构建持久世界让代理加入社会做真实研究，延续生成式代理/社会模拟脉络",
+        "本地营销代理寻求AI代理与工作流自动化路线图建议，互动低",
+        "AI新闻汇总涵盖Waymo自研芯片、Claude蛋白质设计、35%网页合成内容，与Company OS域无直接链",
+        "IBM基础页面解释企业AI代理，无增量事件",
+        "企业AI基础设施指南，列出SiliconFlow等供应商",
+        "Straive企业AI部署战略框架，强调遗留系统与监管约束需要deliberate strategy",
+        "企业AI推理部署云/边缘/本地比较，作者强调ROI与数字化转型框架"
+      ]
+    }
+  ],
+  "ev": [
+    {
+      "who": "web",
+      "en": "https://x.com/claudeai/status/2092299704864284888",
+      "zh": "https://x.com/claudeai/status/2092299704864284888",
+      "url": "https://x.com/claudeai/status/2092299704864284888",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/_catwu/status/2092337156455051345",
+      "zh": "https://x.com/_catwu/status/2092337156455051345",
+      "url": "https://x.com/_catwu/status/2092337156455051345",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/claudeai/status/2092299707653439497",
+      "zh": "https://x.com/claudeai/status/2092299707653439497",
+      "url": "https://x.com/claudeai/status/2092299707653439497",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/anthropics/claude-plugins-official",
+      "zh": "https://github.com/anthropics/claude-plugins-official",
+      "url": "https://github.com/anthropics/claude-plugins-official",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/anthropics/claude-plugins-community",
+      "zh": "https://github.com/anthropics/claude-plugins-community",
+      "url": "https://github.com/anthropics/claude-plugins-community",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/trq212/status/2092303682616627311",
+      "zh": "https://x.com/trq212/status/2092303682616627311",
+      "url": "https://x.com/trq212/status/2092303682616627311",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/MadsLorentzen/ai-job-search",
+      "zh": "https://github.com/MadsLorentzen/ai-job-search",
+      "url": "https://github.com/MadsLorentzen/ai-job-search",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/AgriciDaniel/claude-obsidian",
+      "zh": "https://github.com/AgriciDaniel/claude-obsidian",
+      "url": "https://github.com/AgriciDaniel/claude-obsidian",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/petergyang/status/2092249012913258946",
+      "zh": "https://x.com/petergyang/status/2092249012913258946",
+      "url": "https://x.com/petergyang/status/2092249012913258946",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.youtube.com/watch?v=j557WxWtdZk",
+      "zh": "https://www.youtube.com/watch?v=j557WxWtdZk",
+      "url": "https://www.youtube.com/watch?v=j557WxWtdZk",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://williamtp.substack.com/p/the-ai-health-agent-that-will-know",
+      "zh": "https://williamtp.substack.com/p/the-ai-health-agent-that-will-know",
+      "url": "https://williamtp.substack.com/p/the-ai-health-agent-that-will-know",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/tt-a1i/archify",
+      "zh": "https://github.com/tt-a1i/archify",
+      "url": "https://github.com/tt-a1i/archify",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/levie/status/2092466424694649066",
+      "zh": "https://x.com/levie/status/2092466424694649066",
+      "url": "https://x.com/levie/status/2092466424694649066",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/technologynewsindia/comments/1vyqy2c/the_agentic_ai_trust_gap_86_deployment_vs_34",
+      "zh": "https://www.reddit.com/r/technologynewsindia/comments/1vyqy2c/the_agentic_ai_trust_gap_86_deployment_vs_34",
+      "url": "https://www.reddit.com/r/technologynewsindia/comments/1vyqy2c/the_agentic_ai_trust_gap_86_deployment_vs_34",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://huggingface.co/datasets/gemmozero/ai-agent-security-incidents",
+      "zh": "https://huggingface.co/datasets/gemmozero/ai-agent-security-incidents",
+      "url": "https://huggingface.co/datasets/gemmozero/ai-agent-security-incidents",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/agentcontext_dev/comments/1vys742/cloudflares_agentic_cloud_the_complete_platform",
+      "zh": "https://www.reddit.com/r/agentcontext_dev/comments/1vys742/cloudflares_agentic_cloud_the_complete_platform",
+      "url": "https://www.reddit.com/r/agentcontext_dev/comments/1vys742/cloudflares_agentic_cloud_the_complete_platform",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/sysadmin/comments/1vyq2md/microsoft_365_roadmap_will_be_renamed_the_ai_at",
+      "zh": "https://www.reddit.com/r/sysadmin/comments/1vyq2md/microsoft_365_roadmap_will_be_renamed_the_ai_at",
+      "url": "https://www.reddit.com/r/sysadmin/comments/1vyq2md/microsoft_365_roadmap_will_be_renamed_the_ai_at",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/thsottiaux/status/2092345330272780499",
+      "zh": "https://x.com/thsottiaux/status/2092345330272780499",
+      "url": "https://x.com/thsottiaux/status/2092345330272780499",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/rauchg/status/2092382653161107534",
+      "zh": "https://x.com/rauchg/status/2092382653161107534",
+      "url": "https://x.com/rauchg/status/2092382653161107534",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/rauchg/status/2092352411839193234",
+      "zh": "https://x.com/rauchg/status/2092352411839193234",
+      "url": "https://x.com/rauchg/status/2092352411839193234",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/devops/comments/1vw1t7p/any_devops_or_sre_engineers_using_ai_agents",
+      "zh": "https://www.reddit.com/r/devops/comments/1vw1t7p/any_devops_or_sre_engineers_using_ai_agents",
+      "url": "https://www.reddit.com/r/devops/comments/1vw1t7p/any_devops_or_sre_engineers_using_ai_agents",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.intellectyx.com/how-to-automate-internal-workflows-using-ai-agents",
+      "zh": "https://www.intellectyx.com/how-to-automate-internal-workflows-using-ai-agents",
+      "url": "https://www.intellectyx.com/how-to-automate-internal-workflows-using-ai-agents",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/devops/comments/1vxahjd/does_devops_need_to_learn_ai_technologies_like",
+      "zh": "https://www.reddit.com/r/devops/comments/1vxahjd/does_devops_need_to_learn_ai_technologies_like",
+      "url": "https://www.reddit.com/r/devops/comments/1vxahjd/does_devops_need_to_learn_ai_technologies_like",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/saas/comments/1vzc64d/slack_for_ai_coding_workspaces",
+      "zh": "https://www.reddit.com/r/saas/comments/1vzc64d/slack_for_ai_coding_workspaces",
+      "url": "https://www.reddit.com/r/saas/comments/1vzc64d/slack_for_ai_coding_workspaces",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/html/2503.21422v1",
+      "zh": "https://arxiv.org/html/2503.21422v1",
+      "url": "https://arxiv.org/html/2503.21422v1",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/Kelechiweb/status/2092687400900473002",
+      "zh": "https://x.com/Kelechiweb/status/2092687400900473002",
+      "url": "https://x.com/Kelechiweb/status/2092687400900473002",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/realmadhuguru/status/2092426017118028266",
+      "zh": "https://x.com/realmadhuguru/status/2092426017118028266",
+      "url": "https://x.com/realmadhuguru/status/2092426017118028266",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/quant/comments/1vy00b3/did_recent_breakthroughs_in_mathematics_by_ai",
+      "zh": "https://www.reddit.com/r/quant/comments/1vy00b3/did_recent_breakthroughs_in_mathematics_by_ai",
+      "url": "https://www.reddit.com/r/quant/comments/1vy00b3/did_recent_breakthroughs_in_mathematics_by_ai",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/algotrading/comments/1vw2oa3/we_compiled_a_list_of_all_ai_trading_related",
+      "zh": "https://www.reddit.com/r/algotrading/comments/1vw2oa3/we_compiled_a_list_of_all_ai_trading_related",
+      "url": "https://www.reddit.com/r/algotrading/comments/1vw2oa3/we_compiled_a_list_of_all_ai_trading_related",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/RashiShrivast18/status/2092704431657586896",
+      "zh": "https://x.com/RashiShrivast18/status/2092704431657586896",
+      "url": "https://x.com/RashiShrivast18/status/2092704431657586896",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.youtube.com/watch?v=NYFGCESmikA",
+      "zh": "https://www.youtube.com/watch?v=NYFGCESmikA",
+      "url": "https://www.youtube.com/watch?v=NYFGCESmikA",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/claudecode/comments/1vz2iul/will_we_still_need_programming_languages_if_ai",
+      "zh": "https://www.reddit.com/r/claudecode/comments/1vz2iul/will_we_still_need_programming_languages_if_ai",
+      "url": "https://www.reddit.com/r/claudecode/comments/1vz2iul/will_we_still_need_programming_languages_if_ai",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/chatgptcoding/comments/1vv1fxd/ai_coding_made_me_build_too_many_things",
+      "zh": "https://www.reddit.com/r/chatgptcoding/comments/1vv1fxd/ai_coding_made_me_build_too_many_things",
+      "url": "https://www.reddit.com/r/chatgptcoding/comments/1vv1fxd/ai_coding_made_me_build_too_many_things",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/chatgptcoding/comments/1vzaljz/ai_made_me_care_about_commit_boundaries_again",
+      "zh": "https://www.reddit.com/r/chatgptcoding/comments/1vzaljz/ai_made_me_care_about_commit_boundaries_again",
+      "url": "https://www.reddit.com/r/chatgptcoding/comments/1vzaljz/ai_made_me_care_about_commit_boundaries_again",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/DamiBenveniste/status/2092646314987168022",
+      "zh": "https://x.com/DamiBenveniste/status/2092646314987168022",
+      "url": "https://x.com/DamiBenveniste/status/2092646314987168022",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/claudeai/comments/1vz8l1f/why_do_we_trust_microsoft_365_with_sensitive",
+      "zh": "https://www.reddit.com/r/claudeai/comments/1vz8l1f/why_do_we_trust_microsoft_365_with_sensitive",
+      "url": "https://www.reddit.com/r/claudeai/comments/1vz8l1f/why_do_we_trust_microsoft_365_with_sensitive",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/chatgptcoding/comments/1vx28qw/how_to_get_started_in_the_ai_world",
+      "zh": "https://www.reddit.com/r/chatgptcoding/comments/1vx28qw/how_to_get_started_in_the_ai_world",
+      "url": "https://www.reddit.com/r/chatgptcoding/comments/1vx28qw/how_to_get_started_in_the_ai_world",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://news.ycombinator.com/item?id=49444955",
+      "zh": "https://news.ycombinator.com/item?id=49444955",
+      "url": "https://news.ycombinator.com/item?id=49444955",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/DietrichGebert/ponytail",
+      "zh": "https://github.com/DietrichGebert/ponytail",
+      "url": "https://github.com/DietrichGebert/ponytail",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/rohitg00/ai-engineering-from-scratch",
+      "zh": "https://github.com/rohitg00/ai-engineering-from-scratch",
+      "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/artificial/comments/1vwkkoh/ai_agents_are_now_using_5x_more_tokens_than_humans",
+      "zh": "https://www.reddit.com/r/artificial/comments/1vwkkoh/ai_agents_are_now_using_5x_more_tokens_than_humans",
+      "url": "https://www.reddit.com/r/artificial/comments/1vwkkoh/ai_agents_are_now_using_5x_more_tokens_than_humans",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/ai_agents/comments/1vy5dkh/are_ai_agents_actually_better_than_deterministic",
+      "zh": "https://www.reddit.com/r/ai_agents/comments/1vy5dkh/are_ai_agents_actually_better_than_deterministic",
+      "url": "https://www.reddit.com/r/ai_agents/comments/1vy5dkh/are_ai_agents_actually_better_than_deterministic",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/ai_agents/comments/1vz8y6b/we_built_a_software_factory_with_6_scoped_agents",
+      "zh": "https://www.reddit.com/r/ai_agents/comments/1vz8y6b/we_built_a_software_factory_with_6_scoped_agents",
+      "url": "https://www.reddit.com/r/ai_agents/comments/1vz8y6b/we_built_a_software_factory_with_6_scoped_agents",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/ai_agents/comments/1vzaa3d/we_dont_need_agents_in_the_cloud_we_have_agents",
+      "zh": "https://www.reddit.com/r/ai_agents/comments/1vzaa3d/we_dont_need_agents_in_the_cloud_we_have_agents",
+      "url": "https://www.reddit.com/r/ai_agents/comments/1vzaa3d/we_dont_need_agents_in_the_cloud_we_have_agents",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/machinelearning/comments/1vv2nkh/i_developed_my_own_quantized_llm_from_scratch",
+      "zh": "https://www.reddit.com/r/machinelearning/comments/1vv2nkh/i_developed_my_own_quantized_llm_from_scratch",
+      "url": "https://www.reddit.com/r/machinelearning/comments/1vv2nkh/i_developed_my_own_quantized_llm_from_scratch",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/Italianclownz/status/2092622738003222670",
+      "zh": "https://x.com/Italianclownz/status/2092622738003222670",
+      "url": "https://x.com/Italianclownz/status/2092622738003222670",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://venturebeat.com/infrastructure/perplexity-partners-with-nvidia-to-launch-portable-computer-a-fully-local-ai-agent-with-zero-token-costs",
+      "zh": "https://venturebeat.com/infrastructure/perplexity-partners-with-nvidia-to-launch-portable-computer-a-fully-local-ai-agent-with-zero-token-costs",
+      "url": "https://venturebeat.com/infrastructure/perplexity-partners-with-nvidia-to-launch-portable-computer-a-fully-local-ai-agent-with-zero-token-costs",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.youtube.com/watch?v=Mgz4BbVhArc",
+      "zh": "https://www.youtube.com/watch?v=Mgz4BbVhArc",
+      "url": "https://www.youtube.com/watch?v=Mgz4BbVhArc",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/tinyhumansai/openhuman",
+      "zh": "https://github.com/tinyhumansai/openhuman",
+      "url": "https://github.com/tinyhumansai/openhuman",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://neoswarm.dev/",
+      "zh": "https://neoswarm.dev/",
+      "url": "https://neoswarm.dev/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/ai_agents/comments/1vyxz8h/how_branching_changed_the_way_i_use_agents",
+      "zh": "https://www.reddit.com/r/ai_agents/comments/1vyxz8h/how_branching_changed_the_way_i_use_agents",
+      "url": "https://www.reddit.com/r/ai_agents/comments/1vyxz8h/how_branching_changed_the_way_i_use_agents",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/ai_agents/comments/1vzamc9/where_should_a_team_of_agents_actually_live_i",
+      "zh": "https://www.reddit.com/r/ai_agents/comments/1vzamc9/where_should_a_team_of_agents_actually_live_i",
+      "url": "https://www.reddit.com/r/ai_agents/comments/1vzamc9/where_should_a_team_of_agents_actually_live_i",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/Alifkhanzxx/status/2092546712103456932",
+      "zh": "https://x.com/Alifkhanzxx/status/2092546712103456932",
+      "url": "https://x.com/Alifkhanzxx/status/2092546712103456932",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/adityaag/status/2092290497826173186",
+      "zh": "https://x.com/adityaag/status/2092290497826173186",
+      "url": "https://x.com/adityaag/status/2092290497826173186",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts",
+      "zh": "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts",
+      "url": "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://openai.com/index/learning-never-stops",
+      "zh": "https://openai.com/index/learning-never-stops",
+      "url": "https://openai.com/index/learning-never-stops",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/freestylefly/awesome-gpt-image-2",
+      "zh": "https://github.com/freestylefly/awesome-gpt-image-2",
+      "url": "https://github.com/freestylefly/awesome-gpt-image-2",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/machinelearning/comments/1vx94er/bart_a_vintage_llm_r",
+      "zh": "https://www.reddit.com/r/machinelearning/comments/1vx94er/bart_a_vintage_llm_r",
+      "url": "https://www.reddit.com/r/machinelearning/comments/1vx94er/bart_a_vintage_llm_r",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/ai_agents/comments/1vz21mn/making_social_and_web_data_easier_for_ai_agents",
+      "zh": "https://www.reddit.com/r/ai_agents/comments/1vz21mn/making_social_and_web_data_easier_for_ai_agents",
+      "url": "https://www.reddit.com/r/ai_agents/comments/1vz21mn/making_social_and_web_data_easier_for_ai_agents",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/artificial/comments/1vz7jqo/building_a_persistent_world_where_your_agent",
+      "zh": "https://www.reddit.com/r/artificial/comments/1vz7jqo/building_a_persistent_world_where_your_agent",
+      "url": "https://www.reddit.com/r/artificial/comments/1vz7jqo/building_a_persistent_world_where_your_agent",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/ai_agents/comments/1vz3ego/starting_from_scratch_with_ai_agents_workflow",
+      "zh": "https://www.reddit.com/r/ai_agents/comments/1vz3ego/starting_from_scratch_with_ai_agents_workflow",
+      "url": "https://www.reddit.com/r/ai_agents/comments/1vz3ego/starting_from_scratch_with_ai_agents_workflow",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/u_enoumen/comments/1vuybp8/ai_daily_news_rundown_waymo_drops_nvidia_for",
+      "zh": "https://www.reddit.com/r/u_enoumen/comments/1vuybp8/ai_daily_news_rundown_waymo_drops_nvidia_for",
+      "url": "https://www.reddit.com/r/u_enoumen/comments/1vuybp8/ai_daily_news_rundown_waymo_drops_nvidia_for",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.ibm.com/think/topics/ai-agents",
+      "zh": "https://www.ibm.com/think/topics/ai-agents",
+      "url": "https://www.ibm.com/think/topics/ai-agents",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.siliconflow.com/articles/en/the-best-enterprise-AI-infrastructure",
+      "zh": "https://www.siliconflow.com/articles/en/the-best-enterprise-AI-infrastructure",
+      "url": "https://www.siliconflow.com/articles/en/the-best-enterprise-AI-infrastructure",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.straive.com/blogs/ai-deployment-strategy-a-step-by-step-framework-for-enterprises",
+      "zh": "https://www.straive.com/blogs/ai-deployment-strategy-a-step-by-step-framework-for-enterprises",
+      "url": "https://www.straive.com/blogs/ai-deployment-strategy-a-step-by-step-framework-for-enterprises",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.techaheadcorp.com/blog/cloud-edge-on-prem-inference-compared",
+      "zh": "https://www.techaheadcorp.com/blog/cloud-edge-on-prem-inference-compared",
+      "url": "https://www.techaheadcorp.com/blog/cloud-edge-on-prem-inference-compared",
+      "pt": "自动聚合线索"
+    }
+  ],
+  "graphDelta": {
+    "entities": 44,
+    "events": 102,
+    "relations": 45,
+    "storylines": 5
+  }
+}
