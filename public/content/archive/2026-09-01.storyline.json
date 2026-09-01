@@ -1,0 +1,870 @@
+{
+  "type": "日报",
+  "topic": "AI",
+  "src": "现场自动聚合",
+  "ic": "i-doc",
+  "h": 8,
+  "auto": true,
+  "unverified": true,
+  "format": "storyline",
+  "synthesis": "two-pass-v2",
+  "aggregatedAt": "2026-09-01",
+  "title": "AI 每日雷达 · 2026-09-01",
+  "time": "今天",
+  "sub": "编码代理生态进入共享协作新阶段，ChatGPT Work 2500万用户与OpenClaw转向共享代理标志个人工具向团队平台演进。",
+  "summary": "今日主题为“模型发布潮与代理生态双线加速”：开源模型密集发布，OpenAI回归开源；编码代理从个人工具迈向共享协作，企业AI采用因推理成本下降而引爆，同时代理安全风险与协作现实挑战浮现。对Hyle而言，大规模代理协作的调侃与实证挑战提示需务实评估代理社会模拟的可行性；对Company OS，推理成本下降与Kubernetes成熟为企业AI代理落地铺平道路；对金融AI，NVIDIA与IBM的技术推进正将突破年预测变为现实。",
+  "bullets": [
+    "编码代理生态进入共享协作新阶段，ChatGPT Work 2500万用户与OpenClaw转向共享代理标志个人工具向团队平台演进。",
+    "推理成本下降通过Jevons悖论引爆企业AI代理采用，Kubernetes 82%采用率显示基础设施已就绪。",
+    "代理安全风险升级：Claude Code自动模式被突破与RL奖励黑客讨论警示自主代理需更强治理。",
+    "OpenAI回归开源发布GPT-OSS-120B，开源模型竞争加剧。",
+    "大规模代理协作面临现实挑战，游戏开发实证研究揭示生成式AI应用障碍。"
+  ],
+  "spotlight": [
+    {
+      "quote": "OpenAI因Cursor被SpaceX收购而终止向其提供模型",
+      "why": "揭示AI模型供应链受商业并购影响，可能引发对模型供应稳定性的关注",
+      "entity": "OpenAI / Cursor",
+      "sources": [
+        "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex"
+      ]
+    }
+  ],
+  "storylines": [
+    {
+      "id": "agent-security-governance",
+      "title": "代理安全治理：漏洞传闻、自动模式突破与RL奖励黑客风险",
+      "isNew": false,
+      "categories": [
+        "tech_trend",
+        "new_thought"
+      ],
+      "chain": [
+        {
+          "title": "剑桥教授指出漏洞传闻足以导致安全漏洞利用",
+          "kind": "debate",
+          "entity": "Anil Madhavapeddy",
+          "relPrev": null,
+          "sources": [
+            "https://simonwillison.net/2026/Aug/28/just-a-rumour-of-a-bug/"
+          ]
+        },
+        {
+          "title": "安全研究者突破Claude Code Opus 5自动模式",
+          "kind": "debate",
+          "entity": "Claude Code",
+          "relPrev": null,
+          "sources": [
+            "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/"
+          ]
+        },
+        {
+          "title": "HuggingFace事件引发RL奖励黑客与CoT监控讨论，Replit CEO称RL可验证奖励将产生越来越奇怪的行为",
+          "kind": "debate",
+          "entity": "Replit CEO",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/amasad/status/2094215744842248418"
+          ]
+        },
+        {
+          "title": "Every联合创始人认为RL奖励黑客问题6个月内可解决但需努力",
+          "kind": "debate",
+          "entity": "Every联合创始人",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/danshipper/status/2094073306739576964"
+          ]
+        }
+      ],
+      "narrative": "从漏洞传闻的利用风险，到Claude Code自动模式被实际突破，再到RL奖励黑客的广泛讨论，代理安全治理的边界持续扩展。这些事件共同指向AI代理在自主性增强时面临的新型安全威胁。",
+      "carryOver": "代理安全治理从企业数据控制延伸至合谋认证与行为测试，今日进一步暴露自动模式突破与RL奖励黑客风险。"
+    },
+    {
+      "id": "terminal-coding-agents-surge",
+      "title": "编码代理生态加速：共享协作、平台扩展与百万行代码里程碑",
+      "isNew": false,
+      "categories": [
+        "tech_trend",
+        "ai_enterprise_os"
+      ],
+      "chain": [
+        {
+          "title": "ChatGPT Work与Codex活跃用户达2500万并重置付费用量",
+          "kind": "update",
+          "entity": "ChatGPT Work",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/thsottiaux/status/2094252447271366730"
+          ]
+        },
+        {
+          "title": "OpenClaw团队转向共享代理，放弃本地编码工具",
+          "kind": "update",
+          "entity": "OpenClaw",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/steipete/status/2094290652649636173"
+          ]
+        },
+        {
+          "title": "Garry Tan预测未来AI代理群体将共享被黑的Artifactory并自主使用软件",
+          "kind": "debate",
+          "entity": "Garry Tan",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/garrytan/status/2094225933108748653"
+          ]
+        },
+        {
+          "title": "Polimill使用OpenAI GPT和Codex为日本市政构建AI基础设施",
+          "kind": "update",
+          "entity": "Polimill",
+          "relPrev": null,
+          "sources": [
+            "https://openai.com/index/polimill"
+          ]
+        },
+        {
+          "title": "Simon Willison详细解析ChatGPT Work产品复杂性",
+          "kind": "debate",
+          "entity": "Simon Willison",
+          "relPrev": null,
+          "sources": [
+            "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/"
+          ]
+        },
+        {
+          "title": "GitHub Copilot推出自动化Dependabot PR分类及LLM生产评估指南",
+          "kind": "release",
+          "entity": "GitHub Copilot",
+          "relPrev": null,
+          "sources": [
+            "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-automate-dependabot-pull-request-triage/",
+            "https://github.blog/ai-and-ml/llms/how-to-evaluate-llms-before-production/"
+          ]
+        },
+        {
+          "title": "社区讨论Agent Skills安装与MCP Tools vs Skills区分",
+          "kind": "debate",
+          "entity": "社区",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/ai_agents/comments/1roe8k8/5_agent_skills_id_install_before_starting_any_new",
+            "https://platform.uno/blog/contextual-ai-mcptools-vs-skills"
+          ]
+        },
+        {
+          "title": "Simon Willison引用Paul Dix称AI编写了100万行代码并精炼至可靠运行",
+          "kind": "update",
+          "entity": "AI编码",
+          "relPrev": null,
+          "sources": [
+            "https://simonwillison.net/2026/Aug/26/paul-dix/"
+          ]
+        }
+      ],
+      "narrative": "编码代理从个人工具迈向共享协作与平台化，ChatGPT Work用户激增，OpenClaw转向共享代理，GitHub Copilot扩展自动化功能，社区热议技能与工具区分，同时AI编写百万行代码的里程碑标志着代理能力的实质性进展。",
+      "carryOver": "编码代理生态加速：Replit与OpenAI合作，Vercel发布微型开源代理，平台化宣言出现，今日进一步展现用户增长、共享代理转向与GitHub Copilot平台扩展。"
+    },
+    {
+      "id": "domain-model-dev",
+      "title": "开源模型密集发布：OpenAI回归开源，腾讯、Qwen、Ai2等齐发新模型",
+      "isNew": false,
+      "categories": [
+        "model_dev"
+      ],
+      "chain": [
+        {
+          "title": "腾讯发布开源大模型Hy4 Preview，770B参数，49B激活，1M上下文",
+          "kind": "release",
+          "entity": "腾讯",
+          "relPrev": null,
+          "sources": [
+            "https://simonwillison.net/2026/Aug/29/hy4/"
+          ]
+        },
+        {
+          "title": "Google发布Gemini Omni 1.1 Flash，提供更多控制能力",
+          "kind": "release",
+          "entity": "Google",
+          "relPrev": null,
+          "sources": [
+            "https://deepmind.google/blog/gemini-omni-1-1-flash-lets-you-build-with-more-control/"
+          ]
+        },
+        {
+          "title": "Qwen发布Qwen3.8-Flash-Next多模态MoE模型，125B总参，6B激活",
+          "kind": "release",
+          "entity": "Qwen",
+          "relPrev": null,
+          "sources": [
+            "https://simonwillison.net/2026/Aug/26/qwen38-flash-next/"
+          ]
+        },
+        {
+          "title": "Google发布Gemini 3.5 Transcribe智能语音转文字模型",
+          "kind": "release",
+          "entity": "Google",
+          "relPrev": null,
+          "sources": [
+            "https://deepmind.google/blog/intelligent-transcription-with-gemini-3-5-transcribe/"
+          ]
+        },
+        {
+          "title": "Ai2发布Olmo 3开源模型，强调模型流和完全可追溯性",
+          "kind": "release",
+          "entity": "Ai2",
+          "relPrev": null,
+          "sources": [
+            "https://allenai.org/blog/olmo3"
+          ]
+        },
+        {
+          "title": "Anthropic发布Claude Sonnet 5与Claude Science",
+          "kind": "release",
+          "entity": "Anthropic",
+          "relPrev": null,
+          "sources": [
+            "https://clawvard.school/blog"
+          ]
+        },
+        {
+          "title": "LLaDA 2.0文本扩散模型发布，100B参数，为最大文本扩散模型",
+          "kind": "release",
+          "entity": "LLaDA",
+          "relPrev": null,
+          "sources": [
+            "https://magazine.sebastianraschka.com/p/state-of-llms-2025"
+          ]
+        },
+        {
+          "title": "OpenAI发布开源推理模型GPT-OSS-120B，117B参数，回归开源",
+          "kind": "release",
+          "entity": "OpenAI",
+          "relPrev": null,
+          "sources": [
+            "https://modal.com/resources/best-open-source-reasoning-models-rl"
+          ]
+        },
+        {
+          "title": "OpenAI o1推理模型总结展示推理能力新进展",
+          "kind": "update",
+          "entity": "OpenAI",
+          "relPrev": null,
+          "sources": [
+            "https://openai.com/index/learning-to-reason-with-llms"
+          ]
+        },
+        {
+          "title": "OpenAI在泰国和巴西扩张，支持AI初创和开发者",
+          "kind": "update",
+          "entity": "OpenAI",
+          "relPrev": null,
+          "sources": [
+            "https://openai.com/index/supporting-next-generation-ai-startups-thailand",
+            "https://openai.com/index/expanding-our-presence-in-brazil"
+          ]
+        }
+      ],
+      "narrative": "今日模型发布密度极高，腾讯、Google、Qwen、Ai2、Anthropic、OpenAI等纷纷推出新模型或更新，尤其OpenAI以GPT-OSS-120B回归开源，标志着开源模型竞争进入新阶段。",
+      "carryOver": "DeepSeek V4 Pro与GLM-5.3同日发布，开源模型价格与缩放定律争议升温，今日迎来更密集的模型发布潮，OpenAI回归开源成为亮点。"
+    },
+    {
+      "id": "domain-ai-enterprise-os",
+      "title": "推理成本下降引爆企业AI代理采用，基础设施成熟度创新高",
+      "isNew": false,
+      "categories": [
+        "ai_enterprise_os",
+        "tech_trend"
+      ],
+      "chain": [
+        {
+          "title": "Aaron Levie论述token成本下降通过Jevons悖论推动企业AI代理大规模采用",
+          "kind": "debate",
+          "entity": "Aaron Levie",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/levie/status/2094123406811922930"
+          ]
+        },
+        {
+          "title": "d-Matrix CEO呼应推理成本降低将极大扩展企业AI采用",
+          "kind": "debate",
+          "entity": "d-Matrix CEO",
+          "relPrev": null,
+          "sources": [
+            "https://www.techcircle.in/2026/03/11/lower-inference-costs-could-dramatically-expand-enterprise-ai-adoption-d-matrix-ceo"
+          ]
+        },
+        {
+          "title": "AetherLink与AllosAI发布企业AI代理采用基础设施与ROI指南",
+          "kind": "release",
+          "entity": "AetherLink/AllosAI",
+          "relPrev": null,
+          "sources": [
+            "https://aetherlink.ai/en/blog/agentic-ai-enterprise-adoption-2026-infrastructure-roi-guide",
+            "https://aetherlink.ai/fi/blog/agentic-ai-enterprise-adoption-2026-infrastructure-roi-guide",
+            "https://allosai.com/blog/enterprise-ai-infrastructure-deployment"
+          ]
+        },
+        {
+          "title": "Penguin Solutions与Deepgram合作部署企业语音AI推理基础设施",
+          "kind": "release",
+          "entity": "Penguin Solutions/Deepgram",
+          "relPrev": null,
+          "sources": [
+            "https://www.automation.com/article/penguin-solutions-deepgram-deployment-optimized-ai-inference-infrastructure-enterprise-voice-ai",
+            "https://www.barchart.com/story/news/797688/penguin-solutions-selected-by-deepgram-to-enable-deployment-of-optimized-ai-inference-infrastructure-for-enterprise-voice-ai",
+            "https://www.businesswire.com/news/home/20260317793434/en/Penguin-Solutions-Selected-by-Deepgram-to-Enable-Deployment-of-Optimized-AI-Inference-Infrastructure-for-Enterprise-Voice-AI"
+          ]
+        },
+        {
+          "title": "Kubernetes生产采用率达82%，标志AI基础设施成熟",
+          "kind": "update",
+          "entity": "Kubernetes",
+          "relPrev": null,
+          "sources": [
+            "https://www.webpronews.com/kubernetes-conquers-production-82-adoption-signals-ai-infrastructure-shift"
+          ]
+        },
+        {
+          "title": "探讨Agentic AI通过智能、适应性和持续学习变革企业平台",
+          "kind": "debate",
+          "entity": "Agentic AI",
+          "relPrev": null,
+          "sources": [
+            "https://www.bcg.com/publications/2025/how-agentic-ai-is-transforming-enterprise-platforms"
+          ]
+        },
+        {
+          "title": "Valorem Reply发布2026年7种AI代理工作流自动化类型指南",
+          "kind": "release",
+          "entity": "Valorem Reply",
+          "relPrev": null,
+          "sources": [
+            "https://www.reply.com/valorem-reply/en/resources/insights/blog/7-types-of-ai-agents-to-automate-your-workflows"
+          ]
+        },
+        {
+          "title": "ChatGPT Ads年收入达10亿美元推动AI普及",
+          "kind": "update",
+          "entity": "ChatGPT Ads",
+          "relPrev": null,
+          "sources": [
+            "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads"
+          ]
+        }
+      ],
+      "narrative": "推理成本下降成为企业AI代理采用的催化剂，从思想领袖论述到基础设施指南、语音推理部署和Kubernetes高采用率，企业AI落地条件日趋成熟，ChatGPT Ads的10亿美元收入也印证了AI商业化的加速。",
+      "carryOver": "企业AI代理信任缺口与平台化应对：86%部署率与34%信任度的鸿沟，今日转向推理成本下降驱动的采用浪潮与基础设施成熟。"
+    },
+    {
+      "id": "domain-ai-finance",
+      "title": "金融AI突破年预测应验：NVIDIA模型蒸馏与IBM工作流自动化齐推进",
+      "isNew": false,
+      "categories": [
+        "ai_finance",
+        "papers"
+      ],
+      "chain": [
+        {
+          "title": "Nicolas Pinto预测2025年是金融AI突破年",
+          "kind": "debate",
+          "entity": "Nicolas Pinto",
+          "relPrev": null,
+          "sources": [
+            "https://www.linkedin.com/posts/nicolaspinto1_innovation-fintech-banking-activity-7404422140109692928-rtfu"
+          ]
+        },
+        {
+          "title": "NVIDIA发布AI模型蒸馏示例解决量化金融LLM采用挑战",
+          "kind": "release",
+          "entity": "NVIDIA",
+          "relPrev": null,
+          "sources": [
+            "https://www.facebook.com/NVIDIA.AP/posts/llm-adoption-in-quant-finance-is-constrained-by-cost-latency-and-integration-com/916302004053597",
+            "https://www.facebook.com/NVIDIAAI/posts/llm-adoption-in-quant-finance-is-constrained-by-cost-latency-and-integration-com/1284214127076199",
+            "https://www.linkedin.com/posts/nvidia-ai_llm-adoption-in-quant-finance-is-constrained-activity-7401397190134566912-PvNT"
+          ]
+        },
+        {
+          "title": "IBM展示Agentic AI在金融工作流自动化的应用",
+          "kind": "paper",
+          "entity": "IBM",
+          "relPrev": null,
+          "sources": [
+            "https://developer.ibm.com/articles/agentic-ai-workflow-automation"
+          ]
+        },
+        {
+          "title": "金融科技公司招聘量化开发人员，反映金融AI人才需求",
+          "kind": "update",
+          "entity": "金融科技公司",
+          "relPrev": null,
+          "sources": [
+            "https://www.quant-capital.co.uk/markets-list/fintech-vendor"
+          ]
+        }
+      ],
+      "narrative": "Nicolas Pinto的2025金融AI突破年预测正在成为现实，NVIDIA通过模型蒸馏降低量化金融LLM门槛，IBM展示Agentic工作流自动化，加上人才招聘信号，金融AI正从概念走向落地。",
+      "carryOver": "金融AI代理评估体系初现与资本涌入：量化综述、交易基准与Instinct估值飙升，今日NVIDIA与IBM推动技术落地，人才需求印证趋势。"
+    },
+    {
+      "id": "agent-benchmark-evolution",
+      "title": "代理基准持续扩展：MC-Bench等40个LLM基准列表发布",
+      "isNew": false,
+      "categories": [
+        "papers",
+        "tech_trend"
+      ],
+      "chain": [
+        {
+          "title": "MC-Bench等40个LLM基准测试列表发布，含Minecraft交互式基准",
+          "kind": "release",
+          "entity": "MC-Bench",
+          "relPrev": null,
+          "sources": [
+            "https://arize.com/blog/llm-benchmarks-mmlu-codexglue-gsm8k"
+          ]
+        }
+      ],
+      "narrative": "基准测试生态不断丰富，新增40个基准涵盖交互式环境，为代理能力评估提供更多维度。",
+      "carryOver": "代理基准向真实长周期与评估纠偏演进，今日新增MC-Bench等40个基准列表，进一步扩展评估工具集。"
+    }
+  ],
+  "columns": [],
+  "scattered": [
+    {
+      "note": "Google 搜索新增 AI 旅行规划和家居装饰功能",
+      "category": "new_thought",
+      "sources": [
+        "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/",
+        "https://blog.google/products-and-platforms/products/search/home-decor-tips/"
+      ]
+    },
+    {
+      "note": "Replit CEO Amjad Masad发推称“构建文明很简单：[Agent() for _ in range(100)]”，以代码隐喻调侃大规模代理协作的易用性，引发对多代理系统的讨论。",
+      "category": "hyle",
+      "sources": [
+        "https://x.com/amasad/status/2094280256933056971"
+      ]
+    },
+    {
+      "note": "实证论文《An Empirical Study of GenAI Adoption in Open-Source Game Development》研究生成式AI在游戏开发中的工具、任务及开发者挑战，涉及生成式代理的应用。",
+      "category": "hyle",
+      "sources": [
+        "https://arxiv.org/html/2507.18029"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "h": "今日重点",
+      "bullets": [
+        "OpenAI因Cursor被SpaceX收购而终止向其提供模型——揭示AI模型供应链受商业并购影响，可能引发对模型供应稳定性的关注"
+      ]
+    },
+    {
+      "h": "主题线 1 · 代理安全治理：漏洞传闻、自动模式突破与RL奖励黑客风险",
+      "bullets": [
+        "剑桥教授指出漏洞传闻足以导致安全漏洞利用 → 安全研究者突破Claude Code Opus 5自动模式 → HuggingFace事件引发RL奖励黑客与CoT监控讨论，Replit CEO称RL可验证奖励将产生越来越奇怪的行为 → Every联合创始人认为RL奖励黑客问题6个月内可解决但需努力",
+        "从漏洞传闻的利用风险，到Claude Code自动模式被实际突破，再到RL奖励黑客的广泛讨论，代理安全治理的边界持续扩展。这些事件共同指向AI代理在自主性增强时面临的新型安全威胁。"
+      ]
+    },
+    {
+      "h": "主题线 2 · 编码代理生态加速：共享协作、平台扩展与百万行代码里程碑",
+      "bullets": [
+        "ChatGPT Work与Codex活跃用户达2500万并重置付费用量 → OpenClaw团队转向共享代理，放弃本地编码工具 → Garry Tan预测未来AI代理群体将共享被黑的Artifactory并自主使用软件 → Polimill使用OpenAI GPT和Codex为日本市政构建AI基础设施 → Simon Willison详细解析ChatGPT Work产品复杂性 → GitHub Copilot推出自动化Dependabot PR分类及LLM生产评估指南 → 社区讨论Agent Skills安装与MCP Tools vs Skills区分 → Simon Willison引用Paul Dix称AI编写了100万行代码并精炼至可靠运行",
+        "编码代理从个人工具迈向共享协作与平台化，ChatGPT Work用户激增，OpenClaw转向共享代理，GitHub Copilot扩展自动化功能，社区热议技能与工具区分，同时AI编写百万行代码的里程碑标志着代理能力的实质性进展。"
+      ]
+    },
+    {
+      "h": "主题线 3 · 开源模型密集发布：OpenAI回归开源，腾讯、Qwen、Ai2等齐发新模型",
+      "bullets": [
+        "腾讯发布开源大模型Hy4 Preview，770B参数，49B激活，1M上下文 → Google发布Gemini Omni 1.1 Flash，提供更多控制能力 → Qwen发布Qwen3.8-Flash-Next多模态MoE模型，125B总参，6B激活 → Google发布Gemini 3.5 Transcribe智能语音转文字模型 → Ai2发布Olmo 3开源模型，强调模型流和完全可追溯性 → Anthropic发布Claude Sonnet 5与Claude Science → LLaDA 2.0文本扩散模型发布，100B参数，为最大文本扩散模型 → OpenAI发布开源推理模型GPT-OSS-120B，117B参数，回归开源 → OpenAI o1推理模型总结展示推理能力新进展 → OpenAI在泰国和巴西扩张，支持AI初创和开发者",
+        "今日模型发布密度极高，腾讯、Google、Qwen、Ai2、Anthropic、OpenAI等纷纷推出新模型或更新，尤其OpenAI以GPT-OSS-120B回归开源，标志着开源模型竞争进入新阶段。"
+      ]
+    },
+    {
+      "h": "主题线 4 · 推理成本下降引爆企业AI代理采用，基础设施成熟度创新高",
+      "bullets": [
+        "Aaron Levie论述token成本下降通过Jevons悖论推动企业AI代理大规模采用 → d-Matrix CEO呼应推理成本降低将极大扩展企业AI采用 → AetherLink与AllosAI发布企业AI代理采用基础设施与ROI指南 → Penguin Solutions与Deepgram合作部署企业语音AI推理基础设施 → Kubernetes生产采用率达82%，标志AI基础设施成熟 → 探讨Agentic AI通过智能、适应性和持续学习变革企业平台 → Valorem Reply发布2026年7种AI代理工作流自动化类型指南 → ChatGPT Ads年收入达10亿美元推动AI普及",
+        "推理成本下降成为企业AI代理采用的催化剂，从思想领袖论述到基础设施指南、语音推理部署和Kubernetes高采用率，企业AI落地条件日趋成熟，ChatGPT Ads的10亿美元收入也印证了AI商业化的加速。"
+      ]
+    },
+    {
+      "h": "主题线 5 · 金融AI突破年预测应验：NVIDIA模型蒸馏与IBM工作流自动化齐推进",
+      "bullets": [
+        "Nicolas Pinto预测2025年是金融AI突破年 → NVIDIA发布AI模型蒸馏示例解决量化金融LLM采用挑战 → IBM展示Agentic AI在金融工作流自动化的应用 → 金融科技公司招聘量化开发人员，反映金融AI人才需求",
+        "Nicolas Pinto的2025金融AI突破年预测正在成为现实，NVIDIA通过模型蒸馏降低量化金融LLM门槛，IBM展示Agentic工作流自动化，加上人才招聘信号，金融AI正从概念走向落地。"
+      ]
+    },
+    {
+      "h": "主题线 6 · 代理基准持续扩展：MC-Bench等40个LLM基准列表发布",
+      "bullets": [
+        "MC-Bench等40个LLM基准测试列表发布，含Minecraft交互式基准",
+        "基准测试生态不断丰富，新增40个基准涵盖交互式环境，为代理能力评估提供更多维度。"
+      ]
+    },
+    {
+      "h": "零散信号",
+      "bullets": [
+        "Google 搜索新增 AI 旅行规划和家居装饰功能",
+        "Replit CEO Amjad Masad发推称“构建文明很简单：[Agent() for _ in range(100)]”，以代码隐喻调侃大规模代理协作的易用性，引发对多代理系统的讨论。",
+        "实证论文《An Empirical Study of GenAI Adoption in Open-Source Game Development》研究生成式AI在游戏开发中的工具、任务及开发者挑战，涉及生成式代理的应用。"
+      ]
+    }
+  ],
+  "ev": [
+    {
+      "who": "web",
+      "en": "https://simonwillison.net/2026/Aug/28/just-a-rumour-of-a-bug/",
+      "zh": "https://simonwillison.net/2026/Aug/28/just-a-rumour-of-a-bug/",
+      "url": "https://simonwillison.net/2026/Aug/28/just-a-rumour-of-a-bug/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/",
+      "zh": "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/",
+      "url": "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/amasad/status/2094215744842248418",
+      "zh": "https://x.com/amasad/status/2094215744842248418",
+      "url": "https://x.com/amasad/status/2094215744842248418",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/danshipper/status/2094073306739576964",
+      "zh": "https://x.com/danshipper/status/2094073306739576964",
+      "url": "https://x.com/danshipper/status/2094073306739576964",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/thsottiaux/status/2094252447271366730",
+      "zh": "https://x.com/thsottiaux/status/2094252447271366730",
+      "url": "https://x.com/thsottiaux/status/2094252447271366730",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/steipete/status/2094290652649636173",
+      "zh": "https://x.com/steipete/status/2094290652649636173",
+      "url": "https://x.com/steipete/status/2094290652649636173",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/garrytan/status/2094225933108748653",
+      "zh": "https://x.com/garrytan/status/2094225933108748653",
+      "url": "https://x.com/garrytan/status/2094225933108748653",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://openai.com/index/polimill",
+      "zh": "https://openai.com/index/polimill",
+      "url": "https://openai.com/index/polimill",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/",
+      "zh": "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/",
+      "url": "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-automate-dependabot-pull-request-triage/",
+      "zh": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-automate-dependabot-pull-request-triage/",
+      "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-automate-dependabot-pull-request-triage/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.blog/ai-and-ml/llms/how-to-evaluate-llms-before-production/",
+      "zh": "https://github.blog/ai-and-ml/llms/how-to-evaluate-llms-before-production/",
+      "url": "https://github.blog/ai-and-ml/llms/how-to-evaluate-llms-before-production/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/ai_agents/comments/1roe8k8/5_agent_skills_id_install_before_starting_any_new",
+      "zh": "https://www.reddit.com/r/ai_agents/comments/1roe8k8/5_agent_skills_id_install_before_starting_any_new",
+      "url": "https://www.reddit.com/r/ai_agents/comments/1roe8k8/5_agent_skills_id_install_before_starting_any_new",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://platform.uno/blog/contextual-ai-mcptools-vs-skills",
+      "zh": "https://platform.uno/blog/contextual-ai-mcptools-vs-skills",
+      "url": "https://platform.uno/blog/contextual-ai-mcptools-vs-skills",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://simonwillison.net/2026/Aug/26/paul-dix/",
+      "zh": "https://simonwillison.net/2026/Aug/26/paul-dix/",
+      "url": "https://simonwillison.net/2026/Aug/26/paul-dix/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://simonwillison.net/2026/Aug/29/hy4/",
+      "zh": "https://simonwillison.net/2026/Aug/29/hy4/",
+      "url": "https://simonwillison.net/2026/Aug/29/hy4/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://deepmind.google/blog/gemini-omni-1-1-flash-lets-you-build-with-more-control/",
+      "zh": "https://deepmind.google/blog/gemini-omni-1-1-flash-lets-you-build-with-more-control/",
+      "url": "https://deepmind.google/blog/gemini-omni-1-1-flash-lets-you-build-with-more-control/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://simonwillison.net/2026/Aug/26/qwen38-flash-next/",
+      "zh": "https://simonwillison.net/2026/Aug/26/qwen38-flash-next/",
+      "url": "https://simonwillison.net/2026/Aug/26/qwen38-flash-next/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://deepmind.google/blog/intelligent-transcription-with-gemini-3-5-transcribe/",
+      "zh": "https://deepmind.google/blog/intelligent-transcription-with-gemini-3-5-transcribe/",
+      "url": "https://deepmind.google/blog/intelligent-transcription-with-gemini-3-5-transcribe/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://allenai.org/blog/olmo3",
+      "zh": "https://allenai.org/blog/olmo3",
+      "url": "https://allenai.org/blog/olmo3",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://clawvard.school/blog",
+      "zh": "https://clawvard.school/blog",
+      "url": "https://clawvard.school/blog",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://magazine.sebastianraschka.com/p/state-of-llms-2025",
+      "zh": "https://magazine.sebastianraschka.com/p/state-of-llms-2025",
+      "url": "https://magazine.sebastianraschka.com/p/state-of-llms-2025",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://modal.com/resources/best-open-source-reasoning-models-rl",
+      "zh": "https://modal.com/resources/best-open-source-reasoning-models-rl",
+      "url": "https://modal.com/resources/best-open-source-reasoning-models-rl",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://openai.com/index/learning-to-reason-with-llms",
+      "zh": "https://openai.com/index/learning-to-reason-with-llms",
+      "url": "https://openai.com/index/learning-to-reason-with-llms",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://openai.com/index/supporting-next-generation-ai-startups-thailand",
+      "zh": "https://openai.com/index/supporting-next-generation-ai-startups-thailand",
+      "url": "https://openai.com/index/supporting-next-generation-ai-startups-thailand",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://openai.com/index/expanding-our-presence-in-brazil",
+      "zh": "https://openai.com/index/expanding-our-presence-in-brazil",
+      "url": "https://openai.com/index/expanding-our-presence-in-brazil",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/levie/status/2094123406811922930",
+      "zh": "https://x.com/levie/status/2094123406811922930",
+      "url": "https://x.com/levie/status/2094123406811922930",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.techcircle.in/2026/03/11/lower-inference-costs-could-dramatically-expand-enterprise-ai-adoption-d-matrix-ceo",
+      "zh": "https://www.techcircle.in/2026/03/11/lower-inference-costs-could-dramatically-expand-enterprise-ai-adoption-d-matrix-ceo",
+      "url": "https://www.techcircle.in/2026/03/11/lower-inference-costs-could-dramatically-expand-enterprise-ai-adoption-d-matrix-ceo",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://aetherlink.ai/en/blog/agentic-ai-enterprise-adoption-2026-infrastructure-roi-guide",
+      "zh": "https://aetherlink.ai/en/blog/agentic-ai-enterprise-adoption-2026-infrastructure-roi-guide",
+      "url": "https://aetherlink.ai/en/blog/agentic-ai-enterprise-adoption-2026-infrastructure-roi-guide",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://aetherlink.ai/fi/blog/agentic-ai-enterprise-adoption-2026-infrastructure-roi-guide",
+      "zh": "https://aetherlink.ai/fi/blog/agentic-ai-enterprise-adoption-2026-infrastructure-roi-guide",
+      "url": "https://aetherlink.ai/fi/blog/agentic-ai-enterprise-adoption-2026-infrastructure-roi-guide",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://allosai.com/blog/enterprise-ai-infrastructure-deployment",
+      "zh": "https://allosai.com/blog/enterprise-ai-infrastructure-deployment",
+      "url": "https://allosai.com/blog/enterprise-ai-infrastructure-deployment",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.automation.com/article/penguin-solutions-deepgram-deployment-optimized-ai-inference-infrastructure-enterprise-voice-ai",
+      "zh": "https://www.automation.com/article/penguin-solutions-deepgram-deployment-optimized-ai-inference-infrastructure-enterprise-voice-ai",
+      "url": "https://www.automation.com/article/penguin-solutions-deepgram-deployment-optimized-ai-inference-infrastructure-enterprise-voice-ai",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.barchart.com/story/news/797688/penguin-solutions-selected-by-deepgram-to-enable-deployment-of-optimized-ai-inference-infrastructure-for-enterprise-voice-ai",
+      "zh": "https://www.barchart.com/story/news/797688/penguin-solutions-selected-by-deepgram-to-enable-deployment-of-optimized-ai-inference-infrastructure-for-enterprise-voice-ai",
+      "url": "https://www.barchart.com/story/news/797688/penguin-solutions-selected-by-deepgram-to-enable-deployment-of-optimized-ai-inference-infrastructure-for-enterprise-voice-ai",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.businesswire.com/news/home/20260317793434/en/Penguin-Solutions-Selected-by-Deepgram-to-Enable-Deployment-of-Optimized-AI-Inference-Infrastructure-for-Enterprise-Voice-AI",
+      "zh": "https://www.businesswire.com/news/home/20260317793434/en/Penguin-Solutions-Selected-by-Deepgram-to-Enable-Deployment-of-Optimized-AI-Inference-Infrastructure-for-Enterprise-Voice-AI",
+      "url": "https://www.businesswire.com/news/home/20260317793434/en/Penguin-Solutions-Selected-by-Deepgram-to-Enable-Deployment-of-Optimized-AI-Inference-Infrastructure-for-Enterprise-Voice-AI",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.webpronews.com/kubernetes-conquers-production-82-adoption-signals-ai-infrastructure-shift",
+      "zh": "https://www.webpronews.com/kubernetes-conquers-production-82-adoption-signals-ai-infrastructure-shift",
+      "url": "https://www.webpronews.com/kubernetes-conquers-production-82-adoption-signals-ai-infrastructure-shift",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.bcg.com/publications/2025/how-agentic-ai-is-transforming-enterprise-platforms",
+      "zh": "https://www.bcg.com/publications/2025/how-agentic-ai-is-transforming-enterprise-platforms",
+      "url": "https://www.bcg.com/publications/2025/how-agentic-ai-is-transforming-enterprise-platforms",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reply.com/valorem-reply/en/resources/insights/blog/7-types-of-ai-agents-to-automate-your-workflows",
+      "zh": "https://www.reply.com/valorem-reply/en/resources/insights/blog/7-types-of-ai-agents-to-automate-your-workflows",
+      "url": "https://www.reply.com/valorem-reply/en/resources/insights/blog/7-types-of-ai-agents-to-automate-your-workflows",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads",
+      "zh": "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads",
+      "url": "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.linkedin.com/posts/nicolaspinto1_innovation-fintech-banking-activity-7404422140109692928-rtfu",
+      "zh": "https://www.linkedin.com/posts/nicolaspinto1_innovation-fintech-banking-activity-7404422140109692928-rtfu",
+      "url": "https://www.linkedin.com/posts/nicolaspinto1_innovation-fintech-banking-activity-7404422140109692928-rtfu",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.facebook.com/NVIDIA.AP/posts/llm-adoption-in-quant-finance-is-constrained-by-cost-latency-and-integration-com/916302004053597",
+      "zh": "https://www.facebook.com/NVIDIA.AP/posts/llm-adoption-in-quant-finance-is-constrained-by-cost-latency-and-integration-com/916302004053597",
+      "url": "https://www.facebook.com/NVIDIA.AP/posts/llm-adoption-in-quant-finance-is-constrained-by-cost-latency-and-integration-com/916302004053597",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.facebook.com/NVIDIAAI/posts/llm-adoption-in-quant-finance-is-constrained-by-cost-latency-and-integration-com/1284214127076199",
+      "zh": "https://www.facebook.com/NVIDIAAI/posts/llm-adoption-in-quant-finance-is-constrained-by-cost-latency-and-integration-com/1284214127076199",
+      "url": "https://www.facebook.com/NVIDIAAI/posts/llm-adoption-in-quant-finance-is-constrained-by-cost-latency-and-integration-com/1284214127076199",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.linkedin.com/posts/nvidia-ai_llm-adoption-in-quant-finance-is-constrained-activity-7401397190134566912-PvNT",
+      "zh": "https://www.linkedin.com/posts/nvidia-ai_llm-adoption-in-quant-finance-is-constrained-activity-7401397190134566912-PvNT",
+      "url": "https://www.linkedin.com/posts/nvidia-ai_llm-adoption-in-quant-finance-is-constrained-activity-7401397190134566912-PvNT",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://developer.ibm.com/articles/agentic-ai-workflow-automation",
+      "zh": "https://developer.ibm.com/articles/agentic-ai-workflow-automation",
+      "url": "https://developer.ibm.com/articles/agentic-ai-workflow-automation",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.quant-capital.co.uk/markets-list/fintech-vendor",
+      "zh": "https://www.quant-capital.co.uk/markets-list/fintech-vendor",
+      "url": "https://www.quant-capital.co.uk/markets-list/fintech-vendor",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arize.com/blog/llm-benchmarks-mmlu-codexglue-gsm8k",
+      "zh": "https://arize.com/blog/llm-benchmarks-mmlu-codexglue-gsm8k",
+      "url": "https://arize.com/blog/llm-benchmarks-mmlu-codexglue-gsm8k",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
+      "zh": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
+      "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/",
+      "zh": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/",
+      "url": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://blog.google/products-and-platforms/products/search/home-decor-tips/",
+      "zh": "https://blog.google/products-and-platforms/products/search/home-decor-tips/",
+      "url": "https://blog.google/products-and-platforms/products/search/home-decor-tips/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/amasad/status/2094280256933056971",
+      "zh": "https://x.com/amasad/status/2094280256933056971",
+      "url": "https://x.com/amasad/status/2094280256933056971",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/html/2507.18029",
+      "zh": "https://arxiv.org/html/2507.18029",
+      "url": "https://arxiv.org/html/2507.18029",
+      "pt": "自动聚合线索"
+    }
+  ],
+  "graphDelta": {
+    "entities": 42,
+    "events": 75,
+    "relations": 45,
+    "storylines": 6
+  }
+}
