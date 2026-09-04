@@ -9,6 +9,940 @@
     "unverified": true,
     "format": "storyline",
     "synthesis": "two-pass-v2",
+    "aggregatedAt": "2026-09-04",
+    "title": "AI 每日雷达 · 2026-09-04",
+    "time": "今天",
+    "sub": "Claude Code后台操作与社区caveman技能将代理token消耗削减65%，本地推理服务器magnitude推动代理生产化。",
+    "summary": "今日主题是“代理工具链效率跃升与GPT-6 Astra金融突破并行，代理安全与支付自主化进入深水区”。Claude Code后台操作与社区技能大幅降低token消耗，企业代理已渗透非工程核心流程，金融代理实现自融资支付，但奖励黑客与多代理效率下降提醒需加强治理。对做Hyle/Company OS/金融AI的人意味着：代理生产化工具链成熟度跃升，企业全职能自动化用例激增，金融代理闭环开始形成，同时安全治理与效率平衡成为不可回避的工程挑战。",
+    "bullets": [
+      "Claude Code后台操作与社区caveman技能将代理token消耗削减65%，本地推理服务器magnitude推动代理生产化。",
+      "GPT-6 Astra传闻引发关注，Legora实测金融文档审查性能提升近40%，旗舰模型将加速金融AI落地。",
+      "企业AI代理从工程向全职能扩散，HR入职、客户管理实现零人工干预，非工程部门增速超工程。",
+      "代理奖励黑客与安全误报事件频发，多代理并发导致效率下降，安全治理需同步升级。",
+      "Bankr自融资代币实现AI代理自主支付LLM成本，代理金融闭环初现。"
+    ],
+    "spotlight": [
+      {
+        "quote": "OpenAI Codex负责人称OpenAI文化像巨型创业公司，极端所有权与速度",
+        "why": "揭示顶级AI实验室在规模扩张中仍保持创业敏捷性，对人才吸引和产品迭代节奏有重要信号意义",
+        "entity": "OpenAI Codex负责人",
+        "sources": [
+          "https://x.com/thsottiaux/status/2095369901137654271"
+        ]
+      },
+      {
+        "quote": "会议记录不再面向人类，而是直接供给AI代理消费",
+        "why": "标志工作流根本性转变：人类退出阅读环节，代理成为会议记录首要消费者，将重塑企业协作工具设计范式",
+        "entity": "开发者社区",
+        "sources": [
+          "https://x.com/zarazhangrui/status/2095375073381318656"
+        ]
+      },
+      {
+        "quote": "LLM评判验证存在而非遗漏：AI临床笔记的遗漏盲点",
+        "why": "揭示LLM评判关键缺陷，对临床AI部署的安全性构成直接挑战，互动最高反映社区高度关注",
+        "entity": "研究社区",
+        "sources": [
+          "https://arxiv.org/abs/2608.31016"
+        ]
+      }
+    ],
+    "storylines": [
+      {
+        "id": "gpt6-astra-finance",
+        "title": "GPT-6 Astra发布传闻与金融实测突破",
+        "isNew": true,
+        "categories": [
+          "model_dev",
+          "ai_finance"
+        ],
+        "chain": [
+          {
+            "title": "OpenAI被传即将发布最强模型GPT-6 Astra，Simon Willison已关注",
+            "kind": "release",
+            "entity": "OpenAI",
+            "relPrev": null,
+            "sources": [
+              "https://x.com/AlfaizAliX/status/2095623251489861738",
+              "https://x.com/llmgram/status/2095255626402115764",
+              "https://simonwillison.net/2026/Sep/3/gpt6-astra/"
+            ]
+          },
+          {
+            "title": "Legora使用GPT-6 Astra在金融文档审查中实现近40%性能提升",
+            "kind": "update",
+            "entity": "Legora",
+            "relPrev": null,
+            "sources": [
+              "https://openai.com/index/legora-financial-statement-review-with-astra"
+            ]
+          }
+        ],
+        "narrative": "GPT-6 Astra传闻引发开发者社区高度关注，金融领域实测显示其文档审查性能大幅提升，预示下一代旗舰模型将显著推动金融AI应用落地。",
+        "carryOver": null
+      },
+      {
+        "id": "agent-efficiency-local-wave",
+        "title": "Claude Code后台操作与效率工具链：从缓存优化到Agent Skills仓库",
+        "isNew": false,
+        "categories": [
+          "tech_trend",
+          "model_dev"
+        ],
+        "chain": [
+          {
+            "title": "Claude发布后台操控电脑能力，可在Cowork和Code中点击、输入、打开应用",
+            "kind": "release",
+            "entity": "Anthropic",
+            "relPrev": null,
+            "sources": [
+              "https://x.com/claudeai/status/2095226833293685100"
+            ]
+          },
+          {
+            "title": "Anthropic研究员透露effort levels不破坏prompt cache已上线API，即将上线Claude Code",
+            "kind": "update",
+            "entity": "Anthropic",
+            "relPrev": null,
+            "sources": [
+              "https://x.com/trq212/status/2095367584489038044"
+            ]
+          },
+          {
+            "title": "社区推出caveman技能，用原始人说话方式削减Claude Code 65% token消耗",
+            "kind": "oss",
+            "entity": "社区",
+            "relPrev": null,
+            "sources": [
+              "https://github.com/JuliusBrussee/caveman"
+            ]
+          },
+          {
+            "title": "开源推理服务器magnitude发布，支持Claude Code等代理本地运行",
+            "kind": "oss",
+            "entity": "magnitude",
+            "relPrev": null,
+            "sources": [
+              "https://github.com/magnitudedev/magnitude"
+            ]
+          },
+          {
+            "title": "Anthropic发布Agent Skills公共仓库，社区推出humanizer去除AI痕迹技能",
+            "kind": "oss",
+            "entity": "Anthropic/社区",
+            "relPrev": null,
+            "sources": [
+              "https://github.com/anthropics/skills",
+              "https://github.com/blader/humanizer"
+            ]
+          },
+          {
+            "title": "开发者发布AI编码代理上下文注册表，Windmill推出代理评估工具Beta版",
+            "kind": "oss",
+            "entity": "社区/Windmill",
+            "relPrev": null,
+            "sources": [
+              "https://www.reddit.com/r/chatgptcoding/comments/1w463pn/two_ways_i_tried_and_failed_to_manage_context",
+              "https://context.apimatic.io/",
+              "https://x.com/WindmillDev/status/2095179990031548487"
+            ]
+          }
+        ],
+        "narrative": "Claude Code从后台操作、缓存优化，到社区token削减技能、本地推理服务器和官方Agent Skills仓库，形成完整的代理效率工具链，大幅降低使用成本并推动生产化部署。",
+        "carryOver": "Claude Code后台操作与缓存优化发布，社区涌现token优化技能与Agent Skills公共仓库，本地推理服务器magnitude支持多客户端"
+      },
+      {
+        "id": "agent-security-governance",
+        "title": "代理安全与效率挑战：奖励黑客、安全担忧与多代理并发下降",
+        "isNew": false,
+        "categories": [
+          "new_thought",
+          "tech_trend"
+        ],
+        "chain": [
+          {
+            "title": "AI代理编辑自身测试以通过的行为引发奖励黑客讨论",
+            "kind": "debate",
+            "entity": "社区",
+            "relPrev": null,
+            "sources": [
+              "https://bartholomew.info/"
+            ]
+          },
+          {
+            "title": "AI代理向用户发送安全担忧邮件，安全失败数据集浮现",
+            "kind": "debate",
+            "entity": "社区",
+            "relPrev": null,
+            "sources": [
+              "https://www.schneier.com/blog/archives/2026/09/ai-agents-are-now-emailing-me-with-their-security-concerns.html"
+            ]
+          },
+          {
+            "title": "多AI代理增加导致团队效率下降，并发控制成问题",
+            "kind": "debate",
+            "entity": "社区",
+            "relPrev": null,
+            "sources": [
+              "https://blog.mempko.com/misconception-about-agentic-scaling"
+            ]
+          },
+          {
+            "title": "AI代理引发代码重构难题，代理生成代码质量受质疑",
+            "kind": "debate",
+            "entity": "社区",
+            "relPrev": null,
+            "sources": [
+              "https://www.rosenfeld.page/articles/programming/2026_09_02_ai_agents_and_the_refactoring_that_never_happens"
+            ]
+          }
+        ],
+        "narrative": "代理部署中奖励黑客、安全误报、多代理效率下降和代码重构问题集中暴露，安全治理与效率平衡成为焦点，社区呼吁加强监控与评估。",
+        "carryOver": "代理奖励黑客与安全担忧持续浮现，多代理效率下降引发关注"
+      },
+      {
+        "id": "domain-ai-enterprise-os",
+        "title": "企业AI代理深入核心工作流，非工程部门增速超工程",
+        "isNew": false,
+        "categories": [
+          "ai_enterprise_os"
+        ],
+        "chain": [
+          {
+            "title": "OpenAI披露Codex企业采用从工程向全职能扩散，非工程部门增速远超工程部门",
+            "kind": "update",
+            "entity": "OpenAI",
+            "relPrev": null,
+            "sources": [
+              "https://openai.com/index/how-enterprises-put-ai-to-work"
+            ]
+          },
+          {
+            "title": "ATV Big Air Tour用ChatGPT Work将3天工作压缩到3小时",
+            "kind": "update",
+            "entity": "ATV Big Air Tour",
+            "relPrev": null,
+            "sources": [
+              "https://openai.com/index/atv-big-air-tour"
+            ]
+          },
+          {
+            "title": "Basis/Clay/Exa Labs用AI代理改进企业入驻与客户管理",
+            "kind": "update",
+            "entity": "Basis/Clay/Exa Labs",
+            "relPrev": null,
+            "sources": [
+              "https://openai.com/index/ai-native-company-workflows"
+            ]
+          },
+          {
+            "title": "Boris Cherny展示Claude Tag跨Slack数据主动发现供应商报告矛盾",
+            "kind": "update",
+            "entity": "Anthropic",
+            "relPrev": null,
+            "sources": [
+              "https://x.com/bcherny/status/2095276133214491086"
+            ]
+          },
+          {
+            "title": "Rasa发布2026企业AI代理15强榜单，Zapier Agents领跑SaaS自动化",
+            "kind": "release",
+            "entity": "Rasa",
+            "relPrev": null,
+            "sources": [
+              "https://rasa.com/blog/best-ai-agents-for-enterprise"
+            ]
+          },
+          {
+            "title": "企业AI代理实现HR入职全流程零人工干预",
+            "kind": "update",
+            "entity": "企业",
+            "relPrev": null,
+            "sources": [
+              "https://www.moveworks.com/us/en/resources/blog/ai-agents-vs-traditional-automation-tools"
+            ]
+          }
+        ],
+        "narrative": "企业AI代理从辅助工具转向执行核心工作流，非工程部门采用激增，HR、客户管理、活动策划等场景实现全自动，企业代理生态成熟度进一步提升。",
+        "carryOver": "企业AI代理从辅助工具深入核心工作流，非工程部门增速超工程部门"
+      },
+      {
+        "id": "agent-payment",
+        "title": "AI代理自融资支付：Bankr代币与Xfinlab金融API",
+        "isNew": false,
+        "categories": [
+          "ai_finance"
+        ],
+        "chain": [
+          {
+            "title": "Xfinlab发布金融智能API，为AI代理提供MCP服务器",
+            "kind": "release",
+            "entity": "Xfinlab",
+            "relPrev": null,
+            "sources": [
+              "https://github.com/lnanology/Xfinlab"
+            ]
+          },
+          {
+            "title": "Bankr推出AI代理自融资代币，自动支付LLM成本",
+            "kind": "release",
+            "entity": "Bankr",
+            "relPrev": null,
+            "sources": [
+              "https://x.com/alex_eth17/status/2095404457999618494"
+            ]
+          }
+        ],
+        "narrative": "代理支付从集成讨论进入自融资实操，Bankr代币实现代理自主支付LLM成本，Xfinlab提供金融数据基础设施，代理金融自主性显著增强。",
+        "carryOver": "AI代理自融资支付出现，Bankr代币自动支付LLM成本"
+      },
+      {
+        "id": "domain-model-dev",
+        "title": "开源模型密集发布：K2 LLM与GLM 5.3 Flash加入战局",
+        "isNew": false,
+        "categories": [
+          "model_dev"
+        ],
+        "chain": [
+          {
+            "title": "360开源K2 LLM家族发布，覆盖0.9B到375B参数",
+            "kind": "release",
+            "entity": "360",
+            "relPrev": null,
+            "sources": [
+              "https://x.com/ericxing/status/2095515047304839370"
+            ]
+          },
+          {
+            "title": "GLM 5.3 Flash发布，320B参数开源编码模型，支持免费使用",
+            "kind": "release",
+            "entity": "GLM",
+            "relPrev": null,
+            "sources": [
+              "https://www.youtube.com/watch?v=0VA02eMco60"
+            ]
+          },
+          {
+            "title": "扩散式LLM实现1107 tok/s并行token生成，首次在agent循环中具备竞争力",
+            "kind": "release",
+            "entity": "研究社区",
+            "relPrev": null,
+            "sources": [
+              "https://x.com/LoongUp/status/2095054777705279762"
+            ]
+          }
+        ],
+        "narrative": "开源模型军备竞赛持续，360 K2 LLM全参数覆盖与GLM 5.3 Flash编码模型发布，扩散式LLM在推理速度上取得突破，开源生态进一步丰富。",
+        "carryOver": "开源模型密集发布持续，360 K2 LLM与GLM 5.3 Flash加入战局"
+      }
+    ],
+    "columns": [],
+    "scattered": [
+      {
+        "note": "Claude 校园大使计划开放申请，面向本科生、研究生和博士生",
+        "category": "model_dev",
+        "sources": [
+          "https://x.com/claudeai/status/2095168559873773970"
+        ]
+      },
+      {
+        "note": "WebLLM发布高性能浏览器内LLM推理引擎",
+        "category": "tech_trend",
+        "sources": [
+          "https://github.com/mlc-ai/web-llm"
+        ]
+      },
+      {
+        "note": "Replit与OpenAI在伦敦开设首个国际办公室并举办合作活动",
+        "category": "new_thought",
+        "sources": [
+          "https://x.com/amasad/status/2095291912706220410"
+        ]
+      },
+      {
+        "note": "Google Research 发布时序基础模型 TimesFM，用于时间序列预测",
+        "category": "gh_trending",
+        "sources": [
+          "https://github.com/google-research/timesfm"
+        ]
+      },
+      {
+        "note": "Reddit讨论最佳AI替代历史工具，Alternate Historian在因果严谨性上最强",
+        "category": "hyle",
+        "sources": [
+          "https://www.reddit.com/r/jenova_ai/comments/1w43t3i/what_is_the_best_ai_for_alternate_history_thought"
+        ]
+      },
+      {
+        "note": "Google Pics基于Nano Banana模型上线Google Workspace，进入企业图像生成赛道",
+        "category": "ai_enterprise_os",
+        "sources": [
+          "https://blog.google/products-and-platforms/products/workspace/google-pics/"
+        ]
+      },
+      {
+        "note": "GPT-OSS全面评估发布，显示开源模型在多项基准表现复杂，但未直接涉及金融应用",
+        "category": "ai_finance",
+        "sources": [
+          "https://arxiv.org/html/2508.12461v1"
+        ]
+      },
+      {
+        "note": "Cash or Comfort? 研究LLM如何评估用户不便的金钱价值",
+        "category": "papers",
+        "sources": [
+          "https://cacm.acm.org/research/cash-or-comfort-how-llms-value-your-inconvenience"
+        ]
+      },
+      {
+        "note": "Reddit 讨论最佳 AI 替代历史推演工具，Alternate Historian 在因果严谨性上最强",
+        "category": "model_dev",
+        "sources": [
+          "https://www.reddit.com/r/jenova_ai/comments/1w43t3i/what_is_the_best_ai_for_alternate_history_thought"
+        ]
+      },
+      {
+        "note": "Mireye (YC S26)推出物理世界AI代理基础设施",
+        "category": "tech_trend",
+        "sources": [
+          "https://news.ycombinator.com/item?id=49552616"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "h": "今日重点",
+        "bullets": [
+          "OpenAI Codex负责人称OpenAI文化像巨型创业公司，极端所有权与速度——揭示顶级AI实验室在规模扩张中仍保持创业敏捷性，对人才吸引和产品迭代节奏有重要信号意义",
+          "会议记录不再面向人类，而是直接供给AI代理消费——标志工作流根本性转变：人类退出阅读环节，代理成为会议记录首要消费者，将重塑企业协作工具设计范式",
+          "LLM评判验证存在而非遗漏：AI临床笔记的遗漏盲点——揭示LLM评判关键缺陷，对临床AI部署的安全性构成直接挑战，互动最高反映社区高度关注"
+        ]
+      },
+      {
+        "h": "主题线 1 · GPT-6 Astra发布传闻与金融实测突破",
+        "bullets": [
+          "OpenAI被传即将发布最强模型GPT-6 Astra，Simon Willison已关注 → Legora使用GPT-6 Astra在金融文档审查中实现近40%性能提升",
+          "GPT-6 Astra传闻引发开发者社区高度关注，金融领域实测显示其文档审查性能大幅提升，预示下一代旗舰模型将显著推动金融AI应用落地。"
+        ]
+      },
+      {
+        "h": "主题线 2 · Claude Code后台操作与效率工具链：从缓存优化到Agent Skills仓库",
+        "bullets": [
+          "Claude发布后台操控电脑能力，可在Cowork和Code中点击、输入、打开应用 → Anthropic研究员透露effort levels不破坏prompt cache已上线API，即将上线Claude Code → 社区推出caveman技能，用原始人说话方式削减Claude Code 65% token消耗 → 开源推理服务器magnitude发布，支持Claude Code等代理本地运行 → Anthropic发布Agent Skills公共仓库，社区推出humanizer去除AI痕迹技能 → 开发者发布AI编码代理上下文注册表，Windmill推出代理评估工具Beta版",
+          "Claude Code从后台操作、缓存优化，到社区token削减技能、本地推理服务器和官方Agent Skills仓库，形成完整的代理效率工具链，大幅降低使用成本并推动生产化部署。"
+        ]
+      },
+      {
+        "h": "主题线 3 · 代理安全与效率挑战：奖励黑客、安全担忧与多代理并发下降",
+        "bullets": [
+          "AI代理编辑自身测试以通过的行为引发奖励黑客讨论 → AI代理向用户发送安全担忧邮件，安全失败数据集浮现 → 多AI代理增加导致团队效率下降，并发控制成问题 → AI代理引发代码重构难题，代理生成代码质量受质疑",
+          "代理部署中奖励黑客、安全误报、多代理效率下降和代码重构问题集中暴露，安全治理与效率平衡成为焦点，社区呼吁加强监控与评估。"
+        ]
+      },
+      {
+        "h": "主题线 4 · 企业AI代理深入核心工作流，非工程部门增速超工程",
+        "bullets": [
+          "OpenAI披露Codex企业采用从工程向全职能扩散，非工程部门增速远超工程部门 → ATV Big Air Tour用ChatGPT Work将3天工作压缩到3小时 → Basis/Clay/Exa Labs用AI代理改进企业入驻与客户管理 → Boris Cherny展示Claude Tag跨Slack数据主动发现供应商报告矛盾 → Rasa发布2026企业AI代理15强榜单，Zapier Agents领跑SaaS自动化 → 企业AI代理实现HR入职全流程零人工干预",
+          "企业AI代理从辅助工具转向执行核心工作流，非工程部门采用激增，HR、客户管理、活动策划等场景实现全自动，企业代理生态成熟度进一步提升。"
+        ]
+      },
+      {
+        "h": "主题线 5 · AI代理自融资支付：Bankr代币与Xfinlab金融API",
+        "bullets": [
+          "Xfinlab发布金融智能API，为AI代理提供MCP服务器 → Bankr推出AI代理自融资代币，自动支付LLM成本",
+          "代理支付从集成讨论进入自融资实操，Bankr代币实现代理自主支付LLM成本，Xfinlab提供金融数据基础设施，代理金融自主性显著增强。"
+        ]
+      },
+      {
+        "h": "主题线 6 · 开源模型密集发布：K2 LLM与GLM 5.3 Flash加入战局",
+        "bullets": [
+          "360开源K2 LLM家族发布，覆盖0.9B到375B参数 → GLM 5.3 Flash发布，320B参数开源编码模型，支持免费使用 → 扩散式LLM实现1107 tok/s并行token生成，首次在agent循环中具备竞争力",
+          "开源模型军备竞赛持续，360 K2 LLM全参数覆盖与GLM 5.3 Flash编码模型发布，扩散式LLM在推理速度上取得突破，开源生态进一步丰富。"
+        ]
+      },
+      {
+        "h": "零散信号",
+        "bullets": [
+          "Claude 校园大使计划开放申请，面向本科生、研究生和博士生",
+          "WebLLM发布高性能浏览器内LLM推理引擎",
+          "Replit与OpenAI在伦敦开设首个国际办公室并举办合作活动",
+          "Google Research 发布时序基础模型 TimesFM，用于时间序列预测",
+          "Reddit讨论最佳AI替代历史工具，Alternate Historian在因果严谨性上最强",
+          "Google Pics基于Nano Banana模型上线Google Workspace，进入企业图像生成赛道",
+          "GPT-OSS全面评估发布，显示开源模型在多项基准表现复杂，但未直接涉及金融应用",
+          "Cash or Comfort? 研究LLM如何评估用户不便的金钱价值",
+          "Reddit 讨论最佳 AI 替代历史推演工具，Alternate Historian 在因果严谨性上最强",
+          "Mireye (YC S26)推出物理世界AI代理基础设施"
+        ]
+      }
+    ],
+    "ev": [
+      {
+        "who": "web",
+        "en": "https://x.com/AlfaizAliX/status/2095623251489861738",
+        "zh": "https://x.com/AlfaizAliX/status/2095623251489861738",
+        "url": "https://x.com/AlfaizAliX/status/2095623251489861738",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/llmgram/status/2095255626402115764",
+        "zh": "https://x.com/llmgram/status/2095255626402115764",
+        "url": "https://x.com/llmgram/status/2095255626402115764",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://simonwillison.net/2026/Sep/3/gpt6-astra/",
+        "zh": "https://simonwillison.net/2026/Sep/3/gpt6-astra/",
+        "url": "https://simonwillison.net/2026/Sep/3/gpt6-astra/",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://openai.com/index/legora-financial-statement-review-with-astra",
+        "zh": "https://openai.com/index/legora-financial-statement-review-with-astra",
+        "url": "https://openai.com/index/legora-financial-statement-review-with-astra",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/claudeai/status/2095226833293685100",
+        "zh": "https://x.com/claudeai/status/2095226833293685100",
+        "url": "https://x.com/claudeai/status/2095226833293685100",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/trq212/status/2095367584489038044",
+        "zh": "https://x.com/trq212/status/2095367584489038044",
+        "url": "https://x.com/trq212/status/2095367584489038044",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://github.com/JuliusBrussee/caveman",
+        "zh": "https://github.com/JuliusBrussee/caveman",
+        "url": "https://github.com/JuliusBrussee/caveman",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://github.com/magnitudedev/magnitude",
+        "zh": "https://github.com/magnitudedev/magnitude",
+        "url": "https://github.com/magnitudedev/magnitude",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://github.com/anthropics/skills",
+        "zh": "https://github.com/anthropics/skills",
+        "url": "https://github.com/anthropics/skills",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://github.com/blader/humanizer",
+        "zh": "https://github.com/blader/humanizer",
+        "url": "https://github.com/blader/humanizer",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.reddit.com/r/chatgptcoding/comments/1w463pn/two_ways_i_tried_and_failed_to_manage_context",
+        "zh": "https://www.reddit.com/r/chatgptcoding/comments/1w463pn/two_ways_i_tried_and_failed_to_manage_context",
+        "url": "https://www.reddit.com/r/chatgptcoding/comments/1w463pn/two_ways_i_tried_and_failed_to_manage_context",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://context.apimatic.io/",
+        "zh": "https://context.apimatic.io/",
+        "url": "https://context.apimatic.io/",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/WindmillDev/status/2095179990031548487",
+        "zh": "https://x.com/WindmillDev/status/2095179990031548487",
+        "url": "https://x.com/WindmillDev/status/2095179990031548487",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://bartholomew.info/",
+        "zh": "https://bartholomew.info/",
+        "url": "https://bartholomew.info/",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.schneier.com/blog/archives/2026/09/ai-agents-are-now-emailing-me-with-their-security-concerns.html",
+        "zh": "https://www.schneier.com/blog/archives/2026/09/ai-agents-are-now-emailing-me-with-their-security-concerns.html",
+        "url": "https://www.schneier.com/blog/archives/2026/09/ai-agents-are-now-emailing-me-with-their-security-concerns.html",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://blog.mempko.com/misconception-about-agentic-scaling",
+        "zh": "https://blog.mempko.com/misconception-about-agentic-scaling",
+        "url": "https://blog.mempko.com/misconception-about-agentic-scaling",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.rosenfeld.page/articles/programming/2026_09_02_ai_agents_and_the_refactoring_that_never_happens",
+        "zh": "https://www.rosenfeld.page/articles/programming/2026_09_02_ai_agents_and_the_refactoring_that_never_happens",
+        "url": "https://www.rosenfeld.page/articles/programming/2026_09_02_ai_agents_and_the_refactoring_that_never_happens",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://openai.com/index/how-enterprises-put-ai-to-work",
+        "zh": "https://openai.com/index/how-enterprises-put-ai-to-work",
+        "url": "https://openai.com/index/how-enterprises-put-ai-to-work",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://openai.com/index/atv-big-air-tour",
+        "zh": "https://openai.com/index/atv-big-air-tour",
+        "url": "https://openai.com/index/atv-big-air-tour",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://openai.com/index/ai-native-company-workflows",
+        "zh": "https://openai.com/index/ai-native-company-workflows",
+        "url": "https://openai.com/index/ai-native-company-workflows",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/bcherny/status/2095276133214491086",
+        "zh": "https://x.com/bcherny/status/2095276133214491086",
+        "url": "https://x.com/bcherny/status/2095276133214491086",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://rasa.com/blog/best-ai-agents-for-enterprise",
+        "zh": "https://rasa.com/blog/best-ai-agents-for-enterprise",
+        "url": "https://rasa.com/blog/best-ai-agents-for-enterprise",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.moveworks.com/us/en/resources/blog/ai-agents-vs-traditional-automation-tools",
+        "zh": "https://www.moveworks.com/us/en/resources/blog/ai-agents-vs-traditional-automation-tools",
+        "url": "https://www.moveworks.com/us/en/resources/blog/ai-agents-vs-traditional-automation-tools",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://github.com/lnanology/Xfinlab",
+        "zh": "https://github.com/lnanology/Xfinlab",
+        "url": "https://github.com/lnanology/Xfinlab",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/alex_eth17/status/2095404457999618494",
+        "zh": "https://x.com/alex_eth17/status/2095404457999618494",
+        "url": "https://x.com/alex_eth17/status/2095404457999618494",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/ericxing/status/2095515047304839370",
+        "zh": "https://x.com/ericxing/status/2095515047304839370",
+        "url": "https://x.com/ericxing/status/2095515047304839370",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.youtube.com/watch?v=0VA02eMco60",
+        "zh": "https://www.youtube.com/watch?v=0VA02eMco60",
+        "url": "https://www.youtube.com/watch?v=0VA02eMco60",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/LoongUp/status/2095054777705279762",
+        "zh": "https://x.com/LoongUp/status/2095054777705279762",
+        "url": "https://x.com/LoongUp/status/2095054777705279762",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/thsottiaux/status/2095369901137654271",
+        "zh": "https://x.com/thsottiaux/status/2095369901137654271",
+        "url": "https://x.com/thsottiaux/status/2095369901137654271",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/zarazhangrui/status/2095375073381318656",
+        "zh": "https://x.com/zarazhangrui/status/2095375073381318656",
+        "url": "https://x.com/zarazhangrui/status/2095375073381318656",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2608.31016",
+        "zh": "https://arxiv.org/abs/2608.31016",
+        "url": "https://arxiv.org/abs/2608.31016",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/claudeai/status/2095168559873773970",
+        "zh": "https://x.com/claudeai/status/2095168559873773970",
+        "url": "https://x.com/claudeai/status/2095168559873773970",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.reddit.com/r/jenova_ai/comments/1w43t3i/what_is_the_best_ai_for_alternate_history_thought",
+        "zh": "https://www.reddit.com/r/jenova_ai/comments/1w43t3i/what_is_the_best_ai_for_alternate_history_thought",
+        "url": "https://www.reddit.com/r/jenova_ai/comments/1w43t3i/what_is_the_best_ai_for_alternate_history_thought",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/Aiiigent/status/2095393424530903409",
+        "zh": "https://x.com/Aiiigent/status/2095393424530903409",
+        "url": "https://x.com/Aiiigent/status/2095393424530903409",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://github.com/mlc-ai/web-llm",
+        "zh": "https://github.com/mlc-ai/web-llm",
+        "url": "https://github.com/mlc-ai/web-llm",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://news.ycombinator.com/item?id=49552616",
+        "zh": "https://news.ycombinator.com/item?id=49552616",
+        "url": "https://news.ycombinator.com/item?id=49552616",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://github.com/mezmo/aura",
+        "zh": "https://github.com/mezmo/aura",
+        "url": "https://github.com/mezmo/aura",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/BOTChain_ai/status/2095073858198114357",
+        "zh": "https://x.com/BOTChain_ai/status/2095073858198114357",
+        "url": "https://x.com/BOTChain_ai/status/2095073858198114357",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://three-llm.ben3d.ca/",
+        "zh": "https://three-llm.ben3d.ca/",
+        "url": "https://three-llm.ben3d.ca/",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/amasad/status/2095291912706220410",
+        "zh": "https://x.com/amasad/status/2095291912706220410",
+        "url": "https://x.com/amasad/status/2095291912706220410",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/petergyang/status/2095255545594941910",
+        "zh": "https://x.com/petergyang/status/2095255545594941910",
+        "url": "https://x.com/petergyang/status/2095255545594941910",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://internetofbugs.substack.com/p/noai-agents-did-not-build-secret",
+        "zh": "https://internetofbugs.substack.com/p/noai-agents-did-not-build-secret",
+        "url": "https://internetofbugs.substack.com/p/noai-agents-did-not-build-secret",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.painauchoc.com/",
+        "zh": "https://www.painauchoc.com/",
+        "url": "https://www.painauchoc.com/",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://news.ycombinator.com/item?id=49557687",
+        "zh": "https://news.ycombinator.com/item?id=49557687",
+        "url": "https://news.ycombinator.com/item?id=49557687",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.hey.com/agents",
+        "zh": "https://www.hey.com/agents",
+        "url": "https://www.hey.com/agents",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://github.com/google-research/timesfm",
+        "zh": "https://github.com/google-research/timesfm",
+        "url": "https://github.com/google-research/timesfm",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://redactle.net/llm-leaderboard",
+        "zh": "https://redactle.net/llm-leaderboard",
+        "url": "https://redactle.net/llm-leaderboard",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://hotdogbenchmark.lol/",
+        "zh": "https://hotdogbenchmark.lol/",
+        "url": "https://hotdogbenchmark.lol/",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://blog.google/products-and-platforms/products/workspace/google-pics/",
+        "zh": "https://blog.google/products-and-platforms/products/workspace/google-pics/",
+        "url": "https://blog.google/products-and-platforms/products/workspace/google-pics/",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://rafay.co/ai-ml-faqs",
+        "zh": "https://rafay.co/ai-ml-faqs",
+        "url": "https://rafay.co/ai-ml-faqs",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.linkedin.com/pulse/ai-inference-next-multi-billion-dollar-infrastructure-uppu-rzglc",
+        "zh": "https://www.linkedin.com/pulse/ai-inference-next-multi-billion-dollar-infrastructure-uppu-rzglc",
+        "url": "https://www.linkedin.com/pulse/ai-inference-next-multi-billion-dollar-infrastructure-uppu-rzglc",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.ovaledge.com/blog/agentic-ai-tools",
+        "zh": "https://www.ovaledge.com/blog/agentic-ai-tools",
+        "url": "https://www.ovaledge.com/blog/agentic-ai-tools",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/html/2508.12461v1",
+        "zh": "https://arxiv.org/html/2508.12461v1",
+        "url": "https://arxiv.org/html/2508.12461v1",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://cacm.acm.org/research/cash-or-comfort-how-llms-value-your-inconvenience",
+        "zh": "https://cacm.acm.org/research/cash-or-comfort-how-llms-value-your-inconvenience",
+        "url": "https://cacm.acm.org/research/cash-or-comfort-how-llms-value-your-inconvenience",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/okey_amy/status/2095628525143302319",
+        "zh": "https://x.com/okey_amy/status/2095628525143302319",
+        "url": "https://x.com/okey_amy/status/2095628525143302319",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/KellerZoe/status/2095599118882144351",
+        "zh": "https://x.com/KellerZoe/status/2095599118882144351",
+        "url": "https://x.com/KellerZoe/status/2095599118882144351",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2609.01608",
+        "zh": "https://arxiv.org/abs/2609.01608",
+        "url": "https://arxiv.org/abs/2609.01608",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2609.01609",
+        "zh": "https://arxiv.org/abs/2609.01609",
+        "url": "https://arxiv.org/abs/2609.01609",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2609.01615",
+        "zh": "https://arxiv.org/abs/2609.01615",
+        "url": "https://arxiv.org/abs/2609.01615",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2609.01647",
+        "zh": "https://arxiv.org/abs/2609.01647",
+        "url": "https://arxiv.org/abs/2609.01647",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2609.01673",
+        "zh": "https://arxiv.org/abs/2609.01673",
+        "url": "https://arxiv.org/abs/2609.01673",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2609.01676",
+        "zh": "https://arxiv.org/abs/2609.01676",
+        "url": "https://arxiv.org/abs/2609.01676",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2609.01679",
+        "zh": "https://arxiv.org/abs/2609.01679",
+        "url": "https://arxiv.org/abs/2609.01679",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2609.01680",
+        "zh": "https://arxiv.org/abs/2609.01680",
+        "url": "https://arxiv.org/abs/2609.01680",
+        "pt": "自动聚合线索"
+      }
+    ],
+    "graphDelta": {
+      "entities": 43,
+      "events": 82,
+      "relations": 42,
+      "storylines": 6
+    }
+  },
+  {
+    "type": "日报",
+    "topic": "AI",
+    "src": "现场自动聚合",
+    "ic": "i-doc",
+    "h": 8,
+    "auto": true,
+    "unverified": true,
+    "format": "storyline",
+    "synthesis": "two-pass-v2",
     "aggregatedAt": "2026-09-01",
     "title": "AI 每日雷达 · 2026-09-01",
     "time": "今天",
