@@ -9,6 +9,674 @@
     "unverified": true,
     "format": "storyline",
     "synthesis": "two-pass-v2",
+    "aggregatedAt": "2026-09-05",
+    "title": "AI 每日雷达 · 2026-09-05",
+    "time": "今天",
+    "sub": "GPT-6 Astra 完全饱和 ARC-AGI-3，swyx 宣称 AI 工程进入新时代，Box CEO 验证其为企业复杂工作最强模型。",
+    "summary": "今日主题是 GPT-6 Astra 发布引发的智能基准饱和与企业验证浪潮，同时多模型编码代理基础设施加速统一，代理安全与效率挑战同步升级。对做 Company OS 的团队而言，Box CEO 验证 Astra 在企业复杂工作中表现最佳，意味着企业级 AI 代理已进入核心推理与决策环节；对代理开发者来说，HydraFusion、Vercel Gateway 等工具正在降低多模型编排门槛，而 Claude Code 的扩展性反馈和社区技能生成则推动代理效率工具链持续进化；安全方面，OpenAI 投入 10 亿美元加码安全，代理速度瓶颈被明确指为关键障碍，提示产品迭代需在延迟与安全间取得平衡。",
+    "bullets": [
+      "GPT-6 Astra 完全饱和 ARC-AGI-3，swyx 宣称 AI 工程进入新时代，Box CEO 验证其为企业复杂工作最强模型。",
+      "Claude Code 团队公开征询扩展性，社区涌现技能生成工具，代理效率工具链持续进化。",
+      "多模型编码代理基础设施加速统一：HydraFusion 编排、Vercel Gateway 统一接入、自主多模型工作流成为常态。",
+      "OpenAI 投入 10 亿美元加码安全，同时投资人指出代理速度是使用瓶颈，安全与效率平衡成为焦点。",
+      "Vercel CEO 提出“反馈即代理改进提示”，代理产品迭代范式转向用户反馈驱动。"
+    ],
+    "spotlight": [
+      {
+        "quote": "Vercel CEO 视客户反馈为改进 AI 代理的提示，反馈即代理改进的 prompt。",
+        "why": "提出代理产品迭代新范式，将用户反馈直接作为代理改进的提示词，为代理自我进化提供路径，可能改变代理产品的设计与运营方式。",
+        "entity": "Vercel CEO",
+        "sources": [
+          "https://x.com/rauchg/status/2095720463397753000"
+        ]
+      }
+    ],
+    "storylines": [
+      {
+        "id": "gpt6-astra-launch",
+        "title": "GPT-6 Astra 发布：智能基准饱和与企业验证开启新范式",
+        "isNew": true,
+        "categories": [
+          "model_dev",
+          "tech_trend",
+          "new_thought"
+        ],
+        "chain": [
+          {
+            "title": "OpenAI 正式发布 GPT-6 Astra 并公布安全评估",
+            "kind": "release",
+            "entity": "OpenAI",
+            "relPrev": null,
+            "sources": [
+              "https://openai.com/index/safety-overview-gpt-6-astra"
+            ]
+          },
+          {
+            "title": "Box CEO Aaron Levie 宣布 GPT-6 Astra 发布，并验证其为企业复杂工作最佳模型",
+            "kind": "release",
+            "entity": "Box",
+            "relPrev": null,
+            "sources": [
+              "https://x.com/levie/status/2095598710311067716"
+            ]
+          },
+          {
+            "title": "发布后出现混乱，Sam Altman 道歉并承诺广泛推出，Codex 负责人提供 banked reset 补偿",
+            "kind": "update",
+            "entity": "OpenAI",
+            "relPrev": null,
+            "sources": [
+              "https://x.com/sama/status/2095678759651438887",
+              "https://x.com/thsottiaux/status/2095651088502591861"
+            ]
+          },
+          {
+            "title": "GPT-6 Astra 完全饱和 ARC-AGI-3 基准测试",
+            "kind": "update",
+            "entity": "GPT-6 Astra",
+            "relPrev": null,
+            "sources": [
+              "https://x.com/mattturck/status/2095653093148885274"
+            ]
+          },
+          {
+            "title": "swyx 宣称 AI 工程进入新时代",
+            "kind": "debate",
+            "entity": "swyx",
+            "relPrev": null,
+            "sources": [
+              "https://x.com/swyx/status/2095621785953984782"
+            ]
+          }
+        ],
+        "narrative": "GPT-6 Astra 发布当天即引发从基准测试到企业验证的连锁反应。模型在 ARC-AGI-3 上完全饱和，被 swyx 视为 AI 工程分水岭；Box CEO 则从企业复杂工作场景出发，将其定位为当前最强模型。发布过程中的混乱与补偿也折射出超大规模模型交付的运维挑战。",
+        "carryOver": null
+      },
+      {
+        "id": "gemini-3-8-flash-release",
+        "title": "Gemini 3.8 Flash 与 Flash Cyber 发布，代理视频理解能力亮相",
+        "isNew": true,
+        "categories": [
+          "model_dev",
+          "tech_trend"
+        ],
+        "chain": [
+          {
+            "title": "谷歌发布 Gemini 3.8 Flash 及 Flash Cyber 模型",
+            "kind": "release",
+            "entity": "Google",
+            "relPrev": null,
+            "sources": [
+              "https://simonwillison.net/2026/Sep/2/llm-gemini/",
+              "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/"
+            ]
+          },
+          {
+            "title": "Gemini 代理视频理解能力介绍，可处理视频输入并执行任务",
+            "kind": "release",
+            "entity": "Google DeepMind",
+            "relPrev": null,
+            "sources": [
+              "https://deepmind.google/blog/introducing-agentic-video-in-gemini/"
+            ]
+          }
+        ],
+        "narrative": "谷歌在同一天推出 Gemini 3.8 Flash 系列模型并展示代理视频理解能力，尽管光芒被 GPT-6 Astra 掩盖，但 Flash 系列在轻量化和安全垂直（Flash Cyber）上的布局，以及多模态代理的进展，仍是模型竞争中的重要信号。",
+        "carryOver": null
+      },
+      {
+        "id": "multi-model-coding-agents",
+        "title": "多模型编码代理基础设施涌现：HydraFusion、Vercel Gateway 与自主工作流",
+        "isNew": true,
+        "categories": [
+          "tech_trend",
+          "model_dev"
+        ],
+        "chain": [
+          {
+            "title": "GitHub 发布多模型编排框架 HydraFusion 研究预览",
+            "kind": "release",
+            "entity": "GitHub",
+            "relPrev": null,
+            "sources": [
+              "https://github.blog/ai-and-ml/github-copilot/project-hydrafusion-frontier-quality-via-multi-model-orchestration/"
+            ]
+          },
+          {
+            "title": "配套推出多代理并行教程与成本效率优化方案",
+            "kind": "release",
+            "entity": "GitHub",
+            "relPrev": null,
+            "sources": [
+              "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-run-several-agents-at-once/",
+              "https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality/"
+            ]
+          },
+          {
+            "title": "Vercel CEO 发布 AI Gateway 编码代理设置，统一代理接入",
+            "kind": "release",
+            "entity": "Vercel",
+            "relPrev": null,
+            "sources": [
+              "https://x.com/rauchg/status/2095534442198839758"
+            ]
+          },
+          {
+            "title": "OpenAI 产品负责人展示 Codex 自主编码工作流",
+            "kind": "update",
+            "entity": "OpenAI",
+            "relPrev": null,
+            "sources": [
+              "https://x.com/nikunj/status/2095640247392759871"
+            ]
+          },
+          {
+            "title": "Nikunj Kothari 展示使用 Claude Fable 5.1 和 ChatGPT Codex 的自主多模型工作流",
+            "kind": "debate",
+            "entity": "Nikunj Kothari",
+            "relPrev": null,
+            "sources": [
+              "https://x.com/nikunj/status/2095634707044266049"
+            ]
+          }
+        ],
+        "narrative": "编码代理正从单模型工具向多模型编排、统一接入的工程化方向演进。GitHub 的 HydraFusion 和 Vercel 的 AI Gateway 分别从编排和接入层提供基础设施，而 OpenAI 与社区开发者展示的自主多模型工作流则验证了这一趋势的实际需求。",
+        "carryOver": null
+      },
+      {
+        "id": "agent-efficiency-local-wave",
+        "title": "Claude Code 后台操作与效率工具链：扩展性征询与技能生成",
+        "isNew": false,
+        "categories": [
+          "tech_trend",
+          "model_dev"
+        ],
+        "chain": [
+          {
+            "title": "Claude Code 团队公开征询扩展性意见，收集开发者反馈",
+            "kind": "debate",
+            "entity": "Anthropic",
+            "relPrev": null,
+            "sources": [
+              "https://x.com/bcherny/status/2095590515765060076",
+              "https://x.com/trq212/status/2095653053282292013"
+            ]
+          },
+          {
+            "title": "社区涌现技能生成工具，进一步扩展 Claude Code 能力",
+            "kind": "debate",
+            "entity": "社区",
+            "relPrev": null,
+            "sources": [
+              "https://dev.to/aws/the-most-popular-ai-coding-skills-right-now-4183"
+            ]
+          }
+        ],
+        "narrative": "继 Claude Code 后台操控电脑、effort levels 不破坏 prompt cache 等效率优化上线后，团队今日积极征询扩展性反馈，社区也自发涌现技能生成工具，表明代理效率工具链正从官方优化向社区共创延伸。",
+        "carryOver": "继 Claude Code 后台操作与 token 优化后，团队进一步征询扩展性反馈，社区涌现技能生成工具。"
+      },
+      {
+        "id": "agent-security-governance",
+        "title": "代理安全与效率挑战：OpenAI 10 亿安全计划与代理速度瓶颈",
+        "isNew": false,
+        "categories": [
+          "new_thought",
+          "tech_trend"
+        ],
+        "chain": [
+          {
+            "title": "Aditya Agarwal 指代理速度是使用瓶颈，10-100 倍加速将根本变革交互模式",
+            "kind": "debate",
+            "entity": "Aditya Agarwal",
+            "relPrev": null,
+            "sources": [
+              "https://x.com/adityaag/status/2095557713405292702"
+            ]
+          },
+          {
+            "title": "OpenAI 推出 Daybreak 安全计划，10 亿美元投入前沿网络 AI 与培训",
+            "kind": "update",
+            "entity": "OpenAI",
+            "relPrev": null,
+            "sources": [
+              "https://openai.com/index/daybreak-for-frontline-defenders"
+            ]
+          }
+        ],
+        "narrative": "代理安全与效率的讨论进一步升温。在速度瓶颈被明确指为代理部署的关键障碍的同时，OpenAI 以 10 亿美元级安全计划回应日益增长的代理安全担忧，两条线索共同指向一个现实：代理要真正进入生产环境，必须在延迟与安全两个维度上同时取得突破。",
+        "carryOver": "延续代理安全与效率挑战，今日 OpenAI 推出 Daybreak 安全计划，同时投资人指出代理速度是使用瓶颈。"
+      }
+    ],
+    "columns": [],
+    "scattered": [
+      {
+        "note": "Simon Willison August newsletter提及OpenAI意外泄露细节，可能关联GPT-6 Astra，但信息不全",
+        "category": "model_dev",
+        "sources": [
+          "https://simonwillison.net/2026/Sep/4/august-newsletter/"
+        ]
+      },
+      {
+        "note": "Simon Willison 分析 Claude 新系统提示，关注透明度，但该提示不包含 Claude Cowork 或 Claude Code",
+        "category": "tech_trend",
+        "sources": [
+          "https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/"
+        ]
+      },
+      {
+        "note": "Box CEO 宣称开放权重 AI 生态成熟，基础设施、模型、商业模式均就绪",
+        "category": "new_thought",
+        "sources": [
+          "https://x.com/levie/status/2095519015771000964"
+        ]
+      },
+      {
+        "note": "讨论推理优先基础设施如何驱动下一波 AI，涉及企业组织将工作流构建到 SaaS 应用中的开发者需求。",
+        "category": "ai_enterprise_os",
+        "sources": [
+          "https://www.youtube.com/watch?v=0EizteFD2Hs"
+        ]
+      },
+      {
+        "note": "论文揭示LLM在不确定时回退到训练语料unigram先验的几何机制",
+        "category": "papers",
+        "sources": [
+          "https://arxiv.org/abs/2609.02959"
+        ]
+      },
+      {
+        "note": "论文The Geometry of Ignorance探讨LLM贝叶斯先验，与今日其他事件无直接关联",
+        "category": "model_dev",
+        "sources": [
+          "https://arxiv.org/abs/2609.02959"
+        ]
+      },
+      {
+        "note": "GitHub 播客解码 AI 工程新术语（loops、harnesses、squads 等）",
+        "category": "tech_trend",
+        "sources": [
+          "https://github.blog/ai-and-ml/decoding-the-new-ai-lingo-loops-harnesses-squads-hill-climbing-oh-my/"
+        ]
+      },
+      {
+        "note": "Replit CEO 引述 Minsky 认为情绪是智能核心，非进化副产品",
+        "category": "new_thought",
+        "sources": [
+          "https://x.com/amasad/status/2095746838490198375"
+        ]
+      },
+      {
+        "note": "提出参数PDE算子学习的方程重铸方法，提升跨参数范围泛化",
+        "category": "papers",
+        "sources": [
+          "https://arxiv.org/abs/2609.02982"
+        ]
+      },
+      {
+        "note": "Google DeepMind发布天气模型WeatherNext 3，不属本域核心脉络",
+        "category": "model_dev",
+        "sources": [
+          "https://deepmind.google/blog/introducing-weathernext-3-our-most-advanced-and-accurate-global-weather-ai-model/"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "h": "今日重点",
+        "bullets": [
+          "Vercel CEO 视客户反馈为改进 AI 代理的提示，反馈即代理改进的 prompt。——提出代理产品迭代新范式，将用户反馈直接作为代理改进的提示词，为代理自我进化提供路径，可能改变代理产品的设计与运营方式。"
+        ]
+      },
+      {
+        "h": "主题线 1 · GPT-6 Astra 发布：智能基准饱和与企业验证开启新范式",
+        "bullets": [
+          "OpenAI 正式发布 GPT-6 Astra 并公布安全评估 → Box CEO Aaron Levie 宣布 GPT-6 Astra 发布，并验证其为企业复杂工作最佳模型 → 发布后出现混乱，Sam Altman 道歉并承诺广泛推出，Codex 负责人提供 banked reset 补偿 → GPT-6 Astra 完全饱和 ARC-AGI-3 基准测试 → swyx 宣称 AI 工程进入新时代",
+          "GPT-6 Astra 发布当天即引发从基准测试到企业验证的连锁反应。模型在 ARC-AGI-3 上完全饱和，被 swyx 视为 AI 工程分水岭；Box CEO 则从企业复杂工作场景出发，将其定位为当前最强模型。发布过程中的混乱与补偿也折射出超大规模模型交付的运维挑战。"
+        ]
+      },
+      {
+        "h": "主题线 2 · Gemini 3.8 Flash 与 Flash Cyber 发布，代理视频理解能力亮相",
+        "bullets": [
+          "谷歌发布 Gemini 3.8 Flash 及 Flash Cyber 模型 → Gemini 代理视频理解能力介绍，可处理视频输入并执行任务",
+          "谷歌在同一天推出 Gemini 3.8 Flash 系列模型并展示代理视频理解能力，尽管光芒被 GPT-6 Astra 掩盖，但 Flash 系列在轻量化和安全垂直（Flash Cyber）上的布局，以及多模态代理的进展，仍是模型竞争中的重要信号。"
+        ]
+      },
+      {
+        "h": "主题线 3 · 多模型编码代理基础设施涌现：HydraFusion、Vercel Gateway 与自主工作流",
+        "bullets": [
+          "GitHub 发布多模型编排框架 HydraFusion 研究预览 → 配套推出多代理并行教程与成本效率优化方案 → Vercel CEO 发布 AI Gateway 编码代理设置，统一代理接入 → OpenAI 产品负责人展示 Codex 自主编码工作流 → Nikunj Kothari 展示使用 Claude Fable 5.1 和 ChatGPT Codex 的自主多模型工作流",
+          "编码代理正从单模型工具向多模型编排、统一接入的工程化方向演进。GitHub 的 HydraFusion 和 Vercel 的 AI Gateway 分别从编排和接入层提供基础设施，而 OpenAI 与社区开发者展示的自主多模型工作流则验证了这一趋势的实际需求。"
+        ]
+      },
+      {
+        "h": "主题线 4 · Claude Code 后台操作与效率工具链：扩展性征询与技能生成",
+        "bullets": [
+          "Claude Code 团队公开征询扩展性意见，收集开发者反馈 → 社区涌现技能生成工具，进一步扩展 Claude Code 能力",
+          "继 Claude Code 后台操控电脑、effort levels 不破坏 prompt cache 等效率优化上线后，团队今日积极征询扩展性反馈，社区也自发涌现技能生成工具，表明代理效率工具链正从官方优化向社区共创延伸。"
+        ]
+      },
+      {
+        "h": "主题线 5 · 代理安全与效率挑战：OpenAI 10 亿安全计划与代理速度瓶颈",
+        "bullets": [
+          "Aditya Agarwal 指代理速度是使用瓶颈，10-100 倍加速将根本变革交互模式 → OpenAI 推出 Daybreak 安全计划，10 亿美元投入前沿网络 AI 与培训",
+          "代理安全与效率的讨论进一步升温。在速度瓶颈被明确指为代理部署的关键障碍的同时，OpenAI 以 10 亿美元级安全计划回应日益增长的代理安全担忧，两条线索共同指向一个现实：代理要真正进入生产环境，必须在延迟与安全两个维度上同时取得突破。"
+        ]
+      },
+      {
+        "h": "零散信号",
+        "bullets": [
+          "Simon Willison August newsletter提及OpenAI意外泄露细节，可能关联GPT-6 Astra，但信息不全",
+          "Simon Willison 分析 Claude 新系统提示，关注透明度，但该提示不包含 Claude Cowork 或 Claude Code",
+          "Box CEO 宣称开放权重 AI 生态成熟，基础设施、模型、商业模式均就绪",
+          "讨论推理优先基础设施如何驱动下一波 AI，涉及企业组织将工作流构建到 SaaS 应用中的开发者需求。",
+          "论文揭示LLM在不确定时回退到训练语料unigram先验的几何机制",
+          "论文The Geometry of Ignorance探讨LLM贝叶斯先验，与今日其他事件无直接关联",
+          "GitHub 播客解码 AI 工程新术语（loops、harnesses、squads 等）",
+          "Replit CEO 引述 Minsky 认为情绪是智能核心，非进化副产品",
+          "提出参数PDE算子学习的方程重铸方法，提升跨参数范围泛化",
+          "Google DeepMind发布天气模型WeatherNext 3，不属本域核心脉络"
+        ]
+      }
+    ],
+    "ev": [
+      {
+        "who": "web",
+        "en": "https://openai.com/index/safety-overview-gpt-6-astra",
+        "zh": "https://openai.com/index/safety-overview-gpt-6-astra",
+        "url": "https://openai.com/index/safety-overview-gpt-6-astra",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/levie/status/2095598710311067716",
+        "zh": "https://x.com/levie/status/2095598710311067716",
+        "url": "https://x.com/levie/status/2095598710311067716",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/sama/status/2095678759651438887",
+        "zh": "https://x.com/sama/status/2095678759651438887",
+        "url": "https://x.com/sama/status/2095678759651438887",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/thsottiaux/status/2095651088502591861",
+        "zh": "https://x.com/thsottiaux/status/2095651088502591861",
+        "url": "https://x.com/thsottiaux/status/2095651088502591861",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/mattturck/status/2095653093148885274",
+        "zh": "https://x.com/mattturck/status/2095653093148885274",
+        "url": "https://x.com/mattturck/status/2095653093148885274",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/swyx/status/2095621785953984782",
+        "zh": "https://x.com/swyx/status/2095621785953984782",
+        "url": "https://x.com/swyx/status/2095621785953984782",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://simonwillison.net/2026/Sep/2/llm-gemini/",
+        "zh": "https://simonwillison.net/2026/Sep/2/llm-gemini/",
+        "url": "https://simonwillison.net/2026/Sep/2/llm-gemini/",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/",
+        "zh": "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/",
+        "url": "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://deepmind.google/blog/introducing-agentic-video-in-gemini/",
+        "zh": "https://deepmind.google/blog/introducing-agentic-video-in-gemini/",
+        "url": "https://deepmind.google/blog/introducing-agentic-video-in-gemini/",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://github.blog/ai-and-ml/github-copilot/project-hydrafusion-frontier-quality-via-multi-model-orchestration/",
+        "zh": "https://github.blog/ai-and-ml/github-copilot/project-hydrafusion-frontier-quality-via-multi-model-orchestration/",
+        "url": "https://github.blog/ai-and-ml/github-copilot/project-hydrafusion-frontier-quality-via-multi-model-orchestration/",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-run-several-agents-at-once/",
+        "zh": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-run-several-agents-at-once/",
+        "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-run-several-agents-at-once/",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality/",
+        "zh": "https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality/",
+        "url": "https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality/",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/rauchg/status/2095534442198839758",
+        "zh": "https://x.com/rauchg/status/2095534442198839758",
+        "url": "https://x.com/rauchg/status/2095534442198839758",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/nikunj/status/2095640247392759871",
+        "zh": "https://x.com/nikunj/status/2095640247392759871",
+        "url": "https://x.com/nikunj/status/2095640247392759871",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/nikunj/status/2095634707044266049",
+        "zh": "https://x.com/nikunj/status/2095634707044266049",
+        "url": "https://x.com/nikunj/status/2095634707044266049",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/bcherny/status/2095590515765060076",
+        "zh": "https://x.com/bcherny/status/2095590515765060076",
+        "url": "https://x.com/bcherny/status/2095590515765060076",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/trq212/status/2095653053282292013",
+        "zh": "https://x.com/trq212/status/2095653053282292013",
+        "url": "https://x.com/trq212/status/2095653053282292013",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://dev.to/aws/the-most-popular-ai-coding-skills-right-now-4183",
+        "zh": "https://dev.to/aws/the-most-popular-ai-coding-skills-right-now-4183",
+        "url": "https://dev.to/aws/the-most-popular-ai-coding-skills-right-now-4183",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/adityaag/status/2095557713405292702",
+        "zh": "https://x.com/adityaag/status/2095557713405292702",
+        "url": "https://x.com/adityaag/status/2095557713405292702",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://openai.com/index/daybreak-for-frontline-defenders",
+        "zh": "https://openai.com/index/daybreak-for-frontline-defenders",
+        "url": "https://openai.com/index/daybreak-for-frontline-defenders",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/rauchg/status/2095720463397753000",
+        "zh": "https://x.com/rauchg/status/2095720463397753000",
+        "url": "https://x.com/rauchg/status/2095720463397753000",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://simonwillison.net/2026/Sep/4/august-newsletter/",
+        "zh": "https://simonwillison.net/2026/Sep/4/august-newsletter/",
+        "url": "https://simonwillison.net/2026/Sep/4/august-newsletter/",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2609.02959",
+        "zh": "https://arxiv.org/abs/2609.02959",
+        "url": "https://arxiv.org/abs/2609.02959",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://deepmind.google/blog/introducing-weathernext-3-our-most-advanced-and-accurate-global-weather-ai-model/",
+        "zh": "https://deepmind.google/blog/introducing-weathernext-3-our-most-advanced-and-accurate-global-weather-ai-model/",
+        "url": "https://deepmind.google/blog/introducing-weathernext-3-our-most-advanced-and-accurate-global-weather-ai-model/",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/",
+        "zh": "https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/",
+        "url": "https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://github.blog/ai-and-ml/decoding-the-new-ai-lingo-loops-harnesses-squads-hill-climbing-oh-my/",
+        "zh": "https://github.blog/ai-and-ml/decoding-the-new-ai-lingo-loops-harnesses-squads-hill-climbing-oh-my/",
+        "url": "https://github.blog/ai-and-ml/decoding-the-new-ai-lingo-loops-harnesses-squads-hill-climbing-oh-my/",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/steipete/status/2095703937177584118",
+        "zh": "https://x.com/steipete/status/2095703937177584118",
+        "url": "https://x.com/steipete/status/2095703937177584118",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/levie/status/2095519015771000964",
+        "zh": "https://x.com/levie/status/2095519015771000964",
+        "url": "https://x.com/levie/status/2095519015771000964",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/amasad/status/2095746838490198375",
+        "zh": "https://x.com/amasad/status/2095746838490198375",
+        "url": "https://x.com/amasad/status/2095746838490198375",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/realmadhuguru/status/2095526844653302269",
+        "zh": "https://x.com/realmadhuguru/status/2095526844653302269",
+        "url": "https://x.com/realmadhuguru/status/2095526844653302269",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://blog.google/innovation-and-ai/technology/google-ai-updates-august-2026/",
+        "zh": "https://blog.google/innovation-and-ai/technology/google-ai-updates-august-2026/",
+        "url": "https://blog.google/innovation-and-ai/technology/google-ai-updates-august-2026/",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.youtube.com/watch?v=0EizteFD2Hs",
+        "zh": "https://www.youtube.com/watch?v=0EizteFD2Hs",
+        "url": "https://www.youtube.com/watch?v=0EizteFD2Hs",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2609.02982",
+        "zh": "https://arxiv.org/abs/2609.02982",
+        "url": "https://arxiv.org/abs/2609.02982",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2609.02984",
+        "zh": "https://arxiv.org/abs/2609.02984",
+        "url": "https://arxiv.org/abs/2609.02984",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2609.02986",
+        "zh": "https://arxiv.org/abs/2609.02986",
+        "url": "https://arxiv.org/abs/2609.02986",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2609.02987",
+        "zh": "https://arxiv.org/abs/2609.02987",
+        "url": "https://arxiv.org/abs/2609.02987",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2609.02988",
+        "zh": "https://arxiv.org/abs/2609.02988",
+        "url": "https://arxiv.org/abs/2609.02988",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2609.02991",
+        "zh": "https://arxiv.org/abs/2609.02991",
+        "url": "https://arxiv.org/abs/2609.02991",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2609.02993",
+        "zh": "https://arxiv.org/abs/2609.02993",
+        "url": "https://arxiv.org/abs/2609.02993",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://github.com/mbzuai-oryx/awesome-llm-post-training",
+        "zh": "https://github.com/mbzuai-oryx/awesome-llm-post-training",
+        "url": "https://github.com/mbzuai-oryx/awesome-llm-post-training",
+        "pt": "自动聚合线索"
+      }
+    ],
+    "graphDelta": {
+      "entities": 19,
+      "events": 47,
+      "relations": 28,
+      "storylines": 5
+    }
+  },
+  {
+    "type": "日报",
+    "topic": "AI",
+    "src": "现场自动聚合",
+    "ic": "i-doc",
+    "h": 8,
+    "auto": true,
+    "unverified": true,
+    "format": "storyline",
+    "synthesis": "two-pass-v2",
     "aggregatedAt": "2026-09-04",
     "title": "AI 每日雷达 · 2026-09-04",
     "time": "今天",
