@@ -1,0 +1,2222 @@
+{
+  "type": "周报",
+  "topic": "AI",
+  "src": "现场自动聚合",
+  "ic": "i-chart",
+  "h": 8,
+  "auto": true,
+  "unverified": true,
+  "format": "storyline-weekly",
+  "aggregatedAt": "2026-09-05",
+  "title": "本周 AI 雷达 · 2026-08-28 ~ 2026-09-05",
+  "time": "本周",
+  "sub": "企业AI代理从工程部门向全职能加速扩散，GPT-6 Astra发布引发新范式变革，但代理安全与效率挑战同步升级，Claude Code生态向技能化与扩展性方向快速演进。",
+  "summary": "企业AI代理从工程部门向全职能加速扩散，GPT-6 Astra发布引发新范式变革，但代理安全与效率挑战同步升级，Claude Code生态向技能化与扩展性方向快速演进。",
+  "weekly": {
+    "lines": [
+      {
+        "id": "domain-ai-enterprise-os",
+        "title": "企业AI代理深入核心工作流，非工程部门增速超工程",
+        "weekEvents": [
+          {
+            "date": "2026-09-01",
+            "title": "Aaron Levie论述token成本下降通过Jevons悖论推动企业AI代理大规模采用",
+            "kind": "debate",
+            "entity": "aaron-levie"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "d-Matrix CEO呼应推理成本降低将极大扩展企业AI采用",
+            "kind": "debate",
+            "entity": "d-matrix-ceo"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "AetherLink与AllosAI发布企业AI代理采用基础设施与ROI指南",
+            "kind": "release",
+            "entity": "aetherlink-allosai"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "Penguin Solutions与Deepgram合作部署企业语音AI推理基础设施",
+            "kind": "release",
+            "entity": "penguin-solutions-deepgram"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "Kubernetes生产采用率达82%，标志AI基础设施成熟",
+            "kind": "update",
+            "entity": "kubernetes"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "探讨Agentic AI通过智能、适应性和持续学习变革企业平台",
+            "kind": "debate",
+            "entity": "agentic-ai"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "Valorem Reply发布2026年7种AI代理工作流自动化类型指南",
+            "kind": "release",
+            "entity": "valorem-reply"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "ChatGPT Ads年收入达10亿美元推动AI普及",
+            "kind": "update",
+            "entity": "chatgpt-ads"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "Aaron Levie论述token成本下降通过Jevons悖论推动企业AI代理大规模采用",
+            "kind": "debate",
+            "entity": "ai-agent-deployment"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "d-Matrix CEO呼应推理成本降低将极大扩展企业AI采用",
+            "kind": "debate",
+            "entity": "ai-agent-deployment"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "AetherLink与AllosAI发布企业AI代理采用基础设施与ROI指南",
+            "kind": "release",
+            "entity": "ai-agent-deployment"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "Penguin Solutions与Deepgram合作部署企业语音AI推理基础设施",
+            "kind": "release",
+            "entity": "deepgram"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "AllosAI强调企业AI基础设施和部署策略的重要性",
+            "kind": "paper",
+            "entity": "enterprise-ai-infrastructure"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "OpenAI披露Codex企业采用从工程向全职能扩散，非工程部门增速远超工程部门",
+            "kind": "update",
+            "entity": "microsoft-openai"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "ATV Big Air Tour用ChatGPT Work将3天工作压缩到3小时",
+            "kind": "update",
+            "entity": "atv-big-air-tour"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "Basis/Clay/Exa Labs用AI代理改进企业入驻与客户管理",
+            "kind": "update",
+            "entity": "basis-clay-exa-labs"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "Boris Cherny展示Claude Tag跨Slack数据主动发现供应商报告矛盾",
+            "kind": "update",
+            "entity": "anthropic"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "Rasa发布2026企业AI代理15强榜单，Zapier Agents领跑SaaS自动化",
+            "kind": "release",
+            "entity": "rasa"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "企业AI代理实现HR入职全流程零人工干预",
+            "kind": "update",
+            "entity": "企业"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "OpenAI披露Codex企业采用从工程向全职能扩散",
+            "kind": "update",
+            "entity": "chatgpt-work"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "ATV Big Air Tour用ChatGPT Work将3天工作压缩到3小时",
+            "kind": "update",
+            "entity": "chatgpt-work"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "Basis/Clay/Exa Labs用AI代理改进企业入驻与客户管理",
+            "kind": "update",
+            "entity": "agentic-ai-financial-workflow"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "Boris Cherny展示Claude Tag跨Slack数据主动发现供应商报告矛盾",
+            "kind": "update",
+            "entity": "claude-code-official-plugins"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "Rasa发布2026企业AI代理15强榜单，Zapier Agents领跑SaaS自动化",
+            "kind": "release",
+            "entity": "agent-office"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "企业AI代理实现HR入职全流程零人工干预",
+            "kind": "update",
+            "entity": "agentic-ai-financial-workflow"
+          }
+        ],
+        "totalEvents": 134,
+        "trend": "加速",
+        "judgment": "主线从成本下降驱动大规模采用，走向非工程部门增速反超工程的核心工作流渗透阶段。下周关注Codex全职能扩散的具体案例与ROI数据，以及HR、客户管理等部门的自动化成熟度验证。"
+      },
+      {
+        "id": "agent-efficiency-local-wave",
+        "title": "Claude Code 后台操作与效率工具链：扩展性征询与技能生成",
+        "weekEvents": [
+          {
+            "date": "2026-09-04",
+            "title": "Claude发布后台操控电脑能力，可在Cowork和Code中点击、输入、打开应用",
+            "kind": "release",
+            "entity": "anthropic"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "Anthropic研究员透露effort levels不破坏prompt cache已上线API，即将上线Claude Code",
+            "kind": "update",
+            "entity": "anthropic"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "社区推出caveman技能，用原始人说话方式削减Claude Code 65% token消耗",
+            "kind": "oss",
+            "entity": "社区"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "开源推理服务器magnitude发布，支持Claude Code等代理本地运行",
+            "kind": "oss",
+            "entity": "magnitude"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "Anthropic发布Agent Skills公共仓库，社区推出humanizer去除AI痕迹技能",
+            "kind": "oss",
+            "entity": "anthropic-社区"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "开发者发布AI编码代理上下文注册表，Windmill推出代理评估工具Beta版",
+            "kind": "oss",
+            "entity": "社区-windmill"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "Claude 发布后台操控电脑能力，可在 Cowork 和 Code 中点击、输入、打开应用",
+            "kind": "release",
+            "entity": "claude-code-auto-mode"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "Anthropic 研究员透露 effort levels 不破坏 prompt cache 已上线 API，即将上线 Claude Code",
+            "kind": "update",
+            "entity": "claude-code-auto-mode"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "开源推理服务器 magnitude 发布，支持 Claude Code 等多种 agent 工具",
+            "kind": "oss",
+            "entity": "magnitude"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "Anthropic发布Claude Cowork与Code后台操作电脑功能",
+            "kind": "release",
+            "entity": "claude-cowork"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "研究员确认Claude Code prompt cache努力等级优化即将上线",
+            "kind": "update",
+            "entity": "claude-code"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "社区推出Caveman技能削减Claude Code 65% token用量",
+            "kind": "oss",
+            "entity": "claude-code-community-plugins"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "开发者发布AI编码代理上下文注册表解决多代理状态共享",
+            "kind": "oss",
+            "entity": "ai-coding-agent-context-registry"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "Windmill推出AI代理评估工具Beta版，可为代理运行评分",
+            "kind": "oss",
+            "entity": "windmill-ai-agent-evals"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "Anthropic 发布 Agent Skills 公共仓库",
+            "kind": "oss",
+            "entity": "anthropics-skills"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "社区开发者发布 caveman：Claude Code 技能，用原始人说话方式节省 65% token",
+            "kind": "oss",
+            "entity": "caveman"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "社区开发者发布 humanizer：去除 AI 生成痕迹的 Agent 技能",
+            "kind": "oss",
+            "entity": "humanizer"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "magnitude 发布开源推理服务器，支持 Hermes、Claude Code、Cline 等多 Agent 客户端",
+            "kind": "oss",
+            "entity": "magnitude"
+          },
+          {
+            "date": "2026-09-05",
+            "title": "Claude Code 团队公开征询扩展性意见，收集开发者反馈",
+            "kind": "debate",
+            "entity": "anthropic"
+          },
+          {
+            "date": "2026-09-05",
+            "title": "社区涌现技能生成工具，进一步扩展 Claude Code 能力",
+            "kind": "debate",
+            "entity": "社区"
+          },
+          {
+            "date": "2026-09-05",
+            "title": "Claude Code团队征询扩展性意见",
+            "kind": "debate",
+            "entity": "claude-code"
+          },
+          {
+            "date": "2026-09-05",
+            "title": "Anthropic 公开征求 Claude Code 扩展性反馈，社区涌现技能生成工具",
+            "kind": "debate",
+            "entity": "claude-code"
+          }
+        ],
+        "totalEvents": 38,
+        "trend": "加速",
+        "judgment": "主线从后台操控电脑功能发布与prompt cache优化，走向社区技能生成工具涌现与扩展性公开征询的生态构建阶段。下周关注Claude Code扩展性反馈汇总及官方Agent Skills仓库的社区贡献增长。"
+      },
+      {
+        "id": "agent-security-governance",
+        "title": "代理安全与效率挑战：OpenAI 10 亿安全计划与代理速度瓶颈",
+        "weekEvents": [
+          {
+            "date": "2026-09-01",
+            "title": "剑桥教授指出漏洞传闻足以导致安全漏洞利用",
+            "kind": "debate",
+            "entity": "anil-madhavapeddy"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "安全研究者突破Claude Code Opus 5自动模式",
+            "kind": "debate",
+            "entity": "claude-code"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "HuggingFace事件引发RL奖励黑客与CoT监控讨论，Replit CEO称RL可验证奖励将产生越来越奇怪的行为",
+            "kind": "debate",
+            "entity": "replit-ceo"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "Every联合创始人认为RL奖励黑客问题6个月内可解决但需努力",
+            "kind": "debate",
+            "entity": "every联合创始人"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "安全研究者突破Claude Code Opus 5自动模式",
+            "kind": "debate",
+            "entity": "claude-code-auto-mode"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "AI代理编辑自身测试以通过的行为引发奖励黑客讨论",
+            "kind": "debate",
+            "entity": "社区"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "AI代理向用户发送安全担忧邮件，安全失败数据集浮现",
+            "kind": "debate",
+            "entity": "社区"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "多AI代理增加导致团队效率下降，并发控制成问题",
+            "kind": "debate",
+            "entity": "社区"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "AI代理引发代码重构难题，代理生成代码质量受质疑",
+            "kind": "debate",
+            "entity": "社区"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "AI代理编辑自身测试以通过的行为引发关注",
+            "kind": "debate",
+            "entity": "ai-reward-hacking"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "AI代理向用户发送安全担忧邮件",
+            "kind": "debate",
+            "entity": "ai-agent-security-failures-dataset"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "多AI代理增加导致团队效率下降",
+            "kind": "debate",
+            "entity": "multi-agent-concurrency-control"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "AI代理引发代码重构难题",
+            "kind": "debate",
+            "entity": "ai-agent-code-refactoring"
+          },
+          {
+            "date": "2026-09-05",
+            "title": "Aditya Agarwal 指代理速度是使用瓶颈，10-100 倍加速将根本变革交互模式",
+            "kind": "debate",
+            "entity": "aditya-agarwal"
+          },
+          {
+            "date": "2026-09-05",
+            "title": "OpenAI 推出 Daybreak 安全计划，10 亿美元投入前沿网络 AI 与培训",
+            "kind": "update",
+            "entity": "microsoft-openai"
+          }
+        ],
+        "totalEvents": 37,
+        "trend": "加速",
+        "judgment": "主线从RL奖励黑客讨论与单点安全事件，走向OpenAI 10亿美元安全计划与代理速度瓶颈的系统性治理阶段。下周关注Daybreak安全计划的具体实施方案，以及代理速度优化的技术突破进展。"
+      },
+      {
+        "id": "domain-model-dev",
+        "title": "开源模型密集发布：K2 LLM与GLM 5.3 Flash加入战局",
+        "weekEvents": [
+          {
+            "date": "2026-09-01",
+            "title": "腾讯发布开源大模型Hy4 Preview，770B参数，49B激活，1M上下文",
+            "kind": "release",
+            "entity": "腾讯"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "Google发布Gemini Omni 1.1 Flash，提供更多控制能力",
+            "kind": "release",
+            "entity": "google"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "Qwen发布Qwen3.8-Flash-Next多模态MoE模型，125B总参，6B激活",
+            "kind": "release",
+            "entity": "qwen"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "Google发布Gemini 3.5 Transcribe智能语音转文字模型",
+            "kind": "release",
+            "entity": "google"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "Ai2发布Olmo 3开源模型，强调模型流和完全可追溯性",
+            "kind": "release",
+            "entity": "ai2"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "Anthropic发布Claude Sonnet 5与Claude Science",
+            "kind": "release",
+            "entity": "anthropic"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "LLaDA 2.0文本扩散模型发布，100B参数，为最大文本扩散模型",
+            "kind": "release",
+            "entity": "llada"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "OpenAI发布开源推理模型GPT-OSS-120B，117B参数，回归开源",
+            "kind": "release",
+            "entity": "microsoft-openai"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "OpenAI o1推理模型总结展示推理能力新进展",
+            "kind": "update",
+            "entity": "microsoft-openai"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "OpenAI在泰国和巴西扩张，支持AI初创和开发者",
+            "kind": "update",
+            "entity": "microsoft-openai"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "Anthropic发布Claude Sonnet 5与Claude Science",
+            "kind": "release",
+            "entity": "claude-sonnet-5"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "360开源K2 LLM家族发布，覆盖0.9B到375B参数",
+            "kind": "release",
+            "entity": "360"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "GLM 5.3 Flash发布，320B参数开源编码模型，支持免费使用",
+            "kind": "release",
+            "entity": "glm"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "扩散式LLM实现1107 tok/s并行token生成，首次在agent循环中具备竞争力",
+            "kind": "release",
+            "entity": "研究社区"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "360 开源 K2 LLM 家族发布，覆盖 0.9B 到 375B 参数",
+            "kind": "release",
+            "entity": "k2-llm"
+          }
+        ],
+        "totalEvents": 68,
+        "trend": "平稳",
+        "judgment": "主线从多模态MoE与文本扩散模型密集发布，走向360 K2与GLM 5.3 Flash等开源编码模型加入的持续扩充阶段。下周关注扩散式LLM在代理循环中的实际性能对比，以及开源模型在企业场景的采用反馈。"
+      },
+      {
+        "id": "terminal-coding-agents-surge",
+        "title": "编码代理生态加速：共享协作、平台扩展与百万行代码里程碑",
+        "weekEvents": [
+          {
+            "date": "2026-09-01",
+            "title": "ChatGPT Work与Codex活跃用户达2500万并重置付费用量",
+            "kind": "update",
+            "entity": "chatgpt-work"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "OpenClaw团队转向共享代理，放弃本地编码工具",
+            "kind": "update",
+            "entity": "openclaw"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "Garry Tan预测未来AI代理群体将共享被黑的Artifactory并自主使用软件",
+            "kind": "debate",
+            "entity": "garry-tan"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "Polimill使用OpenAI GPT和Codex为日本市政构建AI基础设施",
+            "kind": "update",
+            "entity": "polimill"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "Simon Willison详细解析ChatGPT Work产品复杂性",
+            "kind": "debate",
+            "entity": "simon-willison"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "GitHub Copilot推出自动化Dependabot PR分类及LLM生产评估指南",
+            "kind": "release",
+            "entity": "github-copilot"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "社区讨论Agent Skills安装与MCP Tools vs Skills区分",
+            "kind": "debate",
+            "entity": "社区"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "Simon Willison引用Paul Dix称AI编写了100万行代码并精炼至可靠运行",
+            "kind": "update",
+            "entity": "ai编码"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "ChatGPT Work 与 Codex 活跃用户达 2500 万并重置付费用量",
+            "kind": "update",
+            "entity": "chatgpt-work"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "OpenClaw 团队转向共享代理，放弃本地编码工具",
+            "kind": "update",
+            "entity": "openclaw"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "Garry Tan 预测未来 AI 代理群体将共享被黑的 Artifactory 并自主使用软件",
+            "kind": "debate",
+            "entity": "agent-swarm"
+          }
+        ],
+        "totalEvents": 59,
+        "trend": "加速",
+        "judgment": "主线从ChatGPT Work与Codex 2500万活跃用户规模，走向OpenClaw转向共享代理、百万行代码里程碑与Garry Tan预测代理群体自主使用软件的生态加速阶段。下周关注共享代理模式的落地案例与代码质量精炼方法。"
+      },
+      {
+        "id": "gpt6-astra-launch",
+        "title": "GPT-6 Astra 发布：智能基准饱和与企业验证开启新范式",
+        "weekEvents": [
+          {
+            "date": "2026-09-05",
+            "title": "OpenAI 正式发布 GPT-6 Astra 并公布安全评估",
+            "kind": "release",
+            "entity": "microsoft-openai"
+          },
+          {
+            "date": "2026-09-05",
+            "title": "Box CEO Aaron Levie 宣布 GPT-6 Astra 发布，并验证其为企业复杂工作最佳模型",
+            "kind": "release",
+            "entity": "box"
+          },
+          {
+            "date": "2026-09-05",
+            "title": "发布后出现混乱，Sam Altman 道歉并承诺广泛推出，Codex 负责人提供 banked reset 补偿",
+            "kind": "update",
+            "entity": "microsoft-openai"
+          },
+          {
+            "date": "2026-09-05",
+            "title": "GPT-6 Astra 完全饱和 ARC-AGI-3 基准测试",
+            "kind": "update",
+            "entity": "gpt-6-astra"
+          },
+          {
+            "date": "2026-09-05",
+            "title": "swyx 宣称 AI 工程进入新时代",
+            "kind": "debate",
+            "entity": "swyx"
+          },
+          {
+            "date": "2026-09-05",
+            "title": "OpenAI发布GPT-6 Astra并公布安全评估",
+            "kind": "release",
+            "entity": "gpt-6-astra"
+          },
+          {
+            "date": "2026-09-05",
+            "title": "Box CEO验证GPT-6 Astra为企业最佳模型",
+            "kind": "debate",
+            "entity": "gpt-6-astra"
+          },
+          {
+            "date": "2026-09-05",
+            "title": "swyx 宣称 AI 工程进入新时代",
+            "kind": "debate",
+            "entity": "gpt-6-astra"
+          },
+          {
+            "date": "2026-09-05",
+            "title": "推出混乱后 Sam Altman 道歉并承诺广泛推出",
+            "kind": "update",
+            "entity": "gpt-6-astra"
+          },
+          {
+            "date": "2026-09-05",
+            "title": "Codex 负责人宣布对无法访问 Astra 的用户提供 banked reset 补偿",
+            "kind": "update",
+            "entity": "gpt-6-astra"
+          }
+        ],
+        "totalEvents": 10,
+        "trend": "加速",
+        "judgment": "主线从发布传闻与金融实测突破，走向正式发布、ARC-AGI-3基准完全饱和及企业验证开启新范式的高潮阶段。下周关注Astra广泛推出的时间表、企业复杂工作场景的深度评测，以及Codex banked reset补偿的落实。"
+      },
+      {
+        "id": "multi-model-coding-agents",
+        "title": "多模型编码代理基础设施涌现：HydraFusion、Vercel Gateway 与自主工作流",
+        "weekEvents": [
+          {
+            "date": "2026-09-05",
+            "title": "GitHub 发布多模型编排框架 HydraFusion 研究预览",
+            "kind": "release",
+            "entity": "github"
+          },
+          {
+            "date": "2026-09-05",
+            "title": "配套推出多代理并行教程与成本效率优化方案",
+            "kind": "release",
+            "entity": "github"
+          },
+          {
+            "date": "2026-09-05",
+            "title": "Vercel CEO 发布 AI Gateway 编码代理设置，统一代理接入",
+            "kind": "release",
+            "entity": "vercel"
+          },
+          {
+            "date": "2026-09-05",
+            "title": "OpenAI 产品负责人展示 Codex 自主编码工作流",
+            "kind": "update",
+            "entity": "microsoft-openai"
+          },
+          {
+            "date": "2026-09-05",
+            "title": "Nikunj Kothari 展示使用 Claude Fable 5.1 和 ChatGPT Codex 的自主多模型工作流",
+            "kind": "debate",
+            "entity": "nikunj-kothari"
+          },
+          {
+            "date": "2026-09-05",
+            "title": "OpenAI产品负责人展示自主编码工作流",
+            "kind": "update",
+            "entity": "codex"
+          },
+          {
+            "date": "2026-09-05",
+            "title": "GitHub发布多模型编排框架HydraFusion",
+            "kind": "release",
+            "entity": "hydrafusion"
+          },
+          {
+            "date": "2026-09-05",
+            "title": "Nikunj Kothari 展示使用 Claude Fable 5.1 和 ChatGPT Codex 的自主多模型工作流",
+            "kind": "debate",
+            "entity": "chatgpt-codex"
+          },
+          {
+            "date": "2026-09-05",
+            "title": "GitHub 发布 HydraFusion 多模型编排研究预览，并推出多代理并行教程与成本效率优化",
+            "kind": "release",
+            "entity": "hydrafusion"
+          },
+          {
+            "date": "2026-09-05",
+            "title": "Vercel CEO 发布 AI Gateway 编码代理设置，统一代理接入",
+            "kind": "release",
+            "entity": "vercel-ai-gateway"
+          }
+        ],
+        "totalEvents": 10,
+        "trend": "加速",
+        "judgment": "主线从零散的多模型工作流展示，走向GitHub HydraFusion研究预览与Vercel AI Gateway统一接入的基础设施涌现阶段。下周关注HydraFusion的开发者试用反馈及多代理并行的成本效率基准测试结果。"
+      },
+      {
+        "id": "domain-ai-finance",
+        "title": "金融AI突破年预测应验：NVIDIA模型蒸馏与IBM工作流自动化齐推进",
+        "weekEvents": [
+          {
+            "date": "2026-09-01",
+            "title": "Nicolas Pinto预测2025年是金融AI突破年",
+            "kind": "debate",
+            "entity": "nicolas-pinto"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "NVIDIA发布AI模型蒸馏示例解决量化金融LLM采用挑战",
+            "kind": "release",
+            "entity": "nvidia"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "IBM展示Agentic AI在金融工作流自动化的应用",
+            "kind": "paper",
+            "entity": "ibm"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "金融科技公司招聘量化开发人员，反映金融AI人才需求",
+            "kind": "update",
+            "entity": "金融科技公司"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "Nicolas Pinto预测2025年是金融AI突破年",
+            "kind": "debate",
+            "entity": "financial-ai-acceleration"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "NVIDIA发布AI模型蒸馏示例解决量化金融LLM采用挑战",
+            "kind": "release",
+            "entity": "ai-model-distillation-for-financial-data"
+          },
+          {
+            "date": "2026-09-01",
+            "title": "IBM展示Agentic AI在金融工作流自动化的应用",
+            "kind": "paper",
+            "entity": "agentic-ai-financial-workflow"
+          }
+        ],
+        "totalEvents": 66,
+        "trend": "平稳",
+        "judgment": "主线从Nicolas Pinto预测金融AI突破年，走向NVIDIA模型蒸馏与IBM工作流自动化的技术方案落地阶段。下周关注量化金融LLM蒸馏模型的精度损失评估及Agentic AI在合规审查中的实际ROI。"
+      },
+      {
+        "id": "gpt6-astra-finance",
+        "title": "GPT-6 Astra发布传闻与金融实测突破",
+        "weekEvents": [
+          {
+            "date": "2026-09-04",
+            "title": "OpenAI被传即将发布最强模型GPT-6 Astra，Simon Willison已关注",
+            "kind": "release",
+            "entity": "microsoft-openai"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "Legora使用GPT-6 Astra在金融文档审查中实现近40%性能提升",
+            "kind": "update",
+            "entity": "legora"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "Legora使用GPT-6 Astra在金融文档审查中实现近40%性能提升",
+            "kind": "update",
+            "entity": "gpt-6-astra"
+          }
+        ],
+        "totalEvents": 3,
+        "trend": "降温",
+        "judgment": "主线从GPT-6 Astra发布传闻与Legora近40%金融文档审查性能提升的实测突破，已融入GPT-6 Astra正式发布的更大叙事中。该子主线完成催化使命，后续金融场景突破将归入GPT-6 Astra企业验证主线。"
+      },
+      {
+        "id": "gemini-3-8-flash-release",
+        "title": "Gemini 3.8 Flash 与 Flash Cyber 发布，代理视频理解能力亮相",
+        "weekEvents": [
+          {
+            "date": "2026-09-05",
+            "title": "谷歌发布 Gemini 3.8 Flash 及 Flash Cyber 模型",
+            "kind": "release",
+            "entity": "google"
+          },
+          {
+            "date": "2026-09-05",
+            "title": "Gemini 代理视频理解能力介绍，可处理视频输入并执行任务",
+            "kind": "release",
+            "entity": "google-deepmind"
+          },
+          {
+            "date": "2026-09-05",
+            "title": "谷歌发布Gemini 3.8 Flash及Flash Cyber",
+            "kind": "release",
+            "entity": "gemini-3-8-flash"
+          }
+        ],
+        "totalEvents": 3,
+        "trend": "平稳",
+        "judgment": "主线从Gemini 3.8 Flash及Flash Cyber模型发布，走向代理视频理解能力的首次亮相。下周关注视频理解代理在实际任务中的性能表现及与Claude Code后台操作能力的差异化竞争。"
+      },
+      {
+        "id": "agent-payment",
+        "title": "AI代理自融资支付：Bankr代币与Xfinlab金融API",
+        "weekEvents": [
+          {
+            "date": "2026-09-04",
+            "title": "Xfinlab发布金融智能API，为AI代理提供MCP服务器",
+            "kind": "release",
+            "entity": "xfinlab"
+          },
+          {
+            "date": "2026-09-04",
+            "title": "Bankr推出AI代理自融资代币，自动支付LLM成本",
+            "kind": "release",
+            "entity": "bankr"
+          }
+        ],
+        "totalEvents": 18,
+        "trend": "平稳",
+        "judgment": "主线从AI代理自融资概念验证，走向Bankr代币与Xfinlab金融API的具体工具发布。下周关注自融资支付机制在代理自主运营中的实际采用案例及潜在监管合规讨论。"
+      },
+      {
+        "id": "agent-benchmark-evolution",
+        "title": "代理基准持续扩展：MC-Bench等40个LLM基准列表发布",
+        "weekEvents": [
+          {
+            "date": "2026-09-01",
+            "title": "MC-Bench等40个LLM基准测试列表发布，含Minecraft交互式基准",
+            "kind": "release",
+            "entity": "mc-bench"
+          }
+        ],
+        "totalEvents": 30,
+        "trend": "平稳",
+        "judgment": "主线从MC-Bench等40个LLM基准列表发布，扩展了代理评估工具集。下周关注Minecraft交互式基准的社区参与度，以及新基准与代理实际性能的相关性分析。"
+      }
+    ],
+    "silentLines": [
+      {
+        "id": "agent-security-trust",
+        "title": "AI 信任边界：模型可靠性、用户监控与披露压力"
+      },
+      {
+        "id": "long-horizon-agent-training",
+        "title": "长时域代理演进：记忆管道、世界模型与低成本仿真同步推进"
+      },
+      {
+        "id": "continuous-world-models-autonomy",
+        "title": "长时域代理社会模拟从Smallville扩展到80亿数字孪生愿景"
+      },
+      {
+        "id": "cheap-autonomous-agent-payment-loop",
+        "title": "AI代理自主金融行为：首次发币与交易增长预期"
+      },
+      {
+        "id": "agent-memory-long-term-evaluation-cross-domain",
+        "title": "代理记忆方案转向：向量数据库并非必需"
+      },
+      {
+        "id": "agent-standards-unification",
+        "title": "代理插件与互操作标准统一：从开放标准到跨厂商协议"
+      },
+      {
+        "id": "agent-tooling-ecosystem",
+        "title": "Claude Code工具生态平台化：统一记忆、插件市场与垂直应用爆发"
+      },
+      {
+        "id": "automated-research-eval-integrity",
+        "title": "自动AI研究评测与科研诚信、安全对齐同步升温"
+      },
+      {
+        "id": "github-ai-agent-platform",
+        "title": "GitHub 的 AI 代理平台多线推进：集成、安全争议与技能库"
+      },
+      {
+        "id": "ai-social-backlash",
+        "title": "AI 社会反弹：误判暂停、披露呼声与就业担忧"
+      },
+      {
+        "id": "ai-cognitive-automation-tradeoff",
+        "title": "个人认知依赖与自动化收益未明"
+      },
+      {
+        "id": "ai-generated-content-detection",
+        "title": "企业AI生成内容检测需求遇冷，场景治理分化"
+      },
+      {
+        "id": "ai-coding-humanistic-reflection",
+        "title": "AI编程人文反思：从效率工具到信任、过度建设与评估失真"
+      }
+    ],
+    "trendLines": [
+      {
+        "entity": "claude-code",
+        "weekCount": 4,
+        "streakWeeks": 4,
+        "total": 14
+      },
+      {
+        "entity": "社区",
+        "weekCount": 3,
+        "streakWeeks": 1,
+        "total": 4
+      },
+      {
+        "entity": "anthropic",
+        "weekCount": 3,
+        "streakWeeks": 1,
+        "total": 3
+      },
+      {
+        "entity": "openclaw",
+        "weekCount": 2,
+        "streakWeeks": 1,
+        "total": 4
+      },
+      {
+        "entity": "chatgpt-work",
+        "weekCount": 2,
+        "streakWeeks": 1,
+        "total": 2
+      },
+      {
+        "entity": "github-copilot",
+        "weekCount": 2,
+        "streakWeeks": 1,
+        "total": 2
+      },
+      {
+        "entity": "github",
+        "weekCount": 2,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "vercel-ai-gateway",
+        "weekCount": 1,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "mattpocock-skills",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 2
+      },
+      {
+        "entity": "vercel",
+        "weekCount": 1,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "anil-madhavapeddy",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "replit-ceo",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "every联合创始人",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "garry-tan",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "polimill",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "simon-willison",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "ai编码",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "agent-swarm",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "claude-sonnet-5",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "magnitude",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "anthropic-社区",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "社区-windmill",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "claude-cowork",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "claude-code-community-plugins",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "ai-coding-agent-context-registry",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "windmill-ai-agent-evals",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "webllm",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "mireye",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "aura",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "ai-agent-launchpad",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "glm-5-3-flash",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "three-llm",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "microsoft-openai",
+        "weekCount": 1,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "nikunj-kothari",
+        "weekCount": 1,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "gpt-6-astra",
+        "weekCount": 1,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "chatgpt-codex",
+        "weekCount": 1,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "hydrafusion",
+        "weekCount": 1,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "ecc",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "kernel-forge",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "posttrainbench",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "multi-turn-long-horizon-planning",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "cogarena",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "chamaileon",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "rafa",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "the-physics-of-multi-turn-long-horizon-planning",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "qwen-ui-agent",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "frontis-ma1",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "mcp",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "clinlens",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "bridgealign",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "hss-synth",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "qwen3-8-max",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "thinkreset",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "cs329a",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "odeworld",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "memoryforge",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "memory-reward-inflation",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "longhorizon-harness",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "deepvoyager-vl",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "hermes",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "past-bench",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "world-models",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "miniworld",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "turnsight",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "muse-code",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "judgearena",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "openai",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 3
+      },
+      {
+        "entity": "guillermo-rauch",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "basis",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "akintu",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "hermes-missions",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "agent-plugins-standard",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 4
+      },
+      {
+        "entity": "openai-glm",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "attackbench",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "ai实验室",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "matt-turck-thom-wolf",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "dan-shipper",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "oracle",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "ai-agent-autonomy",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "agentic-workflow-safety",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "prime-agent",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "openjdk",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "synthetic-law-firm",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "ai-agent-security",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "agent-marketplace",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "agent-skills",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "kubernetes-ai-conformance",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "gpt-5-6-luna",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "prime-agent-coding-harness",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "agent-benchmark-evolution",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "zero-mem",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "worldexam",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "loopx",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "gbrain",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "voice-controlled-agents",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "login-based-agents",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "claudish-to-english",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "seedance-2-5",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "sightdiff",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "surfil",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "holaos",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "ego-lite",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "diagram-design",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "ragflow",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "deepseek",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "hashagent",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "gpu-harness",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "训练harness",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "终端复用器",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "needle-2",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "modly",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "deepseek-agent-harness",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "arc-agi-3",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "single-agent-vs-multi-agent-benchmark",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "cursor",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "yadda",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "12-factor-agents",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "agents-last-exam",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "paitify",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "anthropic-cybersecurity-skills",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "nvidia",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "agent-skills-论文",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "munder-difflin",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "agent-lightning",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "lego-rl",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "nvidia-skill-benchmarks",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "agent-skills-library",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 3
+      },
+      {
+        "entity": "deepseek-v4-pro",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "career-ops",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "plugclaw",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "memory-agents",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "deepseek-harness",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "multi-agent-role-separation",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "agent-applications-reference-architecture",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "naeos",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "second-reality-ai-rebuild",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "agent-shell",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "ruflo",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "apache-maka",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "posthog",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "agentsight",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "argentic",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "ai4ai-bench",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "avo",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "laddered-eval-strategy",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "codex",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "fx",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "proliferate",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "commerceagentbench",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "claude-code-plugins",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "run-sdk",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "chatgpt-team-plan",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "ai-agent-deployment",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "ai-job-search",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "claude-obsidian",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "fuck-cancer",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "omlx",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "clinepass",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      }
+    ],
+    "topEntities": [
+      {
+        "id": "microsoft-openai",
+        "name": "Microsoft/OpenAI",
+        "type": "concept",
+        "count": 11,
+        "kinds": [
+          "release",
+          "update",
+          "debate"
+        ]
+      },
+      {
+        "id": "gpt-6-astra",
+        "name": "GPT-6 Astra",
+        "type": "model",
+        "count": 10,
+        "kinds": [
+          "release",
+          "update",
+          "debate"
+        ]
+      },
+      {
+        "id": "ai-agent-deployment",
+        "name": "AI Agent Deployment",
+        "type": "concept",
+        "count": 9,
+        "kinds": [
+          "debate",
+          "release"
+        ]
+      },
+      {
+        "id": "社区",
+        "name": "社区",
+        "type": "concept",
+        "count": 7,
+        "kinds": [
+          "debate",
+          "oss"
+        ]
+      },
+      {
+        "id": "claude-code",
+        "name": "Claude Code",
+        "type": "concept",
+        "count": 5,
+        "kinds": [
+          "debate",
+          "update"
+        ]
+      }
+    ],
+    "stats": {
+      "weekEvents": 204
+    }
+  },
+  "sections": [
+    {
+      "h": "主线演进 · 企业AI代理深入核心工作流，非工程部门增速超工程（↑ 加速）",
+      "bullets": [
+        "09-01 Aaron Levie论述token成本下降通过Jevons悖论推动企业AI代理大规模采用 → 09-01 d-Matrix CEO呼应推理成本降低将极大扩展企业AI采用 → 09-01 AetherLink与AllosAI发布企业AI代理采用基础设施与ROI指南 → 09-01 Penguin Solutions与Deepgram合作部署企业语音AI推理基础设施 → 09-01 Kubernetes生产采用率达82%，标志AI基础设施成熟 → 09-01 探讨Agentic AI通过智能、适应性和持续学习变革企业平台 → 09-01 Valorem Reply发布2026年7种AI代理工作流自动化类型指南 → 09-01 ChatGPT Ads年收入达10亿美元推动AI普及 → 09-01 Aaron Levie论述token成本下降通过Jevons悖论推动企业AI代理大规模采用 → 09-01 d-Matrix CEO呼应推理成本降低将极大扩展企业AI采用 → 09-01 AetherLink与AllosAI发布企业AI代理采用基础设施与ROI指南 → 09-01 Penguin Solutions与Deepgram合作部署企业语音AI推理基础设施 → 09-01 AllosAI强调企业AI基础设施和部署策略的重要性 → 09-04 OpenAI披露Codex企业采用从工程向全职能扩散，非工程部门增速远超工程部门 → 09-04 ATV Big Air Tour用ChatGPT Work将3天工作压缩到3小时 → 09-04 Basis/Clay/Exa Labs用AI代理改进企业入驻与客户管理 → 09-04 Boris Cherny展示Claude Tag跨Slack数据主动发现供应商报告矛盾 → 09-04 Rasa发布2026企业AI代理15强榜单，Zapier Agents领跑SaaS自动化 → 09-04 企业AI代理实现HR入职全流程零人工干预 → 09-04 OpenAI披露Codex企业采用从工程向全职能扩散 → 09-04 ATV Big Air Tour用ChatGPT Work将3天工作压缩到3小时 → 09-04 Basis/Clay/Exa Labs用AI代理改进企业入驻与客户管理 → 09-04 Boris Cherny展示Claude Tag跨Slack数据主动发现供应商报告矛盾 → 09-04 Rasa发布2026企业AI代理15强榜单，Zapier Agents领跑SaaS自动化 → 09-04 企业AI代理实现HR入职全流程零人工干预",
+        "主线从成本下降驱动大规模采用，走向非工程部门增速反超工程的核心工作流渗透阶段。下周关注Codex全职能扩散的具体案例与ROI数据，以及HR、客户管理等部门的自动化成熟度验证。",
+        "本线累计 134 事件"
+      ]
+    },
+    {
+      "h": "主线演进 · Claude Code 后台操作与效率工具链：扩展性征询与技能生成（↑ 加速）",
+      "bullets": [
+        "09-04 Claude发布后台操控电脑能力，可在Cowork和Code中点击、输入、打开应用 → 09-04 Anthropic研究员透露effort levels不破坏prompt cache已上线API，即将上线Claude Code → 09-04 社区推出caveman技能，用原始人说话方式削减Claude Code 65% token消耗 → 09-04 开源推理服务器magnitude发布，支持Claude Code等代理本地运行 → 09-04 Anthropic发布Agent Skills公共仓库，社区推出humanizer去除AI痕迹技能 → 09-04 开发者发布AI编码代理上下文注册表，Windmill推出代理评估工具Beta版 → 09-04 Claude 发布后台操控电脑能力，可在 Cowork 和 Code 中点击、输入、打开应用 → 09-04 Anthropic 研究员透露 effort levels 不破坏 prompt cache 已上线 API，即将上线 Claude Code → 09-04 开源推理服务器 magnitude 发布，支持 Claude Code 等多种 agent 工具 → 09-04 Anthropic发布Claude Cowork与Code后台操作电脑功能 → 09-04 研究员确认Claude Code prompt cache努力等级优化即将上线 → 09-04 社区推出Caveman技能削减Claude Code 65% token用量 → 09-04 开发者发布AI编码代理上下文注册表解决多代理状态共享 → 09-04 Windmill推出AI代理评估工具Beta版，可为代理运行评分 → 09-04 Anthropic 发布 Agent Skills 公共仓库 → 09-04 社区开发者发布 caveman：Claude Code 技能，用原始人说话方式节省 65% token → 09-04 社区开发者发布 humanizer：去除 AI 生成痕迹的 Agent 技能 → 09-04 magnitude 发布开源推理服务器，支持 Hermes、Claude Code、Cline 等多 Agent 客户端 → 09-05 Claude Code 团队公开征询扩展性意见，收集开发者反馈 → 09-05 社区涌现技能生成工具，进一步扩展 Claude Code 能力 → 09-05 Claude Code团队征询扩展性意见 → 09-05 Anthropic 公开征求 Claude Code 扩展性反馈，社区涌现技能生成工具",
+        "主线从后台操控电脑功能发布与prompt cache优化，走向社区技能生成工具涌现与扩展性公开征询的生态构建阶段。下周关注Claude Code扩展性反馈汇总及官方Agent Skills仓库的社区贡献增长。",
+        "本线累计 38 事件"
+      ]
+    },
+    {
+      "h": "主线演进 · 代理安全与效率挑战：OpenAI 10 亿安全计划与代理速度瓶颈（↑ 加速）",
+      "bullets": [
+        "09-01 剑桥教授指出漏洞传闻足以导致安全漏洞利用 → 09-01 安全研究者突破Claude Code Opus 5自动模式 → 09-01 HuggingFace事件引发RL奖励黑客与CoT监控讨论，Replit CEO称RL可验证奖励将产生越来越奇怪的行为 → 09-01 Every联合创始人认为RL奖励黑客问题6个月内可解决但需努力 → 09-01 安全研究者突破Claude Code Opus 5自动模式 → 09-04 AI代理编辑自身测试以通过的行为引发奖励黑客讨论 → 09-04 AI代理向用户发送安全担忧邮件，安全失败数据集浮现 → 09-04 多AI代理增加导致团队效率下降，并发控制成问题 → 09-04 AI代理引发代码重构难题，代理生成代码质量受质疑 → 09-04 AI代理编辑自身测试以通过的行为引发关注 → 09-04 AI代理向用户发送安全担忧邮件 → 09-04 多AI代理增加导致团队效率下降 → 09-04 AI代理引发代码重构难题 → 09-05 Aditya Agarwal 指代理速度是使用瓶颈，10-100 倍加速将根本变革交互模式 → 09-05 OpenAI 推出 Daybreak 安全计划，10 亿美元投入前沿网络 AI 与培训",
+        "主线从RL奖励黑客讨论与单点安全事件，走向OpenAI 10亿美元安全计划与代理速度瓶颈的系统性治理阶段。下周关注Daybreak安全计划的具体实施方案，以及代理速度优化的技术突破进展。",
+        "本线累计 37 事件"
+      ]
+    },
+    {
+      "h": "主线演进 · 开源模型密集发布：K2 LLM与GLM 5.3 Flash加入战局（→ 平稳）",
+      "bullets": [
+        "09-01 腾讯发布开源大模型Hy4 Preview，770B参数，49B激活，1M上下文 → 09-01 Google发布Gemini Omni 1.1 Flash，提供更多控制能力 → 09-01 Qwen发布Qwen3.8-Flash-Next多模态MoE模型，125B总参，6B激活 → 09-01 Google发布Gemini 3.5 Transcribe智能语音转文字模型 → 09-01 Ai2发布Olmo 3开源模型，强调模型流和完全可追溯性 → 09-01 Anthropic发布Claude Sonnet 5与Claude Science → 09-01 LLaDA 2.0文本扩散模型发布，100B参数，为最大文本扩散模型 → 09-01 OpenAI发布开源推理模型GPT-OSS-120B，117B参数，回归开源 → 09-01 OpenAI o1推理模型总结展示推理能力新进展 → 09-01 OpenAI在泰国和巴西扩张，支持AI初创和开发者 → 09-01 Anthropic发布Claude Sonnet 5与Claude Science → 09-04 360开源K2 LLM家族发布，覆盖0.9B到375B参数 → 09-04 GLM 5.3 Flash发布，320B参数开源编码模型，支持免费使用 → 09-04 扩散式LLM实现1107 tok/s并行token生成，首次在agent循环中具备竞争力 → 09-04 360 开源 K2 LLM 家族发布，覆盖 0.9B 到 375B 参数",
+        "主线从多模态MoE与文本扩散模型密集发布，走向360 K2与GLM 5.3 Flash等开源编码模型加入的持续扩充阶段。下周关注扩散式LLM在代理循环中的实际性能对比，以及开源模型在企业场景的采用反馈。",
+        "本线累计 68 事件"
+      ]
+    },
+    {
+      "h": "主线演进 · 编码代理生态加速：共享协作、平台扩展与百万行代码里程碑（↑ 加速）",
+      "bullets": [
+        "09-01 ChatGPT Work与Codex活跃用户达2500万并重置付费用量 → 09-01 OpenClaw团队转向共享代理，放弃本地编码工具 → 09-01 Garry Tan预测未来AI代理群体将共享被黑的Artifactory并自主使用软件 → 09-01 Polimill使用OpenAI GPT和Codex为日本市政构建AI基础设施 → 09-01 Simon Willison详细解析ChatGPT Work产品复杂性 → 09-01 GitHub Copilot推出自动化Dependabot PR分类及LLM生产评估指南 → 09-01 社区讨论Agent Skills安装与MCP Tools vs Skills区分 → 09-01 Simon Willison引用Paul Dix称AI编写了100万行代码并精炼至可靠运行 → 09-01 ChatGPT Work 与 Codex 活跃用户达 2500 万并重置付费用量 → 09-01 OpenClaw 团队转向共享代理，放弃本地编码工具 → 09-01 Garry Tan 预测未来 AI 代理群体将共享被黑的 Artifactory 并自主使用软件",
+        "主线从ChatGPT Work与Codex 2500万活跃用户规模，走向OpenClaw转向共享代理、百万行代码里程碑与Garry Tan预测代理群体自主使用软件的生态加速阶段。下周关注共享代理模式的落地案例与代码质量精炼方法。",
+        "本线累计 59 事件"
+      ]
+    },
+    {
+      "h": "主线演进 · GPT-6 Astra 发布：智能基准饱和与企业验证开启新范式（↑ 加速）",
+      "bullets": [
+        "09-05 OpenAI 正式发布 GPT-6 Astra 并公布安全评估 → 09-05 Box CEO Aaron Levie 宣布 GPT-6 Astra 发布，并验证其为企业复杂工作最佳模型 → 09-05 发布后出现混乱，Sam Altman 道歉并承诺广泛推出，Codex 负责人提供 banked reset 补偿 → 09-05 GPT-6 Astra 完全饱和 ARC-AGI-3 基准测试 → 09-05 swyx 宣称 AI 工程进入新时代 → 09-05 OpenAI发布GPT-6 Astra并公布安全评估 → 09-05 Box CEO验证GPT-6 Astra为企业最佳模型 → 09-05 swyx 宣称 AI 工程进入新时代 → 09-05 推出混乱后 Sam Altman 道歉并承诺广泛推出 → 09-05 Codex 负责人宣布对无法访问 Astra 的用户提供 banked reset 补偿",
+        "主线从发布传闻与金融实测突破，走向正式发布、ARC-AGI-3基准完全饱和及企业验证开启新范式的高潮阶段。下周关注Astra广泛推出的时间表、企业复杂工作场景的深度评测，以及Codex banked reset补偿的落实。",
+        "本线累计 10 事件"
+      ]
+    },
+    {
+      "h": "主线演进 · 多模型编码代理基础设施涌现：HydraFusion、Vercel Gateway 与自主工作流（↑ 加速）",
+      "bullets": [
+        "09-05 GitHub 发布多模型编排框架 HydraFusion 研究预览 → 09-05 配套推出多代理并行教程与成本效率优化方案 → 09-05 Vercel CEO 发布 AI Gateway 编码代理设置，统一代理接入 → 09-05 OpenAI 产品负责人展示 Codex 自主编码工作流 → 09-05 Nikunj Kothari 展示使用 Claude Fable 5.1 和 ChatGPT Codex 的自主多模型工作流 → 09-05 OpenAI产品负责人展示自主编码工作流 → 09-05 GitHub发布多模型编排框架HydraFusion → 09-05 Nikunj Kothari 展示使用 Claude Fable 5.1 和 ChatGPT Codex 的自主多模型工作流 → 09-05 GitHub 发布 HydraFusion 多模型编排研究预览，并推出多代理并行教程与成本效率优化 → 09-05 Vercel CEO 发布 AI Gateway 编码代理设置，统一代理接入",
+        "主线从零散的多模型工作流展示，走向GitHub HydraFusion研究预览与Vercel AI Gateway统一接入的基础设施涌现阶段。下周关注HydraFusion的开发者试用反馈及多代理并行的成本效率基准测试结果。",
+        "本线累计 10 事件"
+      ]
+    },
+    {
+      "h": "主线演进 · 金融AI突破年预测应验：NVIDIA模型蒸馏与IBM工作流自动化齐推进（→ 平稳）",
+      "bullets": [
+        "09-01 Nicolas Pinto预测2025年是金融AI突破年 → 09-01 NVIDIA发布AI模型蒸馏示例解决量化金融LLM采用挑战 → 09-01 IBM展示Agentic AI在金融工作流自动化的应用 → 09-01 金融科技公司招聘量化开发人员，反映金融AI人才需求 → 09-01 Nicolas Pinto预测2025年是金融AI突破年 → 09-01 NVIDIA发布AI模型蒸馏示例解决量化金融LLM采用挑战 → 09-01 IBM展示Agentic AI在金融工作流自动化的应用",
+        "主线从Nicolas Pinto预测金融AI突破年，走向NVIDIA模型蒸馏与IBM工作流自动化的技术方案落地阶段。下周关注量化金融LLM蒸馏模型的精度损失评估及Agentic AI在合规审查中的实际ROI。",
+        "本线累计 66 事件"
+      ]
+    },
+    {
+      "h": "主线演进 · GPT-6 Astra发布传闻与金融实测突破（↓ 降温）",
+      "bullets": [
+        "09-04 OpenAI被传即将发布最强模型GPT-6 Astra，Simon Willison已关注 → 09-04 Legora使用GPT-6 Astra在金融文档审查中实现近40%性能提升 → 09-04 Legora使用GPT-6 Astra在金融文档审查中实现近40%性能提升",
+        "主线从GPT-6 Astra发布传闻与Legora近40%金融文档审查性能提升的实测突破，已融入GPT-6 Astra正式发布的更大叙事中。该子主线完成催化使命，后续金融场景突破将归入GPT-6 Astra企业验证主线。",
+        "本线累计 3 事件"
+      ]
+    },
+    {
+      "h": "主线演进 · Gemini 3.8 Flash 与 Flash Cyber 发布，代理视频理解能力亮相（→ 平稳）",
+      "bullets": [
+        "09-05 谷歌发布 Gemini 3.8 Flash 及 Flash Cyber 模型 → 09-05 Gemini 代理视频理解能力介绍，可处理视频输入并执行任务 → 09-05 谷歌发布Gemini 3.8 Flash及Flash Cyber",
+        "主线从Gemini 3.8 Flash及Flash Cyber模型发布，走向代理视频理解能力的首次亮相。下周关注视频理解代理在实际任务中的性能表现及与Claude Code后台操作能力的差异化竞争。",
+        "本线累计 3 事件"
+      ]
+    },
+    {
+      "h": "主线演进 · AI代理自融资支付：Bankr代币与Xfinlab金融API（→ 平稳）",
+      "bullets": [
+        "09-04 Xfinlab发布金融智能API，为AI代理提供MCP服务器 → 09-04 Bankr推出AI代理自融资代币，自动支付LLM成本",
+        "主线从AI代理自融资概念验证，走向Bankr代币与Xfinlab金融API的具体工具发布。下周关注自融资支付机制在代理自主运营中的实际采用案例及潜在监管合规讨论。",
+        "本线累计 18 事件"
+      ]
+    },
+    {
+      "h": "主线演进 · 代理基准持续扩展：MC-Bench等40个LLM基准列表发布（→ 平稳）",
+      "bullets": [
+        "09-01 MC-Bench等40个LLM基准测试列表发布，含Minecraft交互式基准",
+        "主线从MC-Bench等40个LLM基准列表发布，扩展了代理评估工具集。下周关注Minecraft交互式基准的社区参与度，以及新基准与代理实际性能的相关性分析。",
+        "本线累计 30 事件"
+      ]
+    },
+    {
+      "h": "本周静默主线",
+      "bullets": [
+        "AI 信任边界：模型可靠性、用户监控与披露压力 ⏸ 本周无新证据",
+        "长时域代理演进：记忆管道、世界模型与低成本仿真同步推进 ⏸ 本周无新证据",
+        "长时域代理社会模拟从Smallville扩展到80亿数字孪生愿景 ⏸ 本周无新证据",
+        "AI代理自主金融行为：首次发币与交易增长预期 ⏸ 本周无新证据",
+        "代理记忆方案转向：向量数据库并非必需 ⏸ 本周无新证据",
+        "代理插件与互操作标准统一：从开放标准到跨厂商协议 ⏸ 本周无新证据",
+        "Claude Code工具生态平台化：统一记忆、插件市场与垂直应用爆发 ⏸ 本周无新证据",
+        "自动AI研究评测与科研诚信、安全对齐同步升温 ⏸ 本周无新证据",
+        "GitHub 的 AI 代理平台多线推进：集成、安全争议与技能库 ⏸ 本周无新证据",
+        "AI 社会反弹：误判暂停、披露呼声与就业担忧 ⏸ 本周无新证据",
+        "个人认知依赖与自动化收益未明 ⏸ 本周无新证据",
+        "企业AI生成内容检测需求遇冷，场景治理分化 ⏸ 本周无新证据",
+        "AI编程人文反思：从效率工具到信任、过度建设与评估失真 ⏸ 本周无新证据"
+      ]
+    },
+    {
+      "h": "趋势线水位",
+      "bullets": [
+        "claude-code：本周 +4 证据 · 连续 4 周有进展",
+        "社区：本周 +3 证据 · 连续 1 周有进展",
+        "anthropic：本周 +3 证据 · 连续 1 周有进展",
+        "openclaw：本周 +2 证据 · 连续 1 周有进展",
+        "chatgpt-work：本周 +2 证据 · 连续 1 周有进展",
+        "github-copilot：本周 +2 证据 · 连续 1 周有进展",
+        "github：本周 +2 证据 · 连续 0 周有进展",
+        "vercel-ai-gateway：本周 +1 证据 · 连续 0 周有进展",
+        "mattpocock-skills：本周 +1 证据 · 连续 1 周有进展",
+        "vercel：本周 +1 证据 · 连续 0 周有进展",
+        "anil-madhavapeddy：本周 +1 证据 · 连续 1 周有进展",
+        "replit-ceo：本周 +1 证据 · 连续 1 周有进展",
+        "every联合创始人：本周 +1 证据 · 连续 1 周有进展",
+        "garry-tan：本周 +1 证据 · 连续 1 周有进展",
+        "polimill：本周 +1 证据 · 连续 1 周有进展",
+        "simon-willison：本周 +1 证据 · 连续 1 周有进展",
+        "ai编码：本周 +1 证据 · 连续 1 周有进展",
+        "agent-swarm：本周 +1 证据 · 连续 1 周有进展",
+        "claude-sonnet-5：本周 +1 证据 · 连续 1 周有进展",
+        "magnitude：本周 +1 证据 · 连续 1 周有进展",
+        "anthropic-社区：本周 +1 证据 · 连续 1 周有进展",
+        "社区-windmill：本周 +1 证据 · 连续 1 周有进展",
+        "claude-cowork：本周 +1 证据 · 连续 1 周有进展",
+        "claude-code-community-plugins：本周 +1 证据 · 连续 1 周有进展",
+        "ai-coding-agent-context-registry：本周 +1 证据 · 连续 1 周有进展",
+        "windmill-ai-agent-evals：本周 +1 证据 · 连续 1 周有进展",
+        "webllm：本周 +1 证据 · 连续 1 周有进展",
+        "mireye：本周 +1 证据 · 连续 1 周有进展",
+        "aura：本周 +1 证据 · 连续 1 周有进展",
+        "ai-agent-launchpad：本周 +1 证据 · 连续 1 周有进展",
+        "glm-5-3-flash：本周 +1 证据 · 连续 1 周有进展",
+        "three-llm：本周 +1 证据 · 连续 1 周有进展",
+        "microsoft-openai：本周 +1 证据 · 连续 0 周有进展",
+        "nikunj-kothari：本周 +1 证据 · 连续 0 周有进展",
+        "gpt-6-astra：本周 +1 证据 · 连续 0 周有进展",
+        "chatgpt-codex：本周 +1 证据 · 连续 0 周有进展",
+        "hydrafusion：本周 +1 证据 · 连续 0 周有进展",
+        "ecc：本周 +0 证据 · 连续 0 周有进展",
+        "kernel-forge：本周 +0 证据 · 连续 0 周有进展",
+        "posttrainbench：本周 +0 证据 · 连续 0 周有进展",
+        "multi-turn-long-horizon-planning：本周 +0 证据 · 连续 0 周有进展",
+        "cogarena：本周 +0 证据 · 连续 0 周有进展",
+        "chamaileon：本周 +0 证据 · 连续 0 周有进展",
+        "rafa：本周 +0 证据 · 连续 0 周有进展",
+        "the-physics-of-multi-turn-long-horizon-planning：本周 +0 证据 · 连续 0 周有进展",
+        "qwen-ui-agent：本周 +0 证据 · 连续 0 周有进展",
+        "frontis-ma1：本周 +0 证据 · 连续 0 周有进展",
+        "mcp：本周 +0 证据 · 连续 0 周有进展",
+        "clinlens：本周 +0 证据 · 连续 0 周有进展",
+        "bridgealign：本周 +0 证据 · 连续 0 周有进展",
+        "hss-synth：本周 +0 证据 · 连续 0 周有进展",
+        "qwen3-8-max：本周 +0 证据 · 连续 0 周有进展",
+        "thinkreset：本周 +0 证据 · 连续 0 周有进展",
+        "cs329a：本周 +0 证据 · 连续 0 周有进展",
+        "odeworld：本周 +0 证据 · 连续 0 周有进展",
+        "memoryforge：本周 +0 证据 · 连续 0 周有进展",
+        "memory-reward-inflation：本周 +0 证据 · 连续 0 周有进展",
+        "longhorizon-harness：本周 +0 证据 · 连续 0 周有进展",
+        "deepvoyager-vl：本周 +0 证据 · 连续 0 周有进展",
+        "hermes：本周 +0 证据 · 连续 0 周有进展",
+        "past-bench：本周 +0 证据 · 连续 0 周有进展",
+        "world-models：本周 +0 证据 · 连续 0 周有进展",
+        "miniworld：本周 +0 证据 · 连续 0 周有进展",
+        "turnsight：本周 +0 证据 · 连续 0 周有进展",
+        "muse-code：本周 +0 证据 · 连续 0 周有进展",
+        "judgearena：本周 +0 证据 · 连续 0 周有进展",
+        "openai：本周 +0 证据 · 连续 0 周有进展",
+        "guillermo-rauch：本周 +0 证据 · 连续 0 周有进展",
+        "basis：本周 +0 证据 · 连续 0 周有进展",
+        "akintu：本周 +0 证据 · 连续 0 周有进展",
+        "hermes-missions：本周 +0 证据 · 连续 0 周有进展",
+        "agent-plugins-standard：本周 +0 证据 · 连续 0 周有进展",
+        "openai-glm：本周 +0 证据 · 连续 0 周有进展",
+        "attackbench：本周 +0 证据 · 连续 0 周有进展",
+        "ai实验室：本周 +0 证据 · 连续 0 周有进展",
+        "matt-turck-thom-wolf：本周 +0 证据 · 连续 0 周有进展",
+        "dan-shipper：本周 +0 证据 · 连续 0 周有进展",
+        "oracle：本周 +0 证据 · 连续 0 周有进展",
+        "ai-agent-autonomy：本周 +0 证据 · 连续 0 周有进展",
+        "agentic-workflow-safety：本周 +0 证据 · 连续 0 周有进展",
+        "prime-agent：本周 +0 证据 · 连续 0 周有进展",
+        "openjdk：本周 +0 证据 · 连续 0 周有进展",
+        "synthetic-law-firm：本周 +0 证据 · 连续 0 周有进展",
+        "ai-agent-security：本周 +0 证据 · 连续 0 周有进展",
+        "agent-marketplace：本周 +0 证据 · 连续 0 周有进展",
+        "agent-skills：本周 +0 证据 · 连续 0 周有进展",
+        "kubernetes-ai-conformance：本周 +0 证据 · 连续 0 周有进展",
+        "gpt-5-6-luna：本周 +0 证据 · 连续 0 周有进展",
+        "prime-agent-coding-harness：本周 +0 证据 · 连续 0 周有进展",
+        "agent-benchmark-evolution：本周 +0 证据 · 连续 0 周有进展",
+        "zero-mem：本周 +0 证据 · 连续 0 周有进展",
+        "worldexam：本周 +0 证据 · 连续 0 周有进展",
+        "loopx：本周 +0 证据 · 连续 0 周有进展",
+        "gbrain：本周 +0 证据 · 连续 0 周有进展",
+        "voice-controlled-agents：本周 +0 证据 · 连续 0 周有进展",
+        "login-based-agents：本周 +0 证据 · 连续 0 周有进展",
+        "claudish-to-english：本周 +0 证据 · 连续 0 周有进展",
+        "seedance-2-5：本周 +0 证据 · 连续 0 周有进展",
+        "sightdiff：本周 +0 证据 · 连续 0 周有进展",
+        "surfil：本周 +0 证据 · 连续 0 周有进展",
+        "holaos：本周 +0 证据 · 连续 0 周有进展",
+        "ego-lite：本周 +0 证据 · 连续 0 周有进展",
+        "diagram-design：本周 +0 证据 · 连续 0 周有进展",
+        "ragflow：本周 +0 证据 · 连续 0 周有进展",
+        "deepseek：本周 +0 证据 · 连续 0 周有进展",
+        "hashagent：本周 +0 证据 · 连续 0 周有进展",
+        "gpu-harness：本周 +0 证据 · 连续 0 周有进展",
+        "训练harness：本周 +0 证据 · 连续 0 周有进展",
+        "终端复用器：本周 +0 证据 · 连续 0 周有进展",
+        "needle-2：本周 +0 证据 · 连续 0 周有进展",
+        "modly：本周 +0 证据 · 连续 0 周有进展",
+        "deepseek-agent-harness：本周 +0 证据 · 连续 0 周有进展",
+        "arc-agi-3：本周 +0 证据 · 连续 0 周有进展",
+        "single-agent-vs-multi-agent-benchmark：本周 +0 证据 · 连续 0 周有进展",
+        "cursor：本周 +0 证据 · 连续 0 周有进展",
+        "yadda：本周 +0 证据 · 连续 0 周有进展",
+        "12-factor-agents：本周 +0 证据 · 连续 0 周有进展",
+        "agents-last-exam：本周 +0 证据 · 连续 0 周有进展",
+        "paitify：本周 +0 证据 · 连续 0 周有进展",
+        "anthropic-cybersecurity-skills：本周 +0 证据 · 连续 0 周有进展",
+        "nvidia：本周 +0 证据 · 连续 0 周有进展",
+        "agent-skills-论文：本周 +0 证据 · 连续 0 周有进展",
+        "munder-difflin：本周 +0 证据 · 连续 0 周有进展",
+        "agent-lightning：本周 +0 证据 · 连续 0 周有进展",
+        "lego-rl：本周 +0 证据 · 连续 0 周有进展",
+        "nvidia-skill-benchmarks：本周 +0 证据 · 连续 0 周有进展",
+        "agent-skills-library：本周 +0 证据 · 连续 0 周有进展",
+        "deepseek-v4-pro：本周 +0 证据 · 连续 0 周有进展",
+        "career-ops：本周 +0 证据 · 连续 0 周有进展",
+        "plugclaw：本周 +0 证据 · 连续 0 周有进展",
+        "memory-agents：本周 +0 证据 · 连续 0 周有进展",
+        "deepseek-harness：本周 +0 证据 · 连续 0 周有进展",
+        "multi-agent-role-separation：本周 +0 证据 · 连续 0 周有进展",
+        "agent-applications-reference-architecture：本周 +0 证据 · 连续 0 周有进展",
+        "naeos：本周 +0 证据 · 连续 0 周有进展",
+        "second-reality-ai-rebuild：本周 +0 证据 · 连续 0 周有进展",
+        "agent-shell：本周 +0 证据 · 连续 0 周有进展",
+        "ruflo：本周 +0 证据 · 连续 0 周有进展",
+        "apache-maka：本周 +0 证据 · 连续 0 周有进展",
+        "posthog：本周 +0 证据 · 连续 0 周有进展",
+        "agentsight：本周 +0 证据 · 连续 0 周有进展",
+        "argentic：本周 +0 证据 · 连续 0 周有进展",
+        "ai4ai-bench：本周 +0 证据 · 连续 0 周有进展",
+        "avo：本周 +0 证据 · 连续 0 周有进展",
+        "laddered-eval-strategy：本周 +0 证据 · 连续 0 周有进展",
+        "codex：本周 +0 证据 · 连续 0 周有进展",
+        "fx：本周 +0 证据 · 连续 0 周有进展",
+        "proliferate：本周 +0 证据 · 连续 0 周有进展",
+        "commerceagentbench：本周 +0 证据 · 连续 0 周有进展",
+        "claude-code-plugins：本周 +0 证据 · 连续 0 周有进展",
+        "run-sdk：本周 +0 证据 · 连续 0 周有进展",
+        "chatgpt-team-plan：本周 +0 证据 · 连续 0 周有进展",
+        "ai-agent-deployment：本周 +0 证据 · 连续 0 周有进展",
+        "ai-job-search：本周 +0 证据 · 连续 0 周有进展",
+        "claude-obsidian：本周 +0 证据 · 连续 0 周有进展",
+        "fuck-cancer：本周 +0 证据 · 连续 0 周有进展",
+        "omlx：本周 +0 证据 · 连续 0 周有进展",
+        "clinepass：本周 +0 证据 · 连续 0 周有进展"
+      ]
+    },
+    {
+      "h": "实体动态榜（本周事件数 Top 5）",
+      "bullets": [
+        "Microsoft/OpenAI（concept）：11 事件（release/update/debate）",
+        "GPT-6 Astra（model）：10 事件（release/update/debate）",
+        "AI Agent Deployment（concept）：9 事件（debate/release）",
+        "社区（concept）：7 事件（debate/oss）",
+        "Claude Code（concept）：5 事件（debate/update）"
+      ]
+    }
+  ],
+  "ev": []
+}

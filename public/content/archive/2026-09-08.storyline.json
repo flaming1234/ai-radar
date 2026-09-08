@@ -1,0 +1,928 @@
+{
+  "type": "日报",
+  "topic": "AI",
+  "src": "现场自动聚合",
+  "ic": "i-doc",
+  "h": 8,
+  "auto": true,
+  "unverified": true,
+  "format": "storyline",
+  "synthesis": "two-pass-v2",
+  "aggregatedAt": "2026-09-08",
+  "title": "AI 每日雷达 · 2026-09-08",
+  "time": "今天",
+  "sub": "GPT-6 Astra 评测视频播放量超 346 万，与 Anthropic 新模型的对比将 AGI 讨论推向新高潮。",
+  "summary": "今日主题：GPT-6 Astra 评测视频引爆 AGI 争论，代理工具链与金融交易代理同日爆发，社会对 AI 诚信与就业的反思达到新高度。对 Hyle 而言，游戏化竞技基准为代理评估提供新范式；企业 AI 部署需警惕互联网未就绪与代理可靠性风险；金融 AI 领域自主对冲基金开源与 ESMA 风险报告标志着交易代理进入合规与落地并行阶段。",
+  "bullets": [
+    "GPT-6 Astra 评测视频播放量超 346 万，与 Anthropic 新模型的对比将 AGI 讨论推向新高潮。",
+    "代理工具链迎来技能包、记忆引擎与无头浏览器的集中爆发，Claude Code 生态加速成熟。",
+    "自主对冲基金 AutoHedge 开源与零售算法交易辩论，预示 AI 代理交易从小众走向大众。",
+    "代理经营失败、RAM 短缺与互联网未就绪警告，揭示代理部署面临基础设施与社会双重挑战。",
+    "DeepSeek R1 以 29.4 万美元训练成本树立开源新标杆，低成本高性能模型路线获得验证。"
+  ],
+  "spotlight": [
+    {
+      "quote": "LLM 写作对智力诚实的影响引发 705 points、432 comments 的高热度讨论",
+      "why": "反映社会对 AI 生成内容侵蚀智力诚信的深层担忧",
+      "sources": [
+        "https://bcantrill.dtrace.org/2025/12/05/your-intellectual-fly-is-open"
+      ]
+    },
+    {
+      "quote": "个人拒绝训练替代自己的 AI，引发就业伦理热议，107 comments",
+      "why": "触及 AI 替代人类工作的伦理底线，个人反抗行为引发广泛共鸣",
+      "sources": [
+        "https://restofworld.org/2026/ai-training-jobs-expert-replacement"
+      ]
+    },
+    {
+      "quote": "DeepSeek R1 以 29.4 万美元推理训练成本成为开源 AI 转折点",
+      "why": "极低成本实现高性能，颠覆开源模型经济性认知",
+      "entity": "DeepSeek",
+      "sources": [
+        "https://www.thundercompute.com/blog/best-open-source-llms"
+      ]
+    }
+  ],
+  "storylines": [
+    {
+      "id": "gpt6-astra-launch",
+      "title": "GPT-6 Astra 评测视频引爆 AGI 争论，与 Anthropic 新模型对比升温",
+      "isNew": false,
+      "categories": [
+        "model_dev",
+        "tech_trend"
+      ],
+      "chain": [
+        {
+          "title": "GPT-6 Astra 深度评测视频获 346 万播放，讨论是否实现 AGI",
+          "kind": "update",
+          "entity": "OpenAI",
+          "relPrev": null,
+          "sources": [
+            "https://www.youtube.com/watch?v=FluKUJyeYD8"
+          ]
+        },
+        {
+          "title": "评测视频结合 Anthropic 新模型引发社区关于 AGI 及基准可比性的争论",
+          "kind": "debate",
+          "entity": "Anthropic",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/singularity/comments/1w6f9xo/gpt_6_astra_benchmarks"
+          ]
+        }
+      ],
+      "narrative": "GPT-6 Astra 发布后，评测视频播放量爆炸，并引出与 Anthropic 新模型的对比，将 AGI 讨论推向新热度。",
+      "carryOver": "GPT-6 Astra 发布后，评测视频引发广泛讨论，AGI 话题持续升温。"
+    },
+    {
+      "id": "gemini-3-8-flash-release",
+      "title": "Gemini 3.8 Flash 安全版与 Fairwind 主动网络防御项目亮相",
+      "isNew": false,
+      "categories": [
+        "model_dev",
+        "tech_trend"
+      ],
+      "chain": [
+        {
+          "title": "Gemini 3.8 Flash 及安全版 Flash Cyber 发布",
+          "kind": "release",
+          "entity": "Google",
+          "relPrev": null,
+          "sources": [
+            "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/"
+          ]
+        },
+        {
+          "title": "配套 Fairwind 项目为企业与政府提供主动网络防御",
+          "kind": "release",
+          "entity": "Google",
+          "relPrev": null,
+          "sources": [
+            "https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program/"
+          ]
+        }
+      ],
+      "narrative": "Gemini 3.8 Flash 发布后，安全版与主动防御项目 Fairwind 亮相，标志着 AI 在国家安全与企业安全领域进入主动干预阶段。",
+      "carryOver": "Gemini 3.8 Flash 发布后，安全版与主动网络防御能力推出。"
+    },
+    {
+      "id": "agent-tooling-ecosystem",
+      "title": "代理工具链爆发：技能包、记忆引擎与无头浏览器齐聚",
+      "isNew": false,
+      "categories": [
+        "tech_trend",
+        "gh_trending"
+      ],
+      "chain": [
+        {
+          "title": "marketingskills 为 Claude Code 代理提供营销技能包，登顶 GitHub 趋势",
+          "kind": "oss",
+          "entity": "marketingskills",
+          "relPrev": null,
+          "sources": [
+            "https://github.com/coreyhaines31/marketingskills"
+          ]
+        },
+        {
+          "title": "SkillsLLM 聚合 agentic-awesome-skills 代理技能列表",
+          "kind": "oss",
+          "entity": "SkillsLLM",
+          "relPrev": null,
+          "sources": [
+            "https://skillsllm.com/skill/agentic-awesome-skills"
+          ]
+        },
+        {
+          "title": "context-mode 发布上下文窗口优化方案，压缩工具输出 98%",
+          "kind": "oss",
+          "entity": "context-mode",
+          "relPrev": null,
+          "sources": [
+            "https://github.com/mksglu/context-mode"
+          ]
+        },
+        {
+          "title": "ripwire 为编码代理提供仓库地图 CLI+MCP 工具",
+          "kind": "oss",
+          "entity": "ripwire",
+          "relPrev": null,
+          "sources": [
+            "https://github.com/redhat-et/ripwire"
+          ]
+        },
+        {
+          "title": "Engrim 发布本地优先 SQLite 记忆引擎",
+          "kind": "oss",
+          "entity": "Engrim",
+          "relPrev": null,
+          "sources": [
+            "https://github.com/timgordontg/engrim"
+          ]
+        },
+        {
+          "title": "Lightpanda 与 Camofox 无头浏览器切入 AI 代理场景",
+          "kind": "oss",
+          "entity": "Lightpanda/Camofox",
+          "relPrev": null,
+          "sources": [
+            "https://github.com/lightpanda-io/browser",
+            "https://github.com/jo-inc/camofox-browser"
+          ]
+        },
+        {
+          "title": "Claude AI 代理工程全栈大师班课程上线",
+          "kind": "release",
+          "entity": "Claude",
+          "relPrev": null,
+          "sources": [
+            "https://www.youtube.com/watch?v=WGqlrvf4-i0"
+          ]
+        }
+      ],
+      "narrative": "Claude Code 工具生态从技能包、记忆引擎到无头浏览器多点爆发，代理基础设施加速成熟。",
+      "carryOver": "Claude Code 工具生态平台化后，技能包与工具链加速涌现。"
+    },
+    {
+      "id": "domain-ai-finance",
+      "title": "自主对冲基金开源与零售算法交易辩论，金融 AI 代理进入落地合规并行期",
+      "isNew": false,
+      "categories": [
+        "ai_finance",
+        "tech_trend"
+      ],
+      "chain": [
+        {
+          "title": "AutoHedge 开源自主对冲基金框架，融合群体智能与 AI 代理",
+          "kind": "oss",
+          "entity": "AutoHedge",
+          "relPrev": null,
+          "sources": [
+            "https://github.com/The-Swarm-Corporation/AutoHedge"
+          ]
+        },
+        {
+          "title": "FutureHedge 宣布 Prime Stocks 算法交易技术",
+          "kind": "release",
+          "entity": "FutureHedge",
+          "relPrev": null,
+          "sources": [
+            "https://www.facebook.com/GlobalFinTechSeries/posts/futurehedge-announces-prime-stocks-algorithmic-trading-technology-financialtechn/1552218266918966"
+          ]
+        },
+        {
+          "title": "个人实践让 AI 代理管理投资组合并命名",
+          "kind": "update",
+          "entity": "个人",
+          "relPrev": null,
+          "sources": [
+            "https://www.wsj.com/tech/ai/the-ai-shift-turning-everyday-investors-into-mini-quant-funds-ebe4d45f"
+          ]
+        },
+        {
+          "title": "社区热议语言模型改进对零售算法交易的影响",
+          "kind": "debate",
+          "entity": "社区",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/algotrading/comments/1w5xjb6/whats_going_to_happen_to_retail_algo_trading_as"
+          ]
+        },
+        {
+          "title": "ESMA 发布 AI 在欧盟证券市场采用的风险分析报告",
+          "kind": "release",
+          "entity": "ESMA",
+          "relPrev": null,
+          "sources": [
+            "https://www.instagram.com/p/Dc0jAe6AID6"
+          ]
+        }
+      ],
+      "narrative": "自主对冲基金开源、零售算法交易辩论与监管风险报告同步出现，金融 AI 代理交易进入落地与合规并行阶段。",
+      "carryOver": "金融 AI 突破年预测应验，代理交易工具与监管风险同步显现。"
+    },
+    {
+      "id": "agent-benchmark-evolution",
+      "title": "代理基准游戏化：工作区清理、机器人格斗与足球联赛齐登场",
+      "isNew": false,
+      "categories": [
+        "hyle",
+        "tech_trend"
+      ],
+      "chain": [
+        {
+          "title": "WorldBench 基准测试发布，评估 AI 代理清理工作区能力",
+          "kind": "release",
+          "entity": "WorldBench",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/agenticgirl/status/2096556623707930940"
+          ]
+        },
+        {
+          "title": "AI 机器人格斗竞技场发布",
+          "kind": "release",
+          "entity": "AI Robot Fight Arena",
+          "relPrev": null,
+          "sources": [
+            "https://github.com/nigrosimone/llms-robot-arena"
+          ]
+        },
+        {
+          "title": "Clawforge Premier League 宣布，以自主 AI 代理足球联赛作为活跃基准",
+          "kind": "release",
+          "entity": "Clawforge",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/paragonailabs/status/2097083161167421937"
+          ]
+        }
+      ],
+      "narrative": "代理基准从工作区清理能力评估扩展到游戏化竞技，足球联赛与机器人格斗为代理评估提供新范式。",
+      "carryOver": "代理基准持续扩展，从 Minecraft 交互式基准到长周期任务，现新增游戏化竞技基准。"
+    },
+    {
+      "id": "ai-social-backlash",
+      "title": "代理部署的基础设施与社会挑战：互联网未就绪、经营失败与 RAM 短缺",
+      "isNew": false,
+      "categories": [
+        "new_thought",
+        "ai_enterprise_os"
+      ],
+      "chain": [
+        {
+          "title": "Box CEO Aaron Levie 警告互联网未准备好迎接个人 AI 代理时代",
+          "kind": "debate",
+          "entity": "Aaron Levie",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/levie/status/2096735726750908464"
+          ]
+        },
+        {
+          "title": "开发者指出生产 AI 代理需具备规划、评估等八大能力",
+          "kind": "debate",
+          "entity": "开发者",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/ayshriv/status/2096973383259111808"
+          ]
+        },
+        {
+          "title": "AI 模型经营企业发送假发票并亏损，暴露代理可靠性问题",
+          "kind": "debate",
+          "entity": "AI 代理",
+          "relPrev": null,
+          "sources": [
+            "https://www.bottlenecklabs.com/blog/benchmarking-7-autonomous-businesses"
+          ]
+        },
+        {
+          "title": "AI 芯片需求导致消费电子 RAM 短缺，引发“RAMageddon”",
+          "kind": "debate",
+          "entity": "RAMageddon",
+          "relPrev": null,
+          "sources": [
+            "https://www.ft.com/content/ea9a9dcc-b1df-49b0-b80c-f320161b9efa"
+          ]
+        },
+        {
+          "title": "Zara Zhang 指 AI 代理加剧人类注意力缩短危机",
+          "kind": "debate",
+          "entity": "Zara Zhang",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/zarazhangrui/status/2096824861108928701"
+          ]
+        },
+        {
+          "title": "Reddit 讨论 AI 普及导致整体生活质量下降",
+          "kind": "debate",
+          "entity": "Reddit",
+          "relPrev": null,
+          "sources": [
+            "https://www.reddit.com/r/antiai/comments/1w91yy4/every_ai_bro_overlooks_one_factor_the_general"
+          ]
+        }
+      ],
+      "narrative": "从互联网就绪性、代理可靠性到资源短缺，AI 代理部署面临基础设施与社会双重挑战，反弹声浪扩大。",
+      "carryOver": "AI 社会反弹从误判暂停扩展到代理经营失败与基础设施危机。"
+    }
+  ],
+  "columns": [],
+  "scattered": [
+    {
+      "note": "Promptfoo新增技能目录测试，支持OpenCode代理路由断言",
+      "category": "model_dev",
+      "sources": [
+        "https://www.promptfoo.dev/docs/guides/test-agent-skills"
+      ]
+    },
+    {
+      "note": "Pod 推出 AI 代理作为评审者的开发工具评测网站",
+      "category": "tech_trend",
+      "sources": [
+        "https://askpod.ai/"
+      ]
+    },
+    {
+      "note": "研究显示AI对就业的初步影响积极",
+      "category": "new_thought",
+      "sources": [
+        "https://www.economist.com/finance-and-economics/2026/09/04/the-jobs-apocalypse-is-postponed-an-ai-jobs-boom-is-here"
+      ]
+    },
+    {
+      "note": "HeyGen 开源 HTML 渲染视频工具，面向代理生成视频内容",
+      "category": "gh_trending",
+      "sources": [
+        "https://github.com/heygen-com/hyperframes"
+      ]
+    },
+    {
+      "note": "A10 Networks 发布 A10 AI Gateway，用于团队 LLM 请求的路由与编排，提升速度与成本效率",
+      "category": "ai_enterprise_os",
+      "sources": [
+        "https://x.com/A10Networks/status/2097056333568635352"
+      ]
+    },
+    {
+      "note": "推荐构建生产级金融AI代理的书籍，涵盖多代理架构与评估",
+      "category": "ai_finance",
+      "sources": [
+        "https://x.com/KirkDBorne/status/2097054963344019685"
+      ]
+    },
+    {
+      "note": "Simon Willison利用Claude Fable 5.1构建视频压缩工具",
+      "category": "model_dev",
+      "sources": [
+        "https://simonwillison.net/2026/Sep/7/video-compressor/"
+      ]
+    },
+    {
+      "note": "Free LLM API 聚合 600+ 免费模型并提供自动切换",
+      "category": "tech_trend",
+      "sources": [
+        "https://x.com/JulianGoldieSEO/status/2096615667827122439"
+      ]
+    },
+    {
+      "note": "调侃某人未入选时代AI百大榜单",
+      "category": "new_thought",
+      "sources": [
+        "https://x.com/petergyang/status/2096815819997204639"
+      ]
+    },
+    {
+      "note": "推文盘点无代码 AI 应用平台 AutoAgent、AnythingLLM、Open Agent Platform，称其降低 LLM 开发门槛",
+      "category": "gh_trending",
+      "sources": [
+        "https://x.com/bkdgiffug/status/2096963699445727664"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "h": "今日重点",
+      "bullets": [
+        "LLM 写作对智力诚实的影响引发 705 points、432 comments 的高热度讨论——反映社会对 AI 生成内容侵蚀智力诚信的深层担忧",
+        "个人拒绝训练替代自己的 AI，引发就业伦理热议，107 comments——触及 AI 替代人类工作的伦理底线，个人反抗行为引发广泛共鸣",
+        "DeepSeek R1 以 29.4 万美元推理训练成本成为开源 AI 转折点——极低成本实现高性能，颠覆开源模型经济性认知"
+      ]
+    },
+    {
+      "h": "主题线 1 · GPT-6 Astra 评测视频引爆 AGI 争论，与 Anthropic 新模型对比升温",
+      "bullets": [
+        "GPT-6 Astra 深度评测视频获 346 万播放，讨论是否实现 AGI → 评测视频结合 Anthropic 新模型引发社区关于 AGI 及基准可比性的争论",
+        "GPT-6 Astra 发布后，评测视频播放量爆炸，并引出与 Anthropic 新模型的对比，将 AGI 讨论推向新热度。"
+      ]
+    },
+    {
+      "h": "主题线 2 · Gemini 3.8 Flash 安全版与 Fairwind 主动网络防御项目亮相",
+      "bullets": [
+        "Gemini 3.8 Flash 及安全版 Flash Cyber 发布 → 配套 Fairwind 项目为企业与政府提供主动网络防御",
+        "Gemini 3.8 Flash 发布后，安全版与主动防御项目 Fairwind 亮相，标志着 AI 在国家安全与企业安全领域进入主动干预阶段。"
+      ]
+    },
+    {
+      "h": "主题线 3 · 代理工具链爆发：技能包、记忆引擎与无头浏览器齐聚",
+      "bullets": [
+        "marketingskills 为 Claude Code 代理提供营销技能包，登顶 GitHub 趋势 → SkillsLLM 聚合 agentic-awesome-skills 代理技能列表 → context-mode 发布上下文窗口优化方案，压缩工具输出 98% → ripwire 为编码代理提供仓库地图 CLI+MCP 工具 → Engrim 发布本地优先 SQLite 记忆引擎 → Lightpanda 与 Camofox 无头浏览器切入 AI 代理场景 → Claude AI 代理工程全栈大师班课程上线",
+        "Claude Code 工具生态从技能包、记忆引擎到无头浏览器多点爆发，代理基础设施加速成熟。"
+      ]
+    },
+    {
+      "h": "主题线 4 · 自主对冲基金开源与零售算法交易辩论，金融 AI 代理进入落地合规并行期",
+      "bullets": [
+        "AutoHedge 开源自主对冲基金框架，融合群体智能与 AI 代理 → FutureHedge 宣布 Prime Stocks 算法交易技术 → 个人实践让 AI 代理管理投资组合并命名 → 社区热议语言模型改进对零售算法交易的影响 → ESMA 发布 AI 在欧盟证券市场采用的风险分析报告",
+        "自主对冲基金开源、零售算法交易辩论与监管风险报告同步出现，金融 AI 代理交易进入落地与合规并行阶段。"
+      ]
+    },
+    {
+      "h": "主题线 5 · 代理基准游戏化：工作区清理、机器人格斗与足球联赛齐登场",
+      "bullets": [
+        "WorldBench 基准测试发布，评估 AI 代理清理工作区能力 → AI 机器人格斗竞技场发布 → Clawforge Premier League 宣布，以自主 AI 代理足球联赛作为活跃基准",
+        "代理基准从工作区清理能力评估扩展到游戏化竞技，足球联赛与机器人格斗为代理评估提供新范式。"
+      ]
+    },
+    {
+      "h": "主题线 6 · 代理部署的基础设施与社会挑战：互联网未就绪、经营失败与 RAM 短缺",
+      "bullets": [
+        "Box CEO Aaron Levie 警告互联网未准备好迎接个人 AI 代理时代 → 开发者指出生产 AI 代理需具备规划、评估等八大能力 → AI 模型经营企业发送假发票并亏损，暴露代理可靠性问题 → AI 芯片需求导致消费电子 RAM 短缺，引发“RAMageddon” → Zara Zhang 指 AI 代理加剧人类注意力缩短危机 → Reddit 讨论 AI 普及导致整体生活质量下降",
+        "从互联网就绪性、代理可靠性到资源短缺，AI 代理部署面临基础设施与社会双重挑战，反弹声浪扩大。"
+      ]
+    },
+    {
+      "h": "零散信号",
+      "bullets": [
+        "Promptfoo新增技能目录测试，支持OpenCode代理路由断言",
+        "Pod 推出 AI 代理作为评审者的开发工具评测网站",
+        "研究显示AI对就业的初步影响积极",
+        "HeyGen 开源 HTML 渲染视频工具，面向代理生成视频内容",
+        "A10 Networks 发布 A10 AI Gateway，用于团队 LLM 请求的路由与编排，提升速度与成本效率",
+        "推荐构建生产级金融AI代理的书籍，涵盖多代理架构与评估",
+        "Simon Willison利用Claude Fable 5.1构建视频压缩工具",
+        "Free LLM API 聚合 600+ 免费模型并提供自动切换",
+        "调侃某人未入选时代AI百大榜单",
+        "推文盘点无代码 AI 应用平台 AutoAgent、AnythingLLM、Open Agent Platform，称其降低 LLM 开发门槛"
+      ]
+    }
+  ],
+  "ev": [
+    {
+      "who": "web",
+      "en": "https://www.youtube.com/watch?v=FluKUJyeYD8",
+      "zh": "https://www.youtube.com/watch?v=FluKUJyeYD8",
+      "url": "https://www.youtube.com/watch?v=FluKUJyeYD8",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/singularity/comments/1w6f9xo/gpt_6_astra_benchmarks",
+      "zh": "https://www.reddit.com/r/singularity/comments/1w6f9xo/gpt_6_astra_benchmarks",
+      "url": "https://www.reddit.com/r/singularity/comments/1w6f9xo/gpt_6_astra_benchmarks",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/",
+      "zh": "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/",
+      "url": "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program/",
+      "zh": "https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program/",
+      "url": "https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/coreyhaines31/marketingskills",
+      "zh": "https://github.com/coreyhaines31/marketingskills",
+      "url": "https://github.com/coreyhaines31/marketingskills",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://skillsllm.com/skill/agentic-awesome-skills",
+      "zh": "https://skillsllm.com/skill/agentic-awesome-skills",
+      "url": "https://skillsllm.com/skill/agentic-awesome-skills",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/mksglu/context-mode",
+      "zh": "https://github.com/mksglu/context-mode",
+      "url": "https://github.com/mksglu/context-mode",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/redhat-et/ripwire",
+      "zh": "https://github.com/redhat-et/ripwire",
+      "url": "https://github.com/redhat-et/ripwire",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/timgordontg/engrim",
+      "zh": "https://github.com/timgordontg/engrim",
+      "url": "https://github.com/timgordontg/engrim",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/lightpanda-io/browser",
+      "zh": "https://github.com/lightpanda-io/browser",
+      "url": "https://github.com/lightpanda-io/browser",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/jo-inc/camofox-browser",
+      "zh": "https://github.com/jo-inc/camofox-browser",
+      "url": "https://github.com/jo-inc/camofox-browser",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.youtube.com/watch?v=WGqlrvf4-i0",
+      "zh": "https://www.youtube.com/watch?v=WGqlrvf4-i0",
+      "url": "https://www.youtube.com/watch?v=WGqlrvf4-i0",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/The-Swarm-Corporation/AutoHedge",
+      "zh": "https://github.com/The-Swarm-Corporation/AutoHedge",
+      "url": "https://github.com/The-Swarm-Corporation/AutoHedge",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.facebook.com/GlobalFinTechSeries/posts/futurehedge-announces-prime-stocks-algorithmic-trading-technology-financialtechn/1552218266918966",
+      "zh": "https://www.facebook.com/GlobalFinTechSeries/posts/futurehedge-announces-prime-stocks-algorithmic-trading-technology-financialtechn/1552218266918966",
+      "url": "https://www.facebook.com/GlobalFinTechSeries/posts/futurehedge-announces-prime-stocks-algorithmic-trading-technology-financialtechn/1552218266918966",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.wsj.com/tech/ai/the-ai-shift-turning-everyday-investors-into-mini-quant-funds-ebe4d45f",
+      "zh": "https://www.wsj.com/tech/ai/the-ai-shift-turning-everyday-investors-into-mini-quant-funds-ebe4d45f",
+      "url": "https://www.wsj.com/tech/ai/the-ai-shift-turning-everyday-investors-into-mini-quant-funds-ebe4d45f",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/algotrading/comments/1w5xjb6/whats_going_to_happen_to_retail_algo_trading_as",
+      "zh": "https://www.reddit.com/r/algotrading/comments/1w5xjb6/whats_going_to_happen_to_retail_algo_trading_as",
+      "url": "https://www.reddit.com/r/algotrading/comments/1w5xjb6/whats_going_to_happen_to_retail_algo_trading_as",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.instagram.com/p/Dc0jAe6AID6",
+      "zh": "https://www.instagram.com/p/Dc0jAe6AID6",
+      "url": "https://www.instagram.com/p/Dc0jAe6AID6",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/agenticgirl/status/2096556623707930940",
+      "zh": "https://x.com/agenticgirl/status/2096556623707930940",
+      "url": "https://x.com/agenticgirl/status/2096556623707930940",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/nigrosimone/llms-robot-arena",
+      "zh": "https://github.com/nigrosimone/llms-robot-arena",
+      "url": "https://github.com/nigrosimone/llms-robot-arena",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/paragonailabs/status/2097083161167421937",
+      "zh": "https://x.com/paragonailabs/status/2097083161167421937",
+      "url": "https://x.com/paragonailabs/status/2097083161167421937",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/levie/status/2096735726750908464",
+      "zh": "https://x.com/levie/status/2096735726750908464",
+      "url": "https://x.com/levie/status/2096735726750908464",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/ayshriv/status/2096973383259111808",
+      "zh": "https://x.com/ayshriv/status/2096973383259111808",
+      "url": "https://x.com/ayshriv/status/2096973383259111808",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.bottlenecklabs.com/blog/benchmarking-7-autonomous-businesses",
+      "zh": "https://www.bottlenecklabs.com/blog/benchmarking-7-autonomous-businesses",
+      "url": "https://www.bottlenecklabs.com/blog/benchmarking-7-autonomous-businesses",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.ft.com/content/ea9a9dcc-b1df-49b0-b80c-f320161b9efa",
+      "zh": "https://www.ft.com/content/ea9a9dcc-b1df-49b0-b80c-f320161b9efa",
+      "url": "https://www.ft.com/content/ea9a9dcc-b1df-49b0-b80c-f320161b9efa",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/zarazhangrui/status/2096824861108928701",
+      "zh": "https://x.com/zarazhangrui/status/2096824861108928701",
+      "url": "https://x.com/zarazhangrui/status/2096824861108928701",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/antiai/comments/1w91yy4/every_ai_bro_overlooks_one_factor_the_general",
+      "zh": "https://www.reddit.com/r/antiai/comments/1w91yy4/every_ai_bro_overlooks_one_factor_the_general",
+      "url": "https://www.reddit.com/r/antiai/comments/1w91yy4/every_ai_bro_overlooks_one_factor_the_general",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://bcantrill.dtrace.org/2025/12/05/your-intellectual-fly-is-open",
+      "zh": "https://bcantrill.dtrace.org/2025/12/05/your-intellectual-fly-is-open",
+      "url": "https://bcantrill.dtrace.org/2025/12/05/your-intellectual-fly-is-open",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://restofworld.org/2026/ai-training-jobs-expert-replacement",
+      "zh": "https://restofworld.org/2026/ai-training-jobs-expert-replacement",
+      "url": "https://restofworld.org/2026/ai-training-jobs-expert-replacement",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.thundercompute.com/blog/best-open-source-llms",
+      "zh": "https://www.thundercompute.com/blog/best-open-source-llms",
+      "url": "https://www.thundercompute.com/blog/best-open-source-llms",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.promptfoo.dev/docs/guides/test-agent-skills",
+      "zh": "https://www.promptfoo.dev/docs/guides/test-agent-skills",
+      "url": "https://www.promptfoo.dev/docs/guides/test-agent-skills",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://simonwillison.net/2026/Sep/7/video-compressor/",
+      "zh": "https://simonwillison.net/2026/Sep/7/video-compressor/",
+      "url": "https://simonwillison.net/2026/Sep/7/video-compressor/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools",
+      "zh": "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools",
+      "url": "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.alphaxiv.org/@heng-wang-2",
+      "zh": "https://www.alphaxiv.org/@heng-wang-2",
+      "url": "https://www.alphaxiv.org/@heng-wang-2",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://askpod.ai/",
+      "zh": "https://askpod.ai/",
+      "url": "https://askpod.ai/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/JulianGoldieSEO/status/2096615667827122439",
+      "zh": "https://x.com/JulianGoldieSEO/status/2096615667827122439",
+      "url": "https://x.com/JulianGoldieSEO/status/2096615667827122439",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://nomac.app/",
+      "zh": "https://nomac.app/",
+      "url": "https://nomac.app/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/daniele110199/bobbin",
+      "zh": "https://github.com/daniele110199/bobbin",
+      "url": "https://github.com/daniele110199/bobbin",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/LakBud/vernLLM",
+      "zh": "https://github.com/LakBud/vernLLM",
+      "url": "https://github.com/LakBud/vernLLM",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/yayster/yayster.el",
+      "zh": "https://github.com/yayster/yayster.el",
+      "url": "https://github.com/yayster/yayster.el",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/bkdgiffug/status/2096963699445727664",
+      "zh": "https://x.com/bkdgiffug/status/2096963699445727664",
+      "url": "https://x.com/bkdgiffug/status/2096963699445727664",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/LianwenJ/status/2096743401064706254",
+      "zh": "https://x.com/LianwenJ/status/2096743401064706254",
+      "url": "https://x.com/LianwenJ/status/2096743401064706254",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.economist.com/finance-and-economics/2026/09/04/the-jobs-apocalypse-is-postponed-an-ai-jobs-boom-is-here",
+      "zh": "https://www.economist.com/finance-and-economics/2026/09/04/the-jobs-apocalypse-is-postponed-an-ai-jobs-boom-is-here",
+      "url": "https://www.economist.com/finance-and-economics/2026/09/04/the-jobs-apocalypse-is-postponed-an-ai-jobs-boom-is-here",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/petergyang/status/2096815819997204639",
+      "zh": "https://x.com/petergyang/status/2096815819997204639",
+      "url": "https://x.com/petergyang/status/2096815819997204639",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://allan.reyes.sh/posts/ai-cold-showers",
+      "zh": "https://allan.reyes.sh/posts/ai-cold-showers",
+      "url": "https://allan.reyes.sh/posts/ai-cold-showers",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.ft.com/content/b207536e-6def-4080-878f-d0eba61d11e0",
+      "zh": "https://www.ft.com/content/b207536e-6def-4080-878f-d0eba61d11e0",
+      "url": "https://www.ft.com/content/b207536e-6def-4080-878f-d0eba61d11e0",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://tiiny.ai/",
+      "zh": "https://tiiny.ai/",
+      "url": "https://tiiny.ai/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://news.ycombinator.com/item?id=49588265",
+      "zh": "https://news.ycombinator.com/item?id=49588265",
+      "url": "https://news.ycombinator.com/item?id=49588265",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/EmilMieilica/status/2096991816960663797",
+      "zh": "https://x.com/EmilMieilica/status/2096991816960663797",
+      "url": "https://x.com/EmilMieilica/status/2096991816960663797",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/heygen-com/hyperframes",
+      "zh": "https://github.com/heygen-com/hyperframes",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/aiseomastery/status/2096548966372356594",
+      "zh": "https://x.com/aiseomastery/status/2096548966372356594",
+      "url": "https://x.com/aiseomastery/status/2096548966372356594",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/ksttcu/status/2096585977045062003",
+      "zh": "https://x.com/ksttcu/status/2096585977045062003",
+      "url": "https://x.com/ksttcu/status/2096585977045062003",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/A10Networks/status/2097056333568635352",
+      "zh": "https://x.com/A10Networks/status/2097056333568635352",
+      "url": "https://x.com/A10Networks/status/2097056333568635352",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/KirkDBorne/status/2097054963344019685",
+      "zh": "https://x.com/KirkDBorne/status/2097054963344019685",
+      "url": "https://x.com/KirkDBorne/status/2097054963344019685",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/amankk_9/status/2096464905759260853",
+      "zh": "https://x.com/amankk_9/status/2096464905759260853",
+      "url": "https://x.com/amankk_9/status/2096464905759260853",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.reddit.com/r/algotrading/comments/1w4wfrv/search_for_btc_daily_trading_signals_is_coming_to",
+      "zh": "https://www.reddit.com/r/algotrading/comments/1w4wfrv/search_for_btc_daily_trading_signals_is_coming_to",
+      "url": "https://www.reddit.com/r/algotrading/comments/1w4wfrv/search_for_btc_daily_trading_signals_is_coming_to",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://aimultiple.com/llm-scaling-laws",
+      "zh": "https://aimultiple.com/llm-scaling-laws",
+      "url": "https://aimultiple.com/llm-scaling-laws",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://eccles.utah.edu/programs/master-of-science-in-financial-technology/academics",
+      "zh": "https://eccles.utah.edu/programs/master-of-science-in-financial-technology/academics",
+      "url": "https://eccles.utah.edu/programs/master-of-science-in-financial-technology/academics",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://iimcalcutta.emeritus.org/iimc-executive-programme-in-fintech-and-ai",
+      "zh": "https://iimcalcutta.emeritus.org/iimc-executive-programme-in-fintech-and-ai",
+      "url": "https://iimcalcutta.emeritus.org/iimc-executive-programme-in-fintech-and-ai",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://kanerika.com/resources/blogs",
+      "zh": "https://kanerika.com/resources/blogs",
+      "url": "https://kanerika.com/resources/blogs",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://trendspider.com/sidekick-prompt-bank",
+      "zh": "https://trendspider.com/sidekick-prompt-bank",
+      "url": "https://trendspider.com/sidekick-prompt-bank",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.facebook.com/jploftsolutions/posts/%F0%9D%90%80%F0%9D%90%88-%F0%9D%90%A2%F0%9D%90%AC-%F0%9D%90%9C%F0%9D%90%A1%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%A0%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%A0-%F0%9D%90%A1%F0%9D%90%A8%F0%9D%90%B0-%F0%9D%90%AC%F0%9D%90%AD%F0%9D%90%A8%F0%9D%90%9C%F0%9D%90%A4-%F0%9D%90%A6%F0%9D%90%9A%F0%9D%90%AB%F0%9D%90%A4%F0%9D%90%9E%F0%9D%90%AD%F0%9D%90%AC-%F0%9D%90%9A%F0%9D%90%AB%F0%9D%90%9E-%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%9A%F0%9D%90%A5%F0%9D%90%B2%F0%9D%90%B3%F0%9D%90%9E%F0%9D%90%9D-%F0%9D%90%A6%F0%9D%90%A8%F0%9D%90%A7%F0%9D%90%A2%F0%9D%90%AD%F0%9D%90%A8%F0%9D%90%AB%F0%9D%90%9E%F0%9D%90%9D-%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%9D-%F0%9D%90%AD%F0%9D%90%AB%F0%9D%90%9A%F0%9D%90%9D%F0%9D%90%9E%F0%9D%90%9Dfrom-predictiv/1097551356308061",
+      "zh": "https://www.facebook.com/jploftsolutions/posts/%F0%9D%90%80%F0%9D%90%88-%F0%9D%90%A2%F0%9D%90%AC-%F0%9D%90%9C%F0%9D%90%A1%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%A0%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%A0-%F0%9D%90%A1%F0%9D%90%A8%F0%9D%90%B0-%F0%9D%90%AC%F0%9D%90%AD%F0%9D%90%A8%F0%9D%90%9C%F0%9D%90%A4-%F0%9D%90%A6%F0%9D%90%9A%F0%9D%90%AB%F0%9D%90%A4%F0%9D%90%9E%F0%9D%90%AD%F0%9D%90%AC-%F0%9D%90%9A%F0%9D%90%AB%F0%9D%90%9E-%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%9A%F0%9D%90%A5%F0%9D%90%B2%F0%9D%90%B3%F0%9D%90%9E%F0%9D%90%9D-%F0%9D%90%A6%F0%9D%90%A8%F0%9D%90%A7%F0%9D%90%A2%F0%9D%90%AD%F0%9D%90%A8%F0%9D%90%AB%F0%9D%90%9E%F0%9D%90%9D-%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%9D-%F0%9D%90%AD%F0%9D%90%AB%F0%9D%90%9A%F0%9D%90%9D%F0%9D%90%9E%F0%9D%90%9Dfrom-predictiv/1097551356308061",
+      "url": "https://www.facebook.com/jploftsolutions/posts/%F0%9D%90%80%F0%9D%90%88-%F0%9D%90%A2%F0%9D%90%AC-%F0%9D%90%9C%F0%9D%90%A1%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%A0%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%A0-%F0%9D%90%A1%F0%9D%90%A8%F0%9D%90%B0-%F0%9D%90%AC%F0%9D%90%AD%F0%9D%90%A8%F0%9D%90%9C%F0%9D%90%A4-%F0%9D%90%A6%F0%9D%90%9A%F0%9D%90%AB%F0%9D%90%A4%F0%9D%90%9E%F0%9D%90%AD%F0%9D%90%AC-%F0%9D%90%9A%F0%9D%90%AB%F0%9D%90%9E-%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%9A%F0%9D%90%A5%F0%9D%90%B2%F0%9D%90%B3%F0%9D%90%9E%F0%9D%90%9D-%F0%9D%90%A6%F0%9D%90%A8%F0%9D%90%A7%F0%9D%90%A2%F0%9D%90%AD%F0%9D%90%A8%F0%9D%90%AB%F0%9D%90%9E%F0%9D%90%9D-%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%9D-%F0%9D%90%AD%F0%9D%90%AB%F0%9D%90%9A%F0%9D%90%9D%F0%9D%90%9E%F0%9D%90%9Dfrom-predictiv/1097551356308061",
+      "pt": "自动聚合线索"
+    }
+  ],
+  "graphDelta": {
+    "entities": 42,
+    "events": 82,
+    "relations": 33,
+    "storylines": 6
+  }
+}
