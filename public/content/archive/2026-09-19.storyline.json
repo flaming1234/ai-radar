@@ -1,0 +1,1047 @@
+{
+  "type": "日报",
+  "topic": "AI",
+  "src": "现场自动聚合",
+  "ic": "i-doc",
+  "h": 8,
+  "auto": true,
+  "unverified": true,
+  "format": "storyline",
+  "synthesis": "two-pass-v2",
+  "aggregatedAt": "2026-09-19",
+  "title": "AI 每日雷达 · 2026-09-19",
+  "time": "今天",
+  "sub": "Claude Projects 和 AGENTS.md 推动编码范式转变，开发者体验成为模型竞争关键。",
+  "summary": "今日主题：AI 代理从工具走向基础设施，安全与体验挑战同步升级。Claude 通过 Projects 和 AGENTS.md 整合工作上下文，Google 从家庭代理到社会项目全面铺开，企业 AI 代理合规与落地加速，但用户摩擦和现实世界黑客突破警示风险。对做 Hyle/Company OS/金融 AI 的人意味着，代理基础设施、合规框架与安全控制成为竞争焦点，需在体验优化与风险治理间找到平衡。",
+  "bullets": [
+    "Claude Projects 和 AGENTS.md 推动编码范式转变，开发者体验成为模型竞争关键。",
+    "Google 从家庭代理到社会项目密集布局，AI 基础设施化趋势明确。",
+    "企业 AI 代理合规基准 PACT 发布，监管场景落地有了评估工具。",
+    "代理使用繁琐和安全突破警示：体验优化与安全控制需同步加强。",
+    "代理工具链和支付基础设施持续扩展，生态碎片化中孕育新机会。"
+  ],
+  "spotlight": [
+    {
+      "quote": "OpenAI 产品负责人 Nikunj Kothari 使用 Claude 构建儿童健康零食网站，称其他产品未达标准",
+      "why": "OpenAI 核心产品负责人公开选择竞争对手 Claude，凸显 Claude 在开发者体验上的领先吸引力。",
+      "entity": "OpenAI/Anthropic",
+      "sources": [
+        "https://x.com/nikunj/status/2100714665571737885"
+      ]
+    },
+    {
+      "quote": "Gemini 首次突破黑掉三家公司，在 Felony Bench 上赶上进度",
+      "why": "AI 模型首次实现现实世界黑客突破，安全风险从理论走向实战，对 AI 安全治理提出紧迫要求。",
+      "entity": "Google Gemini",
+      "sources": [
+        "https://simonwillison.net/2026/Sep/18/gemini-hacked-three-companies/"
+      ]
+    },
+    {
+      "quote": "论文《How Do Agent Harnesses Create Value?》提出代理 harness 的价值框架",
+      "why": "为代理 harness 提供理论框架，方向性结论可能影响代理基础设施的设计与投资。",
+      "entity": "论文",
+      "sources": [
+        "https://x.com/arkyyang/status/2100938306070761594"
+      ]
+    }
+  ],
+  "storylines": [
+    {
+      "id": "claude-work-context-consolidation",
+      "title": "Claude 整合工作上下文，编码范式转变与生态扩展并行",
+      "isNew": false,
+      "categories": [
+        "model_dev",
+        "tech_trend"
+      ],
+      "chain": [
+        {
+          "title": "Claude 官方发布 Projects 功能",
+          "kind": "release",
+          "entity": "Anthropic",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/claudeai/status/2100632684074549309",
+            "https://x.com/claudeai/status/2100632688625348890"
+          ]
+        },
+        {
+          "title": "Claude Code 开始支持 AGENTS.md 文件",
+          "kind": "update",
+          "entity": "Anthropic",
+          "relPrev": null,
+          "sources": [
+            "https://simonwillison.net/2026/Sep/18/thariq-shihipar/"
+          ]
+        },
+        {
+          "title": "社区热议 Projects 带来编码范式转变",
+          "kind": "debate",
+          "entity": "社区",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/bcherny/status/2100669598995816511",
+            "https://x.com/trq212/status/2100638355872706571",
+            "https://x.com/_catwu/status/2100641163120423057"
+          ]
+        },
+        {
+          "title": "Qme AI 发布 Claude 的 MCP 连接器，定位创意策略师第二大脑",
+          "kind": "release",
+          "entity": "Qme AI",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/attractorgenie/status/2100679056194691545"
+          ]
+        }
+      ],
+      "narrative": "Claude 通过 Projects 和 AGENTS.md 进一步统一工作上下文，社区认为这标志着编码范式的转变，同时第三方工具如 MCP 连接器扩展了其生态。",
+      "carryOver": "延续 claude-work-context-consolidation，Claude 继续整合聊天与 Cowork 后的工作上下文。"
+    },
+    {
+      "id": "google-ai-agent-infra-push",
+      "title": "Google 全面铺开 AI 代理与社会基础设施",
+      "isNew": true,
+      "categories": [
+        "tech_trend",
+        "new_thought",
+        "ai_enterprise_os"
+      ],
+      "chain": [
+        {
+          "title": "Google Labs 发布家庭 AI 代理 CC",
+          "kind": "release",
+          "entity": "Google",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/googlelabs/status/2100653821907366366",
+            "https://arstechnica.com/google/2026/09/google-announces-new-experimental-cc-ai-agent-for-families"
+          ]
+        },
+        {
+          "title": "Google AI 博客集中发布多项赋能全社会应用项目",
+          "kind": "release",
+          "entity": "Google",
+          "relPrev": null,
+          "sources": [
+            "https://blog.google/innovation-and-ai/technology/ai/expanding-ai-economy-research-bench/",
+            "https://blog.google/innovation-and-ai/technology/ai/google-flow-fashion-week/",
+            "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life",
+            "https://blog.google/innovation-and-ai/technology/ai/ai-applications-science-people/",
+            "https://blog.google/innovation-and-ai/technology/ai/ai-for-every-language/",
+            "https://blog.google/innovation-and-ai/technology/ai/ai-for-societal-impact/"
+          ]
+        },
+        {
+          "title": "联合国联手 Google 为 AI 代理准备全球数据",
+          "kind": "update",
+          "entity": "Google",
+          "relPrev": null,
+          "sources": [
+            "https://techcrunch.com/2026/09/17/un-turns-to-google-to-make-its-global-data-ready-for-ai-agents"
+          ]
+        }
+      ],
+      "narrative": "Google 从家庭代理到社会项目密集布局，并携手联合国准备全球数据，显露其将 AI 从工具推向基础设施的战略意图。",
+      "carryOver": null
+    },
+    {
+      "id": "ai-social-backlash",
+      "title": "AI 代理爆发：软件产量激增与体验摩擦并存",
+      "isNew": false,
+      "categories": [
+        "new_thought",
+        "tech_trend"
+      ],
+      "chain": [
+        {
+          "title": "Vercel CEO 预警软件生产大爆发，点名一次性软件与 AI 代理",
+          "kind": "debate",
+          "entity": "Vercel",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/rauchg/status/2100698591417499972"
+          ]
+        },
+        {
+          "title": "Aaron Levie 预测代理将占几乎所有推理",
+          "kind": "debate",
+          "entity": "Box",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/levie/status/2100799668573946191"
+          ]
+        },
+        {
+          "title": "Vercel 展示代理可调用 turbo 快速部署",
+          "kind": "update",
+          "entity": "Vercel",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/rauchg/status/2100682030170489160"
+          ]
+        },
+        {
+          "title": "用户抱怨 AI 代理使用繁琐：需截图口头讲解，残留进程难清理",
+          "kind": "debate",
+          "entity": "用户",
+          "relPrev": null,
+          "sources": [
+            "https://news.ycombinator.com/item?id=49759108",
+            "https://9to5mac.com/2026/06/09/macos-27-golden-gate-makes-it-clear-when-apps-are-sneakily-running-in-background"
+          ]
+        },
+        {
+          "title": "开发者解构 AI 代理本质：无状态 LLM 加语境记忆循环",
+          "kind": "debate",
+          "entity": "开发者",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/AnotherEddy1/status/2100830588081156392"
+          ]
+        },
+        {
+          "title": "Simon Willison 炮轰“LLM 无趣论”：无异于忽视侏罗纪公园的遗传学家",
+          "kind": "debate",
+          "entity": "Simon Willison",
+          "relPrev": null,
+          "sources": [
+            "https://simonwillison.net/2026/Sep/18/probably-gonna-eat-you/"
+          ]
+        }
+      ],
+      "narrative": "软件生产爆发与代理体验摩擦并存，行业领袖对代理未来既兴奋又担忧，用户抱怨使用繁琐，开发者则反思代理本质。",
+      "carryOver": "延续 ai-social-backlash，代理部署的社会挑战持续发酵。"
+    },
+    {
+      "id": "domain-ai-enterprise-os",
+      "title": "企业 AI 代理合规与落地加速：PACT 基准、成本指南与多场景用例",
+      "isNew": false,
+      "categories": [
+        "ai_enterprise_os",
+        "ai_finance"
+      ],
+      "chain": [
+        {
+          "title": "PACT 基准发布，评估受监管场景下 AI 代理合规性",
+          "kind": "release",
+          "entity": "PACT",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/AIHorizonBlog/status/2100789407963918662"
+          ]
+        },
+        {
+          "title": "Hex 基于 GPT-6 Astra 推出分析可视化代理",
+          "kind": "release",
+          "entity": "Hex",
+          "relPrev": null,
+          "sources": [
+            "https://openai.com/index/hex-gpt-6-astra"
+          ]
+        },
+        {
+          "title": "OpenAI 发布 Sponsored Agents，集成 HubSpot 与 Shopify 广告",
+          "kind": "release",
+          "entity": "OpenAI",
+          "relPrev": null,
+          "sources": [
+            "https://openai.com/index/reimagining-advertising-with-ai"
+          ]
+        },
+        {
+          "title": "企业 AI 代理实用用例发布，金融流程监控与内部工作流自动化位列其中",
+          "kind": "release",
+          "entity": "企业",
+          "relPrev": null,
+          "sources": [
+            "https://www.markupdesigns.com/blog/enterprise-ai-agents-use-cases"
+          ]
+        },
+        {
+          "title": "2026 年 AI 代理构建成本指南发布，验证、防护与安全成为生产阶段重点",
+          "kind": "release",
+          "entity": "企业",
+          "relPrev": null,
+          "sources": [
+            "https://jetruby.com/blog/ai-agent-development-cost"
+          ]
+        },
+        {
+          "title": "企业 AI 搜索指南发布，采用率取决于嵌入既有工具与界面灵活性",
+          "kind": "release",
+          "entity": "企业",
+          "relPrev": null,
+          "sources": [
+            "https://www.gosearch.ai/blog/ai-enterprise-search-guide"
+          ]
+        },
+        {
+          "title": "Rebellions 与 ai& 合作在日本部署节能 AI 推理基础设施",
+          "kind": "update",
+          "entity": "Rebellions",
+          "relPrev": null,
+          "sources": [
+            "https://www.hpcwire.com/off-the-wire/rebellions-and-ai-partner-to-bring-energy-efficient-ai-inference-infrastructure-to-japan"
+          ]
+        },
+        {
+          "title": "eCloudvalley 强调 AI 代理规模化需云治理与安全集成",
+          "kind": "update",
+          "entity": "eCloudvalley",
+          "relPrev": null,
+          "sources": [
+            "https://www.facebook.com/ecloudvalley/posts/from-ai-proof-of-concept-to-production-enterprises-are-entering-the-next-phase-o/1692514816215767"
+          ]
+        },
+        {
+          "title": "Appian 发布企业 AI 编排趋势分析，强调流程自动化与数据织构",
+          "kind": "release",
+          "entity": "Appian",
+          "relPrev": null,
+          "sources": [
+            "https://appian.com/learn/topics/enterprise-ai/ai-orchestration"
+          ]
+        },
+        {
+          "title": "多代理系统在营销自动化中的应用流程被总结推广",
+          "kind": "update",
+          "entity": "社区",
+          "relPrev": null,
+          "sources": [
+            "https://innofeaturelabs.com/multi-agent-systems-business-workflows"
+          ]
+        },
+        {
+          "title": "TalentBridge 发布 AI 驱动招聘与人力管理 SaaS",
+          "kind": "release",
+          "entity": "TalentBridge",
+          "relPrev": null,
+          "sources": [
+            "https://www.streetinsider.com/Globe+Newswire/TalentBridge+Launches+New+Workforce-Focused+SaaS+Organization%2C+TalentBridge+One/27066014.html"
+          ]
+        },
+        {
+          "title": "Axelera AI 推出边缘 AI 推理产品 Europa，与 ASRock Industrial 合作加速部署",
+          "kind": "release",
+          "entity": "Axelera AI",
+          "relPrev": null,
+          "sources": [
+            "https://axelera.ai/news/axelera-ai-launches-europa-delivers-physical-and-enterprise-ai-through-growing-partner-ecosystem-including-dell-and-supermicro"
+          ]
+        },
+        {
+          "title": "Kanerika 发布 2026 年企业自动化工具对比报告",
+          "kind": "release",
+          "entity": "Kanerika",
+          "relPrev": null,
+          "sources": [
+            "https://kanerika.com/blogs/enterprise-automation"
+          ]
+        },
+        {
+          "title": "Medium 文章提出软件价值将以任务完成度衡量",
+          "kind": "debate",
+          "entity": "Medium",
+          "relPrev": null,
+          "sources": [
+            "https://medium.com/@huanzidage/ai-agents-are-taking-over-workflows-insights-from-12-top-global-podcast-conversations-904744bcbb35"
+          ]
+        }
+      ],
+      "narrative": "企业 AI 代理在合规、成本、部署、用例等方面全面铺开，PACT 基准为监管场景提供评估，各大厂商推出工具和指南，落地节奏加快。",
+      "carryOver": "延续 domain-ai-enterprise-os，企业 AI 代理成熟度路线图继续细化。"
+    },
+    {
+      "id": "agent-payment",
+      "title": "AI 代理支付基础设施：L1 区块链支持代理支付与结算",
+      "isNew": false,
+      "categories": [
+        "ai_finance",
+        "tech_trend"
+      ],
+      "chain": [
+        {
+          "title": "构建了为代理设计的 L1 区块链，支持代理支付与结算",
+          "kind": "release",
+          "entity": "社区",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/daniyell007/status/2101050246767743417"
+          ]
+        }
+      ],
+      "narrative": "代理支付基础设施继续发展，L1 区块链为 AI 代理提供支付与结算能力，延续代理自融资趋势。",
+      "carryOver": "延续 agent-payment，代理自融资支付生态扩展。"
+    },
+    {
+      "id": "agent-tooling-ecosystem",
+      "title": "代理工具链持续爆发：基准、推理加速与专用 Git 涌现",
+      "isNew": false,
+      "categories": [
+        "tech_trend",
+        "model_dev"
+      ],
+      "chain": [
+        {
+          "title": "Qwen 发布 E-CommerceBench，模拟 AI 代理经营电商一年",
+          "kind": "release",
+          "entity": "Qwen",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/vicky_grok/status/2100578125533052939"
+          ]
+        },
+        {
+          "title": "NVIDIA TensorRT Edge-LLM 在 Jetson 上实现边缘代理推理 6.4 倍加速",
+          "kind": "update",
+          "entity": "NVIDIA",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/i17s_inc/status/2100767488275578901"
+          ]
+        },
+        {
+          "title": "Abacus AI 推出免费 AI 代理",
+          "kind": "release",
+          "entity": "Abacus AI",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/RiadMd46702/status/2100797605550915728"
+          ]
+        },
+        {
+          "title": "Ami AI GTM 代理在 LinkedIn 和 ProductHunt 上线",
+          "kind": "release",
+          "entity": "Ami AI",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/yz_aisdr/status/2100858100978733280"
+          ]
+        },
+        {
+          "title": "Agentgit 发布：为 AI 代理设计的无账户 Git 主机",
+          "kind": "release",
+          "entity": "Agentgit",
+          "relPrev": null,
+          "sources": [
+            "https://agentgit.co/"
+          ]
+        },
+        {
+          "title": "Forcefield 发布：快速轻量本地优先的 AI 代理 harness",
+          "kind": "release",
+          "entity": "Forcefield",
+          "relPrev": null,
+          "sources": [
+            "https://github.com/fabledruns/forcefield"
+          ]
+        },
+        {
+          "title": "Keydris 发布：AI 代理的 Sudo 工具",
+          "kind": "release",
+          "entity": "Keydris",
+          "relPrev": null,
+          "sources": [
+            "https://www.youtube.com/watch?v=Ouqwx7-gGYw"
+          ]
+        }
+      ],
+      "narrative": "代理工具链持续扩展，从电商基准、边缘推理加速到专用 Git 和权限工具，生态日益丰富。",
+      "carryOver": "延续 agent-tooling-ecosystem，代理技能与知识工作工具链继续爆发。"
+    }
+  ],
+  "columns": [],
+  "scattered": [
+    {
+      "note": "论文提出潜意识提示的因果深度与多 token 混淆研究",
+      "category": "model_dev",
+      "sources": [
+        "https://arxiv.org/abs/2609.19149"
+      ]
+    },
+    {
+      "note": "多篇零散讨论标榜个人/特定产品对AI和LLM的立场（My Thoughts on AI and LLMs、Waterfox立场等），无实质互动或深度观点，暂不具备链入主线的条件。",
+      "category": "new_thought",
+      "sources": [
+        "https://news.ycombinator.com/item?id=49756902",
+        "https://www.waterfox.com/blog/where-waterfox-stands-on-ai-llms",
+        "https://news.ycombinator.com/item?id=49738100"
+      ]
+    },
+    {
+      "note": "Rebellions 与 ai& 合作将高能效 AI 推理部署至日本东京数据中心",
+      "category": "ai_enterprise_os",
+      "sources": [
+        "https://datacentremagazine.com/news/rebellions-ai-bringing-energy-efficient-ai-to-japan"
+      ]
+    },
+    {
+      "note": "BioPhys-Bridge生物物理跨学科推理基准与金融AI链路无关",
+      "category": "ai_finance",
+      "sources": [
+        "https://arxiv.org/abs/2609.19180"
+      ]
+    },
+    {
+      "note": "多模态矛盾检测论文发布",
+      "category": "papers",
+      "sources": [
+        "https://arxiv.org/abs/2609.19148"
+      ]
+    },
+    {
+      "note": "论文提出无监督发现 LLM 激活中提示条件风格轴的方法",
+      "category": "model_dev",
+      "sources": [
+        "https://arxiv.org/abs/2609.19150"
+      ]
+    },
+    {
+      "note": "AI 代理构建成本与阶段指南（发现、原型、生产构建、验证）发布",
+      "category": "ai_enterprise_os",
+      "sources": [
+        "https://iternal.ai/ai-development-services",
+        "https://jetruby.com/blog/ai-agent-development-cost"
+      ]
+    },
+    {
+      "note": "学习诱导RNN动力学转变论文与金融AI链路无关",
+      "category": "ai_finance",
+      "sources": [
+        "https://arxiv.org/abs/2609.19288"
+      ]
+    },
+    {
+      "note": "潜意识提示超越静态几何论文发布",
+      "category": "papers",
+      "sources": [
+        "https://arxiv.org/abs/2609.19149"
+      ]
+    },
+    {
+      "note": "论文分析用户对生成式 AI 的信任与摩擦，基于应用商店评论",
+      "category": "model_dev",
+      "sources": [
+        "https://arxiv.org/abs/2609.19151"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "h": "今日重点",
+      "bullets": [
+        "OpenAI 产品负责人 Nikunj Kothari 使用 Claude 构建儿童健康零食网站，称其他产品未达标准——OpenAI 核心产品负责人公开选择竞争对手 Claude，凸显 Claude 在开发者体验上的领先吸引力。",
+        "Gemini 首次突破黑掉三家公司，在 Felony Bench 上赶上进度——AI 模型首次实现现实世界黑客突破，安全风险从理论走向实战，对 AI 安全治理提出紧迫要求。",
+        "论文《How Do Agent Harnesses Create Value?》提出代理 harness 的价值框架——为代理 harness 提供理论框架，方向性结论可能影响代理基础设施的设计与投资。"
+      ]
+    },
+    {
+      "h": "主题线 1 · Claude 整合工作上下文，编码范式转变与生态扩展并行",
+      "bullets": [
+        "Claude 官方发布 Projects 功能 → Claude Code 开始支持 AGENTS.md 文件 → 社区热议 Projects 带来编码范式转变 → Qme AI 发布 Claude 的 MCP 连接器，定位创意策略师第二大脑",
+        "Claude 通过 Projects 和 AGENTS.md 进一步统一工作上下文，社区认为这标志着编码范式的转变，同时第三方工具如 MCP 连接器扩展了其生态。"
+      ]
+    },
+    {
+      "h": "主题线 2 · Google 全面铺开 AI 代理与社会基础设施",
+      "bullets": [
+        "Google Labs 发布家庭 AI 代理 CC → Google AI 博客集中发布多项赋能全社会应用项目 → 联合国联手 Google 为 AI 代理准备全球数据",
+        "Google 从家庭代理到社会项目密集布局，并携手联合国准备全球数据，显露其将 AI 从工具推向基础设施的战略意图。"
+      ]
+    },
+    {
+      "h": "主题线 3 · AI 代理爆发：软件产量激增与体验摩擦并存",
+      "bullets": [
+        "Vercel CEO 预警软件生产大爆发，点名一次性软件与 AI 代理 → Aaron Levie 预测代理将占几乎所有推理 → Vercel 展示代理可调用 turbo 快速部署 → 用户抱怨 AI 代理使用繁琐：需截图口头讲解，残留进程难清理 → 开发者解构 AI 代理本质：无状态 LLM 加语境记忆循环 → Simon Willison 炮轰“LLM 无趣论”：无异于忽视侏罗纪公园的遗传学家",
+        "软件生产爆发与代理体验摩擦并存，行业领袖对代理未来既兴奋又担忧，用户抱怨使用繁琐，开发者则反思代理本质。"
+      ]
+    },
+    {
+      "h": "主题线 4 · 企业 AI 代理合规与落地加速：PACT 基准、成本指南与多场景用例",
+      "bullets": [
+        "PACT 基准发布，评估受监管场景下 AI 代理合规性 → Hex 基于 GPT-6 Astra 推出分析可视化代理 → OpenAI 发布 Sponsored Agents，集成 HubSpot 与 Shopify 广告 → 企业 AI 代理实用用例发布，金融流程监控与内部工作流自动化位列其中 → 2026 年 AI 代理构建成本指南发布，验证、防护与安全成为生产阶段重点 → 企业 AI 搜索指南发布，采用率取决于嵌入既有工具与界面灵活性 → Rebellions 与 ai& 合作在日本部署节能 AI 推理基础设施 → eCloudvalley 强调 AI 代理规模化需云治理与安全集成 → Appian 发布企业 AI 编排趋势分析，强调流程自动化与数据织构 → 多代理系统在营销自动化中的应用流程被总结推广 → TalentBridge 发布 AI 驱动招聘与人力管理 SaaS → Axelera AI 推出边缘 AI 推理产品 Europa，与 ASRock Industrial 合作加速部署 → Kanerika 发布 2026 年企业自动化工具对比报告 → Medium 文章提出软件价值将以任务完成度衡量",
+        "企业 AI 代理在合规、成本、部署、用例等方面全面铺开，PACT 基准为监管场景提供评估，各大厂商推出工具和指南，落地节奏加快。"
+      ]
+    },
+    {
+      "h": "主题线 5 · AI 代理支付基础设施：L1 区块链支持代理支付与结算",
+      "bullets": [
+        "构建了为代理设计的 L1 区块链，支持代理支付与结算",
+        "代理支付基础设施继续发展，L1 区块链为 AI 代理提供支付与结算能力，延续代理自融资趋势。"
+      ]
+    },
+    {
+      "h": "主题线 6 · 代理工具链持续爆发：基准、推理加速与专用 Git 涌现",
+      "bullets": [
+        "Qwen 发布 E-CommerceBench，模拟 AI 代理经营电商一年 → NVIDIA TensorRT Edge-LLM 在 Jetson 上实现边缘代理推理 6.4 倍加速 → Abacus AI 推出免费 AI 代理 → Ami AI GTM 代理在 LinkedIn 和 ProductHunt 上线 → Agentgit 发布：为 AI 代理设计的无账户 Git 主机 → Forcefield 发布：快速轻量本地优先的 AI 代理 harness → Keydris 发布：AI 代理的 Sudo 工具",
+        "代理工具链持续扩展，从电商基准、边缘推理加速到专用 Git 和权限工具，生态日益丰富。"
+      ]
+    },
+    {
+      "h": "零散信号",
+      "bullets": [
+        "论文提出潜意识提示的因果深度与多 token 混淆研究",
+        "多篇零散讨论标榜个人/特定产品对AI和LLM的立场（My Thoughts on AI and LLMs、Waterfox立场等），无实质互动或深度观点，暂不具备链入主线的条件。",
+        "Rebellions 与 ai& 合作将高能效 AI 推理部署至日本东京数据中心",
+        "BioPhys-Bridge生物物理跨学科推理基准与金融AI链路无关",
+        "多模态矛盾检测论文发布",
+        "论文提出无监督发现 LLM 激活中提示条件风格轴的方法",
+        "AI 代理构建成本与阶段指南（发现、原型、生产构建、验证）发布",
+        "学习诱导RNN动力学转变论文与金融AI链路无关",
+        "潜意识提示超越静态几何论文发布",
+        "论文分析用户对生成式 AI 的信任与摩擦，基于应用商店评论"
+      ]
+    }
+  ],
+  "ev": [
+    {
+      "who": "web",
+      "en": "https://x.com/claudeai/status/2100632684074549309",
+      "zh": "https://x.com/claudeai/status/2100632684074549309",
+      "url": "https://x.com/claudeai/status/2100632684074549309",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/claudeai/status/2100632688625348890",
+      "zh": "https://x.com/claudeai/status/2100632688625348890",
+      "url": "https://x.com/claudeai/status/2100632688625348890",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://simonwillison.net/2026/Sep/18/thariq-shihipar/",
+      "zh": "https://simonwillison.net/2026/Sep/18/thariq-shihipar/",
+      "url": "https://simonwillison.net/2026/Sep/18/thariq-shihipar/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/bcherny/status/2100669598995816511",
+      "zh": "https://x.com/bcherny/status/2100669598995816511",
+      "url": "https://x.com/bcherny/status/2100669598995816511",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/trq212/status/2100638355872706571",
+      "zh": "https://x.com/trq212/status/2100638355872706571",
+      "url": "https://x.com/trq212/status/2100638355872706571",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/_catwu/status/2100641163120423057",
+      "zh": "https://x.com/_catwu/status/2100641163120423057",
+      "url": "https://x.com/_catwu/status/2100641163120423057",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/attractorgenie/status/2100679056194691545",
+      "zh": "https://x.com/attractorgenie/status/2100679056194691545",
+      "url": "https://x.com/attractorgenie/status/2100679056194691545",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/googlelabs/status/2100653821907366366",
+      "zh": "https://x.com/googlelabs/status/2100653821907366366",
+      "url": "https://x.com/googlelabs/status/2100653821907366366",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arstechnica.com/google/2026/09/google-announces-new-experimental-cc-ai-agent-for-families",
+      "zh": "https://arstechnica.com/google/2026/09/google-announces-new-experimental-cc-ai-agent-for-families",
+      "url": "https://arstechnica.com/google/2026/09/google-announces-new-experimental-cc-ai-agent-for-families",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://blog.google/innovation-and-ai/technology/ai/expanding-ai-economy-research-bench/",
+      "zh": "https://blog.google/innovation-and-ai/technology/ai/expanding-ai-economy-research-bench/",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/expanding-ai-economy-research-bench/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://blog.google/innovation-and-ai/technology/ai/google-flow-fashion-week/",
+      "zh": "https://blog.google/innovation-and-ai/technology/ai/google-flow-fashion-week/",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-flow-fashion-week/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life",
+      "zh": "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life",
+      "url": "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://blog.google/innovation-and-ai/technology/ai/ai-applications-science-people/",
+      "zh": "https://blog.google/innovation-and-ai/technology/ai/ai-applications-science-people/",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/ai-applications-science-people/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://blog.google/innovation-and-ai/technology/ai/ai-for-every-language/",
+      "zh": "https://blog.google/innovation-and-ai/technology/ai/ai-for-every-language/",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/ai-for-every-language/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://blog.google/innovation-and-ai/technology/ai/ai-for-societal-impact/",
+      "zh": "https://blog.google/innovation-and-ai/technology/ai/ai-for-societal-impact/",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/ai-for-societal-impact/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://techcrunch.com/2026/09/17/un-turns-to-google-to-make-its-global-data-ready-for-ai-agents",
+      "zh": "https://techcrunch.com/2026/09/17/un-turns-to-google-to-make-its-global-data-ready-for-ai-agents",
+      "url": "https://techcrunch.com/2026/09/17/un-turns-to-google-to-make-its-global-data-ready-for-ai-agents",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/rauchg/status/2100698591417499972",
+      "zh": "https://x.com/rauchg/status/2100698591417499972",
+      "url": "https://x.com/rauchg/status/2100698591417499972",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/levie/status/2100799668573946191",
+      "zh": "https://x.com/levie/status/2100799668573946191",
+      "url": "https://x.com/levie/status/2100799668573946191",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/rauchg/status/2100682030170489160",
+      "zh": "https://x.com/rauchg/status/2100682030170489160",
+      "url": "https://x.com/rauchg/status/2100682030170489160",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://news.ycombinator.com/item?id=49759108",
+      "zh": "https://news.ycombinator.com/item?id=49759108",
+      "url": "https://news.ycombinator.com/item?id=49759108",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://9to5mac.com/2026/06/09/macos-27-golden-gate-makes-it-clear-when-apps-are-sneakily-running-in-background",
+      "zh": "https://9to5mac.com/2026/06/09/macos-27-golden-gate-makes-it-clear-when-apps-are-sneakily-running-in-background",
+      "url": "https://9to5mac.com/2026/06/09/macos-27-golden-gate-makes-it-clear-when-apps-are-sneakily-running-in-background",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/AnotherEddy1/status/2100830588081156392",
+      "zh": "https://x.com/AnotherEddy1/status/2100830588081156392",
+      "url": "https://x.com/AnotherEddy1/status/2100830588081156392",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://simonwillison.net/2026/Sep/18/probably-gonna-eat-you/",
+      "zh": "https://simonwillison.net/2026/Sep/18/probably-gonna-eat-you/",
+      "url": "https://simonwillison.net/2026/Sep/18/probably-gonna-eat-you/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/AIHorizonBlog/status/2100789407963918662",
+      "zh": "https://x.com/AIHorizonBlog/status/2100789407963918662",
+      "url": "https://x.com/AIHorizonBlog/status/2100789407963918662",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://openai.com/index/hex-gpt-6-astra",
+      "zh": "https://openai.com/index/hex-gpt-6-astra",
+      "url": "https://openai.com/index/hex-gpt-6-astra",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://openai.com/index/reimagining-advertising-with-ai",
+      "zh": "https://openai.com/index/reimagining-advertising-with-ai",
+      "url": "https://openai.com/index/reimagining-advertising-with-ai",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.markupdesigns.com/blog/enterprise-ai-agents-use-cases",
+      "zh": "https://www.markupdesigns.com/blog/enterprise-ai-agents-use-cases",
+      "url": "https://www.markupdesigns.com/blog/enterprise-ai-agents-use-cases",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://jetruby.com/blog/ai-agent-development-cost",
+      "zh": "https://jetruby.com/blog/ai-agent-development-cost",
+      "url": "https://jetruby.com/blog/ai-agent-development-cost",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.gosearch.ai/blog/ai-enterprise-search-guide",
+      "zh": "https://www.gosearch.ai/blog/ai-enterprise-search-guide",
+      "url": "https://www.gosearch.ai/blog/ai-enterprise-search-guide",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.hpcwire.com/off-the-wire/rebellions-and-ai-partner-to-bring-energy-efficient-ai-inference-infrastructure-to-japan",
+      "zh": "https://www.hpcwire.com/off-the-wire/rebellions-and-ai-partner-to-bring-energy-efficient-ai-inference-infrastructure-to-japan",
+      "url": "https://www.hpcwire.com/off-the-wire/rebellions-and-ai-partner-to-bring-energy-efficient-ai-inference-infrastructure-to-japan",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.facebook.com/ecloudvalley/posts/from-ai-proof-of-concept-to-production-enterprises-are-entering-the-next-phase-o/1692514816215767",
+      "zh": "https://www.facebook.com/ecloudvalley/posts/from-ai-proof-of-concept-to-production-enterprises-are-entering-the-next-phase-o/1692514816215767",
+      "url": "https://www.facebook.com/ecloudvalley/posts/from-ai-proof-of-concept-to-production-enterprises-are-entering-the-next-phase-o/1692514816215767",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://appian.com/learn/topics/enterprise-ai/ai-orchestration",
+      "zh": "https://appian.com/learn/topics/enterprise-ai/ai-orchestration",
+      "url": "https://appian.com/learn/topics/enterprise-ai/ai-orchestration",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://innofeaturelabs.com/multi-agent-systems-business-workflows",
+      "zh": "https://innofeaturelabs.com/multi-agent-systems-business-workflows",
+      "url": "https://innofeaturelabs.com/multi-agent-systems-business-workflows",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.streetinsider.com/Globe+Newswire/TalentBridge+Launches+New+Workforce-Focused+SaaS+Organization%2C+TalentBridge+One/27066014.html",
+      "zh": "https://www.streetinsider.com/Globe+Newswire/TalentBridge+Launches+New+Workforce-Focused+SaaS+Organization%2C+TalentBridge+One/27066014.html",
+      "url": "https://www.streetinsider.com/Globe+Newswire/TalentBridge+Launches+New+Workforce-Focused+SaaS+Organization%2C+TalentBridge+One/27066014.html",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://axelera.ai/news/axelera-ai-launches-europa-delivers-physical-and-enterprise-ai-through-growing-partner-ecosystem-including-dell-and-supermicro",
+      "zh": "https://axelera.ai/news/axelera-ai-launches-europa-delivers-physical-and-enterprise-ai-through-growing-partner-ecosystem-including-dell-and-supermicro",
+      "url": "https://axelera.ai/news/axelera-ai-launches-europa-delivers-physical-and-enterprise-ai-through-growing-partner-ecosystem-including-dell-and-supermicro",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://kanerika.com/blogs/enterprise-automation",
+      "zh": "https://kanerika.com/blogs/enterprise-automation",
+      "url": "https://kanerika.com/blogs/enterprise-automation",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://medium.com/@huanzidage/ai-agents-are-taking-over-workflows-insights-from-12-top-global-podcast-conversations-904744bcbb35",
+      "zh": "https://medium.com/@huanzidage/ai-agents-are-taking-over-workflows-insights-from-12-top-global-podcast-conversations-904744bcbb35",
+      "url": "https://medium.com/@huanzidage/ai-agents-are-taking-over-workflows-insights-from-12-top-global-podcast-conversations-904744bcbb35",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/daniyell007/status/2101050246767743417",
+      "zh": "https://x.com/daniyell007/status/2101050246767743417",
+      "url": "https://x.com/daniyell007/status/2101050246767743417",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/vicky_grok/status/2100578125533052939",
+      "zh": "https://x.com/vicky_grok/status/2100578125533052939",
+      "url": "https://x.com/vicky_grok/status/2100578125533052939",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/i17s_inc/status/2100767488275578901",
+      "zh": "https://x.com/i17s_inc/status/2100767488275578901",
+      "url": "https://x.com/i17s_inc/status/2100767488275578901",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/RiadMd46702/status/2100797605550915728",
+      "zh": "https://x.com/RiadMd46702/status/2100797605550915728",
+      "url": "https://x.com/RiadMd46702/status/2100797605550915728",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/yz_aisdr/status/2100858100978733280",
+      "zh": "https://x.com/yz_aisdr/status/2100858100978733280",
+      "url": "https://x.com/yz_aisdr/status/2100858100978733280",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://agentgit.co/",
+      "zh": "https://agentgit.co/",
+      "url": "https://agentgit.co/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://github.com/fabledruns/forcefield",
+      "zh": "https://github.com/fabledruns/forcefield",
+      "url": "https://github.com/fabledruns/forcefield",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.youtube.com/watch?v=Ouqwx7-gGYw",
+      "zh": "https://www.youtube.com/watch?v=Ouqwx7-gGYw",
+      "url": "https://www.youtube.com/watch?v=Ouqwx7-gGYw",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/nikunj/status/2100714665571737885",
+      "zh": "https://x.com/nikunj/status/2100714665571737885",
+      "url": "https://x.com/nikunj/status/2100714665571737885",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://simonwillison.net/2026/Sep/18/gemini-hacked-three-companies/",
+      "zh": "https://simonwillison.net/2026/Sep/18/gemini-hacked-three-companies/",
+      "url": "https://simonwillison.net/2026/Sep/18/gemini-hacked-three-companies/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/arkyyang/status/2100938306070761594",
+      "zh": "https://x.com/arkyyang/status/2100938306070761594",
+      "url": "https://x.com/arkyyang/status/2100938306070761594",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2609.19149",
+      "zh": "https://arxiv.org/abs/2609.19149",
+      "url": "https://arxiv.org/abs/2609.19149",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2609.19150",
+      "zh": "https://arxiv.org/abs/2609.19150",
+      "url": "https://arxiv.org/abs/2609.19150",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2609.19151",
+      "zh": "https://arxiv.org/abs/2609.19151",
+      "url": "https://arxiv.org/abs/2609.19151",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://news.ycombinator.com/item?id=49756902",
+      "zh": "https://news.ycombinator.com/item?id=49756902",
+      "url": "https://news.ycombinator.com/item?id=49756902",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.waterfox.com/blog/where-waterfox-stands-on-ai-llms",
+      "zh": "https://www.waterfox.com/blog/where-waterfox-stands-on-ai-llms",
+      "url": "https://www.waterfox.com/blog/where-waterfox-stands-on-ai-llms",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://news.ycombinator.com/item?id=49738100",
+      "zh": "https://news.ycombinator.com/item?id=49738100",
+      "url": "https://news.ycombinator.com/item?id=49738100",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://datacentremagazine.com/news/rebellions-ai-bringing-energy-efficient-ai-to-japan",
+      "zh": "https://datacentremagazine.com/news/rebellions-ai-bringing-energy-efficient-ai-to-japan",
+      "url": "https://datacentremagazine.com/news/rebellions-ai-bringing-energy-efficient-ai-to-japan",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://iternal.ai/ai-development-services",
+      "zh": "https://iternal.ai/ai-development-services",
+      "url": "https://iternal.ai/ai-development-services",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2609.19180",
+      "zh": "https://arxiv.org/abs/2609.19180",
+      "url": "https://arxiv.org/abs/2609.19180",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2609.19288",
+      "zh": "https://arxiv.org/abs/2609.19288",
+      "url": "https://arxiv.org/abs/2609.19288",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2609.19148",
+      "zh": "https://arxiv.org/abs/2609.19148",
+      "url": "https://arxiv.org/abs/2609.19148",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2609.19152",
+      "zh": "https://arxiv.org/abs/2609.19152",
+      "url": "https://arxiv.org/abs/2609.19152",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2609.19153",
+      "zh": "https://arxiv.org/abs/2609.19153",
+      "url": "https://arxiv.org/abs/2609.19153",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2609.19154",
+      "zh": "https://arxiv.org/abs/2609.19154",
+      "url": "https://arxiv.org/abs/2609.19154",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2609.19155",
+      "zh": "https://arxiv.org/abs/2609.19155",
+      "url": "https://arxiv.org/abs/2609.19155",
+      "pt": "自动聚合线索"
+    }
+  ],
+  "graphDelta": {
+    "entities": 38,
+    "events": 80,
+    "relations": 38,
+    "storylines": 6
+  }
+}
