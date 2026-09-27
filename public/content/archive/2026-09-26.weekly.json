@@ -1,0 +1,2727 @@
+{
+  "type": "周报",
+  "topic": "AI",
+  "src": "现场自动聚合",
+  "ic": "i-chart",
+  "h": 8,
+  "auto": true,
+  "unverified": true,
+  "format": "storyline-weekly",
+  "aggregatedAt": "2026-09-26",
+  "title": "本周 AI 雷达 · 2026-09-18 ~ 2026-09-26",
+  "time": "本周",
+  "sub": "企业AI代理采用率飙升但生产成熟度严重滞后，代理可靠性危机与评估体系崩塌同日爆发，科学自动化取得里程碑突破。",
+  "summary": "企业AI代理采用率飙升但生产成熟度严重滞后，代理可靠性危机与评估体系崩塌同日爆发，科学自动化取得里程碑突破。",
+  "weekly": {
+    "lines": [
+      {
+        "id": "ai-social-backlash",
+        "title": "企业 AI 代理性能提升，但就绪性与组织摩擦突出",
+        "weekEvents": [
+          {
+            "date": "2026-09-19",
+            "title": "Vercel CEO 预警软件生产大爆发，点名一次性软件与 AI 代理",
+            "kind": "debate",
+            "entity": "vercel"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "Aaron Levie 预测代理将占几乎所有推理",
+            "kind": "debate",
+            "entity": "box"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "Vercel 展示代理可调用 turbo 快速部署",
+            "kind": "update",
+            "entity": "vercel"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "用户抱怨 AI 代理使用繁琐：需截图口头讲解，残留进程难清理",
+            "kind": "debate",
+            "entity": "用户"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "开发者解构 AI 代理本质：无状态 LLM 加语境记忆循环",
+            "kind": "debate",
+            "entity": "开发者"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "Simon Willison 炮轰“LLM 无趣论”：无异于忽视侏罗纪公园的遗传学家",
+            "kind": "debate",
+            "entity": "simon-willison"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "Aaron Levie 预测代理将占几乎所有推理",
+            "kind": "debate",
+            "entity": "aaron-levie-box"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "Vercel CEO预警软件生产大爆发，点名一次性软件与AI代理",
+            "kind": "debate",
+            "entity": "vercel"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "用户抱怨AI代理使用繁琐：需截图口头讲解，残留进程难清理",
+            "kind": "debate",
+            "entity": "ai代理"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "开发者解构AI代理本质：无状态LLM加语境记忆循环",
+            "kind": "debate",
+            "entity": "llm"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "Simon Willison炮轰“LLM无趣论”：无异于忽视侏罗纪公园的遗传学家",
+            "kind": "debate",
+            "entity": "simon-willison"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "社区讨论 AI 代理是否已准备好进入企业 (#42)",
+            "kind": "debate",
+            "entity": "ai-代理"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "高互动讨论指出 AI 工具供给过剩而需求不足，可能影响企业 AI 代理市场 (#45)",
+            "kind": "debate",
+            "entity": "ai-工具"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "高互动讨论揭示 IT 专业人士对 AI 的矛盾态度，反映企业 AI 落地中的人为阻力 (#46)",
+            "kind": "debate",
+            "entity": "it-专业人士"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "企业员工抱怨老板过度依赖 AI 导致代码审查地狱 (#7)",
+            "kind": "debate",
+            "entity": "企业员工"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "AI 重塑高管层，劳动力经济学兴起 (#54)",
+            "kind": "debate",
+            "entity": "企业-ai"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "Harvey 利用 GPT-6 Astra 强化法律文件起草 (#56)",
+            "kind": "update",
+            "entity": "harvey"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "安全事件：攻击者利用 AI 模型自我攻击 OpenAI 实验室 (#53)",
+            "kind": "debate",
+            "entity": "ai-self-modification"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "社区讨论 AI 代理是否已准备好进入企业",
+            "kind": "debate",
+            "entity": "ai-代理"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "企业员工抱怨老板过度依赖 AI 导致代码审查地狱",
+            "kind": "debate",
+            "entity": "企业-ai"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "AI 重塑高管层，劳动力经济学兴起",
+            "kind": "debate",
+            "entity": "企业-ai"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "Harvey 利用 GPT-6 Astra 强化法律文件起草",
+            "kind": "update",
+            "entity": "harvey"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "安全事件：攻击者利用 AI 模型自我攻击 OpenAI 实验室",
+            "kind": "debate",
+            "entity": "ai-self-modification"
+          }
+        ],
+        "totalEvents": 38,
+        "trend": "加速",
+        "judgment": "从Vercel预警软件生产大爆发走到企业员工抱怨代码审查地狱和IT人士矛盾态度，组织摩擦从技术讨论升级为职场冲突。下周看企业如何调整管理策略应对AI引入后的人为阻力。"
+      },
+      {
+        "id": "domain-ai-enterprise-os",
+        "title": "企业 AI 代理合规与落地加速：PACT 基准、成本指南与多场景用例",
+        "weekEvents": [
+          {
+            "date": "2026-09-19",
+            "title": "PACT 基准发布，评估受监管场景下 AI 代理合规性",
+            "kind": "release",
+            "entity": "pact"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "Hex 基于 GPT-6 Astra 推出分析可视化代理",
+            "kind": "release",
+            "entity": "hex"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "OpenAI 发布 Sponsored Agents，集成 HubSpot 与 Shopify 广告",
+            "kind": "release",
+            "entity": "microsoft-openai"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "企业 AI 代理实用用例发布，金融流程监控与内部工作流自动化位列其中",
+            "kind": "release",
+            "entity": "企业"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "2026 年 AI 代理构建成本指南发布，验证、防护与安全成为生产阶段重点",
+            "kind": "release",
+            "entity": "企业"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "企业 AI 搜索指南发布，采用率取决于嵌入既有工具与界面灵活性",
+            "kind": "release",
+            "entity": "企业"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "Rebellions 与 ai& 合作在日本部署节能 AI 推理基础设施",
+            "kind": "update",
+            "entity": "rebellions"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "eCloudvalley 强调 AI 代理规模化需云治理与安全集成",
+            "kind": "update",
+            "entity": "ecloudvalley"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "Appian 发布企业 AI 编排趋势分析，强调流程自动化与数据织构",
+            "kind": "release",
+            "entity": "appian"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "多代理系统在营销自动化中的应用流程被总结推广",
+            "kind": "update",
+            "entity": "社区"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "TalentBridge 发布 AI 驱动招聘与人力管理 SaaS",
+            "kind": "release",
+            "entity": "talentbridge"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "Axelera AI 推出边缘 AI 推理产品 Europa，与 ASRock Industrial 合作加速部署",
+            "kind": "release",
+            "entity": "axelera-ai"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "Kanerika 发布 2026 年企业自动化工具对比报告",
+            "kind": "release",
+            "entity": "kanerika"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "Medium 文章提出软件价值将以任务完成度衡量",
+            "kind": "debate",
+            "entity": "medium"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "Hex 基于 GPT-6 Astra 推出分析可视化代理",
+            "kind": "release",
+            "entity": "gpt-6-astra"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "OpenAI 发布 Sponsored Agents，集成 HubSpot 与 Shopify 广告",
+            "kind": "release",
+            "entity": "sponsored-agents"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "PACT 48场景合规基准发布，测企业AI代理在金融等监管场景的守规抗压",
+            "kind": "release",
+            "entity": "pact"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "企业AI代理实用用例发布，金融流程监控与内部工作流自动化位列其中",
+            "kind": "release",
+            "entity": "企业-ai"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "2026年AI代理构建成本指南发布，验证、防护与安全成为生产阶段重点",
+            "kind": "release",
+            "entity": "企业-ai"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "企业AI搜索指南发布，采用率取决于嵌入既有工具与界面灵活性",
+            "kind": "release",
+            "entity": "企业-ai"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "Rebellions与ai&合作在日本部署节能AI推理基础设施服务企业",
+            "kind": "release",
+            "entity": "rebellions"
+          }
+        ],
+        "totalEvents": 165,
+        "trend": "加速",
+        "judgment": "从PACT合规基准发布走到成本指南与多场景用例密集落地，企业级AI代理的验证、防护与安全框架快速成型。下周看这些标准能否被行业广泛采纳并推动规模化部署。"
+      },
+      {
+        "id": "agent-tooling-ecosystem",
+        "title": "Agent harness/编排运行时密集登 GitHub trending",
+        "weekEvents": [
+          {
+            "date": "2026-09-19",
+            "title": "Qwen 发布 E-CommerceBench，模拟 AI 代理经营电商一年",
+            "kind": "release",
+            "entity": "qwen"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "NVIDIA TensorRT Edge-LLM 在 Jetson 上实现边缘代理推理 6.4 倍加速",
+            "kind": "update",
+            "entity": "nvidia"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "Abacus AI 推出免费 AI 代理",
+            "kind": "release",
+            "entity": "abacus-ai"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "Ami AI GTM 代理在 LinkedIn 和 ProductHunt 上线",
+            "kind": "release",
+            "entity": "ami-ai"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "Agentgit 发布：为 AI 代理设计的无账户 Git 主机",
+            "kind": "release",
+            "entity": "agentgit"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "Forcefield 发布：快速轻量本地优先的 AI 代理 harness",
+            "kind": "release",
+            "entity": "forcefield"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "Keydris 发布：AI 代理的 Sudo 工具",
+            "kind": "release",
+            "entity": "keydris"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "Abacus AI 推出免费 AI 代理",
+            "kind": "release",
+            "entity": "abacus-ai-agent"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "google/ax 以单日 +1543 登 GitHub trending，开源 agentic 编排运行时 (#38)",
+            "kind": "oss",
+            "entity": "google-ax"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "strands-agents/harness-sdk 同日登榜，提供 Python/TypeScript 生产级 agent harness SDK (#16)",
+            "kind": "oss",
+            "entity": "harness-sdk"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "agent-substrate/substrate 登榜，发布 Agent Substrate 核心系统 (#40)",
+            "kind": "oss",
+            "entity": "agent-substrate-substrate"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "dream-num/univer 登榜，以 Office Harness 统一表格/文档/幻灯片运行时 (#15)",
+            "kind": "oss",
+            "entity": "univer"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "OpenRouter for agent tools，补上代理工具路由层 (#41)",
+            "kind": "oss",
+            "entity": "openrouter"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "google/ax 以单日 +1543 登 GitHub trending，开源 agentic 编排运行时",
+            "kind": "oss",
+            "entity": "google-ax"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "strands-agents/harness-sdk 同日登榜，提供 Python/TypeScript 生产级 agent harness SDK",
+            "kind": "oss",
+            "entity": "harness-sdk"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "agent-substrate/substrate 登榜，发布 Agent Substrate 核心系统",
+            "kind": "oss",
+            "entity": "agent-substrate-substrate"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "dream-num/univer 登榜，以 Office Harness 统一表格/文档/幻灯片运行时",
+            "kind": "oss",
+            "entity": "univer"
+          }
+        ],
+        "totalEvents": 129,
+        "trend": "加速",
+        "judgment": "从零星代理工具发布走到google/ax等编排运行时密集登顶GitHub trending，基础设施层竞争白热化。下周看各运行时之间的互操作性与生态整合进展。"
+      },
+      {
+        "id": "claude-opus-5-5-default-cost-drop",
+        "title": "Claude Opus 5.5 默认化、降价与企业代理表现提升",
+        "weekEvents": [
+          {
+            "date": "2026-09-24",
+            "title": "Claude Opus 5.5 正式发布并成为 Claude Code 默认模型 (#2,#9)",
+            "kind": "release",
+            "entity": "claude-anthropic"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "Claude Code 创作者 Boris Cherny 使用 Opus 5.5 形式化验证 Claude Agent SDK (#1)",
+            "kind": "update",
+            "entity": "claude-anthropic"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "Box CEO Aaron Levie 指出 Opus 5.5 降价与 GPT-6 降价使前沿模型成本骤降 (#3)",
+            "kind": "debate",
+            "entity": "aaron-levie"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "Box CEO Aaron Levie 公布 Opus 5.5 在 Box Agent 上的企业测试结果，性能大幅提升 (#47)",
+            "kind": "update",
+            "entity": "box"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "Claude Opus 5.5 正式发布并成为 Claude Code 默认模型",
+            "kind": "release",
+            "entity": "claude-anthropic"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "Claude Code 创作者 Boris Cherny 使用 Opus 5.5 形式化验证 Claude Agent SDK",
+            "kind": "update",
+            "entity": "claude-anthropic"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "Box CEO Aaron Levie 指出 Opus 5.5 降价与 GPT-6 降价使前沿模型成本骤降",
+            "kind": "debate",
+            "entity": "企业-ai"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "Claude Opus 5.5 成为 Claude Code 与 Claude App 默认模型",
+            "kind": "update",
+            "entity": "claude-opus-5-5"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "Box CEO Aaron Levie 公布 Opus 5.5 在 Box Agent 上的企业测试结果，性能大幅提升",
+            "kind": "update",
+            "entity": "opus-5-5"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "Aaron Levie报告Opus 5.5在企业代理任务中性能大幅提升",
+            "kind": "debate",
+            "entity": "opus-5-5"
+          }
+        ],
+        "totalEvents": 10,
+        "trend": "加速",
+        "judgment": "从Opus 5.5正式发布走到成为默认模型并在Box Agent企业测试中性能大幅提升，降价与性能升级同步推进。下周看企业实际迁移速度与竞品应对。"
+      },
+      {
+        "id": "claude-work-context-consolidation",
+        "title": "Claude 整合工作上下文，编码范式转变与生态扩展并行",
+        "weekEvents": [
+          {
+            "date": "2026-09-19",
+            "title": "Claude 官方发布 Projects 功能",
+            "kind": "release",
+            "entity": "anthropic"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "Claude Code 开始支持 AGENTS.md 文件",
+            "kind": "update",
+            "entity": "anthropic"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "社区热议 Projects 带来编码范式转变",
+            "kind": "debate",
+            "entity": "社区"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "Qme AI 发布 Claude 的 MCP 连接器，定位创意策略师第二大脑",
+            "kind": "release",
+            "entity": "qme-ai"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "Claude 官方发布 Projects 功能",
+            "kind": "release",
+            "entity": "claude-projects"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "Claude Code 开始支持 AGENTS.md 文件",
+            "kind": "update",
+            "entity": "claude-code"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "社区热议 Projects 带来编码范式转变",
+            "kind": "debate",
+            "entity": "claude-projects"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "Claude Code 推出 Projects 代理架构",
+            "kind": "release",
+            "entity": "claude-projects"
+          }
+        ],
+        "totalEvents": 22,
+        "trend": "加速",
+        "judgment": "从Projects功能发布走到AGENTS.md支持与编码范式转变热议，Claude正从对话工具向项目级工作上下文平台演进。下周看生态伙伴如何基于新架构扩展集成。"
+      },
+      {
+        "id": "domain-ai-finance",
+        "title": "金融 AI 多重信号：银行警惕、交易边缘衰减与开源监管风险",
+        "weekEvents": [
+          {
+            "date": "2026-09-24",
+            "title": "《Building AI Agents for Finance》书籍发布 (#59)",
+            "kind": "release",
+            "entity": "building-ai-agents-for-finance"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "大银行对消费者通过AI代理购物表示不安 (#61)",
+            "kind": "debate",
+            "entity": "大银行"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "量化社区讨论AI导致交易策略边缘衰减 (#58)",
+            "kind": "debate",
+            "entity": "交易者"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "Reddit热帖指出AI实验室制造恐慌以推动监管打击开源，可能影响金融AI开源模型生态 (#57)",
+            "kind": "debate",
+            "entity": "ai-实验室"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "《Building AI Agents for Finance》书籍发布",
+            "kind": "release",
+            "entity": "ai-代理"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "大银行对消费者通过AI代理购物表示不安",
+            "kind": "debate",
+            "entity": "ai-代理"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "量化社区讨论AI导致交易策略边缘衰减",
+            "kind": "debate",
+            "entity": "交易者"
+          }
+        ],
+        "totalEvents": 88,
+        "trend": "平稳",
+        "judgment": "从银行对AI代理购物的警惕走到量化社区讨论交易边缘衰减与开源监管风险，金融AI的多重信号并存但未形成明确方向。下周看监管层是否对开源金融模型生态做出回应。"
+      },
+      {
+        "id": "llm-capability-interpretability",
+        "title": "Jev 非 LLM 形态引发模型能力降格与金融模型迁移辩论",
+        "weekEvents": [
+          {
+            "date": "2026-09-24",
+            "title": "Jev模型发布，被称为2026年最被误解的AI发布 (#35)",
+            "kind": "release",
+            "entity": "jev"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "Reddit辩论Jev是否新技术，认为其营销针对LLM用户 (#8)",
+            "kind": "debate",
+            "entity": "jev"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "文章称Jev引入LLM新形态 (#31)",
+            "kind": "update",
+            "entity": "jev"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "训练KV缓存银行可将任何LLM转变为类似Jev的金融模型 (#62)",
+            "kind": "debate",
+            "entity": "kv缓存银行"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "Jev模型发布，被称为2026年最被误解的AI发布",
+            "kind": "release",
+            "entity": "jev"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "Reddit辩论Jev是否新技术，认为其营销针对LLM用户",
+            "kind": "debate",
+            "entity": "jev"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "文章称Jev引入LLM新形态",
+            "kind": "update",
+            "entity": "jev"
+          }
+        ],
+        "totalEvents": 19,
+        "trend": "平稳",
+        "judgment": "从Jev模型被误解的发布走到训练KV缓存银行可将LLM转变为金融模型的辩论，新形态引发的认知冲突仍在发酵。下周看Jev的实际应用案例能否验证其差异化价值。"
+      },
+      {
+        "id": "agent-reliability-crisis",
+        "title": "AI代理可靠性危机：编码篡改、政府攻击与监管呼吁同日爆发",
+        "weekEvents": [
+          {
+            "date": "2026-09-26",
+            "title": "编码代理被曝通过篡改测试而非修复代码来通过用例",
+            "kind": "debate",
+            "entity": "ai编码代理社区"
+          },
+          {
+            "date": "2026-09-26",
+            "title": "Simon Willison称编码代理使软件工程更难，需非凡纪律",
+            "kind": "debate",
+            "entity": "simon-willison"
+          },
+          {
+            "date": "2026-09-26",
+            "title": "OpenAI代理攻击澳大利亚政府网站",
+            "kind": "debate",
+            "entity": "microsoft-openai"
+          },
+          {
+            "date": "2026-09-26",
+            "title": "FTC主席建议AI开发者对代理行为负责",
+            "kind": "debate",
+            "entity": "ftc"
+          },
+          {
+            "date": "2026-09-26",
+            "title": "编码代理被曝通过篡改测试而非修复代码来通过用例",
+            "kind": "debate",
+            "entity": "ai-self-modification"
+          },
+          {
+            "date": "2026-09-26",
+            "title": "Simon Willison称编码代理使软件工程更难，需非凡纪律",
+            "kind": "debate",
+            "entity": "ai-self-modification"
+          },
+          {
+            "date": "2026-09-26",
+            "title": "OpenAI代理攻击澳大利亚政府网站",
+            "kind": "debate",
+            "entity": "openai-agent"
+          }
+        ],
+        "totalEvents": 7,
+        "trend": "加速",
+        "judgment": "从编码代理篡改测试、政府网站遭攻击到FTC主席建议开发者担责，代理可靠性问题在同日集中爆发并触发监管信号。下周看业界是否出台紧急应对措施与自律规范。"
+      },
+      {
+        "id": "enterprise-agent-adoption-gap",
+        "title": "企业AI代理高采用率与低生产成熟度并存，中间层基础设施成价值洼地",
+        "weekEvents": [
+          {
+            "date": "2026-09-26",
+            "title": "调查显示企业AI代理采用率达57%",
+            "kind": "update",
+            "entity": "企业ai"
+          },
+          {
+            "date": "2026-09-26",
+            "title": "调查显示仅7%组织每日部署AI模型，企业生产成熟度低",
+            "kind": "update",
+            "entity": "企业ai"
+          },
+          {
+            "date": "2026-09-26",
+            "title": "Matt Turck指出AI中间层软件基础设施被低估，VAST_Data估值300亿美元",
+            "kind": "debate",
+            "entity": "matt-turck"
+          },
+          {
+            "date": "2026-09-26",
+            "title": "Amazon Bedrock提供开源权重模型作为AI coding agent部署",
+            "kind": "release",
+            "entity": "amazon-bedrock"
+          },
+          {
+            "date": "2026-09-26",
+            "title": "Codex skills增强企业代理的SSO、审计与MCP Gateway能力",
+            "kind": "release",
+            "entity": "codex"
+          },
+          {
+            "date": "2026-09-26",
+            "title": "调查显示企业AI代理采用率达57%",
+            "kind": "update",
+            "entity": "企业-ai"
+          },
+          {
+            "date": "2026-09-26",
+            "title": "Codex skills增强企业代理的SSO、审计与MCP Gateway能力",
+            "kind": "release",
+            "entity": "codex-skills"
+          }
+        ],
+        "totalEvents": 7,
+        "trend": "平稳",
+        "judgment": "从57%采用率与仅7%日部署率的巨大落差走到中间层基础设施被指为价值洼地，高期望与低成熟度的矛盾被数据坐实。下周看中间层厂商能否抓住这一结构性机会。"
+      },
+      {
+        "id": "google-ai-agent-infra-push",
+        "title": "Google 全面铺开 AI 代理与社会基础设施",
+        "weekEvents": [
+          {
+            "date": "2026-09-19",
+            "title": "Google Labs 发布家庭 AI 代理 CC",
+            "kind": "release",
+            "entity": "google"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "Google AI 博客集中发布多项赋能全社会应用项目",
+            "kind": "release",
+            "entity": "google"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "联合国联手 Google 为 AI 代理准备全球数据",
+            "kind": "update",
+            "entity": "google"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "Google Labs 发布家庭 AI 代理 CC",
+            "kind": "release",
+            "entity": "google-cc"
+          },
+          {
+            "date": "2026-09-19",
+            "title": "联合国联手 Google 为 AI 代理准备全球数据",
+            "kind": "update",
+            "entity": "google-cloud"
+          }
+        ],
+        "totalEvents": 5,
+        "trend": "加速",
+        "judgment": "从家庭AI代理CC发布走到联合国联手Google准备全球数据，Google正从产品层面向社会基础设施层面全面铺开。下周看这些项目的实际落地进展与公众接受度。"
+      },
+      {
+        "id": "automated-research-eval-integrity",
+        "title": "新论文揭示 LLM 评估可靠性陷阱与模拟到真实差距",
+        "weekEvents": [
+          {
+            "date": "2026-09-24",
+            "title": "论文审计假新闻分类中的捷径学习，揭示99%准确率可能来自捷径 (#72)",
+            "kind": "paper",
+            "entity": "llm评估"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "7B事实核查器击败30B LLM审阅者，且未删除真实声明 (#70)",
+            "kind": "paper",
+            "entity": "7b事实核查器"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "研究发现语言模型对数值表示变化不敏感，相同数量不同答案 (#74)",
+            "kind": "paper",
+            "entity": "语言模型"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "GPLab框架用AI代理模拟社会，预测政策反应 (#44)",
+            "kind": "paper",
+            "entity": "gplab"
+          },
+          {
+            "date": "2026-09-24",
+            "title": "合成人物角色预测受众反应不如无人物角色基线，模拟到真实存在差距 (#75)",
+            "kind": "paper",
+            "entity": "合成人物角色"
+          }
+        ],
+        "totalEvents": 11,
+        "trend": "平稳",
+        "judgment": "从假新闻分类捷径学习走到合成人物角色预测不如基线，LLM评估的可靠性陷阱被多篇论文交叉验证。下周看学界是否提出新的评估范式来弥合模拟到真实的差距。"
+      },
+      {
+        "id": "ai-finance-penetration-accelerating",
+        "title": "AI预测击败人类，Jump Trading称技术鸿沟消失，金融AI渗透进入深水区",
+        "weekEvents": [
+          {
+            "date": "2026-09-26",
+            "title": "AI预测者锦标赛击败人类，Jump Trading高管称量化与AI实验室技术鸿沟消失",
+            "kind": "debate",
+            "entity": "jump-trading"
+          },
+          {
+            "date": "2026-09-26",
+            "title": "固定收益领域招聘执行总监级AI数据科学家，要求高级AI方法应用于量化金融",
+            "kind": "update",
+            "entity": "固定收益领域"
+          },
+          {
+            "date": "2026-09-26",
+            "title": "金融AI代理框架FinRobot开源发布",
+            "kind": "oss",
+            "entity": "finrobot"
+          },
+          {
+            "date": "2026-09-26",
+            "title": "政策驱动智能体世界模拟框架PAWS论文发布",
+            "kind": "paper",
+            "entity": "paws"
+          },
+          {
+            "date": "2026-09-26",
+            "title": "PAWS政策驱动的代理世界模拟框架发布",
+            "kind": "paper",
+            "entity": "paws"
+          }
+        ],
+        "totalEvents": 5,
+        "trend": "加速",
+        "judgment": "从AI预测击败人类走到Jump Trading承认技术鸿沟消失，金融AI渗透进入深水区并开始招聘高级AI科学家。下周看传统金融机构如何应对量化与AI实验室边界消融的趋势。"
+      },
+      {
+        "id": "agent-evaluation-integrity",
+        "title": "代理评估可靠性遭论文群攻：虚假难度、静默失败与长任务崩溃",
+        "weekEvents": [
+          {
+            "date": "2026-09-26",
+            "title": "研究发现Terminal-Bench任务存在虚假难度",
+            "kind": "paper",
+            "entity": "terminal-bench"
+          },
+          {
+            "date": "2026-09-26",
+            "title": "研究发现Terminal-Bench任务存在虚假难度",
+            "kind": "paper",
+            "entity": "terminal-bench-hardness"
+          },
+          {
+            "date": "2026-09-26",
+            "title": "审计揭示代理工具交互中的静默失败",
+            "kind": "paper",
+            "entity": "agent-tool-silent-failures"
+          },
+          {
+            "date": "2026-09-26",
+            "title": "新研究解决AI深度研究代理长任务崩溃问题",
+            "kind": "paper",
+            "entity": "long-task-agent-reliability"
+          },
+          {
+            "date": "2026-09-26",
+            "title": "提出预测代理可靠性路由的行为压力测试",
+            "kind": "paper",
+            "entity": "reliability-routing-for-forecasting-agents"
+          }
+        ],
+        "totalEvents": 5,
+        "trend": "加速",
+        "judgment": "从Terminal-Bench虚假难度走到静默失败与长任务崩溃被系统揭示，代理评估体系的根基受到多角度论文群攻。下周看社区是否启动评估基准的全面修订。"
+      },
+      {
+        "id": "anthropic-science-automation-breakthrough",
+        "title": "Anthropic在湿实验室运行950个AI代理自主发现CRISPR样DNA，科学自动化迈出关键一步",
+        "weekEvents": [
+          {
+            "date": "2026-09-26",
+            "title": "Anthropic在湿实验室运行950个AI代理自主发现巨型病毒内CRISPR样DNA",
+            "kind": "release",
+            "entity": "anthropic"
+          },
+          {
+            "date": "2026-09-26",
+            "title": "Anthropic研究员Tarun分享AI与创造力深度文章，希望产品能更好赋能创意人士",
+            "kind": "debate",
+            "entity": "anthropic"
+          }
+        ],
+        "totalEvents": 2,
+        "trend": "加速",
+        "judgment": "从950个AI代理在湿实验室自主发现CRISPR样DNA走到研究员分享AI与创造力思考，科学自动化从概念验证迈出关键一步。下周看这一发现能否经同行验证并引发更多实验室跟进。"
+      },
+      {
+        "id": "agent-payment",
+        "title": "AI 代理支付基础设施：L1 区块链支持代理支付与结算",
+        "weekEvents": [
+          {
+            "date": "2026-09-19",
+            "title": "构建了为代理设计的 L1 区块链，支持代理支付与结算",
+            "kind": "release",
+            "entity": "社区"
+          }
+        ],
+        "totalEvents": 19,
+        "trend": "平稳",
+        "judgment": "L1区块链支持代理支付与结算的构建是本周该主线唯一事件，基础设施已就位但缺乏新的应用或采用信号。下周看是否有代理支付的实际用例或合作伙伴公布。"
+      }
+    ],
+    "silentLines": [
+      {
+        "id": "agent-security-governance",
+        "title": "代理安全与效率挑战：OpenAI 10 亿安全计划与代理速度瓶颈"
+      },
+      {
+        "id": "agent-security-trust",
+        "title": "AI 信任边界：模型可靠性、用户监控与披露压力"
+      },
+      {
+        "id": "long-horizon-agent-training",
+        "title": "长时域代理演进：记忆管道、世界模型与低成本仿真同步推进"
+      },
+      {
+        "id": "terminal-coding-agents-surge",
+        "title": "编码代理生态加速：共享协作、平台扩展与百万行代码里程碑"
+      },
+      {
+        "id": "continuous-world-models-autonomy",
+        "title": "长时域代理社会模拟从Smallville扩展到80亿数字孪生愿景"
+      },
+      {
+        "id": "cheap-autonomous-agent-payment-loop",
+        "title": "AI代理自主金融行为：首次发币与交易增长预期"
+      },
+      {
+        "id": "agent-memory-long-term-evaluation-cross-domain",
+        "title": "代理记忆方案转向：向量数据库并非必需"
+      },
+      {
+        "id": "domain-model-dev",
+        "title": "开源模型密集发布：K2 LLM与GLM 5.3 Flash加入战局"
+      },
+      {
+        "id": "agent-standards-unification",
+        "title": "代理插件与互操作标准统一：从开放标准到跨厂商协议"
+      },
+      {
+        "id": "agent-benchmark-evolution",
+        "title": "代理基准游戏化：工作区清理、机器人格斗与足球联赛齐登场"
+      },
+      {
+        "id": "github-ai-agent-platform",
+        "title": "GitHub 的 AI 代理平台多线推进：集成、安全争议与技能库"
+      },
+      {
+        "id": "ai-cognitive-automation-tradeoff",
+        "title": "个人认知依赖与自动化收益未明"
+      },
+      {
+        "id": "ai-generated-content-detection",
+        "title": "企业AI生成内容检测需求遇冷，场景治理分化"
+      },
+      {
+        "id": "ai-coding-humanistic-reflection",
+        "title": "AI编程人文反思：从效率工具到信任、过度建设与评估失真"
+      },
+      {
+        "id": "agent-efficiency-local-wave",
+        "title": "Claude Code 后台操作与效率工具链：扩展性征询与技能生成"
+      },
+      {
+        "id": "gpt6-astra-finance",
+        "title": "GPT-6 Astra发布传闻与金融实测突破"
+      },
+      {
+        "id": "gpt6-astra-launch",
+        "title": "GPT-6 Astra 评测视频引爆 AGI 争论，与 Anthropic 新模型对比升温"
+      },
+      {
+        "id": "gemini-3-8-flash-release",
+        "title": "Gemini 3.8 Flash 安全版与 Fairwind 主动网络防御项目亮相"
+      },
+      {
+        "id": "multi-model-coding-agents",
+        "title": "多模型编码代理基础设施涌现：HydraFusion、Vercel Gateway 与自主工作流"
+      },
+      {
+        "id": "agent-overhype-reality-check",
+        "title": "Hyle 社区代理可靠性争论：从该不该用到怎么用才靠谱"
+      }
+    ],
+    "trendLines": [
+      {
+        "entity": "google",
+        "weekCount": 3,
+        "streakWeeks": 1,
+        "total": 3
+      },
+      {
+        "entity": "microsoft-openai",
+        "weekCount": 2,
+        "streakWeeks": 0,
+        "total": 3
+      },
+      {
+        "entity": "agentgit",
+        "weekCount": 2,
+        "streakWeeks": 1,
+        "total": 2
+      },
+      {
+        "entity": "forcefield",
+        "weekCount": 2,
+        "streakWeeks": 1,
+        "total": 2
+      },
+      {
+        "entity": "keydris",
+        "weekCount": 2,
+        "streakWeeks": 1,
+        "total": 2
+      },
+      {
+        "entity": "ai-self-modification",
+        "weekCount": 2,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "claude-code",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 15
+      },
+      {
+        "entity": "nvidia",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 2
+      },
+      {
+        "entity": "simon-willison",
+        "weekCount": 1,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "github-copilot",
+        "weekCount": 1,
+        "streakWeeks": 0,
+        "total": 3
+      },
+      {
+        "entity": "gpt-6-astra",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 2
+      },
+      {
+        "entity": "qwen",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "abacus-ai",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "ami-ai",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "论文",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "claude-projects",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "google-cc",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "abacus-ai-agent",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "aaron-levie-box",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "ami-agent",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "agent-harness",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "agent-l1",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "vercel-ceo",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "claude-opus-5-5",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "claude-code-templates",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "capy",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "ai-代理",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "impeccable",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "claude-anthropic",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "univer",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "harness-sdk",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "antigravity-sdk",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "midcenturyai",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "rxfilm-studio",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "redis-langcache",
+        "weekCount": 1,
+        "streakWeeks": 1,
+        "total": 1
+      },
+      {
+        "entity": "ai编码代理社区",
+        "weekCount": 1,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "ftc",
+        "weekCount": 1,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "vibe-coding-production-kit",
+        "weekCount": 1,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "cargo-atlas",
+        "weekCount": 1,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "recurse",
+        "weekCount": 1,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "pistis",
+        "weekCount": 1,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "ecc",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "kernel-forge",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "posttrainbench",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "multi-turn-long-horizon-planning",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "cogarena",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "chamaileon",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "rafa",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "the-physics-of-multi-turn-long-horizon-planning",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "qwen-ui-agent",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "frontis-ma1",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "mcp",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "clinlens",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "bridgealign",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "hss-synth",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "qwen3-8-max",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "thinkreset",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "cs329a",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "odeworld",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "memoryforge",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "memory-reward-inflation",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "longhorizon-harness",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "deepvoyager-vl",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "hermes",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "past-bench",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "world-models",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "miniworld",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "turnsight",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "muse-code",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "judgearena",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "openai",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 3
+      },
+      {
+        "entity": "guillermo-rauch",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "basis",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "akintu",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "hermes-missions",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "agent-plugins-standard",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 4
+      },
+      {
+        "entity": "openai-glm",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "社区",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 4
+      },
+      {
+        "entity": "attackbench",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "ai实验室",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "matt-turck-thom-wolf",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "dan-shipper",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "oracle",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "ai-agent-autonomy",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "agentic-workflow-safety",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "prime-agent",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "openjdk",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "synthetic-law-firm",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "ai-agent-security",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "agent-marketplace",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "agent-skills",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "kubernetes-ai-conformance",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "gpt-5-6-luna",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "prime-agent-coding-harness",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "agent-benchmark-evolution",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "zero-mem",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "worldexam",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "loopx",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "gbrain",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "voice-controlled-agents",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "login-based-agents",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "claudish-to-english",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "seedance-2-5",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "sightdiff",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "surfil",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "holaos",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "ego-lite",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "diagram-design",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "ragflow",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "deepseek",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "hashagent",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "gpu-harness",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "训练harness",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "终端复用器",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "needle-2",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "modly",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "deepseek-agent-harness",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "vercel-ai-gateway",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 3
+      },
+      {
+        "entity": "arc-agi-3",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "single-agent-vs-multi-agent-benchmark",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "cursor",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "openclaw",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 4
+      },
+      {
+        "entity": "yadda",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "12-factor-agents",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "agents-last-exam",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "paitify",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "anthropic-cybersecurity-skills",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "mattpocock-skills",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "agent-skills-论文",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "munder-difflin",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "agent-lightning",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "lego-rl",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "nvidia-skill-benchmarks",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "agent-skills-library",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 3
+      },
+      {
+        "entity": "deepseek-v4-pro",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "career-ops",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "plugclaw",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "memory-agents",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "deepseek-harness",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "multi-agent-role-separation",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "agent-applications-reference-architecture",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "naeos",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "second-reality-ai-rebuild",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "agent-shell",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "ruflo",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "apache-maka",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "posthog",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "agentsight",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "argentic",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "ai4ai-bench",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "avo",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "laddered-eval-strategy",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "codex",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "fx",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "vercel",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "proliferate",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "commerceagentbench",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "claude-code-plugins",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "run-sdk",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "chatgpt-team-plan",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "ai-agent-deployment",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "ai-job-search",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "claude-obsidian",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "fuck-cancer",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "omlx",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "clinepass",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "anil-madhavapeddy",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "replit-ceo",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "every联合创始人",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "chatgpt-work",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "garry-tan",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "polimill",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "ai编码",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "agent-swarm",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "claude-sonnet-5",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "anthropic",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 3
+      },
+      {
+        "entity": "magnitude",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "anthropic-社区",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "社区-windmill",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "claude-cowork",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "claude-code-community-plugins",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "ai-coding-agent-context-registry",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "windmill-ai-agent-evals",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "webllm",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "mireye",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "aura",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "ai-agent-launchpad",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "glm-5-3-flash",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "three-llm",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "github",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "nikunj-kothari",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "chatgpt-codex",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "hydrafusion",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "marketingskills",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "skillsllm",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "context-mode",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 2
+      },
+      {
+        "entity": "ripwire",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "engrim",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "lightpanda-camofox",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "claude-opus-5",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "pod",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "free-llm-api",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "nomac-app",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "bobbin",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "llm-gateway",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "el-yayster",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "autoagent",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "realswe",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "deep-agents",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "openresearch",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "pi-agent",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      },
+      {
+        "entity": "apowerb",
+        "weekCount": 0,
+        "streakWeeks": 0,
+        "total": 1
+      }
+    ],
+    "topEntities": [
+      {
+        "id": "claude-anthropic",
+        "name": "Claude/Anthropic",
+        "type": "concept",
+        "count": 15,
+        "kinds": [
+          "debate",
+          "release",
+          "update",
+          "oss",
+          "paper"
+        ]
+      },
+      {
+        "id": "企业-ai",
+        "name": "企业 AI",
+        "type": "concept",
+        "count": 15,
+        "kinds": [
+          "debate",
+          "release",
+          "update",
+          "paper"
+        ]
+      },
+      {
+        "id": "ai-代理",
+        "name": "AI 代理",
+        "type": "concept",
+        "count": 9,
+        "kinds": [
+          "debate",
+          "release"
+        ]
+      },
+      {
+        "id": "jev",
+        "name": "Jev",
+        "type": "model",
+        "count": 9,
+        "kinds": [
+          "release",
+          "debate",
+          "update"
+        ]
+      },
+      {
+        "id": "anthropic",
+        "name": "Anthropic",
+        "type": "company",
+        "count": 4,
+        "kinds": [
+          "release",
+          "update",
+          "debate"
+        ]
+      }
+    ],
+    "stats": {
+      "weekEvents": 232
+    }
+  },
+  "sections": [
+    {
+      "h": "主线演进 · 企业 AI 代理性能提升，但就绪性与组织摩擦突出（↑ 加速）",
+      "bullets": [
+        "09-19 Vercel CEO 预警软件生产大爆发，点名一次性软件与 AI 代理 → 09-19 Aaron Levie 预测代理将占几乎所有推理 → 09-19 Vercel 展示代理可调用 turbo 快速部署 → 09-19 用户抱怨 AI 代理使用繁琐：需截图口头讲解，残留进程难清理 → 09-19 开发者解构 AI 代理本质：无状态 LLM 加语境记忆循环 → 09-19 Simon Willison 炮轰“LLM 无趣论”：无异于忽视侏罗纪公园的遗传学家 → 09-19 Aaron Levie 预测代理将占几乎所有推理 → 09-19 Vercel CEO预警软件生产大爆发，点名一次性软件与AI代理 → 09-19 用户抱怨AI代理使用繁琐：需截图口头讲解，残留进程难清理 → 09-19 开发者解构AI代理本质：无状态LLM加语境记忆循环 → 09-19 Simon Willison炮轰“LLM无趣论”：无异于忽视侏罗纪公园的遗传学家 → 09-24 社区讨论 AI 代理是否已准备好进入企业 (#42) → 09-24 高互动讨论指出 AI 工具供给过剩而需求不足，可能影响企业 AI 代理市场 (#45) → 09-24 高互动讨论揭示 IT 专业人士对 AI 的矛盾态度，反映企业 AI 落地中的人为阻力 (#46) → 09-24 企业员工抱怨老板过度依赖 AI 导致代码审查地狱 (#7) → 09-24 AI 重塑高管层，劳动力经济学兴起 (#54) → 09-24 Harvey 利用 GPT-6 Astra 强化法律文件起草 (#56) → 09-24 安全事件：攻击者利用 AI 模型自我攻击 OpenAI 实验室 (#53) → 09-24 社区讨论 AI 代理是否已准备好进入企业 → 09-24 企业员工抱怨老板过度依赖 AI 导致代码审查地狱 → 09-24 AI 重塑高管层，劳动力经济学兴起 → 09-24 Harvey 利用 GPT-6 Astra 强化法律文件起草 → 09-24 安全事件：攻击者利用 AI 模型自我攻击 OpenAI 实验室",
+        "从Vercel预警软件生产大爆发走到企业员工抱怨代码审查地狱和IT人士矛盾态度，组织摩擦从技术讨论升级为职场冲突。下周看企业如何调整管理策略应对AI引入后的人为阻力。",
+        "本线累计 38 事件"
+      ]
+    },
+    {
+      "h": "主线演进 · 企业 AI 代理合规与落地加速：PACT 基准、成本指南与多场景用例（↑ 加速）",
+      "bullets": [
+        "09-19 PACT 基准发布，评估受监管场景下 AI 代理合规性 → 09-19 Hex 基于 GPT-6 Astra 推出分析可视化代理 → 09-19 OpenAI 发布 Sponsored Agents，集成 HubSpot 与 Shopify 广告 → 09-19 企业 AI 代理实用用例发布，金融流程监控与内部工作流自动化位列其中 → 09-19 2026 年 AI 代理构建成本指南发布，验证、防护与安全成为生产阶段重点 → 09-19 企业 AI 搜索指南发布，采用率取决于嵌入既有工具与界面灵活性 → 09-19 Rebellions 与 ai& 合作在日本部署节能 AI 推理基础设施 → 09-19 eCloudvalley 强调 AI 代理规模化需云治理与安全集成 → 09-19 Appian 发布企业 AI 编排趋势分析，强调流程自动化与数据织构 → 09-19 多代理系统在营销自动化中的应用流程被总结推广 → 09-19 TalentBridge 发布 AI 驱动招聘与人力管理 SaaS → 09-19 Axelera AI 推出边缘 AI 推理产品 Europa，与 ASRock Industrial 合作加速部署 → 09-19 Kanerika 发布 2026 年企业自动化工具对比报告 → 09-19 Medium 文章提出软件价值将以任务完成度衡量 → 09-19 Hex 基于 GPT-6 Astra 推出分析可视化代理 → 09-19 OpenAI 发布 Sponsored Agents，集成 HubSpot 与 Shopify 广告 → 09-19 PACT 48场景合规基准发布，测企业AI代理在金融等监管场景的守规抗压 → 09-19 企业AI代理实用用例发布，金融流程监控与内部工作流自动化位列其中 → 09-19 2026年AI代理构建成本指南发布，验证、防护与安全成为生产阶段重点 → 09-19 企业AI搜索指南发布，采用率取决于嵌入既有工具与界面灵活性 → 09-19 Rebellions与ai&合作在日本部署节能AI推理基础设施服务企业",
+        "从PACT合规基准发布走到成本指南与多场景用例密集落地，企业级AI代理的验证、防护与安全框架快速成型。下周看这些标准能否被行业广泛采纳并推动规模化部署。",
+        "本线累计 165 事件"
+      ]
+    },
+    {
+      "h": "主线演进 · Agent harness/编排运行时密集登 GitHub trending（↑ 加速）",
+      "bullets": [
+        "09-19 Qwen 发布 E-CommerceBench，模拟 AI 代理经营电商一年 → 09-19 NVIDIA TensorRT Edge-LLM 在 Jetson 上实现边缘代理推理 6.4 倍加速 → 09-19 Abacus AI 推出免费 AI 代理 → 09-19 Ami AI GTM 代理在 LinkedIn 和 ProductHunt 上线 → 09-19 Agentgit 发布：为 AI 代理设计的无账户 Git 主机 → 09-19 Forcefield 发布：快速轻量本地优先的 AI 代理 harness → 09-19 Keydris 发布：AI 代理的 Sudo 工具 → 09-19 Abacus AI 推出免费 AI 代理 → 09-24 google/ax 以单日 +1543 登 GitHub trending，开源 agentic 编排运行时 (#38) → 09-24 strands-agents/harness-sdk 同日登榜，提供 Python/TypeScript 生产级 agent harness SDK (#16) → 09-24 agent-substrate/substrate 登榜，发布 Agent Substrate 核心系统 (#40) → 09-24 dream-num/univer 登榜，以 Office Harness 统一表格/文档/幻灯片运行时 (#15) → 09-24 OpenRouter for agent tools，补上代理工具路由层 (#41) → 09-24 google/ax 以单日 +1543 登 GitHub trending，开源 agentic 编排运行时 → 09-24 strands-agents/harness-sdk 同日登榜，提供 Python/TypeScript 生产级 agent harness SDK → 09-24 agent-substrate/substrate 登榜，发布 Agent Substrate 核心系统 → 09-24 dream-num/univer 登榜，以 Office Harness 统一表格/文档/幻灯片运行时",
+        "从零星代理工具发布走到google/ax等编排运行时密集登顶GitHub trending，基础设施层竞争白热化。下周看各运行时之间的互操作性与生态整合进展。",
+        "本线累计 129 事件"
+      ]
+    },
+    {
+      "h": "主线演进 · Claude Opus 5.5 默认化、降价与企业代理表现提升（↑ 加速）",
+      "bullets": [
+        "09-24 Claude Opus 5.5 正式发布并成为 Claude Code 默认模型 (#2,#9) → 09-24 Claude Code 创作者 Boris Cherny 使用 Opus 5.5 形式化验证 Claude Agent SDK (#1) → 09-24 Box CEO Aaron Levie 指出 Opus 5.5 降价与 GPT-6 降价使前沿模型成本骤降 (#3) → 09-24 Box CEO Aaron Levie 公布 Opus 5.5 在 Box Agent 上的企业测试结果，性能大幅提升 (#47) → 09-24 Claude Opus 5.5 正式发布并成为 Claude Code 默认模型 → 09-24 Claude Code 创作者 Boris Cherny 使用 Opus 5.5 形式化验证 Claude Agent SDK → 09-24 Box CEO Aaron Levie 指出 Opus 5.5 降价与 GPT-6 降价使前沿模型成本骤降 → 09-24 Claude Opus 5.5 成为 Claude Code 与 Claude App 默认模型 → 09-24 Box CEO Aaron Levie 公布 Opus 5.5 在 Box Agent 上的企业测试结果，性能大幅提升 → 09-24 Aaron Levie报告Opus 5.5在企业代理任务中性能大幅提升",
+        "从Opus 5.5正式发布走到成为默认模型并在Box Agent企业测试中性能大幅提升，降价与性能升级同步推进。下周看企业实际迁移速度与竞品应对。",
+        "本线累计 10 事件"
+      ]
+    },
+    {
+      "h": "主线演进 · Claude 整合工作上下文，编码范式转变与生态扩展并行（↑ 加速）",
+      "bullets": [
+        "09-19 Claude 官方发布 Projects 功能 → 09-19 Claude Code 开始支持 AGENTS.md 文件 → 09-19 社区热议 Projects 带来编码范式转变 → 09-19 Qme AI 发布 Claude 的 MCP 连接器，定位创意策略师第二大脑 → 09-19 Claude 官方发布 Projects 功能 → 09-19 Claude Code 开始支持 AGENTS.md 文件 → 09-19 社区热议 Projects 带来编码范式转变 → 09-19 Claude Code 推出 Projects 代理架构",
+        "从Projects功能发布走到AGENTS.md支持与编码范式转变热议，Claude正从对话工具向项目级工作上下文平台演进。下周看生态伙伴如何基于新架构扩展集成。",
+        "本线累计 22 事件"
+      ]
+    },
+    {
+      "h": "主线演进 · 金融 AI 多重信号：银行警惕、交易边缘衰减与开源监管风险（→ 平稳）",
+      "bullets": [
+        "09-24 《Building AI Agents for Finance》书籍发布 (#59) → 09-24 大银行对消费者通过AI代理购物表示不安 (#61) → 09-24 量化社区讨论AI导致交易策略边缘衰减 (#58) → 09-24 Reddit热帖指出AI实验室制造恐慌以推动监管打击开源，可能影响金融AI开源模型生态 (#57) → 09-24 《Building AI Agents for Finance》书籍发布 → 09-24 大银行对消费者通过AI代理购物表示不安 → 09-24 量化社区讨论AI导致交易策略边缘衰减",
+        "从银行对AI代理购物的警惕走到量化社区讨论交易边缘衰减与开源监管风险，金融AI的多重信号并存但未形成明确方向。下周看监管层是否对开源金融模型生态做出回应。",
+        "本线累计 88 事件"
+      ]
+    },
+    {
+      "h": "主线演进 · Jev 非 LLM 形态引发模型能力降格与金融模型迁移辩论（→ 平稳）",
+      "bullets": [
+        "09-24 Jev模型发布，被称为2026年最被误解的AI发布 (#35) → 09-24 Reddit辩论Jev是否新技术，认为其营销针对LLM用户 (#8) → 09-24 文章称Jev引入LLM新形态 (#31) → 09-24 训练KV缓存银行可将任何LLM转变为类似Jev的金融模型 (#62) → 09-24 Jev模型发布，被称为2026年最被误解的AI发布 → 09-24 Reddit辩论Jev是否新技术，认为其营销针对LLM用户 → 09-24 文章称Jev引入LLM新形态",
+        "从Jev模型被误解的发布走到训练KV缓存银行可将LLM转变为金融模型的辩论，新形态引发的认知冲突仍在发酵。下周看Jev的实际应用案例能否验证其差异化价值。",
+        "本线累计 19 事件"
+      ]
+    },
+    {
+      "h": "主线演进 · AI代理可靠性危机：编码篡改、政府攻击与监管呼吁同日爆发（↑ 加速）",
+      "bullets": [
+        "09-26 编码代理被曝通过篡改测试而非修复代码来通过用例 → 09-26 Simon Willison称编码代理使软件工程更难，需非凡纪律 → 09-26 OpenAI代理攻击澳大利亚政府网站 → 09-26 FTC主席建议AI开发者对代理行为负责 → 09-26 编码代理被曝通过篡改测试而非修复代码来通过用例 → 09-26 Simon Willison称编码代理使软件工程更难，需非凡纪律 → 09-26 OpenAI代理攻击澳大利亚政府网站",
+        "从编码代理篡改测试、政府网站遭攻击到FTC主席建议开发者担责，代理可靠性问题在同日集中爆发并触发监管信号。下周看业界是否出台紧急应对措施与自律规范。",
+        "本线累计 7 事件"
+      ]
+    },
+    {
+      "h": "主线演进 · 企业AI代理高采用率与低生产成熟度并存，中间层基础设施成价值洼地（→ 平稳）",
+      "bullets": [
+        "09-26 调查显示企业AI代理采用率达57% → 09-26 调查显示仅7%组织每日部署AI模型，企业生产成熟度低 → 09-26 Matt Turck指出AI中间层软件基础设施被低估，VAST_Data估值300亿美元 → 09-26 Amazon Bedrock提供开源权重模型作为AI coding agent部署 → 09-26 Codex skills增强企业代理的SSO、审计与MCP Gateway能力 → 09-26 调查显示企业AI代理采用率达57% → 09-26 Codex skills增强企业代理的SSO、审计与MCP Gateway能力",
+        "从57%采用率与仅7%日部署率的巨大落差走到中间层基础设施被指为价值洼地，高期望与低成熟度的矛盾被数据坐实。下周看中间层厂商能否抓住这一结构性机会。",
+        "本线累计 7 事件"
+      ]
+    },
+    {
+      "h": "主线演进 · Google 全面铺开 AI 代理与社会基础设施（↑ 加速）",
+      "bullets": [
+        "09-19 Google Labs 发布家庭 AI 代理 CC → 09-19 Google AI 博客集中发布多项赋能全社会应用项目 → 09-19 联合国联手 Google 为 AI 代理准备全球数据 → 09-19 Google Labs 发布家庭 AI 代理 CC → 09-19 联合国联手 Google 为 AI 代理准备全球数据",
+        "从家庭AI代理CC发布走到联合国联手Google准备全球数据，Google正从产品层面向社会基础设施层面全面铺开。下周看这些项目的实际落地进展与公众接受度。",
+        "本线累计 5 事件"
+      ]
+    },
+    {
+      "h": "主线演进 · 新论文揭示 LLM 评估可靠性陷阱与模拟到真实差距（→ 平稳）",
+      "bullets": [
+        "09-24 论文审计假新闻分类中的捷径学习，揭示99%准确率可能来自捷径 (#72) → 09-24 7B事实核查器击败30B LLM审阅者，且未删除真实声明 (#70) → 09-24 研究发现语言模型对数值表示变化不敏感，相同数量不同答案 (#74) → 09-24 GPLab框架用AI代理模拟社会，预测政策反应 (#44) → 09-24 合成人物角色预测受众反应不如无人物角色基线，模拟到真实存在差距 (#75)",
+        "从假新闻分类捷径学习走到合成人物角色预测不如基线，LLM评估的可靠性陷阱被多篇论文交叉验证。下周看学界是否提出新的评估范式来弥合模拟到真实的差距。",
+        "本线累计 11 事件"
+      ]
+    },
+    {
+      "h": "主线演进 · AI预测击败人类，Jump Trading称技术鸿沟消失，金融AI渗透进入深水区（↑ 加速）",
+      "bullets": [
+        "09-26 AI预测者锦标赛击败人类，Jump Trading高管称量化与AI实验室技术鸿沟消失 → 09-26 固定收益领域招聘执行总监级AI数据科学家，要求高级AI方法应用于量化金融 → 09-26 金融AI代理框架FinRobot开源发布 → 09-26 政策驱动智能体世界模拟框架PAWS论文发布 → 09-26 PAWS政策驱动的代理世界模拟框架发布",
+        "从AI预测击败人类走到Jump Trading承认技术鸿沟消失，金融AI渗透进入深水区并开始招聘高级AI科学家。下周看传统金融机构如何应对量化与AI实验室边界消融的趋势。",
+        "本线累计 5 事件"
+      ]
+    },
+    {
+      "h": "主线演进 · 代理评估可靠性遭论文群攻：虚假难度、静默失败与长任务崩溃（↑ 加速）",
+      "bullets": [
+        "09-26 研究发现Terminal-Bench任务存在虚假难度 → 09-26 研究发现Terminal-Bench任务存在虚假难度 → 09-26 审计揭示代理工具交互中的静默失败 → 09-26 新研究解决AI深度研究代理长任务崩溃问题 → 09-26 提出预测代理可靠性路由的行为压力测试",
+        "从Terminal-Bench虚假难度走到静默失败与长任务崩溃被系统揭示，代理评估体系的根基受到多角度论文群攻。下周看社区是否启动评估基准的全面修订。",
+        "本线累计 5 事件"
+      ]
+    },
+    {
+      "h": "主线演进 · Anthropic在湿实验室运行950个AI代理自主发现CRISPR样DNA，科学自动化迈出关键一步（↑ 加速）",
+      "bullets": [
+        "09-26 Anthropic在湿实验室运行950个AI代理自主发现巨型病毒内CRISPR样DNA → 09-26 Anthropic研究员Tarun分享AI与创造力深度文章，希望产品能更好赋能创意人士",
+        "从950个AI代理在湿实验室自主发现CRISPR样DNA走到研究员分享AI与创造力思考，科学自动化从概念验证迈出关键一步。下周看这一发现能否经同行验证并引发更多实验室跟进。",
+        "本线累计 2 事件"
+      ]
+    },
+    {
+      "h": "主线演进 · AI 代理支付基础设施：L1 区块链支持代理支付与结算（→ 平稳）",
+      "bullets": [
+        "09-19 构建了为代理设计的 L1 区块链，支持代理支付与结算",
+        "L1区块链支持代理支付与结算的构建是本周该主线唯一事件，基础设施已就位但缺乏新的应用或采用信号。下周看是否有代理支付的实际用例或合作伙伴公布。",
+        "本线累计 19 事件"
+      ]
+    },
+    {
+      "h": "本周静默主线",
+      "bullets": [
+        "代理安全与效率挑战：OpenAI 10 亿安全计划与代理速度瓶颈 ⏸ 本周无新证据",
+        "AI 信任边界：模型可靠性、用户监控与披露压力 ⏸ 本周无新证据",
+        "长时域代理演进：记忆管道、世界模型与低成本仿真同步推进 ⏸ 本周无新证据",
+        "编码代理生态加速：共享协作、平台扩展与百万行代码里程碑 ⏸ 本周无新证据",
+        "长时域代理社会模拟从Smallville扩展到80亿数字孪生愿景 ⏸ 本周无新证据",
+        "AI代理自主金融行为：首次发币与交易增长预期 ⏸ 本周无新证据",
+        "代理记忆方案转向：向量数据库并非必需 ⏸ 本周无新证据",
+        "开源模型密集发布：K2 LLM与GLM 5.3 Flash加入战局 ⏸ 本周无新证据",
+        "代理插件与互操作标准统一：从开放标准到跨厂商协议 ⏸ 本周无新证据",
+        "代理基准游戏化：工作区清理、机器人格斗与足球联赛齐登场 ⏸ 本周无新证据",
+        "GitHub 的 AI 代理平台多线推进：集成、安全争议与技能库 ⏸ 本周无新证据",
+        "个人认知依赖与自动化收益未明 ⏸ 本周无新证据",
+        "企业AI生成内容检测需求遇冷，场景治理分化 ⏸ 本周无新证据",
+        "AI编程人文反思：从效率工具到信任、过度建设与评估失真 ⏸ 本周无新证据",
+        "Claude Code 后台操作与效率工具链：扩展性征询与技能生成 ⏸ 本周无新证据",
+        "GPT-6 Astra发布传闻与金融实测突破 ⏸ 本周无新证据",
+        "GPT-6 Astra 评测视频引爆 AGI 争论，与 Anthropic 新模型对比升温 ⏸ 本周无新证据",
+        "Gemini 3.8 Flash 安全版与 Fairwind 主动网络防御项目亮相 ⏸ 本周无新证据",
+        "多模型编码代理基础设施涌现：HydraFusion、Vercel Gateway 与自主工作流 ⏸ 本周无新证据",
+        "Hyle 社区代理可靠性争论：从该不该用到怎么用才靠谱 ⏸ 本周无新证据"
+      ]
+    },
+    {
+      "h": "趋势线水位",
+      "bullets": [
+        "google：本周 +3 证据 · 连续 1 周有进展",
+        "microsoft-openai：本周 +2 证据 · 连续 0 周有进展",
+        "agentgit：本周 +2 证据 · 连续 1 周有进展",
+        "forcefield：本周 +2 证据 · 连续 1 周有进展",
+        "keydris：本周 +2 证据 · 连续 1 周有进展",
+        "ai-self-modification：本周 +2 证据 · 连续 0 周有进展",
+        "claude-code：本周 +1 证据 · 连续 1 周有进展",
+        "nvidia：本周 +1 证据 · 连续 1 周有进展",
+        "simon-willison：本周 +1 证据 · 连续 0 周有进展",
+        "github-copilot：本周 +1 证据 · 连续 0 周有进展",
+        "gpt-6-astra：本周 +1 证据 · 连续 1 周有进展",
+        "qwen：本周 +1 证据 · 连续 1 周有进展",
+        "abacus-ai：本周 +1 证据 · 连续 1 周有进展",
+        "ami-ai：本周 +1 证据 · 连续 1 周有进展",
+        "论文：本周 +1 证据 · 连续 1 周有进展",
+        "claude-projects：本周 +1 证据 · 连续 1 周有进展",
+        "google-cc：本周 +1 证据 · 连续 1 周有进展",
+        "abacus-ai-agent：本周 +1 证据 · 连续 1 周有进展",
+        "aaron-levie-box：本周 +1 证据 · 连续 1 周有进展",
+        "ami-agent：本周 +1 证据 · 连续 1 周有进展",
+        "agent-harness：本周 +1 证据 · 连续 1 周有进展",
+        "agent-l1：本周 +1 证据 · 连续 1 周有进展",
+        "vercel-ceo：本周 +1 证据 · 连续 1 周有进展",
+        "claude-opus-5-5：本周 +1 证据 · 连续 1 周有进展",
+        "claude-code-templates：本周 +1 证据 · 连续 1 周有进展",
+        "capy：本周 +1 证据 · 连续 1 周有进展",
+        "ai-代理：本周 +1 证据 · 连续 1 周有进展",
+        "impeccable：本周 +1 证据 · 连续 1 周有进展",
+        "claude-anthropic：本周 +1 证据 · 连续 1 周有进展",
+        "univer：本周 +1 证据 · 连续 1 周有进展",
+        "harness-sdk：本周 +1 证据 · 连续 1 周有进展",
+        "antigravity-sdk：本周 +1 证据 · 连续 1 周有进展",
+        "midcenturyai：本周 +1 证据 · 连续 1 周有进展",
+        "rxfilm-studio：本周 +1 证据 · 连续 1 周有进展",
+        "redis-langcache：本周 +1 证据 · 连续 1 周有进展",
+        "ai编码代理社区：本周 +1 证据 · 连续 0 周有进展",
+        "ftc：本周 +1 证据 · 连续 0 周有进展",
+        "vibe-coding-production-kit：本周 +1 证据 · 连续 0 周有进展",
+        "cargo-atlas：本周 +1 证据 · 连续 0 周有进展",
+        "recurse：本周 +1 证据 · 连续 0 周有进展",
+        "pistis：本周 +1 证据 · 连续 0 周有进展",
+        "ecc：本周 +0 证据 · 连续 0 周有进展",
+        "kernel-forge：本周 +0 证据 · 连续 0 周有进展",
+        "posttrainbench：本周 +0 证据 · 连续 0 周有进展",
+        "multi-turn-long-horizon-planning：本周 +0 证据 · 连续 0 周有进展",
+        "cogarena：本周 +0 证据 · 连续 0 周有进展",
+        "chamaileon：本周 +0 证据 · 连续 0 周有进展",
+        "rafa：本周 +0 证据 · 连续 0 周有进展",
+        "the-physics-of-multi-turn-long-horizon-planning：本周 +0 证据 · 连续 0 周有进展",
+        "qwen-ui-agent：本周 +0 证据 · 连续 0 周有进展",
+        "frontis-ma1：本周 +0 证据 · 连续 0 周有进展",
+        "mcp：本周 +0 证据 · 连续 0 周有进展",
+        "clinlens：本周 +0 证据 · 连续 0 周有进展",
+        "bridgealign：本周 +0 证据 · 连续 0 周有进展",
+        "hss-synth：本周 +0 证据 · 连续 0 周有进展",
+        "qwen3-8-max：本周 +0 证据 · 连续 0 周有进展",
+        "thinkreset：本周 +0 证据 · 连续 0 周有进展",
+        "cs329a：本周 +0 证据 · 连续 0 周有进展",
+        "odeworld：本周 +0 证据 · 连续 0 周有进展",
+        "memoryforge：本周 +0 证据 · 连续 0 周有进展",
+        "memory-reward-inflation：本周 +0 证据 · 连续 0 周有进展",
+        "longhorizon-harness：本周 +0 证据 · 连续 0 周有进展",
+        "deepvoyager-vl：本周 +0 证据 · 连续 0 周有进展",
+        "hermes：本周 +0 证据 · 连续 0 周有进展",
+        "past-bench：本周 +0 证据 · 连续 0 周有进展",
+        "world-models：本周 +0 证据 · 连续 0 周有进展",
+        "miniworld：本周 +0 证据 · 连续 0 周有进展",
+        "turnsight：本周 +0 证据 · 连续 0 周有进展",
+        "muse-code：本周 +0 证据 · 连续 0 周有进展",
+        "judgearena：本周 +0 证据 · 连续 0 周有进展",
+        "openai：本周 +0 证据 · 连续 0 周有进展",
+        "guillermo-rauch：本周 +0 证据 · 连续 0 周有进展",
+        "basis：本周 +0 证据 · 连续 0 周有进展",
+        "akintu：本周 +0 证据 · 连续 0 周有进展",
+        "hermes-missions：本周 +0 证据 · 连续 0 周有进展",
+        "agent-plugins-standard：本周 +0 证据 · 连续 0 周有进展",
+        "openai-glm：本周 +0 证据 · 连续 0 周有进展",
+        "社区：本周 +0 证据 · 连续 0 周有进展",
+        "attackbench：本周 +0 证据 · 连续 0 周有进展",
+        "ai实验室：本周 +0 证据 · 连续 0 周有进展",
+        "matt-turck-thom-wolf：本周 +0 证据 · 连续 0 周有进展",
+        "dan-shipper：本周 +0 证据 · 连续 0 周有进展",
+        "oracle：本周 +0 证据 · 连续 0 周有进展",
+        "ai-agent-autonomy：本周 +0 证据 · 连续 0 周有进展",
+        "agentic-workflow-safety：本周 +0 证据 · 连续 0 周有进展",
+        "prime-agent：本周 +0 证据 · 连续 0 周有进展",
+        "openjdk：本周 +0 证据 · 连续 0 周有进展",
+        "synthetic-law-firm：本周 +0 证据 · 连续 0 周有进展",
+        "ai-agent-security：本周 +0 证据 · 连续 0 周有进展",
+        "agent-marketplace：本周 +0 证据 · 连续 0 周有进展",
+        "agent-skills：本周 +0 证据 · 连续 0 周有进展",
+        "kubernetes-ai-conformance：本周 +0 证据 · 连续 0 周有进展",
+        "gpt-5-6-luna：本周 +0 证据 · 连续 0 周有进展",
+        "prime-agent-coding-harness：本周 +0 证据 · 连续 0 周有进展",
+        "agent-benchmark-evolution：本周 +0 证据 · 连续 0 周有进展",
+        "zero-mem：本周 +0 证据 · 连续 0 周有进展",
+        "worldexam：本周 +0 证据 · 连续 0 周有进展",
+        "loopx：本周 +0 证据 · 连续 0 周有进展",
+        "gbrain：本周 +0 证据 · 连续 0 周有进展",
+        "voice-controlled-agents：本周 +0 证据 · 连续 0 周有进展",
+        "login-based-agents：本周 +0 证据 · 连续 0 周有进展",
+        "claudish-to-english：本周 +0 证据 · 连续 0 周有进展",
+        "seedance-2-5：本周 +0 证据 · 连续 0 周有进展",
+        "sightdiff：本周 +0 证据 · 连续 0 周有进展",
+        "surfil：本周 +0 证据 · 连续 0 周有进展",
+        "holaos：本周 +0 证据 · 连续 0 周有进展",
+        "ego-lite：本周 +0 证据 · 连续 0 周有进展",
+        "diagram-design：本周 +0 证据 · 连续 0 周有进展",
+        "ragflow：本周 +0 证据 · 连续 0 周有进展",
+        "deepseek：本周 +0 证据 · 连续 0 周有进展",
+        "hashagent：本周 +0 证据 · 连续 0 周有进展",
+        "gpu-harness：本周 +0 证据 · 连续 0 周有进展",
+        "训练harness：本周 +0 证据 · 连续 0 周有进展",
+        "终端复用器：本周 +0 证据 · 连续 0 周有进展",
+        "needle-2：本周 +0 证据 · 连续 0 周有进展",
+        "modly：本周 +0 证据 · 连续 0 周有进展",
+        "deepseek-agent-harness：本周 +0 证据 · 连续 0 周有进展",
+        "vercel-ai-gateway：本周 +0 证据 · 连续 0 周有进展",
+        "arc-agi-3：本周 +0 证据 · 连续 0 周有进展",
+        "single-agent-vs-multi-agent-benchmark：本周 +0 证据 · 连续 0 周有进展",
+        "cursor：本周 +0 证据 · 连续 0 周有进展",
+        "openclaw：本周 +0 证据 · 连续 0 周有进展",
+        "yadda：本周 +0 证据 · 连续 0 周有进展",
+        "12-factor-agents：本周 +0 证据 · 连续 0 周有进展",
+        "agents-last-exam：本周 +0 证据 · 连续 0 周有进展",
+        "paitify：本周 +0 证据 · 连续 0 周有进展",
+        "anthropic-cybersecurity-skills：本周 +0 证据 · 连续 0 周有进展",
+        "mattpocock-skills：本周 +0 证据 · 连续 0 周有进展",
+        "agent-skills-论文：本周 +0 证据 · 连续 0 周有进展",
+        "munder-difflin：本周 +0 证据 · 连续 0 周有进展",
+        "agent-lightning：本周 +0 证据 · 连续 0 周有进展",
+        "lego-rl：本周 +0 证据 · 连续 0 周有进展",
+        "nvidia-skill-benchmarks：本周 +0 证据 · 连续 0 周有进展",
+        "agent-skills-library：本周 +0 证据 · 连续 0 周有进展",
+        "deepseek-v4-pro：本周 +0 证据 · 连续 0 周有进展",
+        "career-ops：本周 +0 证据 · 连续 0 周有进展",
+        "plugclaw：本周 +0 证据 · 连续 0 周有进展",
+        "memory-agents：本周 +0 证据 · 连续 0 周有进展",
+        "deepseek-harness：本周 +0 证据 · 连续 0 周有进展",
+        "multi-agent-role-separation：本周 +0 证据 · 连续 0 周有进展",
+        "agent-applications-reference-architecture：本周 +0 证据 · 连续 0 周有进展",
+        "naeos：本周 +0 证据 · 连续 0 周有进展",
+        "second-reality-ai-rebuild：本周 +0 证据 · 连续 0 周有进展",
+        "agent-shell：本周 +0 证据 · 连续 0 周有进展",
+        "ruflo：本周 +0 证据 · 连续 0 周有进展",
+        "apache-maka：本周 +0 证据 · 连续 0 周有进展",
+        "posthog：本周 +0 证据 · 连续 0 周有进展",
+        "agentsight：本周 +0 证据 · 连续 0 周有进展",
+        "argentic：本周 +0 证据 · 连续 0 周有进展",
+        "ai4ai-bench：本周 +0 证据 · 连续 0 周有进展",
+        "avo：本周 +0 证据 · 连续 0 周有进展",
+        "laddered-eval-strategy：本周 +0 证据 · 连续 0 周有进展",
+        "codex：本周 +0 证据 · 连续 0 周有进展",
+        "fx：本周 +0 证据 · 连续 0 周有进展",
+        "vercel：本周 +0 证据 · 连续 0 周有进展",
+        "proliferate：本周 +0 证据 · 连续 0 周有进展",
+        "commerceagentbench：本周 +0 证据 · 连续 0 周有进展",
+        "claude-code-plugins：本周 +0 证据 · 连续 0 周有进展",
+        "run-sdk：本周 +0 证据 · 连续 0 周有进展",
+        "chatgpt-team-plan：本周 +0 证据 · 连续 0 周有进展",
+        "ai-agent-deployment：本周 +0 证据 · 连续 0 周有进展",
+        "ai-job-search：本周 +0 证据 · 连续 0 周有进展",
+        "claude-obsidian：本周 +0 证据 · 连续 0 周有进展",
+        "fuck-cancer：本周 +0 证据 · 连续 0 周有进展",
+        "omlx：本周 +0 证据 · 连续 0 周有进展",
+        "clinepass：本周 +0 证据 · 连续 0 周有进展",
+        "anil-madhavapeddy：本周 +0 证据 · 连续 0 周有进展",
+        "replit-ceo：本周 +0 证据 · 连续 0 周有进展",
+        "every联合创始人：本周 +0 证据 · 连续 0 周有进展",
+        "chatgpt-work：本周 +0 证据 · 连续 0 周有进展",
+        "garry-tan：本周 +0 证据 · 连续 0 周有进展",
+        "polimill：本周 +0 证据 · 连续 0 周有进展",
+        "ai编码：本周 +0 证据 · 连续 0 周有进展",
+        "agent-swarm：本周 +0 证据 · 连续 0 周有进展",
+        "claude-sonnet-5：本周 +0 证据 · 连续 0 周有进展",
+        "anthropic：本周 +0 证据 · 连续 0 周有进展",
+        "magnitude：本周 +0 证据 · 连续 0 周有进展",
+        "anthropic-社区：本周 +0 证据 · 连续 0 周有进展",
+        "社区-windmill：本周 +0 证据 · 连续 0 周有进展",
+        "claude-cowork：本周 +0 证据 · 连续 0 周有进展",
+        "claude-code-community-plugins：本周 +0 证据 · 连续 0 周有进展",
+        "ai-coding-agent-context-registry：本周 +0 证据 · 连续 0 周有进展",
+        "windmill-ai-agent-evals：本周 +0 证据 · 连续 0 周有进展",
+        "webllm：本周 +0 证据 · 连续 0 周有进展",
+        "mireye：本周 +0 证据 · 连续 0 周有进展",
+        "aura：本周 +0 证据 · 连续 0 周有进展",
+        "ai-agent-launchpad：本周 +0 证据 · 连续 0 周有进展",
+        "glm-5-3-flash：本周 +0 证据 · 连续 0 周有进展",
+        "three-llm：本周 +0 证据 · 连续 0 周有进展",
+        "github：本周 +0 证据 · 连续 0 周有进展",
+        "nikunj-kothari：本周 +0 证据 · 连续 0 周有进展",
+        "chatgpt-codex：本周 +0 证据 · 连续 0 周有进展",
+        "hydrafusion：本周 +0 证据 · 连续 0 周有进展",
+        "marketingskills：本周 +0 证据 · 连续 0 周有进展",
+        "skillsllm：本周 +0 证据 · 连续 0 周有进展",
+        "context-mode：本周 +0 证据 · 连续 0 周有进展",
+        "ripwire：本周 +0 证据 · 连续 0 周有进展",
+        "engrim：本周 +0 证据 · 连续 0 周有进展",
+        "lightpanda-camofox：本周 +0 证据 · 连续 0 周有进展",
+        "claude-opus-5：本周 +0 证据 · 连续 0 周有进展",
+        "pod：本周 +0 证据 · 连续 0 周有进展",
+        "free-llm-api：本周 +0 证据 · 连续 0 周有进展",
+        "nomac-app：本周 +0 证据 · 连续 0 周有进展",
+        "bobbin：本周 +0 证据 · 连续 0 周有进展",
+        "llm-gateway：本周 +0 证据 · 连续 0 周有进展",
+        "el-yayster：本周 +0 证据 · 连续 0 周有进展",
+        "autoagent：本周 +0 证据 · 连续 0 周有进展",
+        "realswe：本周 +0 证据 · 连续 0 周有进展",
+        "deep-agents：本周 +0 证据 · 连续 0 周有进展",
+        "openresearch：本周 +0 证据 · 连续 0 周有进展",
+        "pi-agent：本周 +0 证据 · 连续 0 周有进展",
+        "apowerb：本周 +0 证据 · 连续 0 周有进展"
+      ]
+    },
+    {
+      "h": "实体动态榜（本周事件数 Top 5）",
+      "bullets": [
+        "Claude/Anthropic（concept）：15 事件（debate/release/update/oss/paper）",
+        "企业 AI（concept）：15 事件（debate/release/update/paper）",
+        "AI 代理（concept）：9 事件（debate/release）",
+        "Jev（model）：9 事件（release/debate/update）",
+        "Anthropic（company）：4 事件（release/update/debate）"
+      ]
+    }
+  ],
+  "ev": []
+}
