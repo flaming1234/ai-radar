@@ -1,0 +1,761 @@
+{
+  "type": "日报",
+  "topic": "AI",
+  "src": "现场自动聚合",
+  "ic": "i-doc",
+  "h": 8,
+  "auto": true,
+  "unverified": true,
+  "format": "storyline",
+  "synthesis": "two-pass-v2",
+  "aggregatedAt": "2026-09-29",
+  "title": "AI 每日雷达 · 2026-09-29",
+  "time": "今天",
+  "sub": "Anthropic 同日发布 Opus 5.5 与 Sonnet 5.5，OpenAI 展示 GPT-6 Astra 税务速度优势，前沿模型竞争进入专业场景比拼。",
+  "summary": "今日主题：模型发布与代理落地并行，但评估可靠性危机暴露。Anthropic 双模型与 OpenAI 税务性能展示前沿竞争，企业代理编排被提为基础架构决策，金融 AI 加速渗透投行与交易所。然而，LLM-as-Judge 生产审计 kappa=0.04 揭示评估严重不可靠，代理安全从技能攻击到看门狗芯片引发硬件防御，问责与失控认知分歧加剧。对 Hyle 而言，代理可靠性是信任基石；对 Company OS，编排中间层价值凸显但需解决用户粘性；对金融 AI，合规与市场完整性成为落地关键。",
+  "bullets": [
+    "Anthropic 同日发布 Opus 5.5 与 Sonnet 5.5，OpenAI 展示 GPT-6 Astra 税务速度优势，前沿模型竞争进入专业场景比拼。",
+    "Gartner 预测 2028 年 33% 企业软件包含代理 AI，编排成为基础架构决策，但 LLM 缺乏粘性警示企业 AI 产品体验。",
+    "投行与交易所密集部署 AI，金融 AI 从交易向合规扩展，市场完整性与投行平台成为新战场。",
+    "技能级联攻击与 Nvidia 看门狗芯片推动代理安全硬件化，问责与失控认知分歧加剧，社会影响从效率惰性到市场竞争全面展开。",
+    "LLM-as-Judge 生产审计 kappa=0.04，评估可靠性危机亟待解决，依赖自动评估的金融与企业场景面临重建信任。"
+  ],
+  "spotlight": [
+    {
+      "quote": "审计发现生产 Text-to-SQL 中 LLM-as-Judge 与人类一致性极低（kappa=0.04），并给出修复方案",
+      "why": "揭示生产环境中 LLM-as-Judge 几乎不可靠，挑战当前评估范式，对金融、企业等依赖自动评估的场景敲响警钟。",
+      "entity": "研究者",
+      "sources": [
+        "https://arxiv.org/abs/2609.30290"
+      ]
+    }
+  ],
+  "storylines": [
+    {
+      "id": "domain-model-dev",
+      "title": "模型密集发布：Opus 5.5、Sonnet 5.5 与 GPT-6 Astra 税务性能",
+      "isNew": false,
+      "categories": [
+        "model_dev",
+        "tech_trend"
+      ],
+      "chain": [
+        {
+          "title": "Claude Opus 5.5 发布",
+          "kind": "release",
+          "entity": "Anthropic",
+          "relPrev": null,
+          "sources": [
+            "https://www.anthropic.com/claude-opus-5-5"
+          ]
+        },
+        {
+          "title": "Claude Sonnet 5.5 发布，速度提升 30%+ 成本降低 30%",
+          "kind": "release",
+          "entity": "Anthropic",
+          "relPrev": null,
+          "sources": [
+            "https://simonwillison.net/2026/Sep/28/claude-sonnet-5-5/"
+          ]
+        },
+        {
+          "title": "GPT-6 Astra 在税务工作簿任务中比 GPT-5.6 Sol 快两倍",
+          "kind": "update",
+          "entity": "OpenAI",
+          "relPrev": null,
+          "sources": [
+            "https://openai.com/index/basis-tax-workbook-with-astra"
+          ]
+        },
+        {
+          "title": "开发者用 Claude Code 构建含 48 个 AI 代理的游戏工作室",
+          "kind": "oss",
+          "entity": "开发者",
+          "relPrev": null,
+          "sources": [
+            "https://www.facebook.com/100083241103501/posts/a-developer-used-claude-inside-cursor-to-build-a-2-minute-journey-through-video-/1089914517126575"
+          ]
+        }
+      ],
+      "narrative": "Anthropic 同日发布 Opus 5.5 与 Sonnet 5.5，OpenAI 则展示 GPT-6 Astra 在税务任务中的速度优势，同时社区利用 Claude Code 构建多代理游戏工作室，前沿模型竞争与代理应用并行。",
+      "carryOver": "模型密集发布持续，Claude Opus 5.5 与 GPT-6 Astra 性能比拼升温"
+    },
+    {
+      "id": "enterprise-agent-adoption-gap",
+      "title": "企业代理编排成为架构核心，但 LLM 粘性存疑",
+      "isNew": false,
+      "categories": [
+        "ai_enterprise_os",
+        "new_thought"
+      ],
+      "chain": [
+        {
+          "title": "Gartner 预测 2028 年 33% 企业软件包含代理 AI，代理编排被强调为基础架构决策",
+          "kind": "release",
+          "entity": "Gartner, Automation Anywhere",
+          "relPrev": null,
+          "sources": [
+            "https://www.automationanywhere.com/company/blog/agentic-orchestration-guide"
+          ]
+        },
+        {
+          "title": "企业快速采用 AI 代理自动化工作流、客服、分析与运营",
+          "kind": "update",
+          "entity": "企业",
+          "relPrev": null,
+          "sources": [
+            "https://www.facebook.com/ImpactQA/posts/40-of-enterprise-applications-are-expected-to-embed-task-specific-ai-agents-by-t/1974051414046279"
+          ]
+        },
+        {
+          "title": "Peter Yang 指出 LLM 模型缺乏持久吸引力，暗示企业 AI 工具可能难以建立用户粘性",
+          "kind": "debate",
+          "entity": "Peter Yang",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/petergyang/status/2104414495376564517"
+          ]
+        }
+      ],
+      "narrative": "Gartner 预测代理 AI 将渗透企业软件，编排成为基础架构决策，企业快速采用代理自动化，但 Peter Yang 警告 LLM 缺乏持久吸引力，企业 AI 落地面临用户粘性挑战。",
+      "carryOver": "企业 AI 代理采用率高但生产成熟度低，中间层基础设施被低估"
+    },
+    {
+      "id": "ai-finance-penetration-accelerating",
+      "title": "金融 AI 落地加速：投行与交易所密集部署",
+      "isNew": false,
+      "categories": [
+        "ai_finance"
+      ],
+      "chain": [
+        {
+          "title": "Cantor Fitzgerald 设立投行 AI 职能",
+          "kind": "update",
+          "entity": "Cantor Fitzgerald",
+          "relPrev": null,
+          "sources": [
+            "https://www.efinancialcareers.fr/en/jobs-United_States-New_York-AI_Product__Engineering_Associate_Investment_Banking.id24815125"
+          ]
+        },
+        {
+          "title": "Beluuga AI 推出投资银行平台",
+          "kind": "release",
+          "entity": "Beluuga AI",
+          "relPrev": null,
+          "sources": [
+            "https://www.facebook.com/GlobalFinTechSeries/posts/beluuga-ai-launches-ai-powered-investment-banking-platform-for-japan-ma-financia/1571891788284947"
+          ]
+        },
+        {
+          "title": "NSE 准备 AI 驱动市场完整性",
+          "kind": "update",
+          "entity": "印度国家证券交易所",
+          "relPrev": null,
+          "sources": [
+            "https://www.linkedin.com/posts/business-today-india_nse-ai-artificialintelligence-activity-7508860121171591168-gEno"
+          ]
+        }
+      ],
+      "narrative": "投行与交易所加速部署 AI，Cantor Fitzgerald 设立专门职能，Beluuga AI 推出平台，印度国家证券交易所用 AI 维护市场完整性，金融 AI 落地从交易向合规扩展。",
+      "carryOver": "金融 AI 冷热交织，央行警告泡沫，BNP Paribas 联手 Google Cloud 推进代理部署"
+    },
+    {
+      "id": "agent-reliability-crisis",
+      "title": "代理安全与治理：技能攻击、看门狗芯片与问责分歧",
+      "isNew": false,
+      "categories": [
+        "tech_trend",
+        "new_thought",
+        "hyle"
+      ],
+      "chain": [
+        {
+          "title": "论文揭示技能级联攻击风险，技能系统安全性受关注",
+          "kind": "paper",
+          "entity": "研究者",
+          "relPrev": null,
+          "sources": [
+            "https://arxiv.org/abs/2609.30383"
+          ]
+        },
+        {
+          "title": "Nvidia 拟为每个 AI 代理配置看门狗芯片",
+          "kind": "update",
+          "entity": "Nvidia",
+          "relPrev": null,
+          "sources": [
+            "https://www.cnbc.com/2026/09/28/nvidia-releases.html"
+          ]
+        },
+        {
+          "title": "讨论 AI 代理意外作恶时谁应负责",
+          "kind": "debate",
+          "entity": "社区",
+          "relPrev": null,
+          "sources": [
+            "https://blog.greenpants.net/ai-accountability",
+            "https://news.ycombinator.com/item?id=49873303"
+          ]
+        },
+        {
+          "title": "Turck 指出研究者与非研究者对 AI 失控看法两极",
+          "kind": "debate",
+          "entity": "Matt Turck",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/mattturck/status/2104331402385002831"
+          ]
+        },
+        {
+          "title": "Tarun 警示代理生产率收益或被用户惰性抵消",
+          "kind": "debate",
+          "entity": "Tarun",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/trq212/status/2104273243599405395"
+          ]
+        }
+      ],
+      "narrative": "从技能攻击到看门狗芯片，代理安全引发硬件级防御；问责讨论与失控认知两极分化，代理社会影响从效率惰性到市场竞争全面展开。",
+      "carryOver": "代理失控争议升级，OpenAI 暂停训练，轨迹篡改威胁审计"
+    },
+    {
+      "id": "agent-standards-unification",
+      "title": "MCP 生态扩展：联邦代理、嵌入式浏览器与工具自改进",
+      "isNew": false,
+      "categories": [
+        "tech_trend"
+      ],
+      "chain": [
+        {
+          "title": "Cartograph 提出联邦 MCP 代理，优化工具渐进式发现",
+          "kind": "paper",
+          "entity": "Cartograph",
+          "relPrev": null,
+          "sources": [
+            "https://arxiv.org/abs/2609.30293"
+          ]
+        },
+        {
+          "title": "Vercel CEO 展示基于 MCP 的代理嵌入式浏览器",
+          "kind": "oss",
+          "entity": "Vercel",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/rauchg/status/2104428800134013205"
+          ]
+        },
+        {
+          "title": "Google 发布 RRSI，实现代理工具使用自改进",
+          "kind": "paper",
+          "entity": "Google",
+          "relPrev": null,
+          "sources": [
+            "https://x.com/DivyanshT91162/status/2104066323190108646"
+          ]
+        },
+        {
+          "title": "论文提出用 MCP 桥接 LLM 代理与数据空间，实现跨组织数据共享",
+          "kind": "paper",
+          "entity": "研究者",
+          "relPrev": null,
+          "sources": [
+            "https://arxiv.org/abs/2609.30341"
+          ]
+        }
+      ],
+      "narrative": "MCP 生态持续扩展，联邦代理发现、嵌入式浏览器、工具自改进和跨组织数据共享推动代理互操作走向实用。",
+      "carryOver": "代理插件与互操作标准统一：从开放标准到跨厂商协议"
+    }
+  ],
+  "columns": [],
+  "scattered": [
+    {
+      "note": "HybridInfer 论文提出热感知强化学习分层路由，用于设备端、边缘和云端 LLM 推理",
+      "category": "model_dev",
+      "sources": [
+        "https://arxiv.org/abs/2609.30270"
+      ]
+    },
+    {
+      "note": "科普AI代理工作原理：LLM预测token，Harness执行动作",
+      "category": "tech_trend",
+      "sources": [
+        "https://x.com/fakoyaayoola/status/2104594554850525254"
+      ]
+    },
+    {
+      "note": "Jev-Mem发布12页PDF，将Jev定位为AI代理第二大脑，主张遗忘源于未决定保留什么。",
+      "category": "new_thought",
+      "sources": [
+        "https://x.com/N01ennn/status/2104176492896715072"
+      ]
+    },
+    {
+      "note": "企业AI安全概述，涵盖客服平台、内部知识助手、软件开发工具、数据分析、安全平台、自动化工作流等应用类型",
+      "category": "ai_enterprise_os",
+      "sources": [
+        "https://insights.integrity360.com/enterprise-ai-security-how-ai-models-applications-and-agents-work?hs_amp=true"
+      ]
+    },
+    {
+      "note": "AI加速痴呆药物研发与美股开盘下跌，与金融AI无直接关联",
+      "category": "ai_finance",
+      "sources": [
+        "https://www.bbc.com/culture/article/20260924-how-controversial-2000s-paedophile-hunting-show-to-catch-a-predator-rocked-us-tv"
+      ]
+    },
+    {
+      "note": "边缘AI效率研究：HybridInfer设备端LLM推理热约束与ENAS TinyML硬件感知NAS",
+      "category": "papers",
+      "sources": [
+        "https://arxiv.org/abs/2609.30270",
+        "https://arxiv.org/abs/2609.30272"
+      ]
+    },
+    {
+      "note": "Cameron Wolfe 撰写 NVIDIA Nemotron 技术报告笔记，总结其后训练关键主题",
+      "category": "model_dev",
+      "sources": [
+        "https://cameronrwolfe.substack.com/p/nemotron"
+      ]
+    },
+    {
+      "note": "OpenAI征集Codex用户故事，推广Codex Originals计划",
+      "category": "tech_trend",
+      "sources": [
+        "https://openai.com/form/codex-originals"
+      ]
+    },
+    {
+      "note": "论文研究聊天模板切换如何改变LLM自我指涉声音。",
+      "category": "new_thought",
+      "sources": [
+        "https://arxiv.org/abs/2609.25021"
+      ]
+    },
+    {
+      "note": "RunPod提供按秒计费的GPU云服务，分Secure Cloud和Community Cloud，无企业SLA，适合开发、微调与可变推理负载",
+      "category": "ai_enterprise_os",
+      "sources": [
+        "https://spacelift.io/blog/ai-infrastructure-tools"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "h": "今日重点",
+      "bullets": [
+        "审计发现生产 Text-to-SQL 中 LLM-as-Judge 与人类一致性极低（kappa=0.04），并给出修复方案——揭示生产环境中 LLM-as-Judge 几乎不可靠，挑战当前评估范式，对金融、企业等依赖自动评估的场景敲响警钟。"
+      ]
+    },
+    {
+      "h": "主题线 1 · 模型密集发布：Opus 5.5、Sonnet 5.5 与 GPT-6 Astra 税务性能",
+      "bullets": [
+        "Claude Opus 5.5 发布 → Claude Sonnet 5.5 发布，速度提升 30%+ 成本降低 30% → GPT-6 Astra 在税务工作簿任务中比 GPT-5.6 Sol 快两倍 → 开发者用 Claude Code 构建含 48 个 AI 代理的游戏工作室",
+        "Anthropic 同日发布 Opus 5.5 与 Sonnet 5.5，OpenAI 则展示 GPT-6 Astra 在税务任务中的速度优势，同时社区利用 Claude Code 构建多代理游戏工作室，前沿模型竞争与代理应用并行。"
+      ]
+    },
+    {
+      "h": "主题线 2 · 企业代理编排成为架构核心，但 LLM 粘性存疑",
+      "bullets": [
+        "Gartner 预测 2028 年 33% 企业软件包含代理 AI，代理编排被强调为基础架构决策 → 企业快速采用 AI 代理自动化工作流、客服、分析与运营 → Peter Yang 指出 LLM 模型缺乏持久吸引力，暗示企业 AI 工具可能难以建立用户粘性",
+        "Gartner 预测代理 AI 将渗透企业软件，编排成为基础架构决策，企业快速采用代理自动化，但 Peter Yang 警告 LLM 缺乏持久吸引力，企业 AI 落地面临用户粘性挑战。"
+      ]
+    },
+    {
+      "h": "主题线 3 · 金融 AI 落地加速：投行与交易所密集部署",
+      "bullets": [
+        "Cantor Fitzgerald 设立投行 AI 职能 → Beluuga AI 推出投资银行平台 → NSE 准备 AI 驱动市场完整性",
+        "投行与交易所加速部署 AI，Cantor Fitzgerald 设立专门职能，Beluuga AI 推出平台，印度国家证券交易所用 AI 维护市场完整性，金融 AI 落地从交易向合规扩展。"
+      ]
+    },
+    {
+      "h": "主题线 4 · 代理安全与治理：技能攻击、看门狗芯片与问责分歧",
+      "bullets": [
+        "论文揭示技能级联攻击风险，技能系统安全性受关注 → Nvidia 拟为每个 AI 代理配置看门狗芯片 → 讨论 AI 代理意外作恶时谁应负责 → Turck 指出研究者与非研究者对 AI 失控看法两极 → Tarun 警示代理生产率收益或被用户惰性抵消",
+        "从技能攻击到看门狗芯片，代理安全引发硬件级防御；问责讨论与失控认知两极分化，代理社会影响从效率惰性到市场竞争全面展开。"
+      ]
+    },
+    {
+      "h": "主题线 5 · MCP 生态扩展：联邦代理、嵌入式浏览器与工具自改进",
+      "bullets": [
+        "Cartograph 提出联邦 MCP 代理，优化工具渐进式发现 → Vercel CEO 展示基于 MCP 的代理嵌入式浏览器 → Google 发布 RRSI，实现代理工具使用自改进 → 论文提出用 MCP 桥接 LLM 代理与数据空间，实现跨组织数据共享",
+        "MCP 生态持续扩展，联邦代理发现、嵌入式浏览器、工具自改进和跨组织数据共享推动代理互操作走向实用。"
+      ]
+    },
+    {
+      "h": "零散信号",
+      "bullets": [
+        "HybridInfer 论文提出热感知强化学习分层路由，用于设备端、边缘和云端 LLM 推理",
+        "科普AI代理工作原理：LLM预测token，Harness执行动作",
+        "Jev-Mem发布12页PDF，将Jev定位为AI代理第二大脑，主张遗忘源于未决定保留什么。",
+        "企业AI安全概述，涵盖客服平台、内部知识助手、软件开发工具、数据分析、安全平台、自动化工作流等应用类型",
+        "AI加速痴呆药物研发与美股开盘下跌，与金融AI无直接关联",
+        "边缘AI效率研究：HybridInfer设备端LLM推理热约束与ENAS TinyML硬件感知NAS",
+        "Cameron Wolfe 撰写 NVIDIA Nemotron 技术报告笔记，总结其后训练关键主题",
+        "OpenAI征集Codex用户故事，推广Codex Originals计划",
+        "论文研究聊天模板切换如何改变LLM自我指涉声音。",
+        "RunPod提供按秒计费的GPU云服务，分Secure Cloud和Community Cloud，无企业SLA，适合开发、微调与可变推理负载"
+      ]
+    }
+  ],
+  "ev": [
+    {
+      "who": "web",
+      "en": "https://www.anthropic.com/claude-opus-5-5",
+      "zh": "https://www.anthropic.com/claude-opus-5-5",
+      "url": "https://www.anthropic.com/claude-opus-5-5",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://simonwillison.net/2026/Sep/28/claude-sonnet-5-5/",
+      "zh": "https://simonwillison.net/2026/Sep/28/claude-sonnet-5-5/",
+      "url": "https://simonwillison.net/2026/Sep/28/claude-sonnet-5-5/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://openai.com/index/basis-tax-workbook-with-astra",
+      "zh": "https://openai.com/index/basis-tax-workbook-with-astra",
+      "url": "https://openai.com/index/basis-tax-workbook-with-astra",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.facebook.com/100083241103501/posts/a-developer-used-claude-inside-cursor-to-build-a-2-minute-journey-through-video-/1089914517126575",
+      "zh": "https://www.facebook.com/100083241103501/posts/a-developer-used-claude-inside-cursor-to-build-a-2-minute-journey-through-video-/1089914517126575",
+      "url": "https://www.facebook.com/100083241103501/posts/a-developer-used-claude-inside-cursor-to-build-a-2-minute-journey-through-video-/1089914517126575",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.automationanywhere.com/company/blog/agentic-orchestration-guide",
+      "zh": "https://www.automationanywhere.com/company/blog/agentic-orchestration-guide",
+      "url": "https://www.automationanywhere.com/company/blog/agentic-orchestration-guide",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.facebook.com/ImpactQA/posts/40-of-enterprise-applications-are-expected-to-embed-task-specific-ai-agents-by-t/1974051414046279",
+      "zh": "https://www.facebook.com/ImpactQA/posts/40-of-enterprise-applications-are-expected-to-embed-task-specific-ai-agents-by-t/1974051414046279",
+      "url": "https://www.facebook.com/ImpactQA/posts/40-of-enterprise-applications-are-expected-to-embed-task-specific-ai-agents-by-t/1974051414046279",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/petergyang/status/2104414495376564517",
+      "zh": "https://x.com/petergyang/status/2104414495376564517",
+      "url": "https://x.com/petergyang/status/2104414495376564517",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.efinancialcareers.fr/en/jobs-United_States-New_York-AI_Product__Engineering_Associate_Investment_Banking.id24815125",
+      "zh": "https://www.efinancialcareers.fr/en/jobs-United_States-New_York-AI_Product__Engineering_Associate_Investment_Banking.id24815125",
+      "url": "https://www.efinancialcareers.fr/en/jobs-United_States-New_York-AI_Product__Engineering_Associate_Investment_Banking.id24815125",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.facebook.com/GlobalFinTechSeries/posts/beluuga-ai-launches-ai-powered-investment-banking-platform-for-japan-ma-financia/1571891788284947",
+      "zh": "https://www.facebook.com/GlobalFinTechSeries/posts/beluuga-ai-launches-ai-powered-investment-banking-platform-for-japan-ma-financia/1571891788284947",
+      "url": "https://www.facebook.com/GlobalFinTechSeries/posts/beluuga-ai-launches-ai-powered-investment-banking-platform-for-japan-ma-financia/1571891788284947",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.linkedin.com/posts/business-today-india_nse-ai-artificialintelligence-activity-7508860121171591168-gEno",
+      "zh": "https://www.linkedin.com/posts/business-today-india_nse-ai-artificialintelligence-activity-7508860121171591168-gEno",
+      "url": "https://www.linkedin.com/posts/business-today-india_nse-ai-artificialintelligence-activity-7508860121171591168-gEno",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2609.30383",
+      "zh": "https://arxiv.org/abs/2609.30383",
+      "url": "https://arxiv.org/abs/2609.30383",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.cnbc.com/2026/09/28/nvidia-releases.html",
+      "zh": "https://www.cnbc.com/2026/09/28/nvidia-releases.html",
+      "url": "https://www.cnbc.com/2026/09/28/nvidia-releases.html",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://blog.greenpants.net/ai-accountability",
+      "zh": "https://blog.greenpants.net/ai-accountability",
+      "url": "https://blog.greenpants.net/ai-accountability",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://news.ycombinator.com/item?id=49873303",
+      "zh": "https://news.ycombinator.com/item?id=49873303",
+      "url": "https://news.ycombinator.com/item?id=49873303",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/mattturck/status/2104331402385002831",
+      "zh": "https://x.com/mattturck/status/2104331402385002831",
+      "url": "https://x.com/mattturck/status/2104331402385002831",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/trq212/status/2104273243599405395",
+      "zh": "https://x.com/trq212/status/2104273243599405395",
+      "url": "https://x.com/trq212/status/2104273243599405395",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2609.30293",
+      "zh": "https://arxiv.org/abs/2609.30293",
+      "url": "https://arxiv.org/abs/2609.30293",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/rauchg/status/2104428800134013205",
+      "zh": "https://x.com/rauchg/status/2104428800134013205",
+      "url": "https://x.com/rauchg/status/2104428800134013205",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/DivyanshT91162/status/2104066323190108646",
+      "zh": "https://x.com/DivyanshT91162/status/2104066323190108646",
+      "url": "https://x.com/DivyanshT91162/status/2104066323190108646",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2609.30341",
+      "zh": "https://arxiv.org/abs/2609.30341",
+      "url": "https://arxiv.org/abs/2609.30341",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2609.30290",
+      "zh": "https://arxiv.org/abs/2609.30290",
+      "url": "https://arxiv.org/abs/2609.30290",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2609.30270",
+      "zh": "https://arxiv.org/abs/2609.30270",
+      "url": "https://arxiv.org/abs/2609.30270",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://cameronrwolfe.substack.com/p/nemotron",
+      "zh": "https://cameronrwolfe.substack.com/p/nemotron",
+      "url": "https://cameronrwolfe.substack.com/p/nemotron",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/fakoyaayoola/status/2104594554850525254",
+      "zh": "https://x.com/fakoyaayoola/status/2104594554850525254",
+      "url": "https://x.com/fakoyaayoola/status/2104594554850525254",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://openai.com/form/codex-originals",
+      "zh": "https://openai.com/form/codex-originals",
+      "url": "https://openai.com/form/codex-originals",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/",
+      "zh": "https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/",
+      "url": "https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/",
+      "zh": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/",
+      "url": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/N01ennn/status/2104176492896715072",
+      "zh": "https://x.com/N01ennn/status/2104176492896715072",
+      "url": "https://x.com/N01ennn/status/2104176492896715072",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2609.25021",
+      "zh": "https://arxiv.org/abs/2609.25021",
+      "url": "https://arxiv.org/abs/2609.25021",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://stateofutopia.com/experiments/microllmlab",
+      "zh": "https://stateofutopia.com/experiments/microllmlab",
+      "url": "https://stateofutopia.com/experiments/microllmlab",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/RishiUvaach/status/2104564283971371286",
+      "zh": "https://x.com/RishiUvaach/status/2104564283971371286",
+      "url": "https://x.com/RishiUvaach/status/2104564283971371286",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/nikunj/status/2104261968043663591",
+      "zh": "https://x.com/nikunj/status/2104261968043663591",
+      "url": "https://x.com/nikunj/status/2104261968043663591",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://x.com/systemdesignone/status/2104558798790590653",
+      "zh": "https://x.com/systemdesignone/status/2104558798790590653",
+      "url": "https://x.com/systemdesignone/status/2104558798790590653",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://blog.nilesh.io/post/llms-and-jobs",
+      "zh": "https://blog.nilesh.io/post/llms-and-jobs",
+      "url": "https://blog.nilesh.io/post/llms-and-jobs",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://insights.integrity360.com/enterprise-ai-security-how-ai-models-applications-and-agents-work?hs_amp=true",
+      "zh": "https://insights.integrity360.com/enterprise-ai-security-how-ai-models-applications-and-agents-work?hs_amp=true",
+      "url": "https://insights.integrity360.com/enterprise-ai-security-how-ai-models-applications-and-agents-work?hs_amp=true",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://spacelift.io/blog/ai-infrastructure-tools",
+      "zh": "https://spacelift.io/blog/ai-infrastructure-tools",
+      "url": "https://spacelift.io/blog/ai-infrastructure-tools",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.bitdeer.ai/en/blog",
+      "zh": "https://www.bitdeer.ai/en/blog",
+      "url": "https://www.bitdeer.ai/en/blog",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.bbc.com/culture/article/20260924-how-controversial-2000s-paedophile-hunting-show-to-catch-a-predator-rocked-us-tv",
+      "zh": "https://www.bbc.com/culture/article/20260924-how-controversial-2000s-paedophile-hunting-show-to-catch-a-predator-rocked-us-tv",
+      "url": "https://www.bbc.com/culture/article/20260924-how-controversial-2000s-paedophile-hunting-show-to-catch-a-predator-rocked-us-tv",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.bbc.com/travel/article/20260923-the-worlds-top-cities-for-2026-and-why-they-stand-out",
+      "zh": "https://www.bbc.com/travel/article/20260923-the-worlds-top-cities-for-2026-and-why-they-stand-out",
+      "url": "https://www.bbc.com/travel/article/20260923-the-worlds-top-cities-for-2026-and-why-they-stand-out",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://sundayguardianlive.com/trending/school-assembly-news-headlines-today-24-september-top-national-business-news-sports-news-education-news-science-tech-news-weather-news-world-news-with-weather-updates-thought-of-the-day-291157",
+      "zh": "https://sundayguardianlive.com/trending/school-assembly-news-headlines-today-24-september-top-national-business-news-sports-news-education-news-science-tech-news-weather-news-world-news-with-weather-updates-thought-of-the-day-291157",
+      "url": "https://sundayguardianlive.com/trending/school-assembly-news-headlines-today-24-september-top-national-business-news-sports-news-education-news-science-tech-news-weather-news-world-news-with-weather-updates-thought-of-the-day-291157",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://www.linkedin.com/posts/umairahmadpm_%F0%9D%90%80%F0%9D%90%88-%F0%9D%90%9F%F0%9D%90%A2%F0%9D%90%AB%F0%9D%90%AC%F0%9D%90%AD-%F0%9D%90%9C%F0%9D%90%A8%F0%9D%90%A6%F0%9D%90%A9%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%A2%F0%9D%90%9E%F0%9D%90%AC-%F0%9D%90%9A%F0%9D%90%AB%F0%9D%90%9E-activity-7508490907344756737-wiSf",
+      "zh": "https://www.linkedin.com/posts/umairahmadpm_%F0%9D%90%80%F0%9D%90%88-%F0%9D%90%9F%F0%9D%90%A2%F0%9D%90%AB%F0%9D%90%AC%F0%9D%90%AD-%F0%9D%90%9C%F0%9D%90%A8%F0%9D%90%A6%F0%9D%90%A9%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%A2%F0%9D%90%9E%F0%9D%90%AC-%F0%9D%90%9A%F0%9D%90%AB%F0%9D%90%9E-activity-7508490907344756737-wiSf",
+      "url": "https://www.linkedin.com/posts/umairahmadpm_%F0%9D%90%80%F0%9D%90%88-%F0%9D%90%9F%F0%9D%90%A2%F0%9D%90%AB%F0%9D%90%AC%F0%9D%90%AD-%F0%9D%90%9C%F0%9D%90%A8%F0%9D%90%A6%F0%9D%90%A9%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%A2%F0%9D%90%9E%F0%9D%90%AC-%F0%9D%90%9A%F0%9D%90%AB%F0%9D%90%9E-activity-7508490907344756737-wiSf",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2609.30272",
+      "zh": "https://arxiv.org/abs/2609.30272",
+      "url": "https://arxiv.org/abs/2609.30272",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2609.30271",
+      "zh": "https://arxiv.org/abs/2609.30271",
+      "url": "https://arxiv.org/abs/2609.30271",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2609.30276",
+      "zh": "https://arxiv.org/abs/2609.30276",
+      "url": "https://arxiv.org/abs/2609.30276",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2609.30273",
+      "zh": "https://arxiv.org/abs/2609.30273",
+      "url": "https://arxiv.org/abs/2609.30273",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2609.30275",
+      "zh": "https://arxiv.org/abs/2609.30275",
+      "url": "https://arxiv.org/abs/2609.30275",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2609.30277",
+      "zh": "https://arxiv.org/abs/2609.30277",
+      "url": "https://arxiv.org/abs/2609.30277",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2609.30279",
+      "zh": "https://arxiv.org/abs/2609.30279",
+      "url": "https://arxiv.org/abs/2609.30279",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2609.30287",
+      "zh": "https://arxiv.org/abs/2609.30287",
+      "url": "https://arxiv.org/abs/2609.30287",
+      "pt": "自动聚合线索"
+    },
+    {
+      "who": "web",
+      "en": "https://arxiv.org/abs/2609.30288",
+      "zh": "https://arxiv.org/abs/2609.30288",
+      "url": "https://arxiv.org/abs/2609.30288",
+      "pt": "自动聚合线索"
+    }
+  ],
+  "graphDelta": {
+    "entities": 24,
+    "events": 53,
+    "relations": 34,
+    "storylines": 5
+  }
+}
