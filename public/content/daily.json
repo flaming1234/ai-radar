@@ -9,6 +9,829 @@
     "unverified": true,
     "format": "storyline",
     "synthesis": "two-pass-v2",
+    "aggregatedAt": "2026-10-01",
+    "title": "AI 每日雷达 · 2026-10-01",
+    "time": "今天",
+    "sub": "前沿模型密集发布，但开源路由与后训练路径显示成本/性能竞争不再只看旗舰模型。",
+    "summary": "今日主题是前沿模型发布与代理工程化同步提速：一边是 Gemini 4 Argon、GPT-6 Astra 等旗舰模型密集亮相，另一边技能渐进披露、企业部署指南和金融代理护栏同时成形。对做 Hyle/代理运行时的人而言，始终在线 Dots 把控制权、问责与共享安全标准推到产品层面，技能与 MCP 生态正在固化工具链标准。对公司 OS 团队来说，端到端工程化、可移植基础设施和边缘部署说明“模型让位于代理”正在成为真实架构决策。金融 AI 则需要同时处理交易数据延迟、策略回测和方言越狱等配套风险。整体看，2026-10-01 的信号表明代理落地竞争已从单点模型能力转向工程闭环、标准与安全。",
+    "bullets": [
+      "前沿模型密集发布，但开源路由与后训练路径显示成本/性能竞争不再只看旗舰模型。",
+      "技能渐进披露与 MCP/通用框架登榜，代理工具链标准层开始固化。",
+      "企业 AI 代理落地重心从编排口号转向领域上下文、可移植基础设施与边缘部署的端到端工程化。",
+      "金融 AI 配套出现书籍与 FinTrace 护栏，但交易延迟和越狱攻击仍是落地短板。",
+      "始终在线 Dots 发布把代理控制权、问责与共享安全标准推向台前。"
+    ],
+    "spotlight": [
+      {
+        "quote": "OpenAI DevDay 2026发布GPT-6 Astra等20余项公告",
+        "why": "定义新一代编码代理性能标杆，并让 OpenAI 与 Claude/Gemini 的模型竞争进一步升温。",
+        "entity": "OpenAI",
+        "sources": [
+          "https://openai.com/index/devday-2026-recap"
+        ]
+      },
+      {
+        "quote": "Google DeepMind 发布 Gemini 4 Argon 前沿模型",
+        "why": "Google 直接进入顶级模型竞争，前沿格局从双雄变为多极。",
+        "entity": "Google DeepMind",
+        "sources": [
+          "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/"
+        ]
+      },
+      {
+        "quote": "Vercel AI SDK周下载量达3000万",
+        "why": "标志 AI 开发工具被大规模采用，是代理与模型能力向下游渗透的方向性指标。",
+        "entity": "Vercel",
+        "sources": [
+          "https://x.com/rauchg/status/2105043144975011982"
+        ]
+      }
+    ],
+    "storylines": [
+      {
+        "id": "domain-model-dev",
+        "title": "前沿模型竞争与后训练替代路径：Claude 提速、开源路由与 Kimi K4",
+        "isNew": false,
+        "categories": [
+          "model_dev",
+          "tech_trend"
+        ],
+        "chain": [
+          {
+            "title": "Claude Sonnet 5.5：Tarun 暗示通过提示让 Claude “更勇敢”",
+            "kind": "debate",
+            "entity": "Anthropic/Tarun",
+            "relPrev": null,
+            "sources": [
+              "https://x.com/trq212/status/2105065127892734076"
+            ]
+          },
+          {
+            "title": "Claude Sonnet 5.5：Tarun 引用 Anthropic 官方博客解释 Claude 提速原理",
+            "kind": "update",
+            "entity": "Anthropic/Tarun",
+            "relPrev": null,
+            "sources": [
+              "https://x.com/trq212/status/2105065175711924492"
+            ]
+          },
+          {
+            "title": "开源模型路由方案声称达到 Astra 级编码代理性能",
+            "kind": "oss",
+            "entity": "Model-Optimizer",
+            "relPrev": null,
+            "sources": [
+              "https://news.ycombinator.com/item?id=49911500"
+            ]
+          },
+          {
+            "title": "Sebastian Raschka 强调基于开源模型的后训练优化路径",
+            "kind": "paper",
+            "entity": "Sebastian Raschka",
+            "relPrev": null,
+            "sources": [
+              "https://sebastianraschka.com/blog/2026/focusing-on-llm-post-training.html"
+            ]
+          }
+        ],
+        "narrative": "Claude Sonnet 5.5 提速的官方解释与开源路由、后训练优化同步浮现。模型竞争不再只有前沿发布，开始出现成本与性能的多条替代路径。",
+        "carryOver": "延续 9 月底 Claude Sonnet 5.5 与模型竞争升级一线，节后进一步揭示提速机制与开源替代路径。"
+      },
+      {
+        "id": "agent-standards-unification",
+        "title": "技能渐进披露成代理工具链共识，MCP 与通用框架登榜",
+        "isNew": false,
+        "categories": [
+          "tech_trend",
+          "gh_trending"
+        ],
+        "chain": [
+          {
+            "title": "James Ward讲解Agent Skills的渐进式披露机制",
+            "kind": "debate",
+            "entity": "James Ward/SSW",
+            "relPrev": null,
+            "sources": [
+              "https://www.youtube.com/watch?v=Mc-Lk7sF3ZM"
+            ]
+          },
+          {
+            "title": "iliaal/ai-skills策展AI编码助手技能集合",
+            "kind": "oss",
+            "entity": "iliaal",
+            "relPrev": null,
+            "sources": [
+              "https://github.com/iliaal/ai-skills"
+            ]
+          },
+          {
+            "title": "Layer Agent Skills提供不硬编码模型ID的300+创意技能",
+            "kind": "oss",
+            "entity": "Layer",
+            "relPrev": null,
+            "sources": [
+              "https://layer.ai/agent-skills"
+            ]
+          },
+          {
+            "title": "SSW.Rules厘清代理、子代理、技能与MCP的使用场景",
+            "kind": "debate",
+            "entity": "SSW.Rules",
+            "relPrev": null,
+            "sources": [
+              "https://www.ssw.com.au/rules/when-to-use-skills-agents-subagents-mcps-plugins"
+            ]
+          },
+          {
+            "title": "Model Context Protocol 官方服务器仓库登上 GitHub trending",
+            "kind": "oss",
+            "entity": "MCP",
+            "relPrev": null,
+            "sources": [
+              "https://github.com/modelcontextprotocol/servers"
+            ]
+          },
+          {
+            "title": "openclaw 通用 AI 代理框架登上 GitHub trending",
+            "kind": "oss",
+            "entity": "openclaw",
+            "relPrev": null,
+            "sources": [
+              "https://github.com/openclaw/openclaw"
+            ]
+          }
+        ],
+        "narrative": "技能不再只是模型能力，而是通过渐进披露、可复用技能库和代理分工进入工具链标准层；MCP 与通用代理框架登榜说明基础设施竞争同步展开。",
+        "carryOver": "延续 9 月底 MCP 生态扩展一线，今日焦点转向技能渐进式披露与通用代理框架登榜。"
+      },
+      {
+        "id": "domain-ai-enterprise-os",
+        "title": "企业 AI 代理从编排口号转向端到端工程化",
+        "isNew": false,
+        "categories": [
+          "ai_enterprise_os"
+        ],
+        "chain": [
+          {
+            "title": "企业AI代理部署关键教训：领域上下文、严格评估和人机协作重于模型规模",
+            "kind": "debate",
+            "entity": "Agentic AI Orchestration",
+            "relPrev": null,
+            "sources": [
+              "https://x.com/data_weekly/status/2105417569905906147"
+            ]
+          },
+          {
+            "title": "Xicom 发布生产就绪企业AI系统构建指南",
+            "kind": "paper",
+            "entity": "Xicom",
+            "relPrev": null,
+            "sources": [
+              "https://www.xicom.biz/blog/build-production-ready-enterprise-ai-systems"
+            ]
+          },
+          {
+            "title": "AI Dev Factory 平台发布，提供跨环境可移植AI开发与运维一致性",
+            "kind": "release",
+            "entity": "AI Dev Factory",
+            "relPrev": null,
+            "sources": [
+              "https://www.anaconda.com/blog/build-ai-dev-factory-your-way"
+            ]
+          },
+          {
+            "title": "边缘AI从开发到部署流线化趋势分析",
+            "kind": "paper",
+            "entity": "Edge AI Deployment",
+            "relPrev": null,
+            "sources": [
+              "https://www.facebook.com/Advantech.Corp/posts/-streamlining-edge-ai-from-development-to-deploymentas-edge-ai-adoption-accelera/1672718188197338"
+            ]
+          },
+          {
+            "title": "企业AI基础设施设计指导：部署模型决定物理基础设施需求",
+            "kind": "paper",
+            "entity": "Enterprise AI Infrastructure",
+            "relPrev": null,
+            "sources": [
+              "https://www.vertiv.com/4a6042/globalassets/documents/reports/vertiv-ai-archetypes_report_global-english_sl-80527_web.pdf"
+            ]
+          }
+        ],
+        "narrative": "企业 AI 代理落地正在从模型为中心转向领域上下文、评估闭环、可移植运行时和边缘部署的端到端工程化，部署模型开始反向决定基础设施设计。",
+        "carryOver": "延续 9 月底企业 AI 代理编排成为架构核心一线，今日从编排讨论转入端到端工程化细节。"
+      },
+      {
+        "id": "domain-ai-finance",
+        "title": "金融 AI 代理配套与交易基础设施争议升温",
+        "isNew": false,
+        "categories": [
+          "ai_finance",
+          "papers"
+        ],
+        "chain": [
+          {
+            "title": "Packt Publishing发布《Building AI Agents for Finance》书籍",
+            "kind": "release",
+            "entity": "Packt Publishing",
+            "relPrev": null,
+            "sources": [
+              "https://x.com/KirkDBorne/status/2104795976850370939"
+            ]
+          },
+          {
+            "title": "FinTrace开源发布金融LLM代理时间点护栏",
+            "kind": "oss",
+            "entity": "FinTrace",
+            "relPrev": null,
+            "sources": [
+              "https://github.com/FredXing1/FinTrace"
+            ]
+          },
+          {
+            "title": "社区讨论算法交易信号定义与策略回测",
+            "kind": "debate",
+            "entity": "量化社区",
+            "relPrev": null,
+            "sources": [
+              "https://www.reddit.com/r/algotrading/comments/1wtan04/how_can_we_mathematically_define_a_correct",
+              "https://www.reddit.com/r/algotrading/comments/1wtis5p/trading_system_for_nq"
+            ]
+          },
+          {
+            "title": "交易者讨论自动化交易经纪商数据延迟",
+            "kind": "debate",
+            "entity": "交易者社区",
+            "relPrev": null,
+            "sources": [
+              "https://www.reddit.com/r/algotrading/comments/1wtvpxg/what_broker_do_you_use_for_automated_trading"
+            ]
+          },
+          {
+            "title": "论文研究方言越狱攻击对LLM拒绝行为的影响，可能波及金融LLM代理安全",
+            "kind": "paper",
+            "entity": "金融LLM代理安全",
+            "relPrev": null,
+            "sources": [
+              "https://arxiv.org/abs/2609.31664"
+            ]
+          }
+        ],
+        "narrative": "金融 AI 代理的书籍与开源护栏同步出现，但算法交易信号、经纪商数据延迟和方言越狱攻击提醒，配套工程与安全仍是落地短板。",
+        "carryOver": "延续 9 月 24 日金融 AI 多重信号一线，从银行警惕延伸至金融代理配套与交易基础设施争议。"
+      },
+      {
+        "id": "agent-reliability-crisis",
+        "title": "始终在线代理 Dots 发布，控制与问责标准被推到台前",
+        "isNew": false,
+        "categories": [
+          "new_thought",
+          "hyle"
+        ],
+        "chain": [
+          {
+            "title": "OpenAI发布始终在线AI代理Dots",
+            "kind": "release",
+            "entity": "OpenAI/Dots",
+            "relPrev": null,
+            "sources": [
+              "https://x.com/sama/status/2104995014208258235"
+            ]
+          },
+          {
+            "title": "AI代理控制与问责引发辩论",
+            "kind": "debate",
+            "entity": "AI Agent Accountability",
+            "relPrev": null,
+            "sources": [
+              "https://x.com/Grand_father007/status/2105399241208475880"
+            ]
+          },
+          {
+            "title": "Box CEO提出行业共享AI安全标准",
+            "kind": "debate",
+            "entity": "Box CEO",
+            "relPrev": null,
+            "sources": [
+              "https://x.com/levie/status/2105111520913039530"
+            ]
+          },
+          {
+            "title": "SentinelOne发布安全代理评估方法",
+            "kind": "paper",
+            "entity": "SentinelOne",
+            "relPrev": null,
+            "sources": [
+              "https://x.com/SentinelOne/status/2105434795203260528"
+            ]
+          }
+        ],
+        "narrative": "始终在线代理 Dots 把代理控制权、问责和行业安全标准从抽象治理推向具体产品层面，安全评估方法成为补上闭环的关键。",
+        "carryOver": "延续 9 月 29 日代理问责分歧一线，今日聚焦始终在线 Dots 发布后控制与共享安全标准。"
+      }
+    ],
+    "columns": [],
+    "scattered": [
+      {
+        "note": "论文探讨是否可用非人类可读文本进行 LLM 微调",
+        "category": "model_dev",
+        "sources": [
+          "https://arxiv.org/abs/2609.35868"
+        ]
+      },
+      {
+        "note": "Junie比较多个AI编码代理，Claude Code等被提及",
+        "category": "tech_trend",
+        "sources": [
+          "https://junie.jetbrains.com/blog/best-ai-coding-agents"
+        ]
+      },
+      {
+        "note": "开发者用Opus 5.5生成营销网站",
+        "category": "new_thought",
+        "sources": [
+          "https://x.com/zarazhangrui/status/2105096296831017078"
+        ]
+      },
+      {
+        "note": "AI编程代理对比指南（Junie）列出Claude Code等工具，提供开发侧选型参考",
+        "category": "ai_enterprise_os",
+        "sources": [
+          "https://junie.jetbrains.com/blog/best-ai-coding-agents"
+        ]
+      },
+      {
+        "note": "用户质疑Sonic AI外汇交易系统的真实性",
+        "category": "ai_finance",
+        "sources": [
+          "https://www.reddit.com/r/algotrading/comments/1wu08gb/did_somebody_look_at_sonic_ai_forex_xauusd"
+        ]
+      },
+      {
+        "note": "文献引导的描述符框架用于过滤材料成分搜索空间",
+        "category": "papers",
+        "sources": [
+          "https://arxiv.org/abs/2609.31650"
+        ]
+      },
+      {
+        "note": "Junie 网站对比各类 AI 编码代理工具",
+        "category": "model_dev",
+        "sources": [
+          "https://junie.jetbrains.com/blog/best-ai-coding-agents"
+        ]
+      },
+      {
+        "note": "arXiv论文分离LLM harness的覆盖度与专业化，提出受控评估",
+        "category": "tech_trend",
+        "sources": [
+          "https://arxiv.org/abs/2609.35873"
+        ]
+      },
+      {
+        "note": "OpenAI Dev Day社交活动",
+        "category": "new_thought",
+        "sources": [
+          "https://x.com/petergyang/status/2105114973819244676"
+        ]
+      },
+      {
+        "note": "分布情感建模与异常检测用于消费者投诉评估",
+        "category": "papers",
+        "sources": [
+          "https://arxiv.org/abs/2609.31653"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "h": "今日重点",
+        "bullets": [
+          "OpenAI DevDay 2026发布GPT-6 Astra等20余项公告——定义新一代编码代理性能标杆，并让 OpenAI 与 Claude/Gemini 的模型竞争进一步升温。",
+          "Google DeepMind 发布 Gemini 4 Argon 前沿模型——Google 直接进入顶级模型竞争，前沿格局从双雄变为多极。",
+          "Vercel AI SDK周下载量达3000万——标志 AI 开发工具被大规模采用，是代理与模型能力向下游渗透的方向性指标。"
+        ]
+      },
+      {
+        "h": "主题线 1 · 前沿模型竞争与后训练替代路径：Claude 提速、开源路由与 Kimi K4",
+        "bullets": [
+          "Claude Sonnet 5.5：Tarun 暗示通过提示让 Claude “更勇敢” → Claude Sonnet 5.5：Tarun 引用 Anthropic 官方博客解释 Claude 提速原理 → 开源模型路由方案声称达到 Astra 级编码代理性能 → Sebastian Raschka 强调基于开源模型的后训练优化路径",
+          "Claude Sonnet 5.5 提速的官方解释与开源路由、后训练优化同步浮现。模型竞争不再只有前沿发布，开始出现成本与性能的多条替代路径。"
+        ]
+      },
+      {
+        "h": "主题线 2 · 技能渐进披露成代理工具链共识，MCP 与通用框架登榜",
+        "bullets": [
+          "James Ward讲解Agent Skills的渐进式披露机制 → iliaal/ai-skills策展AI编码助手技能集合 → Layer Agent Skills提供不硬编码模型ID的300+创意技能 → SSW.Rules厘清代理、子代理、技能与MCP的使用场景 → Model Context Protocol 官方服务器仓库登上 GitHub trending → openclaw 通用 AI 代理框架登上 GitHub trending",
+          "技能不再只是模型能力，而是通过渐进披露、可复用技能库和代理分工进入工具链标准层；MCP 与通用代理框架登榜说明基础设施竞争同步展开。"
+        ]
+      },
+      {
+        "h": "主题线 3 · 企业 AI 代理从编排口号转向端到端工程化",
+        "bullets": [
+          "企业AI代理部署关键教训：领域上下文、严格评估和人机协作重于模型规模 → Xicom 发布生产就绪企业AI系统构建指南 → AI Dev Factory 平台发布，提供跨环境可移植AI开发与运维一致性 → 边缘AI从开发到部署流线化趋势分析 → 企业AI基础设施设计指导：部署模型决定物理基础设施需求",
+          "企业 AI 代理落地正在从模型为中心转向领域上下文、评估闭环、可移植运行时和边缘部署的端到端工程化，部署模型开始反向决定基础设施设计。"
+        ]
+      },
+      {
+        "h": "主题线 4 · 金融 AI 代理配套与交易基础设施争议升温",
+        "bullets": [
+          "Packt Publishing发布《Building AI Agents for Finance》书籍 → FinTrace开源发布金融LLM代理时间点护栏 → 社区讨论算法交易信号定义与策略回测 → 交易者讨论自动化交易经纪商数据延迟 → 论文研究方言越狱攻击对LLM拒绝行为的影响，可能波及金融LLM代理安全",
+          "金融 AI 代理的书籍与开源护栏同步出现，但算法交易信号、经纪商数据延迟和方言越狱攻击提醒，配套工程与安全仍是落地短板。"
+        ]
+      },
+      {
+        "h": "主题线 5 · 始终在线代理 Dots 发布，控制与问责标准被推到台前",
+        "bullets": [
+          "OpenAI发布始终在线AI代理Dots → AI代理控制与问责引发辩论 → Box CEO提出行业共享AI安全标准 → SentinelOne发布安全代理评估方法",
+          "始终在线代理 Dots 把代理控制权、问责和行业安全标准从抽象治理推向具体产品层面，安全评估方法成为补上闭环的关键。"
+        ]
+      },
+      {
+        "h": "零散信号",
+        "bullets": [
+          "论文探讨是否可用非人类可读文本进行 LLM 微调",
+          "Junie比较多个AI编码代理，Claude Code等被提及",
+          "开发者用Opus 5.5生成营销网站",
+          "AI编程代理对比指南（Junie）列出Claude Code等工具，提供开发侧选型参考",
+          "用户质疑Sonic AI外汇交易系统的真实性",
+          "文献引导的描述符框架用于过滤材料成分搜索空间",
+          "Junie 网站对比各类 AI 编码代理工具",
+          "arXiv论文分离LLM harness的覆盖度与专业化，提出受控评估",
+          "OpenAI Dev Day社交活动",
+          "分布情感建模与异常检测用于消费者投诉评估"
+        ]
+      }
+    ],
+    "ev": [
+      {
+        "who": "web",
+        "en": "https://x.com/trq212/status/2105065127892734076",
+        "zh": "https://x.com/trq212/status/2105065127892734076",
+        "url": "https://x.com/trq212/status/2105065127892734076",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/trq212/status/2105065175711924492",
+        "zh": "https://x.com/trq212/status/2105065175711924492",
+        "url": "https://x.com/trq212/status/2105065175711924492",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://news.ycombinator.com/item?id=49911500",
+        "zh": "https://news.ycombinator.com/item?id=49911500",
+        "url": "https://news.ycombinator.com/item?id=49911500",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://sebastianraschka.com/blog/2026/focusing-on-llm-post-training.html",
+        "zh": "https://sebastianraschka.com/blog/2026/focusing-on-llm-post-training.html",
+        "url": "https://sebastianraschka.com/blog/2026/focusing-on-llm-post-training.html",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.youtube.com/watch?v=Mc-Lk7sF3ZM",
+        "zh": "https://www.youtube.com/watch?v=Mc-Lk7sF3ZM",
+        "url": "https://www.youtube.com/watch?v=Mc-Lk7sF3ZM",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://github.com/iliaal/ai-skills",
+        "zh": "https://github.com/iliaal/ai-skills",
+        "url": "https://github.com/iliaal/ai-skills",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://layer.ai/agent-skills",
+        "zh": "https://layer.ai/agent-skills",
+        "url": "https://layer.ai/agent-skills",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.ssw.com.au/rules/when-to-use-skills-agents-subagents-mcps-plugins",
+        "zh": "https://www.ssw.com.au/rules/when-to-use-skills-agents-subagents-mcps-plugins",
+        "url": "https://www.ssw.com.au/rules/when-to-use-skills-agents-subagents-mcps-plugins",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://github.com/modelcontextprotocol/servers",
+        "zh": "https://github.com/modelcontextprotocol/servers",
+        "url": "https://github.com/modelcontextprotocol/servers",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://github.com/openclaw/openclaw",
+        "zh": "https://github.com/openclaw/openclaw",
+        "url": "https://github.com/openclaw/openclaw",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/data_weekly/status/2105417569905906147",
+        "zh": "https://x.com/data_weekly/status/2105417569905906147",
+        "url": "https://x.com/data_weekly/status/2105417569905906147",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.xicom.biz/blog/build-production-ready-enterprise-ai-systems",
+        "zh": "https://www.xicom.biz/blog/build-production-ready-enterprise-ai-systems",
+        "url": "https://www.xicom.biz/blog/build-production-ready-enterprise-ai-systems",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.anaconda.com/blog/build-ai-dev-factory-your-way",
+        "zh": "https://www.anaconda.com/blog/build-ai-dev-factory-your-way",
+        "url": "https://www.anaconda.com/blog/build-ai-dev-factory-your-way",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.facebook.com/Advantech.Corp/posts/-streamlining-edge-ai-from-development-to-deploymentas-edge-ai-adoption-accelera/1672718188197338",
+        "zh": "https://www.facebook.com/Advantech.Corp/posts/-streamlining-edge-ai-from-development-to-deploymentas-edge-ai-adoption-accelera/1672718188197338",
+        "url": "https://www.facebook.com/Advantech.Corp/posts/-streamlining-edge-ai-from-development-to-deploymentas-edge-ai-adoption-accelera/1672718188197338",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.vertiv.com/4a6042/globalassets/documents/reports/vertiv-ai-archetypes_report_global-english_sl-80527_web.pdf",
+        "zh": "https://www.vertiv.com/4a6042/globalassets/documents/reports/vertiv-ai-archetypes_report_global-english_sl-80527_web.pdf",
+        "url": "https://www.vertiv.com/4a6042/globalassets/documents/reports/vertiv-ai-archetypes_report_global-english_sl-80527_web.pdf",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/KirkDBorne/status/2104795976850370939",
+        "zh": "https://x.com/KirkDBorne/status/2104795976850370939",
+        "url": "https://x.com/KirkDBorne/status/2104795976850370939",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://github.com/FredXing1/FinTrace",
+        "zh": "https://github.com/FredXing1/FinTrace",
+        "url": "https://github.com/FredXing1/FinTrace",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.reddit.com/r/algotrading/comments/1wtan04/how_can_we_mathematically_define_a_correct",
+        "zh": "https://www.reddit.com/r/algotrading/comments/1wtan04/how_can_we_mathematically_define_a_correct",
+        "url": "https://www.reddit.com/r/algotrading/comments/1wtan04/how_can_we_mathematically_define_a_correct",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.reddit.com/r/algotrading/comments/1wtis5p/trading_system_for_nq",
+        "zh": "https://www.reddit.com/r/algotrading/comments/1wtis5p/trading_system_for_nq",
+        "url": "https://www.reddit.com/r/algotrading/comments/1wtis5p/trading_system_for_nq",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.reddit.com/r/algotrading/comments/1wtvpxg/what_broker_do_you_use_for_automated_trading",
+        "zh": "https://www.reddit.com/r/algotrading/comments/1wtvpxg/what_broker_do_you_use_for_automated_trading",
+        "url": "https://www.reddit.com/r/algotrading/comments/1wtvpxg/what_broker_do_you_use_for_automated_trading",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2609.31664",
+        "zh": "https://arxiv.org/abs/2609.31664",
+        "url": "https://arxiv.org/abs/2609.31664",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/sama/status/2104995014208258235",
+        "zh": "https://x.com/sama/status/2104995014208258235",
+        "url": "https://x.com/sama/status/2104995014208258235",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/Grand_father007/status/2105399241208475880",
+        "zh": "https://x.com/Grand_father007/status/2105399241208475880",
+        "url": "https://x.com/Grand_father007/status/2105399241208475880",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/levie/status/2105111520913039530",
+        "zh": "https://x.com/levie/status/2105111520913039530",
+        "url": "https://x.com/levie/status/2105111520913039530",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/SentinelOne/status/2105434795203260528",
+        "zh": "https://x.com/SentinelOne/status/2105434795203260528",
+        "url": "https://x.com/SentinelOne/status/2105434795203260528",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://openai.com/index/devday-2026-recap",
+        "zh": "https://openai.com/index/devday-2026-recap",
+        "url": "https://openai.com/index/devday-2026-recap",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
+        "zh": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
+        "url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/rauchg/status/2105043144975011982",
+        "zh": "https://x.com/rauchg/status/2105043144975011982",
+        "url": "https://x.com/rauchg/status/2105043144975011982",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2609.35868",
+        "zh": "https://arxiv.org/abs/2609.35868",
+        "url": "https://arxiv.org/abs/2609.35868",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://junie.jetbrains.com/blog/best-ai-coding-agents",
+        "zh": "https://junie.jetbrains.com/blog/best-ai-coding-agents",
+        "url": "https://junie.jetbrains.com/blog/best-ai-coding-agents",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2609.35873",
+        "zh": "https://arxiv.org/abs/2609.35873",
+        "url": "https://arxiv.org/abs/2609.35873",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/zarazhangrui/status/2105096296831017078",
+        "zh": "https://x.com/zarazhangrui/status/2105096296831017078",
+        "url": "https://x.com/zarazhangrui/status/2105096296831017078",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/petergyang/status/2105114973819244676",
+        "zh": "https://x.com/petergyang/status/2105114973819244676",
+        "url": "https://x.com/petergyang/status/2105114973819244676",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/petergyang/status/2105127506701644024",
+        "zh": "https://x.com/petergyang/status/2105127506701644024",
+        "url": "https://x.com/petergyang/status/2105127506701644024",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/swyx/status/2105057391490498660",
+        "zh": "https://x.com/swyx/status/2105057391490498660",
+        "url": "https://x.com/swyx/status/2105057391490498660",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://github.com/JoasASantos/Offensive-Security-AI-Models",
+        "zh": "https://github.com/JoasASantos/Offensive-Security-AI-Models",
+        "url": "https://github.com/JoasASantos/Offensive-Security-AI-Models",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/mayaislam_ai/status/2105299075931517113",
+        "zh": "https://x.com/mayaislam_ai/status/2105299075931517113",
+        "url": "https://x.com/mayaislam_ai/status/2105299075931517113",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/PovilasKorop/status/2105241498769858564",
+        "zh": "https://x.com/PovilasKorop/status/2105241498769858564",
+        "url": "https://x.com/PovilasKorop/status/2105241498769858564",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://github.com/rohanprichard/talktome",
+        "zh": "https://github.com/rohanprichard/talktome",
+        "url": "https://github.com/rohanprichard/talktome",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://x.com/sharat_sc/status/2100638882341486961",
+        "zh": "https://x.com/sharat_sc/status/2100638882341486961",
+        "url": "https://x.com/sharat_sc/status/2100638882341486961",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://www.reddit.com/r/algotrading/comments/1wu08gb/did_somebody_look_at_sonic_ai_forex_xauusd",
+        "zh": "https://www.reddit.com/r/algotrading/comments/1wu08gb/did_somebody_look_at_sonic_ai_forex_xauusd",
+        "url": "https://www.reddit.com/r/algotrading/comments/1wu08gb/did_somebody_look_at_sonic_ai_forex_xauusd",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2609.31650",
+        "zh": "https://arxiv.org/abs/2609.31650",
+        "url": "https://arxiv.org/abs/2609.31650",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2609.31653",
+        "zh": "https://arxiv.org/abs/2609.31653",
+        "url": "https://arxiv.org/abs/2609.31653",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2609.31660",
+        "zh": "https://arxiv.org/abs/2609.31660",
+        "url": "https://arxiv.org/abs/2609.31660",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2609.31663",
+        "zh": "https://arxiv.org/abs/2609.31663",
+        "url": "https://arxiv.org/abs/2609.31663",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2609.31666",
+        "zh": "https://arxiv.org/abs/2609.31666",
+        "url": "https://arxiv.org/abs/2609.31666",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2609.31676",
+        "zh": "https://arxiv.org/abs/2609.31676",
+        "url": "https://arxiv.org/abs/2609.31676",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2609.35799",
+        "zh": "https://arxiv.org/abs/2609.35799",
+        "url": "https://arxiv.org/abs/2609.35799",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2609.35833",
+        "zh": "https://arxiv.org/abs/2609.35833",
+        "url": "https://arxiv.org/abs/2609.35833",
+        "pt": "自动聚合线索"
+      },
+      {
+        "who": "web",
+        "en": "https://arxiv.org/abs/2609.35869",
+        "zh": "https://arxiv.org/abs/2609.35869",
+        "url": "https://arxiv.org/abs/2609.35869",
+        "pt": "自动聚合线索"
+      }
+    ],
+    "graphDelta": {
+      "entities": 29,
+      "events": 55,
+      "relations": 29,
+      "storylines": 5
+    }
+  },
+  {
+    "type": "日报",
+    "topic": "AI",
+    "src": "现场自动聚合",
+    "ic": "i-doc",
+    "h": 8,
+    "auto": true,
+    "unverified": true,
+    "format": "storyline",
+    "synthesis": "two-pass-v2",
     "aggregatedAt": "2026-09-30",
     "title": "AI 每日雷达 · 2026-09-30",
     "time": "今天",
